@@ -1,72 +1,70 @@
-% cv example for classicthesis.sty
+%*******************************************************
+% Here is a template of cv with classicthesis
+%*******************************************************
 \documentclass[10pt,a4paper]{scrartcl}
+\usepackage[utf8x]{inputenc} %for uf8
+\usepackage[T1]{fontenc} %for french accents
 \usepackage[LabelsAligned]{currvita} % nice cv style
 \usepackage{url} \usepackage[nochapters]{classicthesis}
-\usepackage[frenchb]{babel}
+\usepackage[frenchb]{babel} %babel package for languages, replace
+                            %frenchb by your language (german, etc)
+%****begin of settings*******%
 \renewcommand*{\cvheadingfont}{\LARGE\color{Maroon}}
 \renewcommand*{\cvlistheadingfont}{\large}
 \renewcommand*{\cvlabelfont}{\qquad}
-\usepackage{graphicx}
+%*****end of settings********%
+
 \begin{document}
 \pagestyle{empty}
 \begin{cv}{\spacedallcaps{Curriculum Vit\ae}}
-  % \pdfbookmark[1]{Pers\"onliche Daten}{PersDat}
-  \begin{cvlist}{\spacedlowsmallcaps{Informations
-        personnelles}}\label{PersDat}
-\item Alexandre Krispin
-\item 12 avenue Laumi\`ere \\
-    75019 Paris
-  \item \no t\'el : 06 28 76 69 34
-  \item N\'e le 25 ao\^ut 1986 \\
-    \'Etudiant \`a Paris 8
+
+%******************************************************
+  \begin{cvlist}{\spacedlowsmallcaps{Personal Informations
+        }}
+\item Name and First name
+\item Street name\\ %your address
+    Zip code and town
+  \item \no t\'el : your telephone number
+  \item birth date \\
+    Put here what you are currently : student, professor, etc
   \end{cvlist}
+%*******************************************************
+  \begin{cvlist}{\spacedlowsmallcaps{Formation}}
 
-  % \pdfbookmark[1]{Irgendwas}{irgendwas}
-  \begin{cvlist}{\spacedlowsmallcaps{Formation}}\label{formation}
+  \item[2009-2010] Master degree in the field of XYZ\\
+    (University name \textemdash\ the location of your University)
 
-  \item[2009-2010] Licence 2\ieme~ann\'ee en Science politique\\
-    (Université Paris 8 \textemdash~Saint-Denis)
+  \item[2008-2009] Other formation, degree, and field\\
+    (University name \textemdash\ Location)
 
-  \item[2007-2009] Master de Japonais, sp\'ecialit\'e civilisation japonaise\\
-    (INALCO \textemdash~Paris)
+  \item[years] etc
 
-  \item[2006-2007] Licence LLCE sp\'ecialit\'e Japonais\\
-    (INALCO \textemdash~Paris)
+  \item[Languages] \textbf{English :} fluent\\
+    \textbf{Japanese :} fluent\\
+    \textbf{French :} fluent\\
 
-  \item[2005-2006] DULCO de Japonais\\
-    (INALCO \textemdash~Paris)
-
-  \item[2004] Baccalaur\'eat scientifique\\
-    sp\'ecialit\'e Physique-chimie
-
-  \item[Langues] \textbf{Anglais :} lu, \'ecrit, parl\'e\\
-    \textbf{Japonais :} lu, \'ecrit, parl\'e\\
-    \textbf{Allemand :} scolaire\\
-
-  \item[Informatique] Ma\^itrise de Microsoft Office, \LaTeXe, Vim, Emacs, Gnuplot,
-    Illustrator, syst\`emes Unix (GNU/Linux, Mac OSX, FreeBSD)
+  \item[Skills] Put your skills here.
 
   \end{cvlist}
+%********************************************************
+  \begin{cvlist}{\spacedlowsmallcaps{Experiences}}
 
-  \begin{cvlist}{\spacedlowsmallcaps{Exp\'eriences
-        professionnelles}}\label{experiences}
+  \item[avril 2010] job 1 title
 
-  \item[avril 2010] Magasinier \`a l'IHEJ
+    Enterprise - Town
 
-    Coll\`ege-de-France - Paris
+  \item[from date - to date] job 2 title
 
-  \item[juillet-ao\^ut 2005] Magasinier \`a Gedimat
-
-    Thonon-les-bains
+    Enterprise - Town
 
   \end{cvlist}
+%**********************************************************
+  \begin{cvlist}{\spacedlowsmallcaps{Interests}}
 
-  \begin{cvlist}{\spacedlowsmallcaps{Centres
-        d'int\'er\^ets}}\label{interets}
+  \item[Sports] put name of sports here
 
-  \item[Sports] j\^ud\^o, j\^ujits\^u, boxe
-
-  \item[Loisirs] musique, lecture
+  \item[Leisure activities] writing templates, farting, smoking some
+    weed, snorting, etc
 
   \end{cvlist}
 
