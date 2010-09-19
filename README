@@ -1,15 +1,17 @@
 At the beginning, the purpose of this repository was exclusively to be
-a place where a put templates to use with LaTeX, or XeLaTeX.
+a place where I put templates to use with LaTeX, or XeLaTeX.
 
 But this purpose changed, I have now several targets with this
-repository, and that's why I didn't give a practical name to my repository.
+repository, and that's why I didn't give a practical name to my
+repository. It is much more like a common place where I will gather
+all files that I consider to be useful for anyone else.
 
-In this repo I will put some files that I use as templates when
-writing a report, long files, or articles with LaTeX (or XeLaTeX).
+I will put here some files that I use as templates for LaTeX (or XeLaTeX) to
+write a report, long files, articles, slides, etc.
 
-Also, I will push my configuration files for emacs (and particularly
-my init.el) and for vim.
+I will put also my configuration files for emacs and for vim which are
+relevant (.init.el, .vimrc, etc).
 
-In you are interested, I have a blog where I put some tips, help for beginners :
+In case you are interested, I have a blog where I put some tips, help for beginners :
 http://niktarace.wordpress.com/
 
