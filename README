@@ -1,4 +1,15 @@
-In this repo I will put some files that I use as templates when writing a report, long files, or articles.
+At the beginning, the purpose of this repository was exclusively to be
+a place where a put templates to use with LaTeX, or XeLaTeX.
 
-Here is also my blog, where I put some tips, help for beginners :
+But this purpose changed, I have now several targets with this
+repository, and that's why I didn't give a practical name to my repository.
+
+In this repo I will put some files that I use as templates when
+writing a report, long files, or articles with LaTeX (or XeLaTeX).
+
+Also, I will push my configuration files for emacs (and particularly
+my init.el) and for vim.
+
+In you are interested, I have a blog where I put some tips, help for beginners :
 http://niktarace.wordpress.com/
+
