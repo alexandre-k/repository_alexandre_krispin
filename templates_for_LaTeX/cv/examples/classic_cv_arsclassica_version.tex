@@ -1,0 +1,142 @@
+\documentclass{scrartcl}	% classe article di KOMA
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[frenchb]{babel}
+\reversemarginpar
+\newcommand{\MarginDate}[1]{\marginpar{\raggedleft\itshape\small#1}}
+%\usepackage[latin1]{inputenc}	% la codifica di input
+%\usepackage[T1]{fontenc}	% la codifica dei font
+\usepackage[LabelsAligned]{currvita}	% un buon pacchetto per CV
+\usepackage[nochapters]{classicthesis} % stile ClassicThesis
+\usepackage{url}	% per gli indirizzi Internet
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}}
+\renewcommand{\cvlistheadingfont}{\large}
+\renewcommand{\cvlabelfont}{\qquad}
+%Setup hyperref package, and colours for links, text and headings
+\usepackage{hyperref}		
+\hypersetup{	colorlinks,breaklinks,
+			urlcolor=Maroon, 
+			linkcolor=Maroon}
+\usepackage{eurosym}
+\newlength{\datebox}\settowidth{\datebox}{Summer 2007}
+
+\newcommand{\NewWorkExperience}[3]{\noindent\hangindent=2em\hangafter=0
+\parbox{\datebox}{\textit{#1}}\hspace{1.5em} #2 #3%
+\vspace{0.5em}}
+
+\newcommand{\Description}[1]{
+\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize
+}
+\newcommand{\Sep}{\vspace{2em}}
+\begin{document}
+\thispagestyle{empty}
+\begin{cv}{\spacedallcaps{curriculum vit\AE{}}}
+\vspace{1.5em}
+
+\spacedlowsmallcaps{Informations personnelles}
+\vspace{0.5em}
+
+\NewWorkExperience{}{Bastien LeCadet}
+
+\NewWorkExperience{}{25 ans, mari\'e, un enfant}
+
+\NewWorkExperience{adresse}{Somewhere in Paris}
+
+\NewWorkExperience{email}{\href{myemail@adress.com}{myemail@adress.com}}{}
+
+\NewWorkExperience{t\'el\'ephone}{phone number}{}
+\vspace{1.5em}
+
+\noindent\spacedlowsmallcaps{Exp\'erience professionnelle}
+\vspace{0.5em}
+
+\NewWorkExperience{}{SIEMP,}{Paris}
+
+\Description{Mission de requalification des immeubles
+priv\'es, secteur Bas Belleville \\ Charg\'e de mission Habitat Priv\'e
+\MarginDate{D\'ecembre 2009 \`a D\'ecembre 2010}}
+
+\Sep
+
+\NewWorkExperience{}{Pact Arim 93, }{Montreuil}
+
+\Description{Op\'erations Programm\'ees d'Am\'elioration de l'Habitat \`a
+Pantin \\ Stagiaire attach\'e au charg\'e d'op\'eration
+\MarginDate{Juillet 2009 \`a Novembre 2009}}
+
+
+\vspace{1.5em}
+
+\noindent\spacedlowsmallcaps{Etudes et dipl\^omes}
+\vspace{0.5em}
+
+\NewWorkExperience{2009}{Paris Ouest Nanterre La D\'efense}
+
+\NewWorkExperience{}{ENSA Paris Val de
+Seine}
+
+\Description{Urbanisme et Am\'enagement du territoire\MarginDate{Master}}
+
+\Sep
+
+\NewWorkExperience{2008}{INALCO, }{Paris}
+
+\Description{Langue et civilisation japonaise, parcours \'economie et
+soci\'et\'e
+\MarginDate{Ma\^itrise}}
+
+
+
+\vspace{1.5em}
+
+
+\noindent\spacedlowsmallcaps{Exp\'erience associative}
+\vspace{0.5em}
+
+\Sep
+
+\NewWorkExperience{2005 \textendash 2008}{INALCO, }{Paris}
+
+\Description{Atelier de G\'eographie\MarginDate{Membre fondateur}}
+
+\Sep
+
+\NewWorkExperience{2001 \textendash 2003}{FLMC, }{Courcelles
+(58)}
+
+\Description{Front de Lib\'eration du Multim\'edia Campagnard, pour la
+vulgarisation de l'informatique en milieu rural
+\MarginDate{Membre}}
+
+\Sep
+
+\NewWorkExperience{2000 \textendash 2003}{Club Nautique Clamecycois, }{Clamecy
+(58)}
+
+\Description{Club d'aviron de la ville de Clamecy
+\MarginDate{Membre}}
+
+\vspace{1.5em}
+
+\spacedlowsmallcaps{Informations compl\'ementaires}
+\vspace{0.5em}
+
+\newlength{\langbox}
+\settowidth{\langbox}{English}
+\Description{\parbox{\langbox}{\textsc{Japonais}}\ \ $\cdotp$\ \  \ Courant}
+
+\vspace{0.5em}
+
+\Description{\parbox{\langbox}{\textsc{Anglais}}\ \ $\cdotp$\ \  \ Usuel}
+\MarginDate{Langues}
+\vspace{0.5em}
+
+\Description{\parbox{\langbox}{\textsc{Espagnol}}\ \ $\cdotp$\ \ \  Scolaire}
+\vspace{1em}
+
+\Description{\LaTeX\ \ $\cdotp$\ \ Typographie\ \ $\cdotp$\ \  Informatique\ \
+ \MarginDate{Int\'er\^ets}}
+\enlargethispage{\baselineskip}
+\date{}
+\end{cv}
+\end{document}
