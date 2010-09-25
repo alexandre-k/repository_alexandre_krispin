@@ -1,0 +1,27 @@
+(TeX-add-style-hook "template_article_classicthesis"
+ (lambda ()
+    (TeX-run-style-hooks
+     "classicthesis-ldpkg"
+     "classicthesis"
+     "nochapters"
+     "wrapfig"
+     "graphicx"
+     "amsmath"
+     "longtable"
+     "url"
+     "textcomp"
+     "eukdate"
+     "natbib"
+     "array"
+     "enumitem"
+     "hyperref"
+     "color"
+     "babel"
+     "frenchb"
+     "xltxtra"
+     "latex2e"
+     "scrartcl10"
+     "scrartcl"
+     "10pt"
+     "a4paper")))
+

@@ -1,0 +1,113 @@
+%*************************************************************
+% Template for an article. To be compiled with xelatex
+% based on classicthesis
+%*************************************************************
+\documentclass[10pt,a4paper]{scrartcl} % KOMA-Script article
+\usepackage{xltxtra} %some packages for xelatex
+\usepackage[frenchb
+%arabic
+%english
+]{babel} %for french. If you write in english, then you might want to
+         %get a try to polyglossia
+
+%**********************************************
+% Fonts
+%**********************************************
+%\setmainfont[Numbers=OldStyle,Ligatures=Historic]{TeX Gyre Pagella}
+
+%If you want other fonts, try the following
+%\setmainfont{Charis SIL}
+%\setmainfont{URW Palladio L}
+%\setmainfont{Linux Libertine O}
+%\setmainfont{Gentium Book Basic}
+
+%For japanese input :
+\newfontfamily\ja[Scale=0.8]{IPA明朝}
+
+
+%*********************************************
+% Defining a beautiful color, named spot
+%*********************************************
+\usepackage{color} %If you want to use it within your text, use the
+                    %command \textcolor{spot}{your text}
+\definecolor{spot}{rgb}{0.6,0,0}
+\definecolor{boxframe}{rgb}{0.6,0,0}
+\definecolor{boxfill}{rgb}{1,.95,.95}
+
+%*********************************************
+% Hyperrefence setup
+%**********************************************
+\usepackage{hyperref}
+\hypersetup{%
+    colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+    % uncomment the following line if you want to have black links (e.g., for printing)
+    %colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,% 
+    breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
+    plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+    hypertexnames=true, pdfhighlight=/O,%hyperfootnotes=true,%nesting=true,%frenchlinks,%
+    urlcolor=blue, linkcolor=blue, citecolor=green, %pagecolor=RoyalBlue,%
+    %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+    pdftitle={Article},%the title
+    pdfauthor={Alexandre Krispin},%your name
+    pdfsubject={},%
+    pdfkeywords={},%
+    pdfcreator={XeLaTeX},%
+    pdfproducer={A happy XeLaTeX user}%
+}
+
+%**********************************************
+%some useful packages
+%*********************************************
+\usepackage{enumitem} %if you want to customize lists
+\usepackage{array} %texdoc array
+\usepackage{natbib} % an extension to allow author-year citations
+                    % along wih numerical citations. For more
+                    % informations, texdoc natbib
+\usepackage{eukdate} %to redefine the default layout of the date format
+\usepackage{textcomp} %some special characters
+\usepackage{url} %for url
+\usepackage{longtable} %for long tables
+\usepackage{textcomp} %additional characters
+\usepackage{amsmath} %for maths
+\usepackage{graphicx} %to include graphics
+\usepackage{wrapfig} %to get nice wrap of figures
+\usepackage[nochapters]{classicthesis}
+\usepackage[nochapters]{classicthesis-ldpkg}
+
+%***********************************************
+%Opening
+%**********************************************
+\title{\rmfamily\normalfont\spacedallcaps{
+%The title of your article
+}}
+\subtitle{\rmfamily\normalfont\spacedallcaps{
+%Put here your subtitle if any
+}}
+\author{\spacedlowsmallcaps{
+%author name and first name
+  }}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\noident
+%********************************
+%The abstract of your article
+%*******************************
+
+\end{abstract}
+
+\tableofcontents
+
+\section{}
+
+\subsection{}
+
+% *********************************
+%Here goes your text
+%*********************************
+
+\end{document}

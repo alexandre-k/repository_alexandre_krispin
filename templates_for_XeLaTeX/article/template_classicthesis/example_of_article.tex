@@ -1,0 +1,207 @@
+%*************************************************************
+% Template for an article. To be compiled with xelatex
+% based on classicthesis
+%*************************************************************
+\documentclass[10pt,a4paper]{scrartcl} % KOMA-Script article
+\usepackage{xltxtra} %some packages for xelatex
+\usepackage[frenchb
+%arabic
+%english
+]{babel} %for french. If you write in english, then you might want to
+         %get a try to polyglossia
+
+%**********************************************
+% Fonts
+%**********************************************
+%\setmainfont[Numbers=OldStyle,Ligatures=Historic]{TeX Gyre Pagella}
+
+%If you want other fonts, try the following
+%\setmainfont{Charis SIL}
+%\setmainfont{URW Palladio L}
+%\setmainfont{Linux Libertine O}
+%\setmainfont{Gentium Book Basic}
+
+%For japanese input :
+\newfontfamily\ja[Scale=0.8]{IPA明朝}
+
+
+%*********************************************
+% Defining a beautiful color, named spot
+%*********************************************
+\usepackage{color} %If you want to use it within your text, use the
+                    %command \textcolor{spot}{your text}
+\definecolor{spot}{rgb}{0.6,0,0}
+\definecolor{boxframe}{rgb}{0.6,0,0}
+\definecolor{boxfill}{rgb}{1,.95,.95}
+
+%*********************************************
+% Hyperrefence setup
+%**********************************************
+\usepackage{hyperref}
+\hypersetup{%
+    colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+    % uncomment the following line if you want to have black links (e.g., for printing)
+    %colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,% 
+    breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
+    plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+    hypertexnames=true, pdfhighlight=/O,%hyperfootnotes=true,%nesting=true,%frenchlinks,%
+    urlcolor=blue, linkcolor=blue, citecolor=green, %pagecolor=RoyalBlue,%
+    %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+    pdftitle={Article},%the title
+    pdfauthor={Alexandre Krispin},%your name
+    pdfsubject={},%
+    pdfkeywords={},%
+    pdfcreator={XeLaTeX},%
+    pdfproducer={A happy XeLaTeX user}%
+}
+
+%**********************************************
+%some useful packages
+%*********************************************
+\usepackage{enumitem} %if you want to customize lists
+\usepackage{array} %texdoc array
+\usepackage{natbib} % an extension to allow author-year citations
+                    % along wih numerical citations. For more
+                    % informations, texdoc natbib
+\usepackage{eukdate} %to redefine the default layout of the date format
+\usepackage{textcomp} %some special characters
+\usepackage{url} %for url
+\usepackage{longtable} %for long tables
+\usepackage{textcomp} %additional characters
+\usepackage{amsmath} %for maths
+\usepackage{graphicx} %to include graphics
+\usepackage{wrapfig} %to get nice wrap of figures
+\usepackage[nochapters]{classicthesis}
+\usepackage[nochapters]{classicthesis-ldpkg}
+
+%***********************************************
+%Opening
+%**********************************************
+\title{\rmfamily\normalfont\spacedallcaps{
+The so-called Iran's threat%The title of your article
+}}
+\subtitle{\rmfamily\normalfont\spacedallcaps{
+Facts and analysis
+}}
+\author{\spacedlowsmallcaps{
+Alexandre Krispin    %author name and first name
+  }}
+
+\begin{document}
+
+\maketitle
+
+%\begin{abstract}
+
+%\noident
+%********************************
+%The abstract of your article
+%*******************************
+
+%\end{abstract}
+
+\tableofcontents
+
+%\section{}
+
+%\subsection{}
+
+% *********************************
+%Here goes your text
+%*********************************
+
+\section{Introduction}
+
+In french newspapers like \emph{Le Monde}, american newspapers like the \emph{New York Times}, the \emph{Washington Post}, and particularly in israeli news papers like the \emph{Jerusalem Post}, we can read many articles about Iran and its nuclear development program. My purpose of this exposé is to present you what are the facts about the so-called Iran's threat, and my own analysis of it.
+\paragraph{}
+Firstly, I will present you the facts about the iranian nuclear program. I will base this part upon the International Atomic Energy Agency's report, entitled \emph{Implementation of the NPT\footnote{\textquotedblleft The NPT aims to prevent the spread of nuclear weapons and weapons technology, to foster the peaceful uses of nuclear energy, and to further the goal of disarmament. The Treaty establishes a safeguards system under the responsibility of the IAEA, which also plays a central role under the Treaty in areas of technology transfer for peaceful purposes.\textquotedblright~For more informations, see \url{http://www.iaea.org/Publications/Documents/Treaties/npt.html}, 2, 28, 2010} Safeguards Agreement and relevant provisions of Security Council resolution 1737 (2006), 1747 (2007), 1803 (2008), 1835 (2009) and the Islamic Republic of Iran}, dated November $16^{th}$ 2009, and presented to the Board of governors.
+
+Secondly, I will present you a brief analysis of the facts, based upon an article published in \emph{Security Studies}, writen by John \textsc{Mearsheimer} of the University of Chicago, and Stephen \textsc{Walt} of the John F. Kennedy School of Government, Harvard University. This article is entitled \textquotedblleft Is it love or is it the lobby ? Explaining America's special relationship with Israel\textquotedblright, and its online publication is dated from january $1^{st}$ 2009. Also, I will use other official documents such as the United Nations charter available for download on the internet.
+
+\section{The iranian nuclear program : the facts}
+
+First of all, according to the IAEA's report, we know that Iran is currently developing low enriched uranium and that there are fuel enrichment plant at Natanz. By October $30^{th}$ 2009, a total production of 1763 kg of low enriched uranium has been produced since the start-up of fuel enrichment plant. Also, I would like to emphasize the fact that \textquotedblleft the results of the environmental samples taken at FEP [Fuel Enrichment Plant] and PFEP [Pilot Fuel Enrichment Plant] indicate that the declared maximum enrichment level (i.e. 5.0\%, U-235 enrichment) has not been exceeded at either plant.\textquotedblright\footnote{See p. 2 in \url{http://www.iaea.org/Publications/Documents/Board/2009/gov2009-74.pdf}, 02/28/2010.} We can deduce from this observation that it seems there are no lies from Iran about its nuclear program.
+
+Also, Iran has enrichment plant near Qom. Similarly to Natanz, Qom is a place located in a mountainous area, which provide an effective protection against eventual strikes from zionist's allies. And similarly, \textquotedblleft Iran provided access to all areas of the facility. The Agency confirmed that the plant corresponded with the design information provided by Iran\textquotedblright\footnote{\emph{Ibid}., p. 3.}. Therefore, in the case of Fordow's enrichment plant too, we can affirm that there is no issue about it. Furthermore, since the facts do tend to demonstrate that there is no matter to worry about, we can suppose that any kind of concern would be irrational, stupid, or simply a lie.
+
+Other projects are under development, such as heavy water reactors, but in any case, according to the facts, nothing to worry about. However, the report also states the possible military dimensions of the iranian nuclear program : \textquotedblleft there remain a number of outstanding issues which give rise to concerns, and which need to be clarified to exclude the existence of possible military dimensions to Iran's nuclear programme.\textquotedblright\footnote{\emph{Ibid}., p. 6.} But in any case, the fact is that the supposed military dimension of the iranian nuclear program remains a pure hypothesis, based upon nothing, except subjective feelings like concern. And this is the reason of this concern that we are going to see in a brief analysis.
+
+\section{Questioning the explanation of the american press : a brief analysis}
+
+For a good understanding of the reasons that make the so-called international community consider the iranian nuclear development as a problem, we have to think of Israel's interests. For example, we have to remember that \textquotedblleft in April 2008, the Agency [IAEA] was provided with information alleging that an installation
+destroyed by Israel at Dair Alzour in Syria in September 2007 had been a nuclear reactor
+under construction.\textquotedblright\footnote{See the \emph{Safeguards Statement for 2008}, p. 10, \url{http://www.iaea.org/OurWork/SV/Safeguards/es2008.pdf}, 02/28/2010.} By this example showing the concern of the israeli government about the nuclear development in arabic countries, I would like to make two hypothesis :
+\begin{enumerate}
+ \item
+The israeli concern about the iranian nuclear development create the concern of the United States and West european countries, whereas we have no need to feel concerned about it.
+\item
+The zionist and belligerent government of Israel itself, leading the war against Palestinian, creates the tensions between Near Eastern countries, and therefore creates the israeli concern about the iranian nuclear.
+\end{enumerate}
+
+In 2006, the United Nations surely have reiterated its serious concern over the reports of IAEA. And then, According to the article 39, chapter VII, of the United Nations charter, \textquotedblleft the Security Council shall determine the existence of any threat to the peace, breach of the peace, or act of aggression and shall make recommendations, or decide what measures shall be taken in accordance with Articles 41 and 42, to maintain or restore international peace and security.\textquotedblright\footnote{See \url{http://www.un.org/en/documents/charter/chapter7.shtml}, 02/28/2010}. But what we have to know is wether the concern established in the IAEA's report is rational or not ?
+
+In order to answer to this question, let us take a look at the communication from the Permanent Mission of Iran to the IAEA, dated 2 December 2009, which undermines two important points : 
+\begin{enumerate}
+\item
+\textquotedblleft The report [of the IAEA] is expected to reflect the results of verification. It has to report simply whether the inspectors have been able to conduct verification or not. [...] The Secretariat is not mandated to use qualifiers expressing regret or happiness, but just to report facts on the ground.\textquotedblright\footnote{See page 2, in \url{http://www.iaea.org/Publications/Documents/Infcircs/2009/infcirc779.pdf}, 02/28/2010.} Regarding this assertion, we have to ask ourselves if the resolutions of the United Nations are based upon a fantasist fear or not, and then to seek where does this fear come from ? (For example, does it come from the zionist government of Israel ?)
+\item
+\textquotedblleft Uranium enrichment and heavy water research reactor are not suspended, since there is no logical and legal justification to suspend such peaceful activities which are in the framework of the IAEA's Statute and the NPT and under surveillance of the Agency.\textquotedblright\footnote{\emph{Ibid}., p. 2.} Again, this assertion might make us ask ourselves if the Resolution of the United Nations has a rational basis or not.
+\end{enumerate}
+
+Of course, considering the facts I have stated above with the IAEA's report, we can affirm that there is no basis at all to justify any condemnation by the UN to Iran for it's nuclear program which, according to the facts, aims at peaceful purposes only. Finally, we have to ask ourselves why did the United Nations decided such irrational resolutions ? What is the origin of such irrational impulsion from the United Nations ? To answer to this question, let us take a look at a study of \textsc{Mearsheimer} and \textsc{Walt} about the Israel lobby in the United States.
+
+According to their study, \textquotedblleft in recent years, Israel and the most important groups in the lobby have been the main advocates of using military force to halt Iran's nuclear enrichment program.\textquotedblright\footnote{See \textquotedblleft Is it love or the lobby ? explaining America's special relationship with Israel\textquotedblright p. 72, \url{http://pdfserve.informaworld.com/705307__908660944.pdf}, 02/28/2010.} Therefore my hypothesis about the reason of the resolution taken by the Security Council is that its unjustified concern is based upon the belligerent influence of Israel, with the support of the United States.
+
+\section{Conclusion}
+
+The nuclear material in Iran is for peaceful activities and not for belligerent activities, as the Safeguards Statement concluded in 2008\footnote{See the \emph{Safeguards Statement for 2008}, p. 7, \url{http://www.iaea.org/OurWork/SV/Safeguards/es2008.pdf}, 02/28/2009.}. Therefore, the real threat doesn't come from Iran's nuclear program, but from the zionist government of Israel, influent in the United States through the Israel lobby.
+
+Due to its influence, this lobby can pressure the U.S. government to get military aids, diplomatic hassle against other countries, and so on. From these observations, we can deduce that the only one relevant path to obtain peace in the Near East region is to stop every belligerent actions from countries like Israel against Palestinian or Turkey against Kurdish. Also, we (US and European countries) must allow and encourage poor countries such as Iran to develop themselves, in order to achieve the goal fixed with the creation of the United Nations ; that is to say \textquotedblleft to promote social progress and better standards of life in larger freedom\textquotedblright\footnote{See the preamble the UN charter, \url{http://www.un.org/en/documents/charter/preamble.shtml}, 02/28/2010.}.
+
+% \newpage
+% \begin{thebibliography}{5}
+% \bibitem[1]{Khos03}
+% \textsc{Khosrokhavar} Farhad, \textquotedblleft La Politique étrangère en Iran : de la révolution à l'\textquotedblleft axe du Mal\textquotedblright\textquotedblright, in \emph{Politique étrangère}, 68, 2003
+% \bibitem[2]{Mearsh08}
+% \textsc{Mearsheimer} John, \textsc{Walt} Stephen, \emph{The Israel lobby and U.S. foreign policy}, New York, Farrar Straus Giroux, 2008
+% \bibitem[3]{Sanger10}
+% \textsc{Sanger} David E., \textsc{Broad} William J., \textquotedblleft U.S. sees an opportunity to step up pressure on Iran\textquotedblright, in \emph{The New York Times}, 54 909, 3 janvier 2010
+% \bibitem[4]{Schiff06}
+% \textsc{Schiff} Ze'ev, \textquotedblleft Israel's war with Iran\textquotedblright, in \emph{Foreign Affairs}, vol. 85, 6, New York, nov-dec 2006
+% \bibitem[5]{Takeyh07}
+% \textsc{Takeyh} Ray, \textquotedblleft Time for Détente with Iran\textquotedblright, in \emph{Foreign Affairs}, vol. 86, 2, New York, march-april 2007
+% \end{thebibliography}
+% \newpage
+% \begin{appendices}
+% \section{Maps}
+% \begin{figure}[!h]
+% \centering
+% \fbox{\includegraphics[width=14cm,height=100mm]{cia-map-natanz.jpg}}
+% \caption{Natanz, a place chosen for its relief (a mountainous area), a safety site protecting the iranian nuclear from americano-zionist strikes (source : \url{http://www.globalsecurity.org/wmd/world/iran/images/cia-map-natanz.jpg}, 02/28/2010)}
+% \label{map of Iran - Natanz}
+% \end{figure}
+% \begin{figure}[!h]
+% \centering
+% \fbox{\includegraphics[width=14cm,height=100mm]{ir-map.jpeg}}
+% \caption{map of Iran (source : \url{https://www.cia.gov/library/publications/the-world-factbook/geos/ir.html}, 02/28/2010)}
+% \label{map of Iran - the country}
+% \end{figure}
+
+% \newpage
+% \section{Official documents}
+
+% \subsection{Implementation of the NPT Safeguards Agreement and relevant provisions of Security Council resolution 1737 (2006), 1747 (2007), 1803 (2008), 1835 (2009) and the Islamic Republic of Iran}
+% \newpage
+% \includepdf[pages=1-7]{gov2009-74.pdf}
+
+% \newpage
+% \subsection{Communication from the Permanent Mission of the Islamic Republic of Iran addressed to the IAEA, dated 2 December 2009}
+% \newpage
+% \includepdf[pages=1-8]{infcirc779.pdf}
+
+% \newpage
+% \subsection{UN Security Council : Resolution 1737 (2006)}
+% \newpage
+% \includepdf[pages=1-9]{unsc_res1737-2006.pdf}
+% \end{appendices}
+\end{document}
