@@ -1,0 +1,85 @@
+% Created 2010-09-21 Tue 22:02
+\documentclass{isodoc}
+%\usepackage{logostyle}
+\usepackage{xltxtra}
+\linespread{1.05}
+\setmainfont[Numbers=OldStyle,Ligatures=Historic]{TeX Gyre Pagella}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage[frenchb]{babel}
+\usepackage{hyperref}
+\hypersetup{
+   colorlinks=true, linktocpage=true,breaklinks=true,
+   urlcolor=spot, linkcolor=blue, citecolor=green,
+   pdftitle={Lettre},%the title
+    pdfauthor={Alexandre Krispin}
+}
+\tolerance=1000
+\usepackage{pdfpages}
+\definecolor{headcolor}{gray}{0.5}
+\definecolor{spot}{rgb}{0.6,0,0}
+%\letter
+%\providecommand{\alert}[1]{\textbf{#1}}
+%\title{Lettre}
+%\author{Alexandre \caps{Krispin}}
+%\date{21 September 2010}
+
+\setupdocument{%about this section, see isodoc, p. 3 to 7
+language = french
+,
+company = Alexandre Krispin
+,
+who = Alexandre Krispin
+,
+street = {41 rue Guynemer}
+,
+city = St-Denis
+,
+zip = 93200
+,
+to = {Université Paris Ouest \\
+Nanterre La Défense\\
+200, avenue de la République\\
+92201 \caps{NANTERRE CEDEX}}
+,
+return
+,
+header
+,
+date = 2010-09-25%\today
+,
+opening = {Madame, Monsieur}
+,
+subject = {Candidature à la formation en licence 2\ieme\ année en
+science économiques}
+,
+closing = {Je me tiens à votre entière disposition pour plus
+d'information, je vous prie d'agréer, Madame, Monsieur, l'expression
+de mes salutations les plus distinguées.}
+,
+signature = Alexandre Krispin
+,
+footer
+,
+phone = 0628766934
+,
+email = k.m.alexandre@gmail.com
+,
+website = \url{http://alexkrispin.wordpress.com/}
+,
+foldleft
+,
+}
+
+\begin{document}
+ \letter{
+   I would like to share with you a little utility that helps me
+   compose formal letters within Org mode. Would you like to try it?
+}
+\end{document}
+
