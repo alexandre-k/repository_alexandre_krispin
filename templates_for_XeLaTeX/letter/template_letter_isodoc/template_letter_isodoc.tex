@@ -1,0 +1,89 @@
+%***********************************************
+%Template for a letter with the class isodoc
+% Created 2010-09-21 Tue 22:02
+%***********************************************
+
+%**********************************************
+%The preamble
+%*********************************************
+\documentclass{isodoc}
+%\usepackage{logostyle}
+\usepackage{xltxtra}
+\linespread{1.05}
+\setmainfont[Numbers=OldStyle,Ligatures=Historic]{TeX Gyre Pagella}
+% If you are japanese, replace the font by IPA明朝
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage[frenchb]{babel}%change for the language you use if you are
+                           %not french, and get a try to polyglossia
+\usepackage{hyperref}
+\hypersetup{
+   colorlinks=true, linktocpage=true,breaklinks=true,
+   urlcolor=spot, linkcolor=blue, citecolor=green,
+   pdftitle={Letter},%the title
+    pdfauthor={}%author
+}
+\tolerance=1000
+\usepackage{pdfpages}
+\definecolor{headcolor}{gray}{0.5}
+\definecolor{spot}{rgb}{0.6,0,0}
+
+%*********************************************************
+%The general setup for the letter
+%********************************************************
+\setupdocument{%about this section, see isodoc, p. 3 to 7
+language = french
+,
+company = 
+,
+who = %your name
+,
+street = {}%your address
+,
+city = 
+,
+zip = 
+,
+to = {Company name\\ Street\\ zip code\\ City}
+,
+return
+,
+header
+,
+date = 2010-09-25%\today
+,
+opening = {}
+,
+subject = {}
+,
+closing = {}
+,
+signature = 
+,
+footer
+,
+phone = 
+,
+email = 
+,
+website = \url{}
+,
+foldleft
+,
+}
+%*****************************************************************
+% Your text for your letter
+%****************************************************************
+\begin{document}
+ \letter{
+ %**************************
+%the text goes here
+%**************************
+}
+\end{document}
+
