@@ -1,0 +1,213 @@
+!Alt key needs to be translated to Meta for PC keyboards: 
+!This makes Alt keys send both Alt (for KDE) and Meta (for xterm)
+!xmodmap -e "clear Mod1"
+!xmodmap -e "keycode 64 = Alt_L Meta_L"
+!xmodmap -e "keycode 113 = Alt_R Meta_R"
+!xmodmap -e "add Mod1 = Alt_L"
+!xmodmap -e "add Mod1 = Alt_R"
+
+XTerm*eightBitInput: 		false
+XTerm*metaSendsEscape: 	true
+XTerm*backarrowKey:    	false
+XTerm*modifier:			meta
+XTerm*modifyOtherKeys:1
+
+
+XTerm.VT100.Translations: #override \
+~Ctrl ~Meta Shift  <Key> Tab:         string(0x1b) string("[z2a") \n\
+~Ctrl Meta  ~Shift <Key> Tab:         string(0x1b) string("[z3a") \n\
+~Ctrl Meta  Shift  <Key> Tab:         string(0x1b) string("[z4a") \n\
+Ctrl  ~Meta ~Shift <Key> Tab:         string(0x1b) string("[z5a") \n\
+Ctrl  ~Meta Shift  <Key> Tab:         string(0x1b) string("[z6a") \n\
+Ctrl  Meta  ~Shift <Key> Tab:         string(0x1b) string("[z7a") \n\
+Ctrl  Meta  Shift  <Key> Tab:         string(0x1b) string("[z8a") \n\
+\
+~Ctrl ~Meta Shift  <Key> Return:      string(0x1b) string("[z2b") \n\
+~Ctrl Meta  ~Shift <Key> Return:      string(0x1b) string("[z3b") \n\
+~Ctrl Meta  Shift  <Key> Return:      string(0x1b) string("[z4b") \n\
+Ctrl  ~Meta ~Shift <Key> Return:      string(0x1b) string("[z5b") \n\
+Ctrl  ~Meta Shift  <Key> Return:      string(0x1b) string("[z6b") \n\
+Ctrl  Meta  ~Shift <Key> Return:      string(0x1b) string("[z7b") \n\
+Ctrl  Meta  Shift  <Key> Return:      string(0x1b) string("[z8b") \n\
+\
+~Ctrl ~Meta Shift  <Key> BackSpace:   string(0x1b) string("[z2c") \n\
+~Ctrl Meta  ~Shift <Key> BackSpace:   string(0x1b) string("[z3c") \n\
+~Ctrl Meta  Shift  <Key> BackSpace:   string(0x1b) string("[z4c") \n\
+Ctrl  ~Meta ~Shift <Key> BackSpace:   string(0x1b) string("[z5c") \n\
+Ctrl  ~Meta Shift  <Key> BackSpace:   string(0x1b) string("[z6c") \n\
+Ctrl  Meta  ~Shift <Key> BackSpace:   string(0x1b) string("[z7c") \n\
+Ctrl  Meta  Shift  <Key> BackSpace:   string(0x1b) string("[z8c") \n\
+\
+~Ctrl ~Meta ~Shift <Key> Pause:       string(0x1b) string("[zd")  \n\
+~Ctrl ~Meta Shift  <Key> Pause:       string(0x1b) string("[z2d") \n\
+~Ctrl Meta  ~Shift <Key> Pause:       string(0x1b) string("[z3d") \n\
+~Ctrl Meta  Shift  <Key> Pause:       string(0x1b) string("[z4d") \n\
+Ctrl  ~Meta ~Shift <Key> Pause:       string(0x1b) string("[z5d") \n\
+Ctrl  ~Meta Shift  <Key> Pause:       string(0x1b) string("[z6d") \n\
+Ctrl  Meta  ~Shift <Key> Pause:       string(0x1b) string("[z7d") \n\
+Ctrl  Meta  Shift  <Key> Pause:       string(0x1b) string("[z8d") \n\
+\
+Ctrl  ~Meta ~Shift <Key> Break:       string(0x1b) string("[z5d") \n\
+Ctrl  ~Meta Shift  <Key> Break:       string(0x1b) string("[z6d") \n\
+Ctrl  Meta  ~Shift <Key> Break:       string(0x1b) string("[z7d") \n\
+Ctrl  Meta  Shift  <Key> Break:       string(0x1b) string("[z8d") \n\
+\
+~Ctrl ~Meta ~Shift <Key> Sys_Req:     string(0x1b) string("[ze")  \n\
+~Ctrl ~Meta Shift  <Key> Sys_Req:     string(0x1b) string("[z2e") \n\
+Ctrl  ~Meta ~Shift <Key> Sys_Req:     string(0x1b) string("[z5e") \n\
+Ctrl  ~Meta Shift  <Key> Sys_Req:     string(0x1b) string("[z6e") \n\
+\
+~Ctrl ~Meta ~Shift <Key> KP_Enter:    string(0x1b) string("[zf")  \n\
+~Ctrl ~Meta Shift  <Key> KP_Enter:    string(0x1b) string("[z2f") \n\
+~Ctrl Meta  ~Shift <Key> KP_Enter:    string(0x1b) string("[z3f") \n\
+~Ctrl Meta  Shift  <Key> KP_Enter:    string(0x1b) string("[z4f") \n\
+Ctrl  ~Meta ~Shift <Key> KP_Enter:    string(0x1b) string("[z5f") \n\
+Ctrl  ~Meta Shift  <Key> KP_Enter:    string(0x1b) string("[z6f") \n\
+Ctrl  Meta  ~Shift <Key> KP_Enter:    string(0x1b) string("[z7f") \n\
+Ctrl  Meta  Shift  <Key> KP_Enter:    string(0x1b) string("[z8f") \n\
+\
+~Ctrl ~Meta ~Shift <Key> KP_Add:      string(0x1b) string("[zg")  \n\
+~Ctrl ~Meta Shift  <Key> KP_Add:      string(0x1b) string("[z2g") \n\
+~Ctrl Meta  ~Shift <Key> KP_Add:      string(0x1b) string("[z3g") \n\
+~Ctrl Meta  Shift  <Key> KP_Add:      string(0x1b) string("[z4g") \n\
+Ctrl  ~Meta ~Shift <Key> KP_Add:      string(0x1b) string("[z5g") \n\
+Ctrl  ~Meta Shift  <Key> KP_Add:      string(0x1b) string("[z6g") \n\
+Ctrl  Meta  ~Shift <Key> KP_Add:      string(0x1b) string("[z7g") \n\
+Ctrl  Meta  Shift  <Key> KP_Add:      string(0x1b) string("[z8g") \n\
+\
+~Ctrl ~Meta ~Shift <Key> KP_Subtract: string(0x1b) string("[zh")  \n\
+~Ctrl ~Meta Shift  <Key> KP_Subtract: string(0x1b) string("[z2h") \n\
+~Ctrl Meta  ~Shift <Key> KP_Subtract: string(0x1b) string("[z3h") \n\
+~Ctrl Meta  Shift  <Key> KP_Subtract: string(0x1b) string("[z4h") \n\
+Ctrl  ~Meta ~Shift <Key> KP_Subtract: string(0x1b) string("[z5h") \n\
+Ctrl  ~Meta Shift  <Key> KP_Subtract: string(0x1b) string("[z6h") \n\
+Ctrl  Meta  ~Shift <Key> KP_Subtract: string(0x1b) string("[z7h") \n\
+Ctrl  Meta  Shift  <Key> KP_Subtract: string(0x1b) string("[z8h") \n\
+\
+~Ctrl ~Meta ~Shift <Key> KP_Decimal:  string(0x1b) string("[zi")  \n\
+~Ctrl ~Meta Shift  <Key> KP_Decimal:  string(0x1b) string("[z2i") \n\
+~Ctrl Meta  ~Shift <Key> KP_Decimal:  string(0x1b) string("[z3i") \n\
+~Ctrl Meta  Shift  <Key> KP_Decimal:  string(0x1b) string("[z4i") \n\
+Ctrl  ~Meta ~Shift <Key> KP_Decimal:  string(0x1b) string("[z5i") \n\
+Ctrl  ~Meta Shift  <Key> KP_Decimal:  string(0x1b) string("[z6i") \n\
+Ctrl  Meta  ~Shift <Key> KP_Decimal:  string(0x1b) string("[z7i") \n\
+Ctrl  Meta  Shift  <Key> KP_Decimal:  string(0x1b) string("[z8i") \n\
+\
+~Ctrl ~Meta ~Shift <Key> KP_Divide:   string(0x1b) string("[zj")  \n\
+~Ctrl ~Meta Shift  <Key> KP_Divide:   string(0x1b) string("[z2j") \n\
+~Ctrl Meta  ~Shift <Key> KP_Divide:   string(0x1b) string("[z3j") \n\
+~Ctrl Meta  Shift  <Key> KP_Divide:   string(0x1b) string("[z4j") \n\
+Ctrl  ~Meta ~Shift <Key> KP_Divide:   string(0x1b) string("[z5j") \n\
+Ctrl  ~Meta Shift  <Key> KP_Divide:   string(0x1b) string("[z6j") \n\
+Ctrl  Meta  ~Shift <Key> KP_Divide:   string(0x1b) string("[z7j") \n\
+Ctrl  Meta  Shift  <Key> KP_Divide:   string(0x1b) string("[z8j") \n\
+\
+~Ctrl ~Meta ~Shift <Key> KP_Multiply: string(0x1b) string("[zk")  \n\
+~Ctrl ~Meta Shift  <Key> KP_Multiply: string(0x1b) string("[z2k") \n\
+~Ctrl Meta  ~Shift <Key> KP_Multiply: string(0x1b) string("[z3k") \n\
+~Ctrl Meta  Shift  <Key> KP_Multiply: string(0x1b) string("[z4k") \n\
+Ctrl  ~Meta ~Shift <Key> KP_Multiply: string(0x1b) string("[z5k") \n\
+Ctrl  ~Meta Shift  <Key> KP_Multiply: string(0x1b) string("[z6k") \n\
+Ctrl  Meta  ~Shift <Key> KP_Multiply: string(0x1b) string("[z7k") \n\
+Ctrl  Meta  Shift  <Key> KP_Multiply: string(0x1b) string("[z8k") \n\
+\
+~Ctrl ~Meta ~Shift <Key> KP_0:        string(0x1b) string("[zl")  \n\
+~Ctrl ~Meta Shift  <Key> KP_0:        string(0x1b) string("[z2l") \n\
+~Ctrl Meta  ~Shift <Key> KP_0:        string(0x1b) string("[z3l") \n\
+~Ctrl Meta  Shift  <Key> KP_0:        string(0x1b) string("[z4l") \n\
+Ctrl  ~Meta ~Shift <Key> KP_0:        string(0x1b) string("[z5l") \n\
+Ctrl  ~Meta Shift  <Key> KP_0:        string(0x1b) string("[z6l") \n\
+Ctrl  Meta  ~Shift <Key> KP_0:        string(0x1b) string("[z7l") \n\
+Ctrl  Meta  Shift  <Key> KP_0:        string(0x1b) string("[z8l") \n\
+\
+~Ctrl ~Meta ~Shift <Key> KP_1:        string(0x1b) string("[zm")  \n\
+~Ctrl ~Meta Shift  <Key> KP_1:        string(0x1b) string("[z2m") \n\
+~Ctrl Meta  ~Shift <Key> KP_1:        string(0x1b) string("[z3m") \n\
+~Ctrl Meta  Shift  <Key> KP_1:        string(0x1b) string("[z4m") \n\
+Ctrl  ~Meta ~Shift <Key> KP_1:        string(0x1b) string("[z5m") \n\
+Ctrl  ~Meta Shift  <Key> KP_1:        string(0x1b) string("[z6m") \n\
+Ctrl  Meta  ~Shift <Key> KP_1:        string(0x1b) string("[z7m") \n\
+Ctrl  Meta  Shift  <Key> KP_1:        string(0x1b) string("[z8m") \n\
+\
+~Ctrl ~Meta ~Shift <Key> KP_2:        string(0x1b) string("[zn")  \n\
+~Ctrl ~Meta Shift  <Key> KP_2:        string(0x1b) string("[z2n") \n\
+~Ctrl Meta  ~Shift <Key> KP_2:        string(0x1b) string("[z3n") \n\
+~Ctrl Meta  Shift  <Key> KP_2:        string(0x1b) string("[z4n") \n\
+Ctrl  ~Meta ~Shift <Key> KP_2:        string(0x1b) string("[z5n") \n\
+Ctrl  ~Meta Shift  <Key> KP_2:        string(0x1b) string("[z6n") \n\
+Ctrl  Meta  ~Shift <Key> KP_2:        string(0x1b) string("[z7n") \n\
+Ctrl  Meta  Shift  <Key> KP_2:        string(0x1b) string("[z8n") \n\
+\
+~Ctrl ~Meta ~Shift <Key> KP_3:        string(0x1b) string("[zo")  \n\
+~Ctrl ~Meta Shift  <Key> KP_3:        string(0x1b) string("[z2o") \n\
+~Ctrl Meta  ~Shift <Key> KP_3:        string(0x1b) string("[z3o") \n\
+~Ctrl Meta  Shift  <Key> KP_3:        string(0x1b) string("[z4o") \n\
+Ctrl  ~Meta ~Shift <Key> KP_3:        string(0x1b) string("[z5o") \n\
+Ctrl  ~Meta Shift  <Key> KP_3:        string(0x1b) string("[z6o") \n\
+Ctrl  Meta  ~Shift <Key> KP_3:        string(0x1b) string("[z7o") \n\
+Ctrl  Meta  Shift  <Key> KP_3:        string(0x1b) string("[z8o") \n\
+\
+~Ctrl ~Meta ~Shift <Key> KP_4:        string(0x1b) string("[zp")  \n\
+~Ctrl ~Meta Shift  <Key> KP_4:        string(0x1b) string("[z2p") \n\
+~Ctrl Meta  ~Shift <Key> KP_4:        string(0x1b) string("[z3p") \n\
+~Ctrl Meta  Shift  <Key> KP_4:        string(0x1b) string("[z4p") \n\
+Ctrl  ~Meta ~Shift <Key> KP_4:        string(0x1b) string("[z5p") \n\
+Ctrl  ~Meta Shift  <Key> KP_4:        string(0x1b) string("[z6p") \n\
+Ctrl  Meta  ~Shift <Key> KP_4:        string(0x1b) string("[z7p") \n\
+Ctrl  Meta  Shift  <Key> KP_4:        string(0x1b) string("[z8p") \n\
+\
+~Ctrl ~Meta ~Shift <Key> KP_5:        string(0x1b) string("[zq")  \n\
+~Ctrl ~Meta Shift  <Key> KP_5:        string(0x1b) string("[z2q") \n\
+~Ctrl Meta  ~Shift <Key> KP_5:        string(0x1b) string("[z3q") \n\
+~Ctrl Meta  Shift  <Key> KP_5:        string(0x1b) string("[z4q") \n\
+Ctrl  ~Meta ~Shift <Key> KP_5:        string(0x1b) string("[z5q") \n\
+Ctrl  ~Meta Shift  <Key> KP_5:        string(0x1b) string("[z6q") \n\
+Ctrl  Meta  ~Shift <Key> KP_5:        string(0x1b) string("[z7q") \n\
+Ctrl  Meta  Shift  <Key> KP_5:        string(0x1b) string("[z8q") \n\
+\
+~Ctrl ~Meta ~Shift <Key> KP_6:        string(0x1b) string("[zr")  \n\
+~Ctrl ~Meta Shift  <Key> KP_6:        string(0x1b) string("[z2r") \n\
+~Ctrl Meta  ~Shift <Key> KP_6:        string(0x1b) string("[z3r") \n\
+~Ctrl Meta  Shift  <Key> KP_6:        string(0x1b) string("[z4r") \n\
+Ctrl  ~Meta ~Shift <Key> KP_6:        string(0x1b) string("[z5r") \n\
+Ctrl  ~Meta Shift  <Key> KP_6:        string(0x1b) string("[z6r") \n\
+Ctrl  Meta  ~Shift <Key> KP_6:        string(0x1b) string("[z7r") \n\
+Ctrl  Meta  Shift  <Key> KP_6:        string(0x1b) string("[z8r") \n\
+\
+~Ctrl ~Meta ~Shift <Key> KP_7:        string(0x1b) string("[zs")  \n\
+~Ctrl ~Meta Shift  <Key> KP_7:        string(0x1b) string("[z2s") \n\
+~Ctrl Meta  ~Shift <Key> KP_7:        string(0x1b) string("[z3s") \n\
+~Ctrl Meta  Shift  <Key> KP_7:        string(0x1b) string("[z4s") \n\
+Ctrl  ~Meta ~Shift <Key> KP_7:        string(0x1b) string("[z5s") \n\
+Ctrl  ~Meta Shift  <Key> KP_7:        string(0x1b) string("[z6s") \n\
+Ctrl  Meta  ~Shift <Key> KP_7:        string(0x1b) string("[z7s") \n\
+Ctrl  Meta  Shift  <Key> KP_7:        string(0x1b) string("[z8s") \n\
+\
+~Ctrl ~Meta ~Shift <Key> KP_8:        string(0x1b) string("[zt")  \n\
+~Ctrl ~Meta Shift  <Key> KP_8:        string(0x1b) string("[z2t") \n\
+~Ctrl Meta  ~Shift <Key> KP_8:        string(0x1b) string("[z3t") \n\
+~Ctrl Meta  Shift  <Key> KP_8:        string(0x1b) string("[z4t") \n\
+Ctrl  ~Meta ~Shift <Key> KP_8:        string(0x1b) string("[z5t") \n\
+Ctrl  ~Meta Shift  <Key> KP_8:        string(0x1b) string("[z6t") \n\
+Ctrl  Meta  ~Shift <Key> KP_8:        string(0x1b) string("[z7t") \n\
+Ctrl  Meta  Shift  <Key> KP_8:        string(0x1b) string("[z8t") \n\
+\
+~Ctrl ~Meta ~Shift <Key> KP_9:        string(0x1b) string("[zu")  \n\
+~Ctrl ~Meta Shift  <Key> KP_9:        string(0x1b) string("[z2u") \n\
+~Ctrl Meta  ~Shift <Key> KP_9:        string(0x1b) string("[z3u") \n\
+~Ctrl Meta  Shift  <Key> KP_9:        string(0x1b) string("[z4u") \n\
+Ctrl  ~Meta ~Shift <Key> KP_9:        string(0x1b) string("[z5u") \n\
+Ctrl  ~Meta Shift  <Key> KP_9:        string(0x1b) string("[z6u") \n\
+Ctrl  Meta  ~Shift <Key> KP_9:        string(0x1b) string("[z7u") \n\
+Ctrl  Meta  Shift  <Key> KP_9:        string(0x1b) string("[z8u") \n\
+\
+~Ctrl ~Meta ~Shift <Key> Menu:        string(0x1b) string("[zv")  \n\
+~Ctrl ~Meta Shift  <Key> Menu:	      string(0x1b) string("[z2v") \n\
+~Ctrl Meta  ~Shift <Key> Menu:	      string(0x1b) string("[z3v") \n\
+~Ctrl Meta  Shift  <Key> Menu:	      string(0x1b) string("[z4v") \n\
+Ctrl  ~Meta ~Shift <Key> Menu:	      string(0x1b) string("[z5v") \n\
+Ctrl  ~Meta Shift  <Key> Menu:	      string(0x1b) string("[z6v") \n\
+Ctrl  Meta  ~Shift <Key> Menu:	      string(0x1b) string("[z7v") \n\
+Ctrl  Meta  Shift  <Key> Menu:	      string(0x1b) string("[z8v") \n
+
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;back&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;back&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;back&gt;</h1></div><div><span id="back"/><table border="1" class="wovenodd"><tr><td class="elementSpec">back</td><td colspan="2" class="wovenodd-col2">(back matter) contains any appendixes, etc. following the main part of a
+text.</td></tr><tr><td valign="top"><span class="label">Attributes: </span></td><td>  [<a class="classlink" href="ref-att.declaring.html">att.declaring</a> ] </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-att.declaring.html">att.declaring</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element back
+{
+   att.global.attributes,
+   att.declaring.attributes,
+   (
+      ( <a class="link_odd" href="ref-model.frontPart.html">model.frontPart</a> | <a class="link_odd" href="ref-model.global.html">model.global</a> | <a class="link_odd" href="ref-model.divWrapper.html">model.divWrapper</a> )*,
+      (
+         ( ( <a class="link_odd" href="ref-model.divLike.html">model.divLike</a> ), ( <a class="link_odd" href="ref-model.global.html">model.global</a> | <a class="link_odd" href="ref-model.frontPart.html">model.frontPart</a> )* )+
+       | ( ( <a class="link_odd" href="ref-model.div1Like.html">model.div1Like</a> ), ( <a class="link_odd" href="ref-model.global.html">model.global</a> | <a class="link_odd" href="ref-model.frontPart.html">model.frontPart</a> )* )+
+      )?,
+      <a class="link_odd" href="ref-model.divWrapper.bottom.html">model.divWrapper.bottom</a>*
+   )
+}</pre></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;back&gt;</span><br/>  <span class="element">&lt;div1 <span class="attribute">type</span>="appendix"&gt;</span><br/>   <span class="element">&lt;head&gt;</span>The Golden Dream or, the Ingenuous Confession<span class="element">&lt;/head&gt;</span><br/>   <span class="element">&lt;p&gt;</span>To shew the Depravity of human Nature
+      <span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;/div1&gt;</span><br/>  <span class="element">&lt;div1 <span class="attribute">type</span>="epistle"&gt;</span><br/>   <span class="element">&lt;head&gt;</span>A letter from the Printer, which he desires 
+        may be inserted<span class="element">&lt;/head&gt;</span><br/>   <span class="element">&lt;salute&gt;</span>Sir.<span class="element">&lt;/salute&gt;</span><br/>   <span class="element">&lt;p&gt;</span>I have done with your Copy, so you may return 
+          it to the Vatican, if you please
+      <span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;/div1&gt;</span><br/>  <span class="element">&lt;div1 <span class="attribute">type</span>="advert"&gt;</span><br/>   <span class="element">&lt;head&gt;</span>The Books usually read by the Scholars 
+       of Mrs Two-Shoes are these and are sold at Mr 
+       Newbery's at the Bible and Sun in St Paul's
+       Church-yard.<span class="element">&lt;/head&gt;</span><br/>   <span class="element">&lt;list&gt;</span><br/>    <span class="element">&lt;item <span class="attribute">n</span>="1"&gt;</span>The Christmas Box, Price 1d.<span class="element">&lt;/item&gt;</span><br/>    <span class="element">&lt;item <span class="attribute">n</span>="2"&gt;</span>The History of Giles Gingerbread, 1d.<span class="element">&lt;/item&gt;</span><br/>    <span class="element">&lt;item <span class="attribute">n</span>="42"&gt;</span>A Curious Collection of Travels, selected 
+          from the Writers of all Nations, 10 Vol, Pr. bound 1l.<span class="element">&lt;/item&gt;</span><br/>   <span class="element">&lt;/list&gt;</span><br/>  <span class="element">&lt;/div1&gt;</span><br/>  <span class="element">&lt;div1 <span class="attribute">type</span>="advert"&gt;</span><br/>   <span class="element">&lt;head&gt;</span><br/>    <span class="element">&lt;hi <span class="attribute">rend</span>="center"&gt;</span>By the KING's Royal Patent,<span class="element">&lt;/hi&gt;</span><br/>            Are sold by J. NEWBERY, at the Bible and Sun in <br/>            St. Paul's Church-Yard.<span class="element">&lt;/head&gt;</span><br/>   <span class="element">&lt;list&gt;</span><br/>    <span class="element">&lt;item <span class="attribute">n</span>="1"&gt;</span>Dr. James's Powders for Fevers, the 
+           Small-Pox, Measles, Colds, &amp;c. 2s. 6d<span class="element">&lt;/item&gt;</span><br/>    <span class="element">&lt;item <span class="attribute">n</span>="2"&gt;</span>Dr. Hooper's Female Pills, 1s.<span class="element">&lt;/item&gt;</span><br/>   <span class="element">&lt;/list&gt;</span><br/>  <span class="element">&lt;/div1&gt;</span><br/> <span class="element">&lt;/back&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p><span id="id2436868"/>The content model of back matter is identical to
+that of front matter, reflecting the facts of cultural
+history.</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="DS.html#DSBACK" title="Back Matter">5.6  Back Matter</a></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="DS.html" title="7">5  Default Text Structure</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">textstructure</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

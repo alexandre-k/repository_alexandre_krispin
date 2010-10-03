@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;alt&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;alt&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;alt&gt;</h1></div><div><span id="alt"/><table border="1" class="wovenodd"><tr><td class="elementSpec">alt</td><td colspan="2" class="wovenodd-col2">(alternation) identifies an alternation or a set of choices among elements or passages.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-att.pointing.html">att.pointing</a> <a class="link_odd" href="ref-model.global.meta.html">model.global.meta</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element alt
+{
+   att.global.attributes,
+   att.pointing.attributes,
+   attribute targets { list { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a>, <a class="link_odd" href="ref-data.pointer.html">data.pointer</a>+ } },
+   attribute mode { "excl" | "incl" }?,
+   attribute weights { list { <a class="link_odd" href="ref-data.probability.html">data.probability</a>+ } }?,
+   empty
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>  [<a class="classlink" href="ref-att.pointing.html">att.pointing</a> ] <table><tr><td class="attDef">targets</td><td colspan="2">specifies the identifiers of the alternative elements or passages.</td></tr><tr><td/><td><span class="label">Status: </span><b>Required</b></td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span> [n &gt;= 2]  [n &lt;= unbounded] <code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>Each value specified must be the same as that
+		specified as value for an <span class="att">xml:id</span> attribute for some
+		other element in the current document.</td></tr><tr><td class="attDef">mode</td><td colspan="2">states whether the alternations gathered in this collection are exclusive or inclusive.</td></tr><tr><td/><td><span class="label">Status: </span>Recommended</td></tr><tr><td><!-- --></td><td valign="top">Legal values are:<table class="valList"><tr><td valign="top"><b>excl</b></td><td valign="top">(indicates that the alternation is exclusive, i.e. that
+		  at most one of the alternatives occurs.) </td></tr><tr><td valign="top"><b>incl</b></td><td valign="top">(indicates that the alternation is not exclusive, i.e. that
+		  one or more of the alternatives occur.) </td></tr></table></td></tr><tr><td class="attDef">weights</td><td colspan="2">If mode is excl, each weight
+      states the probability that the corresponding alternative
+      occurs. If modeincl each weight states
+      the probability that the corresponding alternative occurs given
+      that at least one of the other alternatives occurs.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span> [n &lt;= unbounded] <code class="eg">
+<a class="link_odd" href="ref-data.probability.html">data.probability</a></code></td></tr><tr><td/><td><span class="label">Values: </span>a whitespace-separated list of probability values in
+      the range from 0 to 1.</td></tr><tr><td/><td><p><span id="id2501602"/>If <span class="att">mode</span> is <tt>excl</tt>, the sum of weights
+        must be 1. If <span class="att">mode</span> is <tt>incl</tt>, the sum of
+        weights must be in the range from 0 to the number of
+        alternants.</p></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;alt <span class="attribute">mode</span>="excl" <span class="attribute">targets</span>="#we.fun #we.sun" <span class="attribute">weights</span>="0.5 0.5"/&gt;</span></div></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="SA.html#SAAT" title="Alternation">11.8  Alternation</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">linking</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

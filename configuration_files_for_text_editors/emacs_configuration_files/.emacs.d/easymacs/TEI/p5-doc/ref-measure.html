@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;measure&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;measure&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;measure&gt;</h1></div><div><span id="measure"/><table border="1" class="wovenodd"><tr><td class="elementSpec">measure</td><td colspan="2" class="wovenodd-col2">contains a word or phrase referring to some quantity of
+an object or commodity, usually comprising a number, a unit, and a
+commodity name.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.measureLike.html">model.measureLike</a> <a class="link_odd" href="ref-att.measurement.html">att.measurement</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element measure
+{
+   att.global.attributes,
+   att.measurement.attributes,
+   attribute type { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> }?,
+   <a class="link_odd" href="ref-macro.phraseSeq.html">macro.phraseSeq</a>
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>  [<a class="classlink" href="ref-att.measurement.html">att.measurement</a> ] <table><tr><td class="attDef">type</td><td colspan="2">specifies the type of measurement in any convenient typology.</td></tr><tr><td/><td><span class="label">Status: </span>Mandatory when applicable</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a></code></td></tr><tr><td/><td/></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;measure <span class="attribute">type</span>="weight"&gt;</span><br/>  <span class="element">&lt;num&gt;</span>2<span class="element">&lt;/num&gt;</span> pounds of flesh<span class="element">&lt;/measure&gt;</span><br/> <span class="element">&lt;measure <span class="attribute">type</span>="currency"&gt;</span>£10-11-6d<span class="element">&lt;/measure&gt;</span><br/> <span class="element">&lt;measure <span class="attribute">type</span>="area"&gt;</span>2 merks of old extent<span class="element">&lt;/measure&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;measure <span class="attribute">quantity</span>="40" <span class="attribute">unit</span>="hogshead" <span class="attribute">commodity</span>="rum"&gt;</span>2 score hh rum<span class="element">&lt;/measure&gt;</span><br/> <span class="element">&lt;measure <span class="attribute">quantity</span>="12" <span class="attribute">unit</span>="count" <span class="attribute">commodity</span>="roses"&gt;</span>1 doz. roses<span class="element">&lt;/measure&gt;</span><br/> <span class="element">&lt;measure <span class="attribute">quantity</span>="1" <span class="attribute">unit</span>="count" <span class="attribute">commodity</span>="tulips"&gt;</span>1 yellow tulip<span class="element">&lt;/measure&gt;</span></div></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="CO.html#CONANU" title="Numbers and Measures">4.5.3  Numbers and
+Measures</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">core</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

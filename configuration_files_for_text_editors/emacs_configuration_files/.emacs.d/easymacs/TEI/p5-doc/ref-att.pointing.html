@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>att.pointing</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="att.pointing"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">att.pointing</h1></div><div><span id="att.pointing"/><table border="1" class="wovenodd"><tr><td class="classSpec">att.pointing</td><td colspan="2" class="wovenodd-col2">defines a set of attributes used by all elements which point
+  to other elements by means of one or more URI references.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>In addition to global attributes<table><tr><td class="attDef">type</td><td colspan="2">categorizes the pointer in some respect, using any
+      convenient set of categories.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.word.html">data.word</a></code></td></tr><tr><td/><td><span class="label">Values: </span>Any string of XML name characters. The type should
+      indicate the intended function of the pointer, or the rhetorical
+      relationship between its source and target.</td></tr><tr><td class="attDef">evaluate</td><td colspan="2">specifies the intended meaning when the target of a
+      pointer is itself a pointer.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td><!-- --></td><td valign="top">Legal values are:<table class="valList"><tr><td valign="top"><b>all</b></td><td valign="top">(if the element pointed to is itself a pointer, then
+	  the target of that pointer will be taken, and so on, until
+	  an element is found which is not a pointer.) </td></tr><tr><td valign="top"><b>one</b></td><td valign="top">(if the element pointed to is itself a pointer, then
+	  its target (whether a pointer or not) is taken as the target
+	  of this pointer.) </td></tr><tr><td valign="top"><b>none</b></td><td valign="top">(no further evaluation of targets is carried out
+	  beyond that needed to find the element specified in the
+	  pointer's target.) </td></tr></table></td></tr><tr><td/><td><p><span id="id2503294"/>If no value is given, the application program is
+          responsible for deciding (possibly on the basis of user
+          input) how far to trace a chain of pointers.</p></td></tr></table></td></tr></table></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="CO.html#COXR" title="Simple Links and Cross References">4.6  Simple Links and Cross References</a></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Members</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-alt.html">alt</a>  <a class="link_odd" href="ref-att.pointing.group.html">att.pointing.group</a>    [<a class="link_element" href="ref-altGrp.html">altGrp</a>  <a class="link_element" href="ref-joinGrp.html">joinGrp</a>  <a class="link_element" href="ref-linkGrp.html">linkGrp</a>  ] <a class="link_odd" href="ref-join.html">join</a>  <a class="link_odd" href="ref-link.html">link</a>  <a class="link_odd" href="ref-ptr.html">ptr</a>  <a class="link_odd" href="ref-ref.html">ref</a>  </td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">linking</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

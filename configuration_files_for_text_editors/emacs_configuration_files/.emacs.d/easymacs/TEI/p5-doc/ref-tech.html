@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;tech&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;tech&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;tech&gt;</h1></div><div><span id="tech"/><table border="1" class="wovenodd"><tr><td class="elementSpec">tech</td><td colspan="2" class="wovenodd-col2">(Technical stage direction) describes a special-purpose stage direction that is not
+meant for the actors.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.stageLike.html">model.stageLike</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element tech
+{
+   att.global.attributes,
+   attribute type { "light" | "sound" | "prop" | "block" }?,
+   attribute perf { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> }?,
+   <a class="link_odd" href="ref-macro.paraContent.html">macro.paraContent</a>
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>In addition to global attributes<table><tr><td class="attDef">type</td><td colspan="2">categorizes the technical stage direction.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td><!-- --></td><td valign="top">Legal values are:<table class="valList"><tr><td valign="top"><b>light</b></td><td valign="top">(a lighting cue) </td></tr><tr><td valign="top"><b>sound</b></td><td valign="top">(a sound cue) </td></tr><tr><td valign="top"><b>prop</b></td><td valign="top">(a prop cue) </td></tr><tr><td valign="top"><b>block</b></td><td valign="top">(a blocking instruction) </td></tr></table></td></tr><tr><td class="attDef">perf</td><td colspan="2">identifies the performance or performances to which this
+technical direction applies.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a></code></td></tr><tr><td/><td><span class="label">Values: </span>The IDREFS are derived from the <span class="att">xml:id</span> attribute on a <code>&lt;performance&gt;</code> element.</td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;tech <span class="attribute">type</span>="light"&gt;</span>Red spot on his face<span class="element">&lt;/tech&gt;</span></div></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="DR.html#DRTEC" title="Technical Information">7.3.1  Technical Information</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">drama</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

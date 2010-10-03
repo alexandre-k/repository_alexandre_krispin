@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;div7&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;div7&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;div7&gt;</h1></div><div><span id="div7"/><table border="1" class="wovenodd"><tr><td class="elementSpec">div7</td><td colspan="2" class="wovenodd-col2">(level-7 text division) contains the smallest possible subdivision of the front, body or
+back of a text, larger than a paragraph.</td></tr><tr><td valign="top"><span class="label">Attributes: </span></td><td>  [<a class="classlink" href="ref-att.divLike.html">att.divLike</a> <a class="classlink" href="ref-att.declaring.html">att.declaring</a> ] </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-att.divLike.html">att.divLike</a> <a class="link_odd" href="ref-att.declaring.html">att.declaring</a> <a class="link_odd" href="ref-model.div7Like.html">model.div7Like</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element div7
+{
+   att.global.attributes,
+   att.divLike.attributes,
+   att.declaring.attributes,
+   (
+      ( <a class="link_odd" href="ref-model.divWrapper.html">model.divWrapper</a> | <a class="link_odd" href="ref-model.global.html">model.global</a> )*,
+      ( <a class="link_odd" href="ref-macro.component.html">macro.component</a>, <a class="link_odd" href="ref-model.global.html">model.global</a>* )+,
+      ( ( <a class="link_odd" href="ref-model.divWrapper.html">model.divWrapper</a> | <a class="link_odd" href="ref-model.divWrapper.bottom.html">model.divWrapper.bottom</a> ), <a class="link_odd" href="ref-model.global.html">model.global</a>* )*
+   )
+}</pre></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p class="dataDesc"><span id="id2430268"/>any sequence of low-level structural elements,
+    e.g., paragraphs (<code>&lt;p&gt;</code>), lists (<code>&lt;list&gt;</code>), or examples
+    (<code>&lt;eg&gt;</code> or <code>&lt;egXML&gt;</code>).</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="DS.html#DSDIV2" title="Numbered Divisions">5.1.2  Numbered Divisions</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">textstructure</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

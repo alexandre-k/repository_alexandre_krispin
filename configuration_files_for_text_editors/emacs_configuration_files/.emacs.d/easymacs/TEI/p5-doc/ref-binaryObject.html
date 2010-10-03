@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;binaryObject&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;binaryObject&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;binaryObject&gt;</h1></div><div><span id="binaryObject"/><table border="1" class="wovenodd"><tr><td class="elementSpec">binaryObject</td><td colspan="2" class="wovenodd-col2">provides encoded binary data representing an inline graphic or other object.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.graphicLike.html">model.graphicLike</a> <a class="link_odd" href="ref-model.titlepagePart.html">model.titlepagePart</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element binaryObject
+{
+   att.global.attributes,
+   attribute width { <a class="link_odd" href="ref-data.outputMeasurement.html">data.outputMeasurement</a> }?,
+   attribute height { <a class="link_odd" href="ref-data.outputMeasurement.html">data.outputMeasurement</a> }?,
+   attribute scale { <a class="link_odd" href="ref-data.numeric.html">data.numeric</a> }?,
+   attribute mimeType { <a class="link_odd" href="ref-data.word.html">data.word</a> }?,
+   attribute encoding { list { <a class="link_odd" href="ref-data.word.html">data.word</a>+ } }?,
+   text
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>In addition to global attributes<table><tr><td class="attDef">width</td><td colspan="2">The display width of the object</td></tr><tr><td/><td><span class="label">Status: </span>Mandatory when applicable</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.outputMeasurement.html">data.outputMeasurement</a></code></td></tr><tr><td class="attDef">height</td><td colspan="2">The display height of the object</td></tr><tr><td/><td><span class="label">Status: </span>Mandatory when applicable</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.outputMeasurement.html">data.outputMeasurement</a></code></td></tr><tr><td class="attDef">scale</td><td colspan="2">A scale factor to be applied to the object to make it the desired display size</td></tr><tr><td/><td><span class="label">Status: </span>Mandatory when applicable</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.numeric.html">data.numeric</a></code></td></tr><tr><td class="attDef">mimeType</td><td colspan="2">The MIME type</td></tr><tr><td/><td><span class="label">Status: </span>Mandatory when applicable</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.word.html">data.word</a></code></td></tr><tr><td/><td><span class="label">Values: </span>The MIME type to be used for the object when it is decoded</td></tr><tr><td class="attDef">encoding</td><td colspan="2">The encoding used to encode the binary data. If not
+      specified, this is assumed to be Base64</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span> [n &lt;= unbounded] <code class="eg">
+<a class="link_odd" href="ref-data.word.html">data.word</a></code></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;binaryObject <span class="attribute">mimeType</span>="image/gif"&gt;</span>
+R0lGODdhMAAwAPAAAAAAAP///ywAAAAAMAAwAAAC8IyPqcvt3wCcDkiLc7C0qwy
+GHhSWpjQu5yqmCYsapyuvUUlvONmOZtfzgFzByTB10QgxOR0TqBQejhRNzOfkVJ
++5YiUqrXF5Y5lKh/DeuNcP5yLWGsEbtLiOSpa/TPg7JpJHxyendzWTBfX0cxOnK
+PjgBzi4diinWGdkF8kjdfnycQZXZeYGejmJlZeGl9i2icVqaNVailT6F5iJ90m6
+mvuTS4OK05M0vDk0Q4XUtwvKOzrcd3iq9uisF81M1OIcR7lEewwcLp7tuNNkM3u
+Nna3F2JQFo97Vriy/Xl4/f1cf5VWzXyym7PH hhx4dbgYKAAA7<span class="element">&lt;/binaryObject&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">core</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

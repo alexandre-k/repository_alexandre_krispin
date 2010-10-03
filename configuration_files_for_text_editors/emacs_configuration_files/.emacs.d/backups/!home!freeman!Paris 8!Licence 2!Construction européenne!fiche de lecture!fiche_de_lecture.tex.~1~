@@ -1,0 +1,184 @@
+\documentclass[10pt,a4paper,MinionPro]{scrartcl} % KOMA-Script article
+\usepackage[utf8x]{inputenc} \usepackage[T1]{fontenc}
+\usepackage{enumitem} \usepackage[square,numbers]{natbib}
+\usepackage{array} \usepackage{natbib} \usepackage{amsmath}
+\usepackage{color} \usepackage{amsfonts} \usepackage[pdftex]{graphicx}
+% \usepackage{hyperref}
+\usepackage{amssymb} \usepackage{lipsum} \usepackage{url}
+\usepackage[frenchb]{babel}
+\title{\rmfamily\normalfont\spacedallcaps{Fiche de lecture}}
+\author{\spacedlowsmallcaps{Alexandre Krispin \no 259397}}
+\usepackage[nochapters]{classicthesis-ldpkg}
+\usepackage[nochapters]{classicthesis}
+
+\begin{document}
+  
+\maketitle
+    
+\textbf{Foret François, Légitimer l'Europe, Paris, Presses de Science
+  Po, 2008, 290 p.}
+
+\emph{Légitimer l'Europe} est un livre écrit, au moment de sa
+publication en 2008, par le directeur des recherches politiques de
+l'Institut d'études européennes, François Foret, qui est également
+chercheur au Cevipol à l'Université libre de Bruxelles. Si l'on
+considère que chaque acteur social possède un habitus et que sa pensée
+est socialement influencée par son milieu, il nous semble important de
+constater que Foret François appartient socialement à ce que l'on
+caractérise d'élite dans le sens où il est rattaché
+professionnellement à une grande école, d'une part. Et d'autre part,
+comme il l'écrivait lui-même dans son livre à propos de la formation
+des eurocrates, l'Université libre de Bruxelles, fait partie de ces
+institutions où \og les diplômés [...] présentent un capital scolaire
+et sociale élevé, conforme aux formations suivies par les élites
+nationales.\fg\footnote{\emph{Cf.}, \textsc{Foret} François, Légitimer
+  l'Europe, Paris, Presses de Science Po, 2008, p. 93.}
+
+Cette appartenance à un milieu socialement différencié de la classe
+moyenne se distingue d'ailleurs par le vocabulaire utilisé qui est,
+volontairement ou inconsciemment, relativement littéraire. Cette
+caractéristique de son style à l'écrit peut cependant tout aussi bien
+être un point négatif que positif. En effet, si l'on considère qu'un
+livre sur l'Europe est destiné à une élite, alors le livre de Foret
+remplit son rôle. Si l'on considère que l'Europe concerne tous les
+Français, alors il ne le remplit pas puisqu'il nous paraît probable
+qu'il peut avoir un effet de refoulement. Également, il ne serait pas
+dénué de sens de penser que sa réflexion en elle-même est influencée
+par ce milieu élitaire, et que cela a une conséquence directe dans sa
+réflexion qu'il a développé dans son livre, comme nous allons le voir.
+
+Le premier chapitre du livre, se rapport au fonctionnalisme et à la
+constitution européenne. Un point positif de ce chapitre et de
+l'ensemble du livre est le fait qu'il reprend bien les courants de
+pensée sur le sujet, en les mettant en opposition d'une manière
+critique. Ainsi, il montre bien les limites du fonctionnalisme en
+faisant remarquer qu'il s'agit d'une thèse qui \og a pu servir à
+cautionner l'existence de nombreux systèmes aussi prospères
+qu'autoritaires.fg\footnote{\emph{Ibid.}, p. 32.}, que \og la
+légitimation par les prestations fournies reste en effet éminemment
+précaire car elle fait dépendre la stabilité politique des
+performances économiques\fg\footnote{\emph{Ibid.}, p. 32-33.}, et que,
+\og surtout, la justification par les résultats postule qu'il
+existerait une sorte d'optimum de la richesse à un moment donné
+correspondant à un niveau de sastisfaction qui assurerait au pouvoir
+la tranquilité du corps social.\fg\footnote{\emph{Ibid.}, p. 33.}
+
+Bref, pour Foret, le fonctionnalisme ne peut servir pour légitimer
+l'Europe. Également, Il reprend les critiques faites à Habermas pour
+montrer \og les limites sur le plan de l'efficacité d'une approche par
+l'espace public trop idéaliste et
+rationalisante.\fg\footnote{\emph{Ibid.}, p. 37.}, ainsi que d'autres
+thèses, le point commun de toutes ces thèse étant un consensus sur le
+manque de légitimité de l'Union européenne auprès des citoyens
+concernés.
+
+Pour résoudre un problème dans la légitimité, il faut cependant en
+connaître la cause, puis l'analyser pour la comprendre si cela n'a pas
+été encore le cas. Or, Foret écrit que \og Le vote non lors du
+référendum de mai 2005 sur le traité constitutionnel a été porté par
+les couches populaires particulièrement exposées aux aléas de la
+concurrence d'économies ouvertes, mais aussi par des catégories
+sociales davantage éduquées et protégées, et il a recruté ses
+bataillons d'électeurs à gauche comme à
+droite.\fg\footnote{\emph{Ibid.}, p. 47.} Ceci nous paraît discutable
+car, d'une part, il nous paraît peu probable que les classes
+populaires aient participé en masse au vote pour le référendum. C'est
+pourquoi il nous semble d'abord nécessaire de définir ce que l'on
+entend par \og classe populaire\fg.
+
+D'autre part, s'appuyer sur des enquêtes d'opinion pour fournir une
+analyse sans donner de détail et renvoyer à la place aux travaux
+d'autres auteurs nous paraît également limité d'un point de vue
+méthodologique. En effet, nous soulignerons le fait que bien
+qu'aujourd'hui les sondages d'opinion semblent avoir acquis une
+certaine légitimité scientifique et démocratique, d'après les
+sociologues ils ne représentent en réalité pas plus que ceux qui les
+font parler. Il nous semble donc important de redéfinir les causes
+dans le manque de légitimité de l'Europe, en nous posant la question
+de savoir si ce problème de légitimité est structurel ou non, et
+quelles en sont les causes précises.
+
+Le reste du livre est construit de la même manière que le chapitre 1,
+et en conserve également, plus ou moins selon les chapitres, le
+principal défaut, à savoir que les causes profondes, structurelles du
+manque de légitimité de l'Europe sont mal analysées. Ainsi, dans le
+deuxième chapitre Foret s'exprime à propos du problème de la
+communication de l'Europe ; sur le même schéma méthodologique
+perceptible dans le premier chapitre, il reprend ce qui semble faire
+consensus dans la communauté scientifique, et écrit :
+\begin{quotation}
+  À l'ère démocratique, il ne se justifie que par l'adhésion des
+  gouvernés, et cette adhésion est à renégocier sans trêve. Pour
+  obtenir confiance et allégeance, l'ordre politique doit réaffirmer
+  sa compétence, son efficacité et sa désirabilité. Faute d'un contenu
+  prédéfini par la tradition ou la transcendance, il lui faut
+  réinventer sans cesse les moyens de faire passer le messge de sa
+  légitimité.\footnote{\emph{Ibid.}, p. 58-59.}
+\end{quotation}
+Certes, ce qu'il écrit est exact sur le fond. Cependant, ce type
+d'analyse revient plus à exclure le problème de fond, pour prendre les
+problèmes superficiels et expliquer les causes du manque de légitimité
+de l'Union européenne. De même lorsqu'il écrit que \og les mythes
+d'hier ne font plus autorité, et ceux que l'on crée de toutes pièces
+ne durent guère. Il faut donc en produire sans cesse de nouveaux, pour
+renouveler les images qui sécurisent et protègent : celles de l'unité
+de la communauté, du rassemblement, de la
+représentativité\fg\footnote{\emph{Ibid.}, p. 59.} Ce type d'analyse,
+ne remettant pas en question l'établissement de mythe dans le
+processus de légitimation, nous paraît être biaisé car il élimine
+l'une des questions qui nous paraît essentiel : les mythes en
+eux-mêmes ne sont-ils pas des outils de légitimation à remettre en
+question ? Il nous paraît être en tous les cas irréaliste et contraire
+à l'esprit scientifique de reprendre les thèses qui font consensus
+pour ensuite justifier son argumentation.
+
+Certes, comme l'expliquait Foret dans le chapitre suivant, les
+politiques nationales des États-nations ont un aussi leur part de
+responsabilité dans le manque de légitimité des institutions
+européennes. Certes, les acteurs politiques de ces institutions
+supra-nationales peuvent manquer de pouvoir en comparaison des
+institutions nationales. Il n'en reste pas moins que la formation
+technocratique et élitiste des eurocrates fait parti des problèmes
+fondamentaux. Comme le faisait d'ailleurs remarquer Foret, les acteurs
+politiques de l'Union européenne communiquent plus avec les
+représentants des gouvernements nationaux qu'avec les citoyens
+eux-mêmes qui sont pourtant la source de leur légitimité.
+
+Foret fait également état du discours dépolitisé perceptible dans les
+discours provenant de la Commission européenne. Il fait habilement
+remarquer que \og Le modèle de pouvoir \emph{top-down} est remis en
+cause, et la relation de détermination verticale du politique au
+social est déclarée obsolète, au profit d'une configuration circulaire
+d'interactions, le \textquotedblleft cercle
+vertueux\textquotedblright~de la participation à tous les niveaux de
+l'action publique, selon les termes mêmes du \emph{livre blanc sur la
+  gouvernance}.\fg\footnote{\emph{Ibid.}, p. 136.} Mais sur ce
+point-ci également, il nous semble que mettre en avant ce problème
+pour ne pas remettre en question la pertinence de l'utilisation des
+réseaux sociaux sur internet nous paraît être problématique. En effet,
+il nous semble que ne pas remttre en question l'approche caricaturale
+des eurocrates ou des technocrates (pour reprendre les termes de
+Foret) consistant à résoudre les problèmes de légitimité par les
+réseaux sociaux au lieu de les résoudre à la base par des propositions
+au lieu de les considérer comme faisant parti d'un ensemble (en
+prenant également en compte les problèmes économiques et sociaux) nous
+paraît être un aspect manquant dans l'analyse de l'auteur.
+
+Bref, il nous semble que Foret se focalise trop sur les aspects
+superficiels participant à la légitimation d'une autorité. C'est ce
+que l'on peut remarquer dans les chapitres suivant, en particulier
+dans la partie traitant du drapeau européen. Certes, le drapeau a pu
+avoir un aspect sacralisant le pouvoir, certes, il peut également
+participer à légitimer un pouvoir dans la forme. Cependant, c'est ici
+aussi s'arrêter aux aspects superficiels dans le manque de légitimité
+de l'Europe, et faire fi des problèmes fondamentaux qui
+l'induit. Toutefois, malgré tous les défauts que constitue un livre
+dont l'analyse est superficielle, l'auteur nous expose ses
+connaissances, discutables, mais intéressantes car reprenant les
+thèses de différents auteurs ; en ce sens, le livre de Foret peut
+faire figure de résumé passable dans l'étude de la légitimation de
+l'Europe.
+
+
+
+\end{document}

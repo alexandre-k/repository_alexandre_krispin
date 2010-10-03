@@ -1,0 +1,277 @@
+\documentclass[openright,titlepage,fleqn,numbers=noenddot,headinclude,1headlines,11pt,a4paper,BCOR5mm,footinclude,cleardoublepage=empty,abstractoff]{scrartcl}
+% ********************************************************************
+% Development Stuff
+% ********************************************************************
+\listfiles
+%\usepackage[l2tabu, orthodox, abort]{nag}
+%\usepackage[warning, all]{onlyamsmath}
+% ********************************************************************
+% Re-usable information
+% ********************************************************************
+\newcommand{\myTitle}{Les \'elections r\'egionales 2010\xspace}
+  \newcommand{\myDegree}{Licence Science
+  politique 2\ieme ann\'ee\xspace}
+  \newcommand{\myName}{Yaya DJIGO \no 252588\xspace}
+  \newcommand{\myProf}{Talpin\xspace}
+  \newcommand{\myFaculty}{Science Politique\xspace}
+\newcommand{\myDepartment}{Sciences humaines\xspace}
+\newcommand{\myUni}{\protect{Paris 8}\xspace}
+\newcommand{\myLocation}{Paname\xspace}
+\newcommand{\myTime}{Juin 2010\xspace}
+\usepackage[nochapters]{classicthesis-ldpkg} % [backref]
+%*******************************************************
+% Options for classicthesis.sty:
+% tocaligned eulerchapternumbers drafting linedheaders listsseparated 
+% subfig nochapters beramono eulermath parts minionpro pdfspacing 
+% listings dottedtoc minionprospacing manychapters
+
+\usepackage[frenchb]{babel}
+\usepackage{minitoc}
+\usepackage{lipsum}
+\usepackage[eulerchapternumbers,
+            subfig,beramono,nochapters]{classicthesis}
+%*******************************************************
+% Some font experiments
+%*******************************************************
+%\usepackage[osf]{libertine}
+%\usepackage{hfoldsty}
+%\usepackage[light,condensed,math]{iwona}
+%\renewcommand{\sfdefault}{iwona}
+%\usepackage{lmodern} % <-- no osf support :-(
+%\usepackage[urw-garamond]{mathdesign} %<-- no osf support :-(
+%*******************************************************
+% Fine-tuning for the text area
+%*******************************************************
+\linespread{1.05} % a bit more for Palatino
+\areaset[5mm]{312pt}{761pt} % 686 (factor 2.2) + 33 head + 42 head \the\footskip
+\setlength{\marginparwidth}{7em}%
+\setlength{\marginparsep}{2em}%
+
+%*******************************************************
+% hack to use citations in float environments 
+% will be fixed with caption package version 3.2
+%*******************************************************
+%\makeatletter 
+%\MakeRobustCommand\caption@xref 
+%\makeatother
+%*******************************************************            
+%\usepackage[section,below]{placeins} <--- not everybody wants this
+%\usepackage[all]{hypcap} <--- does not work with MiKTeX 2.6
+% ********************************************************************
+% Language/strings for backrefs (change here, thanks, Lorenzo)
+%*******************************************************
+%\renewcommand{\backrefnotcitedstring}{\relax}%(Not cited.)
+%\renewcommand{\backrefcitedsinglestring}[1]{(Citato a pagina~#1.)}
+%\renewcommand{\backrefcitedmultistring}[1]{(Citato alle pagine~#1.)}
+%\renewcommand{\backreftwosep}{ e~}
+%\renewcommand{\backreflastsep}{ e~}
+% ********************************************************************
+% Setup and Finetuning
+%*******************************************************
+\newlength{\abcd} % for ab..z string length calculation
+\newcommand{\myfloatalign}{\centering} % how all the floats will be aligned
+\setlength{\extrarowheight}{3pt} % increase table row height
+% ********************************************************************
+% Captions look and feel
+%*******************************************************
+\captionsetup{format=hang,font=small}
+\usepackage{color}
+\usepackage{url}
+\usepackage{natbib}
+\usepackage{xltxtra}
+%\linespread{1.05}
+\setmainfont[Numbers=OldStyle,Ligatures=Historic]{TeX Gyre Pagella}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{hyperref}
+\hypersetup{%
+    colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+    % uncomment the following line if you want to have black links (e.g., for printing)
+    %colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,% 
+    breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
+    plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+    hypertexnames=true, pdfhighlight=/O,%hyperfootnotes=true,%nesting=true,%frenchlinks,%
+    urlcolor=webbrown, linkcolor=RoyalBlue, citecolor=webgreen, %pagecolor=RoyalBlue,%
+    %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+    pdftitle={\myTitle},%
+    pdfauthor={\textcopyright\ \myName, \myUni, \myFaculty},%
+    pdfsubject={},%
+    pdfkeywords={},%
+    pdfcreator={pdfLaTeX},%
+    pdfproducer={LaTeX with hyperref and classicthesis}%
+}
+
+\begin{document}
+\frenchspacing
+\raggedbottom
+\selectlanguage{french} % american ngerman
+%\renewcommand*{\bibname}{new name}
+%\setbibpreamble{}
+\pagenumbering{roman}
+\pagestyle{plain}
+\begin{titlepage}
+  % if you want the titlepage to be centered, uncomment and fine-tune
+  % the line below (KOMA classes environment)
+  \begin{addmargin}[-1cm]{-3cm}
+    \begin{center}
+      \large
+
+      \hfill
+
+      \vfill
+
+        \begingroup
+        \color{Maroon}\spacedallcaps{\myTitle} \\ \bigskip
+        \endgroup
+
+        \spacedlowsmallcaps{\myName}
+
+        \vfill
+
+      %  \includegraphics[width=6cm]{Logo-regionales-2010-Min-Interieur} \\ \medskip
+
+        \myDegree \\ \medskip
+        \myDepartment \\
+        \myFaculty \\
+        \myUni \\ \bigskip
+
+        \myTime
+
+        \vfill
+
+      \end{center}
+    \end{addmargin}
+  \end{titlepage}
+
+  %*******************************************************
+% Table of Contents
+%*******************************************************
+%\phantomsection
+
+\refstepcounter{dummy}
+\pdfbookmark[1]{\contentsname}{tableofcontents}
+
+\setcounter{tocdepth}{2} % <-- 2 includes up to subsections in the ToC
+\setcounter{secnumdepth}{3} % <-- 3 numbers up to subsubsections
+\manualmark
+\markboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}
+
+\tableofcontents
+
+\automark[section]{chapter}
+\renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace\spacedlowsmallcaps{#1}}}
+  % ******************************************************* List of
+  % Figures and of the Tables
+  % *******************************************************
+  \clearpage
+  % ********************************************************************
+  % Frontmatter
+  % *******************************************************
+  % \include{FrontBackmatter/DirtyTitlepage}
+  % \include{FrontBackmatter/Titlepage}
+  % \include{FrontBackmatter/Titleback}
+  % \cleardoublepage\include{FrontBackmatter/Dedication}
+  % \cleardoublepage\include{FrontBackmatter/Abstract}
+  % \cleardoublepage\include{FrontBackmatter/Publication}
+  % \cleardoublepage\include{FrontBackmatter/Acknowledgments}
+  %\pagestyle{scrheadings}
+  % \cleardoublepage\include{FrontBackmatter/Contents}
+  % ********************************************************************
+  % Mainmatter *******************************************************
+  \pagenumbering{arabic}
+  % use \cleardoublepage here to avoid problems with pdfb
+ 
+\section{Introduction}
+
+Sociologiquement, les élections régionales sont une occasion intéressante pour analyser le champ politique, ses luttes, etc. La période précédant les régionales donne en particulier lieu à un rituel, la campagne électorale ; il s'agit donc d'un moment de la vie politique où la démocratie est mise en scène. Une mise en scène qui, au XX\ieme~siècle, est devenue l'élément fondamental et normatif dans notre société démocratique. D'un point de vue normatif, les élections régionales sont donc un événement important dans notre démocratie.
+
+Autrement dit, les élections régionales sont un sujet d'étude intéressant d'une part car il s'agit d'un processus reflétant notre système démocratique ; le droit de vote est un droit que peut possèder tout citoyen. D'autre part, les élections sont également elles-mêmes l'un des fondements légitimant le corps politique. Dans notre société, le système électoral est en effet le garant de la légitimité de ce dernier à posséder le pouvoir étatique, et le \og rituel\fg~symbolique pour l'acquisition de cette légitimité qui précède cette période, la campagne électorale, permet, nous semble-t-il, de mieux comprendre certaines caractéristiques du système politique français qui nous est contemporain. C'est pourquoi, à travers une analyse sciologique, nous essaierons de répondre à la problématique suivante : Peut-on dire que notre système démocratique, et en particulier le système électoral, se trouve confronté à une crise structurelle ou conjoncturelle ?
+
+Afin de répondre à notre problématique, ou au moins afin d'essayer de donner des éléments de réponses, nous analyserons en trois parties, au travers du prisme des médias :
+\begin{enumerate}
+\item comment les luttes politiques priment sur les programmes électoraux,
+\item dans un deuxième temps, comment le récit politique est conté dans les médias,
+\item et dans un troisième temps, comment les projets du corps politique faussent les enjeux de la campagne électorale.
+\end{enumerate}
+
+Enfin, nous préciserons quelques éléments méthodologiques que nous avons choisi adopter. Mis à part nos lectures personnelles, dans le cadre de notre analyse nous avons choisi d'utiliser les journaux \emph{Le Monde}, \emph{Le Figaro} et \emph{Libération} sur une période d'une semaine, du 6 au 14 mars. Également, nous devons ajouter par honnêteté intellectuelle que nous nous sommes largement inspirés de l'interview d'Henri \textsc{Maler} dans \emph{L'Humanité} du jeudi 4 mars 2010.
+
+\section{la m\'ediatisation des luttes politiques au d\'etriment des programmes \'electoraux}
+
+\subsection{La campagne \'electorale}
+
+\paragraph{}
+\og Portée par la crise économique et sociale qui secoue la région, la tête de liste du Front national se fixe pour objectif de dépasser la candidate de droite Valérie Létard le soir du premier tour\fg\footnote{\textsc{Mestre} Abel, \og Régionales : La campagne très sociale de Marine Le Pen dans le Pas-de-Calais\fg, \emph{Le Monde}, \no 20253, Samedi 6 mars 2010, p. 11.}, écrivait Abel \textsc{Mestre} dans \emph{Le Monde}. Il explique en effet que Marine Le Pen, profitant d'une période de récession économique, assurerait percevoir \og un désespoir particulier, des cris de détresse terrifiants\fg\footnote{\emph{Ibid}., p. 11.}.
+
+Il nous semble important de souligner que, dans son article dont le but est d'informer la population française, \textsc{Mestre} n'informe pas correctement. Il résume effectivement quelques bribes de semblants de programmes électoraux du Front national, puisqu'il relate par exemple la volonté de Marine Le \textsc{Pen} d'\og arrêter de donner de l'argent à Auchan pour aider plutôt les petits commerçants\fg\footnote{\emph{Ibid.}, p. 11.}, mais on ne peut évidemment pas considérer ce genre de citations comme étant la marque d'un programme électoral clair et logique. 
+
+Il semblerait d'autre part que ce que pouvons également constater dans \emph{Le Monde}, à savoir un manque de programmes électoraux clairs, tend à se retrouver dans d'autres journaux. Prenons par exemple un article de\emph{Libération} de Auffray\footnote{\textsc{Auffray} Alain, \og Comment rater une campagne\fg, \emph{Libération}, \no 8964, Mardi 9 mars 2010, p. 3.} ; à aucun moment l'article ne mentionne le fait que l'on puisse rater une campagne électorale à cause de l'absence de programme, il se contente de mentionner les luttes politiques.
+
+Dans un article de Patrick \textsc{Roger}\footnote{\textsc{Roger} Patrick, \og En Bourgogne, le socialiste François \textsc{Patriat}, président sortant, plaît aussi à droite\fg, \emph{Le Monde}, \no 20255, Mardi 9 mars, p. 11.}, nous pouvons également constater que quand bien même la lutte politique serait plus centrée sur les programmes, il ne s'agit toujours que d'une narration des luttes politiques entre partis, les programmes électoraux faisant défaut, pour être remplacés par des critiques puériles. \textsc{Roger} cite par exemple François \textsc{Patriat} disant que \og mettre 5 million d'euros comme le fait Ségolène [Royal] chez Heuliez, c'est de la folie. Je ne l'aurais jamais fait\fg\footnote{\emph{Ibid.}, p. 11.} Ce semblant de programme n'est qu'une critique et ne peut être considéré, nous semble-t-il, comme un programme électoral.
+
+Il semblerait que cette absence de programme électoral ne soit pas le résultat d'une déformation des médias de la campagne électorale. En effet, François \textsc{Sauvadet} expliquait au sujet des élections régionales de 2010 qu'\og Il ne faut pas se tromper d'élection. S'il y a un message à adresser, c'est en 2012 qu'il faudra le faire.\fg\footnote{\emph{Ibid.}, p. 11.} 
+
+Ainsi, tandis que la campagne électorale a pour but d'informer la peuple d'un programme, il semblerait qu'elle n'est devenue plus qu'un rituel normatif, avec une fonction rationnalisante, dans le cadre d'une légitimation de la domination étatique. En effet, si la campagne électorale, en se vidant de son sens originel consistant à afficher un \og programme électoral\fg n'a plus de sens en tant que telle, alors il nous semble logique de supposer qu'elle n'a plus qu'une fonction nomative ainsi qu'une fonction rationnalisant le rôle des candidats, soutenant ainsi leur légitimité.
+
+De ce fait nous pouvons supposer que si les médias semblent se désintéresser du programme électoral des candidats aux régionales, et \emph{a fortiori} les citoyens également, c'est en réalité à cause d'un désintérêt du corps politique lui-même pour les élections régionales. Et c'est pourquoi, comme nous allons le voir plus en détails, les médias relatent une problématique centrée sur le jeu politique.
+
+\subsection{Des probl\'ematiques centr\'ees sur le jeu politique}
+
+L'un des sujets particulièrement abordé par les médias, initié par, Éric \textsc{Besson}, ministre de l'immigration, à partir de la fin de l'année 2009, a été le débat sur l'identité nationale. Dans une interview avec Éric \textsc{Besson}, Luc \textsc{Bronner} et Françoise \textsc{Fressoz} rapportaient entre autres les propos suivants :
+\begin{quotation}
+Moi, je pense que les républicains, de droite comme de gauche, ont intérêt à comprendre pourquoi un certain nombre de Français par le passé ont pu voter Front national. Mais il y a aussi des Français qui craignent la mondialisation, la construction européenne, l'ouverture aux étrangers ou à l'islam, qui s'interrogent sur notre capacité à préserver tout ce qui fait la singularité de la France : ses services publics, sa culture, sa langue, son influence. Ces doutes, soit on les nie en se bouchant les yeux et les oreilles et on se trouve à la merci d'épisodes comme le 21 avril 2002, soit on les traite de façon ouverte et républicaine.\footnote{\textsc{Bronner} Luc, \textsc{Fressoz} Françoise, \og Eric Besson : \textquotedblleft Je n'ai pas fait le jeu du Front national\textquotedblright\fg, \emph{Le Monde}, \no 20254, Dimanche 7-Lundi 8 mars 2010, p. 8.}
+\end{quotation}
+Outre le fait que c'est avec les réformes du Président \textsc{Sarkozy} que le service public est affaiblit, et donc qu'il est hypocrite de se servir des \og services publiques\fg~comme justification, outre également l'amalgame entre le Front national, l'identité nationale, la mondialisation, la construction européenne et l'islam, il nous semble, d'une part, que M. \textsc{Besson} prend la place de l'ensemble de la population française pour exprimer des doutes quand à la compatibilité de la France avec, par exemple, l'islam et la mondialisation. En effet, englober l'ensemble de la population française sous un même terme, \og les Français\fg, pour ensuite exprimer leur opinion, nous paraît être plus que limité d'un point de vue méthodologique et scientifique.
+
+D'autre part, il nous semble qu'au niveau de la compréhension même des enjeux et des mécanismes de l'appréhension (si appréhension il y a) de la part de la population française sur des sujets tels que la mondialisation ou l'islam nous paraît être largement erronée. Prenons l'exemple des inquiétudes face à la construction européenne et la mondialisation ; comme l'écrivait Denis \textsc{Clerc}, si l'on met à part le rôle de l'État dans l'idéologie libérale, le fait est qu'aujourd'hui, \og l'État demeure un acteur clé de la vie économique, chargé de mettre en œuvre ce que la somme des intérêts privés ne pourra jamais suffir à bâtir seule : le bien commun du pays.\fg\footnote{\textsc{Clerc} Denis, \emph{D\'echiffrer l'\'economie}, La D\'ecouverte, Paris, 2007, p. 312.}~Également à propos de la mondialisation, le marché créé par la mondialisation ne peut se dissocier de la politique\footnote{\emph{Ibid.}, p. 344.}, et donc poser le problème de la mondialisation comme le fait Éric \textsc{Besson} sans poser le problème des responsables politiques, revient nécessairement à fausser le débat.
+
+Bref, notre exemple avec le débat sur l'identité nationale met en évidence le fait que la problématique créée et largement médiatisée n'est pas centrée sur les véritables questions que mettent par exemple en avant les économistes, mais sur des fausses questions, et c'est pourquoi nous qualifions cela de jeux politique. Il semblerait cependant que les médias eux-mêmes jouent le jeux politique, puisque l'on peut en effet constater dans notre corpus jusqu'à un \og récit\fg~de la vie politique.
+
+\section{Le r\'ecit politique}
+
+\subsection{Le récit d'un microcosme médiatico-politique}
+
+Nous avons pu observer plusieurs éléments conduisant à penser que les journalistes ont mis en scène un récit de la vie politique dans leurs articles, et non pas seulement des articles descriptifs ou analytiques, dont le but est à la base d'informer le lecteur. Prenons par exemple le journal \emph{Libération} ; il est expliqué dans un article de Alemagna, que \og plus de la moitié des électeurs pourraient snober les urnes, jeunes et catégories populaires en tête\fg\footnote{\textsc{Alemagna} Lilian, \og Un scrutin sous haute abstention\fg, \emph{Libération}, \no 8968, Samedi 13 mars, p. 4.}. Le journaliste utilise des métaphores en tout genre comme dans cette phrase : \og Si la gauche risque d'y laisser des voix, c'est la droite, soucieuse ces jours-ci de mobiliser sa base, qui risque de se prendre les pieds dans le tapis de l'abstention.\fg\footnote{\emph{Ibid.}, p. 4} Ou encore dans cette phrase : \og Danger abstention\fg\footnote{\emph{Ibid.}, p. 4.}. Ces citations ne sont pas exhaustives, mais il nous semble qu'elles relève un certain style journalistique répandu.
+
+Ainsi nous pouvons retrouver ce style dans d'autres journaux de notre corpus, comme dans \emph{Le Monde} par exemple, lorsque Normand écrit : \og Surtout, ne pas baisser la garde. À moins d'une semaine du premier tour, les candidats socialistes redoutent les effets émollients de la sucession de sondages favorables.\fg\footnote{\textsc{Normand} Jean-Michel, \og Malgré des \textquotedblleft signaux favorables\textquotedblright, le PS se méfie du \textquotedblleft faux rythme\textquotedblright~de la campagne\fg, \emph{Le Monde}, \no 20255, Mardi 9 mars, p. 10} En tant qu'universitaire distancié, nous pouvons nous poser la question suivante : ne pas baisser la garde signifie-t-il que le candidat doit se défendre avec son programme électoral ? De celà, il n'en est pas fait mention, c'est pourquoi il nous semble pertinent de considérer l'hypothèse suivante : l'ensemble des figures de style permettent de mieux faire passer une campagne électorale vidé de son contenu, dans le sens où la mise en scène d'une aventure politique permet d'intéresser un lecteur lorsqu'il n'y a rien raconter.
+
+Ce faisant, il est probable que l'abstention relevée durant les élections régionales ne marquent pas seulement un désintérêt pour les élections en elles-mêmes. En effet, l'absence d'intérêt pendant les régionales de ce processus démocratique ne contribue pas seulement à enlever la légitimité des acteurs politiques ; elle contribue à accentuer une délimitation marquée entre ce que Mills appelait les \og hautes sphères\fg~et \og les basses sphères\fg~de la société, et donc à laisser un microcosme médiatico-politique fermé sur lui-même.
+
+\subsection{Personnalisation et stars du \og show politique\fg}
+
+À la lecture de notre corpus, l'une des observations les plus marquantes que nous avons fait réside dans la personnalisation des responsables politiques, la mise en vedette de personnalités fortes. En particulier, prenons le cas de Nicolas Sarkozy, dont l'image semble avoir été largement utilisée pour sa notoriété de président. Dans \emph{Le Figaro} par exemple, écrire \og Nicolas Sarkozy a beau évoquer devant ses fidèles de possibles \textquotedblleft bonnes surprises\textquotedblright~aux élections régionales, il ne peut pas ignorer le risque d'un échec de la majorité sur toute la ligne\fg\footnote{\textsc{Jaigu} Charles, \og Nicolas Sarkozy fixe les règles de l'après-régionales \fg, \emph{Le Figaro}, \no 20407, Vendredi 12 mars 2010, p. 3.}, c'est postuler qu'il y a un lien entre les élections régionales et la politique au niveau national, ce qui nous semble très hypothétique. Mais également, d'un point de vue plus sociologique, c'est mettre la figure d'un président comme le centre des candidats de Droite aux régionales.
+
+Nous pouvons constater cet entremêlement entre politique nationale et élections régionales également pour d'autres partis. Barotte et Bourmaud\footnote{\textsc{Barotte} Nicolas, \textsc{Bourmaud} François-Xavier, \og Martine Aubry et Ségolène Royal appellent au vote sanction\fg,\emph{Le Figaro}, \no 20 407, Vendredi 12 mars 2010, p. 4.}, par exemple, expliquent que Martine Aubry et Ségolène Royal, deux figures importantes du PS, appellent au vote sanction. On peut se demander contre quel candidat au régional, et surtout, contre quel programme ? Or d'après l'article, il s'agit d'un vote sanction au régionales contre la figure emblématique de l'UMP, Niclas Sarkozy ; ce qui pose naturellement un problème d'un point de vue méthodologique.
+
+Bref, il nous semble pertinent de considérer, par ces différentes observations (que nous avons également pu constater dans \emph{Le Monde} et \emph{Libération}), qu'il y a une mise en scène de la vie politique au travers de personnages politiques au sein d'un récit, à tort ou à raison. L'on pourrait considérer cette analyse comme étant un problème d'un point de vue éthique. Cependant, il nous semble juste de considérer également que la mise en scène jusqu'à l'extrême des élections n'est au fond que la suite logique d'un système électoral dans lequel l'acteur du champ politique doit se faire valoir afin d'être élu. C'est pourquoi il nous semble pertinent de nous demander si, au lieu de remettre en question, les acteurs du champ politique, ou les \og stars\fg~d'un \og show politique\fg\footnote{Remettre en question les acteurs conduirait, nous semble-t-il, à un faux débat, dans le sens où les acteurs politiques peuvent être considérés comme étant influencés par le système politique, ou si ce n'est même le produit de ce système.} il ne serait pas plus pertinent de remettre en question le système politique en lui-même. Nous essaierons de compléter notre interrogation en analysant les enjeux de la campagne électorale.
+
+\section{Les enjeux de la campagne \'electorale}
+
+\subsection{Les grands projets et les enjeux des \'elections r\'egionales}
+
+Parmi les grands projets des acteurs politiques au gouvernement, il existe celui relatif aux transports. À ce propos, un article de Béatrice \textsc{Jér\^ome} du \emph{Monde}, intéressant pour notre analyse, pose le problème à l'aide d'une enquête de l'Observatoire régional de santé d'Ile-de-France. Le point important de son article, d'un point de vue sociologique, est le décentrement de la problématique des grands projets vers les luttes politiques, en particulier lorsqu'elle cite M. Huchon puis Mme Pécresse :
+\begin{quotation}
+ \og \emph{Sur les neufs tramways inscrits au contrat des projets 2007-2013, la région a avancé tous les fonds que l'État s'était engagé à verser}, souligne M. Huchon. \emph{La région et les départements ont été obligés de financer seuls, sans l'État, les tangentielles est, ouest et sud.}\fg
+
+La droite, de son côté, cible le président sortant. \og \emph{Quatre stations de métro et quatre nouveaux tramways : voilà tout le bilan de M. Huchon en douze ans de mandat}\fg, répète Valérie Pécresse, tête de liste UMP.\footnote{\textsc{Jérôme} Béatrice, \og Transports : la galère et les grands projets\fg, \emph{Le Monde}, \no 20256, Mercredi 10 mars, p. III.}
+\end{quotation}
+Cette citation montre de manière manifeste que les enjeux des véritables projets ne sont dans les faits que le terrain des luttes entre acteurs politiques. La journaliste faisait d'ailleurs remarquer à juste titre que les problèmes concernant l'application pratique des projets liés aux transports, \og de cela, il sera davantage question après les régionales.\fg\footnote{\emph{Ibid.}, p. III.} De manière caricaturale, nous pouvons d'ailleurs relever un enjeu que Christophe Forcari mentionnait dans \textsc{Libération} : \og Alors que l'abstention s'annonce importante, la gauche est donnée gagnante dans les sondages\fg\footnote{Forcari Christophe, \og Dernière station avant 2012\fg, \emph{Libération}, \no 8968, Samedi-Dimanche 13-14 mars 2010, p. 3.} ; ce que Forcari caractérise abusivement d'\og enjeu\fg n'en est en réalité bien évidemment pas un. L'hypothèse qui nous paraît être la plus plausible pour expliquer la confusion du journaliste entre enjeu et objectif est que tout simplement, il n'y a pas d'enjeux pour les citoyens dans les élections régionales. On peut alors se demander ce qu'il en est des problèmes sociaux.
+
+\subsection{Les probl\`emes sociaux et les élections r\'egionales}
+
+Également à l'ordre du jour sur l'agenda politique, se trouve la crise du logement, \og conséquence directe de la hausse des loyers et de la difficulté, pour les classes moyennes, à accéder à la propriété, la ruée sur le logement social se poursuit\fg\footnote{\textsc{Garin} Christine, \og Le Logement en crise aiguë\fg, \emph{Le Monde}, \no 20256, Mercredi 10 mars, p. IV.}. Et pourtant, \og Entre 2004 et 2008, la région (Ile-de-France) a construit à peine 100 000 logements sociaux, soit environ 20 000 par an, la moitié du volume nécessaire.\fg\footnote{\emph{Ibid.}, p. IV.} Parmi les réponses du gouvernement figure le projet du Grand Paris qui avait préconisé la construction de 70 000 logements par an, mais comme le rappelle la journaliste, \og la réalité est très loin du compte.\fg\footnote{\emph{Ibid.}, p. IV.}
+
+Sociologiquement, le cas du logement social est intéressant dans le sens où l'on observe clairement un problème structurel. Frédéric \textsc{Gilli}, économiste et géographe, explique d'ailleurs que l'on \og est dans un jeu particulier où l'acteur central, le conseil régional, a un poids institutionnel liliputien. Dans ces conditions, chacun pousse son avantage et le consensus est impossible entre grands élus franciliens, villes et région ou État et région.\fg\footnote{\textsc{Gilli} Frédéric, \textsc{Garin} Christine (interviewer), \og Le Regard de l'expert\fg, \emph{Le Monde}, \no 20256, Mercredi 10 mars 2010, p. IV.} Autrement dit, nous sommes face à un problème de représentation, c'est-à-dire un problème structurel dans le processus de décision démocratique sur un sujet dont \og l'enjeu dépasse en partie les élections régionales\fg\footnote{\emph{Ibid.}, p. IV.}.
+
+Il nous semble en particulier pertinent de faire une analogie entre le problème soulevé et les théories de l'élite bien connues dans les études sociologiques. D'une part, nos observations faites entre les élections régionales mettent en évidence un problème structurel de domination d'une minorité qui n'est non pas organisée\footnote{\textsc{Chagnollaud} Dominique, \emph{Science Politique~\textemdash~Éléments de sociologie politique}, éd. Dalloz, 2002, p. 259.}, mais inorganisée, puisqu'elle est incapable d'avoir le moindre consensus ou d'établir des projets pertinents pour les citoyens. D'autre part, Gilli a mis en évidence que les élections régionales en elles-mêmes, ou autrement dit le scrutin en tant que mode de décision démocratique n'est pas non plus viable pour régler le problème social qui nous avons posé.
+
+\section{Conclusion}
+
+Nous avons vu dans une première partie le vide de programme électoral dans les campagnes pour les élections régionales. Dans une deuxième partie, nous avons également pu constater qu'il ne serait pas nécessairement pertinent de situer le problème de l'absence de véritable programme dans les acteurs du champ politique, mais plutôt dans le système démocratique en lui-même. Enfin, nous avons souligner le fait que le microcosme médiatico-politique ne suffit pas, du moins dans le cadre des élections régionales, à résoudre les problèmes sociaux posés dans l'agenda politique.
+
+Il nous semble que l'une des clés du problème qui se pose aujourd'hui dans notre démocratie ne peut pas se comprendre uniquement d'un point de vue sociologique. En effet nous pensons que nous devons prendre en compte plusieurs facteurs. L'un par exemple, économique ; notons que parallèlement aux élections régionales, \emph{Le Monde} faisait remarquer le taux de chômage en France, qui s'élevait à 10\%~au quatrième trimestre 2010\footnote{Voir \emph{Le Monde}, \no 20253, Samedi 6 mars 2010, p. 11.}. Or, si l'on considère que l'État traditionnel exerce normalement trois grandes fonctions, à savoir la redistribution des ressources, la stabilisation macroéconomique et la régulation par la production de la norme, alors il nous semble logique de supposer que la perte de l'une de ces fonctions entraînera également une perte de légitimité, et que, en l'occurrence, la crise économique et la récession qui s'en est accompagnée en 2008 ne peut que contribuer à décrédibiliser l'État.
+
+Or comme nous l'avons vu, la crise du système électoral que nous avons pu constater semble se rapprocher plus d'une crise structurelle que d'une crise conjoncturelle. Inversement, nous pouvons nous demander si en réalité, cette crise n'aurait pas en réalité été toujours présente, et si l'absence d'une médiatisation de cette crise n'était pas seulement conjoncturelle. En effet, à l'image du problème qui se présente en appliquant le système de l'État-nation à l'Union européenne, il nous semble pertinent de nous demander si ce n'est pas le système électoral qui pose intrinsèquement un problème, dont les premier symptômes seraient apparus sous la pression de différents facteurs, économiques et sociaux en particulier (chômage, violence, etc).
+
+\end{document}

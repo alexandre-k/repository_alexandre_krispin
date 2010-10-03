@@ -1,0 +1,317 @@
+% File: lectures.tex Created: mar. juin 08 12:00 2010 C Last Change:
+% mar. juin 08 12:00 2010 C
+
+\documentclass[10pt,a4paper,MinionPro]{scrartcl} % KOMA-Script article
+\usepackage[utf8x]{inputenc}
+% \usepackage[T1]{fontenc}
+\usepackage{enumitem} \usepackage[square,numbers]{natbib}
+\usepackage{array} \usepackage{natbib} \usepackage{amsmath}
+\usepackage{color} \usepackage{amsfonts} \usepackage[pdftex]{graphicx}
+% \usepackage{hyperref}
+\usepackage{amssymb} \usepackage{lipsum} \usepackage{url}
+%\usepackage[frenchb]{babel}
+  \usepackage[nochapters]{classicthesis-ldpkg}
+  \usepackage[nochapters]{classicthesis}
+\title{\rmfamily\normalfont\spacedallcaps{Lectures on Modern Japanese
+    Economic History}}
+\author{\spacedlowsmallcaps{Alexandre Krispin}}
+
+  \begin{document}
+
+\maketitle
+
+\section{Economic recovery under Takahashi Korekiyo}
+p. 55 : Takahashi [Korekiyo], wrote a short magazine article critical
+of Inoue's fiscal policies. The article anticipates some elements of
+Keynes' \emph{General Theory of Employment, Interest, and Money},
+published in 1936, so it is invariably cited in discussions of
+Takahashi.
+
+First, Takahashi observed that despite the calls for retrenchment in
+conjunction with the return to the gold standard, it is necessary to
+distinguish between the economy of the nation and the economy of the
+individual. For example, let us assume that a person has \textyen
+50,000 in hands but only spends \textyen 30,000 and saves the
+remaining \textyen 20,000. From the viewpoint of that individual, his
+savings have increased and he is better of, but from the viewpoint of
+the national economy, domestic demand that should have been at
+\textyen 50,000 is down to \textyen 30,000. Since national output will
+decrease by that much, the nation is not better of. Conversely,
+spending money at geisha houses, while morally reprehensible,
+generates income for the cooks and the geisha and a host of other
+persons. The cooks and geisha then buy food and use public bathhouses,
+so that the money circulates as income for others. Spending even
+\textyen 2,000 may thus have an impact on the economy by a factor of
+20 or 30.
+
+Thus, says Takahashi, when one considers the national economy, it is
+better for everyone if those who have the money use it. Inoue's
+policies had cut back government spending and put a stop to
+construction of the Diet Building. But then the construction
+companies, the laborers who worked for them, and the suppliers of
+building materials and everyone else involved lost income and jobs.
+[...] The text [...] anticipates Keynes' theory of the investment
+multiplier.
+
+p. 56-58 : A falling exchange rate means that
+for other countries Japanese goods become cheaper. Lower prices mean
+more exports. For Japan, it means that foreign products become more
+expensive. Whereas it had been possible to buy one dollar's worth of
+foreign goods for \textyen 2, now it took \textyen 3.5 to buy the same
+amount of goods. In other words, the goods were more expensive. This
+makes conditions easier for importe substitution industries.
+
+On the down side, the following can be said. If Japanese goods sell
+cheaply and foreign goods are expensive, it means that the terms of
+trade \textemdash~the rate of exchange of Japanese and foreign
+products~\textemdash~are to Japan's disadvantage. To make this more
+comprehensible, assume that this pen that I am holding is an imported
+item and that it cost me \textdollar 1. Assume also that this
+publication that I am holding is a Japanese product and costs \textyen
+2. If the exchange rate is \textdollar 1.00 = \textyen 2.00, then I
+can trade the book for the pen. If the exchange rate falls to, say,
+\textdollar 1.00 = \textyen 4.00, then I need two books before I can
+do business. The cheap exchange rate leaves me at disadvantage.
+
+Even though the terms of trade are not advantageous, what Japanese
+firms ultimately want to earn is yen. If companies are able to export
+more and so bring in more yen, the domestic economy is stimulated and
+they are able to pull themselves out of the recession. A low exchange
+rate has its drawbacks, but it also has a stimulating effect on
+exporting industries. inside the country.
+
+Sur la relation entre le taux d'int\'er\^et bas et la liquidit\'e :
+
+The second pillar of Takahashi's economic program was low interest
+rates. [...] When interest rates go down, business proprietors who
+borrow money find their lives easier.
+
+Lower interest rates also push up the stock market.
+
+When stock prices rise, not only do investors make money, it also
+becomes easier for companies to augment their equity capital.
+Stockholders are happy to approve share increases, since they obtain
+stock at below-market prices, and companies are able to round up the
+funds they need to finance and expansion.
+
+Since the primary objective of these programs was less the
+construction projetcts themselves than the dispensing of cash to rural
+communities, it appears that the construction work had little impact.
+
+
+\section{Processing trade}
+
+\section{Material mobilization plan}
+
+p. 97 Okumura Kiwao of the Ministry of Posts and Telegraphs then drew
+up a proposal to the effect that in order to cap excessive
+competition and eliminate waste, the entire country's electric power
+industry had to be controlled.
+
+p. 97-98 : [vers 1941] state control of industry rapidly progressed.
+The base for production activities was import capacity, but when this
+was controlled, exports didn't do well, so imports would be cut.
+
+p. 98-100 : Government controls continued to expand in scope. Let us
+consider the mechanism involved. When supplies of goods fell short,
+their prices naturally went up. This created the fear of inflation, so
+the government would set an official price to cap prices. Merchants
+and dealers would take counter steps. Since the official price was
+routinely less than the market price, the merchants squirreled away
+their merchandise and sold it by the back door on the black market.
+Producers stopped making products, as they could not break even at the
+official price, and they started looking around for other products
+that did not yet have an official price tag. For example, let us
+assume that white shirts had an official price, but striped shirts did
+not. Naturally, manufacturers would make nothing but striped shirts.
+But then there weren't any white shirts available, so the government
+would be forced to set an official price for striped shirts.
+
+In fact, the government had originally intended to limit officla
+prices only to major items, but the mechanism I have just described
+compelled it to extend price caps to merchandise every kind. As the
+scope of official prices expanded, black market dealings flourished An
+economic police was established to clamp down on the black market, and
+big and small merchants alike were arrested for illegal transactions.
+
+p. 100-101 : price control legislation was once again introduced
+following the 1973 oil crisis. Shiina Etsusaburo, then vice president
+of the Liberal Democratic Party, who had been in the Ministry of
+Industry and Commerce during the war, is said to have remarked that if
+price controls began it would be necessary to set a price on
+everything right down to plant pots. I am entirely in agreements with
+Mr. Shiina here. If the government attempts to set prices that should
+be determined by supply and demand in the marketplace, there will
+inevitably be distortions. In the socialist countries, this is an
+issue that is constantly debated. The liberalization that has taken
+place in Hungary and more recently in China is a manifestation of the
+efforts to do away with these distortions.
+
+\subsection{Effects on living standards}
+
+The second event occured in autumn 1939. Western Japan was visited by
+drought, as a result of which power shortages occurred and the rice
+harvest in western Japon and in Korea was poor. Although the rice
+harvest was not seriously below par, the public believed otherwise,
+and there was near panic. At one point toward the end of the year,
+there was only half a day's supply stock of rice in the rice shops in
+Tokyo, and the government feared riots. The government was forced to
+buy rice from Thailand and French Indochina, now Vietnam, by the use
+of several expedient financial devices.
+
+(...) In the end, everyday necessities \textemdash~including rice,
+sugar, miso, and soy sauce \textemdash~became rationed, and ration
+coupons were issued to the public. In 1941, the Foodstuff Control
+Special Account was set up, under which the government bought up all
+the rice produced and distributed it, the rationed rice being mixed
+with foreign rice.
+
+\subsection{The new economic order}
+
+One contentious issue at this point centered on why armaments
+production did not grow as much as the government had anticipated. The
+dominant view was that this pointed to the need for further
+socialization of industry and government planning. Rooted in critiques
+of the capitalist system, the argument went along the following lines.
+Companies operate with the goal of generating a profit. The reason
+that armaments output does not improve is that companies still think
+first in terms of profit, despite the national crisis. The nature of
+the corporation has to be changed so that the goal of its activities
+is production rather than profit.
+
+The way in which firms operated on the basis of the profit principle
+had to be fundamentally changed and all obstacles to production
+capacity eliminated. It was the responsibility of corporate leaders to
+open their books for inspection and to permit government control of
+their profits and to raise output. The free-market economy aspects of
+capitalism had to be eliminated by controlling companies' financial
+affairs and profits and by turning companies into organizations
+motivated by production rather than profit. Ryu proposed that the
+reformed corporations take part in regional and industrial cartels,
+which would take responsibility for implementing economic controls.
+Since the cartels would not need to consider individual member's
+profits, controls would have their objectives undiluted by other
+concerns. Japan should switch from external controls, imposed from
+above, to internal controls, imposed from below.
+
+p. 104 : Cartels known as control associations (\emph{toseikai}) were
+to be set up to impose economic controls on individual industries in
+conformity with government policies.
+
+\section{The pacific war}
+
+p. 112 : [Vers 1942] Japan began a rush into Southeast Asia. Big
+companies moved into the occupied territories to begin resource
+development. Oil drilling equipment, technicians, and workers were
+brought from the oil fields in Niigata and Akita to Sumatra, where they
+were set to the task of restarting oil production. In Malaya, the
+Philippines, and elsewhere, Japanese mining companies began ore
+extraction at the command of the military. No attempt was made to set
+up control companies or engage in planning, existing companies being
+assigned to development in an effort to obtain oil, nickel ore, copper
+ore, bauxite, chrome ore, and manganese ore.
+
+\subsection{The Greater East Asia Co-Prosperity Sphere}
+
+At the beginning of the war, it was known that Japan would not be able
+to sustain the living standards of the local peoples. One document
+written just before the war was quite explicit that \textquotedblleft~in
+the interim, it will be necessary to adopt an exploitative
+policy\textquotedblright. During the Sino-Japanese war, there had been a
+major flood in northern China, resulting in food shortages. Nonetheless,
+the local army prioritized the transportation of coal and cut the number
+of trains supplying food. Riots broke out in Chinese cities, and
+inflation soared dangerously, forcing the Japanese government in 1940 to
+send shipments of flour and cotton goods to stabilize local
+economies. But when the Pacific War came, it was no longer possible to
+supply the local peoples with their necessities of life. Local
+self-sufficiency was the rule, and even if there were real shortages,
+Japan lacked the spare resources to make up the gap. All it could do was
+issue military scrip.
+
+The local currencies were printed in Japan and issued as military scrip.
+Since there was nothing to back these currency issues, inflation was
+inevitable. The further a region was from Japan, the harder it was to
+ensure the supply of goods and the worse inflation was.
+
+\subsection{Production capacity and skilled workers}
+
+p. 124 : the economic process during the war became the direct starting point
+for the postwar economy. The war bequeathed postwar Japan a number of things,
+one of which was production capacity. The need to produce armaments during the
+war and the output-boosting plans and so on that were demanded by the military
+had compelled heavy industries and chemical industries to increase their plant
+and equipment. Much of this remained at the end of the war. To cite one
+example, steel production capactiy had stood at 3 million tons in 1937 and at
+the wartime peak had risen to 6.6 million tons. At the end of the war, 5.6
+million tons in capacity remained. Copper refining, lead, and aluminium saw
+major capacity expansions, even after subtracting war damage.
+
+\subsection{Institutional continuity into the postwar era}
+
+Another legacy relates to the organizational structure of industry. In the
+fields of machinery, aircraft, and automobiles, firms had developed the
+practice of contracting work. Most of those doing the contracting were, of
+course, big firms, which would do the final assembly, while the subcontracting
+factories would make the raw materials and components.
+
+Japan is internationally famous for its \textquotedblleft administrative
+guidance\textquotedblright, in which government offices had the power, directly
+and indirectly, to instruct businesses on various issues. The prototype of this
+system developed during the wartime period. It was also during the war that the
+Bank of Japan began to exert strong control over private-sector banking. The
+fact that the banks had little fundin capacity after the war helped ensure that
+the Bank of Japan remained firmly in control.
+
+\subsection{Separation of ownership and management}
+
+Finally,I would like to mention that the old-fashioned capitalism that I
+referred to at the beginning of this similar series was gradually dismantled
+during the course of the war. I mentioned earlier the business community's
+vehement opposition to proposals to separate ownership from management when the
+new economic order was proposed, but as a result of the war, something close to
+separation of ownership and management was achieved. To meet the huge military
+demand, companies had continued to expand. But even the biggest capitalists
+could not cover the costs out of their own pockets. They had to increase
+equity, bringing in funds from ordinary stockholders and borrowing from
+financial institutions.
+
+\section{Reconstruction (1945-1951)}
+
+\subsection{The Occupation Revolution}
+
+p. 135 : The next objective was economic reform designed  to strip
+Japan of its war potential. Armaments manufacturers were, of course,
+banned, as were any other industries that contributed to Japan's
+military effort. In practice, however, defining what constitutes
+materials for military use is not easy: steel, for example, is
+fundamental to arms production, but it has a broad range of peaceful uses.
+
+p. 136 : It is not surprising [...] that SCAP proposed reparations on
+a large scale. But the reparations proposals came as a major shock to
+Japanese industry. It is hard to commit to rebuilding if one might
+have one's equipment carted off at any moment. For nearly two years,
+Japanese industry was on tenterhooks.
+
+[It is interesting to point out that there might be a democratization
+process, but without people, just SCAP] The most important reform of
+all was that of the constitution. It is now well known that
+Matsumoto's draft was too insipid, and so SCAP's  Government Section
+put together a draft of its own, translated it into Japanese, and
+instructed the Japanese government to adopt it.
+
+\subsection{Dissolution of the zaibatsu}
+
+In Norman's view,which was closed to that of a Japanese academic
+Marxist group known as the \emph{Koza} faction, the Japanese zaibatsu,
+being primarily family concerns in which a single family ownedthe
+stocks of the parent holding company, were a feudalistic organizations
+par excellence. Since they had immense power over a wide spectrum of
+business and industry, their dissolution was imperative if
+democratization was to succeed.
+
+
+
+
+
+\end{document}

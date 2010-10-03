@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;langKnowledge&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;langKnowledge&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;langKnowledge&gt;</h1></div><div><span id="langKnowledge"/><table border="1" class="wovenodd"><tr><td class="elementSpec">langKnowledge</td><td colspan="2" class="wovenodd-col2">summarizes the state of a person's linguistic knowledge, either
+as prose or by a list of langKnown elements.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.persTraitLike.html">model.persTraitLike</a> <a class="link_odd" href="ref-att.datable.html">att.datable</a> <a class="link_odd" href="ref-att.editLike.html">att.editLike</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element langKnowledge
+{
+   att.global.attributes,
+   att.datable.attributes,
+   att.editLike.attributes,
+   attribute tags { list { <a class="link_odd" href="ref-data.language.html">data.language</a>+ } }?,
+   ( <a class="link_odd" href="ref-model.pLike.html">model.pLike</a> | <a class="link_odd" href="ref-langKnown.html">langKnown</a>+ )
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>  [<a class="classlink" href="ref-att.datable.html">att.datable</a> <a class="classlink" href="ref-att.editLike.html">att.editLike</a> ] <table><tr><td class="attDef">tags</td><td colspan="2">supplies one or more valid language tags for the languages
+      specified</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span> [n &lt;= unbounded] <code class="eg">
+<a class="link_odd" href="ref-data.language.html">data.language</a></code></td></tr><tr><td/><td><p><span id="id2539201"/>This attribute should be supplied only if the
+      element contains no <code>&lt;langKnown&gt;</code> children. Its values are
+      language ‘tags’ as defined in <a class="link_ref" href="http://www.ietf.org/rfc/rfc3066.txt" title="RFC 3066">RFC 3066</a> or
+      its successor</p></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;langKnowledge <span class="attribute">tags</span>="en-GB fr"&gt;</span><br/>  <span class="element">&lt;p&gt;</span>British English and
+  French<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/langKnowledge&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;langKnowledge&gt;</span><br/>  <span class="element">&lt;langKnown <span class="attribute">tag</span>="en-GB" <span class="attribute">level</span>="H"&gt;</span>British English<span class="element">&lt;/langKnown&gt;</span><br/>  <span class="element">&lt;langKnown <span class="attribute">tag</span>="fr" <span class="attribute">level</span>="M"&gt;</span>French<span class="element">&lt;/langKnown&gt;</span><br/> <span class="element">&lt;/langKnowledge&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">namesdates</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

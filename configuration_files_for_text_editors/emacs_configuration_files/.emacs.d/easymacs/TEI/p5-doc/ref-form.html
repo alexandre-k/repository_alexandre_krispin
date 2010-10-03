@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;form&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;form&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;form&gt;</h1></div><div><span id="form"/><table border="1" class="wovenodd"><tr><td class="elementSpec">form</td><td colspan="2" class="wovenodd-col2">(form information group) groups all the information on the written and spoken forms of one headword.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.entryParts.top.html">model.entryParts.top</a> <a class="link_odd" href="ref-model.entryParts.html">model.entryParts</a> <a class="link_odd" href="ref-model.formPart.html">model.formPart</a> <a class="link_odd" href="ref-att.lexicographic.html">att.lexicographic</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element form
+{
+   att.global.attributes,
+   att.lexicographic.attributes,
+   attribute type { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> }?,
+   (
+      text
+    | <a class="link_odd" href="ref-model.gLike.html">model.gLike</a>
+    | <a class="link_odd" href="ref-model.phrase.html">model.phrase</a>
+    | <a class="link_odd" href="ref-model.inter.html">model.inter</a>
+    | <a class="link_odd" href="ref-model.formPart.html">model.formPart</a>
+    | <a class="link_odd" href="ref-model.global.html">model.global</a>
+   )*
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>  [<a class="classlink" href="ref-att.lexicographic.html">att.lexicographic</a> ] <table><tr><td class="attDef">type</td><td colspan="2">classifies form as simple, compound, etc.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a></code></td></tr><tr><td><!-- --></td><td valign="top">Suggested values include:<table class="valList"><tr><td valign="top"><b>simple</b></td><td valign="top">(single free lexical item) </td></tr><tr><td valign="top"><b>lemma</b></td><td valign="top">(the headword itself) </td></tr><tr><td valign="top"><b>variant</b></td><td valign="top">(a variant form) </td></tr><tr><td valign="top"><b>compound</b></td><td valign="top">(word formed from simple lexical items) </td></tr><tr><td valign="top"><b>derivative</b></td><td valign="top">(word derived from headword) </td></tr><tr><td valign="top"><b>inflected</b></td><td valign="top">(word in other than usual dictionary form) </td></tr><tr><td valign="top"><b>phrase</b></td><td valign="top">(multiple-word lexical item) </td></tr></table></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;form&gt;</span><br/>  <span class="element">&lt;orth&gt;</span>zaptié<span class="element">&lt;/orth&gt;</span><br/>  <span class="element">&lt;orth&gt;</span>zaptyé<span class="element">&lt;/orth&gt;</span><br/> <span class="element">&lt;/form&gt;</span></div><p><span id="id2458781"/>(from TLFi)</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="DI.html#DITPFO" title="Information on Written and Spoken Forms">9.3.1  Information on Written and Spoken Forms</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">dictionaries</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

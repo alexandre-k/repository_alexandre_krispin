@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;seal&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;seal&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;seal&gt;</h1></div><div><span id="seal"/><table border="1" class="wovenodd"><tr><td class="elementSpec">seal</td><td colspan="2" class="wovenodd-col2">contains a description of one seal or similar
+  attachment applied to a manuscript</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-att.typed.html">att.typed</a> <a class="link_odd" href="ref-att.datable.html">att.datable</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element seal
+{
+   att.global.attributes,
+   att.typed.attributes,
+   att.datable.attributes,
+   attribute contemporary { <a class="link_odd" href="ref-data.xTruthValue.html">data.xTruthValue</a> }?,
+   ( <a class="link_odd" href="ref-model.pLike.html">model.pLike</a> | <a class="link_odd" href="ref-decoNote.html">decoNote</a> )+
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>  [<a class="classlink" href="ref-att.typed.html">att.typed</a> <a class="classlink" href="ref-att.datable.html">att.datable</a> ] <table><tr><td class="attDef">contemporary</td><td colspan="2">specifies whether or not the seal is contemporary with the
+      item to which it is affixed</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.xTruthValue.html">data.xTruthValue</a></code></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;seal <span class="attribute">n</span>="2" <span class="attribute">type</span>="pendant" <span class="attribute">subtype</span>="cauda_duplex"&gt;</span><br/>  <span class="element">&lt;p&gt;</span>The seal of <span class="element">&lt;name&gt;</span>Jens Olufsen<span class="element">&lt;/name&gt;</span> in black wax. <br/>  (<span class="element">&lt;ref&gt;</span>DAS 1061<span class="element">&lt;/ref&gt;</span>). Legend: <span class="element">&lt;q&gt;</span>S IOHANNES OLAVI<span class="element">&lt;/q&gt;</span>.<br/>  Parchment tag on which is written: <span class="element">&lt;q&gt;</span>Woldorp Iohanne G<span class="element">&lt;/q&gt;</span>.<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/seal&gt;</span></div></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="MS.html#msphse" title="Seals">10.7.3.2  Seals</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">msdescription</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

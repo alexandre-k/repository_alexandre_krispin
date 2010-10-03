@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;docImprint&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;docImprint&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;docImprint&gt;</h1></div><div><span id="docImprint"/><table border="1" class="wovenodd"><tr><td class="elementSpec">docImprint</td><td colspan="2" class="wovenodd-col2">(document imprint) contains the imprint statement (place and date of publication,
+publisher name), as given
+(usually) at the foot of a title page.</td></tr><tr><td valign="top"><span class="label">Attributes: </span></td><td>Global attributes only</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.titlepagePart.html">model.titlepagePart</a> <a class="link_odd" href="ref-model.pLike.front.html">model.pLike.front</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element docImprint
+{
+   att.global.attributes,
+   (
+      text
+    | <a class="link_odd" href="ref-model.gLike.html">model.gLike</a>
+    | <a class="link_odd" href="ref-model.phrase.html">model.phrase</a>
+    | <a class="link_odd" href="ref-pubPlace.html">pubPlace</a>
+    | <a class="link_odd" href="ref-docDate.html">docDate</a>
+    | <a class="link_odd" href="ref-publisher.html">publisher</a>
+    | <a class="link_odd" href="ref-model.global.html">model.global</a>
+   )*
+}</pre></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;docImprint&gt;</span>Oxford, Clarendon Press, 1987<span class="element">&lt;/docImprint&gt;</span></div><div class="p"><span id="id2435702"/>Imprints may be somewhat more complex:
+<div class="pre"> <span class="element">&lt;docImprint&gt;</span><br/>  <span class="element">&lt;pubPlace&gt;</span>London<span class="element">&lt;/pubPlace&gt;</span><br/> Printed for <span class="element">&lt;name&gt;</span>E. Nutt<span class="element">&lt;/name&gt;</span>,<br/> at <br/> <span class="element">&lt;pubPlace&gt;</span>Royal Exchange<span class="element">&lt;/pubPlace&gt;</span>;<br/> <span class="element">&lt;name&gt;</span>J. Roberts<span class="element">&lt;/name&gt;</span> in <br/> <span class="element">&lt;pubPlace&gt;</span>wick-Lane<span class="element">&lt;/pubPlace&gt;</span>;<br/> <span class="element">&lt;name&gt;</span>A. Dodd<span class="element">&lt;/name&gt;</span> without <br/> <span class="element">&lt;pubPlace&gt;</span>Temple-Bar<span class="element">&lt;/pubPlace&gt;</span>;<br/> and <span class="element">&lt;name&gt;</span>J. Graves<span class="element">&lt;/name&gt;</span> in <br/> <span class="element">&lt;pubPlace&gt;</span>St. James's-street.<span class="element">&lt;/pubPlace&gt;</span><br/>  <span class="element">&lt;date&gt;</span>1722.<span class="element">&lt;/date&gt;</span><br/> <span class="element">&lt;/docImprint&gt;</span></div></div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p><span id="id2435747"/>Cf. the <code>&lt;imprint&gt;</code> element of bibliographic
+citations.  As with title, author, and editions, the shorter name is
+reserved for the element likely to be used more often.</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="DS.html#DSTITL" title="Title Pages">5.5  Title Pages</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">textstructure</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

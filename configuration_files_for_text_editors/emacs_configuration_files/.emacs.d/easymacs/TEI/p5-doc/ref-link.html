@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;link&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;link&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;link&gt;</h1></div><div><span id="link"/><table border="1" class="wovenodd"><tr><td class="elementSpec">link</td><td colspan="2" class="wovenodd-col2">defines an association or hypertextual link
+among elements or passages, of some type
+not more precisely specifiable by other elements.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-att.pointing.html">att.pointing</a> <a class="link_odd" href="ref-model.global.meta.html">model.global.meta</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element link
+{
+   att.global.attributes,
+   att.pointing.attributes,
+   attribute targets { list { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a>, <a class="link_odd" href="ref-data.pointer.html">data.pointer</a>+ } },
+   empty
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>  [<a class="classlink" href="ref-att.pointing.html">att.pointing</a> ] <table><tr><td class="attDef">targets</td><td colspan="2">specifies the identifiers of the elements or passages
+    to be linked or associated.
+ </td></tr><tr><td/><td><span class="label">Status: </span><b>Required</b></td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span> [n &gt;= 2]  [n &lt;= unbounded] <code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>two or more pointers (URIs), separated by white space</td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p><span id="id2489647"/>This element should only be used to encode associations
+not otherwise provided for by more specific elements.</p><p><span id="id2489652"/>The location of this element within a document has no significance,
+unless it is included within a <code>&lt;linkGrp&gt;</code>, in which case it
+may inherit the value of the <span class="att">type</span> attribute from the value
+given on the <code>&lt;linkGrp&gt;</code>.</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="SA.html#SAPT" title="Links">11.1  Links</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">linking</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

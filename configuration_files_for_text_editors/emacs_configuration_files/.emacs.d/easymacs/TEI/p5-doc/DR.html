@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><!--THIS FILE IS GENERATED FROM AN XML MASTER. DO NOT EDIT (4)-->
+<head><title> TEI P5: Guidelines for Electronic Text Encoding and Interchange: 7  Performance Texts</title><link href="/favicon.ico" rel="icon" type="image/x-icon"/><link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/><meta name="author" content="edited by C.M. Sperberg-McQueen and&#10;&#9;Lou Burnard"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="TEI P5: Guidelines for Electronic Text Encoding and Interchange: 7  Performance Texts"/><meta name="DC.Type" content="Text"/><meta name="DC.Format" content="application/xhtml+xml"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/><link href="guidelines.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body onload="startUp()"><div id="hdr"><h2 class="subtitle">Performance Texts</h2><h1 class="title">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h1></div><div id="accessibility"><span class="tocontent"><a href="?style=text">Text only</a>
+      | <a class="skiplinks" href="#rh-column" title="Go to main page content">Skip links</a></span></div><div id="hdr2"><!--no nav --></div><div id="hdr3"><a href="#rh-column" title="Go to main page content" class="skiplinks">Skip links</a><a class="hide">|</a><div class="breadcrumb"><ul class="breadcrumb"><li class="breadcrumb-first"><a class="breadcrumb" href="index.html">TEI P5 Guidelines</a></li><li class="breadcrumb"><a class="breadcrumb" href="/"></a></li></ul></div><a class="hide">|</a><a class="bannerright" href="http://www.tei-c.org/Consortium/" title="Go to home page">TEI Consortium</a></div><div class="column-wrapper"><div id="lh-col"><div id="lh-col-top"><!--top of left-hand column--></div><div id="lh-col-bottom"><!--bottom of left-hand column--><div class="tocFront"><div class="tocContainer"><div class="toclist0"><a class="toclist" href="FM1.html"> Introductory Note</a>
+</div><div class="toclist0"><a class="toclist" href="AB.html"> About These Guidelines</a>
+</div><div class="toclist0"><a class="toclist" href="SG.html"> A Gentle Introduction to XML</a>
+</div></div></div><div class="tocBody"><!--start TOC--><div class="tocContainer"><!--TOC components--><div class="toclist0"><a class="toclist" href="CH.html">1  Languages and Character Sets</a>
+</div><div class="toclist0"><a class="toclist" href="ST.html">2  The TEI infrastructure</a>
+</div><div class="toclist0"><a class="toclist" href="HD.html">3  The TEI Header</a>
+</div><div class="toclist0"><a class="toclist" href="CO.html">4  Elements Available in All TEI Documents</a>
+</div><div class="toclist0"><a class="toclist" href="DS.html">5  Default Text Structure</a>
+</div><div class="toclist0"><a class="toclist" href="VE.html">6  Verse</a>
+</div><div class="toclist0"><span class="toclist-this">7  Performance Texts</span>
+<div class="toclist1"><a class="toclist" href="DR.html#DRFAB">7.1  Front and Back Matter
+ </a>
+</div><div class="toclist1"><a class="toclist" href="DR.html#DRBOD">7.2  The Body of a Performance Text</a>
+</div><div class="toclist1"><a class="toclist" href="DR.html#DROTH">7.3  Other Types of Performance Text</a>
+</div></div><div class="toclist0"><a class="toclist" href="TS.html">8  Transcriptions of Speech</a>
+</div><div class="toclist0"><a class="toclist" href="DI.html">9  Print Dictionaries</a>
+</div><div class="toclist0"><a class="toclist" href="MS.html">10  Manuscript Description</a>
+</div><div class="toclist0"><a class="toclist" href="SA.html">11  Linking, Segmentation, and Alignment</a>
+</div><div class="toclist0"><a class="toclist" href="AI.html">12  Simple Analytic Mechanisms</a>
+</div><div class="toclist0"><a class="toclist" href="FS.html">13  Feature Structures</a>
+</div><div class="toclist0"><a class="toclist" href="CE.html">14  Certainty and Responsibility</a>
+</div><div class="toclist0"><a class="toclist" href="PH.html">15  Transcription of Primary Sources</a>
+</div><div class="toclist0"><a class="toclist" href="TC.html">16  Critical Apparatus</a>
+</div><div class="toclist0"><a class="toclist" href="ND.html">17  Names and Dates</a>
+</div><div class="toclist0"><a class="toclist" href="GD.html">18  Graphs, Networks, and Trees</a>
+</div><div class="toclist0"><a class="toclist" href="FT.html">19  Tables, Formulae, and Graphics</a>
+</div><div class="toclist0"><a class="toclist" href="CC.html">20  Language Corpora</a>
+</div><div class="toclist0"><a class="toclist" href="WD.html">21  Representation of non-standard characters and glyphs</a>
+</div><div class="toclist0"><a class="toclist" href="FD.html">22  Feature System Declaration</a>
+</div><div class="toclist0"><a class="toclist" href="TD.html">23  Documentation Elements</a>
+</div><div class="toclist0"><a class="toclist" href="USE.html">24  Using The TEI</a>
+</div></div></div><div class="tocBack"><div class="tocContainer"><div class="toclist0"><a class="toclist" href="REFCLA.html">Appendix A  Classes</a>
+</div><div class="toclist0"><a class="toclist" href="REFTAG.html">Appendix B  Elements</a>
+</div><div class="toclist0"><a class="toclist" href="REFENT.html">Appendix C  Macros</a>
+</div><div class="toclist0"><a class="toclist" href="BIB.html">Appendix D  Bibliography</a>
+</div><div class="toclist0"><a class="toclist" href="PARTIND.html">Appendix E  Index</a>
+</div><div class="toclist0"><a class="toclist" href="PREFS.html">Appendix F  Prefatory Notes</a>
+</div><div class="toclist0"><a class="toclist" href="COL.html">Appendix G  Colophon</a>
+</div></div></div></div></div><div id="rh-col"><a id="rh-column"/><div id="rh-col-top"><!--top of right-hand column--></div><div id="rh-col-bottom"><!--bottom of right-hand column--><h2>7  Performance Texts</h2><p><span id="id2440903"/>This module is intended for use when encoding printed dramatic
+texts, screen plays or radio scripts, and written transcriptions of any
+form of performance.
+</p><p><span id="id2440910"/>Section <a class="link_ptr" href="DR.html#DRFAB" title="Front and Back Matter">7.1  Front and Back Matter
+ </a> discusses elements, such as cast lists,
+which can appear only in the front or back matter of printed dramatic
+texts. Section <a class="link_ptr" href="DR.html#DRBOD" title="The Body of a Performance Text">7.2  The Body of a Performance Text</a> discusses the structural
+components of performance texts: these include major structural
+divisions such as acts and scenes (section <a class="link_ptr" href="DR.html#DRDIV" title="Major Structural Divisions">7.2.1  Major Structural Divisions</a>);
+individual speeches (section <a class="link_ptr" href="DR.html#DRSP" title="Speeches and Speakers">7.2.2  Speeches and Speakers</a>); stage directions
+(section <a class="link_ptr" href="DR.html#DRSTA" title="Stage Directions">7.2.3  Stage Directions</a>); and the elements making up individual
+speeches (section <a class="link_ptr" href="DR.html#DRPAL" title="Speech Contents">7.2.4  Speech Contents</a>). Section <a class="link_ptr" href="DR.html#DREMB" title="Embedded Structures">7.2.5  Embedded Structures</a>
+discusses ways of encoding units which cross the simple hierarchic
+structure so far defined, such as embedded songs or masques.
+Finally, section <a class="link_ptr" href="DR.html#DROTH" title="Other Types of Performance Text">7.3  Other Types of Performance Text</a> discusses a small number of
+additional elements characteristic of screen plays and radio or
+television scripts, as well as some elements for representing
+technical stage directions such as lighting or blocking.</p><div class="p"><span id="id2440963"/>These features are provided by the following module:
+
+<div><hr/><strong>Module</strong> <em>drama</em>: Performance texts<ul><li>Elements defined: <a class="link_odd" href="ref-set.html">set</a> <a class="link_odd" href="ref-prologue.html">prologue</a> <a class="link_odd" href="ref-epilogue.html">epilogue</a> <a class="link_odd" href="ref-performance.html">performance</a> <a class="link_odd" href="ref-castList.html">castList</a> <a class="link_odd" href="ref-castGroup.html">castGroup</a> <a class="link_odd" href="ref-castItem.html">castItem</a> <a class="link_odd" href="ref-role.html">role</a> <a class="link_odd" href="ref-roleDesc.html">roleDesc</a> <a class="link_odd" href="ref-actor.html">actor</a> <a class="link_odd" href="ref-move.html">move</a> <a class="link_odd" href="ref-view.html">view</a> <a class="link_odd" href="ref-camera.html">camera</a> <a class="link_odd" href="ref-sound.html">sound</a> <a class="link_odd" href="ref-caption.html">caption</a> <a class="link_odd" href="ref-tech.html">tech</a> </li><li>Classes defined: <a class="link_odd" href="ref-model.divPart.stage.html">model.divPart.stage</a> </li><li>Macros defined: <a class="link_odd" href="ref-mix.drama.html">mix.drama</a> </li></ul><hr/></div>
+
+The selection and combination of modules to form a TEI schema is described in
+<a class="link_ptr" href="ST.html#STIN" title="Defining a TEI schema">2.2  Defining a TEI schema</a>.
+</div><p><span id="id2440989"/>The default structure for dramatic texts is similar to that
+defined by chapter <a class="link_ptr" href="DS.html" title="7">5  Default Text Structure</a>, as further discussed in
+section <a class="link_ptr" href="DR.html#DRDIV" title="Major Structural Divisions">7.2.1  Major Structural Divisions</a>.</p><p><span id="id2441004"/>Two element classes are used by this module.
+The <span class="ident-class">model.divPart.stage</span> class supplies
+specialized elements which can appear only in the front or back matter
+of performance texts.  The <span class="ident-class">model.stageLike</span>
+class supplies a set of elements for stage directions and similar
+items such as camera movements, which can occur between or within
+speeches. These two element classes were defined in <a class="link_ptr" href="ST.html#STEC" title="The TEI Class System">2.6  The TEI Class System</a> above.</p><div class="p"><span id="id2441031"/>
+This module is organized as follows. First, the class <span class="ident-class">model.divPart.stage</span> is declared. Next the
+macro <span class="ident-macro">mix.drama</span> is declared as a  reference to this
+class, rather than as a
+null string (which is its default definition provided in the <span class="ident-module">tei</span> module). This ensures that the macro <span class="ident-macro">macro.component.seq</span> used in the definition of
+<code>&lt;div&gt;</code> and similar elements will include references to the
+appropriate elements defined by this module, as further discussed in
+section <a class="link_ptr" href="ST.html#STECMX" title="Module-specific Components">2.7.2  Module-specific Components</a>.  Following this, the module provides
+the elements declared by the following specifications. 
+
+<div><a href="#DDRFAB">« <span class="label">include 70: Specialized front and back matter for performance texts</span></a> » </div><div><a href="#DDRSTA">« <span class="label">include 75: Stage directions</span></a> » </div><div><a href="#DDROTH">« <span class="label">include 76: Screenplays and other technical matters</span></a> » </div></div><div class="div2" id="DRFAB"><h3>7.1  Front and Back Matter
+ </h3><p><span id="id2441197"/>In dramatic texts, as in all TEI-conformant documents, the header
+element is followed by a <code>&lt;text&gt;</code> element, which contains optional
+front and back matter, and either a <code>&lt;body&gt;</code> or else a
+<code>&lt;group&gt;</code> of nested <code>&lt;text&gt;</code> elements.  For more information
+on these, see chapter <a class="link_ptr" href="DS.html" title="7">5  Default Text Structure</a>.
+ </p><div class="p"><span id="id2441224"/>The <code>&lt;front&gt;</code> and <code>&lt;back&gt;</code> elements are most likely to be
+of use when encoding preliminary materials in published performance
+texts.  These often contain specific textual elements not generally
+found in other forms of text.  These include:
+<ul class="specList"><li><b>&lt;<a href="ref-performance.html">performance</a>&gt;</b> contains a section of front or back matter describing how a
+dramatic piece is to be performed in general or how it was performed
+on some specific occasion. </li><li><b>&lt;<a href="ref-prologue.html">prologue</a>&gt;</b> contains the prologue to a drama,  typically spoken by an actor out of
+character, possibly in association with a particular performance or venue.</li><li><b>&lt;<a href="ref-epilogue.html">epilogue</a>&gt;</b> contains the epilogue to a drama,  typically spoken by an actor
+out of character, possibly in association with a particular performance
+or venue.</li><li><b>&lt;<a href="ref-set.html">set</a>&gt;</b> contains a description of the setting, time, locale, appearance,
+etc., of the action of a play, typically found in the front matter of
+a printed performance text (not a stage direction).</li><li><b>&lt;<a href="ref-castList.html">castList</a>&gt;</b> (cast list) contains a single cast list or dramatis personae.</li></ul></div><p><span id="id2441257"/>Elements for encoding each of these specific kinds of front matter
+are discussed in the remainder of this section, in the order given
+above.  In addition, the front matter of dramatic texts may include the
+same elements as that of any other kind of text, notably title pages and
+various kinds of text division, as discussed in section <a class="link_ptr" href="DS.html#DSFRONT" title="Front Matter">5.4  Front Matter</a>.
+The encoder may choose to ignore the
+specialized elements discussed in this section and instead use
+constructions of the type <span class="tag">&lt;div type="performance"&gt;</span> or
+<span class="tag">&lt;div1 type="set"&gt;</span>.
+ </p><p><span id="id2441282"/>Most other material in the front matter of a performance text will be
+marked with the default text structure elements described in chapter
+<a class="link_ptr" href="DS.html" title="7">5  Default Text Structure</a>.  For example, the title
+page, dedication, other commendatory material, preface, etc., in a
+printed text should be encoded using <code>&lt;div&gt;</code> or <code>&lt;div1&gt;</code>
+elements, containing headings, paragraphs, and other core tags.
+ </p><div class="p"><span id="id2441303"/>The specialized elements for front and back matter of performance
+texts are defined as follows:
+<div class="specgrp"><span id="DDRFAB"/><b>Specification group 70: Specialized front and back matter for performance texts</b><dl><dt><!-- --></dt><dd>« <a href="#DDRSET"><span class="label">include 71: The set element</span></a> » </dd><dt><!-- --></dt><dd>« <a href="#DDRPRO"><span class="label">include 72: The prologue and epilogue elements</span></a> » </dd><dt><!-- --></dt><dd>« <a href="#DDRPERF"><span class="label">include 73: The performance element</span></a> » </dd><dt><!-- --></dt><dd>« <a href="#DDRCAST"><span class="label">include 74: The castList element</span></a> » </dd></dl></div></div><div class="div3" id="DRSET"><h4>7.1.1  The Set Element</h4><div class="p"><span id="id2441347"/>A special form of note describing the setting of a dramatic text
+(that is, the time and place of its action) is sometimes found in the
+front matter.
+<ul class="specList"><li><b>&lt;<a href="ref-set.html">set</a>&gt;</b> contains a description of the setting, time, locale, appearance,
+etc., of the action of a play, typically found in the front matter of
+a printed performance text (not a stage direction).</li></ul>
+Descriptions of the setting may also appear as initial stage directions
+in the body of the play, but such descriptions should be marked as stage
+directions, not <code>&lt;set&gt;</code>.  The <code>&lt;set&gt;</code> element should be used
+only where the description forms part of the front matter, as in the
+following examples:
+<div class="pre"> <span class="element">&lt;front&gt;</span><br/>  <span class="element">&lt;castList&gt;</span><br/>   <span class="element">&lt;castItem&gt;</span> ... <span class="element">&lt;/castItem&gt;</span><br/>  <span class="element">&lt;/castList&gt;</span><br/>  <span class="element">&lt;set&gt;</span><br/>   <span class="element">&lt;p&gt;</span>The action of the play is set in Chicago's
+       Southside, sometime between World War II and the
+       present.<span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;/set&gt;</span><br/> <span class="element">&lt;/front&gt;</span></div><div class="pre"> <span class="element">&lt;front&gt;</span><br/>  <span class="element">&lt;titlePage/&gt;</span><br/>  <span class="element">&lt;div <span class="attribute">type</span>="copyright page"/&gt;</span><br/>  <span class="element">&lt;div <span class="attribute">type</span>="Contents"/&gt;</span><br/>  <span class="element">&lt;div <span class="attribute">type</span>="Introduction"/&gt;</span><br/>  <span class="element">&lt;div <span class="attribute">type</span>="note"&gt;</span><br/>   <span class="element">&lt;head&gt;</span>Note on the Translation<span class="element">&lt;/head&gt;</span><br/>   <span class="element">&lt;p&gt;</span> ... <span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;/div&gt;</span><br/>  <span class="element">&lt;titlePage <span class="attribute">type</span>="half-title"&gt;</span><br/>   <span class="element">&lt;docTitle&gt;</span><br/>    <span class="element">&lt;titlePart&gt;</span>Peer Gynt<span class="element">&lt;/titlePart&gt;</span><br/>   <span class="element">&lt;/docTitle&gt;</span><br/>  <span class="element">&lt;/titlePage&gt;</span><br/>  <span class="element">&lt;div <span class="attribute">type</span>="Dramatis Personae"&gt;</span><br/>   <span class="element">&lt;head&gt;</span>Characters<span class="element">&lt;/head&gt;</span><br/>   <span class="element">&lt;castList/&gt;</span><br/>  <span class="element">&lt;/div&gt;</span><br/>  <span class="element">&lt;set&gt;</span><br/>   <span class="element">&lt;p&gt;</span>The action, which opens in the early years of the last
+      century and closes about fifty years later, takes place partly
+      in the Gudbrand Valley in Norway and on the mountains around it,
+      partly on the Moroccan coast, partly in the Sahara Desert, the
+      asylum in Cairo, at sea, etc.<span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;/set&gt;</span><br/>  <span class="element">&lt;performance/&gt;</span><br/> <span class="element">&lt;/front&gt;</span></div></div><div class="p"><span id="id2441462"/>The <code>&lt;set&gt;</code> element is formally defined as follows:
+<div class="specgrp"><span id="DDRSET"/><b>Specification group 71: The set element</b><dl><dt>Element set</dt><dd><pre class="eg">
+set = element set { set.content }
+
+set.content = <a class="link_odd" href="ref-model.global.html">model.global</a>*, <a class="link_odd" href="ref-head.html">head</a>?, ( <a class="link_odd" href="ref-macro.component.html">macro.component</a>, <a class="link_odd" href="ref-model.global.html">model.global</a>* )*</pre></dd></dl></div></div></div><div class="div3" id="DRPRO"><h4>7.1.2  Prologues and Epilogues</h4><div class="p"><span id="id2441681"/>Many plays in the Western tradition include in their front matter a
+prologue, spoken by an actor, generally not in character.  Similar
+speeches often also occur at the end of the play, as epilogues.  The
+elements <code>&lt;prologue&gt;</code> and <code>&lt;epilogue&gt;</code> are provided for the
+encoding of such features within the front or back matter, where
+appropriate.
+<ul class="specList"><li><b>&lt;<a href="ref-prologue.html">prologue</a>&gt;</b> contains the prologue to a drama,  typically spoken by an actor out of
+character, possibly in association with a particular performance or venue.</li><li><b>&lt;<a href="ref-epilogue.html">epilogue</a>&gt;</b> contains the epilogue to a drama,  typically spoken by an actor
+out of character, possibly in association with a particular performance
+or venue.</li></ul>
+A prologue may be encoded just like a distinct poem, as in the following
+example:
+<div class="pre"> <span class="element">&lt;front&gt;</span><br/>  <span class="element">&lt;prologue&gt;</span><br/>   <span class="element">&lt;head&gt;</span>Prologue, spoken by <span class="element">&lt;name&gt;</span>Mr. Hart<span class="element">&lt;/name&gt;</span><br/>   <span class="element">&lt;/head&gt;</span><br/>   <span class="element">&lt;l&gt;</span>Poets like Cudgel'd Bullys, never do<span class="element">&lt;/l&gt;</span><br/>   <span class="element">&lt;l&gt;</span>At first, or second blow, submit to you;<span class="element">&lt;/l&gt;</span><br/>   <span class="element">&lt;l&gt;</span>But will provoke you still, and ne're have done,<span class="element">&lt;/l&gt;</span><br/>   <span class="element">&lt;l&gt;</span>Till you are weary first, with laying on:<span class="element">&lt;/l&gt;</span><br/>   <span class="element">&lt;l&gt;</span>We patiently you see, give up to you,<span class="element">&lt;/l&gt;</span><br/>   <span class="element">&lt;l&gt;</span>Our Poets, Virgins, nay our Matrons too.<span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;/prologue&gt;</span><br/>  <span class="element">&lt;castList&gt;</span><br/>   <span class="element">&lt;head&gt;</span>The Persons<span class="element">&lt;/head&gt;</span><br/>   <span class="element">&lt;castItem&gt;</span> ... <span class="element">&lt;/castItem&gt;</span><br/>  <span class="element">&lt;/castList&gt;</span><br/>  <span class="element">&lt;set&gt;</span><br/>   <span class="element">&lt;head&gt;</span>The SCENE<span class="element">&lt;/head&gt;</span><br/>   <span class="element">&lt;p&gt;</span>London<span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;/set&gt;</span><br/> <span class="element">&lt;/front&gt;</span></div></div><div class="p"><span id="id2441771"/>A prologue or epilogue may also be encoded as a speech, using the
+<code>&lt;sp&gt;</code> element described in section <a class="link_ptr" href="CO.html#CODR" title="Core Tags for Drama">4.12.2  Core Tags for Drama</a>.  This is
+particularly appropriate where stage directions, etc., are involved, as
+in the following example:
+<div class="pre"> <span class="element">&lt;epilogue&gt;</span><br/>  <span class="element">&lt;head&gt;</span>Written by <span class="element">&lt;name&gt;</span>Colley Cibber, Esq<span class="element">&lt;/name&gt;</span><br/>  		and spoken by <span class="element">&lt;name&gt;</span>Mrs. Cibber<span class="element">&lt;/name&gt;</span><br/>  <span class="element">&lt;/head&gt;</span><br/>  <span class="element">&lt;sp&gt;</span><br/>   <span class="element">&lt;lg <span class="attribute">type</span>="stanza"&gt;</span><br/>    <span class="element">&lt;l&gt;</span>Since Fate has robb'd me of the hapless Youth,<span class="element">&lt;/l&gt;</span><br/>    <span class="element">&lt;l&gt;</span>For whom my heart had hoarded up its truth;<span class="element">&lt;/l&gt;</span><br/>    <span class="element">&lt;l&gt;</span>By all the Laws of Love and Honour, now,<span class="element">&lt;/l&gt;</span><br/>    <span class="element">&lt;l&gt;</span>I'm free again to chuse, — and one of you<span class="element">&lt;/l&gt;</span><br/>   <span class="element">&lt;/lg&gt;</span><br/>   <span class="element">&lt;lg <span class="attribute">type</span>="stanza"&gt;</span><br/>    <span class="element">&lt;l&gt;</span>Suppose I search the sober Gallery; — No,<span class="element">&lt;/l&gt;</span><br/>    <span class="element">&lt;l&gt;</span>There's none but Prentices — &amp; Cuckolds all a row:<span class="element">&lt;/l&gt;</span><br/>    <span class="element">&lt;l&gt;</span>And these, I doubt, are those that make 'em so.<span class="element">&lt;/l&gt;</span><br/>   <span class="element">&lt;/lg&gt;</span><br/>   <span class="element">&lt;stage&gt;</span>Pointing to the Boxes.<span class="element">&lt;/stage&gt;</span><br/>   <span class="element">&lt;lg <span class="attribute">type</span>="stanza"&gt;</span><br/>    <span class="element">&lt;l&gt;</span>'Tis very well, enjoy the jest:<span class="element">&lt;/l&gt;</span><br/>   <span class="element">&lt;/lg&gt;</span><br/>  <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;/epilogue&gt;</span></div></div><div class="p"><span id="id2441862"/>In cases where the prologue or epilogue is clearly a significant part
+of the dramatic action, it may be preferable to include it in the body
+of a text, rather than in the front or back matter.  In such cases, the
+encoder (and theatrical tradition) will determine whether or not to
+regard it as a new scene or division, or simply the final speech in the
+play.  In the First Folio version of Shakespeare's
+<i>Tempest</i>, for example, Prospero's final speech is clearly
+marked off as a distinct textual unit by the headings and layout of the
+page, and might therefore be encoded as back matter:
+<div class="pre"> <span class="element">&lt;text&gt;</span><br/>  <span class="element">&lt;body&gt;</span><br/>   <span class="element">&lt;div1 <span class="attribute">type</span>="scene"&gt;</span><br/>    <span class="element">&lt;sp <span class="attribute">who</span>="#PR"&gt;</span><br/>     <span class="element">&lt;l <span class="attribute">part</span>="Y"&gt;</span>I'le deliver all,<span class="element">&lt;/l&gt;</span><br/>     <span class="element">&lt;l&gt;</span>And promise you calme Seas, auspicious gales,<span class="element">&lt;/l&gt;</span><br/>     <span class="element">&lt;l&gt;</span>Be free and fare thou well: please you, draw neere.<span class="element">&lt;/l&gt;</span><br/>     <span class="element">&lt;stage&gt;</span>Exeunt omnes.<span class="element">&lt;/stage&gt;</span><br/>    <span class="element">&lt;/sp&gt;</span><br/>   <span class="element">&lt;/div1&gt;</span><br/>  <span class="element">&lt;/body&gt;</span><br/>  <span class="element">&lt;back&gt;</span><br/>   <span class="element">&lt;epilogue&gt;</span><br/>    <span class="element">&lt;head&gt;</span>Epilogue, spoken by Prospero.<span class="element">&lt;/head&gt;</span><br/>    <span class="element">&lt;sp <span class="attribute">who</span>="#PR"&gt;</span><br/>     <span class="element">&lt;l&gt;</span>Now my Charmes are all ore-throwne,<span class="element">&lt;/l&gt;</span><br/>     <span class="element">&lt;l&gt;</span>And what strength I have's mine owne<span class="element">&lt;/l&gt;</span><br/>     <span class="element">&lt;l&gt;</span>As you from crimes would pardon'd be,<span class="element">&lt;/l&gt;</span><br/>     <span class="element">&lt;l&gt;</span>Let your Indulgence set me free.<span class="element">&lt;/l&gt;</span><br/>    <span class="element">&lt;/sp&gt;</span><br/>    <span class="element">&lt;stage&gt;</span>Exit<span class="element">&lt;/stage&gt;</span><br/>   <span class="element">&lt;/epilogue&gt;</span><br/>   <span class="element">&lt;set&gt;</span><br/>    <span class="element">&lt;p&gt;</span>The Scene, an un-inhabited Island.<span class="element">&lt;/p&gt;</span><br/>   <span class="element">&lt;/set&gt;</span><br/>   <span class="element">&lt;castList&gt;</span><br/>    <span class="element">&lt;head&gt;</span>Names of the Actors.<span class="element">&lt;/head&gt;</span><br/>    <span class="element">&lt;castItem&gt;</span>Alonso, K. of Naples<span class="element">&lt;/castItem&gt;</span><br/>    <span class="element">&lt;castItem&gt;</span>Sebastian, his Brother.<span class="element">&lt;/castItem&gt;</span><br/>    <span class="element">&lt;castItem&gt;</span>Prospero, the right Duke of Millaine.<span class="element">&lt;/castItem&gt;</span><br/>   <span class="element">&lt;/castList&gt;</span><br/>   <span class="element">&lt;trailer&gt;</span>FINIS<span class="element">&lt;/trailer&gt;</span><br/>  <span class="element">&lt;/back&gt;</span><br/> <span class="element">&lt;/text&gt;</span></div></div><div class="p"><span id="id2441982"/>In many modern editions, the editors have chosen to regard
+Prospero's speech as a part of the preceding scene:
+<div class="pre"> <span class="element">&lt;sp <span class="attribute">who</span>="#pr"&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Prospero<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;l <span class="attribute">part</span>="Y"&gt;</span>I'll deliver all,<span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;l&gt;</span>And promise you calm seas, auspicious gales,<span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;l&gt;</span>Be free and fare thou well. <span class="element">&lt;stage <span class="attribute">type</span>="exit"&gt;</span>Exit Ariel<span class="element">&lt;/stage&gt;</span><br/>  	Please you, draw near. <span class="element">&lt;stage <span class="attribute">type</span>="exit"&gt;</span>Exeunt all but Prospero<span class="element">&lt;/stage&gt;</span><br/>   <span class="element">&lt;note <span class="attribute">place</span>="margin"&gt;</span>Epilogue<span class="element">&lt;/note&gt;</span><br/>  <span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;l&gt;</span>Now my charms are all o'erthrown,<span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;l&gt;</span>And what strength I have's mine own<span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;l&gt;</span>As you from crimes would pardoned be,<span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;l&gt;</span>Let your indulgence set me free.<span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;stage <span class="attribute">type</span>="mix"&gt;</span>He awaits applause, then exit.<span class="element">&lt;/stage&gt;</span></div></div><div class="p"><span id="id2442058"/>Prologues and epilogues are formally defined as follows:
+<div class="specgrp"><span id="DDRPRO"/><b>Specification group 72: The prologue and epilogue elements</b><dl><dt>Element prologue</dt><dd><pre class="eg">
+prologue = element prologue { prologue.content }
+
+prologue.content =
+   ( <a class="link_odd" href="ref-model.divWrapper.html">model.divWrapper</a> | <a class="link_odd" href="ref-model.global.html">model.global</a> )*,
+   ( ( <a class="link_odd" href="ref-macro.component.html">macro.component</a> ), <a class="link_odd" href="ref-model.global.html">model.global</a>* )+,
+   ( ( <a class="link_odd" href="ref-model.divWrapper.bottom.html">model.divWrapper.bottom</a> ), <a class="link_odd" href="ref-model.global.html">model.global</a>* )*</pre></dd><dt>Element epilogue</dt><dd><pre class="eg">
+epilogue = element epilogue { epilogue.content }
+
+epilogue.content =
+   ( <a class="link_odd" href="ref-model.divWrapper.html">model.divWrapper</a> | <a class="link_odd" href="ref-model.global.html">model.global</a> )*,
+   ( ( <a class="link_odd" href="ref-macro.component.html">macro.component</a> ), <a class="link_odd" href="ref-model.global.html">model.global</a>* )+,
+   ( ( <a class="link_odd" href="ref-model.divWrapper.bottom.html">model.divWrapper.bottom</a> ), <a class="link_odd" href="ref-model.global.html">model.global</a>* )*</pre></dd></dl></div></div></div><div class="div3" id="DRPERF"><h4>7.1.3  Records of Performances</h4><div class="p"><span id="id2442472"/>Performance texts are not only printed in books to be read, they are
+also performed.  It is common practice therefore to include within the
+front matter of a printed dramatic text some brief account of particular
+performances, using the following element:
+<ul class="specList"><li><b>&lt;<a href="ref-performance.html">performance</a>&gt;</b> contains a section of front or back matter describing how a
+dramatic piece is to be performed in general or how it was performed
+on some specific occasion. </li></ul>
+The <code>&lt;performance&gt;</code> element may be used to group any and all
+information relating to the actual performance of a play or screenplay,
+whether it specifies how the play should be performed in general or how
+it was performed in practice on some occasion.
+ </div><p><span id="id2442493"/>Performance information may include complex structures such as cast
+lists, or paragraphs describing the date and location of a performance,
+details about the setting portrayed in the performance and so forth.
+(See the discussion of these specialized structures in section <a class="link_ptr" href="DR.html#DRFAB" title="Front and Back Matter">7.1  Front and Back Matter
+ </a> above.)  If
+information for more than one performance is being recorded, then more
+than one <code>&lt;performance&gt;</code> element should be used, wherever possible.
+ </p><p><span id="id2442513"/>Names of persons, places, and dates of particular significance within
+the performance record may be explicitly marked using the general
+purpose <code>&lt;name&gt;</code>, <span class="tag">&lt;rs type="place"&gt;</span> and <code>&lt;date&gt;</code>
+elements described in section <a class="link_ptr" href="CO.html#CONADA" title="Dates and Times">4.5.4  Dates and Times</a>.
+No particular elements for such features as stagehouses,
+directors, etc., are proposed at this time.
+ </p><div class="p"><span id="id2442537"/>For example:
+<div class="pre"> <span class="element">&lt;performance&gt;</span><br/>  <span class="element">&lt;head&gt;</span>Death of a Salesman<span class="element">&lt;/head&gt;</span><br/>  <span class="element">&lt;p&gt;</span>A New Play by Arthur Miller<span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;p&gt;</span>Staged by Elia Kazan<span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;castList&gt;</span><br/>   <span class="element">&lt;head&gt;</span>Cast<span class="element">&lt;/head&gt;</span><br/>   <span class="element">&lt;note <span class="attribute">rend</span>="small type flush left" <span class="attribute">place</span>="inline"&gt;</span>(in order of appearance)<span class="element">&lt;/note&gt;</span><br/>   <span class="element">&lt;castItem&gt;</span><br/>    <span class="element">&lt;role&gt;</span>Willy Loman<span class="element">&lt;/role&gt;</span><br/>    <span class="element">&lt;actor&gt;</span>Lee J. Cobb<span class="element">&lt;/actor&gt;</span><br/>   <span class="element">&lt;/castItem&gt;</span><br/>   <span class="element">&lt;castItem&gt;</span><br/>    <span class="element">&lt;role&gt;</span>Linda<span class="element">&lt;/role&gt;</span><br/>    <span class="element">&lt;actor&gt;</span>Mildred Dunnock<span class="element">&lt;/actor&gt;</span><br/>   <span class="element">&lt;/castItem&gt;</span><br/>   <span class="element">&lt;castItem&gt;</span><br/>    <span class="element">&lt;role&gt;</span>Biff<span class="element">&lt;/role&gt;</span><br/>    <span class="element">&lt;actor&gt;</span>Arthur Kennedy<span class="element">&lt;/actor&gt;</span><br/>   <span class="element">&lt;/castItem&gt;</span><br/>   <span class="element">&lt;castItem&gt;</span><br/>    <span class="element">&lt;role&gt;</span>Happy<span class="element">&lt;/role&gt;</span><br/>    <span class="element">&lt;actor&gt;</span>Cameron Mitchell<span class="element">&lt;/actor&gt;</span><br/>   <span class="element">&lt;/castItem&gt;</span><br/>&lt;!-- ... --&gt;<br/>  <span class="element">&lt;/castList&gt;</span><br/>  <span class="element">&lt;p&gt;</span>The setting and lighting were designed by 
+      <span class="element">&lt;name&gt;</span>Jo Mielziner<span class="element">&lt;/name&gt;</span>.<span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;p&gt;</span>The incidental music was composed by <span class="element">&lt;name&gt;</span>Alex North<span class="element">&lt;/name&gt;</span>.<span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;p&gt;</span>The costumes were designed by <span class="element">&lt;name&gt;</span>Julia Sze<span class="element">&lt;/name&gt;</span>.<span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;p&gt;</span>Presented by <span class="element">&lt;name <span class="attribute">rend</span>="unmarked"&gt;</span>Kermit Bloomgarden<span class="element">&lt;/name&gt;</span><br/>      and <span class="element">&lt;name <span class="attribute">rend</span>="unmarked"&gt;</span>Walter Fried<span class="element">&lt;/name&gt;</span> at the <br/>      <span class="element">&lt;rs <span class="attribute">type</span>="place"&gt;</span>Morosco Theatre in New York<span class="element">&lt;/rs&gt;</span> on <br/>      <span class="element">&lt;date <span class="attribute">value</span>="1949-02-10"&gt;</span>February 10, 1949<span class="element">&lt;/date&gt;</span>.<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/performance&gt;</span></div>
+Or:
+<div class="pre"> <span class="element">&lt;performance&gt;</span><br/>  <span class="element">&lt;p&gt;</span>La Machine Infernale a été
+    représentée pour la première fois au
+    <span class="element">&lt;rs <span class="attribute">type</span>="place (theatre)"&gt;</span>théâtre Louis-Jouvet<span class="element">&lt;/rs&gt;</span><br/>   <span class="element">&lt;rs <span class="attribute">type</span>="place (theatre)"&gt;</span>(Comédie des
+	Champs-élysées)<span class="element">&lt;/rs&gt;</span><br/>   <span class="element">&lt;date&gt;</span>le 10 avril 1934<span class="element">&lt;/date&gt;</span>,<br/>      avec les décors et les costumes de<br/>      <span class="element">&lt;name&gt;</span>Christian Bérard.<span class="element">&lt;/name&gt;</span> ... <span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/performance&gt;</span></div></div><div class="p"><span id="id2442724"/>The <code>&lt;performance&gt;</code> element is formally defined as follows:
+<div class="specgrp"><span id="DDRPERF"/><b>Specification group 73: The performance element</b><dl><dt>Element performance</dt><dd><pre class="eg">
+performance = element performance { performance.content }
+
+performance.content =
+   ( <a class="link_odd" href="ref-model.divWrapper.html">model.divWrapper</a> | <a class="link_odd" href="ref-model.global.html">model.global</a> )*,
+   ( ( <a class="link_odd" href="ref-macro.component.html">macro.component</a> ), <a class="link_odd" href="ref-model.global.html">model.global</a>* )+,
+   ( ( <a class="link_odd" href="ref-model.divWrapper.bottom.html">model.divWrapper.bottom</a> ), <a class="link_odd" href="ref-model.global.html">model.global</a>* )*</pre></dd></dl></div></div></div><div class="div3" id="DRCAST"><h4>7.1.4  Cast Lists</h4><div class="p"><span id="id2442956"/>A <em>cast list</em> is a specialized form of list,
+conventionally found at the start or end of a play, usually listing all
+the speaking and non-speaking roles in the play, often with additional
+description (‘Cataplasma, a maker of Periwigges and Attires’) or
+the name of an actor or actress (‘Old Lady Squeamish. Mrs
+Rutter’).  Cast lists may be encoded with the general purpose
+<code>&lt;list&gt;</code> element described in section <a class="link_ptr" href="CO.html#COLI" title="Lists">4.7  Lists</a>, but for
+more detailed work the following specialized elements are provided:
+<ul class="specList"><li><b>&lt;<a href="ref-castList.html">castList</a>&gt;</b> (cast list) contains a single cast list or dramatis personae.</li><li><b>&lt;<a href="ref-castGroup.html">castGroup</a>&gt;</b> (Cast list grouping) groups one or more individual castItem
+elements within a cast list.</li><li><b>&lt;<a href="ref-castItem.html">castItem</a>&gt;</b> (Cast list item) contains a single entry within a cast list, describing
+either a single role or a list of non-speaking roles.<table class="attList"><tr><td class="Attribute">type</td><td colspan="2">characterizes the cast item.
+   </td></tr></table></li><li><b>&lt;<a href="ref-role.html">role</a>&gt;</b> the name of a dramatic role, as given in a cast list.</li><li><b>&lt;<a href="ref-roleDesc.html">roleDesc</a>&gt;</b> (role description) describes a character's role in a drama.</li><li><b>&lt;<a href="ref-actor.html">actor</a>&gt;</b> (actor) Name of an actor appearing within a cast list.</li></ul>
+Cast lists often have an internal structure of their own; it is quite
+usual to find, for example, nobility and commoners, or male and female
+roles, presented in different groups or sublists.  Roles are also often
+grouped together by their function, for example:
+<ul><li>Sons of Cato:
+<ul><li>Portius</li><li>Marcus</li></ul></li></ul></div><div class="p"><span id="id2443034"/>A cast list relating to a specific performance may be accompanied by
+notes about the time or place of that performance, indicating (for
+example) the name of the theatre where the play was first presented, the
+name of the producer or director, and so forth.  When the cast list
+relates to a specific performance, it should be embedded within a
+<code>&lt;performance&gt;</code> element (see section <a class="link_ptr" href="DR.html#DRPERF" title="Records of Performances">7.1.3  Records of Performances</a>), as in
+the following example:
+<div class="pre"> <span class="element">&lt;performance&gt;</span><br/>  <span class="element">&lt;p&gt;</span>The first performance in Great Britain of <span class="element">&lt;title&gt;</span>Waiting for
+	  Godot<span class="element">&lt;/title&gt;</span> was given at the Arts Theatre, London, on <span class="element">&lt;date <span class="attribute">value</span>="1955-08-03"&gt;</span>3rd August 1955<span class="element">&lt;/date&gt;</span>. It was directed by<br/>  	  <span class="element">&lt;name&gt;</span>Peter Hall<span class="element">&lt;/name&gt;</span>, and the décor was by <span class="element">&lt;name&gt;</span>Peter
+	  Snow<span class="element">&lt;/name&gt;</span>. The cast was as follows:<span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;castList&gt;</span><br/>   <span class="element">&lt;castItem&gt;</span>Estragon: Peter Woodthorpe<span class="element">&lt;/castItem&gt;</span><br/>   <span class="element">&lt;castItem&gt;</span>Vladimir: Paul Daneman<span class="element">&lt;/castItem&gt;</span><br/>   <span class="element">&lt;castItem&gt;</span> ... <span class="element">&lt;/castItem&gt;</span><br/>  <span class="element">&lt;/castList&gt;</span><br/> <span class="element">&lt;/performance&gt;</span></div></div><div class="p"><span id="id2443099"/>In this example, the <code>&lt;castItem&gt;</code> elements have no substructure.
+If desired, however, their components may be more finely distinguished
+using the elements <code>&lt;role&gt;</code>, <code>&lt;roleDesc&gt;</code>, and <code>&lt;actor&gt;</code>.
+For example, the second cast item above might be encoded as follows:
+<div class="pre"> <span class="element">&lt;castItem&gt;</span><br/>  <span class="element">&lt;role <span class="attribute">xml:id</span>="vlad"&gt;</span>Vladimir<span class="element">&lt;/role&gt;</span>:<br/>   <span class="element">&lt;actor&gt;</span>Paul Daneman<span class="element">&lt;/actor&gt;</span><br/> <span class="element">&lt;/castItem&gt;</span></div></div><p><span id="id2443138"/>The global <span class="att">xml:id</span> attribute may be used to specify a unique
+identifier for the <code>&lt;role&gt;</code> element, where it is desired to link
+speeches within the text explicitly to the role, using the
+<span class="att">who</span> attribute, as further discussed in section <a class="link_ptr" href="DR.html#DRSP" title="Speeches and Speakers">7.2.2  Speeches and Speakers</a> below.
+ </p><div class="p"><span id="id2443161"/>The occasionally lengthy descriptions of a role sometimes found in
+written play scripts may be marked using the <code>&lt;roleDesc&gt;</code> element,
+as in the following example:
+<div class="pre"> <span class="element">&lt;castItem&gt;</span><br/>  <span class="element">&lt;role&gt;</span>Tom Thumb the Great<span class="element">&lt;/role&gt;</span><br/>  <span class="element">&lt;roleDesc&gt;</span>a little hero with a great soul, something violent in his
+    temper, which is a little abated by his love for Huncamunca<span class="element">&lt;/roleDesc&gt;</span><br/>  <span class="element">&lt;actor&gt;</span>Young Verhuyk<span class="element">&lt;/actor&gt;</span><br/> <span class="element">&lt;/castItem&gt;</span></div>
+For non-speaking or un-named roles, a <code>&lt;castItem&gt;</code> may contain a
+<code>&lt;roleDesc&gt;</code> without an accompanying <code>&lt;role&gt;</code>, for example
+<div class="pre"> <span class="element">&lt;castItem&gt;</span><br/>  <span class="element">&lt;roleDesc&gt;</span>Costermonger<span class="element">&lt;/roleDesc&gt;</span><br/> <span class="element">&lt;/castItem&gt;</span></div></div><div class="p"><span id="id2443214"/>When a list of such minor roles is given together, the
+<span class="att">type</span> attribute of the <code>&lt;castItem&gt;</code> should indicate that
+it contains more than one role.  The encoder may or may not elect to
+encode each separate constituent within such a composite
+<code>&lt;castItem&gt;</code>.  Thus, either of the following is acceptable:
+<div class="pre"> <span class="element">&lt;castItem <span class="attribute">type</span>="list"&gt;</span>Constables, Drawer, Turnkey, etc.<span class="element">&lt;/castItem&gt;</span><br/> <span class="element">&lt;castItem <span class="attribute">type</span>="list"&gt;</span><br/>  <span class="element">&lt;roleDesc&gt;</span>Constables,<span class="element">&lt;/roleDesc&gt;</span><br/>  <span class="element">&lt;roleDesc&gt;</span>Drawer,<span class="element">&lt;/roleDesc&gt;</span><br/>  <span class="element">&lt;roleDesc&gt;</span>Turnkey,<span class="element">&lt;/roleDesc&gt;</span><br/>   etc.<br/> <span class="element">&lt;/castItem&gt;</span></div></div><div class="p"><span id="id2443258"/>A group of cast items forming a distinct subdivision of a cast list
+may be marked as such by using the special purpose <code>&lt;castGroup&gt;</code>
+element.  The <span class="att">rend</span> attribute may be used to indicate
+whether this grouping is indicated in the text by layout alone (i.e. the
+use of whitespace), by long braces or by some other means.  A
+<code>&lt;castGroup&gt;</code> may contain  an optional heading (represented as
+usual by a <code>&lt;head&gt;</code> element) followed by a series of
+<code>&lt;castItem&gt;</code> elements:
+<div class="pre"> <span class="element">&lt;castGroup <span class="attribute">rend</span>="braced"&gt;</span><br/>  <span class="element">&lt;head&gt;</span>friends of Mathias<span class="element">&lt;/head&gt;</span><br/>  <span class="element">&lt;castItem&gt;</span><br/>   <span class="element">&lt;role&gt;</span>Walter<span class="element">&lt;/role&gt;</span><br/>   <span class="element">&lt;actor&gt;</span>Mr Frank Hall<span class="element">&lt;/actor&gt;</span><br/>  <span class="element">&lt;/castItem&gt;</span><br/>  <span class="element">&lt;castItem&gt;</span><br/>   <span class="element">&lt;role&gt;</span>Hans<span class="element">&lt;/role&gt;</span><br/>   <span class="element">&lt;actor&gt;</span>Mr F.W. Irish<span class="element">&lt;/actor&gt;</span><br/>  <span class="element">&lt;/castItem&gt;</span><br/> <span class="element">&lt;/castGroup&gt;</span></div></div><div class="p"><span id="id2443322"/>Alternatively, the encoder may prefer to regard the phrase
+‘friends of Mathias’ as a role description, and encode the above
+example as follows:
+<div class="pre"> <span class="element">&lt;castGroup <span class="attribute">rend</span>="braced"&gt;</span><br/>  <span class="element">&lt;roleDesc&gt;</span>friends of Mathias<span class="element">&lt;/roleDesc&gt;</span><br/>  <span class="element">&lt;castItem&gt;</span><br/>   <span class="element">&lt;role&gt;</span>Walter<span class="element">&lt;/role&gt;</span><br/>   <span class="element">&lt;actor&gt;</span>Mr Frank Hall<span class="element">&lt;/actor&gt;</span><br/>  <span class="element">&lt;/castItem&gt;</span><br/>  <span class="element">&lt;castItem&gt;</span><br/>   <span class="element">&lt;role&gt;</span>Hans<span class="element">&lt;/role&gt;</span><br/>   <span class="element">&lt;actor&gt;</span>Mr F.W. Irish<span class="element">&lt;/actor&gt;</span><br/>  <span class="element">&lt;/castItem&gt;</span><br/> <span class="element">&lt;/castGroup&gt;</span></div></div><div class="p"><span id="id2443362"/>This version has the advantage that all role descriptions are treated
+alike, rather than in some cases being treated as headings. On the
+other hand there are also  cases, such as the following, where the
+role description does function more like a heading:
+
+<div class="pre"> <span class="element">&lt;castList&gt;</span><br/>  <span class="element">&lt;castGroup&gt;</span><br/>   <span class="element">&lt;head <span class="attribute">rend</span>="braced"&gt;</span>Mendicants<span class="element">&lt;/head&gt;</span><br/>   <span class="element">&lt;castItem&gt;</span><br/>    <span class="element">&lt;role&gt;</span>Aafaa<span class="element">&lt;/role&gt;</span><br/>    <span class="element">&lt;actor&gt;</span>Femi Johnson<span class="element">&lt;/actor&gt;</span><br/>   <span class="element">&lt;/castItem&gt;</span><br/>   <span class="element">&lt;castItem&gt;</span><br/>    <span class="element">&lt;role&gt;</span>Blindman<span class="element">&lt;/role&gt;</span><br/>    <span class="element">&lt;actor&gt;</span>Femi Osofisan<span class="element">&lt;/actor&gt;</span><br/>   <span class="element">&lt;/castItem&gt;</span><br/>   <span class="element">&lt;castItem&gt;</span><br/>    <span class="element">&lt;role&gt;</span>Goyi<span class="element">&lt;/role&gt;</span><br/>    <span class="element">&lt;actor&gt;</span>Wale Ogunyemi<span class="element">&lt;/actor&gt;</span><br/>   <span class="element">&lt;/castItem&gt;</span><br/>   <span class="element">&lt;castItem&gt;</span><br/>    <span class="element">&lt;role&gt;</span>Cripple<span class="element">&lt;/role&gt;</span><br/>    <span class="element">&lt;actor&gt;</span>Tunji Oyelana<span class="element">&lt;/actor&gt;</span><br/>   <span class="element">&lt;/castItem&gt;</span><br/>  <span class="element">&lt;/castGroup&gt;</span><br/>  <span class="element">&lt;castItem&gt;</span><br/>   <span class="element">&lt;role&gt;</span>Si Bero<span class="element">&lt;/role&gt;</span><br/>   <span class="element">&lt;roleDesc&gt;</span>Sister to Dr Bero<span class="element">&lt;/roleDesc&gt;</span><br/>   <span class="element">&lt;actor&gt;</span>Deolo Adedoyin<span class="element">&lt;/actor&gt;</span><br/>  <span class="element">&lt;/castItem&gt;</span><br/>  <span class="element">&lt;castGroup&gt;</span><br/>   <span class="element">&lt;head <span class="attribute">rend</span>="braced"&gt;</span>Two old women<span class="element">&lt;/head&gt;</span><br/>   <span class="element">&lt;castItem&gt;</span><br/>    <span class="element">&lt;role&gt;</span>Iya Agba<span class="element">&lt;/role&gt;</span><br/>    <span class="element">&lt;actor&gt;</span>Nguba Agolia<span class="element">&lt;/actor&gt;</span><br/>   <span class="element">&lt;/castItem&gt;</span><br/>   <span class="element">&lt;castItem&gt;</span><br/>    <span class="element">&lt;role&gt;</span>Iya Mate<span class="element">&lt;/role&gt;</span><br/>    <span class="element">&lt;actor&gt;</span>Bopo George<span class="element">&lt;/actor&gt;</span><br/>   <span class="element">&lt;/castItem&gt;</span><br/>  <span class="element">&lt;/castGroup&gt;</span><br/>  <span class="element">&lt;castItem&gt;</span><br/>   <span class="element">&lt;role&gt;</span>Dr Bero<span class="element">&lt;/role&gt;</span><br/>   <span class="element">&lt;roleDesc&gt;</span>Specialist<span class="element">&lt;/roleDesc&gt;</span><br/>   <span class="element">&lt;actor&gt;</span>Nat Okoro<span class="element">&lt;/actor&gt;</span><br/>  <span class="element">&lt;/castItem&gt;</span><br/>  <span class="element">&lt;castItem&gt;</span><br/>   <span class="element">&lt;role&gt;</span>Priest<span class="element">&lt;/role&gt;</span><br/>   <span class="element">&lt;actor&gt;</span>Gbenga Sonuga<span class="element">&lt;/actor&gt;</span><br/>  <span class="element">&lt;/castItem&gt;</span><br/>  <span class="element">&lt;castItem&gt;</span><br/>   <span class="element">&lt;role&gt;</span>The old man<span class="element">&lt;/role&gt;</span><br/>   <span class="element">&lt;roleDesc&gt;</span>Bero's father<span class="element">&lt;/roleDesc&gt;</span><br/>   <span class="element">&lt;actor&gt;</span>Dapo Adelugba<span class="element">&lt;/actor&gt;</span><br/>  <span class="element">&lt;/castItem&gt;</span><br/> <span class="element">&lt;/castList&gt;</span></div></div><div class="p"><span id="id2443512"/>The <code>&lt;castList&gt;</code> element and its components have the following
+formal definitions:
+<div class="specgrp"><span id="DDRCAST"/><b>Specification group 74: The castList element</b><dl><dt>Element castList</dt><dd><pre class="eg">
+castList = element castList { castList.content }
+
+castList.content =
+   ( <a class="link_odd" href="ref-model.divWrapper.html">model.divWrapper</a> | <a class="link_odd" href="ref-model.global.html">model.global</a> )*,
+   ( ( <a class="link_odd" href="ref-macro.component.html">macro.component</a> ), <a class="link_odd" href="ref-model.global.html">model.global</a>* )*,
+   ( ( <a class="link_odd" href="ref-castItem.html">castItem</a> | <a class="link_odd" href="ref-castGroup.html">castGroup</a> ), <a class="link_odd" href="ref-model.global.html">model.global</a>* )+,
+   ( ( <a class="link_odd" href="ref-macro.component.html">macro.component</a> ), <a class="link_odd" href="ref-model.global.html">model.global</a>* )*</pre></dd><dt>Element castGroup</dt><dd><pre class="eg">
+castGroup = element castGroup { castGroup.content }
+
+castGroup.content =
+   <a class="link_odd" href="ref-model.global.html">model.global</a>*,
+   ( <a class="link_odd" href="ref-head.html">head</a>, <a class="link_odd" href="ref-model.global.html">model.global</a>* )?,
+   ( ( <a class="link_odd" href="ref-castItem.html">castItem</a> | <a class="link_odd" href="ref-castGroup.html">castGroup</a> | <a class="link_odd" href="ref-roleDesc.html">roleDesc</a> ), <a class="link_odd" href="ref-model.global.html">model.global</a>* )+,
+   ( <a class="link_odd" href="ref-trailer.html">trailer</a>, <a class="link_odd" href="ref-model.global.html">model.global</a>* )?</pre></dd><dt>Element castItem</dt><dd><pre class="eg">
+castItem = element castItem { castItem.content, castItem.attributes }
+
+castItem.content =
+   ( text | <a class="link_odd" href="ref-model.gLike.html">model.gLike</a> | <a class="link_odd" href="ref-model.castItemPart.html">model.castItemPart</a> | <a class="link_odd" href="ref-model.phrase.html">model.phrase</a> | <a class="link_odd" href="ref-model.global.html">model.global</a> )*
+
+castItem.attributes = attribute type { "role" | "list" }?</pre></dd><dt>Element role</dt><dd><pre class="eg">
+role = element role { role.content }
+
+role.content = <a class="link_odd" href="ref-macro.phraseSeq.html">macro.phraseSeq</a></pre></dd><dt>Element roleDesc</dt><dd><pre class="eg">
+roleDesc = element roleDesc { roleDesc.content }
+
+roleDesc.content = <a class="link_odd" href="ref-macro.phraseSeq.html">macro.phraseSeq</a></pre></dd><dt>Element actor</dt><dd><pre class="eg">
+actor = element actor { actor.content }
+
+actor.content = <a class="link_odd" href="ref-macro.phraseSeq.html">macro.phraseSeq</a></pre></dd></dl></div></div></div></div><div class="div2" id="DRBOD"><h3>7.2  The Body of a Performance Text</h3><p><span id="id2444549"/>The body of a performance text may be divided into structural units,
+variously called acts, scenes, stasima, entr'actes, etc.  All such
+formal divisions should be encoded using an appropriate text-division
+element (<code>&lt;div&gt;</code>, <code>&lt;div1&gt;</code>, <code>&lt;div2&gt;</code>, etc.), as further
+discussed in section <a class="link_ptr" href="DR.html#DRDIV" title="Major Structural Divisions">7.2.1  Major Structural Divisions</a>.  Whether divided up into such
+units or not, all performance texts consist of sequences of speeches
+(see <a class="link_ptr" href="DR.html#DRSP" title="Speeches and Speakers">7.2.2  Speeches and Speakers</a>) and stage directions (see <a class="link_ptr" href="DR.html#DRSTA" title="Stage Directions">7.2.3  Stage Directions</a>).
+Speeches will generally consist of a sequence of
+<em>chunk</em>-level items:  paragraphs, verse lines, stanzas, or
+(in case of uncertainty as to whether something is verse or prose)
+<code>&lt;seg&gt;</code> elements (see <a class="link_ptr" href="DR.html#DRPAL" title="Speech Contents">7.2.4  Speech Contents</a>).</p><p><span id="id2444599"/>The boundaries of formal units such as verse lines or paragraphs do
+not always coincide with speech boundaries.  Units such as songs may be
+discontinuous or shared among several speakers.  As described below in
+section <a class="link_ptr" href="DR.html#DREMB" title="Embedded Structures">7.2.5  Embedded Structures</a>, such fragmentation may be encoded in a
+relatively simple fashion using the linkage and aggregation mechanisms
+defined in chapter <a class="link_ptr" href="SA.html" title="14">11  Linking, Segmentation, and Alignment</a>.</p><div class="div3" id="DRDIV"><h4>7.2.1  Major Structural Divisions</h4><div class="p"><span id="id2444629"/>Large divisions in drama such as acts, scenes, stasima, or entr'actes
+are indicated by numbered or unnumbered <code>&lt;div&gt;</code> elements, as
+described in section <a class="link_ptr" href="DS.html#DSDIV" title="Divisions of the Body">5.1  Divisions of the Body</a>.  The <span class="att">type</span> and
+<span class="att">n</span> attributes may be used to define the type of division being
+marked, and to provide a name or number for it, as in the following
+example:
+<div class="pre"> <span class="element">&lt;body&gt;</span><br/>  <span class="element">&lt;div1 <span class="attribute">type</span>="scene" <span class="attribute">n</span>="1"&gt;</span><br/>   <span class="element">&lt;head&gt;</span>Night—Faust's Study (i)<span class="element">&lt;/head&gt;</span><br/>  <span class="element">&lt;/div1&gt;</span><br/>  <span class="element">&lt;div1 <span class="attribute">type</span>="scene" <span class="attribute">n</span>="2"&gt;</span><br/>   <span class="element">&lt;head&gt;</span>Outside the City Gate<span class="element">&lt;/head&gt;</span><br/>  <span class="element">&lt;/div1&gt;</span><br/> <span class="element">&lt;/body&gt;</span></div></div><div class="p"><span id="id2444684"/>Where the largest divisions of a performance text are themselves
+subdivided, most obviously in the case of plays traditionally divided
+into acts and scenes, further nested text-division elements may be used,
+as in this example:
+<div class="pre"> <span class="element">&lt;body&gt;</span><br/>  <span class="element">&lt;div1 <span class="attribute">type</span>="act" <span class="attribute">n</span>="1"&gt;</span><br/>   <span class="element">&lt;head&gt;</span>Act One<span class="element">&lt;/head&gt;</span><br/>   <span class="element">&lt;div2 <span class="attribute">type</span>="scene" <span class="attribute">n</span>="1"&gt;</span><br/>    <span class="element">&lt;stage&gt;</span>Pa Ubu, Ma Ubu<span class="element">&lt;/stage&gt;</span><br/>    <span class="element">&lt;sp&gt;</span><br/>     <span class="element">&lt;speaker&gt;</span>Pa Ubu<span class="element">&lt;/speaker&gt;</span><br/>     <span class="element">&lt;p&gt;</span>Pschitt!<span class="element">&lt;/p&gt;</span><br/>    <span class="element">&lt;/sp&gt;</span><br/>   <span class="element">&lt;/div2&gt;</span><br/>   <span class="element">&lt;div2 <span class="attribute">type</span>="scene" <span class="attribute">n</span>="2"&gt;</span><br/>    <span class="element">&lt;stage&gt;</span>A room in Pa Ubu's house, where a magnificent
+		collation is set out<span class="element">&lt;/stage&gt;</span><br/>   <span class="element">&lt;/div2&gt;</span><br/>  <span class="element">&lt;/div1&gt;</span><br/>  <span class="element">&lt;div1 <span class="attribute">type</span>="act" <span class="attribute">n</span>="2"&gt;</span><br/>   <span class="element">&lt;head&gt;</span>Act Two<span class="element">&lt;/head&gt;</span><br/>   <span class="element">&lt;div2 <span class="attribute">type</span>="scene" <span class="attribute">n</span>="1"&gt;</span><br/>    <span class="element">&lt;head&gt;</span>Scene One<span class="element">&lt;/head&gt;</span><br/>   <span class="element">&lt;/div2&gt;</span><br/>   <span class="element">&lt;div2 <span class="attribute">type</span>="scene" <span class="attribute">n</span>="2"&gt;</span><br/>    <span class="element">&lt;head&gt;</span>Scene Two<span class="element">&lt;/head&gt;</span><br/>   <span class="element">&lt;/div2&gt;</span><br/>  <span class="element">&lt;/div1&gt;</span><br/> <span class="element">&lt;/body&gt;</span></div></div><p><span id="id2444776"/>In the example above, the <code>&lt;div2&gt;</code> element has been used to
+represent the ‘French scene’ convention, (where the
+entrance of each new set of characters is marked as a distinct unit in
+the text) and the <code>&lt;div1&gt;</code> element to represent the acts into which
+the play is divided.  The elements chosen are determined only by the
+hierarchic position of these units in the text as a whole.  If the text
+had no acts, but only scenes, then the scenes might be represented by
+<code>&lt;div1&gt;</code> elements.  Equally, if a play is divided only into
+‘acts’, with no smaller subdivisions, then the <code>&lt;div1&gt;</code>
+element might be used to represent acts.  The <span class="att">type</span> should be
+used, as above, to make explicit the name associated
+with a particular category of subdivision.</p><div class="p"><span id="id2444816"/>As an alternative to the use of numbered
+divisions, the encoder may represent all subdivisions with the same
+element, the unnumbered <code>&lt;div&gt;</code>.  The second
+act in the above example would then be represented as follows:
+<div class="pre"> <span class="element">&lt;div <span class="attribute">type</span>="act" <span class="attribute">n</span>="2"&gt;</span><br/>  <span class="element">&lt;head&gt;</span>Act Two<span class="element">&lt;/head&gt;</span><br/>  <span class="element">&lt;div <span class="attribute">type</span>="scene" <span class="attribute">n</span>="1"&gt;</span><br/>   <span class="element">&lt;head&gt;</span>Scene One<span class="element">&lt;/head&gt;</span><br/>  <span class="element">&lt;/div&gt;</span><br/>  <span class="element">&lt;div <span class="attribute">type</span>="scene" <span class="attribute">n</span>="2"&gt;</span><br/>   <span class="element">&lt;head&gt;</span>Scene Two<span class="element">&lt;/head&gt;</span><br/>  <span class="element">&lt;/div&gt;</span><br/> <span class="element">&lt;/div&gt;</span></div></div><p><span id="id2444861"/>For further discussion of the use of numbered and unnumbered
+divisions, see section <a class="link_ptr" href="DS.html#DSDIV" title="Divisions of the Body">5.1  Divisions of the Body</a>.</p></div><div class="div3" id="DRSP"><h4>7.2.2  Speeches and Speakers</h4><div class="p"><span id="id2444883"/>The following elements are used to identify speeches and speakers in
+a performance text:
+<ul class="specList"><li><b>&lt;<a href="ref-sp.html">sp</a>&gt;</b> (speech) An individual speech in a performance text, or a passage
+	  presented as such in a prose or verse text.</li><li><b>&lt;<a href="ref-speaker.html">speaker</a>&gt;</b> A specialized form of heading or label, giving the name of
+one or more speakers in a dramatic text or fragment.</li></ul></div><p><span id="id2444896"/>As noted above, the structure of many performance texts may be
+analysed as multiply hierarchic:  a scene of a verse play, for example,
+may be divided into speeches and, at the same time, into verse lines.
+The end of a line may or may not coincide with the end of a speech, and
+vice versa.  Other structures, such as songs, may be discontinuous or
+split up over several speeches.  For some purposes it will be
+appropriate to regard the verse-structure as the fundamental organizing
+principle of the text, and for others the speech structure; in some
+cases, the choice between the two may be arbitrary.  The discussion in
+the remainder of this chapter assumes that it is the speech-based
+hierarchy which most prominently determines the structure of performance
+texts, but the same mechanisms could be employed to encode a view of a
+performance text in which individual speeches were entirely subordinate
+to the formal units of prose and verse. For more detailed discussion and
+examples of various treatments of this fundamental issue, refer to
+chapter <a class="link_ptr" href="USE.html#NH" title="31">24.6  Multiple Hierarchies</a>.</p><div class="p"><span id="id2444922"/>The <span class="att">who</span> attribute and the <code>&lt;speaker&gt;</code> element are
+both used to indicate the speaker or speakers of a speech, but in rather
+different ways.  The <code>&lt;speaker&gt;</code> element is used to encode the word
+or phrase actually used within the source text to indicate the speaker:
+it may contain any string or prefix, and may be thought of as a highly
+specialized form of stage direction.  The value of the <span class="att">who</span>
+attribute however is a unique code, probably made up by the transcriber,
+which will unambiguously identify the character to whom the speech is
+assigned.  To enforce this uniqueness, the base tag set for drama
+defines the value of this attribute as <span class="val">IDREFS</span>.  This means that the
+codes included in it must correspond with codes which are specified
+elsewhere in the document as identifiers for particular elements,
+typically the <code>&lt;role&gt;</code> element in the cast list where the character
+is named or described, as discussed in <a class="link_ptr" href="DR.html#DRFAB" title="Front and Back Matter">7.1  Front and Back Matter
+ </a> above.
+<div class="pre"> <span class="element">&lt;castList&gt;</span><br/>  <span class="element">&lt;castItem&gt;</span><br/>   <span class="element">&lt;role <span class="attribute">xml:id</span>="menae"&gt;</span>Menaechmus<span class="element">&lt;/role&gt;</span><br/>  <span class="element">&lt;/castItem&gt;</span><br/>  <span class="element">&lt;castItem&gt;</span><br/>   <span class="element">&lt;role <span class="attribute">xml:id</span>="penic"&gt;</span>Peniculus<span class="element">&lt;/role&gt;</span><br/>  <span class="element">&lt;/castItem&gt;</span><br/> <span class="element">&lt;/castList&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#m2"&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Menaechmus<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;l&gt;</span>Responde, adulescens, quaeso, quid nomen tibist?<span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#pen"&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Peniculus<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;l&gt;</span>Etiam derides, quasi nomen non noveris?<span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#m2"&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Menaechmus<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;l&gt;</span>Non edepol ego te, quot sciam, umquam ante hunc diem<span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;l&gt;</span>Vidi neque novi; ...<span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/sp&gt;</span></div></div><div class="p"><span id="id2445038"/>If present, a <code>&lt;speaker&gt;</code> element may only appear as the first
+part of an <code>&lt;sp&gt;</code> element. The distinction between the
+<code>&lt;speaker&gt;</code> element and the <span class="att">who</span> attribute makes it
+possible to encode uniformly characters whose names are not indicated in
+a uniform fashion throughout the play, or characters who appear in
+disguise, as in the following examples:
+<div class="pre"> <span class="element">&lt;castList&gt;</span><br/>  <span class="element">&lt;castItem&gt;</span><br/>   <span class="element">&lt;role <span class="attribute">xml:id</span>="hh"&gt;</span>Henry Higgins<span class="element">&lt;/role&gt;</span><br/>  <span class="element">&lt;/castItem&gt;</span><br/> <span class="element">&lt;/castList&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#hh"&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>The Notetaker<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;p&gt;</span> ... <span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/sp&gt;</span></div></div><div class="p"><span id="id2445089"/>If the speaker attributions are completely regular (and may thus be
+reconstructed mechanically from the values given for the <span class="att">who</span>
+attribute), or are of no interest for the encoder of the text (as might
+be the case with editorially supplied attributions in older texts), then
+the <code>&lt;speaker&gt;</code> element need not be used; the former example above
+then might look like this:
+<div class="pre"> <span class="element">&lt;castList&gt;</span><br/>  <span class="element">&lt;castItem&gt;</span><br/>   <span class="element">&lt;role <span class="attribute">xml:id</span>="menaechmus"&gt;</span>Menaechmus<span class="element">&lt;/role&gt;</span><br/>  <span class="element">&lt;/castItem&gt;</span><br/>  <span class="element">&lt;castItem&gt;</span><br/>   <span class="element">&lt;role <span class="attribute">xml:id</span>="peniculus"&gt;</span>Peniculus<span class="element">&lt;/role&gt;</span><br/>  <span class="element">&lt;/castItem&gt;</span><br/> <span class="element">&lt;/castList&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#m2"&gt;</span><br/>  <span class="element">&lt;l&gt;</span>Responde, adulescens, quaeso, quid nomen tibist?<span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#pen"&gt;</span><br/>  <span class="element">&lt;l&gt;</span>Etiam derides, quasi nomen non noveris?<span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#m2"&gt;</span><br/>  <span class="element">&lt;l&gt;</span>Non edepol ego te, quot sciam, umquam ante hunc diem<span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;l&gt;</span>Vidi neque novi; ...<span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/sp&gt;</span></div></div><div class="p"><span id="id2445156"/>More than one identifier may be listed as value for the <span class="att">who</span>
+attribute if the speech is spoken by more than one person, as in the
+following example:
+<div class="pre"> <span class="element">&lt;stage&gt;</span>Nano and Castrone sing<span class="element">&lt;/stage&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#nan #cas"&gt;</span><br/>  <span class="element">&lt;l&gt;</span>Fools, they are the only nation<span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;l&gt;</span>Worth men's envy or admiration<span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/sp&gt;</span></div></div><p><span id="id2445187"/>The <code>&lt;sp&gt;</code> and <code>&lt;speaker&gt;</code> elements are both declared
+within the core module (see section <a class="link_ptr" href="CO.html#CODV" title="Passages of Verse or Drama">4.12  Passages of Verse or Drama</a>).
+	</p></div><div class="div3" id="DRSTA"><h4>7.2.3  Stage Directions</h4><div class="p"><span id="id2445216"/>Both between and within the speeches of a written performance text,
+it is normal practice to include a wide variety of descriptive
+directions to indicate non-verbal action.  The following elements are
+provided to represent these:
+<ul class="specList"><li><b>&lt;<a href="ref-stage.html">stage</a>&gt;</b> (stage direction) contains any kind of stage direction within a dramatic text or
+fragment.<table class="attList"><tr><td class="Attribute">type</td><td colspan="2">indicates the kind of stage direction.</td></tr></table></li><li><b>&lt;<a href="ref-move.html">move</a>&gt;</b> (Movement) marks the actual entrance or exit of one or more characters on stage.<table class="attList"><tr><td class="Attribute">type</td><td colspan="2">characterizes the movement, for example as an entrance or exit.</td></tr><tr><td class="Attribute">where</td><td colspan="2">specifies the direction of a stage movement.</td></tr><tr><td class="Attribute">perf</td><td colspan="2">identifies the performance or performances in which this movement
+		occurred as specified.</td></tr></table></li></ul></div><div class="p"><span id="id2445239"/>A satisfactory typology of stage directions is difficult to define.
+Certain basic types such as ‘entrance’, ‘exit’,
+‘setting’, ‘delivery’, are easily identified.  But the list is
+not a closed one, and it is not uncommon to mix types within a single
+direction.  No closed set of values for the <span class="att">type</span> attribute is
+therefore proposed at the present time, though some suggested values are
+indicated in the list below, which also indicates the range of
+possibilities.
+<div class="pre"> <span class="element">&lt;stage <span class="attribute">type</span>="setting"&gt;</span>The throne descends.<span class="element">&lt;/stage&gt;</span><br/> <span class="element">&lt;stage <span class="attribute">type</span>="setting"&gt;</span>Music<span class="element">&lt;/stage&gt;</span><br/> <span class="element">&lt;stage <span class="attribute">type</span>="entrance"&gt;</span>Enter Husband as being thrown off his horse.<span class="element">&lt;/stage&gt;</span><br/> <span class="element">&lt;stage <span class="attribute">type</span>="exit"&gt;</span>Exit pursued by a bear.<span class="element">&lt;/stage&gt;</span><br/> <span class="element">&lt;stage <span class="attribute">type</span>="business"&gt;</span>He quickly takes the stone out.<span class="element">&lt;/stage&gt;</span><br/> <span class="element">&lt;stage <span class="attribute">type</span>="delivery"&gt;</span>To Lussurioso.<span class="element">&lt;/stage&gt;</span><br/> <span class="element">&lt;stage <span class="attribute">type</span>="delivery"&gt;</span>Aside.<span class="element">&lt;/stage&gt;</span><br/> <span class="element">&lt;stage <span class="attribute">type</span>="delivery"&gt;</span>Not knowing what to say.<span class="element">&lt;/stage&gt;</span><br/> <span class="element">&lt;stage <span class="attribute">type</span>="costume"&gt;</span>Disguised as Ansaldo.<span class="element">&lt;/stage&gt;</span><br/> <span class="element">&lt;stage <span class="attribute">type</span>="location"&gt;</span>At a window.<span class="element">&lt;/stage&gt;</span><br/> <span class="element">&lt;stage <span class="attribute">type</span>="novelistic"&gt;</span>Having had enough, and embarrassed
+     for the family.<span class="element">&lt;/stage&gt;</span></div></div><div class="p"><span id="id2445336"/>Where possible, the values used for the <span class="att">type</span> attribute on
+<code>&lt;stage&gt;</code> elements should be defined within the <code>&lt;tagUsage&gt;</code>
+element of the TEI header (described in section <a class="link_ptr" href="HD.html#HD57" title="The Tagging Declaration">3.3.4  The Tagging Declaration</a>).
+For example:
+<div class="pre"> <span class="element">&lt;tagUsage <span class="attribute">gi</span>="stage"&gt;</span>This element is used for all stage directions,
+  editorial or authorial. The type= attribute on this element takes
+  one or more of the following values:
+  <span class="element">&lt;list <span class="attribute">type</span>="gloss"&gt;</span><br/>   <span class="element">&lt;label&gt;</span>setting<span class="element">&lt;/label&gt;</span><br/>   <span class="element">&lt;item&gt;</span>describes the set<span class="element">&lt;/item&gt;</span><br/>   <span class="element">&lt;label&gt;</span>blocking<span class="element">&lt;/label&gt;</span><br/>   <span class="element">&lt;item&gt;</span>describes movement across stage, position, etc.<span class="element">&lt;/item&gt;</span><br/>   <span class="element">&lt;label&gt;</span>business<span class="element">&lt;/label&gt;</span><br/>   <span class="element">&lt;item&gt;</span>describes movement other than blocking<span class="element">&lt;/item&gt;</span><br/>   <span class="element">&lt;label&gt;</span>delivery<span class="element">&lt;/label&gt;</span><br/>   <span class="element">&lt;item&gt;</span>describes how the line is said<span class="element">&lt;/item&gt;</span><br/>   <span class="element">&lt;label&gt;</span>motivation<span class="element">&lt;/label&gt;</span><br/>   <span class="element">&lt;item&gt;</span>describes character's emotional state or through line<span class="element">&lt;/item&gt;</span><br/>  <span class="element">&lt;/list&gt;</span><br/> <span class="element">&lt;/tagUsage&gt;</span></div></div><div class="p"><span id="id2445410"/>The <code>&lt;stage&gt;</code> element may appear both between and within
+<code>&lt;sp&gt;</code> elements.  It may contain a mixture of phrase level
+elements, possibly combined into paragraphs, as in the following
+example:
+<div class="pre"> <span class="element">&lt;div1 <span class="attribute">n</span>="1" <span class="attribute">type</span>="act"&gt;</span><br/>  <span class="element">&lt;stage <span class="attribute">type</span>="setting"&gt;</span><br/>   <span class="element">&lt;p&gt;</span>Scene. — A room furnished comfortably and
+tastefully but not extravagantly ...
+The floor is carpeted and a fire burns in the stove.
+It is winter.<span class="element">&lt;/p&gt;</span><br/>   <span class="element">&lt;p&gt;</span>A bell rings in the hall; shortly afterwards the
+door is heard to open. Enter NORA humming a tune ...<span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;/stage&gt;</span><br/>  <span class="element">&lt;sp&gt;</span><br/>   <span class="element">&lt;speaker&gt;</span>Nora<span class="element">&lt;/speaker&gt;</span><br/>   <span class="element">&lt;p&gt;</span>Hide the Christmas Tree carefully, Helen. Be sure the
+children do not see it till this evening, when it is
+dressed. <span class="element">&lt;stage <span class="attribute">type</span>="delivery"&gt;</span>To the PORTER taking
+out her purse<span class="element">&lt;/stage&gt;</span> How much?<span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;/div1&gt;</span></div></div><p><span id="id2445472"/>The <code>&lt;stage&gt;</code> element may also be used in non-theatrical
+texts, to mark sound effects or musical effects, etc., as further
+discussed in section <a class="link_ptr" href="DR.html#DROTH" title="Other Types of Performance Text">7.3  Other Types of Performance Text</a>.</p><p><span id="id2445487"/>The <code>&lt;move&gt;</code> element is intended to help overcome the fact that
+the stage directions of a printed text may often not provide full
+information about either the intended or the actual movement of actors
+etc. on stage.  It may be used to keep track of entrances and exits in
+detail, so as to know which characters are on stage at which time.  Its
+attributes permit a relatively formal specification for movements of
+characters, using user-defined codes to identify the characters involved
+(the <span class="att">who</span> attribute), the direction of the movement
+(<span class="att">type</span> attribute), and optionally which part of the stage is
+involved (<span class="att">where</span> attribute).  For stage-historical purposes, a
+<span class="att">perf</span> attribute is also provided; this allows the recording of
+different <code>&lt;move&gt;</code> elements 
+as taken in different performances of the same text.</p><div class="p"><span id="id2445525"/>The <code>&lt;move&gt;</code> element should be located at the position in the
+text where the move is presumed to take place.  This will often coincide
+with a stage direction, as in the following simple example:
+<div class="pre"> <span class="element">&lt;stage <span class="attribute">type</span>="entrance"&gt;</span><br/>  <span class="element">&lt;move <span class="attribute">who</span>="#b" <span class="attribute">type</span>="enter"/&gt;</span><br/>   Enter Bellafront mad.<span class="element">&lt;/stage&gt;</span></div></div><div class="p"><span id="id2445550"/>The <code>&lt;move&gt;</code> element can however appear independently of a stage
+direction, as in the following example:
+<div class="pre"> <span class="element">&lt;sp&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Gent.<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;p&gt;</span>Neither to you, nor any one; having no witness
+to confirm my speech. <span class="element">&lt;move <span class="attribute">who</span>="#lm" <span class="attribute">type</span>="enter" <span class="attribute">where</span>="C"/&gt;</span><br/>  Lo you! here she comes. This is her very guise; and,<br/>  upon my life, fast asleep.<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/sp&gt;</span></div></div><div class="p"><span id="id2445582"/>The <code>&lt;stage&gt;</code> element is defined in the core module (see
+section <a class="link_ptr" href="CO.html#CODV" title="Passages of Verse or Drama">4.12  Passages of Verse or Drama</a>).  The <code>&lt;move&gt;</code> element is defined as
+follows:
+<div class="specgrp"><span id="DDRSTA"/><b>Specification group 75: Stage directions</b><dl><dt>Element move</dt><dd><pre class="eg">
+move = element move { move.content, move.attributes }
+
+move.content = empty
+
+move.attributes =
+   att.ascribed.attributes,
+   attribute type { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> }?,
+   attribute where { list { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a>+ } }?,
+   attribute perf { list { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a>+ } }?</pre></dd></dl></div></div></div><div class="div3" id="DRPAL"><h4>7.2.4  Speech Contents</h4><div class="p"><span id="id2445932"/>The actual speeches of a dramatic text may be composed of running
+text, which must be formally organized into paragraphs, in the case of
+prose (see section <a class="link_ptr" href="CO.html#COPA" title="Paragraphs">4.1  Paragraphs</a>), verse lines or line groups in
+that of verse (see section <a class="link_ptr" href="CO.html#CODV" title="Passages of Verse or Drama">4.12  Passages of Verse or Drama</a>), or <code>&lt;seg&gt;</code>
+elements, in case of doubt as to whether the material should be treated
+as verse or prose.  The following elements, all of which are defined in
+the core, are available for marking units of prose or verse within
+speeches:
+<ul class="specList"><li><b>&lt;<a href="ref-p.html">p</a>&gt;</b> (paragraph) marks paragraphs in prose.</li><li><b>&lt;<a href="ref-lb.html">lb</a>&gt;</b> (line break) marks the start of a new (typographic) line in some
+edition or version of a text.<table class="attList"><tr><td class="Attribute">ed</td><td colspan="2">indicates the edition or version in which the line break is located
+at this point</td></tr></table></li><li><b>&lt;<a href="ref-l.html">l</a>&gt;</b> (verse line) contains a single, possibly incomplete, line of verse.<table class="attList"><tr><td class="Attribute">part</td><td colspan="2">specifies whether or not the line is metrically complete. </td></tr></table></li><li><b>&lt;<a href="ref-lg.html">lg</a>&gt;</b> (line group) contains a group of verse lines functioning as a formal unit,
+e.g. a stanza, refrain, verse paragraph, etc.</li><li><b>&lt;<a href="ref-seg.html">seg</a>&gt;</b> (arbitrary segment) contains any arbitrary phrase-level unit of text (including
+other seg elements).</li></ul></div><div class="p"><span id="id2445977"/>As members of the class <span class="ident-class">att.metrical</span>, the elements <code>&lt;l&gt;</code>
+and <code>&lt;lg&gt;</code> share the following attributes:
+<ul class="specList"><li><b><a href="ref-att.metrical.html">att.metrical</a></b> defines a set of attributes which certain elements may use to
+represent metrical information. <table class="attList"><tr><td class="Attribute">met</td><td colspan="2">contains a user-specified encoding for the conventional
+metrical structure of the element.</td></tr><tr><td class="Attribute">rhyme</td><td colspan="2">specifies the rhyme scheme applicable to a group of verse lines.</td></tr></table></li></ul></div><div class="p"><span id="id2446002"/>As a member of the class <span class="ident-class">att.divLike</span>, the element <code>&lt;lg&gt;</code>
+also bears the following attributes:
+<ul class="specList"><li><b><a href="ref-att.divLike.html">att.divLike</a></b> provides a set of attributes common to all elements which behave in the same way as divisions.<table class="attList"><tr><td class="Attribute">part</td><td colspan="2">specifies whether or not the division is fragmented by
+		some other structural element, for example a speech which is
+		divided between two or more verse stanzas.</td></tr><tr><td class="Attribute">type</td><td colspan="2">specifies a name conventionally used for this level of
+		subdivision, e.g. act, volume, book,
+		section, canto, etc.</td></tr></table></li></ul></div><p><span id="id2446024"/>In many texts, prose and verse may be inextricably mingled;
+particularly in earlier printed texts, prose may be printed as verse or
+verse as prose, or it may be impossible to distinguish the two.  In
+cases of doubt, an encoder may prefer to tag the dubious material
+consistently as verse, to tag it all as prose, to follow the typography
+of the source text, or to use the neutral <code>&lt;seg&gt;</code>
+element to contain the speech itself.  When this question arises, the
+<code>&lt;tagUsage&gt;</code> element in the <code>&lt;encodingDesc&gt;</code> element of the
+header should be used to record explicitly what policy has been adopted.</p><div class="p"><span id="id2446048"/>The <span class="att">part</span> attribute of the <code>&lt;l&gt;</code> and <code>&lt;lg&gt;</code>
+elements provides one simple way of indicating where the boundaries of a
+speech and of a verse line or line group do not coincide.  The encoder
+may simply indicate that a line or line group is metrically incomplete by
+specifying the value <span class="val">Y</span> or <span class="val">N</span>, as in the following example:
+<div class="pre"> <span class="element">&lt;sp <span class="attribute">who</span>="#Face"&gt;</span><br/>  <span class="element">&lt;l <span class="attribute">part</span>="Y"&gt;</span>Believ't, I will.<span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#Subtle"&gt;</span><br/>  <span class="element">&lt;l <span class="attribute">part</span>="Y"&gt;</span>Thy worst. I fart at thee.<span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#Doll"&gt;</span><br/>  <span class="element">&lt;l&gt;</span>Ha' you your wits? Why gentlemen! For love —<span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#Face"&gt;</span><br/>  <span class="element">&lt;l <span class="attribute">part</span>="Y"&gt;</span>Sirrah, I'll strip you—.<span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#Subtle"&gt;</span><br/>  <span class="element">&lt;l <span class="attribute">part</span>="Y"&gt;</span>What to do? Lick figs<span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;l <span class="attribute">part</span>="Y"&gt;</span>Out at my—<span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#Face"&gt;</span><br/>  <span class="element">&lt;l <span class="attribute">part</span>="Y"&gt;</span>Rogue, rogue, out of all your sleights.<span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/sp&gt;</span></div></div><div class="p"><span id="id2446155"/>Alternatively, where the fragments of the line or line group are
+consecutive in the text (though possibly interrupted by stage
+directions), the values <span class="val">I</span> (initial), <span class="val">M</span> (medial), and <span class="val">F</span> (final)
+may be used to indicate how metrical lines should be reconstituted:
+<div class="pre"> <span class="element">&lt;sp <span class="attribute">who</span>="#Face"&gt;</span><br/>  <span class="element">&lt;l <span class="attribute">part</span>="I"&gt;</span>Believ't, I will.<span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#Subtle"&gt;</span><br/>  <span class="element">&lt;l <span class="attribute">part</span>="F"&gt;</span>Thy worst. I fart at thee.<span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#Doll"&gt;</span><br/>  <span class="element">&lt;l&gt;</span>Ha' you your wits? Why gentlemen! For love —<span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#Face"&gt;</span><br/>  <span class="element">&lt;l <span class="attribute">part</span>="I"&gt;</span>Sirrah, I'll strip you—.<span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#Subtle"&gt;</span><br/>  <span class="element">&lt;l <span class="attribute">part</span>="M"&gt;</span>What to do? Lick figs<span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;l <span class="attribute">part</span>="I"&gt;</span>Out at my—<span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#Face"&gt;</span><br/>  <span class="element">&lt;l <span class="attribute">part</span>="F"&gt;</span>Rogue, rogue, out of all your sleights.<span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/sp&gt;</span></div></div><div class="p"><span id="id2446241"/>In dramatic texts, the <code>&lt;lg&gt;</code> or line group element is most
+often of use for the encoding of songs and other stanzaic material, as
+further discussed in the next section.  Line groups may be fragmented
+across speakers in the same way as individual lines, and the same set of
+attributes is available to record this fact.  In the following example,
+an <code>&lt;lg&gt;</code> element is used to represent one verse of a song, which is
+divided between several voices:
+<div class="pre"> <span class="element">&lt;stage <span class="attribute">type</span>="head"&gt;</span>Song — Sir Joseph<span class="element">&lt;/stage&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#jopo"&gt;</span><br/>  <span class="element">&lt;lg <span class="attribute">type</span>="song" <span class="attribute">part</span>="I"&gt;</span><br/>   <span class="element">&lt;l&gt;</span>I am the monarch of the sea,<span class="element">&lt;/l&gt;</span><br/>   <span class="element">&lt;l&gt;</span>The ruler of the Queen's Navee.<span class="element">&lt;/l&gt;</span><br/>   <span class="element">&lt;l&gt;</span>Whose praise Great Britain loudly chants.<span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;/lg&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#he"&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Cousin Hebe<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;lg <span class="attribute">type</span>="song" <span class="attribute">part</span>="M"&gt;</span><br/>   <span class="element">&lt;l&gt;</span>And we are his sisters and his cousins and his aunts!<span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;/lg&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#rel"&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Rel.<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;lg <span class="attribute">type</span>="song" <span class="attribute">part</span>="F"&gt;</span><br/>   <span class="element">&lt;l&gt;</span>And we are his sisters and his cousins and his aunts!<span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;/lg&gt;</span><br/> <span class="element">&lt;/sp&gt;</span></div>
+These elements are all defined in the core, and are thus available to
+every TEI document without formality.  A more detailed discussion of the
+encoding of verse is provided in chapter <a class="link_ptr" href="VE.html" title="9">6  Verse</a>.</div></div><div class="div3" id="DREMB"><h4>7.2.5  Embedded Structures</h4><p><span id="id2446365"/>Although primarily composed of speeches, performance texts often
+contain other structural units such as songs or strophes which are
+shared among different speakers.  More generally, complex nested
+structures of plays within plays, interpolated masques, or interludes
+are far from uncommon.  In more modern material, comparably complex
+structural devices such as flashback or nested playback are equally
+frequent.  In all kinds of performance material, it may be necessary to
+indicate several actions which are happening simultaneously.</p><div class="p"><span id="id2446378"/>A number of different devices are available within the TEI scheme to
+support these complexities in the general case.  Texts may be composite
+or self-nesting (see section <a class="link_ptr" href="DS.html#DSGRP" title="Groups of Texts">5.3  Groups of Texts</a>) and multiple
+hierarchies may be defined (see chapter <a class="link_ptr" href="USE.html#NH" title="31">24.6  Multiple Hierarchies</a>).  The TEI
+encoding scheme provides a variety of linking mechanisms, which may be
+used to indicate temporal alignment and aggregation of fragmented
+structures.  In this section we provide a few specific examples of the
+application of these techniques to performance texts:
+<ul><li>the use of embedded <code>&lt;text&gt;</code> elements</li><li>the use of the <span class="att">part</span> attribute on fragmentary
+<code>&lt;lg&gt;</code> elements</li><li>the use of the <span class="att">next</span> and <span class="att">prev</span> attributes on
+fragments of embedded structures to join them into a larger whole</li><li>the use of the <code>&lt;join&gt;</code> element to define a
+‘virtual element’ composed of the fragments
+indicated</li></ul>
+Full information and descriptions are provided in other chapters of this
+document, as indicated in the individual discussions.</div><div class="p"><span id="id2446453"/>When a song appears in its entirety within a single speech, it may
+be treated as an extended quotation or as an embedded <code>&lt;text&gt;</code>
+element, or both, according to the preference of the encoder. In the
+following example, an embedded song is treated as a self-standing text:
+<div class="pre"> <span class="element">&lt;sp&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Kelly<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;stage&gt;</span>(calmly).<span class="element">&lt;/stage&gt;</span><br/>  <span class="element">&lt;p&gt;</span>Aha, so you've bad minds along with th' love of gain.
+      You thry to pin on others th' dirty decorations that
+      may be hangin' on your own coats.
+   <span class="element">&lt;stage&gt;</span>(He points, one after the other at Conroy, Bull,
+          and Flagonson. Lilting):<span class="element">&lt;/stage&gt;</span><br/>   <span class="element">&lt;q&gt;</span><br/>    <span class="element">&lt;text&gt;</span><br/>     <span class="element">&lt;body&gt;</span><br/>      <span class="element">&lt;l&gt;</span>Who were you with last night?<span class="element">&lt;/l&gt;</span><br/>      <span class="element">&lt;l&gt;</span>Who were you with last night?<span class="element">&lt;/l&gt;</span><br/>      <span class="element">&lt;l&gt;</span>Will you tell your missus when you go home<span class="element">&lt;/l&gt;</span><br/>      <span class="element">&lt;l&gt;</span>Who you were with last night?<span class="element">&lt;/l&gt;</span><br/>     <span class="element">&lt;/body&gt;</span><br/>    <span class="element">&lt;/text&gt;</span><br/>   <span class="element">&lt;/q&gt;</span><br/>  <span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Flagonson<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;stage&gt;</span>(in anguished indignation).<span class="element">&lt;/stage&gt;</span><br/>  <span class="element">&lt;p&gt;</span>This is more than a hurt to us: this hits at the
+      decency of the whole nation!<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/sp&gt;</span></div>
+It might, however, also be treated simply as a quotation:
+<div class="pre"> <span class="element">&lt;sp&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Kelly<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;stage&gt;</span>(calmly).<span class="element">&lt;/stage&gt;</span><br/>  <span class="element">&lt;p&gt;</span>Aha, so you've bad minds along with ...
+   <span class="element">&lt;stage&gt;</span>(He points, one after the other at Conroy, Bull,
+          and Flagonson.  Lilting):<span class="element">&lt;/stage&gt;</span><br/>   <span class="element">&lt;q&gt;</span><br/>    <span class="element">&lt;l&gt;</span>Who were you with last night?<span class="element">&lt;/l&gt;</span><br/>    <span class="element">&lt;l&gt;</span>Who were you with last night?<span class="element">&lt;/l&gt;</span><br/>    <span class="element">&lt;l&gt;</span>Will you tell your missus when you go home<span class="element">&lt;/l&gt;</span><br/>    <span class="element">&lt;l&gt;</span>Who you were with last night?<span class="element">&lt;/l&gt;</span><br/>   <span class="element">&lt;/q&gt;</span><br/>  <span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Flagonson<span class="element">&lt;/speaker&gt;</span><br/> <span class="element">&lt;/sp&gt;</span></div></div><p><span id="id2446562"/>When an embedded structure extends across more than one <code>&lt;sp&gt;</code>
+element, each of its constituent parts must be regarded as a distinct
+fragment; the problem then facing the encoder is to reconstitute the
+interrupted whole in some way.</p><div class="p"><span id="id2446574"/>As already noted above, the <span class="att">part</span> attribute may be used to
+indicate that an <code>&lt;l&gt;</code> element contains a partial, not a complete,
+verse line.  The same attribute may be used on the <code>&lt;lg&gt;</code> element,
+to indicate that the line group is partial rather than complete, thus:
+<div class="pre"> <span class="element">&lt;sp&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Kelly<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;stage&gt;</span>(wheeling quietly in his semi-dance,
+          as he goes out):<span class="element">&lt;/stage&gt;</span><br/>  <span class="element">&lt;lg <span class="attribute">type</span>="stanza" <span class="attribute">part</span>="I"&gt;</span><br/>   <span class="element">&lt;l&gt;</span>Goodbye to holy souls left here,<span class="element">&lt;/l&gt;</span><br/>   <span class="element">&lt;l&gt;</span>Goodbye to man an' fairy;<span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;/lg&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Widda Machree<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;stage&gt;</span>(wheeling quietly in her semi-dance,
+          as she goes out):<span class="element">&lt;/stage&gt;</span><br/>  <span class="element">&lt;lg <span class="attribute">type</span>="stanza" <span class="attribute">part</span>="F"&gt;</span><br/>   <span class="element">&lt;l&gt;</span>Goodbye to all of Leicester Square,<span class="element">&lt;/l&gt;</span><br/>   <span class="element">&lt;l&gt;</span>An' the long way to Tipperary.<span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;/lg&gt;</span><br/> <span class="element">&lt;/sp&gt;</span></div></div><div class="p"><span id="id2446644"/>When the fragments of a song are separated by other intervening
+dialogue, or even when not, they may be linked together with the
+<span class="att">next</span> and <span class="att">prev</span> attributes defined in section
+<a class="link_ptr" href="SA.html#SAAG" title="Aggregation">11.7  Aggregation</a>.
+For example, the line groups making up Ophelia's song
+might be encoded as follows:
+<div class="pre"> <span class="element">&lt;div1 <span class="attribute">n</span>="4" <span class="attribute">type</span>="act"&gt;</span><br/>  <span class="element">&lt;div2 <span class="attribute">n</span>="5" <span class="attribute">type</span>="scene"&gt;</span><br/>   <span class="element">&lt;stage&gt;</span>Elsinore. A room in the Castle.<span class="element">&lt;/stage&gt;</span><br/>   <span class="element">&lt;stage <span class="attribute">type</span>="setting"&gt;</span>Enter Ophelia, distracted.<span class="element">&lt;/stage&gt;</span><br/>   <span class="element">&lt;sp <span class="attribute">who</span>="#oph"&gt;</span><br/>    <span class="element">&lt;speaker&gt;</span>Ophelia<span class="element">&lt;/speaker&gt;</span><br/>    <span class="element">&lt;p&gt;</span>Where is the beauteous Majesty of Denmark?<span class="element">&lt;/p&gt;</span><br/>   <span class="element">&lt;/sp&gt;</span><br/>   <span class="element">&lt;sp <span class="attribute">who</span>="#qu"&gt;</span><br/>    <span class="element">&lt;speaker&gt;</span>Queen<span class="element">&lt;/speaker&gt;</span><br/>    <span class="element">&lt;p&gt;</span>How now, Ophelia?<span class="element">&lt;/p&gt;</span><br/>   <span class="element">&lt;/sp&gt;</span><br/>   <span class="element">&lt;sp <span class="attribute">who</span>="#oph"&gt;</span><br/>    <span class="element">&lt;speaker&gt;</span>Ophelia<span class="element">&lt;/speaker&gt;</span><br/>    <span class="element">&lt;stage&gt;</span>Singing<span class="element">&lt;/stage&gt;</span><br/>    <span class="element">&lt;lg<br/>      <span class="attribute">next</span>="#Tl2"<br/>      <span class="attribute">xml:id</span>="Tl1"<br/>      <span class="attribute">type</span>="song"<br/>      <span class="attribute">part</span>="Y"&gt;</span><br/>     <span class="element">&lt;l&gt;</span>How should I your true-love know<span class="element">&lt;/l&gt;</span><br/>     <span class="element">&lt;l&gt;</span>From another one?<span class="element">&lt;/l&gt;</span><br/>     <span class="element">&lt;l&gt;</span>By his cockle hat and staff<span class="element">&lt;/l&gt;</span><br/>     <span class="element">&lt;l&gt;</span>And his sandal shoon.<span class="element">&lt;/l&gt;</span><br/>    <span class="element">&lt;/lg&gt;</span><br/>   <span class="element">&lt;/sp&gt;</span><br/>   <span class="element">&lt;sp <span class="attribute">who</span>="#qu"&gt;</span><br/>    <span class="element">&lt;speaker&gt;</span>Queen<span class="element">&lt;/speaker&gt;</span><br/>    <span class="element">&lt;p&gt;</span>Alas, sweet lady, what imports this song?<span class="element">&lt;/p&gt;</span><br/>   <span class="element">&lt;/sp&gt;</span><br/>   <span class="element">&lt;sp <span class="attribute">who</span>="#oph"&gt;</span><br/>    <span class="element">&lt;speaker&gt;</span>Ophelia<span class="element">&lt;/speaker&gt;</span><br/>    <span class="element">&lt;p&gt;</span>Say you? Nay, pray you mark.<span class="element">&lt;/p&gt;</span><br/>    <span class="element">&lt;stage&gt;</span>Sings<span class="element">&lt;/stage&gt;</span><br/>    <span class="element">&lt;lg<br/>      <span class="attribute">prev</span>="#Tl1"<br/>      <span class="attribute">xml:id</span>="Tl2"<br/>      <span class="attribute">type</span>="song"<br/>      <span class="attribute">part</span>="Y"&gt;</span><br/>     <span class="element">&lt;l&gt;</span>He is dead and gone, lady,<span class="element">&lt;/l&gt;</span><br/>     <span class="element">&lt;l&gt;</span>He is dead and gone;<span class="element">&lt;/l&gt;</span><br/>     <span class="element">&lt;l&gt;</span>At his head a grass-green turf,<span class="element">&lt;/l&gt;</span><br/>     <span class="element">&lt;l&gt;</span>At his heels a stone.<span class="element">&lt;/l&gt;</span><br/>    <span class="element">&lt;/lg&gt;</span><br/>    <span class="element">&lt;p&gt;</span>O, ho!<span class="element">&lt;/p&gt;</span><br/>   <span class="element">&lt;/sp&gt;</span><br/>  <span class="element">&lt;/div2&gt;</span><br/> <span class="element">&lt;/div1&gt;</span></div></div><div class="p"><span id="id2446816"/>The <span class="att">next</span> and <span class="att">prev</span> attributes are discussed in
+section <a class="link_ptr" href="SA.html#SAAG" title="Aggregation">11.7  Aggregation</a>: they form part of the module
+for alignment and linking, and are therefore not automatically available
+to dramatic texts. To enable this tag set as well as the base tag set
+for drama, the document type declaration might take the
+following form:
+<div class="pre">&lt;!DOCTYPE TEI PUBLIC "-//TEI P5//DTD Main Document Type//EN"
+                       "tei2.dtd" [
+  &lt;!ENTITY % TEI.XML     'INCLUDE'&gt;
+  &lt;!ENTITY % TEI.drama   'INCLUDE'&gt;
+  &lt;!ENTITY % TEI.linking 'INCLUDE'&gt;
+]&gt;</div>
+See chapter <a class="link_ptr" href="ST.html" title="3">2  The TEI infrastructure</a> for general discussion of the way in which
+TEI modules  are combined.</div><div class="p"><span id="id2446851"/>The fragments of Ophelia's song might also be linked together using
+the <code>&lt;join&gt;</code> mechanism described in section <a class="link_ptr" href="SA.html#SAAG" title="Aggregation">11.7  Aggregation</a>.
+The <code>&lt;join&gt;</code> element is specifically intended to encode the fact
+that several discontiguous elements of the text together form one
+‘virtual’ element.  Using this mechanism, the example
+might be encoded as follows:
+<div class="pre"> <span class="element">&lt;text&gt;</span><br/>  <span class="element">&lt;body&gt;</span><br/>   <span class="element">&lt;div1 <span class="attribute">n</span>="4" <span class="attribute">type</span>="act"&gt;</span><br/>    <span class="element">&lt;div2 <span class="attribute">n</span>="5" <span class="attribute">type</span>="scene"&gt;</span><br/>     <span class="element">&lt;stage <span class="attribute">type</span>="setting"&gt;</span>Elsinore. A room in the Castle.<span class="element">&lt;/stage&gt;</span><br/>     <span class="element">&lt;sp <span class="attribute">who</span>="#qu"&gt;</span><br/>      <span class="element">&lt;speaker&gt;</span>Queen<span class="element">&lt;/speaker&gt;</span><br/>      <span class="element">&lt;p&gt;</span>How now, Ophelia?<span class="element">&lt;/p&gt;</span><br/>     <span class="element">&lt;/sp&gt;</span><br/>     <span class="element">&lt;sp <span class="attribute">who</span>="#oph"&gt;</span><br/>      <span class="element">&lt;speaker&gt;</span>Ophelia<span class="element">&lt;/speaker&gt;</span><br/>      <span class="element">&lt;stage <span class="attribute">type</span>="delivery"&gt;</span>Singing<span class="element">&lt;/stage&gt;</span><br/>      <span class="element">&lt;lg <span class="attribute">xml:id</span>="TL1" <span class="attribute">type</span>="song" <span class="attribute">part</span>="Y"&gt;</span><br/>       <span class="element">&lt;l&gt;</span>How should I your true-love know<span class="element">&lt;/l&gt;</span><br/>       <span class="element">&lt;l&gt;</span>From another one?<span class="element">&lt;/l&gt;</span><br/>       <span class="element">&lt;l&gt;</span>By his cockle hat and staff<span class="element">&lt;/l&gt;</span><br/>       <span class="element">&lt;l&gt;</span>And his sandal shoon.<span class="element">&lt;/l&gt;</span><br/>      <span class="element">&lt;/lg&gt;</span><br/>     <span class="element">&lt;/sp&gt;</span><br/>     <span class="element">&lt;sp <span class="attribute">who</span>="#qu"&gt;</span><br/>      <span class="element">&lt;speaker&gt;</span>Queen<span class="element">&lt;/speaker&gt;</span><br/>      <span class="element">&lt;p&gt;</span>Alas, sweet lady, what imports this song?<span class="element">&lt;/p&gt;</span><br/>     <span class="element">&lt;/sp&gt;</span><br/>     <span class="element">&lt;sp <span class="attribute">who</span>="#oph"&gt;</span><br/>      <span class="element">&lt;speaker&gt;</span>Ophelia<span class="element">&lt;/speaker&gt;</span><br/>      <span class="element">&lt;p&gt;</span>Say you? Nay, pray you mark.<span class="element">&lt;/p&gt;</span><br/>      <span class="element">&lt;stage <span class="attribute">type</span>="delivery"&gt;</span>Sings<span class="element">&lt;/stage&gt;</span><br/>      <span class="element">&lt;lg <span class="attribute">xml:id</span>="TL2" <span class="attribute">type</span>="song" <span class="attribute">part</span>="Y"&gt;</span><br/>       <span class="element">&lt;l&gt;</span>He is dead and gone, lady,<span class="element">&lt;/l&gt;</span><br/>       <span class="element">&lt;l&gt;</span>He is dead and gone;<span class="element">&lt;/l&gt;</span><br/>       <span class="element">&lt;l&gt;</span>At his head a grass-green turf,<span class="element">&lt;/l&gt;</span><br/>       <span class="element">&lt;l&gt;</span>At his heels a stone.<span class="element">&lt;/l&gt;</span><br/>      <span class="element">&lt;/lg&gt;</span><br/>      <span class="element">&lt;p&gt;</span>O, ho!<span class="element">&lt;/p&gt;</span><br/>      <span class="element">&lt;join <span class="attribute">type</span>="lg" <span class="attribute">targets</span>="#TL1 #TL2"/&gt;</span><br/>     <span class="element">&lt;/sp&gt;</span><br/>    <span class="element">&lt;/div2&gt;</span><br/>   <span class="element">&lt;/div1&gt;</span><br/>  <span class="element">&lt;/body&gt;</span><br/> <span class="element">&lt;/text&gt;</span></div>
+The location of the <code>&lt;join&gt;</code> element is not significant; here it
+has been placed shortly after the conclusion of the song, in order to
+have it close to the fragments it unifies.</div><p><span id="id2447042"/>Like the <span class="att">next</span> and <span class="att">prev</span> attributes, the
+<code>&lt;join&gt;</code> element requires the additional module for linking, which
+is selected as shown above.</p></div><div class="div3" id="DRSIM"><h4>7.2.6  Simultaneous Action</h4><p><span id="id2447071"/>In printed or written versions of performance texts, a variety of
+techniques may be used to indicate the temporal alignment of speeches or
+actions.  Speeches may be printed vertically aligned on the page, or
+braced together; stage directions (e.g. ‘Speaking at the same
+time’) are also often used.  In operatic or musical works in
+particular, the need to indicate timing and alignment of individual
+parts of a song may lead to very complex layout.</p><div class="p"><span id="id2447086"/>One simple method of indicating the temporal alignment of speeches or
+actions is to use the <span class="att">corresp</span> attribute discussed in
+section <a class="link_ptr" href="SA.html#SACS" title="Correspondence and Alignment">11.4  Correspondence and Alignment</a>, as in the following example:
+<div class="pre"> <span class="element">&lt;sp <span class="attribute">who</span>="#dr-m"&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Mangan<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;stage <span class="attribute">type</span>="delivery"&gt;</span>wildly<span class="element">&lt;/stage&gt;</span><br/>  <span class="element">&lt;p&gt;</span>Look here: I'm going to take off all my clothes.<span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;stage <span class="attribute">type</span>="action"&gt;</span>he begins tearing off his coat.<span class="element">&lt;/stage&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">xml:id</span>="dr-s1" <span class="attribute">who</span>="#dr-lu"&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Lady Utterword<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;p&gt;</span>Mr Mangan!<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">xml:id</span>="dr-s2" <span class="attribute">who</span>="#dr-cs"&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Captain Shotover<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;p&gt;</span>Whats that?<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">xml:id</span>="dr-s3" <span class="attribute">who</span>="#dr-h"&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Hector<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;p&gt;</span>Ha! ha! Do. Do.<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">xml:id</span>="dr-s4" <span class="attribute">who</span>="#dr-e"&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Ellie<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;p&gt;</span>Please dont.<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;stage <span class="attribute">corresp</span>="#dr-s1 #dr-s2 #dr-s3 #dr-s4" <span class="attribute">xml:id</span>="dr-d1" <span class="attribute">type</span>="delivery"&gt;</span>in consternation<span class="element">&lt;/stage&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#dr-mh"&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Mrs. Hushabye<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;stage <span class="attribute">type</span>="action"&gt;</span>catching his arm and stopping him<span class="element">&lt;/stage&gt;</span><br/>  <span class="element">&lt;p&gt;</span>Alfred: for shame! Are you mad?<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/sp&gt;</span></div></div><p><span id="id2447224"/>In the original, the stage direction ‘in consternation’ is
+printed opposite a brace grouping all four speeches, indicating that all
+four characters speak at once, and that the stage direction applies to
+all of them. In the example, the <code>&lt;stage&gt;</code> element has been moved
+to an arbitrary place, and the four speeches with which it is to be
+associated are specified by identifier as the value of the
+<span class="att">corresp</span> attribute. This attribute, which is enabled by the
+linking module, provides the simplest way of indicating the temporal
+alignment of speeches or actions in a play.
+</p><p><span id="id2447248"/>More powerful and more precise mechanisms for temporal alignment are
+defined in chapter <a class="link_ptr" href="TS.html" title="11">8  Transcriptions of Speech</a>.  These would be appropriate for
+encodings the focus of which is on the actual performance of a text
+rather than its structure or formal properties.  The module described
+in that chapter includes a large number of other detailed proposals for
+the encoding of such features as voice quality, prosody, etc., which
+might be relevant to such a treatment of performance texts.
+</p></div></div><div class="div2" id="DROTH"><h3>7.3  Other Types of Performance Text</h3><p><span id="id2447276"/>Most of the elements and structures identified thus far are derived
+from traditional theatrical texts.  Although other performance texts,
+such as screenplays or radio scripts, have not been discussed
+specifically, they can be encoded using the elements and structures
+listed above.  Encoders may however find it convenient to use, as well,
+the additional specialized elements discussed in this section.  For
+scripts containing very detailed technical information, the
+<code>&lt;tech&gt;</code> element discussed in section <a class="link_ptr" href="DR.html#DRTEC" title="Technical Information">7.3.1  Technical Information</a> may also
+be useful.
+ </p><p><span id="id2447297"/>Like other texts, screenplays and television or radio scripts may
+be divided into text divisions marked with <code>&lt;div&gt;</code> or
+<code>&lt;div1&gt;</code>, etc.  Within units corresponding with the traditional
+‘act’ and ‘scene’, further subdivisions or sequences may be
+identified, composed of individual ‘shots’, each associated with
+a single camera angle and setting.  Shots and sequences should be
+encoded using an appropriate text-division element (i.e., a
+<code>&lt;div3&gt;</code> element if numbered division elements are in use and the
+next largest unit is a <code>&lt;div2&gt;</code>, or a <code>&lt;div&gt;</code> element if
+un-numbered divisions are in use) specifying <span class="val">sequence</span> or
+<span class="val">shot</span> as the value of the <span class="att">type</span> attribute, as
+appropriate.
+ </p><div class="p"><span id="id2447350"/>It is normal practice in screenplays and radio scripts to distinguish
+directions concerning camera angles, sound effects, etc., from other
+forms of stage direction.  Such texts also generally include far more
+detailed specifications of what the audience actually sees:
+descriptions of actions and background, etc.  Scripts derived from
+cinema and television productions may also include texts displayed as
+captions superimposed on the action.  All of these may be encoded using
+the general purpose <code>&lt;stage&gt;</code> element discussed in section <a class="link_ptr" href="DR.html#DRSTA" title="Stage Directions">7.2.3  Stage Directions</a>, and distinguished by means of its <span class="att">type</span>
+attribute.  Alternatively, or in addition, the following more specific
+elements may be used, where clear distinctions can be made:
+<ul class="specList"><li><b>&lt;<a href="ref-view.html">view</a>&gt;</b> describes the visual context of some part of a screen play in
+terms of what the spectator sees, generally independent of any
+dialogue.</li><li><b>&lt;<a href="ref-camera.html">camera</a>&gt;</b> describes a particular camera angle or viewpoint in a screen play.</li><li><b>&lt;<a href="ref-caption.html">caption</a>&gt;</b> contains the text of a caption or other text displayed as part of
+a film script or screenplay.</li><li><b>&lt;<a href="ref-sound.html">sound</a>&gt;</b> describes a sound effect or musical sequence specified within a
+screen play or radio script.<table class="attList"><tr><td class="Attribute">type</td><td colspan="2">categorizes the sound in some respect, e.g. as music, special
+effect, etc.</td></tr><tr><td class="Attribute">discrete</td><td colspan="2">indicates whether the sound overlaps the surrounding speeches
+or interrupts them.</td></tr></table></li></ul></div><div class="p"><span id="id2447396"/>Some examples of the use of these elements follow:
+<div class="pre"> <span class="element">&lt;camera&gt;</span>Angle on Olivia.<span class="element">&lt;/camera&gt;</span><br/> <span class="element">&lt;view&gt;</span>Ryan's wife, standing nervously alone on the sidelines,
+biting her lip. She's scared and she shows it.<span class="element">&lt;/view&gt;</span></div></div><div class="p"><span id="id2447412"/>Where particular words or phrases within a direction are emphasized
+(by change of typeface or use of capital letters), an appropriate
+phrase-level element may be used to indicate the fact, as in the
+following examples, where certain words in the original are given in
+small capitals:
+<div class="pre"> <span class="element">&lt;view&gt;</span>George glances at the window--and freezes.
+<span class="element">&lt;camera&gt;</span>New angle--shock cut<span class="element">&lt;/camera&gt;</span> Out the window<br/> the body of a dead man suddenly slams into<br/> <span class="element">&lt;hi&gt;</span>frame<span class="element">&lt;/hi&gt;</span>. He dangles grotesquely,<br/> held up by his coat caught on a protruding bolt.<br/> George gasps. The train <span class="element">&lt;hi&gt;</span>whistle<span class="element">&lt;/hi&gt;</span> screams.<span class="element">&lt;/view&gt;</span></div><div class="pre"> <span class="element">&lt;view&gt;</span>Ext. TV control van—Early morning.
+The <span class="element">&lt;name&gt;</span>T.V. announcer<span class="element">&lt;/name&gt;</span> from the Ryan interview<br/> stands near the Control Van, the lake in b.g.<span class="element">&lt;/view&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#announcer"&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>T.V. Announcer<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;p&gt;</span>Several years ago, Jack Ryan was a highly
+successful hydroplane racer ...<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/sp&gt;</span></div></div><div class="p"><span id="id2447471"/>All of these elements, like other stage directions, can appear both
+within and between speeches.
+<div class="pre"> <span class="element">&lt;sp&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>TV Announcer VO<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;p&gt;</span>Working with Ryan are his two coworkers—
+Strut Bowman, the mechanical engineer—
+<span class="element">&lt;view&gt;</span><br/>    <span class="element">&lt;camera&gt;</span>Angle on Strut<span class="element">&lt;/camera&gt;</span><br/>   standing in the tow boat, walkie-talkie in hand,<br/>   watching Ryan carefully.<span class="element">&lt;/view&gt;</span><br/>  —and Roger Dalton, a rocket<br/>  systems analyst, and one of the scientists<br/>  from the Jet Propulsion Lab ...<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/sp&gt;</span></div><div class="pre"> <span class="element">&lt;sp&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Benjy<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;p&gt;</span>Now to business.<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Ford and Zaphod<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;p&gt;</span>To business.<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sound&gt;</span>Glasses clink.<span class="element">&lt;/sound&gt;</span><br/> <span class="element">&lt;sp&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Benjy<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;p&gt;</span>I beg your pardon?<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Ford<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;p&gt;</span>I'm sorry, I thought you were proposing a toast.<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/sp&gt;</span></div><div class="pre"> <span class="element">&lt;camera&gt;</span>Zoom in to overlay showing some stock film
+  of hansom cabs galloping past.<span class="element">&lt;/camera&gt;</span><br/> <span class="element">&lt;caption&gt;</span>London, 1895.<span class="element">&lt;/caption&gt;</span><br/> <span class="element">&lt;caption&gt;</span>The residence of Mr Oscar Wilde.<span class="element">&lt;/caption&gt;</span><br/> <span class="element">&lt;sound&gt;</span>Suitably classy music starts.<span class="element">&lt;/sound&gt;</span><br/> <span class="element">&lt;view&gt;</span>Mix through to Wilde's drawing room. A crowd of suitably
+  dressed folk are engaged in typically brilliant conversation,
+  laughing affectedly and drinking champagne.<span class="element">&lt;/view&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#tj"&gt;</span><br/>  <span class="element">&lt;speaker&gt;</span>Prince of Wales<span class="element">&lt;/speaker&gt;</span><br/>  <span class="element">&lt;p&gt;</span>My congratulations, Wilde. Your latest play is a great success.<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/sp&gt;</span></div></div><div class="div3" id="DRTEC"><h4>7.3.1  Technical Information</h4><div class="p"><span id="id2447604"/>Traditional stage scripts may contain additional technical
+information about such production-related factors as lighting,
+‘blocking’ (that is, detailed notes on actors'
+movements), or props required at particular points. More technical
+information about intended production effects may also appear in
+published versions of screenplays or movie scripts. Where these are
+presented simply as marginal notes, they may be encoded using the
+general-purpose <code>&lt;note&gt;</code> element defined in section <a class="link_ptr" href="CO.html#CONO" title="Notes, Annotation, and Indexing">4.8  Notes, Annotation, and Indexing</a>.
+Alternatively, they may be formally distinguished from
+other stage directions by using the specialized <code>&lt;tech&gt;</code> element:
+<ul class="specList"><li><b>&lt;<a href="ref-tech.html">tech</a>&gt;</b> (Technical stage direction) describes a special-purpose stage direction that is not
+meant for the actors.<table class="attList"><tr><td class="Attribute">type</td><td colspan="2">categorizes the technical stage direction.</td></tr><tr><td class="Attribute">perf</td><td colspan="2">identifies the performance or performances to which this
+technical direction applies.</td></tr></table></li></ul></div><p><span id="id2447641"/>Like stage directions, <code>&lt;tech&gt;</code> elements can appear anywhere
+within a speech or between speeches.
+ </p><div class="p"><span id="id2447650"/>The elements discussed in the section are formally defined as
+follows:
+<div class="specgrp"><span id="DDROTH"/><b>Specification group 76: Screenplays and other technical matters</b><dl><dt>Element view</dt><dd><pre class="eg">
+view = element view { view.content }
+
+view.content = <a class="link_odd" href="ref-macro.specialPara.html">macro.specialPara</a></pre></dd><dt>Element camera</dt><dd><pre class="eg">
+camera = element camera { camera.content, camera.attributes }
+
+camera.content = <a class="link_odd" href="ref-macro.paraContent.html">macro.paraContent</a>
+
+camera.attributes = att.typed.attributes</pre></dd><dt>Element sound</dt><dd><pre class="eg">
+sound = element sound { sound.content, sound.attributes }
+
+sound.content = <a class="link_odd" href="ref-macro.paraContent.html">macro.paraContent</a>
+
+sound.attributes =
+   attribute type { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> }?,
+   attribute discrete { "true" | "false" | "unknown" }?</pre></dd><dt>Element caption</dt><dd><pre class="eg">
+caption = element caption { caption.content }
+
+caption.content = <a class="link_odd" href="ref-macro.paraContent.html">macro.paraContent</a></pre></dd><dt>Element tech</dt><dd><pre class="eg">
+tech = element tech { tech.content, tech.attributes }
+
+tech.content = <a class="link_odd" href="ref-macro.paraContent.html">macro.paraContent</a>
+
+tech.attributes =
+   attribute type { "light" | "sound" | "prop" | "block" }?,
+   attribute perf { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> }?</pre></dd></dl></div></div></div></div><p class="left"><i> Up: </i><a class="navigation" href="index.html">Contents</a><i> Previous: </i><a class="navigation" href="VE.html">6  Verse</a><i> Next: </i><a class="navigation" href="TS.html">8  Transcriptions of Speech</a></p><div class="notes"><div class="noteHeading">Notes</div></div><div class="stdfooter"><hr/><div class="footer"><a class="plain" href="http://www.tei-c.org/Consortium/">TEI Consortium</a> | <a class="plain" href="index.html">TEI P5</a> | <a class="plain" href="http://www.tei-c.org/Consortium/contact.xml">Feedback</a></div><hr/><address> edited by C.M. Sperberg-McQueen and
+	Lou Burnard.
+      Date: 2007<br/>Copyright TEI Consortium 2007<!--
+	  Generated  using an XSLT version 1.0 stylesheet
+	  based on http://www.tei-c.org/Stylesheets/teic/tei.xsl
+	  processed using libxslt
+	  on 2007-03-13T16:02:59Z--></address></div></div></div></div></body></html>

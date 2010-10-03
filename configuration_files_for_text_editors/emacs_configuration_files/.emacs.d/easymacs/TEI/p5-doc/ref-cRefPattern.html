@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;cRefPattern&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;cRefPattern&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;cRefPattern&gt;</h1></div><div><span id="cRefPattern"/><table border="1" class="wovenodd"><tr><td class="elementSpec">cRefPattern</td><td colspan="2" class="wovenodd-col2">(defines how to convert a canonical reference into a URI) specifies an expression and replacement pattern for
+  tranforming a canonical reference into a URI</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element cRefPattern
+{
+   att.global.attributes,
+   attribute matchPattern { <a class="link_odd" href="ref-data.pattern.html">data.pattern</a> },
+   attribute replacementPattern { text },
+   <a class="link_odd" href="ref-model.pLike.html">model.pLike</a>*
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>In addition to global attributes<table><tr><td class="attDef">matchPattern</td><td colspan="2">specifies a regular expression against which the values of
+      cRef attributes can be matched.</td></tr><tr><td/><td><span class="label">Status: </span><b>Required</b></td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.pattern.html">data.pattern</a></code></td></tr><tr><td/><td><span class="label">Values: </span>must be a regular expression according to the <a class="link_ref" href="http://www.w3.org/TR/xmlschema-2/#regexs" title="W3C XML Schema Language">W3C XML Schema
+      Language</a></td></tr><tr><td/><td><p><span id="id2385861"/>Parenthesised groups are used not only for establishing
+        order of precedence and atoms for quantification, but also for
+        creating subpatterns to be referenced by the <span class="att">pat</span>
+        attribute.</p></td></tr><tr><td class="attDef">replacementPattern</td><td colspan="2">specifies a replacement pattern
+      which, once subpattern substitution has been performed, provides
+      a URI.</td></tr><tr><td/><td><span class="label">Status: </span><b>Required</b></td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+text</code></td></tr><tr><td/><td><span class="label">Values: </span>Should be the skeleton of a relative or absolute URI,
+      with references to groups in the <span class="att">matchPattern</span>.</td></tr><tr><td/><td><p><span id="id2385947"/>The strings ‘$1’ through ‘$9’ are references to
+	the corresponding group in the regular expression specified
+	by <span class="att">re</span> (counting open parenthesis, left to right).
+	Processors are expected to replace them with whatever matched
+	the corresponding group in the regular expression.</p><p><span id="id2385965"/>If a digit preceded by a dollar sign is needed in the
+	actual replacement pattern (as opposed to being used as a back
+	reference), the dollar sign must be written as
+	<tt>%24</tt>.</p></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;cRefPattern<br/>   <span class="attribute">matchPattern</span>="([1-9A-Za-z]+)\s+([0-9]+):([0-9]+)"<br/>   <span class="attribute">replacementPattern</span>="#xpath(//div[@type='book'][@n='$1']/div[@type='chap'][@n='$2']/div[@type='verse'][@n='$3'])"/&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p><span id="id2386034"/>The result of the substitution may be either an absolute or a
+    relative URI reference. In the latter case it is combined with the
+    value of <span class="att">xml:base</span> in force at the place where the
+    <span class="att">cRef</span> attribute occurs to form an absolute URI in the
+    usual manner as prescribed by <a class="link_ref" href="http://www.w3.org/TR/xmlbase/" title="XML Base">XML Base</a>.</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="HD.html#HD54M" title="Milestone Method">3.3.5.3  Milestone Method</a></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="HD.html#HD54" title="The Reference System Declaration">3.3.5  The Reference System Declaration</a></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="HD.html#HD54S" title="Search-and-Replace Method">3.3.5.2  Search-and-Replace Method</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">header</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

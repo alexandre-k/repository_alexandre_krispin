@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><!--THIS FILE IS GENERATED FROM AN XML MASTER. DO NOT EDIT (4)-->
+<head><title> TEI P5: Guidelines for Electronic Text Encoding and Interchange: 22  Feature System Declaration</title><link href="/favicon.ico" rel="icon" type="image/x-icon"/><link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/><meta name="author" content="edited by C.M. Sperberg-McQueen and&#10;&#9;Lou Burnard"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="TEI P5: Guidelines for Electronic Text Encoding and Interchange: 22  Feature System Declaration"/><meta name="DC.Type" content="Text"/><meta name="DC.Format" content="application/xhtml+xml"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/><link href="guidelines.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body onload="startUp()"><div id="hdr"><h2 class="subtitle">Feature System Declaration</h2><h1 class="title">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h1></div><div id="accessibility"><span class="tocontent"><a href="?style=text">Text only</a>
+      | <a class="skiplinks" href="#rh-column" title="Go to main page content">Skip links</a></span></div><div id="hdr2"><!--no nav --></div><div id="hdr3"><a href="#rh-column" title="Go to main page content" class="skiplinks">Skip links</a><a class="hide">|</a><div class="breadcrumb"><ul class="breadcrumb"><li class="breadcrumb-first"><a class="breadcrumb" href="index.html">TEI P5 Guidelines</a></li><li class="breadcrumb"><a class="breadcrumb" href="/"></a></li></ul></div><a class="hide">|</a><a class="bannerright" href="http://www.tei-c.org/Consortium/" title="Go to home page">TEI Consortium</a></div><div class="column-wrapper"><div id="lh-col"><div id="lh-col-top"><!--top of left-hand column--></div><div id="lh-col-bottom"><!--bottom of left-hand column--><div class="tocFront"><div class="tocContainer"><div class="toclist0"><a class="toclist" href="FM1.html"> Introductory Note</a>
+</div><div class="toclist0"><a class="toclist" href="AB.html"> About These Guidelines</a>
+</div><div class="toclist0"><a class="toclist" href="SG.html"> A Gentle Introduction to XML</a>
+</div></div></div><div class="tocBody"><!--start TOC--><div class="tocContainer"><!--TOC components--><div class="toclist0"><a class="toclist" href="CH.html">1  Languages and Character Sets</a>
+</div><div class="toclist0"><a class="toclist" href="ST.html">2  The TEI infrastructure</a>
+</div><div class="toclist0"><a class="toclist" href="HD.html">3  The TEI Header</a>
+</div><div class="toclist0"><a class="toclist" href="CO.html">4  Elements Available in All TEI Documents</a>
+</div><div class="toclist0"><a class="toclist" href="DS.html">5  Default Text Structure</a>
+</div><div class="toclist0"><a class="toclist" href="VE.html">6  Verse</a>
+</div><div class="toclist0"><a class="toclist" href="DR.html">7  Performance Texts</a>
+</div><div class="toclist0"><a class="toclist" href="TS.html">8  Transcriptions of Speech</a>
+</div><div class="toclist0"><a class="toclist" href="DI.html">9  Print Dictionaries</a>
+</div><div class="toclist0"><a class="toclist" href="MS.html">10  Manuscript Description</a>
+</div><div class="toclist0"><a class="toclist" href="SA.html">11  Linking, Segmentation, and Alignment</a>
+</div><div class="toclist0"><a class="toclist" href="AI.html">12  Simple Analytic Mechanisms</a>
+</div><div class="toclist0"><a class="toclist" href="FS.html">13  Feature Structures</a>
+</div><div class="toclist0"><a class="toclist" href="CE.html">14  Certainty and Responsibility</a>
+</div><div class="toclist0"><a class="toclist" href="PH.html">15  Transcription of Primary Sources</a>
+</div><div class="toclist0"><a class="toclist" href="TC.html">16  Critical Apparatus</a>
+</div><div class="toclist0"><a class="toclist" href="ND.html">17  Names and Dates</a>
+</div><div class="toclist0"><a class="toclist" href="GD.html">18  Graphs, Networks, and Trees</a>
+</div><div class="toclist0"><a class="toclist" href="FT.html">19  Tables, Formulae, and Graphics</a>
+</div><div class="toclist0"><a class="toclist" href="CC.html">20  Language Corpora</a>
+</div><div class="toclist0"><a class="toclist" href="WD.html">21  Representation of non-standard characters and glyphs</a>
+</div><div class="toclist0"><span class="toclist-this">22  Feature System Declaration</span>
+<div class="toclist1"><a class="toclist" href="FD.html#FDLK">22.1  Linking a TEI Text to Feature System Declarations</a>
+</div><div class="toclist1"><a class="toclist" href="FD.html#FDOV">22.2  The Overall Structure of a Feature System Declaration</a>
+</div><div class="toclist1"><a class="toclist" href="FD.html#FDFD">22.3  Feature Declarations</a>
+</div><div class="toclist1"><a class="toclist" href="FD.html#FDFS">22.4  Feature Structure Constraints</a>
+</div><div class="toclist1"><a class="toclist" href="FD.html#FDEG">22.5  A Complete Example</a>
+</div></div><div class="toclist0"><a class="toclist" href="TD.html">23  Documentation Elements</a>
+</div><div class="toclist0"><a class="toclist" href="USE.html">24  Using The TEI</a>
+</div></div></div><div class="tocBack"><div class="tocContainer"><div class="toclist0"><a class="toclist" href="REFCLA.html">Appendix A  Classes</a>
+</div><div class="toclist0"><a class="toclist" href="REFTAG.html">Appendix B  Elements</a>
+</div><div class="toclist0"><a class="toclist" href="REFENT.html">Appendix C  Macros</a>
+</div><div class="toclist0"><a class="toclist" href="BIB.html">Appendix D  Bibliography</a>
+</div><div class="toclist0"><a class="toclist" href="PARTIND.html">Appendix E  Index</a>
+</div><div class="toclist0"><a class="toclist" href="PREFS.html">Appendix F  Prefatory Notes</a>
+</div><div class="toclist0"><a class="toclist" href="COL.html">Appendix G  Colophon</a>
+</div></div></div></div></div><div id="rh-col"><a id="rh-column"/><div id="rh-col-top"><!--top of right-hand column--></div><div id="rh-col-bottom"><!--bottom of right-hand column--><h2>22  Feature System Declaration</h2><div class="p"><span id="id2563087"/>The Feature System Declaration (FSD) is intended for use in
+conjunction with a TEI-conforming text that makes use of <code>&lt;fs&gt;</code>
+(that is, feature structure) elements.
+The FSD serves three purposes:
+<ul><li>It provides a mechanism by which the encoder can list all of the
+feature names and feature values and give a prose description as to what
+each represents.</li><li>It provides a mechanism by which the encoder can define
+constraints on what it means to be a well-formed feature structure.
+These constraints may involve constraints on the range of a feature
+value, constraints on what features are valid within certain types of
+feature structures, or constraints that prevent the co-occurrence of
+certain feature-value pairs.</li><li>It provides a mechanism by which the encoder can define the
+intended interpretation of underspecified feature structures.  This
+involves defining default values (whether literal or computed) for
+missing features.</li></ul></div><p><span id="id2563124"/>The scheme described in this chapter may be used to document any 
+feature structure system, but is primarily intended for use with the 
+feature structure representation defined by these
+Guidelines both in earlier versions (P3 or P4), and in the present
+draft in chapter <a class="link_ptr" href="FS.html" title="16">13  Feature Structures</a>, which is also a candidate
+for international standardization as ISO DIS 24610 (part one). Part two of
+that standard, which will address validation mechanisms such as
+that described in this chapter, is currently in preparation by a
+joint ISO/TEI Working Group reporting to ISO TC 37/SC4. </p><p><span id="id2563142"/>As a component of an interchange standard for encoded text, the FSD
+serves an important function in documenting precisely what the encoder
+intended by the system of feature structure markup used in the encoded
+text.  As application software is developed which makes use of encoded
+texts, the FSD will also become an important resource that will allow
+software to validate the feature structure markup in a text and to infer
+the full interpretation of underspecified feature structures.</p><p><span id="id2563154"/>This chapter begins by describing how the encoded text uses header
+information to make links to any associated FSDs.  The second, third, and
+fourth sections describe the overall structure of an FSD and give
+details of how to encode its parts.  The final section offers a full
+example.<a class="notelink" href="#Note145"><sup>145</sup></a></p><div class="div2" id="FDLK"><h3>22.1  Linking a TEI Text to Feature System Declarations</h3><p><span id="id2563194"/>In order for application software to use feature system
+declarations to aid in the automatic interpretation of encoded texts,
+or even for human readers to find the appropriate declarations which
+document the feature system used in markup, there must be a formal
+link from the encoded texts to the declarations. However, the
+schema  declares the syntax for the Feature System itself
+should  be kept distinct from the feature structure schema, which is an
+application of that system.</p><div class="p"><span id="id2563211"/>The association between an FSD and a document using the feature
+structures it declares is made by means of a link from a special
+purpose element in the TEI Header,  as mentioned in
+section <a class="link_ptr" href="HD.html#HDFSD" title="The Feature System Declaration">3.3.7  The Feature System Declaration</a>.  Within the <code>&lt;encodingDesc&gt;</code>
+element of such a document's <code>&lt;teiHeader&gt;</code>, a special
+<code>&lt;fsdDecl&gt;</code> element may be used for each distinct feature
+structure type, as follows:
+<ul class="specList"><li><b>&lt;<a href="ref-fsdDecl.html">fsdDecl</a>&gt;</b> (FSD (feature-system declaration) declaration) identifies the feature system declaration which contains
+definitions for a particular type of feature structure.</li></ul>
+Note that one <code>&lt;fsdDecl&gt;</code> element must be specified for each
+distinct type of feature structure used in the markup.  The
+<span class="att">url</span> attribute provides a link to  the  entity
+containing the actual declaration for that type of feature structure.</div><div class="p"><span id="id2563278"/>There may be multiple <code>&lt;fsdDecl&gt;</code> elements for a given FSD;
+one for each type of feature structure it defines.  For instance, in
+the following example, the file <span class="ident-file">Lexicon.fsd</span> contains an FSD that contains
+definitions of feature structures for lexical entries (<span class="tag">&lt;fs
+type="entry"&gt;</span>) and lexical subentries (<span class="tag">&lt;fs
+type="subentry"&gt;</span>). The file <span class="ident-file">Gazdar.fsd</span> contains another FSD which contains
+definition of a feature structure called <strong>GPSG</strong>:
+<div class="pre"> <span class="element">&lt;TEI&gt;</span><br/>  <span class="element">&lt;teiHeader&gt;</span><br/>   <span class="element">&lt;fileDesc&gt;</span><br/>&lt;!-- ... --&gt;<br/>   <span class="element">&lt;/fileDesc&gt;</span><br/>   <span class="element">&lt;encodingDesc&gt;</span><br/>&lt;!-- ... --&gt;<br/>    <span class="element">&lt;fsdDecl <span class="attribute">type</span>="GPSG" <span class="attribute">url</span>="Gazdar.fsd"/&gt;</span><br/>    <span class="element">&lt;fsdDecl <span class="attribute">type</span>="entry" <span class="attribute">url</span>="Lexicon.fsd"/&gt;</span><br/>    <span class="element">&lt;fsdDecl <span class="attribute">type</span>="subentry" <span class="attribute">url</span>="Lexicon.fsd"/&gt;</span><br/>&lt;!-- ... --&gt;<br/>   <span class="element">&lt;/encodingDesc&gt;</span><br/>  <span class="element">&lt;/teiHeader&gt;</span><br/>&lt;!-- The text goes here --&gt;<br/> <span class="element">&lt;/TEI&gt;</span></div>
+As this example shows, a <code>&lt;fsdDecl&gt;</code> is given within the
+<code>&lt;encodingDesc&gt;</code> for each distinct value used as the
+<span class="att">type</span> of the <code>&lt;fs&gt;</code> elements in the document itself. In
+this case, for example, the feature system declaration used by feature
+structures of types <span class="val">entry</span> and <span class="val">subentry</span> is to
+be found in the entity at the URL <strong>Lexicon.fsd</strong>.
+</div><p><span id="id2563396"/>The current recommendations provide no way of enforcing uniqueness
+of the <span class="att">type</span> values for the <code>&lt;fsdDecl&gt;</code> element, nor of
+requiring that every <span class="att">type</span> value specified on a <code>&lt;fs&gt;</code>
+element be also declared on an <code>&lt;fsdDecl&gt;</code> element. Encoders
+requiring such constraints (which might have some obvious utility in
+assisting the consistency and accuracy of tagging) are recommended to
+develop tools to enforce them, using such mechanisms as Schematron
+assertions. </p><div class="p"><span id="id2563425"/>The module for feature system declarations is contained in the file
+<span class="ident-file">declarefs.dtd</span> or <span class="ident-file">declarefs.rng</span>. The former has the public
+identifier <span class="ident-fpi">-//TEI P5//DTD Auxiliary Document Type:
+Feature System Declaration//EN</span>. This module makes available
+the following elements:
+
+<div><hr/><strong>Module</strong> <em>declarefs</em>: Feature system declarations<ul><li>Elements defined: <a class="link_odd" href="ref-teifsd.html">teifsd</a> <a class="link_odd" href="ref-fsDecl.html">fsDecl</a> <a class="link_odd" href="ref-fsDescr.html">fsDescr</a> <a class="link_odd" href="ref-fDecl.html">fDecl</a> <a class="link_odd" href="ref-fDescr.html">fDescr</a> <a class="link_odd" href="ref-vRange.html">vRange</a> <a class="link_odd" href="ref-vDefault.html">vDefault</a> <a class="link_odd" href="ref-if.html">if</a> <a class="link_odd" href="ref-then.html">then</a> <a class="link_odd" href="ref-fsConstraints.html">fsConstraints</a> <a class="link_odd" href="ref-cond.html">cond</a> <a class="link_odd" href="ref-bicond.html">bicond</a> <a class="link_odd" href="ref-iff.html">iff</a> </li></ul><hr/></div>
+
+This module has no particular dependencies on any other TEI module;
+for most practical purposes, however, it should be used in conjunction
+with the standard tei, header, and core modules, as well as the iso-fs
+module discussed in chapter <a class="link_ptr" href="FS.html" title="16">13  Feature Structures</a>. The selection and
+combination of modules to form a TEI schema is described in <a class="link_ptr" href="ST.html#STIN" title="Defining a TEI schema">2.2  Defining a TEI schema</a>.</div><div class="p"><span id="id2563481"/>The module is organized as follows:
+<div><a href="#DFDFSD2">« <span class="label">include 149: Feature System Declaration</span></a> » </div><div><a href="#DFDX">« <span class="label">include 150: Feature definitions</span></a> » </div><div><a href="#DFD2">« <span class="label">include 151: Feature structure constraints</span></a> » </div></div></div><div class="div2" id="FDOV"><h3>22.2  The Overall Structure of a Feature System Declaration</h3><div class="p"><span id="id2563512"/>A feature system declaration is encoded as a document of type
+<code>&lt;teifsd&gt;</code>.  It has two parts:  an obligatory header (which
+provides bibliographic information for the file) and a set of feature
+structure declarations (each of which defines one type of feature
+structure).  Each feature structure declaration in turn has three parts:
+an optional description (which gives a prose comment on what that type
+of feature structure encodes), an obligatory set of feature declarations
+(which specify range constraints and default values for the features in
+that type of structure), and optional feature structure constraints
+(which specify co-occurrence restrictions on feature values).  The
+header is encoded as a <code>&lt;teiHeader&gt;</code>, just as for any TEI
+document; see chapter <a class="link_ptr" href="HD.html" title="5">3  The TEI Header</a>.  The other components listed
+above are unique to feature system declarations.  Thus, the following
+new elements are involved:
+<ul class="specList"><li><b>&lt;<a href="ref-teifsd.html">teifsd</a>&gt;</b> (feature system declaration) contains a feature system declaration.</li><li><b>&lt;<a href="ref-fsDecl.html">fsDecl</a>&gt;</b> (feature structure declaration) declares one type of feature structure.</li><li><b>&lt;<a href="ref-fsDescr.html">fsDescr</a>&gt;</b> (feature system description (in FSD)) describes in prose what is represented by the type of feature
+structure declared in the enclosing fsDecl.</li><li><b>&lt;<a href="ref-fDecl.html">fDecl</a>&gt;</b> (feature declaration) declares a single feature, specifying its name, organization,
+range of allowed values, and optionally its default value.</li><li><b>&lt;<a href="ref-fsConstraints.html">fsConstraints</a>&gt;</b> (feature-structure constraints) specifies constraints on the content of well formed feature
+structures.</li></ul></div><p><span id="id2563566"/>Feature declarations and feature structure constraints are described
+in the next two sections of this chapter.  Note that the specification
+of similar <code>&lt;fsDecl&gt;</code> elements can be simplified by devising an
+inheritance hierarchy for the feature structure types.  Each
+<code>&lt;fsDecl&gt;</code> may name a <span class="att">baseType</span> from which it inherits
+feature declarations and constraints.  For instance, suppose that
+<span class="tag">&lt;fsDecl type="Basic"&gt;</span> contains <span class="tag">&lt;fDecl name="One"&gt;</span> and
+<span class="tag">&lt;fDecl name="Two"&gt;</span>, and that <span class="tag">&lt;fsDecl type="Derived"
+baseType="Basic"&gt;</span> contains just <span class="tag">&lt;fDecl name="Three"&gt;</span>.  Then
+any instance of <span class="tag">&lt;fs type="Derived"&gt;</span> may include all three
+features.  This is because <span class="tag">&lt;fsDecl type="Derived"&gt;</span> inherits the
+two feature declarations from <span class="tag">&lt;fsDecl type="Basic"&gt;</span> when it
+specifies a <span class="att">baseType</span> of <span class="val">Basic</span>.</p><div class="p"><span id="id2563628"/>The following sample shows the overall structure of a complete FSD:
+ <div class="pre"> <span class="element">&lt;teifsd&gt;</span><br/>  <span class="element">&lt;teiHeader&gt;</span><br/>&lt;!-- The header is as for any TEI document --&gt;<br/>  <span class="element">&lt;/teiHeader&gt;</span><br/>  <span class="element">&lt;fsDecl <span class="attribute">type</span>="SomeName"&gt;</span><br/>   <span class="element">&lt;fsDescr&gt;</span>Describes what this type of fs represents<span class="element">&lt;/fsDescr&gt;</span><br/>   <span class="element">&lt;fDecl <span class="attribute">name</span>="featureOne"&gt;</span><br/>&lt;!-- The declaration for featureOne --&gt;<br/>   <span class="element">&lt;/fDecl&gt;</span><br/>   <span class="element">&lt;fDecl <span class="attribute">name</span>="featureTwo"&gt;</span><br/>&lt;!-- The declaration for featureTwo --&gt;<br/>   <span class="element">&lt;/fDecl&gt;</span><br/>   <span class="element">&lt;fsConstraints&gt;</span><br/>&lt;!-- The feature structure constraints go here --&gt;<br/>   <span class="element">&lt;/fsConstraints&gt;</span><br/>  <span class="element">&lt;/fsDecl&gt;</span><br/>  <span class="element">&lt;fsDecl <span class="attribute">type</span>="AnotherType"&gt;</span><br/>&lt;!-- Declare another type of feature structure --&gt;<br/>  <span class="element">&lt;/fsDecl&gt;</span><br/> <span class="element">&lt;/teifsd&gt;</span></div></div><div class="p"><span id="id2563688"/>The formal definition of the <code>&lt;teifsd&gt;</code> and its components is as follows:
+<div class="specgrp"><span id="DFDFSD2"/><b>Specification group 149: Feature System Declaration</b><dl><dt>Element teifsd</dt><dd><pre class="eg">
+teifsd = element teifsd { teifsd.content }
+
+teifsd.content = <a class="link_odd" href="ref-teiHeader.html">teiHeader</a>, <a class="link_odd" href="ref-fsDecl.html">fsDecl</a>+</pre></dd><dt>Element fsDecl</dt><dd><pre class="eg">
+fsDecl = element fsDecl { fsDecl.content, fsDecl.attributes }
+
+fsDecl.content = <a class="link_odd" href="ref-fsDescr.html">fsDescr</a>?, <a class="link_odd" href="ref-fDecl.html">fDecl</a>+, <a class="link_odd" href="ref-fsConstraints.html">fsConstraints</a>?
+
+fsDecl.attributes =
+   attribute type { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> },
+   attribute baseTypes { list { <a class="link_odd" href="ref-data.name.html">data.name</a>+ } }?</pre></dd><dt>Element fsDescr</dt><dd><pre class="eg">
+fsDescr = element fsDescr { fsDescr.content }
+
+fsDescr.content = <a class="link_odd" href="ref-macro.paraContent.html">macro.paraContent</a></pre></dd></dl></div></div></div><div class="div2" id="FDFD"><h3>22.3  Feature Declarations</h3><p><span id="id2564118"/>Each feature is declared in an <code>&lt;fDecl&gt;</code> element whose
+<span class="att">name</span> attribute identifies the feature being declared; this
+matches the <span class="att">name</span> attribute of the <code>&lt;f&gt;</code> elements it
+declares.  An <code>&lt;fDecl&gt;</code> also has an <span class="att">org</span> attribute
+which declares the organizing principle for the values of the
+<code>&lt;f&gt;</code> elements it declares.  That is, the value may be a 
+<span class="val">unit</span> (a single value), a 
+<span class="val">set</span> (in which the order is not significant and
+there are no duplicates), a <span class="val">bag</span> (in which
+the order is not significant but duplicates are allowed), or a <span class="val">list</span> (in which the order is significant).  (See
+definition of <span class="att">org</span> attribute of <code>&lt;f&gt;</code> in section <a class="link_ptr" href="FS.html#FSSS" title="Collections as Complex Feature Values">13.7  Collections as Complex Feature Values</a>.)  An <code>&lt;fDecl&gt;</code> has three parts: an optional
+prose description (which should explain what the feature and its
+values represent), an obligatory range specification (which declares
+what values the feature is allowed to have), and an optional default
+specification (which declares what default value should be supplied
+when the named feature does not appear in an <code>&lt;fs&gt;</code>).  A single
+unconditional default value may be specified, or multiple conditional
+values.  If no default is specified, or if none of the conditions is
+met, then the default value is <code>&lt;none&gt;</code>; in other words, the
+feature is not applicable (see section <a class="link_ptr" href="FS.html#FSBO" title="Default Values">13.9  Default Values</a> for a
+discussion of the <code>&lt;none&gt;</code> element).</p><div class="p"><span id="id2564210"/>The following elements are  used in feature system declarations:
+<ul class="specList"><li><b>&lt;<a href="ref-fDecl.html">fDecl</a>&gt;</b> (feature declaration) declares a single feature, specifying its name, organization,
+range of allowed values, and optionally its default value.<table class="attList"><tr><td class="Attribute">name</td><td colspan="2">indicates the name of the feature being declared; matches the
+name attribute of f elements in the text.</td></tr><tr><td class="Attribute">org</td><td colspan="2">specifies the organizing discipline of the feature value.</td></tr></table></li><li><b>&lt;<a href="ref-fDescr.html">fDescr</a>&gt;</b> (feature description (in FSD)) describes in prose what is represented by the feature being
+declared and its values.</li><li><b>&lt;<a href="ref-vRange.html">vRange</a>&gt;</b> (value range) defines the range of allowed values for a feature, in the form of
+an fs, vAlt, or primitive value;
+for the value of an f to be valid, it must be
+subsumed by the specified range; if the f
+contains multiple values (as sanctioned by the org attribute),
+then each value must be subsumed by the vRange.</li><li><b>&lt;<a href="ref-vDefault.html">vDefault</a>&gt;</b> (value default) declares the default value to be supplied when a feature structure
+does not contain an instance of f for this name; if
+unconditional, it is specified as one (or, depending on the value of
+the org attribute of the enclosing fDecl) more
+fs elements or primitive values;
+if conditional, it is specified as
+one or more if elements; if no default is specified, or no
+condition matches, the value none is assumed.</li><li><b>&lt;<a href="ref-if.html">if</a>&gt;</b> defines a conditional default value for a feature; the condition
+is specified as a feature structure, and is met if it
+subsumes the feature structure in the text for which a
+default value is sought.</li><li><b>&lt;<a href="ref-then.html">then</a>&gt;</b> separates the condition from the default in an if, or
+the antecedent and the consequent in a cond element.</li></ul></div><div class="p"><span id="id2564245"/>The logic for validating feature values and for matching the
+conditions for supplying default values is based on the operation of
+<em>subsumption</em>.  Subsumption is a standard operation in
+feature-structure-based formalisms.  Informally, a feature structure
+<em>fs</em> subsumes all feature structures that are at least as
+informative as itself; that is, all feature structures that specify at
+least as many features as <em>fs</em> with values at least as
+informative as those given in <em>fs</em> (Pereira 1987:6; see also
+Shieber 1986:14–16).<a class="notelink" href="#Note146"><sup>146</sup></a>
+A more formal definition requires that we first define the notion of
+‘domain of a feature structure.’ A feature structure can be viewed
+as a partial function that maps features onto values; when viewed in
+this way, the domain of a feature structure is the set of top-level
+features it contains (that is, excluding features in embedded feature
+structures).  We can now offer a more precise definition:
+<blockquote class="display"><p><em>fs</em> subsumes <em>fs′</em> if both are
+     identical primitive values, or if the domain of <em>fs</em>
+     is a subset of the domain of <em>fs′</em>, and for every
+     feature <em>f</em> in the domain of <em>fs</em>, the
+     value of <em>f</em> in <em>fs</em> subsumes the value
+     of <em>f</em> in <em>fs′</em>.</p></blockquote></div><p><span id="id2564346"/>Following the spirit of the informal definition above, we can extend
+subsumption in a straightforward way to cover alternation, negation,
+special primitive values, and the use of attributes in the markup.
+For instance, a <code>&lt;vAlt&gt;</code> containing the value <span class="val">v</span> subsumes <span class="val">v</span>.  The negation
+of a value <span class="val">v</span> (represented by means of the
+<code>&lt;vNot&gt;</code> element discussed in section <a class="link_ptr" href="FS.html#FVNOT" title="Negation">13.8.2  Negation</a>)
+subsumes any value that is not <span class="val">v</span>; for
+example <tt>&lt;vNot&gt;&lt;numeric value='0'/&gt;&lt;/vNot&gt;</tt> subsumes any
+numeric value other than zero.
+The value <code>&lt;binary value="true"&gt;</code> subsumes any value that is in
+the range of a feature, and the value <code>&lt;binary value="false"&gt;</code>
+subsumes any value that is not.  The value <code>&lt;fs
+type="X"/&gt;</code> subsumes any feature structure of type <span class="val">X</span>.
+</p><div class="p"><span id="id2564410"/>As an example of feature declarations, consider the following extract
+from Gazdar et al's <i>Generalized Phrase Structure
+     Grammar</i>.<a class="notelink" href="#Note147"><sup>147</sup></a> In the appendix to their book (pages 245–247), they
+propose a feature system for English of which this is just a sampling:
+<div class="pre">feature    value range
+INV        {+, -}
+CONJ       {and, both, but, either, neither, nor, or, NIL}
+COMP       {for, that, whether, if, NIL}
+AGR        CAT
+PFORM      {to, by, for, ...}</div><div class="pre">Feature specification defaults
+FSD 1:  [-INV]
+FSD 2:  ~[CONJ]
+FSD 9:  [INF, +SUBJ] --&gt; [COMP for]</div></div><div class="p"><span id="id2564451"/>The INV feature, which encodes whether or not a sentence is inverted,
+allows only the values plus (+) and minus (-).  If the feature is not
+specified, then the default rule (FSD 1 above) says that a value of
+minus is always assumed.  The feature declaration for this feature would
+be encoded as follows:
+<div class="pre"> <span class="element">&lt;fDecl <span class="attribute">name</span>="INV"&gt;</span><br/>  <span class="element">&lt;fDescr&gt;</span>inverted sentence<span class="element">&lt;/fDescr&gt;</span><br/>  <span class="element">&lt;vRange&gt;</span><br/>   <span class="element">&lt;vAlt&gt;</span><br/>    <span class="element">&lt;binary <span class="attribute">value</span>="true"/&gt;</span><br/>    <span class="element">&lt;binary <span class="attribute">value</span>="false"/&gt;</span><br/>   <span class="element">&lt;/vAlt&gt;</span><br/>  <span class="element">&lt;/vRange&gt;</span><br/>  <span class="element">&lt;vDefault&gt;</span><br/>   <span class="element">&lt;binary <span class="attribute">value</span>="false"/&gt;</span><br/>  <span class="element">&lt;/vDefault&gt;</span><br/> <span class="element">&lt;/fDecl&gt;</span></div></div><p><span id="id2564489"/>The value range is specified as an alternation (more precisely, an
+exclusive disjunction), which can be reporesented by  the
+<code>&lt;binary&gt;</code> feature value.    That is,
+the value must be either true or false, but cannot be both or neither.</p><div class="p"><span id="id2564504"/>The CONJ feature indicates the surface form of the conjunction used
+in a construction.  The ~ in the default rule (see FSD 2 above)
+represents negation.  This means that by default the feature is not
+applicable, in other words, no conjunction is taking place.  This
+corresponds to the simple value <code>&lt;none&gt;</code>.  Note that this is distinct from the NIL value allowed in
+the value range.  In their analysis, NIL means that the phenomenon of
+conjunction is taking place but there is no explicit conjunction in the
+surface form of the sentence.  The feature declaration for this feature
+would be encoded as follows:
+<div class="pre"> <span class="element">&lt;fDecl <span class="attribute">name</span>="CONJ"&gt;</span><br/>  <span class="element">&lt;fDescr&gt;</span>surface form of the conjunction<span class="element">&lt;/fDescr&gt;</span><br/>  <span class="element">&lt;vRange&gt;</span><br/>   <span class="element">&lt;vAlt&gt;</span><br/>    <span class="element">&lt;symbol <span class="attribute">value</span>="and"/&gt;</span><br/>    <span class="element">&lt;symbol <span class="attribute">value</span>="both"/&gt;</span><br/>    <span class="element">&lt;symbol <span class="attribute">value</span>="but"/&gt;</span><br/>    <span class="element">&lt;symbol <span class="attribute">value</span>="either"/&gt;</span><br/>    <span class="element">&lt;symbol <span class="attribute">value</span>="neither"/&gt;</span><br/>    <span class="element">&lt;symbol <span class="attribute">value</span>="nor"/&gt;</span><br/>    <span class="element">&lt;symbol <span class="attribute">value</span>="or"/&gt;</span><br/>    <span class="element">&lt;symbol <span class="attribute">value</span>="NIL"/&gt;</span><br/>   <span class="element">&lt;/vAlt&gt;</span><br/>  <span class="element">&lt;/vRange&gt;</span><br/>  <span class="element">&lt;vDefault&gt;</span><br/>   <span class="element">&lt;binary <span class="attribute">value</span>="false"/&gt;</span><br/>  <span class="element">&lt;/vDefault&gt;</span><br/> <span class="element">&lt;/fDecl&gt;</span></div>
+Note that the <code>&lt;vDefault&gt;</code> is not strictly necessary in this case,
+since <code>&lt;none&gt;</code> is the value assumed in the absence of a default
+specification.</div><div class="p"><span id="id2564593"/>The COMP feature indicates the surface form of the complementizer
+used in a construction.  In value range, it is analogous to CONJ.
+However, its default rule (see FSD 9 above) is conditional.  It says
+that if the verb form is infinitival (the VFORM feature is not mentioned
+in the rule since it is the only feature that can take INF as a value),
+and the construction has a subject, then a for complement
+must be used.  For instance, to make John the subject of the infinitive
+in It is necessary to go, a for complement
+must be used; that is, It is necessary for John to go.
+The feature declaration for this feature would be encoded as follows:
+<div class="pre"> <span class="element">&lt;fDecl <span class="attribute">name</span>="COMP"&gt;</span><br/>  <span class="element">&lt;fDescr&gt;</span>surface form of the complementizer<span class="element">&lt;/fDescr&gt;</span><br/>  <span class="element">&lt;vRange&gt;</span><br/>   <span class="element">&lt;vAlt&gt;</span><br/>    <span class="element">&lt;symbol <span class="attribute">value</span>="for"/&gt;</span><br/>    <span class="element">&lt;symbol <span class="attribute">value</span>="that"/&gt;</span><br/>    <span class="element">&lt;symbol <span class="attribute">value</span>="whether"/&gt;</span><br/>    <span class="element">&lt;symbol <span class="attribute">value</span>="if"/&gt;</span><br/>    <span class="element">&lt;symbol <span class="attribute">value</span>="NIL"/&gt;</span><br/>   <span class="element">&lt;/vAlt&gt;</span><br/>  <span class="element">&lt;/vRange&gt;</span><br/>  <span class="element">&lt;vDefault&gt;</span><br/>   <span class="element">&lt;if&gt;</span><br/>    <span class="element">&lt;fs&gt;</span><br/>     <span class="element">&lt;f <span class="attribute">name</span>="VFORM"&gt;</span><br/>      <span class="element">&lt;symbol <span class="attribute">value</span>="INF"/&gt;</span><br/>     <span class="element">&lt;/f&gt;</span><br/>     <span class="element">&lt;f <span class="attribute">name</span>="SUBJ"&gt;</span><br/>      <span class="element">&lt;binary <span class="attribute">value</span>="true"/&gt;</span><br/>     <span class="element">&lt;/f&gt;</span><br/>    <span class="element">&lt;/fs&gt;</span><br/>    <span class="element">&lt;then/&gt;</span><br/>    <span class="element">&lt;symbol <span class="attribute">value</span>="for"/&gt;</span><br/>   <span class="element">&lt;/if&gt;</span><br/>  <span class="element">&lt;/vDefault&gt;</span><br/> <span class="element">&lt;/fDecl&gt;</span></div></div><div class="p"><span id="id2564685"/>The AGR feature stores the features relevant to subject-verb
+agreement.  Gazdar et al. specify the range of this feature as CAT.
+This means that the value is a <em>category</em>, which
+is their term for a feature structure.  This is actually too weak a
+statement.  Not just any feature structure is allowable here; it must be
+a feature structure for agreement (which is defined in the complete
+example at the end of the chapter to contain the features of person and
+number).  The following feature declaration encodes this constraint on
+the value range:
+<div class="pre"> <span class="element">&lt;fDecl <span class="attribute">name</span>="AGR"&gt;</span><br/>  <span class="element">&lt;fDescr&gt;</span>agreement for person and number<span class="element">&lt;/fDescr&gt;</span><br/>  <span class="element">&lt;vRange&gt;</span><br/>   <span class="element">&lt;fs <span class="attribute">type</span>="Agreement"/&gt;</span><br/>  <span class="element">&lt;/vRange&gt;</span><br/> <span class="element">&lt;/fDecl&gt;</span></div>
+That is, the value must be a feature structure of type <span class="val">Agreement</span>.  The complete example at the end of this
+chapter includes the <span class="tag">&lt;fsDecl type="Agreement"&gt;</span> which includes
+<span class="tag">&lt;fDecl name="PERS"&gt;</span> and <span class="tag">&lt;fDecl name="NUM"&gt;</span>.</div><div class="p"><span id="id2564738"/>The PFORM feature indicates the surface form of the preposition used
+in a construction.  Since PFORM is specified above as an open set,
+<code>&lt;string&gt;</code> is used in the range specification below rather than
+<code>&lt;symbol&gt;</code>.
+<div class="pre"> <span class="element">&lt;fDecl <span class="attribute">name</span>="PFORM"&gt;</span><br/>  <span class="element">&lt;fDescr&gt;</span>word form of a preposition<span class="element">&lt;/fDescr&gt;</span><br/>  <span class="element">&lt;vRange&gt;</span><br/>   <span class="element">&lt;vNot&gt;</span><br/>    <span class="element">&lt;string/&gt;</span><br/>   <span class="element">&lt;/vNot&gt;</span><br/>  <span class="element">&lt;/vRange&gt;</span><br/> <span class="element">&lt;/fDecl&gt;</span></div>
+This example makes use of a negated value:    <tt>&lt;vNot&gt;&lt;string/&gt;&lt;/vNot&gt;</tt>
+subsumes any string that is not the empty
+string.</div><div class="p"><span id="id2564774"/>The formal definition for feature declarations follows.  Note that
+the class <span class="ident-class">model.featureVal</span> includes all possible
+single feature values, including a <code>&lt;vAlt&gt;</code>.
+<div class="specgrp"><span id="DFDX"/><b>Specification group 150: Feature definitions</b><dl><dt>Element fDecl</dt><dd><pre class="eg">
+fDecl = element fDecl { fDecl.content, fDecl.attributes }
+
+fDecl.content = <a class="link_odd" href="ref-fDescr.html">fDescr</a>?, <a class="link_odd" href="ref-vRange.html">vRange</a>, <a class="link_odd" href="ref-vDefault.html">vDefault</a>?
+
+fDecl.attributes =
+   attribute name { <a class="link_odd" href="ref-data.name.html">data.name</a> },
+   attribute optional { xsd:boolean }?,
+   attribute org { "unit" | "set" | "bag" | "list" }?</pre></dd><dt>Element fDescr</dt><dd><pre class="eg">
+fDescr = element fDescr { fDescr.content }
+
+fDescr.content = <a class="link_odd" href="ref-macro.paraContent.html">macro.paraContent</a></pre></dd><dt>Element vRange</dt><dd><pre class="eg">
+vRange = element vRange { vRange.content }
+
+vRange.content = <a class="link_odd" href="ref-model.featureVal.html">model.featureVal</a></pre></dd><dt>Element vDefault</dt><dd><pre class="eg">
+vDefault = element vDefault { vDefault.content }
+
+vDefault.content = <a class="link_odd" href="ref-model.featureVal.html">model.featureVal</a>+ | <a class="link_odd" href="ref-if.html">if</a>+</pre></dd><dt>Element if</dt><dd><pre class="eg">
+if = element if { if.content }
+
+if.content = ( <a class="link_odd" href="ref-fs.html">fs</a> | <a class="link_odd" href="ref-f.html">f</a> ), <a class="link_odd" href="ref-then.html">then</a>, ( <a class="link_odd" href="ref-model.featureVal.html">model.featureVal</a> )</pre></dd><dt>Element then</dt><dd><pre class="eg">
+then = element then { then.content }
+
+then.content = empty</pre></dd></dl></div></div></div><div class="div2" id="FDFS"><h3>22.4  Feature Structure Constraints</h3><p><span id="id2565551"/>Ensuring the validity of feature structures may require much more
+than simply specifying the range of allowed values for each feature.
+There may be constraints on the co-occurrence of one feature value with
+the value of another feature in the same feature structure or in an
+embedded feature structure.</p><div class="p"><span id="id2565560"/>Such constraints on valid feature structures are expressed as a
+series of conditional and biconditional tests in the
+<code>&lt;fsConstraints&gt;</code> part of an <code>&lt;fsDecl&gt;</code>.  A particular feature
+structure is valid only if it meets all the constraints.  The
+<code>&lt;cond&gt;</code> element encodes the conventional if-then conditional of
+boolean logic which succeeds when both the antecedent and consequent are
+true, or whenever the antecedent is false.  The <code>&lt;bicond&gt;</code> element
+encodes the biconditional (if and only if) operation of boolean logic.
+It succeeds only when both antecedent and consequent are true, or both
+are false.  In feature structure constraints the antecedent and
+consequent are expressed as feature structures; they are considered true
+if they <em>subsume</em><span id="IDX-66"/>
+(see section <a class="link_ptr" href="FD.html#FDFD" title="Feature Declarations">22.3  Feature Declarations</a>) the target feature structure.  The
+following elements make up the <code>&lt;fsConstraints&gt;</code> part of an FSD:
+<ul class="specList"><li><b>&lt;<a href="ref-fsConstraints.html">fsConstraints</a>&gt;</b> (feature-structure constraints) specifies constraints on the content of well formed feature
+structures.</li><li><b>&lt;<a href="ref-cond.html">cond</a>&gt;</b> (conditional feature-structure constraint) defines a conditional feature-structure constraint; the consequent
+and the antecedent are specified as feature structures or
+feature-structure groups; the constraint is satisfied if both the
+antecedent and the consequent subsume a given feature
+structure, or if the antecedent does not.</li><li><b>&lt;<a href="ref-bicond.html">bicond</a>&gt;</b> (bi-conditional feature-structure constraint) defines a biconditional feature-structure constraint; both
+consequent and antecedent are specified as feature structures or groups
+of feature structures; the constraint is satisfied if both
+subsume a given feature structure, or if both do not.</li><li><b>&lt;<a href="ref-then.html">then</a>&gt;</b> separates the condition from the default in an if, or
+the antecedent and the consequent in a cond element.</li><li><b>&lt;<a href="ref-iff.html">iff</a>&gt;</b> separates the condition from the consequence in a bicond
+element.</li></ul></div><div class="p"><span id="id2565631"/>For an example of feature structure constraints, consider the
+following ‘feature co-occurrence restrictions’
+extracted from the feature system for English proposed by Gazdar, Klein,
+Pullum, and Sag (1985:246–247):
+<div class="pre_eg">FCR 1:  [+INV] &amp;#8594; [+AUX, FIN]
+FCR 7:  [BAR 0] &amp;equiv; [N] &amp;amp; [V] &amp;amp; [SUBCAT]
+FCR 8:  [BAR 1] &amp;#8594; ~[SUBCAT]</div></div><div class="p"><span id="id2565645"/>The first constraint says that if a construction is inverted, it must
+also have an auxiliary and a finite verb form.  That is,
+<div class="pre"> <span class="element">&lt;cond&gt;</span><br/>  <span class="element">&lt;fs&gt;</span><br/>   <span class="element">&lt;f <span class="attribute">name</span>="INV"&gt;</span><br/>    <span class="element">&lt;binary <span class="attribute">value</span>="true"/&gt;</span><br/>   <span class="element">&lt;/f&gt;</span><br/>  <span class="element">&lt;/fs&gt;</span><br/>  <span class="element">&lt;then/&gt;</span><br/>  <span class="element">&lt;fs&gt;</span><br/>   <span class="element">&lt;f <span class="attribute">name</span>="AUX"&gt;</span><br/>    <span class="element">&lt;binary <span class="attribute">value</span>="true"/&gt;</span><br/>   <span class="element">&lt;/f&gt;</span><br/>   <span class="element">&lt;f <span class="attribute">name</span>="VFORM"&gt;</span><br/>    <span class="element">&lt;symbol <span class="attribute">value</span>="FIN"/&gt;</span><br/>   <span class="element">&lt;/f&gt;</span><br/>  <span class="element">&lt;/fs&gt;</span><br/> <span class="element">&lt;/cond&gt;</span></div></div><div class="p"><span id="id2565687"/>The second constraint says that if a construction has a BAR value of
+zero (i.e., it is a sentence), then it must have a value for the
+features N, V, and SUBCAT.  By the same token, because it is a
+biconditional, if it has values for N, V, and SUBCAT, it must have
+BAR='0'.  That is,
+<div class="pre"> <span class="element">&lt;bicond&gt;</span><br/>  <span class="element">&lt;fs&gt;</span><br/>   <span class="element">&lt;f <span class="attribute">name</span>="BAR"&gt;</span><br/>    <span class="element">&lt;symbol <span class="attribute">value</span>="0"/&gt;</span><br/>   <span class="element">&lt;/f&gt;</span><br/>  <span class="element">&lt;/fs&gt;</span><br/>  <span class="element">&lt;iff/&gt;</span><br/>  <span class="element">&lt;fs&gt;</span><br/>   <span class="element">&lt;f <span class="attribute">name</span>="N"&gt;</span><br/>    <span class="element">&lt;binary <span class="attribute">value</span>="true"/&gt;</span><br/>   <span class="element">&lt;/f&gt;</span><br/>   <span class="element">&lt;f <span class="attribute">name</span>="V"&gt;</span><br/>    <span class="element">&lt;binary <span class="attribute">value</span>="true"/&gt;</span><br/>   <span class="element">&lt;/f&gt;</span><br/>   <span class="element">&lt;f <span class="attribute">name</span>="SUBCAT"&gt;</span><br/>    <span class="element">&lt;binary <span class="attribute">value</span>="true"/&gt;</span><br/>   <span class="element">&lt;/f&gt;</span><br/>  <span class="element">&lt;/fs&gt;</span><br/> <span class="element">&lt;/bicond&gt;</span></div></div><div class="p"><span id="id2565740"/>The final constraint says that if a construction has a BAR value of 1
+(i.e., it is a phrase), then the SUBCAT feature is irrelevant (~).
+This is not biconditional, since there are other instances under which
+the SUBCAT feature is irrelevant.  That is,
+<div class="pre"> <span class="element">&lt;cond&gt;</span><br/>  <span class="element">&lt;fs&gt;</span><br/>   <span class="element">&lt;f <span class="attribute">name</span>="BAR"&gt;</span><br/>    <span class="element">&lt;symbol <span class="attribute">value</span>="1"/&gt;</span><br/>   <span class="element">&lt;/f&gt;</span><br/>  <span class="element">&lt;/fs&gt;</span><br/>  <span class="element">&lt;then/&gt;</span><br/>  <span class="element">&lt;fs&gt;</span><br/>   <span class="element">&lt;f <span class="attribute">name</span>="SUBCAT"&gt;</span><br/>    <span class="element">&lt;binary <span class="attribute">value</span>="false"/&gt;</span><br/>   <span class="element">&lt;/f&gt;</span><br/>  <span class="element">&lt;/fs&gt;</span><br/> <span class="element">&lt;/cond&gt;</span></div></div><div class="p"><span id="id2565775"/>The DTD fragment for feature structure constraints is as follows.
+Note that <code>&lt;cond&gt;</code> and <code>&lt;bicond&gt;</code> use the empty tags
+<code>&lt;then&gt;</code> and <code>&lt;iff&gt;</code>, respectively, to separate the antecedent
+and consequent.  These are primarily for the sake of enhancing human
+readability.
+<div class="specgrp"><span id="DFD2"/><b>Specification group 151: Feature structure constraints</b><dl><dt>Element fsConstraints</dt><dd><pre class="eg">
+fsConstraints = element fsConstraints { fsConstraints.content }
+
+fsConstraints.content = ( <a class="link_odd" href="ref-cond.html">cond</a> | <a class="link_odd" href="ref-bicond.html">bicond</a> )*</pre></dd><dt>Element cond</dt><dd><pre class="eg">
+cond = element cond { cond.content }
+
+cond.content = ( <a class="link_odd" href="ref-fs.html">fs</a> | <a class="link_odd" href="ref-f.html">f</a> ), <a class="link_odd" href="ref-then.html">then</a>, ( <a class="link_odd" href="ref-fs.html">fs</a> | <a class="link_odd" href="ref-f.html">f</a> )</pre></dd><dt>Element bicond</dt><dd><pre class="eg">
+bicond = element bicond { bicond.content }
+
+bicond.content = ( <a class="link_odd" href="ref-fs.html">fs</a> | <a class="link_odd" href="ref-f.html">f</a> ), <a class="link_odd" href="ref-iff.html">iff</a>, ( <a class="link_odd" href="ref-fs.html">fs</a> | <a class="link_odd" href="ref-f.html">f</a> )</pre></dd><dt>Element iff</dt><dd><pre class="eg">
+iff = element iff { iff.content }
+
+iff.content = empty</pre></dd></dl></div></div></div><div class="div2" id="FDEG"><h3>22.5  A Complete Example</h3><div class="p"><span id="id2566240"/>To summarize this chapter, the complete FSD for the example that has
+run through the chapter is reproduced below:
+<div class="pre"> <span class="element">&lt;teifsd&gt;</span><br/>  <span class="element">&lt;teiHeader&gt;</span><br/>   <span class="element">&lt;fileDesc&gt;</span><br/>    <span class="element">&lt;titleStmt&gt;</span><br/>     <span class="element">&lt;title&gt;</span>A sample FSD based on an extract from Gazdar
+      et al.'s GPSG feature system for English<span class="element">&lt;/title&gt;</span><br/>     <span class="element">&lt;respStmt&gt;</span><br/>      <span class="element">&lt;resp&gt;</span>encoded by<span class="element">&lt;/resp&gt;</span><br/>      <span class="element">&lt;name&gt;</span>Gary F. Simons<span class="element">&lt;/name&gt;</span><br/>     <span class="element">&lt;/respStmt&gt;</span><br/>    <span class="element">&lt;/titleStmt&gt;</span><br/>    <span class="element">&lt;publicationStmt&gt;</span><br/>     <span class="element">&lt;p&gt;</span>This sample was first encoded by Gary F. Simons (Summer
+Institute of Linguistics, Dallas, TX) on January 28, 1991.
+Revised April 8, 1993 to match the specification of FSDs
+in version P2 of the TEI Guidelines. Revised again December 2004 to
+be consistent with  the feature structure representation standard
+jointly developed with ISO TC37/SC4.
+<span class="element">&lt;/p&gt;</span><br/>    <span class="element">&lt;/publicationStmt&gt;</span><br/>    <span class="element">&lt;sourceDesc&gt;</span><br/>     <span class="element">&lt;p&gt;</span>This sample FSD does not describe a complete feature
+system.  It is based on extracts from the feature system
+for English presented in the appendix (pages 245–247) of
+Generalized Phrase Structure Grammar, by Gazdar, Klein,
+Pullum, and Sag (Harvard University Press, 1985).<span class="element">&lt;/p&gt;</span><br/>    <span class="element">&lt;/sourceDesc&gt;</span><br/>   <span class="element">&lt;/fileDesc&gt;</span><br/>  <span class="element">&lt;/teiHeader&gt;</span><br/>  <span class="element">&lt;fsDecl <span class="attribute">type</span>="GPSG"&gt;</span><br/>   <span class="element">&lt;fsDescr&gt;</span>Encodes a feature structure for the GPSG analysis
+     of English (after Gazdar, Klein, Pullum, and Sag)<span class="element">&lt;/fsDescr&gt;</span><br/>   <span class="element">&lt;fDecl <span class="attribute">name</span>="INV"&gt;</span><br/>    <span class="element">&lt;fDescr&gt;</span>inverted sentence<span class="element">&lt;/fDescr&gt;</span><br/>    <span class="element">&lt;vRange&gt;</span><br/>     <span class="element">&lt;vAlt&gt;</span><br/>      <span class="element">&lt;binary <span class="attribute">value</span>="true"/&gt;</span><br/>      <span class="element">&lt;binary <span class="attribute">value</span>="false"/&gt;</span><br/>     <span class="element">&lt;/vAlt&gt;</span><br/>    <span class="element">&lt;/vRange&gt;</span><br/>    <span class="element">&lt;vDefault&gt;</span><br/>     <span class="element">&lt;binary <span class="attribute">value</span>="false"/&gt;</span><br/>    <span class="element">&lt;/vDefault&gt;</span><br/>   <span class="element">&lt;/fDecl&gt;</span><br/>   <span class="element">&lt;fDecl <span class="attribute">name</span>="CONJ"&gt;</span><br/>    <span class="element">&lt;fDescr&gt;</span>surface form of the conjunction<span class="element">&lt;/fDescr&gt;</span><br/>    <span class="element">&lt;vRange&gt;</span><br/>     <span class="element">&lt;vAlt&gt;</span><br/>      <span class="element">&lt;symbol <span class="attribute">value</span>="and"/&gt;</span><br/>      <span class="element">&lt;symbol <span class="attribute">value</span>="both"/&gt;</span><br/>      <span class="element">&lt;symbol <span class="attribute">value</span>="but"/&gt;</span><br/>      <span class="element">&lt;symbol <span class="attribute">value</span>="either"/&gt;</span><br/>      <span class="element">&lt;symbol <span class="attribute">value</span>="neither"/&gt;</span><br/>      <span class="element">&lt;symbol <span class="attribute">value</span>="nor"/&gt;</span><br/>      <span class="element">&lt;symbol <span class="attribute">value</span>="or"/&gt;</span><br/>      <span class="element">&lt;symbol <span class="attribute">value</span>="NIL"/&gt;</span><br/>     <span class="element">&lt;/vAlt&gt;</span><br/>    <span class="element">&lt;/vRange&gt;</span><br/>    <span class="element">&lt;vDefault&gt;</span><br/>     <span class="element">&lt;binary <span class="attribute">value</span>="false"/&gt;</span><br/>    <span class="element">&lt;/vDefault&gt;</span><br/>   <span class="element">&lt;/fDecl&gt;</span><br/>   <span class="element">&lt;fDecl <span class="attribute">name</span>="COMP"&gt;</span><br/>    <span class="element">&lt;fDescr&gt;</span>surface form of the complementizer<span class="element">&lt;/fDescr&gt;</span><br/>    <span class="element">&lt;vRange&gt;</span><br/>     <span class="element">&lt;vAlt&gt;</span><br/>      <span class="element">&lt;symbol <span class="attribute">value</span>="for"/&gt;</span><br/>      <span class="element">&lt;symbol <span class="attribute">value</span>="that"/&gt;</span><br/>      <span class="element">&lt;symbol <span class="attribute">value</span>="whether"/&gt;</span><br/>      <span class="element">&lt;symbol <span class="attribute">value</span>="if"/&gt;</span><br/>      <span class="element">&lt;symbol <span class="attribute">value</span>="NIL"/&gt;</span><br/>     <span class="element">&lt;/vAlt&gt;</span><br/>    <span class="element">&lt;/vRange&gt;</span><br/>    <span class="element">&lt;vDefault&gt;</span><br/>     <span class="element">&lt;if&gt;</span><br/>      <span class="element">&lt;fs&gt;</span><br/>       <span class="element">&lt;f <span class="attribute">name</span>="VFORM"&gt;</span><br/>        <span class="element">&lt;symbol <span class="attribute">value</span>="INF"/&gt;</span><br/>       <span class="element">&lt;/f&gt;</span><br/>       <span class="element">&lt;f <span class="attribute">name</span>="SUBJ"&gt;</span><br/>        <span class="element">&lt;binary <span class="attribute">value</span>="true"/&gt;</span><br/>       <span class="element">&lt;/f&gt;</span><br/>      <span class="element">&lt;/fs&gt;</span><br/>      <span class="element">&lt;then/&gt;</span><br/>      <span class="element">&lt;symbol <span class="attribute">value</span>="for"/&gt;</span><br/>     <span class="element">&lt;/if&gt;</span><br/>    <span class="element">&lt;/vDefault&gt;</span><br/>   <span class="element">&lt;/fDecl&gt;</span><br/>   <span class="element">&lt;fDecl <span class="attribute">name</span>="AGR"&gt;</span><br/>    <span class="element">&lt;fDescr&gt;</span>agreement for person and number<span class="element">&lt;/fDescr&gt;</span><br/>    <span class="element">&lt;vRange&gt;</span><br/>     <span class="element">&lt;fs <span class="attribute">type</span>="Agreement"/&gt;</span><br/>    <span class="element">&lt;/vRange&gt;</span><br/>   <span class="element">&lt;/fDecl&gt;</span><br/>   <span class="element">&lt;fDecl <span class="attribute">name</span>="PFORM"&gt;</span><br/>    <span class="element">&lt;fDescr&gt;</span>word form of a preposition<span class="element">&lt;/fDescr&gt;</span><br/>    <span class="element">&lt;vRange&gt;</span><br/>     <span class="element">&lt;vNot&gt;</span><br/>      <span class="element">&lt;string/&gt;</span><br/>     <span class="element">&lt;/vNot&gt;</span><br/>    <span class="element">&lt;/vRange&gt;</span><br/>   <span class="element">&lt;/fDecl&gt;</span><br/>   <span class="element">&lt;fsConstraints&gt;</span><br/>    <span class="element">&lt;cond&gt;</span><br/>     <span class="element">&lt;fs&gt;</span><br/>      <span class="element">&lt;f <span class="attribute">name</span>="INV"&gt;</span><br/>       <span class="element">&lt;binary <span class="attribute">value</span>="true"/&gt;</span><br/>      <span class="element">&lt;/f&gt;</span><br/>     <span class="element">&lt;/fs&gt;</span><br/>     <span class="element">&lt;then/&gt;</span><br/>     <span class="element">&lt;fs&gt;</span><br/>      <span class="element">&lt;f <span class="attribute">name</span>="AUX"&gt;</span><br/>       <span class="element">&lt;binary <span class="attribute">value</span>="true"/&gt;</span><br/>      <span class="element">&lt;/f&gt;</span><br/>      <span class="element">&lt;f <span class="attribute">name</span>="VFORM"&gt;</span><br/>       <span class="element">&lt;symbol <span class="attribute">value</span>="FIN"/&gt;</span><br/>      <span class="element">&lt;/f&gt;</span><br/>     <span class="element">&lt;/fs&gt;</span><br/>    <span class="element">&lt;/cond&gt;</span><br/>    <span class="element">&lt;bicond&gt;</span><br/>     <span class="element">&lt;fs&gt;</span><br/>      <span class="element">&lt;f <span class="attribute">name</span>="BAR"&gt;</span><br/>       <span class="element">&lt;symbol <span class="attribute">value</span>="0"/&gt;</span><br/>      <span class="element">&lt;/f&gt;</span><br/>     <span class="element">&lt;/fs&gt;</span><br/>     <span class="element">&lt;iff/&gt;</span><br/>     <span class="element">&lt;fs&gt;</span><br/>      <span class="element">&lt;f <span class="attribute">name</span>="N"&gt;</span><br/>       <span class="element">&lt;binary <span class="attribute">value</span>="true"/&gt;</span><br/>      <span class="element">&lt;/f&gt;</span><br/>      <span class="element">&lt;f <span class="attribute">name</span>="V"&gt;</span><br/>       <span class="element">&lt;binary <span class="attribute">value</span>="true"/&gt;</span><br/>      <span class="element">&lt;/f&gt;</span><br/>      <span class="element">&lt;f <span class="attribute">name</span>="SUBCAT"&gt;</span><br/>       <span class="element">&lt;binary <span class="attribute">value</span>="true"/&gt;</span><br/>      <span class="element">&lt;/f&gt;</span><br/>     <span class="element">&lt;/fs&gt;</span><br/>    <span class="element">&lt;/bicond&gt;</span><br/>    <span class="element">&lt;cond&gt;</span><br/>     <span class="element">&lt;fs&gt;</span><br/>      <span class="element">&lt;f <span class="attribute">name</span>="BAR"&gt;</span><br/>       <span class="element">&lt;symbol <span class="attribute">value</span>="1"/&gt;</span><br/>      <span class="element">&lt;/f&gt;</span><br/>     <span class="element">&lt;/fs&gt;</span><br/>     <span class="element">&lt;then/&gt;</span><br/>     <span class="element">&lt;fs&gt;</span><br/>      <span class="element">&lt;f <span class="attribute">name</span>="SUBCAT"&gt;</span><br/>       <span class="element">&lt;binary <span class="attribute">value</span>="false"/&gt;</span><br/>      <span class="element">&lt;/f&gt;</span><br/>     <span class="element">&lt;/fs&gt;</span><br/>    <span class="element">&lt;/cond&gt;</span><br/>   <span class="element">&lt;/fsConstraints&gt;</span><br/>  <span class="element">&lt;/fsDecl&gt;</span><br/>  <span class="element">&lt;fsDecl <span class="attribute">type</span>="Agreement"&gt;</span><br/>   <span class="element">&lt;fsDescr&gt;</span>This type of feature structure encodes the features
+      for subject-verb agreement in English<span class="element">&lt;/fsDescr&gt;</span><br/>   <span class="element">&lt;fDecl <span class="attribute">name</span>="PERS"&gt;</span><br/>    <span class="element">&lt;fDescr&gt;</span>person (first, second, or third)<span class="element">&lt;/fDescr&gt;</span><br/>    <span class="element">&lt;vRange&gt;</span><br/>     <span class="element">&lt;vAlt&gt;</span><br/>      <span class="element">&lt;symbol <span class="attribute">value</span>="1"/&gt;</span><br/>      <span class="element">&lt;symbol <span class="attribute">value</span>="2"/&gt;</span><br/>      <span class="element">&lt;symbol <span class="attribute">value</span>="3"/&gt;</span><br/>     <span class="element">&lt;/vAlt&gt;</span><br/>    <span class="element">&lt;/vRange&gt;</span><br/>   <span class="element">&lt;/fDecl&gt;</span><br/>   <span class="element">&lt;fDecl <span class="attribute">name</span>="NUM"&gt;</span><br/>    <span class="element">&lt;fDescr&gt;</span>number (singular or plural)<span class="element">&lt;/fDescr&gt;</span><br/>    <span class="element">&lt;vRange&gt;</span><br/>     <span class="element">&lt;vAlt&gt;</span><br/>      <span class="element">&lt;symbol <span class="attribute">value</span>="sg"/&gt;</span><br/>      <span class="element">&lt;symbol <span class="attribute">value</span>="pl"/&gt;</span><br/>     <span class="element">&lt;/vAlt&gt;</span><br/>    <span class="element">&lt;/vRange&gt;</span><br/>   <span class="element">&lt;/fDecl&gt;</span><br/>  <span class="element">&lt;/fsDecl&gt;</span><br/> <span class="element">&lt;/teifsd&gt;</span></div></div></div><p class="left"><i> Up: </i><a class="navigation" href="index.html">Contents</a><i> Previous: </i><a class="navigation" href="WD.html">21  Representation of non-standard characters and glyphs</a><i> Next: </i><a class="navigation" href="TD.html">23  Documentation Elements</a></p><div class="notes"><div class="noteHeading">Notes</div><div class="note"><a id="Note145">145.</a>A fuller discussion of the reasoning behind FSDs
+and another complete example are provided by ‘A rationale for the TEI
+recommendations for feature-structure markup,’  by D. Terence
+Langendoen and Gary F. Simons , in <i>Computers and the
+Humanities</i>, 29, (1995). </div><div class="note"><a id="Note146">146.</a><span id="index-bibl-id2564273"/>Fernando C. N. Pereira, <i>Grammars and logics of partial
+information</i>, SRI International Technical Note 420 (Menlo
+Park, CA: SRI International, 1987), and
+<span id="index-bibl-id2564282"/>Stuart Shieber, <i>An Introduction to Unification-based
+Approaches to Grammar</i>, CSLI Lecture Notes 4 (Palo Alto,
+CA: Center for the Study of Language and Information,
+1986).</div><div class="note"><a id="Note147">147.</a><span id="index-bibl-id2564420"/>Gerald
+Gazdar, Ewan Klein, Geoffrey Pullum, and Ivan Sag: <i>Generalized
+     Phrase Structure Grammar</i>, (Harvard University
+Press, 1985)</div></div><div class="stdfooter"><hr/><div class="footer"><a class="plain" href="http://www.tei-c.org/Consortium/">TEI Consortium</a> | <a class="plain" href="index.html">TEI P5</a> | <a class="plain" href="http://www.tei-c.org/Consortium/contact.xml">Feedback</a></div><hr/><address> edited by C.M. Sperberg-McQueen and
+	Lou Burnard.
+      Date: 2007<br/>Copyright TEI Consortium 2007<!--
+	  Generated  using an XSLT version 1.0 stylesheet
+	  based on http://www.tei-c.org/Stylesheets/teic/tei.xsl
+	  processed using libxslt
+	  on 2007-03-13T16:03:02Z--></address></div></div></div></div></body></html>

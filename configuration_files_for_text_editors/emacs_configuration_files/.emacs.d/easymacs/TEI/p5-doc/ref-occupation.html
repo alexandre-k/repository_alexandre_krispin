@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;occupation&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;occupation&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;occupation&gt;</h1></div><div><span id="occupation"/><table border="1" class="wovenodd"><tr><td class="elementSpec">occupation</td><td colspan="2" class="wovenodd-col2">contains an informal description of a person's trade,
+profession or occupation.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.persStateLike.html">model.persStateLike</a> <a class="link_odd" href="ref-att.datable.html">att.datable</a> <a class="link_odd" href="ref-att.editLike.html">att.editLike</a> <a class="link_odd" href="ref-att.naming.html">att.naming</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element occupation
+{
+   att.global.attributes,
+   att.datable.attributes,
+   att.editLike.attributes,
+   att.naming.attributes,
+   attribute scheme { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a> }?,
+   attribute code { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a> }?,
+   <a class="link_odd" href="ref-macro.phraseSeq.html">macro.phraseSeq</a>
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>  [<a class="classlink" href="ref-att.datable.html">att.datable</a> <a class="classlink" href="ref-att.editLike.html">att.editLike</a> <a class="classlink" href="ref-att.naming.html">att.naming</a> ] <table><tr><td class="attDef">scheme</td><td colspan="2">identifies the classification system or taxonomy in use by supplying
+the identifier of a taxonomy element elsewhere in the header.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>must identify a <code>&lt;taxonomy&gt;</code> element</td></tr><tr><td class="attDef">code</td><td colspan="2">identifies an occupation code defined within the
+classification system or taxonomy defined by the scheme
+attribute.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>Must identify a <code>&lt;category&gt;</code> element</td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;occupation&gt;</span>accountant<span class="element">&lt;/occupation&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;occupation <span class="attribute">scheme</span>="#rg" <span class="attribute">code</span>="#acc"&gt;</span>accountant<span class="element">&lt;/occupation&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;occupation <span class="attribute">scheme</span>="#rg" <span class="attribute">code</span>="#acc"&gt;</span>accountant 
+with specialist knowledge of oil industry
+<span class="element">&lt;/occupation&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p><span id="id2539923"/>The content of this element may be used as an alternative
+to the more formal specification made possible by its attributes; it
+may also be used to supplement the formal specification with commentary
+or clarification.</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="CC.html#CCAHPA" title="The Participants Description">20.2.2  The Participants Description</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">namesdates</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

@@ -1,0 +1,1383 @@
+\input texinfo @c -*- texinfo -*-
+@c %**start of header
+@setfilename easymacs.info
+@settitle Easymacs
+@c %**end of header
+
+@iftex
+@multitablelinespace=12pt
+@raggedright
+@c These don't help
+@global@hbadness=10000
+@global@tolerance=10000
+@global@emergencystretch = .9@hsize
+@end iftex
+
+@macro endpagenote {}
+@noindent
+(hit ``q'' to quit help, Alt-Shift-F1 to return to the main help page or ``l'' to backtrack)
+@end macro
+
+@dircategory Emacs
+@direntry
+* Easymacs: (easymacs).     An easy to learn configuration for Emacs.
+@end direntry
+
+@node Top
+@top Easymacs
+
+@noindent
+Easymacs is an easy to learn configuration for Emacs.
+
+@noindent
+Here is a quick survival guide:
+
+@quotation
+New file: Ctrl-N    |
+Open file: Ctrl-O   |
+Save file: Ctrl-S @*
+Close file: Ctrl-W  |
+Exit Emacs: Alt-F4  |
+Interrupt: Escape @*
+Undo: Ctrl-Z        | 
+Show open files: F9 |
+Browse menus: F10 @*
+Switch to next open file: Ctrl-Tab@*
+@end quotation
+
+@noindent
+@strong{NB} You can hit Alt-Shift-F1 to get back to this page.
+
+@noindent
+Here are some quick links to more information about keystrokes.  Follow
+a link with the cursor and Enter key, or click on them with your mouse.
+
+@menu
+* Using Emacs::
+* The Macintosh Keyboard::
+* Basic File commands::
+* Motion commands::
+* Insertion and Deletion::
+* Miscellaneous Commands::
+* Commands for help and finding files (F1)::
+* Bookmark Operations (F2)::
+* Search and Replace Operations (F3)::
+* Window Operations (F4)::
+* Text Shortcuts (F5)::
+* Commenting; appending and prepending (F6)::
+* Folding and Outlines (F7)::
+* Spelling (F8)::
+* Managing Open Files (F9)::
+* Commands for Specific File-types (F10-F12)::
+* Numeric Keypad::
+* Advanced Topics::
+@end menu
+
+@node Using Emacs
+@unnumbered Using Emacs
+
+Here are some general observations about the behavior of Emacs that may
+seem odd to the new user:
+
+@itemize
+@item 
+If you use a keyboard command to do something (such as @key{F1} to
+open a file), you will usually be prompted at the bottom of the screen,
+whereas if you use the mouse to select that same command from a menu,
+you may be presented with a dialog box instead.  This is deliberate.
+
+@item
+If you are entering text at the prompt at the bottom of the screen, the
+@key{Tab} key will often help you to complete a partially-typed answer.
+If you have no idea what answer to give, hit @key{Tab} right away to get
+a list of the expected responses.
+
+@end itemize
+
+@node The Macintosh Keyboard
+@unnumbered The Macintosh Keyboard
+
+Use Apple-F14, Ctrl-F14, or Alt-x easymacs-mac-swap-modifiers to switch
+between Mac-style and PC-style modifier keys.
+
+In Mac-style, you can use the Apple (``command'') key for Easymacs Ctrl
+and the key marked Ctrl for Easymacs Alt.  In PC-style, use the Apple
+key for Easymacs Alt and the Ctrl key for Control.
+
+There are a number of Function key combinations that are normally
+reserved by the operating system, but you can still send these to
+Easymacs by combining them with the ``option'' key (marked with ``alt''
+and a broken line).  Alternatively, you can configure OS X not to use
+these combinations (System Preferences -> Keyboard & Mouse -> Keyboard
+Shortcuts).  The combinations likely to be a problem are: Ctrl-F1,
+Apple-F5, Ctrl-F7, Ctrl-Shift-F7, Ctrl-F8, F9, Shift-F9, F10, Shift-F10,
+F11, Shift-F11, F12, Shift-F12.
+
+If you inadvertently switch on ``accessibility mode'' by hitting
+Ctrl-F1, even more function keys will be affected; switch it off by
+hitting Ctrl-F1 again, or via the Preferences pane.
+
+@node Basic File commands
+@unnumbered Basic File commands
+
+@multitable @columnfractions .2 .2 .6
+@headitem Key @tab Command @tab Description
+
+@item Ctrl-N
+@tab New File
+@tab Start a new file.  You will be prompted to give it a name, so that
+Emacs will know what sort of file it is, and will be able to
+give you the help appropriate for that sort of file.
+
+@item
+@item Ctrl-O
+@tab Open File
+@tab Open an existing file, using a dialog box.
+
+@item
+@item Ctrl-Shft-O
+@tab Insert File
+@tab Like open file, but insert the contents of another file into the
+current file.
+
+@item
+@item Ctrl-S
+@tab Save File
+@tab Save the file to disk.  If the file has been changed since the last
+time it was saved, there will be two asterisks on the left side of the
+status bar at the bottom of the screen.  
+
+@item
+@item Ctrl-Shft-S
+@tab Save As
+@tab Save current file under a new name, and switch to editing it. 
+
+@item
+@item Alt-S
+@tab Save All Files
+@tab Save all open, modified files, prompting to ask about each file 
+that has been changed since it was last saved.
+
+@item
+@item Ctrl-W
+@tab Close File
+@tab Close the current file.
+
+@item
+@item Ctrl-Shft-W
+@tab Close All Files
+@tab Close all open, unmodified files, without quitting Emacs
+(ask for confirmation).
+
+@item
+@item Ctrl-q, Alt-F4
+@tab Quit
+@tab Quit Emacs
+
+@item
+@item Escape
+@tab Cancel
+@tab Interrupt your current command.  
+
+@item
+@item Ctrl-Z
+@tab Undo
+@tab Undo the last operation
+
+@item
+@item Ctrl-X
+@tab Cut
+@tab Cut the selected area and store it in the clipboard
+
+@item
+@item Ctrl-C
+@tab Copy
+@tab Copy the selected area into the clipboard
+
+@item
+@item Ctrl-V
+@tab Paste
+@tab Paste contents of clipboard at cursor position
+
+@item
+@item Ctrl-A
+@tab Select All
+@tab Select all of the contents of the file
+
+@item
+@item Ctrl-F
+@tab Find
+@tab Type a search term at the bottom of the screen (it's case-insensitive,
+unless you use upper-case letters in your search term).  As you type
+letters, you can see the progress of the search.  If you find what you
+are looking for, hit Return to get out of search mode, keeping the
+cursor where it has arrived; or hit escpae to get out of search mode and
+return to where you started.  While you are in search mode, you can hit
+Ctrl-F again as often as you like to repeat the search.
+
+@item
+@item Ctrl-Shft-F
+@tab Find backwards
+@tab As above, but search backwards through the file.
+
+@item
+@item Ctrl-R
+@tab Replace
+@tab Find and replace strings of text from the cursor forward, or if
+there is a selected region, within that region.
+
+@item
+@item Ctrl-Shft-R
+@tab Confirm Replace
+@tab As above, but ask for confirmation of each change.
+
+@item
+@item Ctrl-P
+@tab Print
+@tab Print-preview the current document (requires an external posrscript
+viewer, like gv or ghostview)
+
+@end multitable
+
+
+
+@node Motion commands
+@unnumbered Motion commands
+
+Move the cursor with the arrow keys, holding the Shift key down to
+select text.  Here are some other keys.  Most of them can also be used
+with the shift key held down to extend the selected text by that amount.
+
+@multitable @columnfractions .2 .2 .6
+@headitem Key @tab Command @tab Description
+
+@item Home, End
+@tab Home, End
+@tab Hit once to go to the beginning/end of the line, and again to go to
+the beginning/end of the text on the line.  If the line is longer than
+one line on the screen, you can hit it several times progressively.
+
+@item
+@item Ctrl-Home, Ctrl-End
+@tab Beginning/End of File
+@tab Go to the beginning or end of the current file.
+
+@item
+@item PgUp, PgDn
+@tab Page Up/Page Down
+@tab Page up or down through the text, preserving your position, so that
+if you page up a few times, you can return the cursor to the place it
+started by hitting page down a few times.
+
+@item
+@item Ctrl-PgUp, Ctrl-PgDn
+@tab Top/Bottom of Screen
+@tab Move cursor to the top or bottom of the screen
+
+@item
+@item Alt-PgUp, Alt-PgDn
+@tab Scroll other Pane
+@tab When the window is divided in two, these commands page up or down
+in the other pane of the window, i.e. the one in which the cursor 
+is not active.
+
+@item
+@item Alt-Up, Alt-Down
+@tab Sticky Scroll 
+@tab Scroll one line at a time, but keep cursor in the same position
+
+@item
+@item Ctrl-Up, Ctrl-Down
+@tab Up/Down Paragraph
+@tab Ctrl with the Up/Down arrows moves up or down one paragraph
+
+
+@item
+@item Ctrl-Alt-Up, Ctrl-Alt-Down
+@tab Move Line Up/Down
+@tab Move the current line up or down relative to the rest of the text
+
+@item
+@item Ctrl-Left, Ctrl-Right
+@tab Word Left/Right
+@tab With the Ctrl key held down, the left or right arrow
+will move the cursor one word to the left or right
+
+@end multitable
+
+@endpagenote
+
+@node Insertion and Deletion
+@unnumbered Insertion and Deletion
+
+The most important keys for inserting and deleting text are Ctrl-C
+(copy), Ctrl-X (cut), Ctrl-V (paste), explained above, and you can also
+use Shft-Delete for cut, Shft-Insert for paste, and Ctrl-Insert for copy.  
+
+@noindent
+The Insert key switches from insert to overwrite mode; the status bar at
+the bottom of the screen shows ``Ovwrt'' in overwrite mode.
+
+@noindent
+Here are some other keys:
+
+@multitable @columnfractions .2 .2 .6
+@headitem Key @tab Command @tab Description
+
+@item Ctrl-Backspace
+@tab Delete Word
+@tab Ctrl with Backspace deletes a word backwards.
+
+@item
+@item Ctrl-Delete
+@tab Delete Word
+@tab Ctrl with Delete deletes a word forward.
+
+@item
+@item Alt-Insert
+@tab Copy Line
+@tab Copy the current line of text into the clipboard
+
+@item
+@item Alt-Delete
+@tab Cut Line
+@tab Cut the current line of text into the clipboard
+
+@item
+@item Alt-Home, Alt-End
+@tab Delete to Beginning/End
+@tab Delete all of the text from the cursor to the beginning or end 
+of the current file.
+
+@item
+@item Ctrl-Shft-V
+@tab View Clipboard History
+@tab Emacs keeps a history of the most recent bits of text 
+you have put in the clipboard.  So use Ctrl-V to paste the current
+contents of the clipboard, but Ctrl-Shft-V to view the history of past
+contents of the clipboard; then hit Return to select the bit you want to
+paste.
+
+@item
+@item Ctrl-@@
+@tab Insert char 
+@tab Insert literally the next character typed, even if it is a control character.
+
+@end multitable
+
+@noindent
+Here are some keys for dragging text around, which in some cases may be
+handier than cutting and pasting:
+
+@multitable @columnfractions .2 .2 .6
+@headitem Key @tab Command @tab Description
+
+@item Ctrl-Alt-Up
+@tab Drag line up
+@tab Drag the current line up by one line, or if text is selected drag up all lines
+selected, rounding up selection to whole lines.
+
+@item
+@item Ctrl-Alt-Down
+@tab Drag line down
+@tab Drag the current line down by one line, or if text is selected drag down all lines
+selected, rounding up selection to whole lines
+
+@item
+@item Ctrl-Alt-Left
+@tab Drag word left
+@tab Drag the current word left by one word, or if text is selected drag all words
+selected, rounding up selection to whole words.
+
+@item
+@item Ctrl-Alt-Right
+@tab Drag word right
+@tab Drag the current word right by one word, or if text is selected drag all words
+selected, rounding up selection to whole words.
+
+@item
+@item C-A-Shft-Left
+@tab Drag left by character
+@tab Drag the current character left by one character, or if text is selected drag all text
+selected by one character.
+
+@item
+@item C-A-Shft-Right
+@tab Drag right by character
+@tab Drag the current character right by one character, or if text is selected drag all text
+selected by one character.
+
+
+@end multitable
+
+@endpagenote
+
+@node Miscellaneous Commands
+@unnumbered Miscellaneous Commands
+
+@multitable @columnfractions .2 .2 .6
+@headitem Key @tab Command @tab Description
+
+@item F10
+@tab Browse Menus
+@tab A keyboard shortcut that allows you to browse the menus at the top
+of the screen with the arrow keys.
+
+@item
+@item Shft-F10
+@tab Insert Unicode
+@tab Insert a Unicode glyph by providing its name at the prompt (use the
+Tab key for suggestions and completion).
+
+@item
+@item Alt-Q
+@tab Wrap Paragraph
+@tab Re-wrap and re-format the current paragraph
+
+@item
+@item Alt-Shft-Q
+@tab Unwrap Paragraph
+@tab Put paragraph all on one line
+
+@item
+@item Alt-L
+@tab Lowercase Word / Region
+@tab Make the rest of the word, from the cursor onward, lowercase; if
+text is selected, make all text in that selection lowercase.  With the
+shift key, operates on the previous word.
+
+@item
+@item Alt-U
+@tab Uppercase Word / Region
+@tab Make the rest of the word, from the cursor onward, uppercase; if
+text is selected, make all text in that selection uppercase. With the
+shift key, operates on the previous word.
+
+@item
+@item Alt-C
+@tab Capitalize Word / Region
+@tab Make the rest of the word, from the cursor onward, lowercase with
+the first letter uppercase; if text is selected, make all words in that
+selection lowercase with uppercase first letters.  With the
+shift key, operates on the previous word.
+
+@item
+@item Ctrl-E
+@tab Exchange Case
+@tab Change the case of the letter after the cursor from upper to lower
+or vice-versa, and move on character forward.
+
+@item
+@item Ctrl-Shft-E
+@tab Invert Case Backward
+@tab Change the case of the letter before the cursor from upper to lower
+or vice-versa, and move one character backward.
+
+@item
+@item Ctrl-/
+@tab Bounce Expression
+@tab Move from the beginning to the end or from the end to the beginning
+of a balanced expression, such as one enclosed by () [] or @{@}
+
+@item
+@item Alt-/
+@tab Browse to URL
+@tab When the cursor is on a URL, open it in the default browser
+
+@item
+@item Alt-G
+@tab Goto Line
+@tab Prompts for a line number to go to. 
+
+@item
+@item Alt-`
+@tab Next Error
+@tab When the window is split because you are looking at the result of a
+command such as compile, grep or locate, this command will go to the
+next location in that result where there was an error, or the text you
+were looking at was found, etc.  If there are no such results visible,
+then when editing a LaTeX file, this will move to the next TeX error; in
+an XML file, it will move to the next validation error.
+
+@item
+@item Ctrl-`
+@tab Previous Error
+@tab As above, but goes to the previous result or error.
+
+@item
+@item Ctrl-Break
+@tab Suspend
+@tab Suspend Emacs, iconifying it if in a windowing system, putting it
+in the background in a terminal emulator.
+
+@end multitable
+
+@endpagenote
+
+@node Commands for help and finding files (F1)
+@unnumbered Commands for help and finding files (F1)
+
+@multitable @columnfractions .2 .2 .6
+@headitem Key @tab Command @tab Description
+
+@item F1
+@tab Open File
+@tab Open file, selecting it not with a dialog box, but with prompt at
+the bottom of the screen.  At the prompt, type the name of a file or
+directory.  Use the Tab key to auto-complete file and directory names.
+Just hit return to get a selectable listing of the files in the current
+folder.
+
+@item
+@item Shft-F1
+@tab Contextual Help
+@tab Show help on the element near the cursor.  Only some file-types
+implement this.
+
+@item
+@item Alt-F1
+@tab Open Recent File
+@tab Show a menu of recently opened files; hit return to open the
+selected file.
+
+@item
+@item Shft-Alt-F1
+@tab Help
+@tab Show the main Easymacs help page
+
+@item
+@item Ctrl-F1
+@tab Insert File
+@tab Like open file, but insert the contents of another file into the
+current file.
+
+@item
+@item Shft-Ctrl-F1
+@tab Locate File
+@tab Locate a file on disk by typing its name.  Requires the locate
+command and its database to be installed.
+
+@item
+@item Ctrl-h
+@tab Emacs Help
+@tab Access the Emacs help system with Ctrl-h.  Be aware that many
+keystrokes it describes are different from Easymacs, and it uses a
+different vocabulary to describe things.
+
+@end multitable
+
+@endpagenote
+
+@node Bookmark Operations (F2)
+@unnumbered Bookmark Operations (F2)
+
+@multitable @columnfractions .2 .2 .6
+@headitem Key @tab Command @tab Description
+
+@item
+@item F2
+@tab Next Bookmark
+@tab Go to the next bookmark in the file
+
+@item
+@item Shft-F2
+@tab Previous Bookmark
+@tab Go to the previous bookmark in the file
+
+@item
+@item Alt-F2
+@tab Toggle Bookmark
+@tab Set or unset bookmark at current line
+
+@item 
+@item Ctrl-F2
+@tab List Bookmarks
+@tab Display a menu of previously named bookmarks
+
+@item
+@item Shft-Ctrl-F2
+@tab Name Bookmark
+@tab Set a named bookmark at the current position
+
+@end multitable
+
+@endpagenote
+
+@node Search and Replace Operations (F3)
+@unnumbered Search and Replace  Operations (F3)
+
+The main keys are Ctrl-F (find) and Ctrl-R (replace), explained above.
+
+@multitable @columnfractions .2 .2 .6
+@headitem Key @tab Command @tab Description
+
+@item F3
+@tab Search Word
+@tab Search forward for the word under the cursor.  If you are already doing
+a search, F3 will repeat the search forward.
+
+@item
+@item Shft-F3
+@tab Search Word Backward
+@tab As above, but backward through the file.
+
+@item
+@item Alt-F3
+@tab Replace Regexp
+@tab Search for a regular expression and replace it forward from the cursor
+position to the end of the file, or if text is selected, within the
+selected text; do not ask for confirmation.
+
+@item
+@item Shft-Alt-F3
+@tab Confirm Replace Regexp
+@tab As above, but ask for confirmation before making each change.
+
+@item
+@item Ctrl-F3
+@tab Occur Lines
+@tab Show a menu of all of the lines in the current file that match a pattern
+(regular expression). You can switch to the menu (with Shft-F4) and
+then hit Return or use the mouse to jump to each corresponding line in
+the file, but even easier is to use Alt-` (next-error) to go to each
+location in turn.
+
+@end multitable
+
+@endpagenote
+
+@node Window Operations (F4)
+@unnumbered Window Operations (F4)
+
+@multitable @columnfractions .2 .2 .6
+@headitem Key @tab Command @tab Description
+
+@item F4
+@tab Unsplit Window
+@tab If the window is divided, expand whichever part the
+cursor is in to take up the whole window.
+
+@item
+@item Shft-F4
+@tab Other Windowpane
+@tab If the window is divided, switch cursor to the next pane
+of a divided window.
+
+@item
+@item Ctrl-F4
+@tab Close File
+@tab Close the current file; if you have any unsaved changes 
+in this file, you will be prompted to save them.  The next open file
+will appear in the window instead.
+
+@item
+@item Alt-F4
+@tab Exit Emacs
+@tab Exit Emacs; if you have any unsaved changes in any open 
+file, you will be prompted to save them.
+
+@item
+@item Shft-Ctrl-F4
+@tab Split Window Vertical
+@tab Split the window so that two views of the same file appear one next to
+the other.  You can then compare two parts of the same file
+side-by-side, or by switching one of the files, compare two files side
+by side.  This splitting can also be done by holding the Ctrl key and
+clicking the middle mouse button on the status line near the bottom of
+the window.
+
+@item
+@item Shft-Alt-F4
+@tab Split Window Horizontal
+@tab Split the window so that two views of the same file appear one above the
+other.  This can also be done by holding the Ctrl key and clicking the
+middle mouse button on the scroll bar.
+
+@end multitable
+
+@endpagenote
+
+@node Text Shortcuts (F5)
+@unnumbered Text Shortcuts (F5)
+
+@multitable @columnfractions .2 .2 .6
+@headitem Key @tab Command @tab Description
+
+@item F5
+@tab Complete Word
+@tab Complete the current word, cycling through alternatives 
+(if you go past the word you want, use Ctrl-Z (undo).  It looks for
+words in the current file, then in other open files.
+
+@item
+@item Shft-F5
+@tab Duplicate Line
+@tab Duplicate the current line, or if an area is currently highlighted,
+duplicate that.
+
+@item
+@item Ctrl-F5
+@tab Character Above
+@tab Duplicate the character from the line above, 
+and move one character forward.
+
+@item
+@item Shft-Ctrl-F5
+@tab Character Below
+@tab Duplicate the character from the line below, and move one character 
+forward.
+
+@item
+@item Alt-Shft-F5
+@tab Begin Macro
+@tab Begin recording a keyboard macro.  If you want to automate a
+repetitive process, hit Alt-Shft-F5, perform the actions you wish to
+repeat, then Alt-F5 to stop recording the macro.  If necessary, move the
+cursor and then hit Alt-F5 again to replay the recorded actions.
+
+@item
+@item Alt-F5
+@tab Execute/End Macro
+@tab If currently recording a keyboard macro, end the recording; if not,
+begin executing the macro.
+
+@end multitable
+
+@endpagenote
+
+@node Commenting; appending and prepending (F6)
+@unnumbered Commenting; appending and prepending (F6)
+
+@multitable @columnfractions .2 .2 .6
+@headitem Key @tab Command @tab Description
+
+@item F6
+@tab Toggle Comment
+@tab If current line is commented out, uncomment it; if uncommented,
+comment it; or do this for all lines in the currently selected area.
+
+@item
+@item Shft-F6
+@tab Duplicate and Comment
+@tab Duplicate and comment out the current line or all lines in the currently
+selected area.
+
+@item
+@item Alt-F6
+@tab Append
+@tab Append text to the current line, or to all lines in the selected area.
+
+@item
+@item Shft-Alt-F6
+@tab Unappend
+@tab Remove appended text from the current line, or from all lines in the
+selected area.
+
+@item
+@item Ctrl-F6
+@tab Prepend
+@tab Prepend text to the current line, or to all lines in the selected area.
+
+@item
+@item Shft-Ctrl-F6
+@tab Unprepend
+@tab Remove prepended text from the current line, or from all lines in the
+selected area.
+
+@end multitable
+
+@endpagenote
+
+@node Folding and Outlines (F7)
+@unnumbered Folding and Outlines (F7)
+
+@multitable @columnfractions .2 .2 .6
+@headitem Key @tab Command @tab Description
+
+@item F7
+@tab Toggle Fold
+@tab If on a closed fold, open it; else close the fold at the cursor
+
+@c @item
+@c @item Shft-F7
+@c @tab 
+@c @tab 
+
+@item
+@item Alt-F7
+@tab Fold All
+@tab Hide all folds in the file or selected region.
+
+@item
+@item Shft-Alt-F7
+@tab Unfold All
+@tab Show all folds in the file or selected region.
+
+@item
+@item Ctrl-F7
+@tab Next Heading
+@tab Go to the next heading in the file (only for file-types where 
+that is meaningful).
+
+@item
+@item Shft-Ctrl-F7
+@tab Previous Heading
+@tab Go to the previous heading in the file.
+
+@end multitable
+
+@endpagenote
+
+@node Spelling (F8)
+@unnumbered Spelling (F8)
+
+@multitable @columnfractions .2 .2 .6
+@headitem Key @tab Command @tab Description
+
+@item F8
+@tab Fix Misspelling
+@tab If a word at or before the cursor is indicated to be misspelled
+with red color and underlining, you can use this to change it to a
+suggested spelling, and again to get the next suggested spelling, and so
+on.  This is very handy when you discover a simple misspelling after
+typing on for a bit, since you don't have to move the cursor there and
+back to fix it.  It will not change words that are in yellow to indicate
+unknown words that are used more than once in the file.
+
+@item Shft-F8
+@tab Suggest Spelling
+@tab When you have typed the beginning of a word, you can use this to
+suggest various ways of finishing it.
+
+@item
+@item Alt-F8
+@tab Dictionary Lookup
+@tab Look up the current word in a dictionary.  Uses a dict server on
+the local computer, if one is running, otherwise connects to
+www.dict.org
+
+@item
+@item Alt-Shft-F8
+@tab Change Dictionary
+@tab Switch spellchecking dictionary to a different language or
+dialect. Hit Tab at the prompt to get a list of installed
+dictionaries.
+
+@item
+@item Ctrl-F8
+@tab Spellcheck File
+@tab Ordinarily, words are only marked as misspelled as the cursor
+passes near them; this command runs from beginning to end of the file
+(or selected region), marking all unknown words.
+
+@item
+@item Ctrl-Shft-F8
+@tab Spellcheck File
+@tab Spellcheck not by underlining misspellings, but by running through
+the text of the file or selected region, prompting for what to do for
+each suspected misspelling.
+
+@end multitable
+
+@endpagenote
+
+@node Managing Open Files (F9)
+@unnumbered Managing Open Files (F9)
+
+@multitable @columnfractions .2 .2 .6
+@headitem Key @tab Command @tab Description
+
+@item
+@item F9
+@tab Show Open Files
+@tab Display a list of open files.  You can switch to any of them by moving
+the cursor to its line and hitting Return, or with the mouse.  
+
+@item
+@item Shft-F9
+@tab Select Open File
+@tab Another way of switching among open files.  A list of open files is
+displayed on the bottom of the screen, and you can type any part of the
+name of any one of them; as you type, the list is narrowed down to only
+those files that match what you type.  When the file you want moves to
+the head of the list, hit Return to switch to it.
+
+@item
+@item Ctrl-F9
+@tab Speedbar
+@tab Another way of switching open files.  A new window pops up either
+showing a list of files in the same folder or directory as the current
+file (hit @key{f} to get this, or showing a list of currently open files
+(hit @key{b} for `buffers' to get this).  This list can also show
+subsections within many types of file; use the @key{+} and @key{-} keys
+to expand and collapse the display of sub-categories.  Use @key{Enter}
+to switch to a given file or part thereof, and @key{q} to get rid of the
+window.
+
+@item
+@item Alt-F9
+@tab Eshell
+@tab Start a command shell in the folder or directory of the current
+file.  If there is a shell open, switch to it and change to the working
+directory of the current file.
+
+@item
+@item Shft-Ctrl-F9
+@tab grep
+@tab Search for text in files on disk; use Alt-`, or Return or the mouse
+to select one.  Only works if you have the `grep' program installed on
+your computer.  In LaTeX files, this searches for text in all files that
+belong to the current document.
+
+@end multitable
+
+@endpagenote
+
+@node Commands for Specific File-types (F10-F12)
+@unnumbered Commands for Specific File-types (F10-F12)
+
+
+@noindent
+With the exception of unmodified F10, function keys F10-F12 are mostly
+reserved for functions that are specific to the particular type of file
+being edited.  If nothing else is defined for a particular file-type,
+the default is that F12 compiles and F11 runs.  Note also that for some
+types of files, Shft-F1 produces context-sensitive help.
+
+@noindent
+F10 on its own is the key that allows you to navigate the menus with the
+keyboard; but note that this does not yet work under GTK for GNU/Linux.
+
+
+@noindent
+Here are the file-types for which there are special keys:
+
+@menu
+* LaTeX files::
+* XML files::
+* Directory listings::
+@end menu
+
+@node LaTeX files
+@unnumberedsec LaTeX files
+
+@multitable @columnfractions .2 .2 .6
+@headitem Key @tab Command @tab Description
+
+@item F12
+@tab latex
+@tab Run latex or pdflatex on the current document without prompting.
+
+@item
+@item Shft-F12
+@tab Command
+@tab Suggests the next command to run on the document, based on the
+output of the last run, eg. bibtex or run (pdf)latex again to resolve
+references.
+
+@item
+@item Alt-F12
+@tab dvips
+@tab Run dvips on the .dvi file associated with the current document
+
+@item
+@item Ctrl-F12
+@tab Toggle PDF
+@tab Toggle whether to generate and view PDF files or DVI files.
+
+@item
+@item Shft-Alt-F12
+@tab latex/dvips
+@tab Run latex and dvips on the current document
+
+@item
+@item F11
+@tab View
+@tab In DVI mode, view the output of the current file with xdvi or
+(on Windows) yap; in PDF mode, view it with Acrobat Reader or (on Mac OS
+X) Preview.
+
+@item
+@item Shft-F11
+@tab View log
+@tab View the terminal output of the currently running process
+
+@item
+@item Alt-F11
+@tab View postscript
+@tab View the .ps output of the current file with gv.
+
+@item
+@item Ctrl-F10
+@tab Insert skeleton
+@tab Insert the bare bones of a LaTeX document of various types; you are
+prompted for the sort of document you want.
+
+@item
+@item Alt-F10
+@tab Insert environment
+@tab Insert a new environment, with prompt.
+
+@item
+@item Shft-Alt-F10
+@tab Change environment
+@tab Change the current environment, with prompt.
+
+@item
+@item Shft-Return
+@tab Complete
+@tab If you have typed the first few letters of a LaTeX command, this
+will show you the possible completions.  If the cursor is not just after
+something beginning with a backslash, it will close the current environment.
+
+@item
+@item Ctrl-e
+@tab Emph
+@tab Put \emph@{@} around text (this overrides the usual meaning, which
+is to change the case of the current letter).
+
+@item
+@item Ctrl-b
+@tab Bold
+@tab Put \textbf@{@} around text.
+
+@item
+@item Ctrl-p
+@tab Small Cap
+@tab Put \textsc@{@} around text (for small caPs).
+
+@item
+@item Ctrl-_
+@tab Underline
+@tab Put \uline@{@} around text (requires the ulem package).
+
+@item
+@item Alt-f
+@tab Footnote
+@tab Put \footnote@{@} around text (requires the ulem package).
+
+@item
+@item Shft-F1
+@tab Contextual Help
+@tab Gives help on the usage of the LaTeX command near the cursor
+
+@item
+@item Ctrl-''
+@tab Correct quotes
+@tab Easymacs puts smart quotes in for you when you type a straight
+quotation mark (when you really need a straight one, type it twice).
+But if you paste some text in from a non-LaTeX document, you may need to
+correct the quotes in it.  This function changes straight quotes to
+smart ones from the cursor forward, or within the currently selected text.
+
+@end multitable
+
+@noindent
+In a LaTeX file, the grep command (Shft-Ctrl-F9) runs by default not on
+the current directory, but only on those files that comprise the current
+document.
+
+
+@node XML files
+@unnumberedsec XML files
+
+@multitable @columnfractions .2 .2 .6
+@headitem Key @tab Command @tab Description
+
+@item
+@item Shft-Return
+@tab Complete
+@tab Auto-complete the markup, based on what is legal at that point,
+according to the schema.
+
+@item F12
+@tab Toggle script
+@tab If you are editing an xhtml file with a
+php/css/javascript/etc. block, then pressing this key while inside
+such a block will hide the rest of the file, and show you just that
+block with proper coloring, indentation help, etc. for that language.
+Hit the same key again, and you will be returned to the whole file,
+viewed again as xhtml.  
+
+@item
+@item Shft-F12
+@tab Close Element
+@tab Insert a closing tag for the current element.
+
+@item
+@item Ctrl-F12
+@tab Finish Element
+@tab If in a start-tag, complete the tag, and provide a matching close
+tag on the next line.
+
+@item
+@item Shft-Ctrl-F12
+@tab Finish Element
+@tab As above, but in-line.
+
+@item
+@item Alt-F12
+@tab Auto-markup
+@tab This command attempts to find a tag to put around the word before
+the cursor based on the contents of the current file.
+
+@item
+@item Alt-Shft-F12
+@tab Split Element
+@tab Split current element at cursor into two similar elements.
+
+@item
+@item F11
+@tab Render
+@tab Launch a browser, and view the XML (or XHTML) file rendered.
+
+@item
+@item Shft-F11
+@tab Transform
+@tab Run the current document through an XSLT processor.  Will look for
+xsltproc, Xalan, and Saxon in that order.  If the current file looks
+like a TEI document, suggest running one of the TEI stylesheets for
+conversion to HTML, LaTeX or FO.
+
+@item
+@item Ctrl-F11
+@tab Reload Schema
+@tab If you have edited the schema against which the current document is
+being validated, this will reload it.
+
+@item
+@item Shft-Ctrl-F11
+@tab Edit Schema
+@tab Open the schema associated with the current file for editing.
+
+@item
+@item Alt-F11
+@tab Tag area
+@tab Insert an opening and closing tag around the currently selected text.
+
+@item
+@item Shft-F10
+@tab Insert Unicode
+@tab Insert a Unicode character by its full name (use the Tab key for
+suggestions and completion).
+
+@item
+@item Shft-Alt-F10
+@tab Insert Unicode
+@tab Insert a Unicode character by its short name (iso8879 name: e.g. eacute).
+
+@item
+@item Ctrl-F10
+@tab TEI Skeleton
+@tab Insert the beginning of a document marked up according to the
+guidelines of the Text Encoding Initiative.
+
+@item
+@item Alt-F10
+@tab Show Path
+@tab Show all ancestor elements of the current element.
+
+@item
+@item Shft-F1
+@tab Contextual Help
+@tab Looks up the current element in the TEI P5 Guidelines, and shows
+the relevant documentation in a browser.
+
+@item
+@item Alt-P
+@tab Insert Paragraph
+@tab Insert a <p></p> pair.
+
+@end multitable
+
+
+@node Directory listings
+@unnumberedsec Directory listings
+
+@multitable @columnfractions .2 .2 .6
+@headitem Key @tab Command @tab Description
+
+@item F12
+@tab Hide/Show
+@tab Toggle hiding of ``uninteresting'' files in the current directory.
+
+@item
+@item r
+@tab Edit Filenames
+@tab This is a powerful and potentially dangerous command that enables
+you to edit the names of files in a directory.  Hit Ctrl-C twice when
+you are finished to write the changes to the names of the files on disk.
+
+@item
+@item s
+@tab Sort
+@tab Hit ``s'', and then the next key changes the sorting criterion: s
+for size, x for extension, t for time, n for name.  Capitalize the
+letter to sort in reverse.
+
+@end multitable
+
+@node Numeric Keypad
+@unnumbered Numeric Keypad
+
+For those of us who rarely have to enter many numbers into text files,
+the numeric keypad is a bit of a waste.  The keyboard shortcuts in this
+section are not enabled by default; you must use the Pause key to turn
+them on.  Below, KP- stands for ``Keypad''. 
+
+@multitable @columnfractions .2 .2 .6
+@headitem Key @tab Command @tab Description
+
+@item Pause
+@tab Toggle keypad
+@tab Switch between using the numeric keypad for math, and for the
+convenience commands listed below.  Your current preference is stored
+for future sessions.  Shft-Pause will show the current status.
+
+@item KP-Enter
+@tab Save
+@tab Save the current file (same as Ctrl-S).
+
+@item
+@item KP-Plus
+@tab Find
+@tab Search forward (same as Ctrl-F).
+
+@item
+@item KP-Minus
+@tab Find Backward
+@tab Search backward (same as Shft-Ctrl-F).
+
+@item
+@item KP-.
+@tab Toggle accents
+@tab Turn on and off a special way of inserting characters not present
+on your keyboard.  When this mode is enabled, for example, "u produces
+u-umlaut, 'e produces e-acute, ~!  produces the upside-down exclamation
+mark, /o gives o with a diagonal stroke, and so forth.  Your operating
+or windowing system may also provide another way of entering such
+characters.
+
+@item
+@item Shft-KP-.
+@tab Unsafe Char
+@tab After pasting in text from somewhere else, there may be characters
+that cannot be represented correctly in the encoding of the current
+file.  Instead of presenting gibberish, Emacs complains when you try to
+save the file.  This command moves to the next character that does not
+fit in the current encoding.
+
+@item
+@item Ctrl-KP-.
+@tab Insert char 
+@tab Insert literally the next character typed, even if it is a control character.
+
+@item
+@item Alt-KP-.
+@tab Repeat 
+@tab Repeat the last command, which may have been complex, such as a search
+and replace.
+
+@item
+@item KP-0
+@tab Wrap Paragraph
+@tab A shortcut for Alt-q, which re-wraps and re-indents the current paragraph.
+
+@item
+@item Alt-KP-0
+@tab Show Blanks
+@tab Make whitespace visible (toggle).
+
+@item
+@item Ctrl-KP-0
+@tab Line Numbers
+@tab Show line numbers (toggle).
+
+@item
+@item KP-8, 2
+@tab Scroll Text
+@tab The 8 or 2 keys on the keypad (which often have up and down arrows on them)
+arrows scrolls the text up or down, relative to the cursor, by one line.
+
+@item
+@item KP-4, 6
+@tab Switch file
+@tab The 6 or 4 keys on the keypad (which often have right and left arrows on them)
+circulate through the list of open files in either direction (like
+Ctrl-Tab and Ctrl-Shft-Tab).
+
+@item
+@item KP-5
+@tab Show position
+@tab If you want to cycle through the open files with KP-4 and 6, but
+don't know which direction to head in to find the file you want, this
+will display the next and previous files at the bottom of the screen.
+
+@item
+@item KP-7, 1
+@tab Start/End of file
+@tab The 7 or 1 keys on the keypad (which often have Home and End on them)
+go to the start and end of the current file (like Ctrl-Home/End).
+
+@item
+@item KP-9, 3
+@tab Top/Bottom of screen
+@tab The 9 or 3 keys on the keypad (which often have PgUp and PgDown on them)
+go to the top and bottom of the screen (like Ctrl-PgUp/PgDown).
+
+@item
+@item Alt-KP--
+@tab Align Columns
+@tab Align the selected text into minimally-separated columns, as defined by whitespace.
+
+@item
+@item Alt-KP-+
+@tab Align Columns
+@tab As above, but do not minimize whitespace.
+
+
+@item
+@item KP-*
+@tab Toggle Case
+@tab Invert the case of the current letter, and move to the next (like Ctrl-E).
+
+@item
+@item Shft-KP-*
+@tab Toggle Case
+@tab As above, but moving backwards (like Ctrl-Shift-E).
+
+@item
+@item Shft-KP-/
+@tab Bounce Paren
+@tab If on a parenthesis or brace, move to the matching one (like Ctrl-/).
+
+
+@end multitable
+
+
+@node Advanced Topics
+@unnumbered Advanced Topics
+
+@menu
+* Selecting Rectangles::
+@end menu
+
+
+@node Selecting Rectangles
+@unnumberedsec  Selecting Rectangles
+
+There are advanced facilities available for selecting columns of text,
+or arbitrary rectangles, and working with them, but this section will
+only give a quick introduction.
+
+Ctrl-Return turns rectangle mode on and off again; one you start it,
+you can extend the selection by moving the cursor.  The cut and copy
+commands work as you would expect.
+
+To insert the same text in a whole series of lines, select a column and
+type the text.
+
+
+
+
+@bye

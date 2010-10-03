@@ -1,0 +1,138 @@
+Generated File. Do not edit.
+
+[HEADER]
+Version:0.11:$
+
+[PLUGINS]
+skypebuttons.so:$
+/usr/lib/mozilla/plugins/skypebuttons.so:$
+:$
+1275688784000:1:5:$
+Mime Type x-skype for Skype Buttons:$
+Skype Buttons for Kopete:$
+1
+0:application/x-skype:Skype Buttons::$
+IcedTeaPlugin.so:$
+/usr/lib/jvm/java-6-openjdk/jre/lib/i386/IcedTeaPlugin.so:$
+:$
+1271270245000:1:5:$
+The IcedTea NPR Web Browser Plugin (using IcedTea6 1.8 (ArchLinux-6.b18_1.8-1-i686)) executes Java applets.:$
+IcedTea NPR Web Browser Plugin (using IcedTea6 1.8 (ArchLinux-6.b18_1.8-1-i686)):$
+34
+0:application/x-java-vm:IcedTea:class,jar:$
+1:application/x-java-applet:IcedTea:class,jar:$
+2:application/x-java-applet;version=1.1:IcedTea:class,jar:$
+3:application/x-java-applet;version=1.1.1:IcedTea:class,jar:$
+4:application/x-java-applet;version=1.1.2:IcedTea:class,jar:$
+5:application/x-java-applet;version=1.1.3:IcedTea:class,jar:$
+6:application/x-java-applet;version=1.2:IcedTea:class,jar:$
+7:application/x-java-applet;version=1.2.1:IcedTea:class,jar:$
+8:application/x-java-applet;version=1.2.2:IcedTea:class,jar:$
+9:application/x-java-applet;version=1.3:IcedTea:class,jar:$
+10:application/x-java-applet;version=1.3.1:IcedTea:class,jar:$
+11:application/x-java-applet;version=1.4:IcedTea:class,jar:$
+12:application/x-java-applet;version=1.4.1:IcedTea:class,jar:$
+13:application/x-java-applet;version=1.4.2:IcedTea:class,jar:$
+14:application/x-java-applet;version=1.5:IcedTea:class,jar:$
+15:application/x-java-applet;version=1.6:IcedTea:class,jar:$
+16:application/x-java-applet;jpi-version=1.6.0_18:IcedTea:class,jar:$
+17:application/x-java-bean:IcedTea:class,jar:$
+18:application/x-java-bean;version=1.1:IcedTea:class,jar:$
+19:application/x-java-bean;version=1.1.1:IcedTea:class,jar:$
+20:application/x-java-bean;version=1.1.2:IcedTea:class,jar:$
+21:application/x-java-bean;version=1.1.3:IcedTea:class,jar:$
+22:application/x-java-bean;version=1.2:IcedTea:class,jar:$
+23:application/x-java-bean;version=1.2.1:IcedTea:class,jar:$
+24:application/x-java-bean;version=1.2.2:IcedTea:class,jar:$
+25:application/x-java-bean;version=1.3:IcedTea:class,jar:$
+26:application/x-java-bean;version=1.3.1:IcedTea:class,jar:$
+27:application/x-java-bean;version=1.4:IcedTea:class,jar:$
+28:application/x-java-bean;version=1.4.1:IcedTea:class,jar:$
+29:application/x-java-bean;version=1.4.2:IcedTea:class,jar:$
+30:application/x-java-bean;version=1.5:IcedTea:class,jar:$
+31:application/x-java-bean;version=1.6:IcedTea:class,jar:$
+32:application/x-java-bean;jpi-version=1.6.0_18:IcedTea:class,jar:$
+33:application/x-java-vm-npruntime:::$
+libnpsoplugin.so:$
+/usr/lib/openoffice/program/libnpsoplugin.so:$
+:$
+1270295244000:1:5:$
+OpenOffice.org Plug-in handles all its documents:$
+OpenOffice.org Plug-in:$
+30
+0:application/vnd.stardivision.calc:StarCalc 3.0 - 5.0:sdc:$
+1:application/vnd.stardivision.chart:StarChart 3.0 - 5.0:sds:$
+2:application/vnd.stardivision.draw:StarDraw 3.0 - 5.0:sda:$
+3:application/vnd.stardivision.impress:StarImpress 3.0 - 5.0:sdd:$
+4:application/vnd.stardivision.impress-packed:StarImpress-packed 3.0 - 5.0:sdp:$
+5:application/vnd.stardivision.math:StarMath 3.0 - 5.0:smf:$
+6:application/vnd.stardivision.writer:StarWriter Template 3.0 - 5.0:vor:$
+7:application/vnd.stardivision.writer-global:StarWriter Global 3.0 - 5.0:sgl:$
+8:application/vnd.staroffice.writer:StarWriter 3.0 - 5.0:sdw:$
+9:application/vnd.sun.xml.calc:StarOffice 6.0/7 Spreadsheet:sxc:$
+10:application/vnd.sun.xml.calc.template:StarOffice 6.0/7 Spreadsheet Template:stc:$
+11:application/vnd.sun.xml.draw:StarOffice 6.0/7 Drawing:sxd:$
+12:application/vnd.sun.xml.draw.template:StarOffice 6.0/7 Drawing Template:std:$
+13:application/vnd.sun.xml.impress:StarOffice 6.0/7 Presentation:sxi:$
+14:application/vnd.sun.xml.impress.template:StarOffice 6.0/7 Presentation Template:sti:$
+15:application/vnd.sun.xml.math:StarOffice 6.0/7 Formula:sxm:$
+16:application/vnd.sun.xml.writer:StarOffice 6.0/7 Text Document:sxw:$
+17:application/vnd.sun.xml.writer.global:StarOffice 6.0/7 Master Document:sxg:$
+18:application/vnd.sun.xml.writer.template:StarOffice 6.0/7 Text Document Template:stw:$
+19:application/vnd.oasis.opendocument.text:OpenDocument Text:odt:$
+20:application/vnd.oasis.opendocument.text-template:OpenDocument Text Template:ott:$
+21:application/vnd.oasis.opendocument.text-master:OpenDocument Master Document:odm:$
+22:application/vnd.oasis.opendocument.text-web:HTML Document Template:oth:$
+23:application/vnd.oasis.opendocument.spreadsheet:OpenDocument Spreadsheet:ods:$
+24:application/vnd.oasis.opendocument.spreadsheet-template:OpenDocument Spreadsheet Template:ots:$
+25:application/vnd.oasis.opendocument.graphics:OpenDocument Drawing:odg:$
+26:application/vnd.oasis.opendocument.graphics-template:OpenDocument Drawing Template:otg:$
+27:application/vnd.oasis.opendocument.presentation:OpenDocument Presentation:odp:$
+28:application/vnd.oasis.opendocument.presentation-template:OpenDocument Presentation Template:otp:$
+29:application/vnd.oasis.opendocument.formula:OpenDocument Formula:odf:$
+libflashplayer.so:$
+/usr/lib/mozilla/plugins/libflashplayer.so:$
+:$
+1265923249000:1:5:$
+Shockwave Flash 10.0 r45:$
+Shockwave Flash:$
+2
+0:application/x-shockwave-flash:Shockwave Flash:swf:$
+1:application/futuresplash:FutureSplash Player:spl:$
+packagekit-plugin.so:$
+/usr/lib/browser-plugins/packagekit-plugin.so:$
+:$
+0:1:13:$
+Plugin for Installing Applications (new):$
+PackageKit:$
+1
+0:application/x-packagekit-plugin:PackageKit Plugin:bsc:$
+libflashplayer.so:$
+/usr/lib/browser-plugins/libflashplayer.so:$
+:$
+0:1:13:$
+Shockwave Flash 10.0 r45:$
+Shockwave Flash:$
+2
+0:application/x-shockwave-flash:Shockwave Flash:swf:$
+1:application/futuresplash:FutureSplash Player:spl:$
+nppdf.so:$
+/usr/lib/Adobe/Reader9/Browser/intellinux/nppdf.so:$
+:$
+0:1:13:$
+The Adobe Reader plugin is used to enable viewing of PDF and FDF files from within the browser. :$
+Adobe Reader 9.3:$
+5
+0:application/pdf:Portable Document Format:pdf:$
+1:application/vnd.fdf:Acrobat Forms Data Format:fdf:$
+2:application/vnd.adobe.xfdf:XML Version of Acrobat Forms Data Format:xfdf:$
+3:application/vnd.adobe.xdp+xml:Acrobat XML Data Package:xdp:$
+4:application/vnd.adobe.xfd+xml:Adobe FormFlow99 Data File:xfd:$
+skypebuttons.so:$
+/usr/lib/browser-plugins/skypebuttons.so:$
+:$
+0:1:13:$
+Mime Type x-skype for Skype Buttons:$
+Skype Buttons for Kopete:$
+1
+0:application/x-skype:Skype Buttons::$

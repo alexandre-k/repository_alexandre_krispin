@@ -1,0 +1,4482 @@
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdftex 2007.3.30)  25 APR 2007 23:11
+entering extended mode
+ %&-line parsing enabled.
+**/home/pj/easymacs/docs/easymacs.texi
+(/home/pj/easymacs/docs/easymacs.texi
+(/opt/texlive/2007/texmf-dist/tex/texinfo/texinfo.tex
+Loading texinfo [version 2007-01-02.19]:
+\bindingoffset=\dimen16
+\normaloffset=\dimen17
+\pagewidth=\dimen18
+\pageheight=\dimen19
+\outerhsize=\dimen20
+\outervsize=\dimen21
+\cornerlong=\dimen22
+\cornerthick=\dimen23
+\topandbottommargin=\dimen24
+\headlinebox=\box16
+\footlinebox=\box17
+\margin=\insert252
+\EMsimple=\toks12
+\groupbox=\box18
+\groupinvalidhelp=\toks13
+\mil=\dimen25
+\exdentamount=\skip18
+\inmarginspacing=\skip19
+ pdf,
+\tempnum=\count26
+\lnkcount=\count27
+\filename=\toks14
+\filenamelength=\count28
+\pgn=\count29
+\toksA=\toks15
+\toksB=\toks16
+\toksC=\toks17
+\toksD=\toks18
+\boxA=\box19
+\countA=\count30
+\nopdfimagehelp=\toks19
+
+(/opt/texlive/2007/texmf-dist/tex/plain/misc/pdfcolor.tex) fonts,
+\sffam=\fam8
+\textleading=\dimen26
+\fontdepth=\count31
+
+page headings,
+\titlepagetopglue=\skip20
+\titlepagebottomglue=\skip21
+\evenheadline=\toks20
+\oddheadline=\toks21
+\evenfootline=\toks22
+\oddfootline=\toks23
+ tables,
+\tableindent=\dimen27
+\itemindent=\dimen28
+\itemmargin=\dimen29
+\itemmax=\dimen30
+\itemno=\count32
+\multitableparskip=\skip22
+\multitableparindent=\skip23
+\multitablecolspace=\dimen31
+\multitablelinespace=\skip24
+\colcount=\count33
+\everytab=\toks24
+ conditionals,
+\doignorecount=\count34
+ indexing,
+\secondaryindent=\skip25
+\partialpage=\box20
+\doublecolumnhsize=\dimen32
+ sectioning,
+\unnumberedno=\count35
+\chapno=\count36
+\secno=\count37
+\subsecno=\count38
+\subsubsecno=\count39
+\appendixno=\count40
+\absseclevel=\count41
+\secbase=\count42
+\chapheadingskip=\skip26
+\secheadingskip=\skip27
+\subsecheadingskip=\skip28
+ toc,
+\tocfile=\write0
+\contentsrightmargin=\skip29
+\savepageno=\count43
+\lastnegativepageno=\count44
+\tocindent=\dimen33
+ environments,
+\errorbox=\box21
+\lispnarrowing=\skip30
+\envskipamount=\skip31
+\circthick=\dimen34
+\cartouter=\dimen35
+\cartinner=\dimen36
+\normbskip=\skip32
+\normpskip=\skip33
+\normlskip=\skip34
+\lskip=\skip35
+\rskip=\skip36
+\tabw=\dimen37
+
+defuns,
+\defbodyindent=\skip37
+\defargsindent=\skip38
+\deflastargmargin=\skip39
+\parencount=\count45
+\brackcount=\count46
+ macros,
+\paramno=\count47
+\macname=\toks25
+ cross references,
+\auxfile=\write1
+\savesfregister=\count48
+ insertions,
+\footnoteno=\count49
+\SAVEfootins=\box22
+\SAVEmargin=\box23
+
+(/opt/texlive/2007/texmf-dist/tex/generic/epsf/epsf.tex
+This is `epsf.tex' v2.7.3 <23 July 2005>
+\epsffilein=\read0
+\epsfframemargin=\dimen38
+\epsfframethickness=\dimen39
+\epsfrsize=\dimen40
+\epsftmp=\dimen41
+\epsftsize=\dimen42
+\epsfxsize=\dimen43
+\epsfysize=\dimen44
+\pspoints=\dimen45
+)
+\noepsfhelp=\toks26
+ localization,
+\nolanghelp=\toks27
+\countUTFx=\count50
+\countUTFy=\count51
+\countUTFz=\count52
+ formatting,
+\defaultparindent=\dimen46
+ and turning on texinfo input format.)
+(./easymacs.aux)
+\openout1 = `easymacs.aux'.
+
+@cpindfile=@write2
+@fnindfile=@write3
+@vrindfile=@write4
+@tpindfile=@write5
+@kyindfile=@write6
+@pgindfile=@write7
+ (Easymacs)
+\openout0 = `easymacs.toc'.
+
+ (Using Emacs) [1
+\openout2 = `easymacs.cp'.
+
+\openout3 = `easymacs.fn'.
+
+\openout4 = `easymacs.vr'.
+
+\openout5 = `easymacs.tp'.
+
+\openout6 = `easymacs.ky'.
+
+\openout7 = `easymacs.pg'.
+
+{/opt/texlive/2007/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (The Macintos
+h Keyboard) [2]
+(Basic File commands) [3]
+Underfull \hbox (badness 10000) in paragraph at lines 128--131
+ @textrm Start a new file. You will be prompted to give it a
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm t
+.@textrm a
+.@textrm r
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--131
+ @textrm name, so that Emacs will know what sort of file it
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm n
+.@textrm a
+.@textrm m
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--131
+ @textrm is, and will be able to give you the help
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm i
+.@textrm s
+.@textrm ,
+.@glue 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--142
+ @textrm Like open file, but in-sert the con-tents of an-other
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm L
+.@textrm i
+.@textrm k
+.@kern-0.30418
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--149
+ @textrm Save the file to disk. If the file has been changed
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm a
+.@kern-0.30418
+.@textrm v
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--149
+ @textrm since the last time it was saved, there will be two
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm s
+.@textrm i
+.@textrm n
+.@textrm c
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--149
+ @textrm as-ter-isks on the left side of the sta-tus bar at the
+
+@hbox(7.60416+0.0)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm a
+.@textrm s
+.@discretionary
+..@textrm -
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+ @textrm Save cur-rent file un-der a new name, and switch to
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm a
+.@kern-0.30418
+.@textrm v
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--160
+ @textrm Save all open, mod-i-fied files, prompt-ing to ask
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm a
+.@kern-0.30418
+.@textrm v
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--160
+ @textrm about each file that has been changed since it was
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm a
+.@textrm b
+.@kern0.30417
+.@textrm o
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--171
+ @textrm Close all open, un-mod-i-fied files, with-out quit-ting
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm C
+.@textrm l
+.@textrm o
+.@textrm s
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--217
+ @textrm Type a search term at the bot-tom of the screen
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm T
+.@kern-0.30418
+.@textrm y
+.@textrm p
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--217
+ @textrm (it's case-insensitive, un-less you use upper-case
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm (
+.@textrm i
+.@textrm t
+.@textrm '
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--217
+ @textrm let-ters in your search term). As you type let-ters,
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm l
+.@textrm e
+.@textrm t
+.@discretionary
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--217
+ @textrm you can see the progress of the search. If you find
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm y
+.@kern-0.30418
+.@textrm o
+.@textrm u
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--217
+ @textrm what you are look-ing for, hit Re-turn to get out of
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm w
+.@textrm h
+.@textrm a
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--217
+ @textrm search mode, keep-ing the cur-sor where it has
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm s
+.@textrm e
+.@textrm a
+.@textrm r
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--217
+ @textrm ar-rived; or hit es-c-pae to get out of search mode
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm a
+.@textrm r
+.@discretionary
+..@textrm -
+.@textrm r
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--217
+ @textrm and re-turn to where you started. While you are in
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm a
+.@textrm n
+.@textrm d
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--217
+ @textrm search mode, you can hit Ctrl-F again as of-ten as
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm s
+.@textrm e
+.@textrm a
+.@textrm r
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
+ @textrm Find
+
+@hbox(7.60416+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm F
+.@textrm i
+.@textrm n
+.@textrm d
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--228
+ @textrm Find and re-place strings of text from the cur-sor
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm F
+.@textrm i
+.@textrm n
+.@textrm d
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--228
+ @textrm for-ward, or if there is a se-lected re-gion, within that
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm f
+.@textrm o
+.@textrm r
+.@discretionary
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
+ @textrm Confirm
+
+@hbox(7.60416+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm C
+.@textrm o
+.@textrm n
+.@textrm ^^L (ligature fi)
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--239
+ @textrm Print-preview the cur-rent doc-u-ment (re-quires an
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm P
+.@textrm r
+.@textrm i
+.@textrm n
+.etc.
+
+[4] (Motion commands) [5]
+Underfull \hbox (badness 10000) in paragraph at lines 256--259
+ @textrm Hit once to go to the be-gin-ning/end of the line,
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm H
+.@textrm i
+.@textrm t
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--259
+ @textrm and again to go to the be-gin-ning/end of the text
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm a
+.@textrm n
+.@textrm d
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--259
+ @textrm on the line. If the line is longer than one line on
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm o
+.@textrm n
+.@glue(@spaceskip) 3.64961
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--259
+ @textrm the screen, you can hit it sev-eral times
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@textrm h
+.@textrm e
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
+@textrm Ctrl-Home,
+
+@hbox(7.60416+2.12917)x86.72267
+.@textrm C
+.@textrm t
+.@textrm r
+.@textrm l
+.@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 262--263
+ @textrm Beginning/End
+
+@hbox(8.2125+2.73749)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm B
+.@textrm e
+.@textrm g
+.@textrm i
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
+ @textrm Page Up/Page
+
+@hbox(8.2125+2.73749)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm P
+.@kern-0.30418
+.@textrm a
+.@textrm g
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--271
+ @textrm Page up or down through the text, pre-serv-ing your
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm P
+.@kern-0.30418
+.@textrm a
+.@textrm g
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--271
+ @textrm po-si-tion, so that if you page up a few times, you
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm p
+.@kern0.30417
+.@textrm o
+.@discretionary
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--271
+ @textrm can re-turn the cur-sor to the place it started by
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm c
+.@textrm a
+.@textrm n
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--274
+@textrm Ctrl-PgUp,
+
+@hbox(7.60416+2.12917)x86.72267
+.@textrm C
+.@textrm t
+.@textrm r
+.@textrm l
+.@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--275
+ @textrm Top/Bottom of
+
+@hbox(8.2125+2.73749)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm T
+.@kern-0.91252
+.@textrm o
+.@textrm p
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
+@textrm Alt-PgUp,
+
+@hbox(7.60416+2.12917)x86.72267
+.@textrm A
+.@textrm l
+.@textrm t
+.@textrm -
+.@discretionary
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
+ @textrm Scroll other
+
+@hbox(7.60416+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm c
+.@textrm r
+.@textrm o
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--283
+ @textrm When the win-dow is di-vided in two, these
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm W
+.@textrm h
+.@textrm e
+.@textrm n
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--283
+ @textrm com-mands page up or down in the other pane of
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm c
+.@textrm o
+.@textrm m
+.@discretionary
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--283
+ @textrm the win-dow, i.e. the one in which the cur-sor is not
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@textrm h
+.@textrm e
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
+@textrm Alt-Up,
+
+@hbox(7.60416+2.12917)x86.72267
+.@textrm A
+.@textrm l
+.@textrm t
+.@textrm -
+.@discretionary
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
+ @textrm Scroll one line at a time, but keep cur-sor in the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm c
+.@textrm r
+.@textrm o
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--291
+@textrm Ctrl-Up,
+
+@hbox(7.60416+2.12917)x86.72267
+.@textrm C
+.@textrm t
+.@textrm r
+.@textrm l
+.@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
+ @textrm Up/Down
+
+@hbox(8.2125+2.73749)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm U
+.@textrm p
+.@textrm /
+.@textrm D
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
+ @textrm Ctrl with the Up/Down ar-rows moves up or down
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm C
+.@textrm t
+.@textrm r
+.@textrm l
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
+@textrm Ctrl-Alt-Up,
+
+@hbox(7.60416+2.12917)x86.72267
+.@textrm C
+.@textrm t
+.@textrm r
+.@textrm l
+.@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
+ @textrm Move Line
+
+@hbox(7.48248+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm M
+.@textrm o
+.@kern-0.30418
+.@textrm v
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
+ @textrm Move the cur-rent line up or down rel-a-tive to the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm M
+.@textrm o
+.@kern-0.30418
+.@textrm v
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
+@textrm Ctrl-Left,
+
+@hbox(7.60416+2.12917)x86.72267
+.@textrm C
+.@textrm t
+.@textrm r
+.@textrm l
+.@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
+ @textrm Word
+
+@hbox(7.60416+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm W
+.@kern-0.91252
+.@textrm o
+.@textrm r
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 303--305
+ @textrm With the Ctrl key held down, the left or right
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm W
+.@textrm i
+.@textrm t
+.@textrm h
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 303--305
+ @textrm ar-row will move the cur-sor one word to the left or
+
+@hbox(7.60416+0.0)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm a
+.@textrm r
+.@discretionary
+..@textrm -
+.@textrm r
+.etc.
+
+(Insertion and Deletion) [6]
+Underfull \hbox (badness 10000) in paragraph at lines 347--348
+@textrm Alt-Home,
+
+@hbox(7.60416+2.12917)x86.72267
+.@textrm A
+.@textrm l
+.@textrm t
+.@textrm -
+.@discretionary
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 348--349
+ @textrm Delete to
+
+@hbox(7.60416+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm D
+.@textrm e
+.@textrm l
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 349--351
+ @textrm Delete all of the text from the cur-sor to the
+
+@hbox(7.60416+0.0)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm D
+.@textrm e
+.@textrm l
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
+ @textrm View
+
+@hbox(7.48248+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm V
+.@textrm i
+.@textrm e
+.@textrm w
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
+ @textrm Clip-board
+
+@hbox(7.60416+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm C
+.@textrm l
+.@textrm i
+.@textrm p
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--360
+ @textrm Emacs keeps a his-tory of the most re-cent bits of
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm E
+.@textrm m
+.@textrm a
+.@textrm c
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--360
+ @textrm text you have put in the clip-board. So use Ctrl-V
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@textrm e
+.@textrm x
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--360
+ @textrm to paste the cur-rent con-tents of the clip-board, but
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@textrm o
+.@glue(@spaceskip) 3.64961
+.@textrm p
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--360
+ @textrm Ctrl-Shft-V to view the his-tory of past con-tents of
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm C
+.@textrm t
+.@textrm r
+.@textrm l
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--360
+ @textrm the clip-board; then hit Re-turn to se-lect the bit you
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@textrm h
+.@textrm e
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--365
+ @textrm Insert lit-er-ally the next char-ac-ter typed, even if it
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm n
+.@textrm s
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 377--379
+ @textrm Drag the cur-rent line up by one line, or if text is
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm D
+.@textrm r
+.@textrm a
+.@textrm g
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 377--379
+ @textrm se-lected drag up all lines se-lected, round-ing up
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm s
+.@textrm e
+.@discretionary
+..@textrm -
+.@textrm l
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--385
+ @textrm Drag the cur-rent line down by one line, or if text is
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm D
+.@textrm r
+.@textrm a
+.@textrm g
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--385
+ @textrm se-lected drag down all lines se-lected, round-ing up
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm s
+.@textrm e
+.@discretionary
+..@textrm -
+.@textrm l
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--391
+ @textrm Drag the cur-rent word left by one word, or if text
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm D
+.@textrm r
+.@textrm a
+.@textrm g
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--391
+ @textrm is se-lected drag all words se-lected, round-ing up
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm i
+.@textrm s
+.@glue(@spaceskip) 3.64961
+.@textrm s
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--395
+ @textrm Drag word
+
+@hbox(7.60416+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm D
+.@textrm r
+.@textrm a
+.@textrm g
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 395--397
+ @textrm Drag the cur-rent word right by one word, or if text
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm D
+.@textrm r
+.@textrm a
+.@textrm g
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 395--397
+ @textrm is se-lected drag all words se-lected, round-ing up
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm i
+.@textrm s
+.@glue(@spaceskip) 3.64961
+.@textrm s
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
+ @textrm Drag left by
+
+@hbox(7.60416+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm D
+.@textrm r
+.@textrm a
+.@textrm g
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--403
+ @textrm Drag the cur-rent char-ac-ter left by one char-ac-ter, or
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm D
+.@textrm r
+.@textrm a
+.@textrm g
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--403
+ @textrm if text is se-lected drag all text se-lected by one
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm i
+.@textrm f
+.@glue(@spaceskip) 3.64961
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
+ @textrm Drag right by
+
+@hbox(7.60416+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm D
+.@textrm r
+.@textrm a
+.@textrm g
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--409
+ @textrm Drag the cur-rent char-ac-ter right by one char-ac-ter,
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm D
+.@textrm r
+.@textrm a
+.@textrm g
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--409
+ @textrm or if text is se-lected drag all text se-lected by one
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm o
+.@textrm r
+.@glue(@spaceskip) 3.64961
+.@textrm i
+.etc.
+
+[7] (Miscellaneous Commands) [8]
+Underfull \hbox (badness 10000) in paragraph at lines 423--425
+ @textrm A key-board short-cut that al-lows you to browse the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm A
+.@glue 3.64961
+.@textrm k
+.@kern-0.30418
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--431
+ @textrm Insert a Uni-code glyph by pro-vid-ing its name at
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm n
+.@textrm s
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--431
+ @textrm the prompt (use the Tab key for sug-ges-tions and
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@textrm h
+.@textrm e
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
+ @textrm Wrap
+
+@hbox(7.48248+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm W
+.@kern-0.91252
+.@textrm r
+.@textrm a
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
+ @textrm Unwrap
+
+@hbox(7.48248+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm U
+.@textrm n
+.@kern-0.30418
+.@textrm w
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 444--445
+ @textrm Lowercase
+
+@hbox(7.48248+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm L
+.@textrm o
+.@kern-0.30418
+.@textrm w
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--448
+ @textrm Make the rest of the word, from the cur-sor on-ward,
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm M
+.@textrm a
+.@textrm k
+.@kern-0.30418
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--448
+ @textrm low-er-case; if text is se-lected, make all text in that
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm l
+.@textrm o
+.@kern-0.30418
+.@discretionary replacing 2
+..@textrm w
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--448
+ @textrm se-lec-tion low-er-case. With the shift key, op-er-ates on
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm s
+.@textrm e
+.@discretionary
+..@textrm -
+.@textrm l
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 451--452
+ @textrm Uppercase
+
+@hbox(7.48248+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm U
+.@textrm p
+.@textrm p
+.@kern0.30417
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--455
+ @textrm Make the rest of the word, from the cur-sor on-ward,
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm M
+.@textrm a
+.@textrm k
+.@kern-0.30418
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--455
+ @textrm up-per-case; if text is se-lected, make all text in that
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm u
+.@textrm p
+.@discretionary
+..@textrm -
+.@textrm p
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--455
+ @textrm se-lec-tion up-per-case. With the shift key, op-er-ates
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm s
+.@textrm e
+.@discretionary
+..@textrm -
+.@textrm l
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 458--459
+ @textrm Capitalize
+
+@hbox(7.60416+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm C
+.@textrm a
+.@textrm p
+.@textrm i
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--463
+ @textrm Make the rest of the word, from the cur-sor on-ward,
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm M
+.@textrm a
+.@textrm k
+.@kern-0.30418
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--463
+ @textrm low-er-case with the first let-ter up-per-case; if text is
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm l
+.@textrm o
+.@kern-0.30418
+.@discretionary replacing 2
+..@textrm w
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--463
+ @textrm se-lected, make all words in that se-lec-tion low-er-case
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm s
+.@textrm e
+.@discretionary
+..@textrm -
+.@textrm l
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--463
+ @textrm with up-per-case first let-ters. With the shift key,
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm w
+.@textrm i
+.@textrm t
+.@textrm h
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 467--469
+ @textrm Change the case of the let-ter af-ter the cur-sor from
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm C
+.@textrm h
+.@textrm a
+.@textrm n
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 467--469
+ @textrm up-per to lower or vice-versa, and move on
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm u
+.@textrm p
+.@discretionary
+..@textrm -
+.@textrm p
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 472--473
+ @textrm Invert Case
+
+@hbox(7.48248+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm n
+.@kern-0.30418
+.@textrm v
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 473--475
+ @textrm Change the case of the let-ter be-fore the cur-sor
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm C
+.@textrm h
+.@textrm a
+.@textrm n
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 473--475
+ @textrm from up-per to lower or vice-versa, and move one
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm f
+.@textrm r
+.@textrm o
+.@textrm m
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
+ @textrm Bounce
+
+@hbox(7.48248+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm B
+.@textrm o
+.@textrm u
+.@textrm n
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 479--481
+ @textrm Move from the be-gin-ning to the end or from the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm M
+.@textrm o
+.@kern-0.30418
+.@textrm v
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 479--481
+ @textrm end to the be-gin-ning of a bal-anced ex-pres-sion, such
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm e
+.@textrm n
+.@textrm d
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 485--486
+ @textrm When the cur-sor is on a URL, open it in the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm W
+.@textrm h
+.@textrm e
+.@textrm n
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--501
+ @textrm When the win-dow is split be-cause you are look-ing
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm W
+.@textrm h
+.@textrm e
+.@textrm n
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--501
+ @textrm at the re-sult of a com-mand such as com-pile, grep
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm a
+.@textrm t
+.@glue(@spaceskip) 3.64961
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--501
+ @textrm or lo-cate, this com-mand will go to the next
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm o
+.@textrm r
+.@glue(@spaceskip) 3.64961
+.@textrm l
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--501
+ @textrm lo-ca-tion in that re-sult where there was an er-ror, or
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm l
+.@discretionary replacing 2
+..@textrm o
+..@textrm -
+.@textrm o
+.@kern0.30417
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--501
+ @textrm the text you were look-ing at was found, etc. If
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@textrm h
+.@textrm e
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--501
+ @textrm there are no such re-sults vis-i-ble, then when edit-ing
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@textrm h
+.@textrm e
+.@textrm r
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--501
+ @textrm a La-TeX file, this will move to the next TeX er-ror;
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm a
+.@glue(@spaceskip) 3.64961
+.@textrm L
+.@textrm a
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--501
+ @textrm in an XML file, it will move to the next val-i-da-tion
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm i
+.@textrm n
+.@glue(@spaceskip) 3.64961
+.@textrm a
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 510--512
+ @textrm Suspend Emacs, iconi-fy-ing it if in a win-dow-ing
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm u
+.@textrm s
+.@textrm p
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 510--512
+ @textrm sys-tem, putting it in the back-ground in a ter-mi-nal
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm s
+.@textrm y
+.@textrm s
+.@discretionary
+..@textrm -
+.etc.
+
+[9] (Commands for help and finding files (F1)) [10]
+Underfull \hbox (badness 10000) in paragraph at lines 525--530
+ @textrm Open file, se-lect-ing it not with a di-a-log box, but
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm O
+.@textrm p
+.@kern0.30417
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 525--530
+ @textrm with prompt at the bot-tom of the screen. At the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm w
+.@textrm i
+.@textrm t
+.@textrm h
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 525--530
+ @textrm prompt, type the name of a file or di-rec-tory. Use
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm p
+.@textrm r
+.@textrm o
+.@textrm m
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 525--530
+ @textrm the Tab key to auto-complete file and di-rec-tory
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@textrm h
+.@textrm e
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 525--530
+ @textrm names. Just hit re-turn to get a se-lectable list-ing of
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm n
+.@textrm a
+.@textrm m
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 533--534
+ @textrm Contextual
+
+@hbox(7.60416+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm C
+.@textrm o
+.@textrm n
+.@kern-0.30418
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 534--536
+ @textrm Show help on the el-e-ment near the cur-sor. Only
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm h
+.@textrm o
+.@kern-0.30418
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 539--540
+ @textrm Open Re-cent
+
+@hbox(7.48248+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm O
+.@textrm p
+.@kern0.30417
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 540--542
+ @textrm Show a menu of re-cently opened files; hit re-turn to
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm h
+.@textrm o
+.@kern-0.30418
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 551--553
+ @textrm Like open file, but in-sert the con-tents of an-other
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm L
+.@textrm i
+.@textrm k
+.@kern-0.30418
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--559
+ @textrm Locate a file on disk by typ-ing its name. Re-quires
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm L
+.@textrm o
+.@kern0.30417
+.@textrm c
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--559
+ @textrm the lo-cate com-mand and its data-base to be
+
+@hbox(7.60416+0.0)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@textrm h
+.@textrm e
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 563--566
+ @textrm Access the Emacs help sys-tem with Ctrl-h. Be
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm A
+.@textrm c
+.@textrm c
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 563--566
+ @textrm aware that many keystrokes it de-scribes are
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm a
+.@kern-0.30418
+.@textrm w
+.@kern-0.30418
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 563--566
+ @textrm dif-fer-ent from Easy-macs, and it uses a dif-fer-ent
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm d
+.@textrm i
+.@discretionary replacing 1
+..@textrm f
+..@textrm -
+.|@textrm f
+.@textrm  (ligature ff)
+.etc.
+
+(Bookmark Operations (F2)) [11]
+Underfull \hbox (badness 10000) in paragraph at lines 579--580
+ @textrm Next
+
+@hbox(7.48248+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm N
+.@textrm e
+.@textrm x
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 584--585
+ @textrm Previous
+
+@hbox(7.48248+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm P
+.@textrm r
+.@textrm e
+.@textrm v
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 589--590
+ @textrm Toggle
+
+@hbox(7.60416+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm T
+.@kern-0.91252
+.@textrm o
+.@textrm g
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 594--595
+ @textrm List
+
+@hbox(7.48248+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm L
+.@textrm i
+.@textrm s
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 599--600
+ @textrm Name
+
+@hbox(7.48248+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm N
+.@textrm a
+.@textrm m
+.@textrm e
+.etc.
+
+(Search and Replace Operations (F3)) [12]
+Underfull \hbox (badness 10000) in paragraph at lines 616--618
+ @textrm Search for-ward for the word un-der the cur-sor. If
+
+@hbox(7.60416+0.0)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm e
+.@textrm a
+.@textrm r
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 616--618
+ @textrm you are al-ready do-ing a search, F3 will re-peat the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm y
+.@kern-0.30418
+.@textrm o
+.@textrm u
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 621--622
+ @textrm Search Word
+
+@hbox(7.60416+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm e
+.@textrm a
+.@textrm r
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 626--627
+ @textrm Replace
+
+@hbox(7.60416+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm R
+.@textrm e
+.@textrm p
+.@textrm l
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 627--630
+ @textrm Search for a reg-u-lar ex-pres-sion and re-place it
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm e
+.@textrm a
+.@textrm r
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 627--630
+ @textrm for-ward from the cur-sor po-si-tion to the end of the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm f
+.@textrm o
+.@textrm r
+.@discretionary
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 627--630
+ @textrm file, or if text is se-lected, within the se-lected text;
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm ^^L (ligature fi)
+.@textrm l
+.@textrm e
+.@textrm ,
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 633--634
+ @textrm Confirm
+
+@hbox(7.60416+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm C
+.@textrm o
+.@textrm n
+.@textrm ^^L (ligature fi)
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 633--634
+ @textrm Re-place
+
+@hbox(7.60416+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm R
+.@textrm e
+.@discretionary
+..@textrm -
+.@textrm p
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--635
+ @textrm As above, but ask for con-fir-ma-tion be-fore mak-ing
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm A
+.@textrm s
+.@glue(@spaceskip) 3.64961
+.@textrm a
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 639--644
+ @textrm Show a menu of all of the lines in the cur-rent file
+
+@hbox(7.60416+0.0)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm h
+.@textrm o
+.@kern-0.30418
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 639--644
+ @textrm that match a pat-tern (reg-u-lar ex-pres-sion). You can
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@textrm h
+.@textrm a
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 639--644
+ @textrm switch to the menu (with Shft-F4) and then hit
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm s
+.@textrm w
+.@textrm i
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 639--644
+ @textrm Re-turn or use the mouse to jump to each
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm R
+.@textrm e
+.@discretionary
+..@textrm -
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 639--644
+ @textrm cor-re-spond-ing line in the file, but even eas-ier is to
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm c
+.@textrm o
+.@textrm r
+.@discretionary
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 639--644
+ @textrm use Alt-` (next-error) to go to each lo-ca-tion in
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm u
+.@textrm s
+.@textrm e
+.@glue(@spaceskip) 3.64961
+.etc.
+
+(Window Operations (F4)) [13]
+Underfull \hbox (badness 10000) in paragraph at lines 656--657
+ @textrm Unsplit
+
+@hbox(7.60416+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm U
+.@textrm n
+.@textrm s
+.@textrm p
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 657--659
+ @textrm If the win-dow is di-vided, ex-pand which-ever part
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm f
+.@glue(@spaceskip) 3.64961
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 662--663
+ @textrm Other
+
+@hbox(7.60416+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm O
+.@textrm t
+.@textrm h
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 663--665
+ @textrm If the win-dow is di-vided, switch cur-sor to the next
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm f
+.@glue(@spaceskip) 3.64961
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 669--672
+ @textrm Close the cur-rent file; if you have any un-saved
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm C
+.@textrm l
+.@textrm o
+.@textrm s
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 669--672
+ @textrm changes in this file, you will be prompted to save
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm c
+.@kern-0.30418
+.@textrm h
+.@textrm a
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 669--672
+ @textrm them. The next open file will ap-pear in the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@textrm h
+.@textrm e
+.@textrm m
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--678
+ @textrm Exit Emacs; if you have any un-saved changes in
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm E
+.@textrm x
+.@textrm i
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 681--682
+ @textrm Split Win-dow
+
+@hbox(7.60416+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm p
+.@textrm l
+.@textrm i
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 682--688
+ @textrm Split the win-dow so that two views of the same file
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm p
+.@textrm l
+.@textrm i
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 682--688
+ @textrm ap-pear one next to the other. You can then
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm a
+.@textrm p
+.@discretionary
+..@textrm -
+.@textrm p
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 682--688
+ @textrm com-pare two parts of the same file side-by-side, or
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm c
+.@textrm o
+.@textrm m
+.@discretionary
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 682--688
+ @textrm by switch-ing one of the files, com-pare two files side
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm b
+.@kern-0.30418
+.@textrm y
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 682--688
+ @textrm by side. This split-ting can also be done by hold-ing
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm b
+.@kern-0.30418
+.@textrm y
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 682--688
+ @textrm the Ctrl key and click-ing the mid-dle mouse but-ton
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@textrm h
+.@textrm e
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 691--692
+ @textrm Split Win-dow
+
+@hbox(7.60416+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm p
+.@textrm l
+.@textrm i
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 692--695
+ @textrm Split the win-dow so that two views of the same file
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm p
+.@textrm l
+.@textrm i
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 692--695
+ @textrm ap-pear one above the other. This can also be done
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm a
+.@textrm p
+.@discretionary
+..@textrm -
+.@textrm p
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 692--695
+ @textrm by hold-ing the Ctrl key and click-ing the mid-dle
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm b
+.@kern-0.30418
+.@textrm y
+.@glue(@spaceskip) 3.64961
+.etc.
+
+(Text Shortcuts (F5)) [14]
+Underfull \hbox (badness 10000) in paragraph at lines 707--708
+ @textrm Complete
+
+@hbox(7.60416+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm C
+.@textrm o
+.@textrm m
+.@textrm p
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 708--711
+ @textrm Complete the cur-rent word, cy-cling through
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm C
+.@textrm o
+.@textrm m
+.@textrm p
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 708--711
+ @textrm al-ter-na-tives (if you go past the word you want, use
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm a
+.@textrm l
+.@discretionary
+..@textrm -
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 708--711
+ @textrm Ctrl-Z (undo). It looks for words in the cur-rent
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm C
+.@textrm t
+.@textrm r
+.@textrm l
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 715--717
+ @textrm Duplicate the cur-rent line, or if an area is cur-rently
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm D
+.@textrm u
+.@textrm p
+.@textrm l
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 720--721
+ @textrm Character
+
+@hbox(7.60416+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm C
+.@textrm h
+.@textrm a
+.@textrm r
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 721--723
+ @textrm Duplicate the char-ac-ter from the line above, and
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm D
+.@textrm u
+.@textrm p
+.@textrm l
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 726--727
+ @textrm Character
+
+@hbox(7.60416+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm C
+.@textrm h
+.@textrm a
+.@textrm r
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 727--729
+ @textrm Duplicate the char-ac-ter from the line be-low, and
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm D
+.@textrm u
+.@textrm p
+.@textrm l
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 733--737
+ @textrm Begin record-ing a key-board macro. If you want to
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm B
+.@textrm e
+.@textrm g
+.@textrm i
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 733--737
+ @textrm au-to-mate a repet-i-tive pro-cess, hit Alt-Shft-F5,
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm a
+.@textrm u
+.@discretionary
+..@textrm -
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 733--737
+ @textrm per-form the ac-tions you wish to re-peat, then
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm p
+.@kern0.30417
+.@textrm e
+.@textrm r
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 733--737
+ @textrm Alt-F5 to stop record-ing the macro. If nec-es-sary,
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm A
+.@textrm l
+.@textrm t
+.@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 733--737
+ @textrm move the cur-sor and then hit Alt-F5 again to
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm m
+.@textrm o
+.@kern-0.30418
+.@textrm v
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 740--741
+ @textrm Execute/End
+
+@hbox(8.2125+2.73749)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm E
+.@textrm x
+.@textrm e
+.@textrm c
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 741--743
+ @textrm If cur-rently record-ing a key-board macro, end the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm f
+.@glue(@spaceskip) 3.64961
+.@textrm c
+.etc.
+
+(Commenting; appending and prepending (F6)) [15]
+Underfull \hbox (badness 10000) in paragraph at lines 755--756
+ @textrm Toggle
+
+@hbox(7.60416+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm T
+.@kern-0.91252
+.@textrm o
+.@textrm g
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 756--758
+ @textrm If cur-rent line is com-mented out, un-com-ment it; if
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm f
+.@glue(@spaceskip) 3.64961
+.@textrm c
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 756--758
+ @textrm un-com-mented, com-ment it; or do this for all lines
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm u
+.@textrm n
+.@discretionary
+..@textrm -
+.@textrm c
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 761--762
+ @textrm Duplicate and
+
+@hbox(7.60416+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm D
+.@textrm u
+.@textrm p
+.@textrm l
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 762--764
+ @textrm Duplicate and com-ment out the cur-rent line or all
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm D
+.@textrm u
+.@textrm p
+.@textrm l
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 768--769
+ @textrm Append text to the cur-rent line, or to all lines in
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm A
+.@textrm p
+.@textrm p
+.@kern0.30417
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 773--775
+ @textrm Remove ap-pended text from the cur-rent line, or
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm R
+.@textrm e
+.@textrm m
+.@textrm o
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 779--780
+ @textrm Prepend text to the cur-rent line, or to all lines in
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm P
+.@textrm r
+.@textrm e
+.@textrm p
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 784--786
+ @textrm Remove prepended text from the cur-rent line, or
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm R
+.@textrm e
+.@textrm m
+.@textrm o
+.etc.
+
+(Folding and Outlines (F7)) [16]
+Underfull \hbox (badness 10000) in paragraph at lines 799--800
+ @textrm If on a closed fold, open it; else close the fold at
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm f
+.@glue(@spaceskip) 3.64961
+.@textrm o
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 819--821
+ @textrm Go to the next head-ing in the file (only for
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm G
+.@textrm o
+.@glue(@spaceskip) 3.64961
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 824--825
+ @textrm Previous
+
+@hbox(7.48248+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm P
+.@textrm r
+.@textrm e
+.@textrm v
+.etc.
+
+(Spelling (F8)) [17]
+Underfull \hbox (badness 10000) in paragraph at lines 839--846
+ @textrm If a word at or be-fore the cur-sor is in-di-cated to be
+
+@hbox(7.60416+0.0)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm f
+.@glue(@spaceskip) 3.64961
+.@textrm a
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 839--846
+ @textrm mis-spelled with red color and un-der-lin-ing, you can
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm m
+.@textrm i
+.@textrm s
+.@discretionary
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 839--846
+ @textrm use this to change it to a sug-gested spell-ing, and
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm u
+.@textrm s
+.@textrm e
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 839--846
+ @textrm again to get the next sug-gested spell-ing, and so on.
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm a
+.@textrm g
+.@textrm a
+.@textrm i
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 839--846
+ @textrm This is very handy when you dis-cover a sim-ple
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm T
+.@textrm h
+.@textrm i
+.@textrm s
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 839--846
+ @textrm mis-spelling af-ter typ-ing on for a bit, since you
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm m
+.@textrm i
+.@textrm s
+.@discretionary
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 839--846
+ @textrm don't have to move the cur-sor there and back to fix
+
+@hbox(7.60416+0.0)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm d
+.@textrm o
+.@textrm n
+.@textrm '
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 839--846
+ @textrm it. It will not change words that are in yel-low to
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm i
+.@textrm t
+.@textrm .
+.@glue(@xspaceskip) 5.475
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 839--846
+ @textrm in-di-cate un-known words that are used more than
+
+@hbox(7.60416+0.0)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm i
+.@textrm n
+.@discretionary
+..@textrm -
+.@textrm d
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 848--849
+ @textrm Suggest
+
+@hbox(7.48248+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm u
+.@textrm g
+.@textrm g
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 849--851
+ @textrm When you have typed the be-gin-ning of a word, you
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm W
+.@textrm h
+.@textrm e
+.@textrm n
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 854--855
+ @textrm Dictionary
+
+@hbox(7.48248+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm D
+.@textrm i
+.@textrm c
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 855--858
+ @textrm Look up the cur-rent word in a dic-tio-nary. Uses a
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm L
+.@textrm o
+.@kern0.30417
+.@textrm o
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 855--858
+ @textrm dict server on the lo-cal com-puter, if one is run-ning,
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm d
+.@textrm i
+.@textrm c
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 861--862
+ @textrm Change
+
+@hbox(7.60416+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm C
+.@textrm h
+.@textrm a
+.@textrm n
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 862--865
+ @textrm Switch spellcheck-ing dic-tio-nary to a dif-fer-ent
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm w
+.@textrm i
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 862--865
+ @textrm lan-guage or di-alect. Hit Tab at the prompt to get
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm l
+.@textrm a
+.@textrm n
+.@discretionary
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 869--872
+ @textrm Ordinarily, words are only marked as mis-spelled as
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm O
+.@textrm r
+.@textrm d
+.@textrm i
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 869--872
+ @textrm the cur-sor passes near them; this com-mand runs
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@textrm h
+.@textrm e
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 869--872
+ @textrm from be-gin-ning to end of the file (or se-lected
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm f
+.@textrm r
+.@textrm o
+.@textrm m
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 876--879
+ @textrm Spellcheck not by un-der-lin-ing mis-spellings, but by
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm p
+.@kern0.30417
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 876--879
+ @textrm run-ning through the text of the file or se-lected
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm r
+.@textrm u
+.@textrm n
+.@discretionary
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 876--879
+ @textrm re-gion, prompt-ing for what to do for each
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm r
+.@textrm e
+.@discretionary
+..@textrm -
+.@textrm g
+.etc.
+
+(Managing Open Files (F9)) [18]
+Underfull \hbox (badness 10000) in paragraph at lines 892--893
+ @textrm Show Open
+
+@hbox(7.60416+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm h
+.@textrm o
+.@kern-0.30418
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 893--895
+ @textrm Display a list of open files. You can switch to any
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm D
+.@textrm i
+.@textrm s
+.@textrm p
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 893--895
+ @textrm of them by mov-ing the cur-sor to its line and
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm o
+.@textrm f
+.@glue(@spaceskip) 3.64961
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 898--899
+ @textrm Select Open
+
+@hbox(7.60416+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm e
+.@textrm l
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 899--904
+ @textrm Another way of switch-ing among open files. A list
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm A
+.@textrm n
+.@textrm o
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 899--904
+ @textrm of open files is dis-played on the bot-tom of the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm o
+.@textrm f
+.@glue(@spaceskip) 3.64961
+.@textrm o
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 899--904
+ @textrm screen, and you can type any part of the name of
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm s
+.@textrm c
+.@textrm r
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 899--904
+ @textrm any one of them; as you type, the list is nar-rowed
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm a
+.@textrm n
+.@kern-0.30418
+.@textrm y
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 899--904
+ @textrm down to only those files that match what you type.
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm d
+.@textrm o
+.@kern-0.30418
+.@textrm w
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 899--904
+ @textrm When the file you want moves to the head of the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm W
+.@textrm h
+.@textrm e
+.@textrm n
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--916
+ @textrm Another way of switch-ing open files. A new
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm A
+.@textrm n
+.@textrm o
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--916
+ @textrm win-dow pops up ei-ther show-ing a list of files in the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm w
+.@textrm i
+.@textrm n
+.@discretionary
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--916
+ @textrm same folder or di-rec-tory as the cur-rent file (hit F[] to
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm s
+.@textrm a
+.@textrm m
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--916
+ @textrm get this, or show-ing a list of cur-rently open files
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm g
+.@textrm e
+.@textrm t
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--916
+ @textrm (hit B[] for `buffers' to get this). This list can also
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm (
+.@textrm h
+.@textrm i
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--916
+ @textrm show sub-sec-tions within many types of file; use the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm s
+.@textrm h
+.@textrm o
+.@kern-0.30418
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--916
+ @texttt +[] @textrm and -[] keys to ex-pand and col-lapse the dis-play of
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@texttt +
+.@hbox(0.0+0.0)x0.0
+.@glue(@spaceskip) 3.64961
+.@textrm a
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--916
+ @textrm sub-categories. Use ENTER[] to switch to a given
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm s
+.@textrm u
+.@textrm b
+.@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--923
+ @textrm Start a com-mand shell in the folder or di-rec-tory of
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm t
+.@textrm a
+.@textrm r
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--923
+ @textrm the cur-rent file. If there is a shell open, switch to it
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@textrm h
+.@textrm e
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--923
+ @textrm and change to the work-ing di-rec-tory of the cur-rent
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm a
+.@textrm n
+.@textrm d
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 927--931
+ @textrm Search for text in files on disk; use Alt-`, or Re-turn
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm e
+.@textrm a
+.@textrm r
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 927--931
+ @textrm or the mouse to se-lect one. Only works if you have
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm o
+.@textrm r
+.@glue(@spaceskip) 3.64961
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 927--931
+ @textrm the `grep' pro-gram in-stalled on your com-puter. In
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@textrm h
+.@textrm e
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 927--931
+ @textrm La-TeX files, this searches for text in all files that
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm L
+.@textrm a
+.@discretionary
+..@textrm -
+.@textrm T
+.etc.
+
+(Commands for Specific File-types (F10-F12)) [19]
+Underfull \hbox (badness 10000) in paragraph at lines 969--970
+ @textrm Run la-tex or pdfla-tex on the cur-rent doc-u-ment
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm R
+.@textrm u
+.@textrm n
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 974--977
+ @textrm Suggests the next com-mand to run on the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm u
+.@textrm g
+.@textrm g
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 974--977
+ @textrm doc-u-ment, based on the out-put of the last run, eg.
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm d
+.@textrm o
+.@kern0.30417
+.@textrm c
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 981--982
+ @textrm Run dvips on the .dvi file as-so-ci-ated with the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm R
+.@textrm u
+.@textrm n
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 986--987
+ @textrm Toggle whether to gen-er-ate and view PDF files or
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm T
+.@kern-0.91252
+.@textrm o
+.@textrm g
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 996--999
+ @textrm In DVI mode, view the out-put of the cur-rent file
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm n
+.@glue(@spaceskip) 3.64961
+.@textrm D
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 996--999
+ @textrm with xdvi or (on Win-dows) yap; in PDF mode,
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm w
+.@textrm i
+.@textrm t
+.@textrm h
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 996--999
+ @textrm view it with Ac-ro-bat Reader or (on Mac OS X)
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm v
+.@textrm i
+.@textrm e
+.@textrm w
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1003--1004
+ @textrm View the ter-mi-nal out-put of the cur-rently run-ning
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm V
+.@textrm i
+.@textrm e
+.@textrm w
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1007--1008
+ @textrm View
+
+@hbox(7.48248+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm V
+.@textrm i
+.@textrm e
+.@textrm w
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1013--1015
+ @textrm Insert the bare bones of a La-TeX doc-u-ment of
+
+@hbox(7.60416+0.0)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm n
+.@textrm s
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1013--1015
+ @textrm var-i-ous types; you are prompted for the sort of
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm v
+.@kern-0.60834
+.@textrm a
+.@textrm r
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1018--1019
+ @textrm Insert
+
+@hbox(7.48248+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm n
+.@textrm s
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1023--1024
+ @textrm Change
+
+@hbox(7.60416+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm C
+.@textrm h
+.@textrm a
+.@textrm n
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1032
+ @textrm If you have typed the first few let-ters of a La-TeX
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm f
+.@glue(@spaceskip) 3.64961
+.@textrm y
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1032
+ @textrm com-mand, this will show you the pos-si-ble
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm c
+.@textrm o
+.@textrm m
+.@discretionary
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1032
+ @textrm com-ple-tions. If the cur-sor is not just af-ter
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm c
+.@textrm o
+.@textrm m
+.@discretionary
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1032
+ @textrm some-thing be-gin-ning with a back-slash, it will close
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm s
+.@textrm o
+.@textrm m
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1036--1038
+ @textrm Put @texttt \@textrm emph@texttt {} @textrm around text (this over-rid
+es the usual
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm P
+.@textrm u
+.@textrm t
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1036--1038
+ @textrm mean-ing, which is to change the case of the cur-rent
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm m
+.@textrm e
+.@textrm a
+.@textrm n
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1052--1053
+ @textrm Put @texttt \@textrm uline@texttt {} @textrm around text (re-quires th
+e ulem
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm P
+.@textrm u
+.@textrm t
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1057--1058
+ @textrm Put @texttt \@textrm foot-note@texttt {} @textrm around text (re-quire
+s the ulem
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm P
+.@textrm u
+.@textrm t
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1061--1062
+ @textrm Contextual
+
+@hbox(7.60416+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm C
+.@textrm o
+.@textrm n
+.@kern-0.30418
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1062--1063
+ @textrm Gives help on the us-age of the La-TeX com-mand
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm G
+.@textrm i
+.@textrm v
+.@kern-0.30418
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1072
+ @textrm Easymacs puts smart quotes in for you when you
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm E
+.@textrm a
+.@textrm s
+.@textrm y
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1072
+ @textrm type a straight quo-ta-tion mark (when you re-ally
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@kern-0.30418
+.@textrm y
+.@textrm p
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1072
+ @textrm need a straight one, type it twice). But if you
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm n
+.@textrm e
+.@textrm e
+.@textrm d
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1072
+ @textrm paste some text in from a non-LaTeX doc-u-ment,
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm p
+.@textrm a
+.@textrm s
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1072
+ @textrm you may need to cor-rect the quotes in it. This
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm y
+.@kern-0.30418
+.@textrm o
+.@textrm u
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1072
+ @textrm func-tion changes straight quotes to smart ones
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm f
+.@textrm u
+.@textrm n
+.@textrm c
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1072
+ @textrm from the cur-sor for-ward, or within the cur-rently
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm f
+.@textrm r
+.@textrm o
+.@textrm m
+.etc.
+
+[20] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 1090--1092
+ @textrm Auto-complete the markup, based on what is le-gal
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm A
+.@textrm u
+.@textrm t
+.@textrm o
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1095--1101
+ @textrm If you are edit-ing an xhtml file with a
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm f
+.@glue(@spaceskip) 3.64961
+.@textrm y
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1095--1101
+ @textrm php/css/javascript/etc. block, then press-ing this
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm p
+.@textrm h
+.@textrm p
+.@textrm /
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1095--1101
+ @textrm key while in-side such a block will hide the rest of
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm k
+.@kern-0.30418
+.@textrm e
+.@textrm y
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1095--1101
+ @textrm the file, and show you just that block with proper
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@textrm h
+.@textrm e
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1095--1101
+ @textrm col-or-ing, in-den-ta-tion help, etc. for that lan-guage.
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm c
+.@textrm o
+.@textrm l
+.@discretionary
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1095--1101
+ @textrm Hit the same key again, and you will be re-turned
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm H
+.@textrm i
+.@textrm t
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1110--1112
+ @textrm If in a start-tag, com-plete the tag, and pro-vide a
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm f
+.@glue(@spaceskip) 3.64961
+.@textrm i
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1123
+ @textrm This com-mand at-tempts to find a tag to put
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm T
+.@textrm h
+.@textrm i
+.@textrm s
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1123
+ @textrm around the word be-fore the cur-sor based on the
+
+@hbox(7.60416+0.0)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm a
+.@textrm r
+.@textrm o
+.@textrm u
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1127--1128
+ @textrm Split cur-rent el-e-ment at cur-sor into two sim-i-lar
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm p
+.@textrm l
+.@textrm i
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1132--1133
+ @textrm Launch a browser, and view the XML (or
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm L
+.@textrm a
+.@textrm u
+.@textrm n
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1137--1141
+ @textrm Run the cur-rent doc-u-ment through an XSLT
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm R
+.@textrm u
+.@textrm n
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1137--1141
+ @textrm pro-ces-sor. Will look for xslt-proc, Xalan, and Saxon
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm p
+.@textrm r
+.@discretionary replacing 2
+..@textrm o
+..@textrm -
+.@textrm o
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1137--1141
+ @textrm in that or-der. If the cur-rent file looks like a TEI
+
+@hbox(7.60416+0.0)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm i
+.@textrm n
+.@glue(@spaceskip) 3.64961
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1137--1141
+ @textrm doc-u-ment, sug-gest run-ning one of the TEI
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm d
+.@textrm o
+.@kern0.30417
+.@textrm c
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1145--1147
+ @textrm If you have edited the schema against which the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm f
+.@glue(@spaceskip) 3.64961
+.@textrm y
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1145--1147
+ @textrm cur-rent doc-u-ment is be-ing val-i-dated, this will
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm c
+.@textrm u
+.@textrm r
+.@discretionary
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1151--1152
+ @textrm Open the schema as-so-ci-ated with the cur-rent file
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm O
+.@textrm p
+.@kern0.30417
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1156--1157
+ @textrm Insert an open-ing and clos-ing tag around the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm n
+.@textrm s
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1161--1163
+ @textrm Insert a Uni-code char-ac-ter by its full name (use the
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm n
+.@textrm s
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1167--1168
+ @textrm Insert a Uni-code char-ac-ter by its short name
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm n
+.@textrm s
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1172--1174
+ @textrm Insert the be-gin-ning of a doc-u-ment marked up
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm n
+.@textrm s
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1172--1174
+ @textrm ac-cord-ing to the guide-lines of the Text En-cod-ing
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm a
+.@textrm c
+.@discretionary
+..@textrm -
+.@textrm c
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1182--1183
+ @textrm Contextual
+
+@hbox(7.60416+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm C
+.@textrm o
+.@textrm n
+.@kern-0.30418
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1183--1185
+ @textrm Looks up the cur-rent el-e-ment in the TEI P5
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm L
+.@textrm o
+.@kern0.30417
+.@textrm o
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1183--1185
+ @textrm Guide-lines, and shows the rel-e-vant doc-u-men-ta-tion
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm G
+.@textrm u
+.@textrm i
+.@textrm d
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1188--1189
+ @textrm Insert
+
+@hbox(7.48248+0.0)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm n
+.@textrm s
+.@textrm e
+.etc.
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 1202--1203
+ @textrm Toggle hid-ing of ``un-in-ter-est-ing'' files in the cur-rent
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm T
+.@kern-0.91252
+.@textrm o
+.@textrm g
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1207--1210
+ @textrm This is a pow-er-ful and po-ten-tially dan-ger-ous
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm T
+.@textrm h
+.@textrm i
+.@textrm s
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1207--1210
+ @textrm com-mand that en-ables you to edit the names of
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm c
+.@textrm o
+.@textrm m
+.@discretionary
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1207--1210
+ @textrm files in a di-rec-tory. Hit Ctrl-C twice when you are
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm ^^L (ligature fi)
+.@textrm l
+.@textrm e
+.@textrm s
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1207--1210
+ @textrm fin-ished to write the changes to the names of the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm ^^L (ligature fi)
+.@textrm n
+.@discretionary
+..@textrm -
+.@textrm i
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1214--1217
+ @textrm Hit ``s'', and then the next key changes the sort-ing
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm H
+.@textrm i
+.@textrm t
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1214--1217
+ @textrm cri-te-rion: s for size, x for ex-ten-sion, t for time, n
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm c
+.@textrm r
+.@textrm i
+.@discretionary
+..@textrm -
+.etc.
+
+[23] (Numeric Keypad) [24]
+Underfull \hbox (badness 10000) in paragraph at lines 1233--1236
+ @textrm Switch be-tween us-ing the nu-meric key-pad for
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm w
+.@textrm i
+.@textrm t
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1233--1236
+ @textrm math, and for the con-ve-nience com-mands listed
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm m
+.@textrm a
+.@textrm t
+.@textrm h
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1233--1236
+ @textrm be-low. Your cur-rent pref-er-ence is stored for fu-ture
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm b
+.@kern0.30417
+.@textrm e
+.@discretionary
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1254--1260
+ @textrm Turn on and off a spe-cial way of in-sert-ing
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm T
+.@kern-0.91252
+.@textrm u
+.@textrm r
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1254--1260
+ @textrm char-ac-ters not present on your key-board. When
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm c
+.@kern-0.30418
+.@textrm h
+.@textrm a
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1254--1260
+ @textrm this mode is en-abled, for ex-am-ple, @texttt "@textrm u pro-duces
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@textrm h
+.@textrm i
+.@textrm s
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1254--1260
+ @textrm u-umlaut, 'e pro-duces e-acute, @texttt ~@textrm ! pro-duces the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm u
+.@textrm -
+.@discretionary
+.@textrm u
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1254--1260
+ @textrm upside-down ex-cla-ma-tion mark, /o gives o with a
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm u
+.@textrm p
+.@textrm s
+.@textrm i
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1254--1260
+ @textrm di-ag-o-nal stroke, and so forth. Your op-er-at-ing or
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm d
+.@textrm i
+.@discretionary
+..@textrm -
+.@textrm a
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1254--1260
+ @textrm win-dow-ing sys-tem may also pro-vide an-other way of
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm w
+.@textrm i
+.@textrm n
+.@discretionary
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1264--1269
+ @textrm After past-ing in text from some-where else, there
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm A
+.@textrm f
+.@textrm t
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1264--1269
+ @textrm may be char-ac-ters that can-not be rep-re-sented
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm m
+.@textrm a
+.@kern-0.30418
+.@textrm y
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1264--1269
+ @textrm cor-rectly in the en-cod-ing of the cur-rent file.
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm c
+.@textrm o
+.@textrm r
+.@discretionary
+..@textrm -
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1264--1269
+ @textrm In-stead of pre-sent-ing gib-ber-ish, Emacs com-plains
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm n
+.@discretionary
+..@textrm -
+.@textrm s
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1264--1269
+ @textrm when you try to save the file. This com-mand
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm w
+.@textrm h
+.@textrm e
+.@textrm n
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1264--1269
+ @textrm moves to the next char-ac-ter that does not fit in the
+
+@hbox(7.60416+0.0)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm m
+.@textrm o
+.@kern-0.30418
+.@textrm v
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1273--1274
+ @textrm Insert lit-er-ally the next char-ac-ter typed, even if it
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm n
+.@textrm s
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1278--1280
+ @textrm Repeat the last com-mand, which may have been
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm R
+.@textrm e
+.@textrm p
+.@kern0.30417
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1283--1284
+ @textrm Wrap
+
+@hbox(7.48248+2.12917)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm W
+.@kern-0.91252
+.@textrm r
+.@textrm a
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1284--1285
+ @textrm A short-cut for Alt-q, which re-wraps and re-indents
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm A
+.@glue 3.64961
+.@textrm s
+.@textrm h
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1299--1301
+ @textrm The 8 or 2 keys on the key-pad (which of-ten have
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm T
+.@textrm h
+.@textrm e
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1299--1301
+ @textrm up and down ar-rows on them) ar-rows scrolls the
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm u
+.@textrm p
+.@glue(@spaceskip) 3.64961
+.@textrm a
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1305--1308
+ @textrm The 6 or 4 keys on the key-pad (which of-ten have
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm T
+.@textrm h
+.@textrm e
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1305--1308
+ @textrm right and left ar-rows on them) cir-cu-late through
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm r
+.@textrm i
+.@textrm g
+.@textrm h
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1305--1308
+ @textrm the list of open files in ei-ther di-rec-tion (like
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@textrm h
+.@textrm e
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1312--1315
+ @textrm If you want to cy-cle through the open files with
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm f
+.@glue(@spaceskip) 3.64961
+.@textrm y
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1312--1315
+ @textrm KP-4 and 6, but don't know which di-rec-tion to
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm K
+.@textrm P
+.@textrm -
+.@discretionary
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1312--1315
+ @textrm head in to find the file you want, this will dis-play
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm h
+.@textrm e
+.@textrm a
+.@textrm d
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1312--1315
+ @textrm the next and pre-vi-ous files at the bot-tom of the
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm t
+.@textrm h
+.@textrm e
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1318--1319
+ @textrm Start/End of
+
+@hbox(8.2125+2.73749)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm S
+.@textrm t
+.@textrm a
+.@textrm r
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1319--1321
+ @textrm The 7 or 1 keys on the key-pad (which of-ten have
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm T
+.@textrm h
+.@textrm e
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1319--1321
+ @textrm Home and End on them) go to the start and end of
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm H
+.@textrm o
+.@textrm m
+.@textrm e
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1324--1325
+ @textrm Top/Bottom of
+
+@hbox(8.2125+2.73749)x86.72267
+.@glue(@leftskip) 12.0
+.@textrm T
+.@kern-0.91252
+.@textrm o
+.@textrm p
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1325--1327
+ @textrm The 9 or 3 keys on the key-pad (which of-ten have
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm T
+.@textrm h
+.@textrm e
+.@glue(@spaceskip) 3.64961
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1325--1327
+ @textrm PgUp and Pg-Down on them) go to the top and
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm P
+.@textrm g
+.@textrm U
+.@textrm p
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1331--1332
+ @textrm Align the se-lected text into minimally-separated
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm A
+.@textrm l
+.@textrm i
+.@textrm g
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1342--1343
+ @textrm Invert the case of the cur-rent let-ter, and move to
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm n
+.@kern-0.30418
+.@textrm v
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1347--1348
+ @textrm As above, but mov-ing back-wards (like
+
+@hbox(8.2125+2.73749)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm A
+.@textrm s
+.@glue(@spaceskip) 3.64961
+.@textrm a
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1352--1353
+ @textrm If on a paren-the-sis or brace, move to the match-ing
+
+@hbox(7.60416+2.12917)x260.17464
+.@glue(@leftskip) 12.0
+.@textrm I
+.@textrm f
+.@glue(@spaceskip) 3.64961
+.@textrm o
+.etc.
+
+[25] (Advanced Topics) [26] [27] [28] ) 
+Here is how much of TeX's memory you used:
+ 1791 strings out of 97293
+ 20783 string characters out of 1210057
+ 51042 words of memory out of 1500000
+ 2785 multiletter control sequences out of 10000+50000
+ 32127 words of font info for 112 fonts, out of 1200000 for 2000
+ 51 hyphenation exceptions out of 8191
+ 12i,5n,17p,306b,306s stack positions out of 5000i,500n,6000p,200000b,5000s
+</opt/texlive/2007/texmf-dist/fonts/type
+1/bluesky/cm/cmb10.pfb></opt/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmb
+x12.pfb></opt/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr10.pfb></opt/te
+xlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></opt/texlive/2007/texm
+f-dist/fonts/type1/bluesky/cm/cmtt10.pfb>
+Output written on easymacs.pdf (28 pages, 84309 bytes).
+PDF statistics:
+ 176 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

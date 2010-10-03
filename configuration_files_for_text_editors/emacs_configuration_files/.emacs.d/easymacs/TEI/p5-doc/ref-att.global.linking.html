@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>att.global.linking</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="att.global.linking"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">att.global.linking</h1></div><div><span id="att.global.linking"/><table border="1" class="wovenodd"><tr><td class="classSpec">att.global.linking</td><td colspan="2" class="wovenodd-col2">defines a set of attributes for hypertext and other linking,
+which are enabled for all elements when the additional tag set for
+linking is selected.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>In addition to global attributes<table><tr><td class="attDef">corresp</td><td colspan="2">points to elements that correspond to the current
+      element in some way.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span> [n &lt;= unbounded] <code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>one or more URIs, separated by white space.</td></tr><tr><td/><td/></tr><tr><td class="attDef">synch</td><td colspan="2">points to elements that are synchronous with the current
+      element.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span> [n &lt;= unbounded] <code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>one or more URIs, separated by white space.</td></tr><tr><td/><td/></tr><tr><td class="attDef">sameAs</td><td colspan="2">points to an element that is the same as the current
+      element.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>a URI.</td></tr><tr><td class="attDef">copyOf</td><td colspan="2">points to an element of which the current element is a
+	copy.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>a URI.</td></tr><tr><td/><td><p><span id="id2502967"/>Any content of the current element should be ignored. Its
+	true content is that of the element being pointed at.</p></td></tr><tr><td class="attDef">next</td><td colspan="2">points to the next element of a virtual aggregate of which
+      the current element is part.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>a URI.</td></tr><tr><td class="attDef">prev</td><td colspan="2">points to the previous element of a virtual aggregate of
+      which the current element is part.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>a URI.</td></tr><tr><td class="attDef">exclude</td><td colspan="2">points to elements that are in exclusive alternation
+      with the current element.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span> [n &lt;= unbounded] <code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>one or more URIs, separated by white space.</td></tr><tr><td class="attDef">select</td><td colspan="2">selects one or more alternants; if one alternant is
+      selected, the ambiguity or uncertainty is marked as resolved. If
+      more than one alternant is selected, the degree of ambiguity or
+      uncertainty is marked as reduced by the number of alternants not
+      selected.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span> [n &lt;= unbounded] <code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>one or more URIs, separated by white space.</td></tr><tr><td/><td><p><span id="id2503114"/>This attribute should be placed on an element which is
+	superordinate to all of the alternants from which the
+	selection is being made.</p></td></tr></table></td></tr></table></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="SA.html" title="14">11  Linking, Segmentation, and Alignment</a></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Members</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-att.global.html">att.global</a>  </td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">linking</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

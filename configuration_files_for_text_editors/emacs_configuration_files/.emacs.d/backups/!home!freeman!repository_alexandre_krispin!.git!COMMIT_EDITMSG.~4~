@@ -1,0 +1,20 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   templates_for_XeLaTeX/article/example.tex
+#	modified:   templates_for_XeLaTeX/article/template_article.tex
+#	modified:   templates_for_XeLaTeX/article/template_classicthesis/template_article_classicthesis.tex
+#	modified:   templates_for_XeLaTeX/letter/template_letter_isodoc/example_letter.tex
+#	modified:   templates_for_XeLaTeX/letter/template_letter_isodoc/template_letter_isodoc.tex
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	templates_for_LaTeX/cv/examples/auto/
+#	templates_for_XeLaTeX/article/auto/
+#	templates_for_XeLaTeX/cv/
+#	templates_for_XeLaTeX/letter/template_letter_isodoc/auto/

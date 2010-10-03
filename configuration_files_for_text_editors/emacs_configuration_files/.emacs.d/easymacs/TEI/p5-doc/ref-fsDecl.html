@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;fsDecl&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;fsDecl&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;fsDecl&gt;</h1></div><div><span id="fsDecl"/><table border="1" class="wovenodd"><tr><td class="elementSpec">fsDecl</td><td colspan="2" class="wovenodd-col2">(feature structure declaration) declares one type of feature structure.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element fsDecl
+{
+   att.global.attributes,
+   attribute type { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> },
+   attribute baseTypes { list { <a class="link_odd" href="ref-data.name.html">data.name</a>+ } }?,
+   ( <a class="link_odd" href="ref-fsDescr.html">fsDescr</a>?, <a class="link_odd" href="ref-fDecl.html">fDecl</a>+, <a class="link_odd" href="ref-fsConstraints.html">fsConstraints</a>? )
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>In addition to global attributes<table><tr><td class="attDef">type</td><td colspan="2">gives a name for the type of feature structure being declared.</td></tr><tr><td/><td><span class="label">Status: </span><b>Required</b></td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a></code></td></tr><tr><td/><td><span class="label">Values: </span>any convenient string of characters.</td></tr><tr><td/><td><p><span id="id2563918"/></p></td></tr><tr><td class="attDef">baseTypes</td><td colspan="2">gives the name of one or more typed feature structures
+	from which this type inherits feature specifications and
+	constraints; if this type includes a feature specification
+	with the same name as that of any of those specified by this
+	attribute, or if more than one specification of the same name
+	is inherited, then the set of possible values is defined by
+	unification. Similarly, the set of constraints applicable is
+	derived by combining those specified explicitly within this
+	element with those implied by the baseTypes
+	attribute. When no baseType is specified, no
+	feature specification or constraint is inherited.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span> [n &lt;= unbounded] <code class="eg">
+<a class="link_odd" href="ref-data.name.html">data.name</a></code></td></tr><tr><td/><td><span class="label">Values: </span>one or more names as defined by the <a class="link_ref" href="http://www.w3.org/TR/REC-xml/#dt-name" title="W3C XML Specification">W3C XML
+      Specification</a></td></tr><tr><td/><td><p><span id="id2563983"/>Inheritance is defined here as a monotonous relation.</p><p><span id="id2563987"/>The process of combining constraints
+	may result in a contradiction, for example if two
+	specifications for the same feature
+	specify disjoint ranges of values, and at least one such
+	specification is mandatory. In such a case, there is
+	no valid representative for the type being defined. </p></td></tr></table></td></tr></table></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="FD.html" title="26">22  Feature System Declaration</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">declarefs</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

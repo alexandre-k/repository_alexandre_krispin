@@ -1,0 +1,132 @@
+namespace rng = "http://relaxng.org/ns/structure/1.0"
+
+# Schema generated 2007-03-13T16:02:29Z..
+# Copyright 2005 TEI Consortium.
+# This is free software; you can redistribute it and/or
+#	    modify it under the terms of the GNU General Public
+#	    License as published by the Free Software Foundation;
+#	    either version 2 of the License, or (at your option) any
+#	    later version.
+# This material is distributed in the hope that it will be
+#	    useful, but WITHOUT ANY WARRANTY; without even the implied
+#	    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+#	    PURPOSE. See the GNU General Public License for more
+#	    details.
+# You should have received a copy of the GNU General Public
+#	    License along with this file; if not, write to the Free
+#	    Software Foundation, Inc., 59 Temple Place, Suite 330,
+#	    Boston, MA 02111-1307, USA.
+# To contact the TEI Consortium use the following addresses.
+#	    For general (non-technical) enquiries: 
+#		  target="mailto:info@tei-c.org"/>info@tei-c.orgFor membership enquiries: membership@tei-c.orgFor technical enquiries, particularly about the
+#		Guidelines, DTDs, schemas, or software available from
+#		the TEI-C: editors@tei-c.orgFor up to date information, consult the TEI web site at http://www.tei-c.org/P5Character and glyph documentation
+
+# Definitions from module gaiji
+
+# Set global predeclared macros
+
+# Set predeclared macros
+
+# 0. predeclared macros
+
+# 1. classes
+
+# 2. elements
+
+char =
+  ## (character) provides descriptive information about a character. 
+  element char { char.content, char.attributes }
+char.content =
+  charName,
+  macro.glossSeq,
+  charProp*,
+  mapping*,
+  model.graphicLike*,
+  model.noteLike?
+char.attributes = att.global.attributes, empty
+
+charDesc =
+  ## (character description) provides descriptive information about characters or
+  ## glyphs. 
+  element charDesc { charDesc.content, charDesc.attributes }
+charDesc.content = desc?, (char | glyph)+
+charDesc.attributes = att.global.attributes, empty
+
+charName =
+  ## (character name) contains the name of a character, expressed following Unicode conventions. 
+  element charName { charName.content, charName.attributes }
+charName.content = text
+charName.attributes = att.global.attributes, empty
+
+charProp =
+  ## (character property) provides a name and value for some property of the parent
+  ## character or glyph. 
+  element charProp { charProp.content, charProp.attributes }
+charProp.content = (unicodeName | localName), value
+charProp.attributes = att.global.attributes, att.typed.attributes, empty
+
+g =
+  ## (character or glyph) represents a non-standard character or glyph.
+  element g { g.content, g.attributes }
+g.content = text
+g.attributes =
+  att.global.attributes,
+  att.typed.attributes,
+  ## points to a description of the  character or glyph intended.
+  attribute ref { data.pointer }?,
+  empty
+
+glyph =
+  ## (character glyph) provides descriptive information about a character glyph. 
+  element glyph { glyph.content, glyph.attributes }
+glyph.content =
+  glyphName,
+  macro.glossSeq,
+  charProp*,
+  mapping*,
+  model.graphicLike*,
+  model.noteLike?
+glyph.attributes = att.global.attributes, empty
+
+glyphName =
+  ## (character glyph name) contains the name of a glyph, expressed following Unicode
+  ## conventions for character names. 
+  element glyphName { glyphName.content, glyphName.attributes }
+glyphName.content = text
+glyphName.attributes = att.global.attributes, empty
+
+localName =
+  ## (Locally-defined Property Name) contains a locally defined name for some property. 
+  element localName { localName.content, localName.attributes }
+localName.content = text
+localName.attributes = att.global.attributes, empty
+
+mapping =
+  ## (character mapping) contains one or more
+  ##	 characters which are related to the parent character or glyph
+  ##	 in some respect, as specified by the type
+  ##	 attribute.
+  element mapping { mapping.content, mapping.attributes }
+mapping.content = macro.xtext
+mapping.attributes = att.global.attributes, att.typed.attributes, empty
+
+unicodeName =
+  ## (Unicode Property Name) contains the name of a registered Unicode normative or
+  ## informative property. 
+  element unicodeName { unicodeName.content, unicodeName.attributes }
+unicodeName.content = text
+unicodeName.attributes =
+  att.global.attributes,
+  ## specifies the version number of the Unicode Standard in
+  ##         which this property name is defined.
+  attribute version { data.numeric }?,
+  empty
+
+value =
+  ## (value) contains a single value for some property, attribute, or other
+  ##   analysis.
+  element value { value.content, value.attributes }
+value.content = macro.xtext
+value.attributes = att.global.attributes, empty
+# 3. macros

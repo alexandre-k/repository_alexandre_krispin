@@ -1,0 +1,607 @@
+
+<HTML>
+<HEAD>
+<LINK REL="SHORTCUT ICON" HREF="/icons/mm-icon.png">
+<META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<TITLE>lists.freebsd.org Mailing Lists</TITLE>
+</HEAD>
+<BODY bgcolor="white">
+
+<table WIDTH="100%" BORDER="0">
+  <tr>
+    <td COLSPAN="2" BGCOLOR="#99ccff"><center><h2>lists.freebsd.org Mailing Lists</h2></center></td>
+  </tr>
+  <tr>
+    <td COLSPAN="2"><font size="+2">Welcome!</font><p>Below is a listing of all the public mailing lists on
+            lists.freebsd.org.  Click on a list name to get more information about
+            the list, or to subscribe, unsubscribe, and change the preferences
+            on your subscription. To visit the general information page for an unadvertised list,
+        open a URL similar to this one, but with a '/' and the 
+        list name appended.
+        <p>List administrators, you can visit <a href="http://lists.freebsd.org/mailman/admin">the list admin overview page</a> to find the management interface for your list.
+         <p>If you are having trouble using the lists, please contact <a href="mailto:mailman@freebsd.org">mailman@freebsd.org</a>.<p></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><strong><font size="+2">List</font></strong></td>
+    <td><strong><font size="+2">Description</font></strong></td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/aic7xxx"><strong>aic7xxx</strong></a></td>
+    <td>Adaptec Device Drivers in FreeBSD and Linux</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/ctm-announce"><strong>ctm-announce</strong></a></td>
+    <td>CTM Announcements [moderated]</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/ctm-cvs-cur"><strong>ctm-cvs-cur</strong></a></td>
+    <td>CTM distribution of CVS files</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/ctm-cvs-cur-fast"><strong>ctm-cvs-cur-fast</strong></a></td>
+    <td>CTM distribution of CVS files [No rate limiting]</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/ctm-ports-cur"><strong>ctm-ports-cur</strong></a></td>
+    <td>CTM ports distribution</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/ctm-src-3"><strong>ctm-src-3</strong></a></td>
+    <td>CTM 3-stable src branch distribution</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/ctm-src-3-fast"><strong>ctm-src-3-fast</strong></a></td>
+    <td>CTM 3-stable src branch distribution [No rate limiting]</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/ctm-src-4"><strong>ctm-src-4</strong></a></td>
+    <td>CTM 4-stable src branch distribution</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/ctm-src-4-fast"><strong>ctm-src-4-fast</strong></a></td>
+    <td>CTM 4-stable src branch distribution [No rate limiting]</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/ctm-src-5"><strong>ctm-src-5</strong></a></td>
+    <td>CTM 5-stable src branch distribution</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/ctm-src-5-fast"><strong>ctm-src-5-fast</strong></a></td>
+    <td>CTM 5-stable src branch distribution [No rate limiting]</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/ctm-src-6"><strong>ctm-src-6</strong></a></td>
+    <td>CTM 6-stable src branch distribution</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/ctm-src-6-fast"><strong>ctm-src-6-fast</strong></a></td>
+    <td>CTM 6-stable src branch distribution [No rate limiting]</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/ctm-src-7"><strong>ctm-src-7</strong></a></td>
+    <td>CTM 7-stable src branch distribution</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/ctm-src-7-fast"><strong>ctm-src-7-fast</strong></a></td>
+    <td>CTM 7-stable src branch distribution [No rate limiting]</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/ctm-src-8"><strong>ctm-src-8</strong></a></td>
+    <td>CTM 8-stable src branch distribution</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/ctm-src-8-fast"><strong>ctm-src-8-fast</strong></a></td>
+    <td>CTM 8-stable src branch distribution [No rate limiting]</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/ctm-src-cur"><strong>ctm-src-cur</strong></a></td>
+    <td>CTM -current src distribution</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/ctm-src-cur-fast"><strong>ctm-src-cur-fast</strong></a></td>
+    <td>CTM -current src distribution [No rate limiting]</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/ctm-users"><strong>ctm-users</strong></a></td>
+    <td>CTM User discussions</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/cvs-all"><strong>cvs-all</strong></a></td>
+    <td>**OBSOLETE** CVS commit messages for the entire tree</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/cvs-doc"><strong>cvs-doc</strong></a></td>
+    <td>CVS commit messages for the doc and www trees</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/cvs-ports"><strong>cvs-ports</strong></a></td>
+    <td>CVS commit messages for the ports tree</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/cvs-projects"><strong>cvs-projects</strong></a></td>
+    <td>CVS commit messages for the projects tree</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/cvs-src"><strong>cvs-src</strong></a></td>
+    <td>**OBSOLETE** CVS commit messages for the src tree</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-acpi"><strong>freebsd-acpi</strong></a></td>
+    <td>ACPI and power management development</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-advocacy"><strong>freebsd-advocacy</strong></a></td>
+    <td>FreeBSD Evangelism</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-afs"><strong>freebsd-afs</strong></a></td>
+    <td>The Andrew File System and FreeBSD</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-alpha"><strong>freebsd-alpha</strong></a></td>
+    <td>Porting FreeBSD to the Alpha</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-amd64"><strong>freebsd-amd64</strong></a></td>
+    <td>Porting FreeBSD to the AMD64 platform</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-announce"><strong>freebsd-announce</strong></a></td>
+    <td>Project Announcements [moderated]</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-apache"><strong>freebsd-apache</strong></a></td>
+    <td>Support of apache-related ports </td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-arch"><strong>freebsd-arch</strong></a></td>
+    <td>Discussion related to FreeBSD architecture</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-arm"><strong>freebsd-arm</strong></a></td>
+    <td>Porting FreeBSD to the StrongARM Processor</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-atm"><strong>freebsd-atm</strong></a></td>
+    <td>ATM for FreeBSD!</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-audit"><strong>freebsd-audit</strong></a></td>
+    <td>FreeBSD Security Audit</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-binup"><strong>freebsd-binup</strong></a></td>
+    <td>Design and development of the binary update system</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-bluetooth"><strong>freebsd-bluetooth</strong></a></td>
+    <td>Using Bluetooth in FreeBSD environments</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-bugbusters"><strong>freebsd-bugbusters</strong></a></td>
+    <td>Coordination of the Problem Report handling effort.</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-bugs"><strong>freebsd-bugs</strong></a></td>
+    <td>Bug reports</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-chat"><strong>freebsd-chat</strong></a></td>
+    <td>Non technical items related to the community</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-cluster"><strong>freebsd-cluster</strong></a></td>
+    <td>Clustering FreeBSD</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-current"><strong>freebsd-current</strong></a></td>
+    <td>Discussions about the use of FreeBSD-current</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-cvsweb"><strong>freebsd-cvsweb</strong></a></td>
+    <td>CVS Web maintenance mailing list</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-database"><strong>freebsd-database</strong></a></td>
+    <td>Database use and development under FreeBSD</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-doc"><strong>freebsd-doc</strong></a></td>
+    <td>Documentation project</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-drivers"><strong>freebsd-drivers</strong></a></td>
+    <td>Writing device drivers for FreeBSD</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-eclipse"><strong>freebsd-eclipse</strong></a></td>
+    <td>FreeBSD users of eclipse EDI, tools, rich client apps &amp;  ports.</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-embedded"><strong>freebsd-embedded</strong></a></td>
+    <td>Dedicated and Embedded Systems</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-emulation"><strong>freebsd-emulation</strong></a></td>
+    <td>Development of Emulators of other operating systems</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-eol"><strong>freebsd-eol</strong></a></td>
+    <td>Peer support for software no longer supported by the FreeBSD project</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-firewire"><strong>freebsd-firewire</strong></a></td>
+    <td>Firewire support in FreeBSD</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-fs"><strong>freebsd-fs</strong></a></td>
+    <td>Filesystems</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-gecko"><strong>freebsd-gecko</strong></a></td>
+    <td>Gecko Rendering Engine issues</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-geom"><strong>freebsd-geom</strong></a></td>
+    <td>GEOM-specific discussions and implementations</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-gnome"><strong>freebsd-gnome</strong></a></td>
+    <td>GNOME for FreeBSD -- porting and maintaining</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-hackers"><strong>freebsd-hackers</strong></a></td>
+    <td>Technical Discussions relating to FreeBSD</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-hardware"><strong>freebsd-hardware</strong></a></td>
+    <td>General discussion of FreeBSD hardware</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-hpc"><strong>freebsd-hpc</strong></a></td>
+    <td>FreeBSD in High Performance Computing environments.</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-hubs"><strong>freebsd-hubs</strong></a></td>
+    <td>FreeBSD Distributions Hubs: mail sup ftp</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-i18n"><strong>freebsd-i18n</strong></a></td>
+    <td>FreeBSD Internationalization Effort</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-i386"><strong>freebsd-i386</strong></a></td>
+    <td>I386-specific issues for FreeBSD</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-ia32"><strong>freebsd-ia32</strong></a></td>
+    <td>FreeBSD on the IA-32 platform</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-ia64"><strong>freebsd-ia64</strong></a></td>
+    <td>Porting FreeBSD to the IA-64</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-ipfw"><strong>freebsd-ipfw</strong></a></td>
+    <td>IPFW Technical Discussions</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-isdn"><strong>freebsd-isdn</strong></a></td>
+    <td>Using ISDN with FreeBSD</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-isp"><strong>freebsd-isp</strong></a></td>
+    <td>Internet Services Providers</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-jail"><strong>freebsd-jail</strong></a></td>
+    <td>Discussion about FreeBSD jail(8)</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-java"><strong>freebsd-java</strong></a></td>
+    <td>Porting Java to FreeBSD</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-jobs"><strong>freebsd-jobs</strong></a></td>
+    <td>Jobs offered and sought</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-lfs"><strong>freebsd-lfs</strong></a></td>
+    <td>LFS development</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-libh"><strong>freebsd-libh</strong></a></td>
+    <td>Dedicated to libh code development</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-mips"><strong>freebsd-mips</strong></a></td>
+    <td>Porting FreeBSD to MIPS</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-mobile"><strong>freebsd-mobile</strong></a></td>
+    <td>Mobile computing with FreeBSD</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-mono"><strong>freebsd-mono</strong></a></td>
+    <td>Mono and C# applications on FreeBSD</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-mozilla"><strong>freebsd-mozilla</strong></a></td>
+    <td>Mozilla browser issues</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-multimedia"><strong>freebsd-multimedia</strong></a></td>
+    <td>Multimedia discussions</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-net"><strong>freebsd-net</strong></a></td>
+    <td>Networking and TCP/IP with FreeBSD</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-new-bus"><strong>freebsd-new-bus</strong></a></td>
+    <td>FreeBSD's new-bus architecture</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-openoffice"><strong>freebsd-openoffice</strong></a></td>
+    <td>Porting OpenOffice to FreeBSD</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-performance"><strong>freebsd-performance</strong></a></td>
+    <td>Performance/tuning</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-perl"><strong>freebsd-perl</strong></a></td>
+    <td>maintainer of a number of perl-related ports</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-pf"><strong>freebsd-pf</strong></a></td>
+    <td>Technical discussion and general questions about packet filter (pf)</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-platforms"><strong>freebsd-platforms</strong></a></td>
+    <td>Porting to Non-Intel platforms</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-policy"><strong>freebsd-policy</strong></a></td>
+    <td>FreeBSD Policy statements [restricted posting]</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-ports"><strong>freebsd-ports</strong></a></td>
+    <td>Porting software to FreeBSD</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-ports-bugs"><strong>freebsd-ports-bugs</strong></a></td>
+    <td>Ports bug reports</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-ppc"><strong>freebsd-ppc</strong></a></td>
+    <td>Porting FreeBSD to the PowerPC</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-proliant"><strong>freebsd-proliant</strong></a></td>
+    <td>Technical discussion of FreeBSD on HP ProLiant server platforms.</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-python"><strong>freebsd-python</strong></a></td>
+    <td>FreeBSD-specific Python issues</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-qa"><strong>freebsd-qa</strong></a></td>
+    <td>FreeBSD Quality Assurance</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-questions"><strong>freebsd-questions</strong></a></td>
+    <td>User questions</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-rc"><strong>freebsd-rc</strong></a></td>
+    <td>Discussion related to /etc/rc.d design and implementation.</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-realtime"><strong>freebsd-realtime</strong></a></td>
+    <td>Realtime extensions per POSIX 1003.4</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-ruby"><strong>freebsd-ruby</strong></a></td>
+    <td>FreeBSD-specific Ruby discussions</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-scsi"><strong>freebsd-scsi</strong></a></td>
+    <td>SCSI subsystem</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-security"><strong>freebsd-security</strong></a></td>
+    <td>Security issues [members-only posting]</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-security-notifications"><strong>freebsd-security-notifications</strong></a></td>
+    <td>Moderated Security Notifications [moderated, low volume]</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-small"><strong>freebsd-small</strong></a></td>
+    <td>Dedicated and Embedded Systems</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-smp"><strong>freebsd-smp</strong></a></td>
+    <td>FreeBSD SMP implementation group</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-sparc64"><strong>freebsd-sparc64</strong></a></td>
+    <td>Porting FreeBSD to the Sparc</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-stable"><strong>freebsd-stable</strong></a></td>
+    <td>Production branch of FreeBSD source code</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-standards"><strong>freebsd-standards</strong></a></td>
+    <td>Standards compliance</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-sun4v"><strong>freebsd-sun4v</strong></a></td>
+    <td>Porting FreeBSD to the sun4v</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-sysinstall"><strong>freebsd-sysinstall</strong></a></td>
+    <td>Sysinstall Work</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-test"><strong>freebsd-test</strong></a></td>
+    <td>Test posting area</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-testing"><strong>freebsd-testing</strong></a></td>
+    <td>Performance and Stability Tests</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-threads"><strong>freebsd-threads</strong></a></td>
+    <td>Threading on FreeBSD</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-tinderbox"><strong>freebsd-tinderbox</strong></a></td>
+    <td>Tinderbox reports, responses, and meta-comments</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-tokenring"><strong>freebsd-tokenring</strong></a></td>
+    <td>Support Token Ring in FreeBSD</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-usb"><strong>freebsd-usb</strong></a></td>
+    <td>FreeBSD support for USB</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-user-groups"><strong>freebsd-user-groups</strong></a></td>
+    <td>User Group Coordination List</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-vendors"><strong>freebsd-vendors</strong></a></td>
+    <td>Vendors pre-release coordination</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-virtualization"><strong>freebsd-virtualization</strong></a></td>
+    <td>Discussion of various virtualization techniques FreeBSD supports.</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-vuxml"><strong>freebsd-vuxml</strong></a></td>
+    <td>Documenting security issues in VuXML</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-wip-status"><strong>freebsd-wip-status</strong></a></td>
+    <td>FreeBSD Work-In-Progress Status</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-www"><strong>freebsd-www</strong></a></td>
+    <td>FreeBSD Project Webmasters</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-x11"><strong>freebsd-x11</strong></a></td>
+    <td>X11 on FreeBSD -- maintaining and support</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/freebsd-xen"><strong>freebsd-xen</strong></a></td>
+    <td>Discussion of the freebsd port to xen - implementation and usage</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/netperf-users"><strong>netperf-users</strong></a></td>
+    <td>Announcements and discussions related to the netperf cluster. </td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/p4-projects"><strong>p4-projects</strong></a></td>
+    <td>p4 projects tree changes</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/p4-releng"><strong>p4-releng</strong></a></td>
+    <td>p4 releng tree changes</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/posix1e"><strong>posix1e</strong></a></td>
+    <td>POSIX.1e Discussion List</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/soc-status"><strong>soc-status</strong></a></td>
+    <td>Summer of Code Status Reports and Discussion</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/svn-src-all"><strong>svn-src-all</strong></a></td>
+    <td>SVN commit messages for the entire src tree (except for &quot;user&quot; and &quot;projects&quot;)</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/svn-src-head"><strong>svn-src-head</strong></a></td>
+    <td>SVN commit messages for the src tree for head/-current</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/svn-src-projects"><strong>svn-src-projects</strong></a></td>
+    <td>SVN commit messages for the src &quot;projects&quot; tree</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/svn-src-release"><strong>svn-src-release</strong></a></td>
+    <td>SVN commit messages for releases in the src tree</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/svn-src-releng"><strong>svn-src-releng</strong></a></td>
+    <td>SVN commit messages for the release engineering / security commits to the src tree</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/svn-src-stable"><strong>svn-src-stable</strong></a></td>
+    <td>SVN commit messages for all the -stable branches of the src tree</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/svn-src-stable-6"><strong>svn-src-stable-6</strong></a></td>
+    <td>SVN commit messages for only the 6-stable src tree</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/svn-src-stable-7"><strong>svn-src-stable-7</strong></a></td>
+    <td>SVN commit messages for only the 7-stable src tree</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/svn-src-stable-8"><strong>svn-src-stable-8</strong></a></td>
+    <td>SVN commit messages for only the 8-stable src tree</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/svn-src-stable-other"><strong>svn-src-stable-other</strong></a></td>
+    <td>SVN commit messages for the old stable src trees</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/svn-src-svnadmin"><strong>svn-src-svnadmin</strong></a></td>
+    <td>SVN commit messages for the admin / configuration tree</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/svn-src-user"><strong>svn-src-user</strong></a></td>
+    <td>SVN commit messages for the experimental &quot;user&quot; src tree</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/svn-src-vendor"><strong>svn-src-vendor</strong></a></td>
+    <td>SVN commit messages for the vendor work area tree</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/trustedbsd-announce"><strong>trustedbsd-announce</strong></a></td>
+    <td>TrustedBSD Project Announcements</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/trustedbsd-audit"><strong>trustedbsd-audit</strong></a></td>
+    <td>TrustedBSD Audit Discussion List</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/trustedbsd-cvs"><strong>trustedbsd-cvs</strong></a></td>
+    <td>TrustedBSD  CVS and Perforce commit message list</td>
+  </tr>
+  <tr BGCOLOR="#dddddd">
+    <td><a href="http://lists.freebsd.org/mailman/listinfo/trustedbsd-discuss"><strong>trustedbsd-discuss</strong></a></td>
+    <td>TrustedBSD General Discussion List</td>
+  </tr>
+</table>
+<hr>
+<table WIDTH="100%" BORDER="0">
+  <tr>
+    <td><a href="http://www.gnu.org/software/mailman/index.html"><img src="/icons/mailman.jpg" alt="Delivered by Mailman" border=0><br>version 2.1.5</a></td>
+    <td><a href="http://www.python.org/"><img src="/icons/PythonPowered.png" alt="Python Powered" border=0></a></td>
+    <td><a href="http://www.freebsd.org/"><img src="/icons/powerlogo.gif" alt="Powered by FreeBSD" border=0></a></td>
+  </tr>
+</table>
+
+</BODY>
+</HTML>

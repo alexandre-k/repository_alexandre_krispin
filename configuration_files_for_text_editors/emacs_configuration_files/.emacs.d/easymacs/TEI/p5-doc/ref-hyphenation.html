@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;hyphenation&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;hyphenation&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;hyphenation&gt;</h1></div><div><span id="hyphenation"/><table border="1" class="wovenodd"><tr><td class="elementSpec">hyphenation</td><td colspan="2" class="wovenodd-col2">(Hyphenation) summarizes the way in which hyphenation in a source text has been
+treated in an encoded version of it.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-att.declarable.html">att.declarable</a> <a class="link_odd" href="ref-model.editorialDeclPart.html">model.editorialDeclPart</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element hyphenation
+{
+   att.global.attributes,
+   att.declarable.attributes,
+   attribute eol { "all" | "some" | "hard" | "none" }?,
+   <a class="link_odd" href="ref-model.pLike.html">model.pLike</a>+
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>  [<a class="classlink" href="ref-att.declarable.html">att.declarable</a> ] <table><tr><td class="attDef">eol</td><td colspan="2">indicates whether or not end-of-line hyphenation has been
+	retained in a text.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Default</span>: some</td></tr><tr><td><!-- --></td><td valign="top">Legal values are:<table class="valList"><tr><td valign="top"><b>all</b></td><td valign="top">(all end-of-line hyphenation has been retained,
+                   even though the lineation of the original
+                   may not have been.
+   ) </td></tr><tr><td valign="top"><b>some</b></td><td valign="top">(end-of-line hyphenation has been retained in some
+                   cases.
+   ) </td></tr><tr><td valign="top"><b>hard</b></td><td valign="top">(all soft end-of-line hyphenation has been removed:
+                   any remaining end-od-line hyphenation should be retained.
+  ) </td></tr><tr><td valign="top"><b>none</b></td><td valign="top">(all end-of-line hyphenation has been removed:
+                  any remaining hyphenation occurred within the line.
+   ) </td></tr></table></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;hyphenation <span class="attribute">eol</span>="some"&gt;</span><br/>  <span class="element">&lt;p&gt;</span>End-of-line hyphenation silently removed where appropriate<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/hyphenation&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;hyphenation <span class="attribute">eol</span>="some"&gt;</span><br/>  <span class="element">&lt;p&gt;</span>Le trait d'union en fin de ligne a été supprimé sans mention explicite là où il était attendu.<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/hyphenation&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;hyphenation <span class="attribute">eol</span>="some"&gt;</span><br/>  <span class="element">&lt;p&gt;</span>Le trait d'union en fin de ligne a été supprimé sans mention explicite là où il était attendu.<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/hyphenation&gt;</span></div></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="HD.html#HD53" title="The Editorial Practices Declaration">3.3.3  The Editorial Practices Declaration</a></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="CC.html#CCAS2" title="Declarable Elements">20.3.2  Declarable Elements</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">header</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

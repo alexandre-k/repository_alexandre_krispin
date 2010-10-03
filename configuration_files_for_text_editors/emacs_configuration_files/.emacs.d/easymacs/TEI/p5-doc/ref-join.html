@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;join&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;join&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;join&gt;</h1></div><div><span id="join"/><table border="1" class="wovenodd"><tr><td class="elementSpec">join</td><td colspan="2" class="wovenodd-col2">identifies a possibly fragmented segment of text, by pointing
+at the possibly discontiguous elements which compose it.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-att.pointing.html">att.pointing</a> <a class="link_odd" href="ref-model.global.meta.html">model.global.meta</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element join
+{
+   att.global.attributes,
+   att.pointing.attributes,
+   attribute targets { list { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a>, <a class="link_odd" href="ref-data.pointer.html">data.pointer</a>+ } },
+   attribute result { <a class="link_odd" href="ref-data.name.html">data.name</a> }?,
+   attribute scope { "root" | "branches" }?,
+   <a class="link_odd" href="ref-macro.glossSeq.html">macro.glossSeq</a>
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>  [<a class="classlink" href="ref-att.pointing.html">att.pointing</a> ] <table><tr><td class="attDef">targets</td><td colspan="2">specifies the identifiers of the elements or passages
+       to be joined into a virtual
+       element.</td></tr><tr><td/><td><span class="label">Status: </span><b>Required</b></td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span> [n &gt;= 2]  [n &lt;= unbounded] <code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>two or more pointers (URIs), separated by white space</td></tr><tr><td class="attDef">result</td><td colspan="2">specifies the name of an element
+which this aggregation
+may be understood to represent.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.name.html">data.name</a></code></td></tr><tr><td/><td><span class="label">Values: </span>The generic identifier of an element in the current DTD.</td></tr><tr><td class="attDef">scope</td><td colspan="2">indicates whether the targets to be joined include the
+entire element indicated (the entire subtree including its root),
+or just the children of the target (the branches of the subtree).</td></tr><tr><td/><td><span class="label">Status: </span>Recommended</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Default</span>: root</td></tr><tr><td><!-- --></td><td valign="top">Legal values are:<table class="valList"><tr><td valign="top"><b>root</b></td><td valign="top">(the rooted subtrees indicated by the targets
+attribute are joined, each subtree become a child of the virtual
+element created by the join) </td></tr><tr><td valign="top"><b>branches</b></td><td valign="top">(the children of the subtrees indicated by the
+targets attribute become the children of the virtual element
+(i.e. the roots of the subtrees are discarded)) </td></tr></table></td></tr><tr><td/><td><p><span id="id2499427"/>In this example, the text contains a list of authors of
+articles in a journal; the <code>&lt;join&gt;</code> element is used to
+join into one virtual list the names of the authors who reside in
+Heidelberg.</p></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><p><span id="id2499442"/>The following example is discussed in section <a class="link_ptr" href="SA.html#SAAG" title="Aggregation">11.7  Aggregation</a>:</p><div class="pre"> <span class="element">&lt;sp <span class="attribute">who</span>="#frog_hughie"&gt;</span><br/>  <span class="element">&lt;p&gt;</span>How does it go?
+  <span class="element">&lt;q&gt;</span><br/>    <span class="element">&lt;l <span class="attribute">xml:id</span>="frog_x1"&gt;</span>da-da-da<span class="element">&lt;/l&gt;</span><br/>    <span class="element">&lt;l <span class="attribute">xml:id</span>="frog_l2"&gt;</span>gets a new frog<span class="element">&lt;/l&gt;</span><br/>    <span class="element">&lt;l&gt;</span>...<span class="element">&lt;/l&gt;</span><br/>   <span class="element">&lt;/q&gt;</span><br/>  <span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#frog_louie"&gt;</span><br/>  <span class="element">&lt;p&gt;</span><br/>   <span class="element">&lt;q&gt;</span><br/>    <span class="element">&lt;l <span class="attribute">xml:id</span>="frog_l1"&gt;</span>When the old pond<span class="element">&lt;/l&gt;</span><br/>    <span class="element">&lt;l&gt;</span>...<span class="element">&lt;/l&gt;</span><br/>   <span class="element">&lt;/q&gt;</span><br/>  <span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/sp&gt;</span><br/> <span class="element">&lt;sp <span class="attribute">who</span>="#frog_dewey"&gt;</span><br/>  <span class="element">&lt;p&gt;</span><br/>   <span class="element">&lt;q&gt;</span>... 
+    <span class="element">&lt;l <span class="attribute">xml:id</span>="frog_l3"&gt;</span>It's a new pond.<span class="element">&lt;/l&gt;</span><br/>   <span class="element">&lt;/q&gt;</span><br/>  <span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;join <span class="attribute">targets</span>="#frog_l1 #frog_l2 #frog_l3" <span class="attribute">result</span>="lg" <span class="attribute">scope</span>="root"/&gt;</span><br/> <span class="element">&lt;/sp&gt;</span></div><p><span id="id2499536"/>The <code>&lt;join&gt;</code> element here identifies a linegroup (<code>&lt;lg&gt;</code>)
+comprising the three lines indicated by the <span class="att">targets</span>
+attribute.  The value <tt>root</tt> for the
+<span class="att">scope</span> attribute  indicates that the
+resulting virtual element contains the three <code>&lt;l&gt;</code> elements
+linked to at #frog_l1 #frog_l2 #frog_l3, rather than their character
+data content.</p></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><p><span id="id2499568"/>In this example, the attribute <span class="att">scope</span> is
+specified with the value of <tt>branches</tt> to indicate that
+the virtual list being constructed is to be made by taking the lists
+indicated by the <span class="att">targets</span> attribute of the <code>&lt;join&gt;</code>
+element, discarding the <code>&lt;list&gt;</code> tags which enclose them, and
+combining the items contained within the lists into a single virtual
+list:</p><div class="pre"> <span class="element">&lt;p&gt;</span>Southern dialect (my own variety, at least) has only
+  <span class="element">&lt;list <span class="attribute">xml:id</span>="LP1"&gt;</span><br/>   <span class="element">&lt;item&gt;</span><br/>    <span class="element">&lt;s&gt;</span>I done gone<span class="element">&lt;/s&gt;</span><br/>   <span class="element">&lt;/item&gt;</span><br/>   <span class="element">&lt;item&gt;</span><br/>    <span class="element">&lt;s&gt;</span>I done went<span class="element">&lt;/s&gt;</span><br/>   <span class="element">&lt;/item&gt;</span><br/>  <span class="element">&lt;/list&gt;</span> whereas Negro Non-Standard basilect has both these and<br/>   <span class="element">&lt;list <span class="attribute">xml:id</span>="LP2"&gt;</span><br/>   <span class="element">&lt;item&gt;</span><br/>    <span class="element">&lt;s&gt;</span>I done go<span class="element">&lt;/s&gt;</span><br/>   <span class="element">&lt;/item&gt;</span><br/>  <span class="element">&lt;/list&gt;</span>.<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;p&gt;</span>White Southern dialect also has
+  <span class="element">&lt;list <span class="attribute">xml:id</span>="LP3"&gt;</span><br/>   <span class="element">&lt;item&gt;</span><br/>    <span class="element">&lt;s&gt;</span>I've done gone<span class="element">&lt;/s&gt;</span><br/>   <span class="element">&lt;/item&gt;</span><br/>   <span class="element">&lt;item&gt;</span><br/>    <span class="element">&lt;s&gt;</span>I've done went<span class="element">&lt;/s&gt;</span><br/>   <span class="element">&lt;/item&gt;</span><br/>  <span class="element">&lt;/list&gt;</span> which, when they occur in Negro dialect, should probably <br/>    be considered as borrowings from other varieties of<br/>    English.<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;join<br/>   <span class="attribute">result</span>="list"<br/>   <span class="attribute">xml:id</span>="LST1"<br/>   <span class="attribute">targets</span>="#LP1 #LP2 #LP3"<br/>   <span class="attribute">scope</span>="branches"&gt;</span><br/>  <span class="element">&lt;desc&gt;</span>Sample sentences in Southern speech<span class="element">&lt;/desc&gt;</span><br/> <span class="element">&lt;/join&gt;</span></div></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="SA.html#SAAG" title="Aggregation">11.7  Aggregation</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">linking</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;gloss&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;gloss&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;gloss&gt;</h1></div><div><span id="gloss"/><table border="1" class="wovenodd"><tr><td class="elementSpec">gloss</td><td colspan="2" class="wovenodd-col2">identifies a phrase or word used to provide a gloss or
+  definition for some other word or phrase.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.hiLike.html">model.hiLike</a> <a class="link_odd" href="ref-att.declaring.html">att.declaring</a> <a class="link_odd" href="ref-att.translatable.html">att.translatable</a> <a class="link_odd" href="ref-model.glossLike.html">model.glossLike</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element gloss
+{
+   att.global.attributes,
+   att.declaring.attributes,
+   att.translatable.attributes,
+   ( attribute target { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a> } | attribute cRef { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a> } )?,
+   <a class="link_odd" href="ref-macro.phraseSeq.html">macro.phraseSeq</a>
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>  [<a class="classlink" href="ref-att.declaring.html">att.declaring</a> <a class="classlink" href="ref-att.translatable.html">att.translatable</a> ] <table><tr><td class="attDef">target</td><td colspan="2">identifies the associated term element by an
+      absolute or relative URI reference</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>should be a valid URI reference that resolves to a
+      <code>&lt;term&gt;</code> element</td></tr><tr><td class="attDef">cRef</td><td colspan="2">identifies the associated term element using a canonical
+      reference from a scheme defined in a refsDecl element
+      in the TEI header</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>the result of applying the algorithm for the resolution
+      of canonical references (described in section <a class="link_ptr" href="SA.html#SACR" title="Canonical References">11.2.5  Canonical References</a>) should be a valid URI reference that resolves
+      to a <code>&lt;term&gt;</code> element</td></tr><tr><td/><td><p><span id="id2399579"/>The <code>&lt;refsDecl&gt;</code> to use may be indicated with the
+	<span class="att">decls</span> attribute.</p></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre">We may define  <span class="element">&lt;term <span class="attribute">xml:id</span>="tdpv" <span class="attribute">rend</span>="sc"&gt;</span>discoursal point of view<span class="element">&lt;/term&gt;</span><br/>as <br/> <span class="element">&lt;gloss <span class="attribute">target</span>="tdpv"&gt;</span>the relationship, expressed through discourse
+structure, between the implied author or some other addresser,
+and the fiction.<span class="element">&lt;/gloss&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p><span id="id2399619"/>The <span class="att">target</span> and <span class="att">cRef</span> attributes are
+    mutually exclusive.</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="CO.html#COHQU" title="Terms, Glosses, Equivalents and Descriptions">4.3.4  Terms, Glosses, Equivalents and Descriptions</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">core</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

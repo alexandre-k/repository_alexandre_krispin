@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;correction&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;correction&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;correction&gt;</h1></div><div><span id="correction"/><table border="1" class="wovenodd"><tr><td class="elementSpec">correction</td><td colspan="2" class="wovenodd-col2">(correction principles) states how and under what circumstances corrections have been
+made in the text.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-att.declarable.html">att.declarable</a> <a class="link_odd" href="ref-model.editorialDeclPart.html">model.editorialDeclPart</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element correction
+{
+   att.global.attributes,
+   att.declarable.attributes,
+   attribute status { "high" | "medium" | "low" | "unknown" }?,
+   attribute method { "silent" | "tags" }?,
+   <a class="link_odd" href="ref-model.pLike.html">model.pLike</a>+
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>  [<a class="classlink" href="ref-att.declarable.html">att.declarable</a> ] <table><tr><td class="attDef">status</td><td colspan="2">indicates the degree of correction applied to the text.
+   </td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Default</span>: unknown</td></tr><tr><td><!-- --></td><td valign="top">Legal values are:<table class="valList"><tr><td valign="top"><b>high</b></td><td valign="top">(the text has been thoroughly checked and
+                       proofread.
+    ) </td></tr><tr><td valign="top"><b>medium</b></td><td valign="top">(the text has been checked at least once.
+    ) </td></tr><tr><td valign="top"><b>low</b></td><td valign="top">(the text has not been checked.
+    ) </td></tr><tr><td valign="top"><b>unknown</b></td><td valign="top">(the correction status of the text is unknown.
+   ) </td></tr></table></td></tr><tr><td class="attDef">method</td><td colspan="2">indicates the method adopted to indicate corrections within the
+         text.
+   </td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Default</span>: silent</td></tr><tr><td><!-- --></td><td valign="top">Legal values are:<table class="valList"><tr><td valign="top"><b>silent</b></td><td valign="top">(corrections have been made silently
+    ) </td></tr><tr><td valign="top"><b>tags</b></td><td valign="top">(corrections have been represented using editorial tags
+   ) </td></tr></table></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;correction&gt;</span><br/>  <span class="element">&lt;p&gt;</span>Errors in transcription controlled by using the
+WordPerfect spelling checker, with a user defined dictionary of 500
+extra words taken from Chambers Twentieth Century Dictionary.<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/correction&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;correction&gt;</span><br/>  <span class="element">&lt;p&gt;</span>Les erreurs de transcription ont été corrigées au moyen du correcteur orthographique de WordPerfect, avec un dictionnaire défini par l'utilisateur de 500
+mots supplémentaires issus du Chambers Twentieth Century Dictionary.<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/correction&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p><span id="id2381776"/>May be used to note the results of proof reading the
+text against its original, indicating (for example) whether
+discrepancies have been silently rectified, or recorded using the
+editorial tags described in section <a class="link_ptr" href="CO.html#COED" title="Simple Editorial Changes">4.4  Simple Editorial Changes</a>.</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="HD.html#HD53" title="The Editorial Practices Declaration">3.3.3  The Editorial Practices Declaration</a></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="CC.html#CCAS2" title="Declarable Elements">20.3.2  Declarable Elements</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">header</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

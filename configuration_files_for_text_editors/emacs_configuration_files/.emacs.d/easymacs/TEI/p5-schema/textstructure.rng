@@ -1,0 +1,1208 @@
+<?xml version="1.0"?>
+<rng:grammar xmlns:rng="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<!--Schema generated 2007-03-13T16:02:29Z..
+Copyright 2005 TEI Consortium.
+This is free software; you can redistribute it and/or
+	    modify it under the terms of the GNU General Public
+	    License as published by the Free Software Foundation;
+	    either version 2 of the License, or (at your option) any
+	    later version.
+This material is distributed in the hope that it will be
+	    useful, but WITHOUT ANY WARRANTY; without even the implied
+	    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+	    PURPOSE. See the GNU General Public License for more
+	    details.
+You should have received a copy of the GNU General Public
+	    License along with this file; if not, write to the Free
+	    Software Foundation, Inc., 59 Temple Place, Suite 330,
+	    Boston, MA 02111-1307, USA.
+To contact the TEI Consortium use the following addresses.
+	    For general (non-technical) enquiries: 
+		  target="mailto:info@tei-c.org"/>info@tei-c.orgFor membership enquiries: membership@tei-c.orgFor technical enquiries, particularly about the
+		Guidelines, DTDs, schemas, or software available from
+		the TEI-C: editors@tei-c.orgFor up to date information, consult the TEI web site at http://www.tei-c.org/P5Default
+text structure-->
+<!--Definitions from module textstructure-->
+<!--Set global predeclared macros-->
+<!--Set predeclared macros-->
+<!--0. predeclared macros-->
+<!--1. classes-->
+<!--2. elements-->
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="TEI">
+    <element name="TEI">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(TEI document) contains a single TEI-conformant document,
+comprising a TEI header and a text, either in isolation or as part of a
+teiCorpus element.</a:documentation>
+      <ref name="TEI.content"/>
+      <ref name="TEI.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="TEI.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:ref name="teiHeader"/>
+      <rng:ref name="text"/>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="TEI.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="version" a1:defaultValue="5.0">
+        <a1:documentation>The version of the TEI scheme</a1:documentation>
+        <data type="decimal"/>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="argument">
+    <element name="argument">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A formal list or prose description of the topics addressed by
+	a subdivision of a text.</a:documentation>
+      <ref name="argument.content"/>
+      <ref name="argument.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="argument.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:zeroOrMore>
+        <rng:ref name="model.global"/>
+      </rng:zeroOrMore>
+      <rng:optional>
+        <rng:ref name="head"/>
+        <rng:zeroOrMore>
+          <rng:ref name="model.global"/>
+        </rng:zeroOrMore>
+      </rng:optional>
+      <rng:oneOrMore>
+        <rng:ref name="macro.component"/>
+        <rng:zeroOrMore>
+          <rng:ref name="model.global"/>
+        </rng:zeroOrMore>
+      </rng:oneOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="argument.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="back">
+    <element name="back">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(back matter) contains any appendixes, etc. following the main part of a
+text.</a:documentation>
+      <ref name="back.content"/>
+      <ref name="back.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="back.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.frontPart"/>
+          <rng:ref name="model.global"/>
+          <rng:ref name="model.divWrapper"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+      <rng:optional>
+        <rng:choice>
+          <rng:oneOrMore>
+            <rng:group>
+              <rng:group>
+                <rng:ref name="model.divLike"/>
+              </rng:group>
+              <rng:zeroOrMore>
+                <rng:choice>
+                  <rng:ref name="model.global"/>
+                  <rng:ref name="model.frontPart"/>
+                </rng:choice>
+              </rng:zeroOrMore>
+            </rng:group>
+          </rng:oneOrMore>
+          <rng:oneOrMore>
+            <rng:group>
+              <rng:group>
+                <rng:ref name="model.div1Like"/>
+              </rng:group>
+              <rng:zeroOrMore>
+                <rng:choice>
+                  <rng:ref name="model.global"/>
+                  <rng:ref name="model.frontPart"/>
+                </rng:choice>
+              </rng:zeroOrMore>
+            </rng:group>
+          </rng:oneOrMore>
+        </rng:choice>
+      </rng:optional>
+      <rng:zeroOrMore>
+        <rng:ref name="model.divWrapper.bottom"/>
+      </rng:zeroOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="back.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.declaring.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="body">
+    <element name="body">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(text body) contains the whole body of a single unitary text, excluding any front or back matter.</a:documentation>
+      <ref name="body.content"/>
+      <ref name="body.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="body.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:zeroOrMore>
+        <rng:ref name="model.global"/>
+      </rng:zeroOrMore>
+      <rng:optional>
+        <rng:group>
+          <rng:group>
+            <rng:ref name="model.divWrapper"/>
+          </rng:group>
+          <rng:zeroOrMore>
+            <rng:choice>
+              <rng:ref name="model.global"/>
+              <rng:ref name="model.divWrapper"/>
+            </rng:choice>
+          </rng:zeroOrMore>
+        </rng:group>
+      </rng:optional>
+      <rng:optional>
+        <rng:group>
+          <rng:group>
+            <rng:ref name="model.divGenLike"/>
+          </rng:group>
+          <rng:zeroOrMore>
+            <rng:choice>
+              <rng:ref name="model.global"/>
+              <rng:ref name="model.divGenLike"/>
+            </rng:choice>
+          </rng:zeroOrMore>
+        </rng:group>
+      </rng:optional>
+      <rng:group>
+        <rng:choice>
+          <rng:oneOrMore>
+            <rng:group>
+              <rng:group>
+                <rng:ref name="model.divLike"/>
+              </rng:group>
+              <rng:zeroOrMore>
+                <rng:choice>
+                  <rng:ref name="model.global"/>
+                  <rng:ref name="model.divGenLike"/>
+                </rng:choice>
+              </rng:zeroOrMore>
+            </rng:group>
+          </rng:oneOrMore>
+          <rng:oneOrMore>
+            <rng:group>
+              <rng:group>
+                <rng:ref name="model.div1Like"/>
+              </rng:group>
+              <rng:zeroOrMore>
+                <rng:choice>
+                  <rng:ref name="model.global"/>
+                  <rng:ref name="model.divGenLike"/>
+                </rng:choice>
+              </rng:zeroOrMore>
+            </rng:group>
+          </rng:oneOrMore>
+          <rng:group>
+            <rng:oneOrMore>
+              <rng:group>
+                <rng:ref name="macro.component"/>
+              </rng:group>
+              <rng:zeroOrMore>
+                <rng:ref name="model.global"/>
+              </rng:zeroOrMore>
+            </rng:oneOrMore>
+            <rng:optional>
+              <rng:choice>
+                <rng:oneOrMore>
+                  <rng:group>
+                    <rng:group>
+                      <rng:ref name="model.divLike"/>
+                    </rng:group>
+                    <rng:zeroOrMore>
+                      <rng:choice>
+                        <rng:ref name="model.global"/>
+                        <rng:ref name="model.divGenLike"/>
+                      </rng:choice>
+                    </rng:zeroOrMore>
+                  </rng:group>
+                </rng:oneOrMore>
+                <rng:oneOrMore>
+                  <rng:group>
+                    <rng:group>
+                      <rng:ref name="model.div1Like"/>
+                    </rng:group>
+                    <rng:zeroOrMore>
+                      <rng:choice>
+                        <rng:ref name="model.global"/>
+                        <rng:ref name="model.divGenLike"/>
+                      </rng:choice>
+                    </rng:zeroOrMore>
+                  </rng:group>
+                </rng:oneOrMore>
+              </rng:choice>
+            </rng:optional>
+          </rng:group>
+        </rng:choice>
+      </rng:group>
+      <rng:zeroOrMore>
+        <rng:group>
+          <rng:group>
+            <rng:ref name="model.divWrapper.bottom"/>
+          </rng:group>
+          <rng:zeroOrMore>
+            <rng:ref name="model.global"/>
+          </rng:zeroOrMore>
+        </rng:group>
+      </rng:zeroOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="body.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.declaring.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="byline">
+    <element name="byline">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the primary statement of responsibility given for a work
+on its title page or at the head or end of the work.</a:documentation>
+      <ref name="byline.content"/>
+      <ref name="byline.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="byline.content">
+    <zeroOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:choice>
+        <rng:text/>
+        <rng:ref name="model.gLike"/>
+        <rng:ref name="model.phrase"/>
+        <rng:ref name="docAuthor"/>
+        <rng:ref name="model.global"/>
+      </rng:choice>
+    </zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="byline.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="closer">
+    <element name="closer">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">groups together dateline, byline, salutation, and similar
+phrases appearing as a final group at the end of a
+division, especially of a letter.</a:documentation>
+      <ref name="closer.content"/>
+      <ref name="closer.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="closer.content">
+    <zeroOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:choice>
+        <rng:text/>
+        <rng:ref name="model.gLike"/>
+        <rng:ref name="signed"/>
+        <rng:ref name="dateline"/>
+        <rng:ref name="salute"/>
+        <rng:ref name="model.phrase"/>
+        <rng:ref name="model.global"/>
+      </rng:choice>
+    </zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="closer.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="dateline">
+    <element name="dateline">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a brief description of the place, date, time, etc. of
+	production of a letter, newspaper story, or other work, prefixed or
+	suffixed to it as a kind of heading or trailer. </a:documentation>
+      <ref name="dateline.content"/>
+      <ref name="dateline.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="dateline.content">
+    <ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="dateline.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div">
+    <element name="div">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(text division) contains a subdivision of the front, body, or back of a
+text.</a:documentation>
+      <ref name="div.content"/>
+      <ref name="div.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.divWrapper"/>
+          <rng:ref name="model.global"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+      <rng:optional>
+        <rng:choice>
+          <rng:group>
+            <rng:oneOrMore>
+              <rng:choice>
+                <rng:ref name="div"/>
+                <rng:ref name="divGen"/>
+              </rng:choice>
+              <rng:zeroOrMore>
+                <rng:ref name="model.global"/>
+              </rng:zeroOrMore>
+            </rng:oneOrMore>
+          </rng:group>
+          <rng:group>
+            <rng:oneOrMore>
+              <rng:ref name="macro.component"/>
+              <rng:zeroOrMore>
+                <rng:ref name="model.global"/>
+              </rng:zeroOrMore>
+            </rng:oneOrMore>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="div"/>
+                <rng:ref name="divGen"/>
+              </rng:choice>
+              <rng:zeroOrMore>
+                <rng:ref name="model.global"/>
+              </rng:zeroOrMore>
+            </rng:zeroOrMore>
+          </rng:group>
+        </rng:choice>
+        <rng:zeroOrMore>
+          <rng:choice>
+            <rng:ref name="model.divWrapper"/>
+            <rng:ref name="model.divWrapper.bottom"/>
+          </rng:choice>
+          <rng:zeroOrMore>
+            <rng:ref name="model.global"/>
+          </rng:zeroOrMore>
+        </rng:zeroOrMore>
+      </rng:optional>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.divLike.attributes"/>
+    <ref name="att.declaring.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div1">
+    <element name="div1">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(level-1 text division) contains a first-level subdivision of the front, body, or back
+of a text.</a:documentation>
+      <ref name="div1.content"/>
+      <ref name="div1.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div1.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.divWrapper"/>
+          <rng:ref name="model.global"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+      <rng:choice>
+        <rng:oneOrMore>
+          <rng:choice>
+            <rng:ref name="model.div2Like"/>
+            <rng:ref name="model.divGenLike"/>
+          </rng:choice>
+          <rng:zeroOrMore>
+            <rng:ref name="model.global"/>
+          </rng:zeroOrMore>
+        </rng:oneOrMore>
+        <rng:group>
+          <rng:oneOrMore>
+            <rng:ref name="macro.component"/>
+            <rng:zeroOrMore>
+              <rng:ref name="model.global"/>
+            </rng:zeroOrMore>
+          </rng:oneOrMore>
+          <rng:zeroOrMore>
+            <rng:choice>
+              <rng:ref name="model.div2Like"/>
+              <rng:ref name="model.divGenLike"/>
+            </rng:choice>
+            <rng:zeroOrMore>
+              <rng:ref name="model.global"/>
+            </rng:zeroOrMore>
+          </rng:zeroOrMore>
+        </rng:group>
+      </rng:choice>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.divWrapper"/>
+          <rng:ref name="model.divWrapper.bottom"/>
+        </rng:choice>
+        <rng:zeroOrMore>
+          <rng:ref name="model.global"/>
+        </rng:zeroOrMore>
+      </rng:zeroOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div1.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.divLike.attributes"/>
+    <ref name="att.declaring.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div2">
+    <element name="div2">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(level-2 text division) contains a second-level subdivision of the front, body, or back of a
+ text.</a:documentation>
+      <ref name="div2.content"/>
+      <ref name="div2.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div2.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.divWrapper"/>
+          <rng:ref name="model.global"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+      <rng:choice>
+        <rng:oneOrMore>
+          <rng:choice>
+            <rng:ref name="model.div3Like"/>
+            <rng:ref name="model.divGenLike"/>
+          </rng:choice>
+          <rng:zeroOrMore>
+            <rng:ref name="model.global"/>
+          </rng:zeroOrMore>
+        </rng:oneOrMore>
+        <rng:group>
+          <rng:oneOrMore>
+            <rng:ref name="macro.component"/>
+            <rng:zeroOrMore>
+              <rng:ref name="model.global"/>
+            </rng:zeroOrMore>
+          </rng:oneOrMore>
+          <rng:zeroOrMore>
+            <rng:choice>
+              <rng:ref name="model.div3Like"/>
+              <rng:ref name="model.divGenLike"/>
+            </rng:choice>
+            <rng:zeroOrMore>
+              <rng:ref name="model.global"/>
+            </rng:zeroOrMore>
+          </rng:zeroOrMore>
+        </rng:group>
+      </rng:choice>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.divWrapper"/>
+          <rng:ref name="model.divWrapper.bottom"/>
+        </rng:choice>
+        <rng:zeroOrMore>
+          <rng:ref name="model.global"/>
+        </rng:zeroOrMore>
+      </rng:zeroOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div2.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.divLike.attributes"/>
+    <ref name="att.declaring.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div3">
+    <element name="div3">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(level-3 text division) contains a third-level subdivision of the front, body, or back of a
+ text.</a:documentation>
+      <ref name="div3.content"/>
+      <ref name="div3.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div3.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.divWrapper"/>
+          <rng:ref name="model.global"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+      <rng:choice>
+        <rng:oneOrMore>
+          <rng:choice>
+            <rng:ref name="model.div4Like"/>
+            <rng:ref name="model.divGenLike"/>
+          </rng:choice>
+          <rng:zeroOrMore>
+            <rng:ref name="model.global"/>
+          </rng:zeroOrMore>
+        </rng:oneOrMore>
+        <rng:group>
+          <rng:oneOrMore>
+            <rng:ref name="macro.component"/>
+            <rng:zeroOrMore>
+              <rng:ref name="model.global"/>
+            </rng:zeroOrMore>
+          </rng:oneOrMore>
+          <rng:zeroOrMore>
+            <rng:choice>
+              <rng:ref name="model.div4Like"/>
+              <rng:ref name="model.divGenLike"/>
+            </rng:choice>
+            <rng:zeroOrMore>
+              <rng:ref name="model.global"/>
+            </rng:zeroOrMore>
+          </rng:zeroOrMore>
+        </rng:group>
+      </rng:choice>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.divWrapper"/>
+          <rng:ref name="model.divWrapper.bottom"/>
+        </rng:choice>
+        <rng:zeroOrMore>
+          <rng:ref name="model.global"/>
+        </rng:zeroOrMore>
+      </rng:zeroOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div3.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.divLike.attributes"/>
+    <ref name="att.declaring.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div4">
+    <element name="div4">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(level-4 text division) contains a fourth-level subdivision of the front, body, or back of a
+ text.</a:documentation>
+      <ref name="div4.content"/>
+      <ref name="div4.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div4.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.divWrapper"/>
+          <rng:ref name="model.global"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+      <rng:choice>
+        <rng:oneOrMore>
+          <rng:choice>
+            <rng:ref name="model.div5Like"/>
+            <rng:ref name="model.divGenLike"/>
+          </rng:choice>
+          <rng:zeroOrMore>
+            <rng:ref name="model.global"/>
+          </rng:zeroOrMore>
+        </rng:oneOrMore>
+        <rng:group>
+          <rng:oneOrMore>
+            <rng:ref name="macro.component"/>
+            <rng:zeroOrMore>
+              <rng:ref name="model.global"/>
+            </rng:zeroOrMore>
+          </rng:oneOrMore>
+          <rng:zeroOrMore>
+            <rng:choice>
+              <rng:ref name="model.div5Like"/>
+              <rng:ref name="model.divGenLike"/>
+            </rng:choice>
+            <rng:zeroOrMore>
+              <rng:ref name="model.global"/>
+            </rng:zeroOrMore>
+          </rng:zeroOrMore>
+        </rng:group>
+      </rng:choice>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.divWrapper"/>
+          <rng:ref name="model.divWrapper.bottom"/>
+        </rng:choice>
+        <rng:zeroOrMore>
+          <rng:ref name="model.global"/>
+        </rng:zeroOrMore>
+      </rng:zeroOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div4.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.divLike.attributes"/>
+    <ref name="att.declaring.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div5">
+    <element name="div5">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(level-5 text division) contains a fifth-level subdivision of the front, body, or back of a
+ text.</a:documentation>
+      <ref name="div5.content"/>
+      <ref name="div5.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div5.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.divWrapper"/>
+          <rng:ref name="model.global"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+      <rng:choice>
+        <rng:oneOrMore>
+          <rng:choice>
+            <rng:ref name="model.div6Like"/>
+            <rng:ref name="model.divGenLike"/>
+          </rng:choice>
+          <rng:zeroOrMore>
+            <rng:ref name="model.global"/>
+          </rng:zeroOrMore>
+        </rng:oneOrMore>
+        <rng:group>
+          <rng:oneOrMore>
+            <rng:ref name="macro.component"/>
+            <rng:zeroOrMore>
+              <rng:ref name="model.global"/>
+            </rng:zeroOrMore>
+          </rng:oneOrMore>
+          <rng:zeroOrMore>
+            <rng:choice>
+              <rng:ref name="model.div6Like"/>
+              <rng:ref name="model.divGenLike"/>
+            </rng:choice>
+            <rng:zeroOrMore>
+              <rng:ref name="model.global"/>
+            </rng:zeroOrMore>
+          </rng:zeroOrMore>
+        </rng:group>
+      </rng:choice>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.divWrapper"/>
+          <rng:ref name="model.divWrapper.bottom"/>
+        </rng:choice>
+        <rng:zeroOrMore>
+          <rng:ref name="model.global"/>
+        </rng:zeroOrMore>
+      </rng:zeroOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div5.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.divLike.attributes"/>
+    <ref name="att.declaring.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div6">
+    <element name="div6">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(level-6 text division) contains a sixth-level subdivision of the front, body, or back of a
+ text.</a:documentation>
+      <ref name="div6.content"/>
+      <ref name="div6.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div6.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.divWrapper"/>
+          <rng:ref name="model.global"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+      <rng:choice>
+        <rng:oneOrMore>
+          <rng:choice>
+            <rng:ref name="model.div7Like"/>
+            <rng:ref name="model.divGenLike"/>
+          </rng:choice>
+          <rng:zeroOrMore>
+            <rng:ref name="model.global"/>
+          </rng:zeroOrMore>
+        </rng:oneOrMore>
+        <rng:group>
+          <rng:oneOrMore>
+            <rng:ref name="macro.component"/>
+            <rng:zeroOrMore>
+              <rng:ref name="model.global"/>
+            </rng:zeroOrMore>
+          </rng:oneOrMore>
+          <rng:zeroOrMore>
+            <rng:choice>
+              <rng:ref name="model.div7Like"/>
+              <rng:ref name="model.divGenLike"/>
+            </rng:choice>
+            <rng:zeroOrMore>
+              <rng:ref name="model.global"/>
+            </rng:zeroOrMore>
+          </rng:zeroOrMore>
+        </rng:group>
+      </rng:choice>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.divWrapper"/>
+          <rng:ref name="model.divWrapper.bottom"/>
+        </rng:choice>
+        <rng:zeroOrMore>
+          <rng:ref name="model.global"/>
+        </rng:zeroOrMore>
+      </rng:zeroOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div6.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.divLike.attributes"/>
+    <ref name="att.declaring.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div7">
+    <element name="div7">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(level-7 text division) contains the smallest possible subdivision of the front, body or
+back of a text, larger than a paragraph.</a:documentation>
+      <ref name="div7.content"/>
+      <ref name="div7.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div7.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.divWrapper"/>
+          <rng:ref name="model.global"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+      <rng:oneOrMore>
+        <rng:ref name="macro.component"/>
+        <rng:zeroOrMore>
+          <rng:ref name="model.global"/>
+        </rng:zeroOrMore>
+      </rng:oneOrMore>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.divWrapper"/>
+          <rng:ref name="model.divWrapper.bottom"/>
+        </rng:choice>
+        <rng:zeroOrMore>
+          <rng:ref name="model.global"/>
+        </rng:zeroOrMore>
+      </rng:zeroOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="div7.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.divLike.attributes"/>
+    <ref name="att.declaring.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="docAuthor">
+    <element name="docAuthor">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(document author) contains the name of the author of the document, as given on the
+title page (often but not always contained in a byline).</a:documentation>
+      <ref name="docAuthor.content"/>
+      <ref name="docAuthor.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="docAuthor.content">
+    <ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="docAuthor.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="docDate">
+    <element name="docDate">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(document date) contains the date of a document, as given
+(usually) on a title page.</a:documentation>
+      <ref name="docDate.content"/>
+      <ref name="docDate.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="docDate.content">
+    <ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="docDate.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <attribute name="value">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives the value of the date in a standard form, generally YYYY-MM-DD.</a:documentation>
+        <ref name="data.temporal"/>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="docEdition">
+    <element name="docEdition">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(document edition) contains an edition statement as presented on a title page of a
+document.</a:documentation>
+      <ref name="docEdition.content"/>
+      <ref name="docEdition.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="docEdition.content">
+    <ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="docEdition.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="docImprint">
+    <element name="docImprint">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(document imprint) contains the imprint statement (place and date of publication,
+publisher name), as given
+(usually) at the foot of a title page.</a:documentation>
+      <ref name="docImprint.content"/>
+      <ref name="docImprint.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="docImprint.content">
+    <zeroOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:choice>
+        <rng:text/>
+        <rng:ref name="model.gLike"/>
+        <rng:ref name="model.phrase"/>
+        <rng:ref name="pubPlace"/>
+        <rng:ref name="docDate"/>
+        <rng:ref name="publisher"/>
+        <rng:ref name="model.global"/>
+      </rng:choice>
+    </zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="docImprint.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="docTitle">
+    <element name="docTitle">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(document title) contains the title of a document, including all its
+constituents, as given on a title page.</a:documentation>
+      <ref name="docTitle.content"/>
+      <ref name="docTitle.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="docTitle.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:zeroOrMore>
+        <rng:ref name="model.global"/>
+      </rng:zeroOrMore>
+      <rng:oneOrMore>
+        <rng:ref name="titlePart"/>
+        <rng:zeroOrMore>
+          <rng:ref name="model.global"/>
+        </rng:zeroOrMore>
+      </rng:oneOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="docTitle.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="epigraph">
+    <element name="epigraph">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(epigraph) contains a quotation, anonymous or attributed, appearing at
+the start of a section or chapter, or on a title page. </a:documentation>
+      <ref name="epigraph.content"/>
+      <ref name="epigraph.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="epigraph.content">
+    <ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.componentSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="epigraph.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="front">
+    <element name="front">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(front matter) contains any prefatory matter (headers,
+title page, prefaces, dedications, etc.)
+found  at the start of a document, before the main body.</a:documentation>
+      <ref name="front.content"/>
+      <ref name="front.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="front.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.frontPart"/>
+          <rng:ref name="model.pLike.front"/>
+          <rng:ref name="model.global"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+      <rng:group>
+        <rng:optional>
+          <rng:choice>
+            <rng:group>
+              <rng:group>
+                <rng:ref name="model.div1Like"/>
+              </rng:group>
+              <rng:zeroOrMore>
+                <rng:choice>
+                  <rng:ref name="model.frontPart"/>
+                  <rng:ref name="model.div1Like"/>
+                  <rng:ref name="model.global"/>
+                </rng:choice>
+              </rng:zeroOrMore>
+            </rng:group>
+            <rng:group>
+              <rng:group>
+                <rng:ref name="model.divLike"/>
+              </rng:group>
+              <rng:zeroOrMore>
+                <rng:choice>
+                  <rng:ref name="model.frontPart"/>
+                  <rng:ref name="model.divLike"/>
+                  <rng:ref name="model.global"/>
+                </rng:choice>
+              </rng:zeroOrMore>
+            </rng:group>
+          </rng:choice>
+        </rng:optional>
+      </rng:group>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="front.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.declaring.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="group">
+    <element name="group">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the body of a composite text, grouping together a
+sequence of distinct texts (or groups of such texts) which are regarded
+as a unit for some purpose, for example the collected works of an
+author, a sequence of prose essays, etc.</a:documentation>
+      <ref name="group.content"/>
+      <ref name="group.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="group.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.divWrapper"/>
+          <rng:ref name="model.global"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+      <rng:group>
+        <rng:choice>
+          <rng:ref name="text"/>
+          <rng:ref name="group"/>
+        </rng:choice>
+        <rng:zeroOrMore>
+          <rng:choice>
+            <rng:ref name="text"/>
+            <rng:ref name="group"/>
+            <rng:ref name="model.global"/>
+          </rng:choice>
+        </rng:zeroOrMore>
+      </rng:group>
+      <rng:zeroOrMore>
+        <rng:ref name="model.divWrapper.bottom"/>
+      </rng:zeroOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="group.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.declaring.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="imprimatur">
+    <element name="imprimatur">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a formal statement authorizing the publication of
+a work, sometimes required to appear on a title page or its verso.</a:documentation>
+      <ref name="imprimatur.content"/>
+      <ref name="imprimatur.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="imprimatur.content">
+    <ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="imprimatur.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="opener">
+    <element name="opener">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">groups together dateline, byline, salutation, and similar
+phrases appearing as a preliminary group at the start of a
+division, especially of a letter.</a:documentation>
+      <ref name="opener.content"/>
+      <ref name="opener.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="opener.content">
+    <zeroOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:choice>
+        <rng:text/>
+        <rng:ref name="model.gLike"/>
+        <rng:ref name="model.phrase"/>
+        <rng:ref name="argument"/>
+        <rng:ref name="byline"/>
+        <rng:ref name="dateline"/>
+        <rng:ref name="epigraph"/>
+        <rng:ref name="salute"/>
+        <rng:ref name="signed"/>
+        <rng:ref name="model.global"/>
+      </rng:choice>
+    </zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="opener.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="salute">
+    <element name="salute">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(salutation) contains a salutation or greeting prefixed to a foreword,
+dedicatory epistle, or other division of a text, or the
+salutation in the closing of a letter, preface, etc.</a:documentation>
+      <ref name="salute.content"/>
+      <ref name="salute.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="salute.content">
+    <ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="salute.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="signed">
+    <element name="signed">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(signature) contains the closing salutation, etc., appended to a foreword,
+dedicatory epistle, or other division of a text. </a:documentation>
+      <ref name="signed.content"/>
+      <ref name="signed.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="signed.content">
+    <ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="signed.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="text">
+    <element name="text">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a single text of any kind, whether unitary or
+composite, for example a poem or drama, a collection of essays, a novel,
+a dictionary, or a corpus sample.</a:documentation>
+      <ref name="text.content"/>
+      <ref name="text.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="text.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:zeroOrMore>
+        <rng:ref name="model.global"/>
+      </rng:zeroOrMore>
+      <rng:optional>
+        <rng:ref name="front"/>
+        <rng:zeroOrMore>
+          <rng:ref name="model.global"/>
+        </rng:zeroOrMore>
+      </rng:optional>
+      <rng:choice>
+        <rng:ref name="body"/>
+        <rng:ref name="group"/>
+      </rng:choice>
+      <rng:zeroOrMore>
+        <rng:ref name="model.global"/>
+      </rng:zeroOrMore>
+      <rng:optional>
+        <rng:ref name="back"/>
+        <rng:zeroOrMore>
+          <rng:ref name="model.global"/>
+        </rng:zeroOrMore>
+      </rng:optional>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="text.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.declaring.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="titlePage">
+    <element name="titlePage">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(title page) contains the title page of a text, appearing within the front
+or back matter. </a:documentation>
+      <ref name="titlePage.content"/>
+      <ref name="titlePage.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="titlePage.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:zeroOrMore>
+        <rng:ref name="model.global"/>
+      </rng:zeroOrMore>
+      <rng:group>
+        <rng:ref name="model.titlepagePart"/>
+      </rng:group>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.titlepagePart"/>
+          <rng:ref name="model.global"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="titlePage.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <attribute name="type">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">classifies the title page according to any convenient typology.</a:documentation>
+        <ref name="data.enumerated"/>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="titlePart">
+    <element name="titlePart">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(title part) contains a subsection or division of the title of a work, as
+indicated on a title page.</a:documentation>
+      <ref name="titlePart.content"/>
+      <ref name="titlePart.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="titlePart.content">
+    <ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="titlePart.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="type" a1:defaultValue="main">
+        <a1:documentation>specifies the role of this subdivision of the title.
+Suggested values include: 1] main (main title of the work
+        ); 2] sub (subtitle  of the work
+        ); 3] alt (alternative title  of the work
+        ); 4] short (abbreviated form of title); 5] desc (descriptive paraphrase of the work 
+   )</a1:documentation>
+        <ref name="data.enumerated"/>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="trailer">
+    <element name="trailer">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(trailer) contains a closing title or footer appearing at the end of
+a division of a text. </a:documentation>
+      <ref name="trailer.content"/>
+      <ref name="trailer.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="trailer.content">
+    <ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="trailer.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+<!--3. macros-->
+</rng:grammar>

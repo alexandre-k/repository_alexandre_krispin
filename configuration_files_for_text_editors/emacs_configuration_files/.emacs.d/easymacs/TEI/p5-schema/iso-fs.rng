@@ -1,0 +1,358 @@
+<?xml version="1.0"?>
+<rng:grammar xmlns:rng="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<!--Schema generated 2007-03-13T16:02:29Z..
+Copyright 2005 TEI Consortium.
+This is free software; you can redistribute it and/or
+	    modify it under the terms of the GNU General Public
+	    License as published by the Free Software Foundation;
+	    either version 2 of the License, or (at your option) any
+	    later version.
+This material is distributed in the hope that it will be
+	    useful, but WITHOUT ANY WARRANTY; without even the implied
+	    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+	    PURPOSE. See the GNU General Public License for more
+	    details.
+You should have received a copy of the GNU General Public
+	    License along with this file; if not, write to the Free
+	    Software Foundation, Inc., 59 Temple Place, Suite 330,
+	    Boston, MA 02111-1307, USA.
+To contact the TEI Consortium use the following addresses.
+	    For general (non-technical) enquiries: 
+		  target="mailto:info@tei-c.org"/>info@tei-c.orgFor membership enquiries: membership@tei-c.orgFor technical enquiries, particularly about the
+		Guidelines, DTDs, schemas, or software available from
+		the TEI-C: editors@tei-c.orgFor up to date information, consult the TEI web site at http://www.tei-c.org/P5Feature structures-->
+<!--Definitions from module iso-fs-->
+<!--Set global predeclared macros-->
+<!--Set predeclared macros-->
+<!--0. predeclared macros-->
+<!--1. classes-->
+<!--2. elements-->
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="binary">
+    <element name="binary">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(binary value) represents the value part of a feature-value specification which can contain either
+  of exactly two possible values.</a:documentation>
+      <ref name="binary.content"/>
+      <ref name="binary.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="binary.content">
+    <empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="binary.attributes">
+    <ref name="att.global.attributes"/>
+    <attribute name="value">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a binary value.</a:documentation>
+      <ref name="data.truthValue"/>
+    </attribute>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="default">
+    <element name="default">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Default feature value) represents the value part of a feature-value specification
+  which contains a defaulted value.</a:documentation>
+      <ref name="default.content"/>
+      <ref name="default.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="default.content">
+    <empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="default.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="f">
+    <element name="f">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Feature) represents a feature value specification, that
+  is, the association of a name with a value of any of several different types.</a:documentation>
+      <ref name="f.content"/>
+      <ref name="f.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="f.content">
+    <zeroOrMore>
+      <ref name="model.featureVal"/>
+    </zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="f.attributes">
+    <ref name="att.global.attributes"/>
+    <attribute name="name">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides a name for the feature.</a:documentation>
+      <ref name="data.name"/>
+    </attribute>
+    <optional>
+      <attribute name="fVal">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">references any element which can be used to represent the
+  value of a feature.</a:documentation>
+        <ref name="data.pointer"/>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fLib">
+    <element name="fLib">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Feature library) assembles a library of feature elements.</a:documentation>
+      <ref name="fLib.content"/>
+      <ref name="fLib.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fLib.content">
+    <oneOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:ref name="f"/>
+    </oneOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fLib.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fs">
+    <element name="fs">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Feature structure) represents a feature structure, that is, a
+  collection of feature-value pairs organized as a
+structural unit.</a:documentation>
+      <ref name="fs.content"/>
+      <ref name="fs.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fs.content">
+    <zeroOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:ref name="f"/>
+    </zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fs.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <attribute name="type">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the type of the feature structure.</a:documentation>
+        <ref name="data.enumerated"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="feats">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">references the feature-value specifications making up this feature structure.</a:documentation>
+        <list>
+          <oneOrMore>
+            <ref name="data.pointer"/>
+          </oneOrMore>
+        </list>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fvLib">
+    <element name="fvLib">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Feature-value library) assembles a library of reusable feature value elements
+  (including complete feature structures).</a:documentation>
+      <ref name="fvLib.content"/>
+      <ref name="fvLib.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fvLib.content">
+    <zeroOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:ref name="model.featureVal"/>
+    </zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fvLib.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="numeric">
+    <element name="numeric">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Numeric value) represents the value part of a feature-value specification
+  which contains a numeric value or range.</a:documentation>
+      <ref name="numeric.content"/>
+      <ref name="numeric.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="numeric.content">
+    <empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="numeric.attributes">
+    <ref name="att.global.attributes"/>
+    <attribute name="value">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a lower bound for the numeric value represented,
+      and also (if max is not supplied) its upper bound.</a:documentation>
+      <ref name="data.numeric"/>
+    </attribute>
+    <optional>
+      <attribute name="max">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies an upper bound for the numeric value represented.</a:documentation>
+        <ref name="data.numeric"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="trunc">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies whether the value represented should be
+	  truncated to give an integer value.</a:documentation>
+        <ref name="data.truthValue"/>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="string">
+    <element name="string">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(String value) represents the value part of a feature-value specification
+  which contains a string.</a:documentation>
+      <ref name="string.content"/>
+      <ref name="string.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="string.content">
+    <ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.xtext"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="string.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="symbol">
+    <element name="symbol">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Symbolic value) represents the value part of a feature-value specification
+  which contains one of a finite list of symbols.</a:documentation>
+      <ref name="symbol.content"/>
+      <ref name="symbol.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="symbol.content">
+    <empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="symbol.attributes">
+    <ref name="att.global.attributes"/>
+    <attribute name="value">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the symbolic value for the feature, one of a finite list that
+may be specified in a feature declaration.</a:documentation>
+      <ref name="data.word"/>
+    </attribute>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vAlt">
+    <element name="vAlt">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Value alternation) represents the value part of a feature-value specification
+  which contains a set of values, only one of which can be valid.</a:documentation>
+      <ref name="vAlt.content"/>
+      <ref name="vAlt.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vAlt.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:group>
+        <rng:ref name="model.featureVal"/>
+      </rng:group>
+      <rng:oneOrMore>
+        <rng:ref name="model.featureVal"/>
+      </rng:oneOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vAlt.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vColl">
+    <element name="vColl">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(collection of values) represents the value part of a feature-value specification
+  which contains multiple values organized as a set, bag, or list.</a:documentation>
+      <ref name="vColl.content"/>
+      <ref name="vColl.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vColl.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="fs"/>
+          <rng:ref name="model.singleVal"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vColl.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <attribute name="org">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates organization of given value or values as  set, bag or list.</a:documentation>
+        <choice>
+          <value>set</value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(indicates that the given values are organized as a set.
+   ) </a:documentation>
+          <value>bag</value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(indicates that the given values are organized as a
+bag (multiset).
+   ) </a:documentation>
+          <value>list</value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(indicates that the given values are organized as a
+list.) </a:documentation>
+        </choice>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vLabel">
+    <element name="vLabel">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(value label) represents the value part of a feature-value specification
+  which appears at more than one point in a feature structure</a:documentation>
+      <ref name="vLabel.content"/>
+      <ref name="vLabel.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vLabel.content">
+    <optional xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:ref name="model.featureVal"/>
+    </optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vLabel.attributes">
+    <ref name="att.global.attributes"/>
+    <attribute name="name">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a name for the sharing point.</a:documentation>
+      <ref name="data.word"/>
+    </attribute>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vMerge">
+    <element name="vMerge">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Merged collection of values) represents a feature value which is the result of merging
+  together the feature values contained by its children, using the organization
+  specified by the org attribute.</a:documentation>
+      <ref name="vMerge.content"/>
+      <ref name="vMerge.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vMerge.content">
+    <oneOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:ref name="model.featureVal"/>
+    </oneOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vMerge.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <attribute name="org">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the organization of the resulting merged values as  set, bag or list.</a:documentation>
+        <choice>
+          <value>set</value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(indicates that the resulting values are organized as a set.) </a:documentation>
+          <value>bag</value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(indicates that the resulting values are organized as a bag (multiset).
+   ) </a:documentation>
+          <value>list</value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(indicates that the resulting values are organized as a list.) </a:documentation>
+        </choice>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vNot">
+    <element name="vNot">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Value negation) represents a feature value which is the negation of its content.</a:documentation>
+      <ref name="vNot.content"/>
+      <ref name="vNot.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vNot.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:ref name="model.featureVal"/>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vNot.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+<!--3. macros-->
+</rng:grammar>

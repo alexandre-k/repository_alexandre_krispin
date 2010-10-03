@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;text&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;text&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;text&gt;</h1></div><div><span id="text"/><table border="1" class="wovenodd"><tr><td class="elementSpec">text</td><td colspan="2" class="wovenodd-col2">contains a single text of any kind, whether unitary or
+composite, for example a poem or drama, a collection of essays, a novel,
+a dictionary, or a corpus sample.</td></tr><tr><td valign="top"><span class="label">Attributes: </span></td><td>  [<a class="classlink" href="ref-att.declaring.html">att.declaring</a> ] </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.inter.html">model.inter</a> <a class="link_odd" href="ref-att.declaring.html">att.declaring</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element text
+{
+   att.global.attributes,
+   att.declaring.attributes,
+   (
+      <a class="link_odd" href="ref-model.global.html">model.global</a>*,
+      ( <a class="link_odd" href="ref-front.html">front</a>, <a class="link_odd" href="ref-model.global.html">model.global</a>* )?,
+      ( <a class="link_odd" href="ref-body.html">body</a> | <a class="link_odd" href="ref-group.html">group</a> ),
+      <a class="link_odd" href="ref-model.global.html">model.global</a>*,
+      ( <a class="link_odd" href="ref-back.html">back</a>, <a class="link_odd" href="ref-model.global.html">model.global</a>* )?
+   )
+}</pre></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;text&gt;</span><br/>  <span class="element">&lt;front&gt;</span><br/>   <span class="element">&lt;docTitle&gt;</span><br/>    <span class="element">&lt;titlePart&gt;</span>Autumn Haze<span class="element">&lt;/titlePart&gt;</span><br/>   <span class="element">&lt;/docTitle&gt;</span><br/>  <span class="element">&lt;/front&gt;</span><br/>  <span class="element">&lt;body&gt;</span><br/>   <span class="element">&lt;l&gt;</span>Is it a dragonfly or a maple leaf<span class="element">&lt;/l&gt;</span><br/>   <span class="element">&lt;l&gt;</span>That settles softly down upon the water?<span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;/body&gt;</span><br/> <span class="element">&lt;/text&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><p><span id="id2427268"/>The body of a text may be replaced by a group of nested texts, as
+in the following schematic:</p><div class="pre"> <span class="element">&lt;text&gt;</span><br/>  <span class="element">&lt;front/&gt;</span><br/>  <span class="element">&lt;group&gt;</span><br/>   <span class="element">&lt;text&gt;</span><br/>    <span class="element">&lt;front/&gt;</span><br/>    <span class="element">&lt;body/&gt;</span><br/>    <span class="element">&lt;back/&gt;</span><br/>   <span class="element">&lt;/text&gt;</span><br/>   <span class="element">&lt;text/&gt;</span><br/>  <span class="element">&lt;/group&gt;</span><br/> <span class="element">&lt;/text&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p><span id="id2427288"/>This element may also be used to represent embedded
+  texts, as when one narrative is contained by another.</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="DS.html" title="7">5  Default Text Structure</a></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="CC.html#CCDEF" title="Varieties of Composite Text">20.1  Varieties of Composite Text</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">textstructure</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

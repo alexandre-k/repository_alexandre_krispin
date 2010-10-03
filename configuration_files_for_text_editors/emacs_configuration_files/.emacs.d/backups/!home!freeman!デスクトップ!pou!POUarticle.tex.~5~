@@ -1,0 +1,339 @@
+% book example for classicthesis.sty
+\documentclass[[openright,fleqn,numbers=noenddot,headinclude,1headlines,11pt,a4paper,BCOR5mm,footinclude,cleardoublepage=empty,abstractoff]{scrartcl} % KOMA-Script book
+\title{\rmfamily\normalfont\spacedallcaps{STATUS}}
+\subtitle{Association loi 1901}
+\newcommand{\myTime}{9 Septembre 2010\xspace}
+\usepackage[nochapters]{classicthesis-ldpkg} % [backref]
+%*******************************************************
+% Options for classicthesis.sty:
+% tocaligned eulerchapternumbers drafting linedheaders listsseparated 
+% subfig nochapters beramono eulermath parts minionpro pdfspacing 
+% listings dottedtoc minionprospacing manychapters
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[frenchb]{babel}
+\usepackage{minitoc}
+\usepackage{lipsum}
+\usepackage[eulerchapternumbers,listings,listsseparated,%pdfspacing,%
+            subfig,beramono,nochapters]{classicthesis}
+%*******************************************************
+% Some font experiments
+%*******************************************************
+%\usepackage[osf]{libertine}
+%\usepackage{hfoldsty}
+%\usepackage[light,condensed,math]{iwona}
+%\renewcommand{\sfdefault}{iwona}
+%\usepackage{lmodern} % <-- no osf support :-(
+%\usepackage[urw-garamond]{mathdesign} %<-- no osf support :-(
+%*******************************************************
+% Fine-tuning for the text area
+%*******************************************************
+\linespread{1.05} % a bit more for Palatino
+\areaset[5mm]{312pt}{761pt} % 686 (factor 2.2) + 33 head + 42 head \the\footskip
+\setlength{\marginparwidth}{7em}%
+\setlength{\marginparsep}{2em}%
+
+%*******************************************************
+% hack to use citations in float environments 
+% will be fixed with caption package version 3.2
+%*******************************************************
+\usepackage{makerobust} 
+%\makeatletter 
+%\MakeRobustCommand\caption@xref 
+%\makeatother
+%*******************************************************            
+%\usepackage[section,below]{placeins} <--- not everybody wants this
+%\usepackage[all]{hypcap} <--- does not work with MiKTeX 2.6
+% ********************************************************************
+% Language/strings for backrefs (change here, thanks, Lorenzo)
+%*******************************************************
+%\renewcommand{\backrefnotcitedstring}{\relax}%(Not cited.)
+%\renewcommand{\backrefcitedsinglestring}[1]{(Citato a pagina~#1.)}
+%\renewcommand{\backrefcitedmultistring}[1]{(Citato alle pagine~#1.)}
+%\renewcommand{\backreftwosep}{ e~}
+%\renewcommand{\backreflastsep}{ e~}
+% ********************************************************************
+% Setup and Finetuning
+%*******************************************************
+\newlength{\abcd} % for ab..z string length calculation
+\newcommand{\myfloatalign}{\centering} % how all the floats will be aligned
+\setlength{\extrarowheight}{3pt} % increase table row height
+% ********************************************************************
+% Captions look and feel
+%*******************************************************
+\captionsetup{format=hang,font=small}
+% ********************************************************************
+% Listings setup
+% ********************************************************************
+\lstset{emph={trueIndex,root},emphstyle=\color{BlueViolet}}%\underbar} % for special keywords
+% ********************************************************************
+\lstset{language=[LaTeX]Tex,%C++,
+    keywordstyle=\color{RoyalBlue},%\bfseries,
+    basicstyle=\small\ttfamily,
+    %identifierstyle=\color{NavyBlue},
+    commentstyle=\color{Green}\ttfamily,
+    stringstyle=\rmfamily,
+    numbers=none,%left,%
+    numberstyle=\scriptsize,%\tiny
+    stepnumber=5,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frameround=ftff,
+    frame=single,
+    belowcaptionskip=.75\baselineskip,
+    numberbychapter=false
+    %frame=L
+} 
+% ********************************************************************
+% Where to look for graphics
+%*******************************************************
+\graphicspath{{gfx/}{misc/}} % considered harmful according to l2tabu
+% ********************************************************************
+% Hyperreferences
+%*******************************************************
+\hypersetup{%
+    colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+    % uncomment the following line if you want to have black links (e.g., for printing)
+    %colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,% 
+    breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
+    plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+    hypertexnames=true, pdfhighlight=/O,%hyperfootnotes=true,%nesting=true,%frenchlinks,%
+    urlcolor=webbrown, linkcolor=RoyalBlue, citecolor=webgreen, %pagecolor=RoyalBlue,%
+    %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+    pdftitle={\myTitle},%
+    pdfauthor={\textcopyright\ \myName, \myUni, \myFaculty},%
+    pdfsubject={},%
+    pdfkeywords={},%
+    pdfcreator={pdfLaTeX},%
+    pdfproducer={LaTeX with hyperref and classicthesis}%
+}
+
+\usepackage{enumitem}       
+\usepackage[square,numbers]{natbib}
+\usepackage{array}
+\usepackage{natbib}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{url}
+
+%\usepackage{graphicx}
+%\usepackage{multirow}
+\usepackage{hyperref}
+
+
+\begin{document}
+\frenchspacing
+\raggedbottom
+\selectlanguage{french} % american ngerman
+%\renewcommand*{\bibname}{new name}
+%\setbibpreamble{}
+\pagenumbering{arabic}
+\pagestyle{plain}
+
+\begin{document}
+
+\maketitle
+
+
+\emph{Les soussignés \ldots désirant créer entre eux une association, ont établi les
+statuts suivants :}
+
+\paragraph{Article 1}
+\subparagraph{Constitution et d\'enomination}
+
+Il est fondé entre les adhérents aux présents statuts une association régie par
+la loi du 1er juillet 1901 et le décret du 16 août 1901, ayant pour titre et
+logo :
+
+PARIS OUEST URBA
+\subparagraph{Objet}
+L’objet de l’association consiste à promouvoir le lien entre les diplômés d’un
+Master en Sciences Humaines et Sociales, mention Géographie et Aménagement de
+l’Université Paris Ouest Nanterre La Défense, par la création d’une base de
+données de ses membres et l’exploitation d’un média de partage.
+
+Particulièrement, le réseau d’anciens ainsi constitué doit permettre de
+faciliter l’insertion professionnelle de tout diplômé  d’un Master en Sciences
+Humaines et Sociales, mention Géographie et Aménagement de l’Université Paris
+Ouest Nanterre La Défense, par la diffusion d’offres d’emploi, le partage de
+contacts professionnels et la promotion des formations dispensées au niveau des
+Masters en Sciences Humaines et Sociales, mention Géographie et Aménagement de
+l’Université Paris Ouest Nanterre La Défense.
+
+\subparagraph{Durée}
+L’association est créée pour une durée illimitée.
+
+\subparagraph{Siège social}
+Le siège de l’association est fixé à Nanterre 92000.
+Il pourra être transféré par décision du Conseil d’Administration.
+
+\subparagraph{Moyens d’action}
+Les moyens d’action de l’association sont les suivants :
+  \begin{itemize}
+\item Utilisation d’un site internet comme support rendant accessibles
+des informations sur les membres de l’association tout en leur permettant
+d’interagir sur une plate-forme de partage.
+\item Organisation de manifestations et toute initiative permettant de
+réaliser l’objet de l’association.
+  \end{itemize}
+
+\subparagraph{Composition de l’association}
+L’association se compose de :
+\begin{itemize}	
+\item[Membres adhérents]
+Sont membres adhérents ceux qui sont à jour de leur cotisation annuelle. Ils ont
+le droit de vote à l’Assemblée Générale.
+\item[Membres d’honneur]
+Sont membres d’honneur ceux qui ont rendu des services à l’association de part
+leur action ou leur soutient. Ils sont dispensés de cotisations mais n’ont pas
+le droit de vote à l'Assemblée Générale.
+\end{itemize}
+
+\subparagraph{Admission et adhésion}
+Peuvent faire partie de l’association en tant que membre adhérent toute personne
+diplômé e d’un Master en Sciences Humaines et Sociales, mention Géographie et
+Aménagement de l’Université Paris Ouest Nanterre La Défense.
+
+Pour faire partie de l’association, un  membre adhérent doit adhérer aux
+présents statuts et s’acquitter de la cotisation annuelle dont le montant est
+fixé chaque année par l’Assemblée Générale Ordinaire.
+
+L’adhésion d’un membre d’honneur doit être proposée par un membre adhérent au
+minimum dont une personne appartenant au Conseil d’Administration au minimum et
+soumise à la décision du Conseil d’Administration.
+
+Pour faire partie de l’association un membre d’honneur doit adhérer aux présents
+statuts.
+
+Le Conseil d’Administration pourra refuser toute adhésion, avec avis motivé aux
+intéressés.
+
+\subparagraph{Perte de la qualité de membre}
+La qualité de membre se perd par :
+  \begin{itemize}
+	\item La démission ;
+	\item Le décès ;
+	\item La radiation prononcée par le Conseil d’Administration pour non
+paiement
+de la cotisation ou pour motif grave.
+  \end{itemize}
+
+\subparagraph{Conseil d’Administration}
+L'association est dirigée par un Conseil d'Administration composé de 9 membres
+au maximum, élus pour 1 année par l'Assemblée Générale.
+Les membres sont rééligibles. Le Conseil d’Administration étant renouvelé chaque
+année.
+
+En cas de vacance de poste, le Conseil d’Administration pourvoit provisoirement
+au remplacement de ses membres. Il est procédé à leur remplacement définitif à
+la plus prochaine Assemblée Générale. Les pouvoirs des membres ainsi élus
+prennent fin à l’époque où devrait normalement expirer le mandat des membres
+remplacés.
+
+Les mineurs de plus de 16 ans sont éligibles au Conseil d’Administration mais
+non au Bureau.
+
+Le Conseil d’Administration se réunit au moins 1 fois par an et toutes les fois
+qu’il est convoqué par le Président ou au moins un quart de ses membres.
+Les décisions sont prises à la majorité des voix des présents. En cas de
+partage, la voix du Président est prépondérante. Le vote par procuration n’est
+pas autorisé.
+
+La présence d’au moins la moitié des membres est nécessaire pour que le Conseil
+d’Administration puisse délibérer valablement.
+
+Le Conseil d'Administration choisit parmi ses membres, au scrutin secret, un
+Bureau composé de :
+  \begin{itemize}
+  \item Un Président ;
+  \item Un Secrétaire ;
+  \item Un Trésorier ;
+  \item Un vice-président chargé de la communication ;
+  \item Un vice-président chargé de l’animation du réseau.
+  \end{itemize}
+
+\subparagraph{Assemblée Générale Ordinaire}
+L’Assemblée Générale Ordinaire se réunit au moins une fois par an et comprend
+tous les membres de l’association à jour de leur cotisation.
+
+Quinze jours au moins avant la date fixée, les membres de l'association sont
+convoqués à la demande du Président ou du Conseil d'Administration, ou du tiers
+des membres de l'association. L'ordre du jour est indiqué sur les
+convocations.
+
+L’Assemblée Générale, après avoir délibéré, se prononce sur le rapport moral ou
+d’activité et sur les comptes de l’exercice financier. Elle délibère sur les
+orientations à venir.
+
+Elle pourvoit à la nomination ou au renouvellement des membres du Conseil
+d’Administration.
+
+Elle fixe aussi le montant de la cotisation annuelle.
+
+Les décisions de l’Assemblée sont prises à la majorité des membres présents.
+
+\subparagraph{Assemblée Générale Extraordinaire}
+Si besoin est, ou sur demande du quart des membres, le Président convoque une
+Assemblée Générale Extraordinaire. Les conditions de convocation sont identiques
+à celles de l’Assemblée Générale Ordinaire.
+
+Les délibérations sont prises à la majorité des deux tiers des membres
+présents.
+
+\subparagraph{Affiliation}
+L’association est affiliée au Collectif National des Jeunes Urbanistes et
+s’engage à se conformer aux statuts et au règlement intérieur de la
+fédération.
+
+\subparagraph{Ressources}
+Les ressources de l’association comprennent le montant des cotisations, les dons
+des membres, les subventions de toute nature pouvant lui être allouées et toutes
+autres ressources provenant de toutes prestations et moyens légaux.
+
+\subparagraph{Rémunération}
+Les frais et débours occasionnés pour l’accomplissement du mandat
+d’administrateur sont remboursés au vu des pièces justificatives. Le rapport
+financier présenté à l’Assemblée Générale Ordinaire doit faire mention des
+remboursements de frais de mission, de déplacement ou de représentation payés à
+des membres du Conseil d’Administration.
+
+\subparagraph{Conditions de modification statutaires}
+Les présents statuts pourront être soumis à modification sur présentation d’un
+projet de modification lié à la convocation d’une Assemblée Générale et faisant
+l’objet d’un vote lors de cette Assemblée générale.
+
+Ces modifications concerneront notamment les changements de dénomination liés à
+la publication
+de la plaquette des Master en Sciences Humaines et Sociales, mention Géographie
+et Aménagement de l’Université Paris Ouest Nanterre La Défense.
+
+\subparagraph{Dissolution}
+En cas de dissolution prononcée par l’Assemblée Générale Extraordinaire,
+convoquée selon les modalités prévues à l’article 10, un ou plusieurs
+liquidateurs sont nommés par celle-ci et l’actif, s’il y a lieu, est dévolu à
+une association ayant des buts similaires, conformément à l'article 9 de la loi
+du 1er juillet 1901 et au décret du 16 août 1901.
+
+\subparagraph{Règlement intérieur}
+Un règlement intérieur peut être établi par le Conseil d'Administration qui le
+fait alors approuver par l'Assemblée Générale.
+
+Ce règlement éventuel est destiné à fixer les divers points non prévus par les
+statuts, notamment ceux qui ont trait à l'administration interne de
+l'association.
+
+Les présents statuts ont été approuvés par :
+
+L’assemblée constitutive du
+
+L’assemblée Générale Extraordinaire du
+
+Signatures :
+
+\begin{flushleft}Président\end{flushleft}  \begin{flushright} Autre membre du bureau\end{flushright}
+
+
+\end{document}

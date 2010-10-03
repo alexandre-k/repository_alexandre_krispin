@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;binding&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;binding&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;binding&gt;</h1></div><div><span id="binding"/><table border="1" class="wovenodd"><tr><td class="elementSpec">binding</td><td colspan="2" class="wovenodd-col2">contains a description of one binding, i.e. type of covering, boards, etc. applied to a manuscript</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-att.datable.html">att.datable</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element binding
+{
+   att.global.attributes,
+   att.datable.attributes,
+   attribute contemporary { <a class="link_odd" href="ref-data.xTruthValue.html">data.xTruthValue</a> }?,
+   ( <a class="link_odd" href="ref-model.pLike.html">model.pLike</a> | <a class="link_odd" href="ref-decoNote.html">decoNote</a> )+
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>  [<a class="classlink" href="ref-att.datable.html">att.datable</a> ] <table><tr><td class="attDef">contemporary</td><td colspan="2">specifies whether or not the binding is contemporary with the majority of its contents</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.xTruthValue.html">data.xTruthValue</a></code></td></tr><tr><td><!-- --></td><td valign="top">Values are:<table class="valList"><tr><td valign="top"><b>true</b></td><td valign="top">(the binding is contemporaneous with its contents) </td></tr><tr><td valign="top"><b>false</b></td><td valign="top">(the binding is not contemporaneous with its contents) </td></tr><tr><td valign="top"><b>unknown</b></td><td valign="top">(the date of either binding or manuscript is unknown) </td></tr></table></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;binding <span class="attribute">contemporary</span>="true"&gt;</span><br/>  <span class="element">&lt;p&gt;</span>Contemporary blind stamped leather over wooden 
+boards with evidence of a fore edge clasp closing 
+to the back cover.<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/binding&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;bindingDesc&gt;</span><br/>  <span class="element">&lt;binding <span class="attribute">contemporary</span>="false"&gt;</span><br/>   <span class="element">&lt;p&gt;</span>Quarter bound by the Phillipps' binder, Bretherton, 
+with his sticker on the front pastedown.<span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;/binding&gt;</span><br/>  <span class="element">&lt;binding <span class="attribute">contemporary</span>="false"&gt;</span><br/>   <span class="element">&lt;p&gt;</span>Rebound by an unknown 19th c. company; edges cropped and
+gilt.<span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;/binding&gt;</span><br/> <span class="element">&lt;/bindingDesc&gt;</span></div></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="MS.html#msphbi" title="Binding descriptions">10.7.3.1  Binding descriptions</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">msdescription</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

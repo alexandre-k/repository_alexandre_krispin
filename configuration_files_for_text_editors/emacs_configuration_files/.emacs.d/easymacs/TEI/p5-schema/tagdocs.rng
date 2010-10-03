@@ -1,0 +1,1030 @@
+<?xml version="1.0"?>
+<rng:grammar xmlns:rng="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<!--Schema generated 2007-03-13T16:02:29Z..
+Copyright 2005 TEI Consortium.
+This is free software; you can redistribute it and/or
+	    modify it under the terms of the GNU General Public
+	    License as published by the Free Software Foundation;
+	    either version 2 of the License, or (at your option) any
+	    later version.
+This material is distributed in the hope that it will be
+	    useful, but WITHOUT ANY WARRANTY; without even the implied
+	    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+	    PURPOSE. See the GNU General Public License for more
+	    details.
+You should have received a copy of the GNU General Public
+	    License along with this file; if not, write to the Free
+	    Software Foundation, Inc., 59 Temple Place, Suite 330,
+	    Boston, MA 02111-1307, USA.
+To contact the TEI Consortium use the following addresses.
+	    For general (non-technical) enquiries: 
+		  target="mailto:info@tei-c.org"/>info@tei-c.orgFor membership enquiries: membership@tei-c.orgFor technical enquiries, particularly about the
+		Guidelines, DTDs, schemas, or software available from
+		the TEI-C: editors@tei-c.orgFor up to date information, consult the TEI web site at http://www.tei-c.org/P5Documentation of TEI modules-->
+<!--Definitions from module tagdocs-->
+<!--Set global predeclared macros-->
+<!--Set predeclared macros-->
+<!--0. predeclared macros-->
+<!--1. classes-->
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.identified.attributes">
+    <ref name="att.identified.attribute.ident"/>
+    <ref name="att.identified.attribute.depend"/>
+    <ref name="att.identified.attribute.predeclare"/>
+    <ref name="att.identified.attribute.module"/>
+    <ref name="att.identified.attribute.mode"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.identified.attribute.ident">
+    <attribute name="ident">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Supplies the identifier by which this element is referenced.</a:documentation>
+      <ref name="data.name"/>
+    </attribute>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.identified.attribute.depend">
+    <optional>
+      <attribute name="depend">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The name of a module on which this object depends.</a:documentation>
+        <data type="NCName"/>
+      </attribute>
+    </optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.identified.attribute.predeclare">
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="predeclare" a1:defaultValue="false">
+        <a1:documentation>Says whether the class should be treated as global, and so
+      needs predefining in the core.</a1:documentation>
+        <data type="boolean"/>
+      </attribute>
+    </optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.identified.attribute.module">
+    <optional>
+      <attribute name="module">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Supplies the name of the module in which this object is to
+      be defined.</a:documentation>
+        <data type="NCName"/>
+      </attribute>
+    </optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.identified.attribute.mode">
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="mode" a1:defaultValue="add">
+        <a1:documentation>specifies the effect of this declaration on its parent
+    module.</a1:documentation>
+        <choice>
+          <value>add</value>
+          <a1:documentation>(this declaration is added to the current definitions) </a1:documentation>
+          <value>delete</value>
+          <a1:documentation>(this declaration and all of its children are removed from the current setup) </a1:documentation>
+          <value>change</value>
+          <a1:documentation>(this declaration changes the declaration of the same
+    name in the current definition) </a1:documentation>
+          <value>replace</value>
+          <a1:documentation>(this declaration replaces the declaration of the same
+    name in the current definition) </a1:documentation>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+<!--2. elements-->
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att">
+    <element name="att">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(attribute) contains the name of an attribute appearing within running text.</a:documentation>
+      <ref name="att.content"/>
+      <ref name="att.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.content">
+    <text xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="scheme" a1:defaultValue="TEI">
+        <a1:documentation>supplies an identifier for  the scheme in which this name is defined.
+Sample values include: 1] TEI (this attribute is part of the TEI scheme.); 2] DBK (this attribute is  part of the Docbook scheme.); 3] XX (this attribute is  part of an unknown scheme.)</a1:documentation>
+        <ref name="data.enumerated"/>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="attDef">
+    <element name="attDef">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(attribute definition) contains the definition of a single attribute.</a:documentation>
+      <ref name="attDef.content"/>
+      <ref name="attDef.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="attDef.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:ref name="macro.glossSeq"/>
+      <rng:optional>
+        <rng:ref name="datatype"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="defaultVal"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:choice>
+          <rng:ref name="valList"/>
+          <rng:ref name="valDesc"/>
+        </rng:choice>
+      </rng:optional>
+      <rng:zeroOrMore>
+        <rng:ref name="exemplum"/>
+      </rng:zeroOrMore>
+      <rng:zeroOrMore>
+        <rng:ref name="remarks"/>
+      </rng:zeroOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="attDef.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.identified.attributes"/>
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="usage" a1:defaultValue="opt">
+        <a1:documentation>specifies the optionality of an attribute or element.
+ </a1:documentation>
+        <choice>
+          <value>req</value>
+          <a1:documentation>(required) </a1:documentation>
+          <value>mwa</value>
+          <a1:documentation>(mandatory when applicable  ) </a1:documentation>
+          <value>rec</value>
+          <a1:documentation>(recommended  ) </a1:documentation>
+          <value>rwa</value>
+          <a1:documentation>(recommended when applicable  ) </a1:documentation>
+          <value>opt</value>
+          <a1:documentation>(optional ) </a1:documentation>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="ns" a1:defaultValue="http://www.tei-c.org/ns/1.0">
+        <a1:documentation>(namespace) specifies the namespace to which this attribute belongs</a1:documentation>
+        <ref name="data.namespace"/>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="attList">
+    <element name="attList">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains documentation for all the attributes associated with this
+element, as a series of attDef elements.</a:documentation>
+      <ref name="attList.content"/>
+      <ref name="attList.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="attList.content">
+    <oneOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:choice>
+        <rng:ref name="attRef"/>
+        <rng:ref name="attDef"/>
+        <rng:ref name="attList"/>
+      </rng:choice>
+    </oneOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="attList.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="org" a1:defaultValue="group">
+        <a1:documentation>specifies whether all the attributes in the list are
+  available (org="group") or only  one of them (org="choice")</a1:documentation>
+        <choice>
+          <value>group</value>
+          <a1:documentation>(grouped) </a1:documentation>
+          <value>choice</value>
+          <a1:documentation>(alternated) </a1:documentation>
+        </choice>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="attRef">
+    <element name="attRef">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(attribute pointer) points to the definition of an attribute or group of attributes.</a:documentation>
+      <ref name="attRef.content"/>
+      <ref name="attRef.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="attRef.content">
+    <empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="attRef.attributes">
+    <ref name="att.global.attributes"/>
+    <attribute name="name">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the name of the pattern defining the attribute(s)</a:documentation>
+      <ref name="data.word"/>
+    </attribute>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="classSpec">
+    <element name="classSpec">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains reference information for a TEI element class; 
+that is a group of 
+  elements which appear together in  content models, or 
+  which share some common attribute, or both.</a:documentation>
+      <ref name="classSpec.content"/>
+      <ref name="classSpec.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="classSpec.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:ref name="macro.glossSeq"/>
+      <rng:optional>
+        <rng:ref name="classes"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="attList"/>
+      </rng:optional>
+      <rng:zeroOrMore>
+        <rng:ref name="exemplum"/>
+      </rng:zeroOrMore>
+      <rng:zeroOrMore>
+        <rng:ref name="remarks"/>
+      </rng:zeroOrMore>
+      <rng:zeroOrMore>
+        <rng:ref name="listRef"/>
+      </rng:zeroOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="classSpec.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.identified.attributes"/>
+    <attribute name="type">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates whether this is a model class or an attribute class</a:documentation>
+      <choice>
+        <value>model</value>
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(members of this class appear in the same  content models) </a:documentation>
+        <value>atts</value>
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(members of this class share common attributes) </a:documentation>
+      </choice>
+    </attribute>
+    <optional>
+      <attribute name="generate">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates which alternation and sequence instantiations
+	of a model class should be created. By default, all variations
+	are provided.
+Sample values include: 1] alternation (members of the class are alternatives); 2] sequence (members of the class are to be provided in sequence); 3] sequenceOptional (members of the class may be provided, in sequence,
+	    but are optional); 4] sequenceOptionalRepeatable (members of the class may be provided one or more
+	    times, in sequence, but are optional. ); 5] sequenceRepeatable (members of the class may be provided one or more times, in sequence)</a:documentation>
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sorry, unable to create schema that uses actual counts minOccurs=1 and maxOccurs=5; approximating to minOccurs=1 and maxOccurs=unbounded.</a:documentation>
+        <list>
+          <ref name="data.name"/>
+          <zeroOrMore>
+            <ref name="data.name"/>
+          </zeroOrMore>
+        </list>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="classes">
+    <element name="classes">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies all the classes of which the documented element or
+class is a member or subclass.</a:documentation>
+      <ref name="classes.content"/>
+      <ref name="classes.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="classes.content">
+    <zeroOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:ref name="memberOf"/>
+    </zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="classes.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="code">
+    <element name="code">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains literal code from some formal language such as a
+programming language</a:documentation>
+      <ref name="code.content"/>
+      <ref name="code.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="code.content">
+    <text xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="code.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <attribute name="lang">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a name identifying the formal language in which  the
+	code is expressed</a:documentation>
+        <ref name="data.word"/>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="content">
+    <element name="content">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(schema declaration) contains the text of a declaration for the schema
+documented.</a:documentation>
+      <ref name="content.content"/>
+      <ref name="content.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="content.content">
+    <zeroOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:choice>
+        <rng:ref name="macro.schemapattern"/>
+        <rng:ref name="valList"/>
+      </rng:choice>
+    </zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="content.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="datatype">
+    <element name="datatype">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the declared value for an attribute, by referring to
+  any datatype defined by the chosen schema language.</a:documentation>
+      <ref name="datatype.content"/>
+      <ref name="datatype.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="datatype.content">
+    <zeroOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:group>
+        <rng:ref name="macro.schemapattern"/>
+      </rng:group>
+    </zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="datatype.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="minOccurs" a1:defaultValue="1">
+        <a1:documentation>(minimum number of occurences) indicates the minimum number of times this datatype may
+      occur in the specification of the attribute being defined</a1:documentation>
+        <ref name="data.count"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="maxOccurs" a1:defaultValue="1">
+        <a1:documentation>(maximum number of occurences) indicates the maximum number of times this datatype may
+      occur in the specification of the attribute being defined</a1:documentation>
+        <choice>
+          <ref name="data.count"/>
+          <value>unbounded</value>
+        </choice>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="defaultVal">
+    <element name="defaultVal">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the default declared value for an attribute.</a:documentation>
+      <ref name="defaultVal.content"/>
+      <ref name="defaultVal.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="defaultVal.content">
+    <text xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="defaultVal.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="eg">
+    <element name="eg">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains any kind of illustrative example. </a:documentation>
+      <ref name="eg.content"/>
+      <ref name="eg.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="eg.content">
+    <text xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="eg.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="egXML">
+    <element name="egXML" ns="http://www.tei-c.org/ns/Examples">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a single well-formed XML example demonstrating the use
+of some XML element or attribute. </a:documentation>
+      <ref name="egXML.content"/>
+      <ref name="egXML.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="egXML.content">
+    <text xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="egXML.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="elementSpec">
+    <element name="elementSpec">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documents the structure, content, and purpose of a single
+element type.</a:documentation>
+      <ref name="elementSpec.content"/>
+      <ref name="elementSpec.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="elementSpec.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:ref name="macro.glossSeq"/>
+      <rng:optional>
+        <rng:ref name="classes"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="content"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="attList"/>
+      </rng:optional>
+      <rng:zeroOrMore>
+        <rng:ref name="exemplum"/>
+      </rng:zeroOrMore>
+      <rng:zeroOrMore>
+        <rng:ref name="remarks"/>
+      </rng:zeroOrMore>
+      <rng:zeroOrMore>
+        <rng:ref name="listRef"/>
+      </rng:zeroOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="elementSpec.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.identified.attributes"/>
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="ns" a1:defaultValue="http://www.tei-c.org/ns/1.0">
+        <a1:documentation>(namespace) specifies the namespace to which this element belongs</a1:documentation>
+        <ref name="data.namespace"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="usage" a1:defaultValue="opt">
+        <a1:documentation>specifies the optionality of an attribute or element. </a1:documentation>
+        <choice>
+          <value>req</value>
+          <a1:documentation>(required) </a1:documentation>
+          <value>mwa</value>
+          <a1:documentation>(mandatory when applicable) </a1:documentation>
+          <value>rec</value>
+          <a1:documentation>(recommended) </a1:documentation>
+          <value>rwa</value>
+          <a1:documentation>(recommended when applicable) </a1:documentation>
+          <value>opt</value>
+          <a1:documentation>(optional) </a1:documentation>
+        </choice>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="exemplum">
+    <element name="exemplum">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a single example demonstrating the use of an element,
+  together with optional paragraphs of commentary.</a:documentation>
+      <ref name="exemplum.content"/>
+      <ref name="exemplum.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="exemplum.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:zeroOrMore>
+        <rng:ref name="model.pLike"/>
+      </rng:zeroOrMore>
+      <rng:choice>
+        <rng:ref name="egXML"/>
+        <rng:ref name="eg"/>
+      </rng:choice>
+      <rng:zeroOrMore>
+        <rng:ref name="model.pLike"/>
+      </rng:zeroOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="exemplum.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="gi">
+    <element name="gi">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(generic identifier) contains the name (generic identifier) of an element.</a:documentation>
+      <ref name="gi.content"/>
+      <ref name="gi.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="gi.content">
+    <text xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="gi.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="scheme" a1:defaultValue="TEI">
+        <a1:documentation>supplies the name of the scheme in which this name is defined.
+Sample values include: 1] TEI (this element is part of the TEI scheme.); 2] DBK (this element is  part of the Docbook scheme.); 3] XX (this element is  part of an unknown scheme.)</a1:documentation>
+        <ref name="data.enumerated"/>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="ident">
+    <element name="ident">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains an identifier or name for an object of some kind in a formal language</a:documentation>
+      <ref name="ident.content"/>
+      <ref name="ident.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="ident.content">
+    <text xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="ident.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="listRef">
+    <element name="listRef">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(list of references) supplies a list of significant references to places where this
+  element is discussed, in the current document or elsewhere.</a:documentation>
+      <ref name="listRef.content"/>
+      <ref name="listRef.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="listRef.content">
+    <oneOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:ref name="ptr"/>
+    </oneOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="listRef.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="macroSpec">
+    <element name="macroSpec">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documents the function and implementation of a pattern. </a:documentation>
+      <ref name="macroSpec.content"/>
+      <ref name="macroSpec.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="macroSpec.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:ref name="macro.glossSeq"/>
+      <rng:oneOrMore>
+        <rng:choice>
+          <rng:ref name="stringVal"/>
+          <rng:ref name="content"/>
+        </rng:choice>
+      </rng:oneOrMore>
+      <rng:zeroOrMore>
+        <rng:ref name="exemplum"/>
+      </rng:zeroOrMore>
+      <rng:zeroOrMore>
+        <rng:ref name="remarks"/>
+      </rng:zeroOrMore>
+      <rng:zeroOrMore>
+        <rng:ref name="listRef"/>
+      </rng:zeroOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="macroSpec.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.identified.attributes"/>
+    <optional>
+      <attribute name="type">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates which type of entity should be generated, when an ODD
+	processor is generating a module using SGML syntax.</a:documentation>
+        <choice>
+          <value>pe</value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(parameter entity) </a:documentation>
+          <value>epe</value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(element parameter entity) </a:documentation>
+          <value>ge</value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(general entity) </a:documentation>
+          <value>dt</value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(datatype entity) </a:documentation>
+        </choice>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="memberOf">
+    <element name="memberOf">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies  class membership of the parent element or class.</a:documentation>
+      <ref name="memberOf.content"/>
+      <ref name="memberOf.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="memberOf.content">
+    <ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.xtext"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="memberOf.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <attribute name="key">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(a name) specifies the identifier for a class of which the documented
+ element or class is a member or subclass</a:documentation>
+        <ref name="data.name"/>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="moduleRef">
+    <element name="moduleRef">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">references a module which is to be incorporated into a schema.</a:documentation>
+      <ref name="moduleRef.content"/>
+      <ref name="moduleRef.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="moduleRef.content">
+    <optional xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:ref name="content"/>
+    </optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="moduleRef.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <choice>
+        <attribute name="key">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the name of a TEI module</a:documentation>
+          <data type="NCName"/>
+        </attribute>
+        <attribute name="url">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">refers to a non-TEI module by external location </a:documentation>
+          <data type="anyURI"/>
+        </attribute>
+      </choice>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="moduleSpec">
+    <element name="moduleSpec">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documents the structure, content, and purpose of a single
+module, i.e. a named and externally visible group of declarations.</a:documentation>
+      <ref name="moduleSpec.content"/>
+      <ref name="moduleSpec.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="moduleSpec.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:ref name="macro.glossSeq"/>
+      <rng:zeroOrMore>
+        <rng:ref name="exemplum"/>
+      </rng:zeroOrMore>
+      <rng:optional>
+        <rng:ref name="remarks"/>
+      </rng:optional>
+      <rng:zeroOrMore>
+        <rng:ref name="listRef"/>
+      </rng:zeroOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="moduleSpec.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.identified.attributes"/>
+    <optional>
+      <attribute name="type">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">type of module to be generated</a:documentation>
+        <text/>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="remarks">
+    <element name="remarks">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains any commentary or discussion about the usage of an
+element, attribute, class, or entity not otherwise documented within the
+containing element.</a:documentation>
+      <ref name="remarks.content"/>
+      <ref name="remarks.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="remarks.content">
+    <ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.componentSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="remarks.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="schemaSpec">
+    <element name="schemaSpec">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">generates a TEI-conformant schema and documentation for it.</a:documentation>
+      <ref name="schemaSpec.content"/>
+      <ref name="schemaSpec.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="schemaSpec.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:ref name="macro.glossSeq"/>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="moduleRef"/>
+          <rng:ref name="specGrpRef"/>
+          <rng:ref name="model.oddDecl"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="schemaSpec.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.identified.attributes"/>
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="start" a1:defaultValue="TEI">
+        <a1:documentation>specifies entry points to the schema, i.e. which elements
+      are allowed to be used as the root of documents conforming to
+      it. </a1:documentation>
+        <list>
+          <oneOrMore>
+            <ref name="data.name"/>
+          </oneOrMore>
+        </list>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="ns" a1:defaultValue="http://www.tei-c.org/ns/1.0">
+        <a1:documentation>specifies the default namespace (if any) applicable to
+      components of the schema.</a1:documentation>
+        <ref name="data.namespace"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="prefix">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies a prefix which will be appended to all patterns
+      relating to TEI elements. This allows for external schemas to be mixed in
+      which have elements of the same names as the TEI.
+      </a:documentation>
+        <ref name="data.name"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="targetLang">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Where names for element or attribute
+      are available
+      in more than one language, specifies which language to
+      use when creating the objects in a schema.</a:documentation>
+        <ref name="data.language"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="docLang">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Where the descrition for an element, attribute, class or macro
+      is available in more than one language, specifies which languages to
+      use when creating documentation.</a:documentation>
+        <list>
+          <oneOrMore>
+            <ref name="data.language"/>
+          </oneOrMore>
+        </list>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="specDesc">
+    <element name="specDesc">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Element or class description) indicates that a description of the specified element or class
+  should be included at this point within a document.</a:documentation>
+      <ref name="specDesc.content"/>
+      <ref name="specDesc.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="specDesc.content">
+    <empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="specDesc.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <attribute name="key">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) supplies the identifier of the documentary element or class for
+      which a description is to be obtained.</a:documentation>
+        <ref name="data.name"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="atts">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(attributes) supplies attribute names for which descriptions should
+      additionally be obtained.</a:documentation>
+        <list>
+          <zeroOrMore>
+            <ref name="data.name"/>
+          </zeroOrMore>
+        </list>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="specGrp">
+    <element name="specGrp">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(specification group) contains any convenient grouping of specifications for use within
+  the current module.</a:documentation>
+      <ref name="specGrp.content"/>
+      <ref name="specGrp.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="specGrp.content">
+    <zeroOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:choice>
+        <rng:ref name="model.oddDecl"/>
+        <rng:ref name="model.oddRef"/>
+        <rng:ref name="model.divPart"/>
+      </rng:choice>
+    </zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="specGrp.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="specGrpRef">
+    <element name="specGrpRef">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference to a specification group) indicates that the  declarations contained by the
+  specGrp referenced should be inserted at this point.</a:documentation>
+      <ref name="specGrpRef.content"/>
+      <ref name="specGrpRef.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="specGrpRef.content">
+    <empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="specGrpRef.attributes">
+    <ref name="att.global.attributes"/>
+    <attribute name="target">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points at the specification group  which logically belongs here.</a:documentation>
+      <ref name="data.pointer"/>
+    </attribute>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="specList">
+    <element name="specList">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">marks where a list of descriptions is to be inserted into the prose documentation.</a:documentation>
+      <ref name="specList.content"/>
+      <ref name="specList.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="specList.content">
+    <oneOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:ref name="specDesc"/>
+    </oneOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="specList.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="stringVal">
+    <element name="stringVal">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the intended expansion for the entity documented
+by an patternSpec element, enclosed by quotation marks.</a:documentation>
+      <ref name="stringVal.content"/>
+      <ref name="stringVal.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="stringVal.content">
+    <text xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="stringVal.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="tag">
+    <element name="tag">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains text of a complete start- or end-tag, possibly
+including attribute specifications, but excluding the opening and
+closing markup delimiter characters.</a:documentation>
+      <ref name="tag.content"/>
+      <ref name="tag.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="tag.content">
+    <text xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="tag.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="scheme" a1:defaultValue="TEI">
+        <a1:documentation>supplies the name of the scheme in which this name is defined.</a1:documentation>
+        <choice>
+          <value>TEI</value>
+          <a1:documentation>(this tag is part of the TEI scheme.) </a1:documentation>
+          <value>DBK</value>
+          <a1:documentation>(this element is  part of the Docbook scheme.) </a1:documentation>
+        </choice>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="val">
+    <element name="val">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(value) contains a single attribute value.</a:documentation>
+      <ref name="val.content"/>
+      <ref name="val.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="val.content">
+    <text xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="val.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="valDesc">
+    <element name="valDesc">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(value description) specifies any semantic or syntactic constraint on the value that
+an attribute may take, additional to the information carried by the
+datatype element.</a:documentation>
+      <ref name="valDesc.content"/>
+      <ref name="valDesc.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="valDesc.content">
+    <ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="valDesc.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="mode" a1:defaultValue="add">
+        <a1:documentation>specifies the effect of this declaration on its parent module.</a1:documentation>
+        <choice>
+          <value>add</value>
+          <a1:documentation>(this declaration is added to the current definitions) </a1:documentation>
+          <value>delete</value>
+          <a1:documentation>(this declaration and all of its children are removed from the current setup) </a1:documentation>
+          <value>change</value>
+          <a1:documentation>(this declaration changes the declaration of the same
+	 name in the current definition) </a1:documentation>
+          <value>replace</value>
+          <a1:documentation>(this declaration replaces the declaration of the same
+	name in the current definition) </a1:documentation>
+        </choice>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="valItem">
+    <element name="valItem">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(value definition) contains a single value and gloss  pair for an attribute.</a:documentation>
+      <ref name="valItem.content"/>
+      <ref name="valItem.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="valItem.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:ref name="macro.glossSeq"/>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="valItem.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.identified.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="valList">
+    <element name="valList">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(value list) contains one or more valItem elements defining possible
+  values for an attribute.</a:documentation>
+      <ref name="valList.content"/>
+      <ref name="valList.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="valList.content">
+    <oneOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:ref name="valItem"/>
+    </oneOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="valList.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="mode" a1:defaultValue="add">
+        <a1:documentation>specifies the effect of this declaration on its parent
+    module.</a1:documentation>
+        <choice>
+          <value>add</value>
+          <a1:documentation>(this declaration is added to the current definitions) </a1:documentation>
+          <value>delete</value>
+          <a1:documentation>(this declaration and all of its children are removed from the current setup) </a1:documentation>
+          <value>change</value>
+          <a1:documentation>(this declaration changes the declaration of the same
+	 name in the current definition) </a1:documentation>
+          <value>replace</value>
+          <a1:documentation>(this declaration replaces the declaration of the same
+	name in the current definition) </a1:documentation>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="type" a1:defaultValue="open">
+        <a1:documentation>specifies the extensibility of the list of attribute values
+      specified.
+      </a1:documentation>
+        <choice>
+          <value>closed</value>
+          <a1:documentation>(only the values specified are permitted.) </a1:documentation>
+          <value>semi</value>
+          <a1:documentation>(all the values specified should be supported, but
+	  other values are legal and software should have appropriate
+	  fallback processing for them.
+	  ) </a1:documentation>
+          <value>open</value>
+          <a1:documentation>(the values specified are sample values only.) </a1:documentation>
+        </choice>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+<!--3. macros-->
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="macro.schemapattern">
+    <text xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+</rng:grammar>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;abbr&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;abbr&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;abbr&gt;</h1></div><div><span id="abbr"/><table border="1" class="wovenodd"><tr><td class="elementSpec">abbr</td><td colspan="2" class="wovenodd-col2">(abbreviation) contains an abbreviation of any sort.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.pPart.edit.html">model.pPart.edit</a> <a class="link_odd" href="ref-model.choicePart.html">model.choicePart</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element abbr
+{
+   att.global.attributes,
+   attribute type { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> }?,
+   <a class="link_odd" href="ref-macro.phraseSeq.html">macro.phraseSeq</a>
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>In addition to global attributes<table><tr><td class="attDef">type</td><td colspan="2">allows the encoder to classify the abbreviation according to
+some convenient typology.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a></code></td></tr><tr><td><!-- --></td><td valign="top">Sample values include:<table class="valList"><tr><td valign="top"><b>suspension</b></td><td valign="top">(the abbreviation provides the first
+       letter(s) of the word or phrase, omitting the remainder.) </td></tr><tr><td valign="top"><b>contraction</b></td><td valign="top">(the abbreviation omits some letter(s) in the middle.) </td></tr><tr><td valign="top"><b>brevigraph</b></td><td valign="top">(the abbreviation comprises a special symbol or mark.) </td></tr><tr><td valign="top"><b>superscription</b></td><td valign="top">(the abbreviation includes writing above the line.) </td></tr><tr><td valign="top"><b>acronym</b></td><td valign="top">(the abbreviation comprises the initial letters of
+	  the words of a phrase.) </td></tr><tr><td valign="top"><b>title</b></td><td valign="top">(the abbreviation is for a title of address (Dr, Ms, Mr, …)) </td></tr><tr><td valign="top"><b>organization</b></td><td valign="top">(the abbreviation is for the name of an organization.) </td></tr><tr><td valign="top"><b>geographic</b></td><td valign="top">(the abbreviation is for a geographic name.) </td></tr></table></td></tr><tr><td/><td><p><span id="id2407974"/>The <span class="att">type</span> attribute is provided for the sake of
+        those who wish to classify abbreviations at their point of
+        occurrence; this may be useful in some circumstances, though
+        usually the same abbreviation will have the same type in all
+        occurrences. As the sample values make clear, abbreviations
+        may be classified by the method used to construct them, the
+        method of writing them, or the referent of the term
+        abbreviated; the typology used is up to the encoder and should
+        be carefully planned to meet the needs of the expected
+        use.</p></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;abbr&gt;</span>SPQR<span class="element">&lt;/abbr&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;choice&gt;</span><br/>  <span class="element">&lt;abbr&gt;</span>SPQR<span class="element">&lt;/abbr&gt;</span><br/>  <span class="element">&lt;expan&gt;</span>senatus populusque romanorum<span class="element">&lt;/expan&gt;</span><br/> <span class="element">&lt;/choice&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p><span id="id2408034"/>The <code>&lt;abbr&gt;</code> tag is not required; if appropriate, the encoder
+may transcribe abbreviations in the source text silently, without
+tagging them. If abbreviations are not transcribed directly but
+<em>expanded</em> silently, then the TEI header should so
+indicate.</p><p><span id="id2408049"/>For a typology of Middle English abbreviations, see <span id="index-bibl-id2408052"/>A. G. Petty,
+<i>English literary hands from Chaucer to
+Dryden</i> (London: Edward Arnold, 1977), pp. 22–25.</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="CO.html#CONAAB" title="Abbreviations and Their Expansions">4.5.5  Abbreviations and Their Expansions</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">core</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

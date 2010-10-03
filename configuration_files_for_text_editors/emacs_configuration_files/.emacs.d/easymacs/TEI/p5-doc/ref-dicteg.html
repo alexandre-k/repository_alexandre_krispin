@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;dicteg&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;dicteg&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;dicteg&gt;</h1></div><div><span id="dicteg"/><table border="1" class="wovenodd"><tr><td class="elementSpec">dicteg</td><td colspan="2" class="wovenodd-col2">(example (exempli gratia)) (in a dictionary) contains an example text containing at least one occurrence of the word
+        form, used in the sense being described; examples may be quoted from (named) authors or contrived.</td></tr><tr><td valign="top"><span class="label">Attributes: </span></td><td>  [<a class="classlink" href="ref-att.typed.html">att.typed</a> <a class="classlink" href="ref-att.lexicographic.html">att.lexicographic</a> ] </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-att.typed.html">att.typed</a> <a class="link_odd" href="ref-model.entryParts.top.html">model.entryParts.top</a> <a class="link_odd" href="ref-model.entryParts.html">model.entryParts</a> <a class="link_odd" href="ref-att.lexicographic.html">att.lexicographic</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element dicteg
+{
+   att.global.attributes,
+   att.typed.attributes,
+   att.lexicographic.attributes,
+   ( <a class="link_odd" href="ref-q.html">q</a> | <a class="link_odd" href="ref-quote.html">quote</a> | <a class="link_odd" href="ref-cit.html">cit</a> | <a class="link_odd" href="ref-model.entryParts.html">model.entryParts</a> )+
+}</pre></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p class="dataDesc"><span id="id2464500"/>May contain a quotation, pronunciation, definition, or translation information.</p><p><span id="id2464507"/>In some cases the quoted example may be followed by a bibliographic citation for
+            the source; this citation may be tagged with the tags described in section <a class="link_ptr" href="CO.html#COBI" title="Bibliographic Citations and References">4.11  Bibliographic Citations and References</a>. The quotation and the indication of its source should
+            be enclosed in a <code>&lt;cit&gt;</code> element.</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="DI.html#DITPEG" title="Examples">9.3.5.1  Examples</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">dictionaries</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

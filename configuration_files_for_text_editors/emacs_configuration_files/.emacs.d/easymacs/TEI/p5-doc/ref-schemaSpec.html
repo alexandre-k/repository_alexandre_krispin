@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;schemaSpec&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;schemaSpec&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;schemaSpec&gt;</h1></div><div><span id="schemaSpec"/><table border="1" class="wovenodd"><tr><td class="elementSpec">schemaSpec</td><td colspan="2" class="wovenodd-col2">generates a TEI-conformant schema and documentation for it.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.divPart.html">model.divPart</a> <a class="link_odd" href="ref-att.identified.html">att.identified</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element schemaSpec
+{
+   att.global.attributes,
+   att.identified.attributes,
+   attribute start { list { <a class="link_odd" href="ref-data.name.html">data.name</a>+ } }?,
+   attribute ns { <a class="link_odd" href="ref-data.namespace.html">data.namespace</a> }?,
+   attribute prefix { <a class="link_odd" href="ref-data.name.html">data.name</a> }?,
+   attribute targetLang { <a class="link_odd" href="ref-data.language.html">data.language</a> }?,
+   attribute docLang { list { <a class="link_odd" href="ref-data.language.html">data.language</a>+ } }?,
+   ( <a class="link_odd" href="ref-macro.glossSeq.html">macro.glossSeq</a>, ( <a class="link_odd" href="ref-moduleRef.html">moduleRef</a> | <a class="link_odd" href="ref-specGrpRef.html">specGrpRef</a> | <a class="link_odd" href="ref-model.oddDecl.html">model.oddDecl</a> )* )
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>  [<a class="classlink" href="ref-att.identified.html">att.identified</a> ] <table><tr><td class="attDef">start</td><td colspan="2">specifies entry points to the schema, i.e. which elements
+      are allowed to be used as the root of documents conforming to
+      it. </td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span> [n &lt;= unbounded] <code class="eg">
+<a class="link_odd" href="ref-data.name.html">data.name</a></code></td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Default</span>: TEI</td></tr><tr><td class="attDef">ns</td><td colspan="2">specifies the default namespace (if any) applicable to
+      components of the schema.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.namespace.html">data.namespace</a></code></td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Default</span>: http://www.tei-c.org/ns/1.0</td></tr><tr><td class="attDef">prefix</td><td colspan="2">specifies a prefix which will be appended to all patterns
+      relating to TEI elements. This allows for external schemas to be mixed in
+      which have elements of the same names as the TEI.
+      </td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.name.html">data.name</a></code></td></tr><tr><td/><td><p><span id="id2569253"/>Colons, although permitted inside the value, will cause in
+	invalid schema to be generated.</p></td></tr><tr><td class="attDef">targetLang</td><td colspan="2">Where names for element or attribute
+      are available
+      in more than one language, specifies which language to
+      use when creating the objects in a schema.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.language.html">data.language</a></code></td></tr><tr><td class="attDef">docLang</td><td colspan="2">Where the descrition for an element, attribute, class or macro
+      is available in more than one language, specifies which languages to
+      use when creating documentation.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span> [n &lt;= unbounded] <code class="eg">
+<a class="link_odd" href="ref-data.language.html">data.language</a></code></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p><span id="id2569332"/>A schema combines references to modules or specification
+    groups with other atomic declarations. The processing of a
+    schema element must resolve any conflicts amongst the declarations
+    it contains or references. Different ODD processors may generate
+    schemas and documentation using different concrete syntaxes. </p></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">tagdocs</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

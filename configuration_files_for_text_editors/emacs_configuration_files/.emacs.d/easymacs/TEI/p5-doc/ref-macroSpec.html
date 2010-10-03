@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;macroSpec&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;macroSpec&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;macroSpec&gt;</h1></div><div><span id="macroSpec"/><table border="1" class="wovenodd"><tr><td class="elementSpec">macroSpec</td><td colspan="2" class="wovenodd-col2">documents the function and implementation of a pattern. </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.oddDecl.html">model.oddDecl</a> <a class="link_odd" href="ref-att.identified.html">att.identified</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element macroSpec
+{
+   att.global.attributes,
+   att.identified.attributes,
+   attribute type { "pe" | "epe" | "ge" | "dt" }?,
+   ( <a class="link_odd" href="ref-macro.glossSeq.html">macro.glossSeq</a>, ( <a class="link_odd" href="ref-stringVal.html">stringVal</a> | <a class="link_odd" href="ref-content.html">content</a> )+, <a class="link_odd" href="ref-exemplum.html">exemplum</a>*, <a class="link_odd" href="ref-remarks.html">remarks</a>*, <a class="link_odd" href="ref-listRef.html">listRef</a>* )
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>  [<a class="classlink" href="ref-att.identified.html">att.identified</a> ] <table><tr><td class="attDef">type</td><td colspan="2">indicates which type of entity should be generated, when an ODD
+	processor is generating a module using SGML syntax.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td><!-- --></td><td valign="top">Legal values are:<table class="valList"><tr><td valign="top"><b>pe</b></td><td valign="top">(parameter entity) </td></tr><tr><td valign="top"><b>epe</b></td><td valign="top">(element parameter entity) </td></tr><tr><td valign="top"><b>ge</b></td><td valign="top">(general entity) </td></tr><tr><td valign="top"><b>dt</b></td><td valign="top">(datatype entity) </td></tr></table></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">tagdocs</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

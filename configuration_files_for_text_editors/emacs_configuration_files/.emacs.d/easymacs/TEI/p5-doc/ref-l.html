@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;l&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;l&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;l&gt;</h1></div><div><span id="l"/><table border="1" class="wovenodd"><tr><td class="elementSpec">l</td><td colspan="2" class="wovenodd-col2">(verse line) contains a single, possibly incomplete, line of verse.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.divPart.html">model.divPart</a> <a class="link_odd" href="ref-model.lLike.html">model.lLike</a> <a class="link_odd" href="ref-att.metrical.html">att.metrical</a> <a class="link_odd" href="ref-att.enjamb.html">att.enjamb</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element l
+{
+   att.global.attributes,
+   att.metrical.attributes,
+   att.enjamb.attributes,
+   attribute part { "Y" | "N" | "I" | "M" | "F" }?,
+   <a class="link_odd" href="ref-macro.paraContent.html">macro.paraContent</a>
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>  [<a class="classlink" href="ref-att.metrical.html">att.metrical</a> <a class="classlink" href="ref-att.enjamb.html">att.enjamb</a> ] <table><tr><td class="attDef">part</td><td colspan="2">specifies whether or not the line is metrically complete. </td></tr><tr><td/><td><span class="label">Status: </span>Mandatory when applicable</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Default</span>: N</td></tr><tr><td><!-- --></td><td valign="top">Legal values are:<table class="valList"><tr><td valign="top"><b>Y</b></td><td valign="top">(the line is metrically incomplete) </td></tr><tr><td valign="top"><b>N</b></td><td valign="top">(either the line is complete, or no claim is made as to its
+completeness) </td></tr><tr><td valign="top"><b>I</b></td><td valign="top">(the initial part of an incomplete line) </td></tr><tr><td valign="top"><b>M</b></td><td valign="top">(a medial part of an incomplete line) </td></tr><tr><td valign="top"><b>F</b></td><td valign="top">(the final part of an incomplete line) </td></tr></table></td></tr><tr><td/><td><p><span id="id2424748"/>The values I, M, or F should be used only where it is
+clear how the line is to be reconstituted.</p></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;l <span class="attribute">met</span>="-/-/-/-/-/" <span class="attribute">part</span>="Y"/&gt;</span></div></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="CO.html#COVE" title="Core Tags for Verse">4.12.1  Core Tags for Verse</a></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="CO.html#CODV" title="Passages of Verse or Drama">4.12  Passages of Verse or Drama</a></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="DR.html#DRPAL" title="Speech Contents">7.2.4  Speech Contents</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">core</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

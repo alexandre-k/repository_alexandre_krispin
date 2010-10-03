@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;space&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;space&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;space&gt;</h1></div><div><span id="space"/><table border="1" class="wovenodd"><tr><td class="elementSpec">space</td><td colspan="2" class="wovenodd-col2">indicates the location of a significant space in the copy text.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.pPart.edit.html">model.pPart.edit</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element space
+{
+   att.global.attributes,
+   attribute dim { "horizontal" | "vertical" }?,
+   attribute extent { list { <a class="link_odd" href="ref-data.word.html">data.word</a>+ } }?,
+   attribute resp { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a> }?,
+   empty
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>In addition to global attributes<table><tr><td class="attDef">dim</td><td colspan="2">indicates whether the space is horizontal or vertical.</td></tr><tr><td/><td><span class="label">Status: </span>Recommended</td></tr><tr><td><!-- --></td><td valign="top">Legal values are:<table class="valList"><tr><td valign="top"><b>horizontal</b></td><td valign="top">(the space is horizontal.) </td></tr><tr><td valign="top"><b>vertical</b></td><td valign="top">(the space is vertical.) </td></tr></table></td></tr><tr><td/><td><p><span id="id2523624"/>For irregular shapes in two dimensions, the value for
+this attribute should reflect the more important of the two dimensions.
+In conventional left-right scripts, a space with both vertical and
+horizontal components should be classed as vertical.</p></td></tr><tr><td class="attDef">extent</td><td colspan="2">indicates approximately how large the space is, in letters,
+minims, inches, or other appropriate unit.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span> [n &lt;= unbounded] <code class="eg">
+<a class="link_odd" href="ref-data.word.html">data.word</a></code></td></tr><tr><td/><td><span class="label">Values: </span>any measured quantity, e.g. 10 letters or 4
+lines.</td></tr><tr><td/><td/></tr><tr><td class="attDef">resp</td><td colspan="2">indicates the individual responsible for identifying and measuring
+the space.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>a pointer to one of the identifiers declared in the
+      document header, associated with a person asserted as
+      responsible for some aspect of the text's creation,
+      transcription, editing, or encoding</td></tr><tr><td/><td/></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre">By god if wommen had writen storyes
+As  <span class="element">&lt;space <span class="attribute">extent</span>="7 minims"/&gt;</span> han within her oratoryes</div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p><span id="id2523736"/>This element should be used wherever it is desired to record
+an unusual space in the source text, e.g. space left for a word to be
+filled in later, for later rubrication, etc.  It is not intended to be
+used to mark normal inter-word space or the like.</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="PH.html#PHSP" title="Space">15.2.5  Space</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">transcr</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

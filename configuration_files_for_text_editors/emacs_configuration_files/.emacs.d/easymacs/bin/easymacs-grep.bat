@@ -1,0 +1,1 @@
+perl -S easymacs-grep %*

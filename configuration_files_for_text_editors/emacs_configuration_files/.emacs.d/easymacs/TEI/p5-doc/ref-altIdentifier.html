@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;altIdentifier&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;altIdentifier&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;altIdentifier&gt;</h1></div><div><span id="altIdentifier"/><table border="1" class="wovenodd"><tr><td class="elementSpec">altIdentifier</td><td colspan="2" class="wovenodd-col2">(alternative identifier) contains an alternative or former structured identifier used for
+a manuscript, such as a former catalogue number.</td></tr><tr><td valign="top"><span class="label">Attributes: </span></td><td>  [<a class="classlink" href="ref-att.typed.html">att.typed</a> ] </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-att.typed.html">att.typed</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element altIdentifier
+{
+   att.global.attributes,
+   att.typed.attributes,
+   (
+      <a class="link_odd" href="ref-model.placeNamePart.html">model.placeNamePart_sequenceOptional</a>,
+      <a class="link_odd" href="ref-institution.html">institution</a>?,
+      <a class="link_odd" href="ref-repository.html">repository</a>?,
+      <a class="link_odd" href="ref-collection.html">collection</a>?,
+      <a class="link_odd" href="ref-idno.html">idno</a>,
+      <a class="link_odd" href="ref-note.html">note</a>?
+   )
+}</pre></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;altIdentifier&gt;</span><br/>  <span class="element">&lt;settlement&gt;</span>San Marino<span class="element">&lt;/settlement&gt;</span><br/>  <span class="element">&lt;repository&gt;</span>Huntington Library<span class="element">&lt;/repository&gt;</span><br/>  <span class="element">&lt;idno&gt;</span>MS.El.26.C.9<span class="element">&lt;/idno&gt;</span><br/> <span class="element">&lt;/altIdentifier&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p><span id="id2476847"/>An identifying number of some kind must be supplied if
+known; if it is not known, this should be stated. </p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="MS.html#msid" title="The manuscript identifier">10.4  The manuscript identifier</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">msdescription</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;mapping&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;mapping&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;mapping&gt;</h1></div><div><span id="mapping"/><table border="1" class="wovenodd"><tr><td class="elementSpec">mapping</td><td colspan="2" class="wovenodd-col2">(character mapping) contains one or more
+	 characters which are related to the parent character or glyph
+	 in some respect, as specified by the type
+	 attribute.
+</td></tr><tr><td valign="top"><span class="label">Attributes: </span></td><td>  [<a class="classlink" href="ref-att.typed.html">att.typed</a> ] </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-att.typed.html">att.typed</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element mapping { att.global.attributes, att.typed.attributes, <a class="link_odd" href="ref-macro.xtext.html">macro.xtext</a> }</pre></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;mapping <span class="attribute">type</span>="modern"&gt;</span>r<span class="element">&lt;/mapping&gt;</span><br/> <span class="element">&lt;mapping <span class="attribute">type</span>="standard"&gt;</span><br/>  <span class="element">&lt;g <span class="attribute">ref</span>="#U4EBA"&gt;</span>人<span class="element">&lt;/g&gt;</span><br/> <span class="element">&lt;/mapping&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p><span id="id2562849"/>Suggested values for the <span class="att">type</span> attribute include
+<tt>exact</tt> for exact equivalences, <tt>uppercase</tt>
+for uppercase equivalences, <tt>lowercase</tt>   for lowercase equivalences,
+and <tt>simplified</tt>  for simplified characters. The
+	 <code>&lt;g&gt;</code> elements contained by this element can  point to either another
+	 <code>&lt;char&gt;</code> or <code>&lt;glyph&gt;</code>element or contain a character
+	 that is intended to be the target of this mapping.</p></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">gaiji</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

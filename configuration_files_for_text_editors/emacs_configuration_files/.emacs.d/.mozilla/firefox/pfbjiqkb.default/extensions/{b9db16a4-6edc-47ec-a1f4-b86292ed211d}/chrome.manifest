@@ -1,0 +1,32 @@
+overlay chrome://browser/content/browser.xul chrome://dwhelper/content/dwhelper.xul
+content dwhelper    jar:chrome/dwhelper.jar!/content/
+skin    dwhelper classic/1.0 jar:chrome/dwhelper.jar!/skin/classic/
+locale  dwhelper en-US jar:chrome/dwhelper.jar!/locale/en-US/
+locale  dwhelper fr jar:chrome/dwhelper.jar!/locale/fr/
+locale  dwhelper nl jar:chrome/dwhelper.jar!/locale/nl/
+locale  dwhelper de jar:chrome/dwhelper.jar!/locale/de/
+locale  dwhelper es-ES jar:chrome/dwhelper.jar!/locale/es-ES/
+locale  dwhelper it-IT jar:chrome/dwhelper.jar!/locale/it-IT/
+locale  dwhelper sk-SK jar:chrome/dwhelper.jar!/locale/sk-SK/
+locale  dwhelper zh-CN jar:chrome/dwhelper.jar!/locale/zh-CN/
+locale  dwhelper pl-PL jar:chrome/dwhelper.jar!/locale/pl-PL/
+locale  dwhelper pt-PT jar:chrome/dwhelper.jar!/locale/pt-PT/
+locale  dwhelper tr-TR jar:chrome/dwhelper.jar!/locale/tr-TR/
+locale  dwhelper ja-JP jar:chrome/dwhelper.jar!/locale/ja-JP/
+locale  dwhelper fi-FI jar:chrome/dwhelper.jar!/locale/fi-FI/
+locale  dwhelper zh-TW jar:chrome/dwhelper.jar!/locale/zh-TW/
+locale  dwhelper ko-KR jar:chrome/dwhelper.jar!/locale/ko-KR/
+locale  dwhelper vi jar:chrome/dwhelper.jar!/locale/vi/
+locale  dwhelper bg-BG jar:chrome/dwhelper.jar!/locale/bg-BG/
+locale  dwhelper pt-BR jar:chrome/dwhelper.jar!/locale/pt-BR/
+locale  dwhelper ru-RU jar:chrome/dwhelper.jar!/locale/ru-RU/
+locale  dwhelper cs-CZ jar:chrome/dwhelper.jar!/locale/cs-CZ/
+locale  dwhelper da-DK jar:chrome/dwhelper.jar!/locale/da-DK/
+locale  dwhelper sl-SI jar:chrome/dwhelper.jar!/locale/sl-SI/
+locale  dwhelper ar jar:chrome/dwhelper.jar!/locale/ar/
+locale  dwhelper si-LK jar:chrome/dwhelper.jar!/locale/si-LK/
+style   chrome://global/content/customizeToolbar.xul    chrome://dwhelper/skin/classic/dwhelper.css
+overlay chrome://songbird/content/xul/layoutWithBrowserOverlay.xul chrome://dwhelper/content/dwhelper.xul
+style   chrome://songbird/content/xul/layoutWithBrowserOverlay.xul    chrome://dwhelper/skin/classic/dwhelper.css
+overlay chrome://navigator/content/navigator.xul chrome://dwhelper/content/dwhelper.xul
+style chrome://navigator/content/navigator.xul chrome://dwhelper/skin/classic/dwhelper.css

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;note&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;note&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;note&gt;</h1></div><div><span id="note"/><table border="1" class="wovenodd"><tr><td class="elementSpec">note</td><td colspan="2" class="wovenodd-col2">contains a note or annotation.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.noteLike.html">model.noteLike</a> <a class="link_odd" href="ref-att.placement.html">att.placement</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element note
+{
+   att.global.attributes,
+   att.placement.attributes,
+   attribute type { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> }?,
+   attribute resp { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a> }?,
+   attribute anchored { "true" | "false" }?,
+   attribute target { list { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a>+ } }?,
+   attribute targetEnd { list { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a>+ } }?,
+   <a class="link_odd" href="ref-macro.specialPara.html">macro.specialPara</a>
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>  [<a class="classlink" href="ref-att.placement.html">att.placement</a> ] <table><tr><td class="attDef">type</td><td colspan="2">describes the type of note.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a></code></td></tr><tr><td/><td><span class="label">Values: </span>Values can be taken from any convenient typology of annotation
+suitable to the work in hand;  e.g. annotation, gloss, citation,
+digression, preliminary, temporary</td></tr><tr><td class="attDef">resp</td><td colspan="2">indicates who is responsible for the annotation: author,
+	editor, translator, etc.</td></tr><tr><td/><td><span class="label">Status: </span>Required when applicable</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>a pointer to one of the identifiers declared in the
+      document header, associated with a person asserted as
+      responsible for some aspect of the text's creation,
+      transcription, editing, encoding, or annotation</td></tr><tr><td/><td><p><span id="id2411861"/>For specialized types of editorial annotation (e.g. for
+        marking corrections, normalizations, cruxes, etc.), see
+        chapter <a class="link_ptr" href="TC.html" title="19">16  Critical Apparatus</a>.</p></td></tr><tr><td class="attDef">anchored</td><td colspan="2">indicates whether the copy text shows the exact place of reference
+for the note.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a></code></td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Default</span>: true</td></tr><tr><td><!-- --></td><td valign="top">Legal values are:<table class="valList"><tr><td valign="top"><b>true</b></td><td valign="top">(copy text indicates the place of attachment for the note.
+    ) </td></tr><tr><td valign="top"><b>false</b></td><td valign="top">(copy text indicates no place of attachment for the note.) </td></tr></table></td></tr><tr><td/><td><p><span id="id2411956"/>In modern texts, notes are usually anchored by means of
+explicit footnote or endnote symbols.  An explicit indication of the
+phrase or line annotated may however be used instead (e.g.  ‘page 218,
+lines 3–4’).  The <span class="att">anchored</span> attribute indicates whether any
+explicit location is given, whether by symbol or by prose
+cross-reference.  If the specific symbols used are to be recorded, use
+the <span class="att">n</span> attribute.</p></td></tr><tr><td class="attDef">target</td><td colspan="2">indicates the point (or points) of attachment for a note, or the beginning of
+the span to which the note is attached.</td></tr><tr><td/><td><span class="label">Status: </span>Required when applicable</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span> [n &lt;= unbounded] <code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>reference to the <span class="att">xml:id</span>s of element(s) which begin at
+the location in question (e.g. the <span class="att">xml:id</span> of an <code>&lt;anchor&gt;</code>
+element).</td></tr><tr><td/><td><p><span id="id2412037"/>If <span class="att">target</span> and <span class="att">targetEnd</span> are to be
+used to indicate where notes attach to the text, then elements at the
+appropriate locations (<code>&lt;anchor&gt;</code> elements if necessary) must be
+given <span class="att">xml:id</span> values to be pointed at.</p></td></tr><tr><td class="attDef">targetEnd</td><td colspan="2">points to the end of the span to which the note is attached, if
+the note is not embedded in the text at that point.</td></tr><tr><td/><td><span class="label">Status: </span>Required when applicable</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span> [n &lt;= unbounded] <code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>reference to the <span class="att">xml:id</span>(s) of element(s) which
+<em>end</em> at the location(s)
+in question, or to an empty element at
+the point in question.</td></tr><tr><td/><td><p><span id="id2412112"/></p></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre">And yet it is not only in the great line of Italian 
+renaissance art, but even in the painterly 
+   <span class="element">&lt;note <span class="attribute">resp</span>="#Tr"&gt;</span><br/>  <span class="element">&lt;term <span class="attribute">xml:lang</span>="de"&gt;</span>Malerisch<span class="element">&lt;/term&gt;</span>.<br/>   This word has, in the German, two distinct meanings, one objective, a<br/>   quality residing in the object, the other subjective, a mode of<br/>   apprehension and creation.  To avoid confusion, they have been<br/>   distinguished in English as <span class="element">&lt;mentioned&gt;</span>picturesque<span class="element">&lt;/mentioned&gt;</span> and<br/>   <span class="element">&lt;mentioned&gt;</span>painterly<span class="element">&lt;/mentioned&gt;</span> respectively.  (Tr.)<span class="element">&lt;/note&gt;</span><br/>style of the Dutch genre painters of the seventeenth century that<br/>drapery has this psychological significance.<br/></div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><div class="p"><span id="id2412152"/>The global <span class="att">n</span> attribute may be used to supply the symbol
+or number 
+used to mark the note's point of
+attachment in the source text, as in the following example:
+<div class="pre">Mevorakh b. Saadya's mother, the matriarch of the family
+during the second half of the eleventh century,
+    <span class="element">&lt;note <span class="attribute">n</span>="126" <span class="attribute">anchored</span>="true"&gt;</span>
+        The alleged mention of Judah Nagid's mother in a letter from
+        1071 is, in fact, a reference to Judah's children; cf. above,
+        nn. 111 and 54.
+   <span class="element">&lt;/note&gt;</span><br/>is well known from Geniza documents published by Jacob Mann.</div>
+However, if notes are numbered in sequence and their numbering can be
+reconstructed automatically by processing software, it may well be
+considered unnecessary to record the note numbers.</div></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="CO.html#CONONO" title="Notes and Simple Annotation">4.8.1  Notes and Simple Annotation</a></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="HD.html#HD27" title="The Notes Statement">3.2.6  The Notes Statement</a></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="CO.html#COBICON" title="Notes and Other Additional Information">4.11.2.5  Notes and Other Additional Information</a></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="DI.html#DITPNO" title="Notes within Entries">9.3.5.4  Notes within Entries</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">core</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

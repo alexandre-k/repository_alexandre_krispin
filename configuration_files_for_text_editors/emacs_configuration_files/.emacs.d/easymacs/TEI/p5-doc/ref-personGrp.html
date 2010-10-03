@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;personGrp&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;personGrp&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;personGrp&gt;</h1></div><div><span id="personGrp"/><table border="1" class="wovenodd"><tr><td class="elementSpec">personGrp</td><td colspan="2" class="wovenodd-col2">(personal group) describes a group of individuals treated as a single person for
+  analytic purposes.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.personLike.html">model.personLike</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element personGrp
+{
+   att.global.attributes,
+   attribute role { <a class="link_odd" href="ref-data.code.html">data.code</a> }?,
+   attribute sex { <a class="link_odd" href="ref-data.sex.html">data.sex</a> | "mixed" }?,
+   attribute age { <a class="link_odd" href="ref-data.word.html">data.word</a> }?,
+   attribute size { list { <a class="link_odd" href="ref-data.word.html">data.word</a>+ } }?,
+   ( <a class="link_odd" href="ref-model.pLike.html">model.pLike</a>+ | <a class="link_odd" href="ref-model.personPart.html">model.personPart</a>* )
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>In addition to global attributes<table><tr><td class="attDef">role</td><td colspan="2">specifies the role of this group of participants in the
+        interaction.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.code.html">data.code</a></code></td></tr><tr><td/><td><span class="label">Values: </span>a set of keywords to be defined</td></tr><tr><td class="attDef">sex</td><td colspan="2">specifies the sex of the participant group.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.sex.html">data.sex</a> | "mixed"</code></td></tr><tr><td class="attDef">age</td><td colspan="2">specifies the age group of the participants.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.word.html">data.word</a></code></td></tr><tr><td/><td><span class="label">Values: </span>suggested values are to be supplied</td></tr><tr><td class="attDef">size</td><td colspan="2">specifies the size or approximate size of the group.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span> [n &lt;= unbounded] <code class="eg">
+<a class="link_odd" href="ref-data.word.html">data.word</a></code></td></tr><tr><td/><td><span class="label">Values: </span>may contain a number and an indication of accuracy, e.g. approx 200</td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;personGrp<br/>   <span class="attribute">xml:id</span>="pg1"<br/>   <span class="attribute">role</span>="audience"<br/>   <span class="attribute">sex</span>="mixed"<br/>   <span class="attribute">size</span>="approx 50"/&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p class="dataDesc"><span id="id2540984"/>May contain a prose description organized as paragraphs, or
+any sequence of demographic elements in any combination.</p><p><span id="id2540991"/>The global <span class="att">xml:id</span> attribute should be used to
+identify each speaking participant in a spoken text if the
+<span class="att">who</span> attribute is specified on individual utterances.</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="CC.html#CCAHPA" title="The Participants Description">20.2.2  The Participants Description</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">namesdates</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

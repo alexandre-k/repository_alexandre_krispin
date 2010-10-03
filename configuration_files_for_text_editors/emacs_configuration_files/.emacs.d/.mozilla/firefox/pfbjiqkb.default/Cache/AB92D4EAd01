@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Forum Ubuntu-fr.org / disque dur externe avec partition ufs</title>
+<link rel="stylesheet" type="text/css" href="http://www-static.ubuntu-fr.org/style/Ubuntu.css" />
+<script type="text/javascript" src="http://www-static.ubuntu-fr.org/style/imports/common.js"></script>
+<script type="text/javascript">
+var site_name='ubuntu';
+var menu_hidden=0;
+</script>
+<script type="text/javascript" src="http://www-static.ubuntu-fr.org/style/imports/menu.js"></script> 
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://forum.ubuntu-fr.org/extern.php?action=new&amp;type=rss" />
+
+<script type="text/javascript">
+<!--
+function process_form(the_form)
+{
+	var element_names = new Object()
+	element_names["req_message"] = "Message"
+
+	if (document.all || document.getElementById)
+	{
+		for (i = 0; i < the_form.length; ++i)
+		{
+			var elem = the_form.elements[i]
+			if (elem.name && elem.name.substring(0, 4) == "req_")
+			{
+				if (elem.type && (elem.type=="text" || elem.type=="textarea" || elem.type=="password" || elem.type=="file") && elem.value=='')
+				{
+					alert("\"" + element_names[elem.name] + "\" doit etre rempli")
+					elem.focus()
+					return false
+				}
+			}
+		}
+	}
+
+	return true
+}
+// -->
+</script>
+
+
+
+</head>
+<body>
+<!-- 45625-6 -->
+
+<div id="top">
+   <h1><a href="http://www.ubuntu-fr.org" title="Accueil">ubuntu-fr</a></h1>
+   <p><span>Communauté francophone des utilisateurs d'Ubuntu</span></p>
+   <form action="http://www.ubuntu-fr.org/search/index.php" method="get" id="search_top" onsubmit="var expire = new Date();expire.setTime(expire.getTime()+(5*60*1000));document.cookie ='ubfr_forum_keywords='+document.getElementById('q').value+';expires='+expire.toGMTString();">
+      <fieldset>
+         <input name="q" id="q" value="Recherche rapide..." onfocus="if(this.value == 'Recherche rapide...'){this.value='';}" title="Saisissez les mots-clés à rechercher" type="text" />
+	<script type="text/javascript"><!--
+	function readCookie(name) {
+		var nameEQ = name + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0;i < ca.length;i++) {
+			var c = ca[i];
+			while (c.charAt(0)==' ') c = c.substring(1,c.length);
+			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+		}
+		return null;
+	}
+	var kwds = readCookie('ubfr_forum_keywords');
+	if(kwds)
+		document.getElementById('q').value=kwds;
+	--></script>
+         <select name="in" id="in" title="Dans le..">
+            <option value="wiki">Documentation</option>
+            <option selected="selected" value="oneforum">Ce forum</option>
+            <option value="forum" >Tous les forums</option>
+            <option value="planet">Planet</option>
+         </select>
+         <input type="hidden" value="6" name="forum" />
+         <input value="ok" type="submit" />
+       </fieldset>
+    </form>
+</div>
+<div id="navbar">
+   <ul>
+      <li><a href="http://www.ubuntu-fr.org" id="navbar_www">Accueil</a></li>
+      <li><a href="http://doc.ubuntu-fr.org" id="navbar_doc">Documentation</a></li>
+      <li id="active"><a href="http://forum.ubuntu-fr.org" id="navbar_forum">Forum</a></li>
+      <li><a href="http://planet.ubuntu-fr.org" id="navbar_planet">Planet</a></li>
+   </ul>
+   <p>Vous êtes ici : <a href="http://www.ubuntu-fr.org" title="Retour à l'accueil">Accueil</a> » <a href="http://forum.ubuntu-fr.org" title="Forum ubuntu-fr">Forum</a>&#160;&raquo;&#160;<a href="viewforum.php?id=6">Autres types de...</a>&#160;&raquo;&#160;disque dur exter...</p>
+</div>
+
+<div id="punwrap">
+<div id="punviewtopic" class="pun">
+
+<div id="brdheader" class="block">
+	<div class="box">
+		<div id="brdtitle" class="inbox">
+		</div>
+		<div id="brdmenu" class="inbox">
+			<ul>
+				<li id="navextra1"><h2>Navigation</h2></li>
+				<li id="navindex"><a href="index.php">Liste des forums</a></li>
+				<li id="navuserlist"><a href="userlist.php">Liste des utilisateurs</a></li>
+				<li id="navrules"><a href="misc.php?action=rules">R&egrave;gles</a></li>
+				<li id="navsearch"><a href="search.php">Recherche</a></li>
+				<li id="navprofile"><a href="profile.php?id=83792">Profil</a></li>
+				<li id="navlogout"><a href="login.php?action=out&amp;id=83792&amp;csrf_token=48fd4ac9a012f301b53907df003ad06d03cba5c6">D&eacute;connexion</a></li>
+			</ul>
+		</div>
+		
+			<dl id="searchlinks" style="font-size:1em;" class="conl">
+				<dt><strong>Liens de recherche</strong></dt>
+				<dd><a href="search.php?action=show_24h">Messages r&eacute;cents</a></dd>
+				<dd><a href="search.php?action=show_unanswered">Sujets sans r&eacute;ponse</a></dd>
+				<dd><a href="search.php?action=show_subscriptions">Sujets suivis</a></dd>
+				<dd><a href="search.php?action=show_user&amp;user_id=83792">Mes messages</a></dd>
+			</dl>
+
+		<div id="brdwelcome" class="inbox"><p id="hidemenu"><a href="javascript:switchMenuVisible()" title="Masquer le menu - AccessKey Z" accesskey="z"><span>Masquer le menu</span></a></p>
+			<ul class="conl">
+				<li>Connect&eacute; en tant que <strong>mondai</strong></li>
+				<li>Derni&egrave;re visite: Aujourd'hui à 18:36</li>
+			</ul>
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+
+<div id="announce" class="block">
+	<h2><span>Annonce</span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div><p>
+Les Ubuntu-partys sont l'occasion pour beaucoup d'entre vous d'acquérir les goodies Ubuntu-fr faits par nos petites mains avec amour.<br />
+Pour tous les autres, fini le désespoir de les manquer <img src="img/smilies/wink.png" alt="wink" height="15" width="15" /> Il est désormais possible de vous procurer l'objet de votre choix grâce à la <a href="http://enventelibre.org/">boutique en ligne</a>, commune à <a href="http://www.framasoft.net/">Framasoft</a> et <a href="http://ubuntu-fr.org">Ubuntu-fr</a>. Vous pourrez déjà y trouver mugs, t-shirts et, bien sûr, les Framakey Ubuntu-fr Remix.
+</p></div>
+		</div>
+	</div>
+</div>
+
+<div class="linkst">
+	<div class="inbox">
+		<ul><li><a href="index.php">Liste des forums</a></li><li>&nbsp;&raquo;&nbsp;<a href="viewforum.php?id=6">Autres types de matériel</a></li><li>&nbsp;&raquo;&nbsp;disque dur externe avec partition ufs</li></ul>
+		<p style="margin-top:1em;" class="pagelink conl"><strong>1</strong></p>
+		<p class="postlink conr"><a href="post.php?tid=45625">Poster une r&eacute;ponse</a></p>
+		<div class="clearer"></div>
+	</div>
+</div>
+
+<div id="p346455" class="blockpost rowodd firstpost">
+	<h2><span><span class="conr">#1&nbsp;</span><a href="viewtopic.php?pid=346455#p346455">Le 16/06/2006, à 16:12</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=9574">Defursac</a></strong></dt>
+										<dd class="postavatar"><img src="img/avatars/9574.jpg" width="60" height="60" alt="" /></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3>disque dur externe avec partition ufs</h3>
+				<div class="postmsg">
+					<p>Bonjour à tous ! <br /><br />Voilà, je voudrais accéder aux données de mon colloc' qui se trouvent sur son disque dur externe. Il l'a partitionné sur son Mac PowerBook (je crois que c'est le nom), et sur sa machine à souris mono-boutonnesque on lui indique qu'il a fait une partition <strong>ufs</strong> (je pense que c'est un système de fichiers UNIX, isn't it ?!). Malheur, quand je le branche par usb (j'ai pas de firewire sur mon vaio <img src="img/smilies/sad.png" width="15" height="15" alt="sad" />), il reconnaît que la bête est branchée, il me met un raccourci sur le bureau, et 2 dans les raccourcis de Nautilus (dont celui qui se trouve sur le bureau). Un des raccourcis mène vers un dossier quasi vide, et l'autre me dit qu'il n'arrive pas à monter le disque dur... <br />Quelqu'un pourrait-il m'aider, svp ? Pour info je suis sur Dapper...je sais pas si d'autres infos sont nécessaires, je n'ai pas le disque dur à portée de toute façon.<br /><br />Merci d'avance de vos réponses<br /><br />PS : J'ai essayé un dmesg | tail comme me conseillait le fringuant canard...ça m'a donné des infos que je ne suis pas capable de comprendre...</p>
+				</div>
+				<div class="postsignature"><hr />Si vous ne partez pas en vacances, mettez un déodorant bleu dans la chasse d'eau ; vous aurez l'impression de faire pipi dans le Pacifique.<br />Jean-Louis Fournier</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p>Hors ligne</p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=346455">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=45625&amp;qid=346455">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p346511" class="blockpost roweven">
+	<h2><span><span class="conr">#2&nbsp;</span><a href="viewtopic.php?pid=346511#p346511">Le 16/06/2006, à 16:38</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=3465">Donk</a></strong></dt>
+										<dd class="postavatar"><img src="img/avatars/3465.png" width="36" height="60" alt="" /></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: disque dur externe avec partition ufs</h3>
+				<div class="postmsg">
+					<p>Et on pourrait les avoir ces infos?<br /><br />Voici une partie du man de mount<br /></p><blockquote><div class="incqbox"><h4>man mount a &eacute;crit:</h4><p>Options de montage pour ufs<br />&nbsp; &nbsp; &nbsp; &nbsp;ufstype=value<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; UFS&nbsp; est un système de fichiers largement utilisé sur différents système d’exploitation. Malgré tout il y a<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; des différences suivant les implémentations.&nbsp; Certaines fonctionnalités sont mal&nbsp; documentées,&nbsp; et&nbsp; il&nbsp; est<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; donc&nbsp; difficile&nbsp; de reconnaître automatiquement le type d’ufs.&nbsp; C’est pourquoi l’utilisateur doit spécifier<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; le type d’ufs au montage.&nbsp; Les valeurs possibles sont :<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; old&nbsp; &nbsp; Ancien format d’ufs, par défaut, en lecture seule.&nbsp; (ne pas oublier l’option -r).<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 44bsd&nbsp; Pour les systèmes créés sous un BSD (NetBSD, FreeBSD, OpenBSD).<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sun&nbsp; &nbsp; Pour les systèmes créés par SunOS ou Solaris sur Sparc.<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sunx86 Pour les systèmes créés par Solaris sur x86.<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nextstep<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Pour les systèmes créés par NeXTStep (station NeXT) (lecture seule).<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nextstep-cd<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Pour les CD-Roms NeXTStep (block_size == 2048) (lecture seule).<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; openstep<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Pour les systèmes créés par OpenStep (lecture seule).&nbsp; Même système utilisé par Mac OS X.<br /><br />&nbsp; &nbsp; &nbsp; &nbsp;onerror=value<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Comportement en cas d’erreur :<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; panic&nbsp; déclencher une panique du noyau.<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [lock|umount|repair]<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Ces options ne font rien pour le moment ; seul&nbsp; un&nbsp; message&nbsp; est&nbsp; affiché&nbsp; sur&nbsp; la&nbsp; console&nbsp; en&nbsp; cas<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;d’erreur.</p></div></blockquote>
+					<p class="postedit"><em>Derni&egrave;re modification par Donk (Le 16/06/2006, à 16:41)</em></p>
+				</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p>Hors ligne</p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=346511">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=45625&amp;qid=346511">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p346542" class="blockpost rowodd">
+	<h2><span><span class="conr">#3&nbsp;</span><a href="viewtopic.php?pid=346542#p346542">Le 16/06/2006, à 16:55</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong>cep_</strong></dt>
+										<dd class="postavatar"></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: disque dur externe avec partition ufs</h3>
+				<div class="postmsg">
+					<p>Il devrait y avoir des modules ufs. <br />Regarde dans /lib/modules/......./kernel/fs/</p>
+				</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=346542">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=45625&amp;qid=346542">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p597178" class="blockpost roweven">
+	<h2><span><span class="conr">#4&nbsp;</span><a href="viewtopic.php?pid=597178#p597178">Le 16/11/2006, à 16:50</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=9574">Defursac</a></strong></dt>
+										<dd class="postavatar"><img src="img/avatars/9574.jpg" width="60" height="60" alt="" /></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: disque dur externe avec partition ufs</h3>
+				<div class="postmsg">
+					<p>je ne parviens toujours pas à monter cette fichue partition. j'ai remarqué que quand je branchais le disque dur apparaissait un nouveau répertoire /media/Boot\ OSX. Je tente donc un </p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 4.5em"><pre>sudo mount Boot\ OSX</pre></div></div></div><p>et j'obtiens </p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 6em"><pre>mount: /dev/sda2 est déjà monté ou /media/Boot\ OSX est occupé
+mount: selon mtab /dev/sda2 est déjà monté sur /media/Boot\ OSX</pre></div></div></div><p>Et là c'est très bizarre, parce que j'en déduis qu'il y a 2 &quot;devices&quot; à monter : sda2 qui est monté dans /media/Boot\ OSX et sda3 qui lui n'est pas monté. <br />Voici ce que j'ai tenté, donc, au vu du man mount : </p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 6em"><pre>sudo mkdir disque_dur_externe
+/media$ sudo mount -t ufs -o openstep /dev/sda3 /media/disque_dur_externe/</pre></div></div></div><p>Voici le code d'erreur : <br /></p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 9em"><pre>mount: type erroné de système de fichiers, option erronée, super bloc erroné sur /dev/sda3,
+       codepage manquante ou autre erreur
+       Dans quelques cas certaines informations sont utiles dans syslog - essayez
+       dmesg | tail  ou quelque chose du genre</pre></div></div></div><p>Et voici le dmesg | tail :<br /></p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 19.5em"><pre>a$ dmesg | tail
+[17181729.520000] hfs: unable to find HFS+ superblock
+[17181729.520000] hfs: can't find a HFS filesystem on dev sda3.
+[17181729.524000] hfs: can't find a HFS filesystem on dev sda3.
+[17181729.528000] VFS: Can't find ext3 filesystem on dev sda3.
+[17181729.532000] VFS: Can't find ext3 filesystem on dev sda3.
+[17181729.536000] VFS: Can't find an ext2 filesystem on dev sda3.
+[17181729.540000] VFS: Can't find an ext2 filesystem on dev sda3.
+[17181729.544000] ReiserFS: sda3: warning: sh-2021: reiserfs_fill_super: can not find reiserfs on sda3
+[17181729.548000] ReiserFS: sda3: warning: sh-2021: reiserfs_fill_super: can not find reiserfs on sda3
+[17181878.436000] ufs was compiled with read-only support, can't be mounted as read-write</pre></div></div></div><p>Pour moi écrit en chinois n'aurait pas été pire <img src="img/smilies/sad.png" width="15" height="15" alt="sad" />....<br /><br />@cep_ : Euh oui j'ai un ufs.ko dans :/lib/modules/2.6.17-10-generic/kernel/fs/ufs mais je ne sais pas ce que je dois faire avec <img src="img/smilies/sad.png" width="15" height="15" alt="sad" />.<br /><br />Merci de votre aide, et désolé pour le silence radio indépendant de ma volonté !</p>
+				</div>
+				<div class="postsignature"><hr />Si vous ne partez pas en vacances, mettez un déodorant bleu dans la chasse d'eau ; vous aurez l'impression de faire pipi dans le Pacifique.<br />Jean-Louis Fournier</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p>Hors ligne</p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=597178">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=45625&amp;qid=597178">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div class="postlinksb">
+	<div class="inbox">
+		<p class="postlink conr"><a href="post.php?tid=45625">Poster une r&eacute;ponse</a></p>
+		<p class="pagelink conl" style="margin-bottom:1em;float:none;" ><strong>1</strong></p>
+		<ul><li><a href="index.php">Liste des forums</a></li><li>&nbsp;&raquo;&nbsp;<a href="viewforum.php?id=6">Autres types de matériel</a></li><li>&nbsp;&raquo;&nbsp;disque dur externe avec partition ufs</li></ul>
+		<p class="subscribelink clearb"><a href="misc.php?subscribe=45625">S'abonner &agrave; ce sujet</a></p>
+		<p class="postlink conr" style="margin-top:-20px;"><a href="#" style="">Haut de page&nbsp;↑</a></p>
+	</div>
+</div>
+
+<div class="blockform">
+	<h2><span>Message rapide</span></h2>
+	<div class="box">
+		<form id="post" method="post" action="post.php?tid=45625" onsubmit="this.submit.disabled=true;if(process_form(this)){return true;}else{this.submit.disabled=false;return false;}">
+			<div class="inform">
+				<fieldset>
+					<legend>Veuillez &eacute;crire votre message et l'envoyer</legend>
+					<div class="infldset txtarea">
+						<input type="hidden" name="form_sent" value="1" />
+						<input type="hidden" name="form_user" value="mondai" />
+												<script type="text/javascript">
+						<!--
+							function insert_text(open, close)
+							{
+								msgfield = (document.all) ? document.all.req_message : document.forms['post']['req_message'];
+
+								// IE support
+								if (document.selection && document.selection.createRange)
+								{
+									msgfield.focus();
+									sel = document.selection.createRange();
+									sel.text = open + sel.text + close;
+									msgfield.focus();
+								}
+
+								// Moz support
+								else if (msgfield.selectionStart || msgfield.selectionStart == '0')
+								{
+									var startPos = msgfield.selectionStart;
+									var endPos = msgfield.selectionEnd;
+
+									msgfield.value = msgfield.value.substring(0, startPos) + open + msgfield.value.substring(startPos, endPos) + close + msgfield.value.substring(endPos, msgfield.value.length);
+									msgfield.selectionStart = msgfield.selectionEnd = endPos + open.length + close.length;
+									msgfield.focus();
+								}
+
+								// Fallback support for other browsers
+								else
+								{
+									msgfield.value += open + close;
+									msgfield.focus();
+								}
+
+								return;
+							}
+						-->
+						</script>
+						<div style="padding-top: 4px">
+							<input type="button" value=" B " name="B" onclick="insert_text('[b]','[/b]')" /> 
+							<input type="button" value=" I " name="I" onclick="insert_text('[i]','[/i]')" />
+							<input type="button" value=" U " name="U" onclick="insert_text('[u]','[/u]')" />
+							<input type="button" value="http://" name="Url" onclick="insert_text('[url]','[/url]')" />
+							<input type="button" value="Img" name="Img" onclick="insert_text('[img]','[/img]')" />
+							<input type="button" value="Code" name="Code" onclick="insert_text('[code]','[/code]')" />
+							<input type="button" value="Quote" name="Quote" onclick="insert_text('[quote]','[/quote]')" />
+							<input type="button" value="Youtube" name="Youtube" onclick="insert_text('[youtube]','[/youtube]')" />
+							<input type="button" value="Apt" name="Apt" onclick="insert_text('[apt]','[/apt]')" />
+							<input type="button" value="Doc" name="Doc" onclick="insert_text('[doc]','[/doc]')" />
+						</div>
+						<div style="padding-top: 4px">
+							<a href="javascript:insert_text(':)', '');"><img src="img/smilies/smile.png" width="15" height="15" alt=":)" /></a>
+							<a href="javascript:insert_text(':|', '');"><img src="img/smilies/neutral.png" width="15" height="15" alt=":|" /></a>
+							<a href="javascript:insert_text(':(', '');"><img src="img/smilies/sad.png" width="15" height="15" alt=":(" /></a>
+							<a href="javascript:insert_text(':D', '');"><img src="img/smilies/big_smile.png" width="15" height="15" alt=":D" /></a>
+							<a href="javascript:insert_text(':o', '');"><img src="img/smilies/yikes.png" width="15" height="15" alt=":o" /></a>
+							<a href="javascript:insert_text(';)', '');"><img src="img/smilies/wink.png" width="15" height="15" alt=";)" /></a>
+							<a href="javascript:insert_text(':/', '');"><img src="img/smilies/hmm.png" width="15" height="15" alt=":/" /></a>
+							<a href="javascript:insert_text(':P', '');"><img src="img/smilies/tongue.png" width="15" height="15" alt=":P" /></a>
+							<a href="javascript:insert_text(':lol:', '');"><img src="img/smilies/lol.png" width="15" height="15" alt=":lol:" /></a>
+							<a href="javascript:insert_text(':mad:', '');"><img src="img/smilies/mad.png" width="15" height="15" alt=":mad:" /></a>
+							<a href="javascript:insert_text(':rolleyes:', '');"><img src="img/smilies/roll.png" width="15" height="15" alt=":rolleyes:" /></a>
+							<a href="javascript:insert_text(':cool:', '');"><img src="img/smilies/cool.png" width="15" height="15" alt=":cool:" /></a>
+						</div>
+						<label><textarea name="req_message" rows="7" cols="75" tabindex="1"></textarea></label>
+						<ul class="bblinks">
+							<li><a href="help.php#bbcode" onclick="window.open(this.href); return false;">BBCode</a>: actif</li>
+							<li><a href="help.php#img" onclick="window.open(this.href); return false;">Balise [img]</a>: actif</li>
+							<li><a href="help.php#smilies" onclick="window.open(this.href); return false;">Smileys</a>: actif</li>
+						</ul>
+					</div>
+				</fieldset>
+			</div>
+			<p><input type="submit" name="submit" tabindex="2" value="Poster" accesskey="s" /></p>
+		</form>
+	</div>
+</div>
+
+<div id="brdfooter" class="block">
+	<h2><span>Pied de page du Forum</span></h2>
+	<div class="box">
+		<div class="inbox">
+
+			<div class="conl">
+				<form id="qjump" method="get" action="viewforum.php">
+					<div><label>Aller &agrave;
+					<br /><select name="id" onchange="window.location=('viewforum.php?id='+this.options[this.selectedIndex].value)">
+						<optgroup label="Débuter avec Ubuntu">
+							<option value="9">Questions et informations avant l'installation</option>
+							<option value="10">Installation d'Ubuntu</option>
+							<option value="22">LiveCD/LiveUSB</option>
+							<option value="61">Wubi : installation dans Windows</option>
+						</optgroup>
+						<optgroup label="Configuration matérielle">
+							<option value="27">Affichage et cartes graphiques</option>
+							<option value="16">Accès internet et réseaux</option>
+							<option value="79">Imprimantes et scanners</option>
+							<option value="6" selected="selected">Autres types de matériel</option>
+							<option value="82">WiFi</option>
+						</optgroup>
+						<optgroup label="Utilisation générale">
+							<option value="25">Installation de logiciels et changements de version</option>
+							<option value="13">Bureautique et logiciels pour l'internet et le réseau</option>
+							<option value="17">Lecture et configuration multimédia</option>
+							<option value="81">Création graphique, musicale et vidéo</option>
+							<option value="40">Logiciels éducatifs</option>
+							<option value="15">Jeux</option>
+							<option value="18">Autres logiciels et problèmes généraux</option>
+							<option value="5">Général</option>
+							<option value="24">Sur 64 bits</option>
+							<option value="20">Sur Mac</option>
+						</optgroup>
+						<optgroup label="Environnements et accessibilité">
+							<option value="65">Accessibilité</option>
+							<option value="37">GNOME</option>
+							<option value="66">KDE</option>
+							<option value="38">XFCE</option>
+							<option value="41">Autres environnements et personnalisations</option>
+							<option value="78">Console et terminal</option>
+							<option value="39">KDE3.5</option>
+						</optgroup>
+						<optgroup label="Utilisations avancées">
+							<option value="51">Ubuntu en entreprise</option>
+							<option value="28">Serveurs</option>
+							<option value="63">Virtualisation et émulation</option>
+							<option value="23">Trucs, astuces et scripts utiles</option>
+							<option value="35">Développement et programmation</option>
+							<option value="53">Version instable : Maverick Meerkat 10.10</option>
+							<option value="4">Archive</option>
+						</optgroup>
+						<optgroup label="Activités autour du libre">
+							<option value="29">Événements</option>
+							<option value="69">Vos développements libres</option>
+							<option value="71">Vos sites sur le libre</option>
+							<option value="73">Revendeurs libres</option>
+							<option value="49">Lettre hebdomadaire Ubuntu</option>
+							<option value="50">Tee shirts</option>
+							<option value="52">Archives presse</option>
+						</optgroup>
+						<optgroup label="Divers">
+							<option value="42">Actualités autour du logiciel libre</option>
+							<option value="21">À propos du site - Contribution(s)</option>
+							<option value="7">Café Ubuntu</option>
+							<option value="43">Être ou ne pas être... ?</option>
+							<option value="8">L'éphémère</option>
+					</optgroup>
+					</select>
+					<input type="submit" value=" Aller " accesskey="g" />
+					</label></div>
+				</form>
+			</div>
+			<p class="conr">Propulsé par <a href="http://fluxbb.org/">FluxBB</a><br />
+Style adapté par <a href="http://www.ogcreation.fr">Ogcreation.fr</a>.</p>
+<!-- dongo.ubuntu-eu.org -->
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</body>
+</html>

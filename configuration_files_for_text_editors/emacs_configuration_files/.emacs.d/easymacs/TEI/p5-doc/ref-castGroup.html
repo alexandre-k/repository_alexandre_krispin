@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;castGroup&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;castGroup&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;castGroup&gt;</h1></div><div><span id="castGroup"/><table border="1" class="wovenodd"><tr><td class="elementSpec">castGroup</td><td colspan="2" class="wovenodd-col2">(Cast list grouping) groups one or more individual castItem
+elements within a cast list.</td></tr><tr><td valign="top"><span class="label">Attributes: </span></td><td>Global attributes only</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element castGroup
+{
+   att.global.attributes,
+   (
+      <a class="link_odd" href="ref-model.global.html">model.global</a>*,
+      ( <a class="link_odd" href="ref-head.html">head</a>, <a class="link_odd" href="ref-model.global.html">model.global</a>* )?,
+      ( ( <a class="link_odd" href="ref-castItem.html">castItem</a> | <a class="link_odd" href="ref-castGroup.html">castGroup</a> | <a class="link_odd" href="ref-roleDesc.html">roleDesc</a> ), <a class="link_odd" href="ref-model.global.html">model.global</a>* )+,
+      ( <a class="link_odd" href="ref-trailer.html">trailer</a>, <a class="link_odd" href="ref-model.global.html">model.global</a>* )?
+   )
+}</pre></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;castGroup <span class="attribute">rend</span>="braced"&gt;</span><br/>  <span class="element">&lt;castItem&gt;</span><br/>   <span class="element">&lt;role&gt;</span>Walter<span class="element">&lt;/role&gt;</span><br/>   <span class="element">&lt;actor&gt;</span>Mr Frank Hall<span class="element">&lt;/actor&gt;</span><br/>  <span class="element">&lt;/castItem&gt;</span><br/>  <span class="element">&lt;castItem&gt;</span><br/>   <span class="element">&lt;role&gt;</span>Hans<span class="element">&lt;/role&gt;</span><br/>   <span class="element">&lt;actor&gt;</span>Mr F.W. Irish<span class="element">&lt;/actor&gt;</span><br/>  <span class="element">&lt;/castItem&gt;</span><br/>  <span class="element">&lt;roleDesc&gt;</span>friends of Mathias<span class="element">&lt;/roleDesc&gt;</span><br/> <span class="element">&lt;/castGroup&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p><span id="id2444017"/>The <span class="att">rend</span> attribute may be used, as here, to indicate
+whether the grouping is indicated by a brace, white space, font change,
+etc. </p><p><span id="id2444026"/>Note that in this example the role description ‘friends of
+Mathias’ is understood to apply to both roles equally. </p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="DR.html#DRCAST" title="Cast Lists">7.1.4  Cast Lists</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">drama</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

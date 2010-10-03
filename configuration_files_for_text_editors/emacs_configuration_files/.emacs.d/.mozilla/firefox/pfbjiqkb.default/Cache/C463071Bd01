@@ -1,0 +1,643 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Forum Ubuntu-fr.org / Bureautique et logiciels pour l'internet et le réseau</title>
+<link rel="stylesheet" type="text/css" href="http://www-static.ubuntu-fr.org/style/Ubuntu.css" />
+<script type="text/javascript" src="http://www-static.ubuntu-fr.org/style/imports/common.js"></script>
+<script type="text/javascript">
+var site_name='ubuntu';
+var menu_hidden=0;
+</script>
+<script type="text/javascript" src="http://www-static.ubuntu-fr.org/style/imports/menu.js"></script> 
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://forum.ubuntu-fr.org/extern.php?action=new&amp;type=rss" />
+
+
+
+</head>
+<body>
+<!-- 13-13 -->
+
+<div id="top">
+   <h1><a href="http://www.ubuntu-fr.org" title="Accueil">ubuntu-fr</a></h1>
+   <p><span>Communauté francophone des utilisateurs d'Ubuntu</span></p>
+   <form action="http://www.ubuntu-fr.org/search/index.php" method="get" id="search_top" onsubmit="var expire = new Date();expire.setTime(expire.getTime()+(5*60*1000));document.cookie ='ubfr_forum_keywords='+document.getElementById('q').value+';expires='+expire.toGMTString();">
+      <fieldset>
+         <input name="q" id="q" value="Recherche rapide..." onfocus="if(this.value == 'Recherche rapide...'){this.value='';}" title="Saisissez les mots-clés à rechercher" type="text" />
+	<script type="text/javascript"><!--
+	function readCookie(name) {
+		var nameEQ = name + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0;i < ca.length;i++) {
+			var c = ca[i];
+			while (c.charAt(0)==' ') c = c.substring(1,c.length);
+			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+		}
+		return null;
+	}
+	var kwds = readCookie('ubfr_forum_keywords');
+	if(kwds)
+		document.getElementById('q').value=kwds;
+	--></script>
+         <select name="in" id="in" title="Dans le..">
+            <option value="wiki">Documentation</option>
+            <option selected="selected" value="oneforum">Ce forum</option>
+            <option value="forum" >Tous les forums</option>
+            <option value="planet">Planet</option>
+         </select>
+         <input type="hidden" value="13" name="forum" />
+         <input value="ok" type="submit" />
+       </fieldset>
+    </form>
+</div>
+<div id="navbar">
+   <ul>
+      <li><a href="http://www.ubuntu-fr.org" id="navbar_www">Accueil</a></li>
+      <li><a href="http://doc.ubuntu-fr.org" id="navbar_doc">Documentation</a></li>
+      <li id="active"><a href="http://forum.ubuntu-fr.org" id="navbar_forum">Forum</a></li>
+      <li><a href="http://planet.ubuntu-fr.org" id="navbar_planet">Planet</a></li>
+   </ul>
+   <p>Vous êtes ici : <a href="http://www.ubuntu-fr.org" title="Retour à l'accueil">Accueil</a> » <a href="http://forum.ubuntu-fr.org" title="Forum ubuntu-fr">Forum</a>&#160;&raquo;&#160;Bureautique et logiciels pour l'...</p>
+</div>
+
+<div id="punwrap">
+<div id="punviewforum" class="pun">
+
+<div id="brdheader" class="block">
+	<div class="box">
+		<div id="brdtitle" class="inbox">
+		</div>
+		<div id="brdmenu" class="inbox">
+			<ul>
+				<li id="navextra1"><h2>Navigation</h2></li>
+				<li id="navindex"><a href="index.php">Liste des forums</a></li>
+				<li id="navuserlist"><a href="userlist.php">Liste des utilisateurs</a></li>
+				<li id="navrules"><a href="misc.php?action=rules">R&egrave;gles</a></li>
+				<li id="navsearch"><a href="search.php">Recherche</a></li>
+				<li id="navprofile"><a href="profile.php?id=83792">Profil</a></li>
+				<li id="navlogout"><a href="login.php?action=out&amp;id=83792&amp;csrf_token=48fd4ac9a012f301b53907df003ad06d03cba5c6">D&eacute;connexion</a></li>
+			</ul>
+		</div>
+		
+			<dl id="searchlinks" style="font-size:1em;" class="conl">
+				<dt><strong>Liens de recherche</strong></dt>
+				<dd><a href="search.php?action=show_24h">Messages r&eacute;cents</a></dd>
+				<dd><a href="search.php?action=show_unanswered">Sujets sans r&eacute;ponse</a></dd>
+				<dd><a href="search.php?action=show_subscriptions">Sujets suivis</a></dd>
+				<dd><a href="search.php?action=show_user&amp;user_id=83792">Mes messages</a></dd>
+			</dl>
+
+		<div id="brdwelcome" class="inbox"><p id="hidemenu"><a href="javascript:switchMenuVisible()" title="Masquer le menu - AccessKey Z" accesskey="z"><span>Masquer le menu</span></a></p>
+			<ul class="conl">
+				<li>Connect&eacute; en tant que <strong>mondai</strong></li>
+				<li>Derni&egrave;re visite: Aujourd'hui à 01:50</li>
+			</ul>
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+
+<div id="announce" class="block">
+	<h2><span>Annonce</span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div><p>
+Les Ubuntu-partys sont l'occasion pour beaucoup d'entre vous d'acquérir les goodies Ubuntu-fr faits par nos petites mains avec amour.<br />
+Pour tous les autres, fini le désespoir de les manquer <img src="img/smilies/wink.png" alt="wink" height="15" width="15" /> Il est désormais possible de vous procurer l'objet de votre choix grâce à la <a href="http://enventelibre.org/">boutique en ligne</a>, commune à <a href="http://www.framasoft.net/">Framasoft</a> et <a href="http://ubuntu-fr.org">Ubuntu-fr</a>. Vous pourrez déjà y trouver mugs, t-shirts et, bien sûr, les Framakey Ubuntu-fr Remix.
+</p></div>
+		</div>
+	</div>
+</div>
+
+<div class="linkst">
+	<div class="inbox">
+		<p class="pagelink conl">Pages: <strong>1</strong>&nbsp;<a href="viewforum.php?id=13&amp;p=2">2</a>&nbsp;<a href="viewforum.php?id=13&amp;p=3">3</a>&nbsp;&hellip;&nbsp;<a href="viewforum.php?id=13&amp;p=347">347</a></p>
+		<p class="postlink conr"><a href="post.php?fid=13">Nouvelle discussion</a></p>
+		<ul><li><a href="index.php">Liste des forums</a>&nbsp;</li><li>&raquo;&nbsp;Bureautique et logiciels pour l'internet et le réseau</li></ul>
+		<div class="clearer"></div>
+	</div>
+</div>
+
+
+
+<!-- Begin Forum Annonces -->
+<div id="announce" class="block">
+<h2><span>Rappel</span></h2>
+<div class="box">
+<div class="inbox">
+<P>N'oubliez pas de lire les <A href="http://forum.ubuntu-fr.org/misc.php?action=rules">règles du forum</A>, l'<A href="http://doc.ubuntu-fr.org/tutoriel/howto_forum">aide</A> et d'utiliser la fonction  Recherche avant de poster ! :)</P>
+<p><strong>Pages de documentation liées : <a href="http://doc.ubuntu-fr.org/bureautique">Bureautique</a> - <a href="http://doc.ubuntu-fr.org/internet_et_reseaux">Internet et réseaux</a></strong></p><p></p>
+</div>
+</div>
+</div>
+<!-- End Forum Annonces -->
+
+
+
+
+
+<div id="vf" class="blocktable">
+	<h2><span>Bureautique et logiciels pour l'internet et le réseau</span></h2>
+	<div class="box">
+		<div class="inbox">
+			<table cellspacing="0">
+			<thead>
+				<tr>
+					<th class="tcl" scope="col">Sujet</th>
+					<th class="tc2" scope="col">R&eacute;ponses</th>
+					<th class="tc3" scope="col">Vues</th>
+					<th class="tcr" scope="col">Dernier message</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="iclosed isticky">
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize">Ce sujet est ferm&eacute; Epingl&eacute;</div></div>
+							<div class="tclcon">
+								<span class="stickytext">Epingl&eacute;: </span><a href="viewtopic.php?id=308017">Documentation &quot;Bureautique&quot; (ne pas y poster vos questions svp)</a> <span class="byuser">par&nbsp;YannUbuntu</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">0</td>
+					<td class="tc3">6197</td>
+					<td class="tcr"><a href="viewtopic.php?pid=2555839#p2555839">Le 12/04/2009, à 12:47</a> <span class="byuser">par&nbsp;YannUbuntu</span></td>
+				</tr>
+				<tr class="inew">
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon inew"><div class="nosize"><!-- --> Il y a des nouveaux messages</div></div>
+							<div class="tclcon">
+								<strong><a href="viewtopic.php?id=403464">problème de mail Thunderbird-neuf</a> <span class="byuser">par&nbsp;sylvain_h</span></strong>&nbsp; <span class="newtext">[&nbsp;<a href="viewtopic.php?id=403464&amp;action=new" title="Allez au premier nouveau message de ce sujet.">Nouveaux&nbsp;messages</a>&nbsp;]</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">2</td>
+					<td class="tc3">19</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3551791#p3551791">Aujourd'hui à 11:28</a> <span class="byuser">par&nbsp;sylvain_h</span></td>
+				</tr>
+				<tr class="inew">
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon inew"><div class="nosize"><!-- --> Il y a des nouveaux messages</div></div>
+							<div class="tclcon">
+								<strong><a href="viewtopic.php?id=402016">script correction typographique d'un texte brut</a> <span class="byuser">par&nbsp;ludovic889</span></strong>&nbsp; <span class="newtext">[&nbsp;<a href="viewtopic.php?id=402016&amp;action=new" title="Allez au premier nouveau message de ce sujet.">Nouveaux&nbsp;messages</a>&nbsp;]</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">1</td>
+					<td class="tc3">85</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3551755#p3551755">Aujourd'hui à 11:13</a> <span class="byuser">par&nbsp;ludovic889</span></td>
+				</tr>
+				<tr class="inew">
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon inew"><div class="nosize"><!-- --> Il y a des nouveaux messages</div></div>
+							<div class="tclcon">
+								<strong><a href="viewtopic.php?id=403274">Évolution: messages envoyés non apparents</a> <span class="byuser">par&nbsp;février</span></strong>&nbsp; <span class="newtext">[&nbsp;<a href="viewtopic.php?id=403274&amp;action=new" title="Allez au premier nouveau message de ce sujet.">Nouveaux&nbsp;messages</a>&nbsp;]</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">1</td>
+					<td class="tc3">47</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3551678#p3551678">Aujourd'hui à 10:43</a> <span class="byuser">par&nbsp;Konohamaru</span></td>
+				</tr>
+				<tr class="inew">
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon inew"><div class="nosize"><!-- --> Il y a des nouveaux messages</div></div>
+							<div class="tclcon">
+								<strong><a href="viewtopic.php?id=401946">[Resolu] Ktikz sur Lucid Lynx</a> <span class="byuser">par&nbsp;foblire</span></strong>&nbsp; <span class="newtext">[&nbsp;<a href="viewtopic.php?id=401946&amp;action=new" title="Allez au premier nouveau message de ce sujet.">Nouveaux&nbsp;messages</a>&nbsp;]</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">1</td>
+					<td class="tc3">80</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3551658#p3551658">Aujourd'hui à 10:30</a> <span class="byuser">par&nbsp;foblire</span></td>
+				</tr>
+				<tr class="inew">
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon inew"><div class="nosize"><!-- --> Il y a des nouveaux messages</div></div>
+							<div class="tclcon">
+								<strong><a href="viewtopic.php?id=403475">Pidgin &quot;Message pour la demande d'autorisation : msn&quot; intempestif</a> <span class="byuser">par&nbsp;PPmayo</span></strong>&nbsp; <span class="newtext">[&nbsp;<a href="viewtopic.php?id=403475&amp;action=new" title="Allez au premier nouveau message de ce sujet.">Nouveaux&nbsp;messages</a>&nbsp;]</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">0</td>
+					<td class="tc3">9</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3551657#p3551657">Aujourd'hui à 10:30</a> <span class="byuser">par&nbsp;PPmayo</span></td>
+				</tr>
+				<tr class="inew">
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon inew"><div class="nosize"><!-- --> Il y a des nouveaux messages</div></div>
+							<div class="tclcon">
+								<strong><a href="viewtopic.php?id=403469">Postfix [Envoi E-mail vers l'extérieur] [Résolu]</a> <span class="byuser">par&nbsp;Samuelk</span></strong>&nbsp; <span class="newtext">[&nbsp;<a href="viewtopic.php?id=403469&amp;action=new" title="Allez au premier nouveau message de ce sujet.">Nouveaux&nbsp;messages</a>&nbsp;]</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">0</td>
+					<td class="tc3">11</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3551588#p3551588">Aujourd'hui à 09:47</a> <span class="byuser">par&nbsp;Samuelk</span></td>
+				</tr>
+				<tr class="inew">
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon inew"><div class="nosize"><!-- --> Il y a des nouveaux messages</div></div>
+							<div class="tclcon">
+								<strong><a href="viewtopic.php?id=403460">Palm Pre et la synchronisation PC (également posté dans Café)</a> <span class="byuser">par&nbsp;markenaix</span></strong>&nbsp; <span class="newtext">[&nbsp;<a href="viewtopic.php?id=403460&amp;action=new" title="Allez au premier nouveau message de ce sujet.">Nouveaux&nbsp;messages</a>&nbsp;]</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">0</td>
+					<td class="tc3">13</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3551523#p3551523">Aujourd'hui à 08:33</a> <span class="byuser">par&nbsp;markenaix</span></td>
+				</tr>
+				<tr class="inew">
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon inew"><div class="nosize"><!-- --> Il y a des nouveaux messages</div></div>
+							<div class="tclcon">
+								<strong><a href="viewtopic.php?id=399994">Quanta plus pas en français ...</a> <span class="byuser">par&nbsp;yvmars</span></strong>&nbsp; <span class="newtext">[&nbsp;<a href="viewtopic.php?id=399994&amp;action=new" title="Allez au premier nouveau message de ce sujet.">Nouveaux&nbsp;messages</a>&nbsp;]</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">1</td>
+					<td class="tc3">81</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3551400#p3551400">Aujourd'hui à 02:35</a> <span class="byuser">par&nbsp;xabilon</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=403446">Installation logiciel, empathy et gwibber</a> <span class="byuser">par&nbsp;Papcha</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">1</td>
+					<td class="tc3">26</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3551209#p3551209">Aujourd'hui à 00:09</a> <span class="byuser">par&nbsp;Papcha</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=403306">[Résolu] Largeur de colonne par défaut dans OpenOffice Calc</a> <span class="byuser">par&nbsp;Georges VINCENTS</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">3</td>
+					<td class="tc3">108</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3551204#p3551204">Aujourd'hui à 00:07</a> <span class="byuser">par&nbsp;JBF</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=403447">évolution se fige</a> <span class="byuser">par&nbsp;brice83</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">0</td>
+					<td class="tc3">15</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3551197#p3551197">Aujourd'hui à 00:05</a> <span class="byuser">par&nbsp;brice83</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=403442">Evolution a perdu mes comptes après un plantage système</a> <span class="byuser">par&nbsp;nicokess</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">0</td>
+					<td class="tc3">19</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3551156#p3551156">Hier à 23:49</a> <span class="byuser">par&nbsp;nicokess</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=402174">[RESOLU] firefox : dossier inconnu dans les favoris</a> <span class="byuser">par&nbsp;willcoyote</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">3</td>
+					<td class="tc3">148</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3551066#p3551066">Hier à 23:01</a> <span class="byuser">par&nbsp;willcoyote</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=403402">Editeur de texte avancé en ligne</a> <span class="byuser">par&nbsp;richardsantoro</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">1</td>
+					<td class="tc3">42</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3551049#p3551049">Hier à 22:55</a> <span class="byuser">par&nbsp;mimoun</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=402017">proxy dansguardian</a> <span class="byuser">par&nbsp;illusion69</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">3</td>
+					<td class="tc3">151</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3550985#p3550985">Hier à 22:34</a> <span class="byuser">par&nbsp;pouchat</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=392520">[Résolu] LL 10.04 et Thunderbird 3</a> <span class="byuser">par&nbsp;mao-40</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">4</td>
+					<td class="tc3">349</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3550972#p3550972">Hier à 22:29</a> <span class="byuser">par&nbsp;70156</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=403231">Firefox 3.6 probleme</a> <span class="byuser">par&nbsp;mk_kev</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">4</td>
+					<td class="tc3">75</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3550587#p3550587">Hier à 19:17</a> <span class="byuser">par&nbsp;mk_kev</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=403388">Google Chrome + animation Flashplayer avec liens sur docs PDF</a> <span class="byuser">par&nbsp;castelnau</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">0</td>
+					<td class="tc3">29</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3550541#p3550541">Hier à 18:56</a> <span class="byuser">par&nbsp;castelnau</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=403245">Problème de démarrage des torrents avec Transmission</a> <span class="byuser">par&nbsp;drunkskater</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">2</td>
+					<td class="tc3">72</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3550518#p3550518">Hier à 18:44</a> <span class="byuser">par&nbsp;drunkskater</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=403126">Comment exporter ses e-mail pour les sauvegarder</a> <span class="byuser">par&nbsp;fr-loic</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">9</td>
+					<td class="tc3">140</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3550505#p3550505">Hier à 18:38</a> <span class="byuser">par&nbsp;neige de novembre</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=403088">Problème pour installer SKDownloader</a> <span class="byuser">par&nbsp;frenchieisverige</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">2</td>
+					<td class="tc3">81</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3550474#p3550474">Hier à 18:25</a> <span class="byuser">par&nbsp;frenchieisverige</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=402937">Geany permission non accordée [résolu]</a> <span class="byuser">par&nbsp;mico</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">3</td>
+					<td class="tc3">77</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3550308#p3550308">Hier à 17:01</a> <span class="byuser">par&nbsp;mico</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=403206">google chrome extensions</a> <span class="byuser">par&nbsp;LiKaOn</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">3</td>
+					<td class="tc3">74</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3550200#p3550200">Hier à 16:08</a> <span class="byuser">par&nbsp;Qid</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=392550">[Résolu]Firefox &amp; Lucid Lynx =&gt; Pas de Flash</a> <span class="byuser">par&nbsp;Mooneer</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">14</td>
+					<td class="tc3">1601</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3550107#p3550107">Hier à 15:24</a> <span class="byuser">par&nbsp;leslulu</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=400094">UbuntuOne c'est de la ..... !</a> <span class="byuser">par&nbsp;Plonk</span>&nbsp;  [ <a href="viewtopic.php?id=400094&amp;p=1">1</a>&nbsp;<a href="viewtopic.php?id=400094&amp;p=2">2</a>&nbsp;<a href="viewtopic.php?id=400094&amp;p=3">3</a> ]
+							</div>
+						</div>
+					</td>
+					<td class="tc2">61</td>
+					<td class="tc3">2091</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3549755#p3549755">Hier à 12:33</a> <span class="byuser">par&nbsp;Pacifick_FR42</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=403204">Saisie de caractères Unicode : Touche rapide ?</a> <span class="byuser">par&nbsp;georgesgiralt</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">3</td>
+					<td class="tc3">86</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3549582#p3549582">Hier à 10:57</a> <span class="byuser">par&nbsp;ludovic889</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=397055">Crash et bug Evolution Lucid 64bits</a> <span class="byuser">par&nbsp;zeronoize</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">8</td>
+					<td class="tc3">453</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3549558#p3549558">Hier à 10:39</a> <span class="byuser">par&nbsp;El_Juan</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=402940">Probleme avec cloud servce notification</a> <span class="byuser">par&nbsp;juanito83</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">3</td>
+					<td class="tc3">87</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3549538#p3549538">Hier à 10:20</a> <span class="byuser">par&nbsp;Merle</span></td>
+				</tr>
+				<tr>
+					<td class="tcl">
+						<div class="intd">
+							<div class="icon"><div class="nosize"><!-- --></div></div>
+							<div class="tclcon">
+								<a href="viewtopic.php?id=378661">[résolu]gedit rechercher remplacer.</a> <span class="byuser">par&nbsp;sergeG75018</span>
+							</div>
+						</div>
+					</td>
+					<td class="tc2">13</td>
+					<td class="tc3">468</td>
+					<td class="tcr"><a href="viewtopic.php?pid=3549516#p3549516">Hier à 10:06</a> <span class="byuser">par&nbsp;Ras'</span></td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div class="linksb">
+	<div class="inbox">
+		<p class="pagelink conl">Pages: <strong>1</strong>&nbsp;<a href="viewforum.php?id=13&amp;p=2">2</a>&nbsp;<a href="viewforum.php?id=13&amp;p=3">3</a>&nbsp;&hellip;&nbsp;<a href="viewforum.php?id=13&amp;p=347">347</a></p>
+		<p class="postlink conr"><a href="post.php?fid=13">Nouvelle discussion</a></p>
+		<ul><li><a href="index.php">Liste des forums</a>&nbsp;</li><li>&raquo;&nbsp;Bureautique et logiciels pour l'internet et le réseau</li></ul>
+		<div class="clearer"></div>
+	</div>
+</div>
+
+<div id="brdfooter" class="block">
+	<h2><span>Pied de page du Forum</span></h2>
+	<div class="box">
+		<div class="inbox">
+
+			<div class="conl">
+				<form id="qjump" method="get" action="viewforum.php">
+					<div><label>Aller &agrave;
+					<br /><select name="id" onchange="window.location=('viewforum.php?id='+this.options[this.selectedIndex].value)">
+						<optgroup label="Débuter avec Ubuntu">
+							<option value="9">Questions et informations avant l'installation</option>
+							<option value="10">Installation d'Ubuntu</option>
+							<option value="22">LiveCD/LiveUSB</option>
+							<option value="61">Wubi : installation dans Windows</option>
+						</optgroup>
+						<optgroup label="Configuration matérielle">
+							<option value="27">Affichage et cartes graphiques</option>
+							<option value="16">Accès internet et réseaux</option>
+							<option value="79">Imprimantes et scanners</option>
+							<option value="6">Autres types de matériel</option>
+							<option value="82">WiFi</option>
+						</optgroup>
+						<optgroup label="Utilisation générale">
+							<option value="25">Installation de logiciels et changements de version</option>
+							<option value="13" selected="selected">Bureautique et logiciels pour l'internet et le réseau</option>
+							<option value="17">Lecture et configuration multimédia</option>
+							<option value="81">Création graphique, musicale et vidéo</option>
+							<option value="40">Logiciels éducatifs</option>
+							<option value="15">Jeux</option>
+							<option value="18">Autres logiciels et problèmes généraux</option>
+							<option value="5">Général</option>
+							<option value="24">Sur 64 bits</option>
+							<option value="20">Sur Mac</option>
+						</optgroup>
+						<optgroup label="Environnements et accessibilité">
+							<option value="65">Accessibilité</option>
+							<option value="37">GNOME</option>
+							<option value="66">KDE</option>
+							<option value="38">XFCE</option>
+							<option value="41">Autres environnements et personnalisations</option>
+							<option value="78">Console et terminal</option>
+							<option value="39">KDE3.5</option>
+						</optgroup>
+						<optgroup label="Utilisations avancées">
+							<option value="51">Ubuntu en entreprise</option>
+							<option value="28">Serveurs</option>
+							<option value="63">Virtualisation et émulation</option>
+							<option value="23">Trucs, astuces et scripts utiles</option>
+							<option value="35">Développement et programmation</option>
+							<option value="53">Version instable : Maverick Meerkat 10.10</option>
+							<option value="4">Archive</option>
+						</optgroup>
+						<optgroup label="Activités autour du libre">
+							<option value="29">Événements</option>
+							<option value="69">Vos développements libres</option>
+							<option value="71">Vos sites sur le libre</option>
+							<option value="73">Revendeurs libres</option>
+							<option value="49">Lettre hebdomadaire Ubuntu</option>
+							<option value="50">Tee shirts</option>
+							<option value="52">Archives presse</option>
+						</optgroup>
+						<optgroup label="Divers">
+							<option value="42">Actualités autour du logiciel libre</option>
+							<option value="21">À propos du site - Contribution(s)</option>
+							<option value="7">Café Ubuntu</option>
+							<option value="43">Être ou ne pas être... ?</option>
+							<option value="8">L'éphémère</option>
+					</optgroup>
+					</select>
+					<input type="submit" value=" Aller " accesskey="g" />
+					</label></div>
+				</form>
+			</div>
+			<p class="conr">Propulsé par <a href="http://fluxbb.org/">FluxBB</a><br />
+Style adapté par <a href="http://www.ogcreation.fr">Ogcreation.fr</a>.</p>
+<!-- dongo.ubuntu-eu.org -->
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</body>
+</html>

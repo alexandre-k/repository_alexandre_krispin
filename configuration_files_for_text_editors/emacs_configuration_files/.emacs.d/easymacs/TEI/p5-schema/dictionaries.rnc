@@ -1,0 +1,709 @@
+namespace a1 = "http://relaxng.org/ns/compatibility/annotations/1.0"
+namespace rng = "http://relaxng.org/ns/structure/1.0"
+
+# Schema generated 2007-03-13T16:02:29Z..
+# Copyright 2005 TEI Consortium.
+# This is free software; you can redistribute it and/or
+#	    modify it under the terms of the GNU General Public
+#	    License as published by the Free Software Foundation;
+#	    either version 2 of the License, or (at your option) any
+#	    later version.
+# This material is distributed in the hope that it will be
+#	    useful, but WITHOUT ANY WARRANTY; without even the implied
+#	    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+#	    PURPOSE. See the GNU General Public License for more
+#	    details.
+# You should have received a copy of the GNU General Public
+#	    License along with this file; if not, write to the Free
+#	    Software Foundation, Inc., 59 Temple Place, Suite 330,
+#	    Boston, MA 02111-1307, USA.
+# To contact the TEI Consortium use the following addresses.
+#	    For general (non-technical) enquiries: 
+#		  target="mailto:info@tei-c.org"/>info@tei-c.orgFor membership enquiries: membership@tei-c.orgFor technical enquiries, particularly about the
+#		Guidelines, DTDs, schemas, or software available from
+#		the TEI-C: editors@tei-c.orgFor up to date information, consult the TEI web site at http://www.tei-c.org/P5Printed dictionaries
+
+# Definitions from module dictionaries
+
+# Set global predeclared macros
+
+# Set predeclared macros
+mix.dictionaries |= model.entryLike
+# 0. predeclared macros
+mix.dictionaries |= model.entryLike
+# 1. classes
+model.entryLike = superEntry | entry | entryFree
+model.entryLike_sequence = superEntry, entry, entryFree
+model.entryLike_sequenceOptional = superEntry?, entry?, entryFree?
+model.entryLike_sequenceOptionalRepeatable =
+  superEntry*, entry*, entryFree*
+model.entryLike_sequenceRepeatable = superEntry+, entry+, entryFree+
+att.entryLike.attributes =
+  att.entryLike.attribute.type, att.entryLike.attribute.sortKey, empty
+att.entryLike.attribute.type =
+  ## indicates type of entry, in dictionaries with multiple types.
+  ## Suggested values include: 1] main (a main entry (default).); 2] hom (a homograph with a separate entry.); 3] xref (a reduced entry whose only function is to point to another main entry
+  ##                         (e.g. for forms of an irregular verb or for variant spellings:
+  ##                         was pointing to be, or
+  ##                         esthete to aesthete).); 4] affix (an entry for a prefix, infix, or suffix.); 5] abbr (an entry for an abbreviation.); 6] supplemental (a supplemental entry (for use in dictionaries which issue supplements to
+  ##                         their main work in which they include updated information about entries).); 7] foreign (an entry for a foreign word in a monolingual dictionary.)
+  [ a1:defaultValue = "main" ] attribute type { data.enumerated }?
+att.entryLike.attribute.sortKey =
+  ## contains a (sortable) character sequence reflecting the entry's alphabetical
+  ##                 position in the printed dictionary.
+  attribute sortKey { data.word }?
+model.morphLike = gram | gen | number | case | per | tns | mood | iType
+model.morphLike_sequence =
+  gram, gen, number, case, per, tns, mood, iType
+model.morphLike_sequenceOptional =
+  gram?, gen?, number?, case?, per?, tns?, mood?, iType?
+model.morphLike_sequenceOptionalRepeatable =
+  gram*, gen*, number*, case*, per*, tns*, mood*, iType*
+model.morphLike_sequenceRepeatable =
+  gram+, gen+, number+, case+, per+, tns+, mood+, iType+
+model.formPart =
+  form | orth | pron | hyph | syll | model.morphLike | usg | lbl
+model.formPart_sequence =
+  form, orth, pron, hyph, syll, model.morphLike, usg, lbl
+model.formPart_sequenceOptional =
+  form?, orth?, pron?, hyph?, syll?, model.morphLike?, usg?, lbl?
+model.formPart_sequenceOptionalRepeatable =
+  form*, orth*, pron*, hyph*, syll*, model.morphLike*, usg*, lbl*
+model.formPart_sequenceRepeatable =
+  form+, orth+, pron+, hyph+, syll+, model.morphLike+, usg+, lbl+
+model.gramPart =
+  model.morphLike | gramGrp | pos | subc | colloc | usg | lbl
+model.gramPart_sequence =
+  model.morphLike, gramGrp, pos, subc, colloc, usg, lbl
+model.gramPart_sequenceOptional =
+  model.morphLike?, gramGrp?, pos?, subc?, colloc?, usg?, lbl?
+model.gramPart_sequenceOptionalRepeatable =
+  model.morphLike*, gramGrp*, pos*, subc*, colloc*, usg*, lbl*
+model.gramPart_sequenceRepeatable =
+  model.morphLike+, gramGrp+, pos+, subc+, colloc+, usg+, lbl+
+model.ptrLike.form = oRef | oVar | pRef | pVar
+model.ptrLike.form_sequence = oRef, oVar, pRef, pVar
+model.ptrLike.form_sequenceOptional = oRef?, oVar?, pRef?, pVar?
+model.ptrLike.form_sequenceOptionalRepeatable =
+  oRef*, oVar*, pRef*, pVar*
+model.ptrLike.form_sequenceRepeatable = oRef+, oVar+, pRef+, pVar+
+att.ptrLike.form.attributes = att.ptrLike.form.attribute.target, empty
+att.ptrLike.form.attribute.target =
+  ## identifies the orthographic form or pronunciation referred to.
+  attribute target { data.pointer }?
+att.lexicographic.attributes =
+  att.lexicographic.attribute.expand,
+  att.lexicographic.attribute.norm,
+  att.lexicographic.attribute.split,
+  att.lexicographic.attribute.value,
+  att.lexicographic.attribute.orig,
+  att.lexicographic.attribute.location,
+  att.lexicographic.attribute.mergedin,
+  att.lexicographic.attribute.opt,
+  empty
+att.lexicographic.attribute.expand =
+  ## gives an expanded form of information presented more concisely in the dictionary
+  attribute expand { text }?
+att.lexicographic.attribute.norm =
+  ## gives a normalized form of information given by the source text in a
+  ##                 non-normalized form
+  attribute norm { text }?
+att.lexicographic.attribute.split =
+  ## gives the list of split values for a merged form
+  attribute split { text }?
+att.lexicographic.attribute.value =
+  ## gives a value which lacks any realization in the printed source text.
+  attribute value { text }?
+att.lexicographic.attribute.orig =
+  ## gives the original string or is the empty string when the element does not appear
+  ##                 in the source text.
+  attribute orig { text }?
+att.lexicographic.attribute.location =
+  ## provides a reference to an anchor element elsewhere in the document
+  ##                 indicating the original location of this component.
+  attribute location { data.pointer }?
+att.lexicographic.attribute.mergedin =
+  ## gives a reference to another element, where the original appears as a merged form.
+  attribute mergedin { data.pointer }?
+att.lexicographic.attribute.opt =
+  ## indicates whether the element is optional or not
+  [ a1:defaultValue = "false" ] attribute opt { xsd:boolean }?
+model.entryParts =
+  superEntry
+  | hom
+  | sense
+  | form
+  | orth
+  | pron
+  | hyph
+  | syll
+  | stress
+  | gen
+  | number
+  | case
+  | per
+  | tns
+  | mood
+  | iType
+  | gramGrp
+  | pos
+  | subc
+  | colloc
+  | def
+  | tr
+  | trans
+  | etym
+  | dicteg
+  | usg
+  | lbl
+  | xr
+  | re
+model.entryParts_sequence =
+  superEntry,
+  hom,
+  sense,
+  form,
+  orth,
+  pron,
+  hyph,
+  syll,
+  stress,
+  gen,
+  number,
+  case,
+  per,
+  tns,
+  mood,
+  iType,
+  gramGrp,
+  pos,
+  subc,
+  colloc,
+  def,
+  tr,
+  trans,
+  etym,
+  dicteg,
+  usg,
+  lbl,
+  xr,
+  re
+model.entryParts_sequenceOptional =
+  superEntry?,
+  hom?,
+  sense?,
+  form?,
+  orth?,
+  pron?,
+  hyph?,
+  syll?,
+  stress?,
+  gen?,
+  number?,
+  case?,
+  per?,
+  tns?,
+  mood?,
+  iType?,
+  gramGrp?,
+  pos?,
+  subc?,
+  colloc?,
+  def?,
+  tr?,
+  trans?,
+  etym?,
+  dicteg?,
+  usg?,
+  lbl?,
+  xr?,
+  re?
+model.entryParts_sequenceOptionalRepeatable =
+  superEntry*,
+  hom*,
+  sense*,
+  form*,
+  orth*,
+  pron*,
+  hyph*,
+  syll*,
+  stress*,
+  gen*,
+  number*,
+  case*,
+  per*,
+  tns*,
+  mood*,
+  iType*,
+  gramGrp*,
+  pos*,
+  subc*,
+  colloc*,
+  def*,
+  tr*,
+  trans*,
+  etym*,
+  dicteg*,
+  usg*,
+  lbl*,
+  xr*,
+  re*
+model.entryParts_sequenceRepeatable =
+  superEntry+,
+  hom+,
+  sense+,
+  form+,
+  orth+,
+  pron+,
+  hyph+,
+  syll+,
+  stress+,
+  gen+,
+  number+,
+  case+,
+  per+,
+  tns+,
+  mood+,
+  iType+,
+  gramGrp+,
+  pos+,
+  subc+,
+  colloc+,
+  def+,
+  tr+,
+  trans+,
+  etym+,
+  dicteg+,
+  usg+,
+  lbl+,
+  xr+,
+  re+
+# 2. elements
+
+case =
+  ## contains grammatical case information given by a dictionary for a given form.
+  element case { case.content, case.attributes }
+case.content = macro.paraContent
+case.attributes =
+  att.global.attributes, att.lexicographic.attributes, empty
+
+colloc =
+  ## (collocate) contains a collocate of the headword.
+  element colloc { colloc.content, colloc.attributes }
+colloc.content = macro.paraContent
+colloc.attributes =
+  att.global.attributes,
+  att.lexicographic.attributes,
+  ## classifies the collocation, using any convenient typology.
+  attribute type { data.word }?,
+  empty
+
+def =
+  ## (definition) contains definition text in a dictionary entry.
+  element def { def.content, def.attributes }
+def.content = macro.paraContent
+def.attributes =
+  att.global.attributes, att.lexicographic.attributes, empty
+
+dictScrap =
+  ## encloses a part of a dictionary entry in which other phrase-level dictionary elements are
+  ##         freely combined.
+  element dictScrap { dictScrap.content, dictScrap.attributes }
+dictScrap.content =
+  (text
+   | model.gLike
+   | model.entryParts
+   | model.phrase
+   | model.inter
+   | model.global)*
+dictScrap.attributes = att.global.attributes, empty
+
+dicteg =
+  ## (example (exempli gratia)) (in a dictionary) contains an example text containing at least one occurrence of the word
+  ##         form, used in the sense being described; examples may be quoted from (named) authors or contrived.
+  element dicteg { dicteg.content, dicteg.attributes }
+dicteg.content = (q | quote | cit | model.entryParts)+
+dicteg.attributes =
+  att.global.attributes,
+  att.typed.attributes,
+  att.lexicographic.attributes,
+  empty
+
+entry =
+  ## contains a reasonably well-structured dictionary entry.
+  element entry { entry.content, entry.attributes }
+entry.content = (hom | sense | model.entryParts.top | model.global)+
+entry.attributes =
+  att.global.attributes, att.entryLike.attributes, empty
+
+entryFree =
+  ## contains a dictionary entry which does not necessarily conform to the constraints imposed
+  ##         by the entry element.
+  element entryFree { entryFree.content, entryFree.attributes }
+entryFree.content =
+  (text
+   | model.gLike
+   | model.entryParts
+   | model.phrase
+   | model.inter
+   | model.global)*
+entryFree.attributes =
+  att.global.attributes,
+  att.entryLike.attributes,
+  att.lexicographic.attributes,
+  empty
+
+etym =
+  ## (etymology) encloses the etymological information in a dictionary entry.
+  element etym { etym.content, etym.attributes }
+etym.content =
+  (text
+   | model.gLike
+   | model.phrase
+   | model.inter
+   | usg
+   | lbl
+   | def
+   | trans
+   | tr
+   | model.morphLike
+   | dicteg
+   | xr
+   | model.global)*
+etym.attributes =
+  att.global.attributes, att.lexicographic.attributes, empty
+
+form =
+  ## (form information group) groups all the information on the written and spoken forms of one headword.
+  element form { form.content, form.attributes }
+form.content =
+  (text
+   | model.gLike
+   | model.phrase
+   | model.inter
+   | model.formPart
+   | model.global)*
+form.attributes =
+  att.global.attributes,
+  att.lexicographic.attributes,
+  ## classifies form as simple, compound, etc.
+  ## Suggested values include: 1] simple (single free lexical item); 2] lemma (the headword itself); 3] variant (a variant form); 4] compound (word formed from simple lexical items); 5] derivative (word derived from headword); 6] inflected (word in other than usual dictionary form); 7] phrase (multiple-word lexical item)
+  attribute type { data.enumerated }?,
+  empty
+
+gen =
+  ## (gender) identifies the morphological gender of a lexical item, as given in the dictionary.
+  element gen { gen.content, gen.attributes }
+gen.content = macro.paraContent
+gen.attributes =
+  att.global.attributes, att.lexicographic.attributes, empty
+
+gram =
+  ## (grammatical information) within an entry in a dictionary or a terminological data file, contains grammatical
+  ##         information relating to a term, word, or form.
+  element gram { gram.content, gram.attributes }
+gram.content = macro.paraContent
+gram.attributes =
+  att.global.attributes,
+  att.lexicographic.attributes,
+  ## classifies the grammatical information given according to some convenient typology
+  ##                 — in the case of terminological information, preferably the dictionary of
+  ##                 data element types specified in ISO WD 12 620.
+  ## Sample values include: 1] pos (part of speech (any of the word classes to which a word may be assigned
+  ##                         in a given language, based on form, meaning, or a combination of features,
+  ##                         e.g. noun, verb, adjective, etc.)); 2] gen (gender (formal classification by which nouns and pronouns, and often
+  ##                         accompanying modifiers, are grouped and inflected, or changed in form, so as
+  ##                         to control certain syntactic relationships)); 3] num (number (e.g. singular, plural, dual, ...)); 4] animate (animate or inanimate); 5] proper (proper noun or common noun)
+  attribute type { data.enumerated }?,
+  empty
+
+gramGrp =
+  ## (grammatical information group) groups morpho-syntactic information about a lexical item, e.g. pos, gen, number, case, or
+  ##         iType (inflectional class).
+  element gramGrp { gramGrp.content, gramGrp.attributes }
+gramGrp.content =
+  (text
+   | model.gLike
+   | model.phrase
+   | model.inter
+   | model.gramPart
+   | model.global)*
+gramGrp.attributes =
+  att.global.attributes, att.lexicographic.attributes, empty
+
+hom =
+  ## (homograph) groups information relating to one homograph within an entry.
+  element hom { hom.content, hom.attributes }
+hom.content = (sense | model.entryParts.top | model.global)*
+hom.attributes =
+  att.global.attributes, att.lexicographic.attributes, empty
+
+hyph =
+  ## (hyphenation) contains a hyphenated form of a dictionary headword, or hyphenation information in some
+  ##         other form.
+  element hyph { hyph.content, hyph.attributes }
+hyph.content = macro.paraContent
+hyph.attributes =
+  att.global.attributes, att.lexicographic.attributes, empty
+
+iType =
+  ## (inflectional class) indicates the inflectional class associated with a lexical item.
+  element iType { iType.content, iType.attributes }
+iType.content = macro.paraContent
+iType.attributes =
+  att.global.attributes,
+  att.lexicographic.attributes,
+  ## indicates the type of indicator used to specify the inflection class, when it is
+  ##                 necessary to distinguish between the usual abbreviated indications (e.g.
+  ##                 inv) and other kinds of indicators, such as special codes
+  ##                 referring to conjugation patterns, etc.
+  ## Sample values include: 1] abbrev (abbreviated indicator); 2] verbTable (coded reference to a table of verbs)
+  attribute type { data.enumerated }?,
+  empty
+
+lang =
+  ## (language name) name of a language mentioned in etymological or other linguistic discussion.
+  element lang { lang.content, lang.attributes }
+lang.content = macro.paraContent
+lang.attributes =
+  att.global.attributes, att.lexicographic.attributes, empty
+
+lbl =
+  ## (label) in dictionaries, contains a label for a form, example, translation, or other piece of
+  ##         information, e.g. abbreviation for, contraction of, literally, approximately, synonyms:, etc.
+  element lbl { lbl.content, lbl.attributes }
+lbl.content = macro.paraContent
+lbl.attributes =
+  att.global.attributes,
+  att.lexicographic.attributes,
+  ## classifies the label using any convenient typology.
+  attribute type { data.word }?,
+  empty
+
+mood =
+  ## contains information about the grammatical mood of verbs (e.g. indicative, subjunctive, imperative)
+  element mood { mood.content, mood.attributes }
+mood.content = macro.paraContent
+mood.attributes =
+  att.global.attributes, att.lexicographic.attributes, empty
+
+number =
+  ## indicates grammatical number associated with a form, as given in a dictionary.
+  element number { number.content, number.attributes }
+number.content = macro.paraContent
+number.attributes =
+  att.global.attributes, att.lexicographic.attributes, empty
+
+oRef =
+  ## (orthographic-form reference) in a dictionary example, indicates a reference to the orthographic form(s) of the headword.
+  element oRef { oRef.content, oRef.attributes }
+oRef.content = empty
+oRef.attributes =
+  att.global.attributes,
+  att.ptrLike.form.attributes,
+  att.lexicographic.attributes,
+  ## indicates the kind of typographic modification made to the headword in the reference.
+  ## Sample values include: 1] cap (indicates first letter is given as capital); 2] nohyph (indicates that the headword, though a prefix or suffix, loses its hyphen)
+  attribute type { data.enumerated }?,
+  empty
+
+oVar =
+  ## (orthographic-variant reference) in a dictionary example, indicates a reference to variant orthographic form(s) of the headword.
+  element oVar { oVar.content, oVar.attributes }
+oVar.content = (text | model.gLike | oRef)*
+oVar.attributes =
+  att.global.attributes,
+  att.ptrLike.form.attributes,
+  att.lexicographic.attributes,
+  ## indicates the kind of variant involved.
+  ## Sample values include: 1] pt (past tense); 2] pp (past participle); 3] prp (present participle); 4] f (feminine); 5] pl (plural)
+  attribute type { data.enumerated }?,
+  empty
+
+orth =
+  ## (orthographic form) gives the orthographic form of a dictionary headword.
+  element orth { orth.content, orth.attributes }
+orth.content = macro.paraContent
+orth.attributes =
+  att.global.attributes,
+  att.lexicographic.attributes,
+  ## gives the type of spelling.
+  attribute type { data.enumerated }?,
+  ## gives the extent of the orthographic information provided.
+  ## Sample values include: 1] full (full form); 2] pref (prefix); 3] suff (suffix); 4] part (partial)
+  [ a1:defaultValue = "full" ] attribute extent { data.enumerated }?,
+  empty
+
+pRef =
+  ## (pronunciation reference) in a dictionary example, indicates a reference to the pronunciation(s) of the headword.
+  element pRef { pRef.content, pRef.attributes }
+pRef.content = empty
+pRef.attributes =
+  att.global.attributes,
+  att.ptrLike.form.attributes,
+  att.lexicographic.attributes,
+  empty
+
+pVar =
+  ## (pronunciation-variant reference) in a dictionary example, indicates a reference to variant pronunciation(s) of the headword.
+  element pVar { pVar.content, pVar.attributes }
+pVar.content = (text | model.gLike | pRef)*
+pVar.attributes =
+  att.global.attributes,
+  att.ptrLike.form.attributes,
+  att.lexicographic.attributes,
+  empty
+
+per =
+  ## (person) contains an indication of the grammatical person (1st, 2nd, 3rd, etc.) associated with a
+  ##         given inflected form in a dictionary.
+  element per { per.content, per.attributes }
+per.content = macro.paraContent
+per.attributes =
+  att.global.attributes, att.lexicographic.attributes, empty
+
+pos =
+  ## (part of speech) indicates the part of speech assigned to a dictionary headword (noun, verb, adjective, etc.)
+  element pos { pos.content, pos.attributes }
+pos.content = macro.paraContent
+pos.attributes =
+  att.global.attributes, att.lexicographic.attributes, empty
+
+pron =
+  ## (pronunciation) contains the pronunciation(s) of the word.
+  element pron { pron.content, pron.attributes }
+pron.content = macro.paraContent
+pron.attributes =
+  att.global.attributes,
+  att.lexicographic.attributes,
+  ## indicates whether the pronunciation is for whole word or part. 
+  ## Sample values include: 1] full (full form); 2] pref (prefix); 3] suff (suffix); 4] part (partial)
+  [ a1:defaultValue = "full" ] attribute extent { data.enumerated }?,
+  ## indicates what notation is used for the pronunciation, if more than one occurs in
+  ##                 the machine-readable dictionary. 
+  attribute notation { data.enumerated }?,
+  empty
+
+re =
+  ## (related entry) contains a dictionary entry for a lexical item related to the headword, such as a compound
+  ##         phrase or derived form, embedded inside a larger entry.
+  element re { re.content, re.attributes }
+re.content =
+  (text
+   | model.gLike
+   | sense
+   | model.entryParts.top
+   | model.phrase
+   | model.global)*
+re.attributes =
+  att.global.attributes,
+  att.lexicographic.attributes,
+  ## classifies the related entry according to any convenient typology.
+  attribute type { data.word }?,
+  empty
+
+sense =
+  ## (sense information group) groups together all information relating to one word sense in a dictionary entry
+  ##         (definitions, examples, translation equivalents, etc.)
+  element sense { sense.content, sense.attributes }
+sense.content =
+  (text
+   | model.gLike
+   | sense
+   | model.entryParts.top
+   | model.phrase
+   | model.global)*
+sense.attributes =
+  att.global.attributes,
+  att.lexicographic.attributes,
+  ## gives the nesting depth of this sense.
+  attribute level { data.numeric }?,
+  empty
+
+stress =
+  ## contains the stress pattern for a dictionary headword, if given separately.
+  element stress { stress.content, stress.attributes }
+stress.content = macro.paraContent
+stress.attributes = att.global.attributes, empty
+
+subc =
+  ## (subcategorization) contains subcategorization information (transitive/intransitive, countable/non-countable, etc.)
+  element subc { subc.content, subc.attributes }
+subc.content = macro.paraContent
+subc.attributes =
+  att.global.attributes, att.lexicographic.attributes, empty
+
+superEntry =
+  ## groups successive entries for a set of homographs.
+  element superEntry { superEntry.content, superEntry.attributes }
+superEntry.content = (form?, entry+) | dictScrap
+superEntry.attributes =
+  att.global.attributes, att.entryLike.attributes, empty
+
+syll =
+  ## (syllabification) contains the syllabification of the headword.
+  element syll { syll.content, syll.attributes }
+syll.content = macro.paraContent
+syll.attributes =
+  att.global.attributes, att.lexicographic.attributes, empty
+
+tns =
+  ## (tense) indicates the grammatical tense associated with a given inflected form in a dictionary.
+  element tns { tns.content, tns.attributes }
+tns.content = macro.paraContent
+tns.attributes =
+  att.global.attributes, att.lexicographic.attributes, empty
+
+tr =
+  ## (translation equivalent) contains a translation of the headword or an example.
+  element tr { tr.content, tr.attributes }
+tr.content = macro.paraContent
+tr.attributes =
+  att.global.attributes, att.lexicographic.attributes, empty
+
+trans =
+  ## (translation information) contains translation text and related information (within an entry in a multilingual dictionary).
+  element trans { trans.content, trans.attributes }
+trans.content =
+  (text
+   | model.gLike
+   | model.phrase
+   | model.inter
+   | model.entryParts
+   | model.global)*
+trans.attributes =
+  att.global.attributes, att.lexicographic.attributes, empty
+
+usg =
+  ## (usage) contains usage information in a dictionary entry.
+  element usg { usg.content, usg.attributes }
+usg.content = macro.paraContent
+usg.attributes =
+  att.global.attributes,
+  att.lexicographic.attributes,
+  ## classifies the usage information using any convenient typology.
+  ## Sample values include: 1] geo (geographic area); 2] time (temporal, historical era (archaic, old, etc.)); 3] dom (domain); 4] reg (register); 5] style (style (figurative, literal, etc.)); 6] plev (preference level (chiefly, usually, etc.)); 7] lang (lang (language for foreign words, spellings pronunciations, etc.)); 8] gram (grammatical usage); 9] syn (synonym given to show use); 10] hyper (hypernym given to show usage); 11] colloc (collocation given to show usage); 12] comp (typical complement); 13] obj (typical object); 14] subj (typical subject); 15] verb (typical verb); 16] hint (unclassifiable piece of information to guide sense choice)
+  attribute type { data.enumerated }?,
+  empty
+
+xr =
+  ## (cross-reference phrase) contains a phrase, sentence, or icon referring the reader to
+  ## some other location in this or another text.
+  element xr { xr.content, xr.attributes }
+xr.content =
+  (text
+   | model.gLike
+   | model.phrase
+   | model.inter
+   | usg
+   | lbl
+   | model.global)*
+xr.attributes =
+  att.global.attributes,
+  att.lexicographic.attributes,
+  ## indicates the type of cross reference, using any convenient
+  ## typology.
+  ## Sample values include: 1] syn (cross reference for synonym information); 2] etym (etymological information); 3] cf (related or similar term); 4] illus (illustration of an object)
+  attribute type { data.enumerated }?,
+  empty
+# 3. macros

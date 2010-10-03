@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+<title>LaTeX files - Easymacs</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="Easymacs">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Commands-for-Specific-File_002dtypes-_0028F10_002dF12_0029.html#Commands-for-Specific-File_002dtypes-_0028F10_002dF12_0029" title="Commands for Specific File-types (F10-F12)">
+<link rel="next" href="XML-files.html#XML-files" title="XML files">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="LaTeX-files"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="XML-files.html#XML-files">XML files</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Commands-for-Specific-File_002dtypes-_0028F10_002dF12_0029.html#Commands-for-Specific-File_002dtypes-_0028F10_002dF12_0029">Commands for Specific File-types (F10-F12)</a>
+<hr>
+</div>
+
+<h3 class="unnumberedsec">LaTeX files</h3>
+
+<p><table border=1 cellpadding=10px<tr align="left"><th valign="top" width="20%">Key </th><th valign="top" width="20%">Command </th><th valign="top" width="60%">Description
+
+<p><br></th></tr><tr align="left"><td valign="top" width="20%">F12
+</td><td valign="top" width="20%">latex
+</td><td valign="top" width="60%">Run latex or pdflatex on the current document without prompting.
+
+</p><p><tr align="left"><td valign="top" width="20%">Shft-F12
+</td><td valign="top" width="20%">Command
+</td><td valign="top" width="60%">Suggests the next command to run on the document, based on the
+output of the last run, eg. bibtex or run (pdf)latex again to resolve
+references.
+
+</p><p><tr align="left"><td valign="top" width="20%">Alt-F12
+</td><td valign="top" width="20%">dvips
+</td><td valign="top" width="60%">Run dvips on the .dvi file associated with the current document
+
+</p><p><tr align="left"><td valign="top" width="20%">Ctrl-F12
+</td><td valign="top" width="20%">Toggle PDF
+</td><td valign="top" width="60%">Toggle whether to generate and view PDF files or DVI files.
+
+</p><p><tr align="left"><td valign="top" width="20%">Shft-Alt-F12
+</td><td valign="top" width="20%">latex/dvips
+</td><td valign="top" width="60%">Run latex and dvips on the current document
+
+</p><p><tr align="left"><td valign="top" width="20%">F11
+</td><td valign="top" width="20%">View
+</td><td valign="top" width="60%">In DVI mode, view the output of the current file with xdvi or
+(on Windows) yap; in PDF mode, view it with Acrobat Reader or (on Mac OS
+X) Preview.
+
+</p><p><tr align="left"><td valign="top" width="20%">Shft-F11
+</td><td valign="top" width="20%">View log
+</td><td valign="top" width="60%">View the terminal output of the currently running process
+
+</p><p><tr align="left"><td valign="top" width="20%">Alt-F11
+</td><td valign="top" width="20%">View postscript
+</td><td valign="top" width="60%">View the .ps output of the current file with gv.
+
+</p><p><tr align="left"><td valign="top" width="20%">Ctrl-F10
+</td><td valign="top" width="20%">Insert skeleton
+</td><td valign="top" width="60%">Insert the bare bones of a LaTeX document of various types; you are
+prompted for the sort of document you want.
+
+</p><p><tr align="left"><td valign="top" width="20%">Alt-F10
+</td><td valign="top" width="20%">Insert environment
+</td><td valign="top" width="60%">Insert a new environment, with prompt.
+
+</p><p><tr align="left"><td valign="top" width="20%">Shft-Alt-F10
+</td><td valign="top" width="20%">Change environment
+</td><td valign="top" width="60%">Change the current environment, with prompt.
+
+</p><p><tr align="left"><td valign="top" width="20%">Shft-Return
+</td><td valign="top" width="20%">Complete
+</td><td valign="top" width="60%">If you have typed the first few letters of a LaTeX command, this
+will show you the possible completions.  If the cursor is not just after
+something beginning with a backslash, it will close the current environment.
+
+</p><p><tr align="left"><td valign="top" width="20%">Ctrl-e
+</td><td valign="top" width="20%">Emph
+</td><td valign="top" width="60%">Put \emph{} around text (this overrides the usual meaning, which
+is to change the case of the current letter).
+
+</p><p><tr align="left"><td valign="top" width="20%">Ctrl-b
+</td><td valign="top" width="20%">Bold
+</td><td valign="top" width="60%">Put \textbf{} around text.
+
+</p><p><tr align="left"><td valign="top" width="20%">Ctrl-p
+</td><td valign="top" width="20%">Small Cap
+</td><td valign="top" width="60%">Put \textsc{} around text (for small caPs).
+
+</p><p><tr align="left"><td valign="top" width="20%">Ctrl-_
+</td><td valign="top" width="20%">Underline
+</td><td valign="top" width="60%">Put \uline{} around text (requires the ulem package).
+
+</p><p><tr align="left"><td valign="top" width="20%">Alt-f
+</td><td valign="top" width="20%">Footnote
+</td><td valign="top" width="60%">Put \footnote{} around text (requires the ulem package).
+
+</p><p><tr align="left"><td valign="top" width="20%">Shft-F1
+</td><td valign="top" width="20%">Contextual Help
+</td><td valign="top" width="60%">Gives help on the usage of the LaTeX command near the cursor
+
+</p><p><tr align="left"><td valign="top" width="20%">Ctrl-&rdquo;
+</td><td valign="top" width="20%">Correct quotes
+</td><td valign="top" width="60%">Easymacs puts smart quotes in for you when you type a straight
+quotation mark (when you really need a straight one, type it twice). 
+But if you paste some text in from a non-LaTeX document, you may need to
+correct the quotes in it.  This function changes straight quotes to
+smart ones from the cursor forward, or within the currently selected text.
+
+<br></td></tr></table>
+
+<p class="noindent">In a LaTeX file, the grep command (Shft-Ctrl-F9) runs by default not on
+the current directory, but only on those files that comprise the current
+document.
+
+   </body></html>
+

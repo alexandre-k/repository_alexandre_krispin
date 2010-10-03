@@ -1,0 +1,33 @@
+#!/usr/bin/perl 
+
+# This is a wrapper for mg (multi-grep) that allows it to work as an
+# Emacs grep-command under Windows.  The problem with mg is that
+# globbing characters are not expanded when the command line is handed
+# to Windows, and so they are passed to mg as literal file names.  So
+# mg goes looking for files with asterisks in their names.
+
+# This wrapper glob-expands any * wildcards in any argument before
+# passing them on to mg.  Of course, this will be a problem if you are
+# trying to search files with names that have asterisks in them, but
+# who would do a silly thing like that?
+
+# use strict;
+require 5.6.0;
+
+my @newARGV;
+foreach my $arg (@ARGV) {
+    if ($arg =~ m/\*/) {
+        my @files = glob $arg;
+        push @newARGV, @files;
+    }
+    else {
+        push @newARGV, $arg;
+    } 
+}
+@ARGV = @newARGV;
+
+my $self = $0;
+$self =~ s/easymacs-grep$/mg/;
+
+do $self or die $!;
+# exec 'perl', $self, @ARGV;

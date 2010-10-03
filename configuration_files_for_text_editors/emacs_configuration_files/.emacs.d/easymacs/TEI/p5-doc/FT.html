@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><!--THIS FILE IS GENERATED FROM AN XML MASTER. DO NOT EDIT (4)-->
+<head><title> TEI P5: Guidelines for Electronic Text Encoding and Interchange: 19  Tables, Formulae, and Graphics</title><link href="/favicon.ico" rel="icon" type="image/x-icon"/><link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/><meta name="author" content="edited by C.M. Sperberg-McQueen and&#10;&#9;Lou Burnard"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="TEI P5: Guidelines for Electronic Text Encoding and Interchange: 19  Tables, Formulae, and Graphics"/><meta name="DC.Type" content="Text"/><meta name="DC.Format" content="application/xhtml+xml"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/><link href="guidelines.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body onload="startUp()"><div id="hdr"><h2 class="subtitle">Tables, Formulae, and Graphics</h2><h1 class="title">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h1></div><div id="accessibility"><span class="tocontent"><a href="?style=text">Text only</a>
+      | <a class="skiplinks" href="#rh-column" title="Go to main page content">Skip links</a></span></div><div id="hdr2"><!--no nav --></div><div id="hdr3"><a href="#rh-column" title="Go to main page content" class="skiplinks">Skip links</a><a class="hide">|</a><div class="breadcrumb"><ul class="breadcrumb"><li class="breadcrumb-first"><a class="breadcrumb" href="index.html">TEI P5 Guidelines</a></li><li class="breadcrumb"><a class="breadcrumb" href="/"></a></li></ul></div><a class="hide">|</a><a class="bannerright" href="http://www.tei-c.org/Consortium/" title="Go to home page">TEI Consortium</a></div><div class="column-wrapper"><div id="lh-col"><div id="lh-col-top"><!--top of left-hand column--></div><div id="lh-col-bottom"><!--bottom of left-hand column--><div class="tocFront"><div class="tocContainer"><div class="toclist0"><a class="toclist" href="FM1.html"> Introductory Note</a>
+</div><div class="toclist0"><a class="toclist" href="AB.html"> About These Guidelines</a>
+</div><div class="toclist0"><a class="toclist" href="SG.html"> A Gentle Introduction to XML</a>
+</div></div></div><div class="tocBody"><!--start TOC--><div class="tocContainer"><!--TOC components--><div class="toclist0"><a class="toclist" href="CH.html">1  Languages and Character Sets</a>
+</div><div class="toclist0"><a class="toclist" href="ST.html">2  The TEI infrastructure</a>
+</div><div class="toclist0"><a class="toclist" href="HD.html">3  The TEI Header</a>
+</div><div class="toclist0"><a class="toclist" href="CO.html">4  Elements Available in All TEI Documents</a>
+</div><div class="toclist0"><a class="toclist" href="DS.html">5  Default Text Structure</a>
+</div><div class="toclist0"><a class="toclist" href="VE.html">6  Verse</a>
+</div><div class="toclist0"><a class="toclist" href="DR.html">7  Performance Texts</a>
+</div><div class="toclist0"><a class="toclist" href="TS.html">8  Transcriptions of Speech</a>
+</div><div class="toclist0"><a class="toclist" href="DI.html">9  Print Dictionaries</a>
+</div><div class="toclist0"><a class="toclist" href="MS.html">10  Manuscript Description</a>
+</div><div class="toclist0"><a class="toclist" href="SA.html">11  Linking, Segmentation, and Alignment</a>
+</div><div class="toclist0"><a class="toclist" href="AI.html">12  Simple Analytic Mechanisms</a>
+</div><div class="toclist0"><a class="toclist" href="FS.html">13  Feature Structures</a>
+</div><div class="toclist0"><a class="toclist" href="CE.html">14  Certainty and Responsibility</a>
+</div><div class="toclist0"><a class="toclist" href="PH.html">15  Transcription of Primary Sources</a>
+</div><div class="toclist0"><a class="toclist" href="TC.html">16  Critical Apparatus</a>
+</div><div class="toclist0"><a class="toclist" href="ND.html">17  Names and Dates</a>
+</div><div class="toclist0"><a class="toclist" href="GD.html">18  Graphs, Networks, and Trees</a>
+</div><div class="toclist0"><span class="toclist-this">19  Tables, Formulae, and Graphics</span>
+<div class="toclist1"><a class="toclist" href="FT.html#FTTAB">19.1  Tables</a>
+</div><div class="toclist1"><a class="toclist" href="FT.html#FTFOR">19.2  Formulae and
+Mathematical Expressions</a>
+</div><div class="toclist1"><a class="toclist" href="FT.html#FTGRA">19.3  Specific Elements for Graphic Images</a>
+</div><div class="toclist1"><a class="toclist" href="FT.html#FTGROV">19.4  Overview of Basic Graphics Concepts</a>
+</div><div class="toclist1"><a class="toclist" href="FT.html#FTGRNO">19.5  Graphic Image Formats</a>
+</div></div><div class="toclist0"><a class="toclist" href="CC.html">20  Language Corpora</a>
+</div><div class="toclist0"><a class="toclist" href="WD.html">21  Representation of non-standard characters and glyphs</a>
+</div><div class="toclist0"><a class="toclist" href="FD.html">22  Feature System Declaration</a>
+</div><div class="toclist0"><a class="toclist" href="TD.html">23  Documentation Elements</a>
+</div><div class="toclist0"><a class="toclist" href="USE.html">24  Using The TEI</a>
+</div></div></div><div class="tocBack"><div class="tocContainer"><div class="toclist0"><a class="toclist" href="REFCLA.html">Appendix A  Classes</a>
+</div><div class="toclist0"><a class="toclist" href="REFTAG.html">Appendix B  Elements</a>
+</div><div class="toclist0"><a class="toclist" href="REFENT.html">Appendix C  Macros</a>
+</div><div class="toclist0"><a class="toclist" href="BIB.html">Appendix D  Bibliography</a>
+</div><div class="toclist0"><a class="toclist" href="PARTIND.html">Appendix E  Index</a>
+</div><div class="toclist0"><a class="toclist" href="PREFS.html">Appendix F  Prefatory Notes</a>
+</div><div class="toclist0"><a class="toclist" href="COL.html">Appendix G  Colophon</a>
+</div></div></div></div></div><div id="rh-col"><a id="rh-column"/><div id="rh-col-top"><!--top of right-hand column--></div><div id="rh-col-bottom"><!--bottom of right-hand column--><h2>19  Tables, Formulae, and Graphics</h2><p><span id="id2550633"/>Many documents, both historical and contemporary, include not only
+text but also graphics, artwork, and other images.  Although some
+types of images can be represented directly with markup, 
+it is more common practice to include
+such information by using a reference to an 
+external entity (typically a URL) encoded in a suitable graphical notation.</p><p><span id="id2550643"/>In addition to graphic images, documents often contain material
+presented in graphical or tabular format. In such materials, details
+of layout and presentation may also be of comparatively greater
+significance or complexity than they are for running text. Indeed, it
+may often be difficult to make a clear distinction between details
+relating purely to the rendition of information and those relating to
+the information itself.</p><p><span id="id2550654"/>Finally, documents may contain mathematical formulæ or
+expressions in other formulaic notations, for which no notation is
+defined in these Guidelines.</p><p><span id="id2550665"/>These areas (graphics, tabular material, and mathematical or other
+formulæ) have in common that they have received considerable attention
+from many other standards bodies or similar professional groups.  In
+part because of this, they may frequently be most conveniently encoded
+and processed using some notation not defined by these Guidelines.
+For these reasons, and others, we consider tables, formulæ, and
+graphics together in this chapter.</p><p><span id="id2550685"/>As with text markup in general, many incompatible formats have been
+proposed for the representation of graphics, formulae and tables in
+electronic form.  Unfortunately, no single format as effective as XML
+in the domain of text has yet emerged for their interchange, to some
+extent because of the difficulty of representing the information these
+data formats convey independently of the way it is rendered.</p><p><span id="id2550696"/>The  module defined by this chapter defines special
+purpose ‘container’ elements that can be used to
+encapsulate occurrences of such data within a TEI-conformant document in
+a portable way.  Specific recommendations for the encoding of tables are
+provided in section <a class="link_ptr" href="FT.html#FTTAB" title="Tables">19.1  Tables</a> and recommendations for
+mathematical or other formulæ in section <a class="link_ptr" href="FT.html#FTFOR" title="Formulae and Mathematical Expressions">19.2  Formulae and
+Mathematical Expressions</a>.
+Specific recommendations for the encoding of graphic figures may be
+found in section <a class="link_ptr" href="FT.html#FTGRA" title="Specific Elements for Graphic Images">19.3  Specific Elements for Graphic Images</a>.  The rest of the chapter is
+devoted to general problems of encoding graphic information.</p><p><span id="id2550727"/>There is at the time of writing no consensus on formats for graphical
+images, and such formats vary in many ways.  We therefore provide (in
+section <a class="link_ptr" href="FT.html#FTGROV" title="Overview of Basic Graphics Concepts">19.4  Overview of Basic Graphics Concepts</a>) a brief discussion of the ways in which
+images may be represented, and (in section <a class="link_ptr" href="FT.html#FTGRNO" title="Graphic Image Formats">19.5  Graphic Image Formats</a>) a list
+of formal names for those representations most popular at this time.
+Each one includes a very brief description.  These Guidelines recommend
+a few particular representations as being the most widely supported and
+understood.</p><div class="p"><span id="id2550748"/>This module provides the following features:
+<div><hr/><strong>Module</strong> <em>figures</em>: Tables, formulae, and figures<ul><li>Elements defined: <a class="link_odd" href="ref-table.html">table</a> <a class="link_odd" href="ref-row.html">row</a> <a class="link_odd" href="ref-cell.html">cell</a> <a class="link_odd" href="ref-formula.html">formula</a> <a class="link_odd" href="ref-figure.html">figure</a> <a class="link_odd" href="ref-figDesc.html">figDesc</a> </li></ul><hr/></div>
+
+The selection and combination of modules to form a TEI schema is described in
+<a class="link_ptr" href="ST.html#STIN" title="Defining a TEI schema">2.2  Defining a TEI schema</a>.
+</div><div class="p"><span id="id2550778"/>The module is organized as follows:
+
+<div><a href="#DFTTAB">« <span class="label">include 142: Tables</span></a> » </div><div><a href="#DFTFOR">« <span class="label">include 143: Formulae</span></a> » </div><div><a href="#DFTGRA">« <span class="label">include 144: Figures</span></a> » </div></div><div class="div2" id="FTTAB"><h3>19.1  Tables</h3><p><span id="id2550807"/>A table is the least ‘graphic’ of the elements
+discussed in this chapter.  Almost any text structure can be presented
+as a series of rows and columns:  one might, for example, choose to show
+a glossary or other form of list in tabular form, without necessarily
+regarding it as a table.  In such cases, the global <span class="att">rend</span>
+attribute is an appropriate way of indicating that some element is being
+presented in tabular format.  When tabular presentation is regarded as
+of less intrinsic importance, it is correspondingly simpler to encode
+descriptive or functional information about the contents of the table,
+for example to identify one column as containing names and another as
+containing dates, though the two methods may be combined.
+ </p><p><span id="id2550830"/>When, however, particular elements are required to encode the
+tabular arrangement itself, then one or other of the various
+‘table schemas’ now available may be preferable.  The
+schemas in common use generally view a table as a special text
+element, made up of row elements (or, sometimes, column elements),
+themselves composed of cells.  Table cells generally appear in row-major
+order, with the first row from left to right, then the second row, and
+so on.  Details of appearance such as column widths, border lines, and
+alignment are generally encoded by numerous attributes.  Beyond this,
+however, such schemas differ greatly.  This section begins by describing a
+table schema of this kind; a brief summary of some other widely available
+table schemas is also provided in section <a class="link_ptr" href="FT.html#FTTAB2" title="Other Table Schemas">19.1.2  Other Table Schemas</a>.
+ </p><div class="div3" id="FTTAB1"><h4>19.1.1  The TEI Table DTD</h4><div class="p"><span id="id2550867"/>For encoding tables of low to moderate complexity, these Guidelines
+provide the following special purpose elements:
+<ul class="specList"><li><b>&lt;<a href="ref-table.html">table</a>&gt;</b> contains text displayed in tabular form, in
+rows and columns.<table class="attList"><tr><td class="Attribute">rows</td><td colspan="2">indicates the number of rows in the table.</td></tr><tr><td class="Attribute">cols</td><td colspan="2">indicates the number of columns in each row of the table.</td></tr></table></li><li><b>&lt;<a href="ref-row.html">row</a>&gt;</b> contains one row of a table. </li><li><b>&lt;<a href="ref-cell.html">cell</a>&gt;</b> contains one cell of a table. </li></ul></div><p><span id="id2550888"/>The <code>&lt;table&gt;</code> element is defined as a member of the class
+<em>inter</em>; it may therefore appear both within other components
+(such as paragraphs), or between them, provided that the module defined in this chapter has been enabled, as described at the
+beginning of this chapter.
+ </p><p><span id="id2550904"/>It is to a large extent arbitrary whether a table should be regarded
+as a series of rows or as a series of columns.  For compatibility with
+currently available systems, however, these Guidelines require a
+row-by-row description of a table.  It is also possible to describe a
+table simply as a series of cells; this may be useful for tabular
+material which is not presented as a simple matrix.
+ </p><p><span id="id2550914"/>The attributes <span class="att">rows</span> and <span class="att">cols</span> may be used to
+indicate the size of a table, or to indicate that a particular cell or
+row of a table spans more than one row or column.  For both tables and cells,
+rows and columns are always given in top-to-bottom, left-to-right order.
+These Guidelines do not require that the size of a table be specified;
+for most formatting and many other applications, it will be necessary to
+process the whole table in two passes in any case.
+ </p><p><span id="id2550933"/>Where cells span more than one column or row, the encoder must
+determine whether this is a purely presentational effect (in which case
+the <span class="att">rend</span> attribute may be more appropriate), whether the part
+of the table affected would be better treated as a nested table, or
+whether to use the spanning attributes listed above.
+ </p><p><span id="id2550946"/>The <span class="att">role</span> attribute may be used to categorize a single
+cell, or set a default for all the cells in a given row.  The present
+Guidelines distinguish the roles of <em>label</em> and
+<em>data</em> only, but the encoder may define other roles, such as
+‘derived’, ‘numeric’, etc., as appropriate.
+ </p><p><span id="id2550973"/>These three attributes are provided by the attribute class <span class="ident-class">att.tableDecoration</span> of which both <code>&lt;cell&gt;</code>
+and <code>&lt;row&gt;</code> are members; see further <a class="link_ptr" href="ST.html#STECAT" title="Attribute Classes">2.6.1  Attribute Classes</a>. </p><div class="p"><span id="id2550996"/>The following simple example demonstrates how the data presented as a
+labelled list in section <a class="link_ptr" href="CO.html#COLI" title="Lists">4.7  Lists</a> might be represented by an
+encoder wishing to preserve its original appearance as a table:
+<div class="pre"> <span class="element">&lt;table <span class="attribute">rend</span>="boxed" <span class="attribute">rows</span>="2" <span class="attribute">cols</span>="2"&gt;</span><br/>  <span class="element">&lt;head <span class="attribute">rend</span>="it"&gt;</span>Report of the conduct and progress
+      of Ernest Pontifex.  Upper Vth form — half
+      term ending Midsummer 1851<span class="element">&lt;/head&gt;</span><br/>  <span class="element">&lt;row&gt;</span><br/>   <span class="element">&lt;cell <span class="attribute">role</span>="label"&gt;</span>Classics<span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span>Idle listless and unimproving<span class="element">&lt;/cell&gt;</span><br/>  <span class="element">&lt;/row&gt;</span><br/>  <span class="element">&lt;row&gt;</span><br/>   <span class="element">&lt;cell <span class="attribute">role</span>="label"&gt;</span>Mathematics<span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span>ditto<span class="element">&lt;/cell&gt;</span><br/>  <span class="element">&lt;/row&gt;</span><br/>  <span class="element">&lt;row&gt;</span><br/>   <span class="element">&lt;cell <span class="attribute">role</span>="label"&gt;</span>Divinity<span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span>ditto<span class="element">&lt;/cell&gt;</span><br/>  <span class="element">&lt;/row&gt;</span><br/>  <span class="element">&lt;row&gt;</span><br/>   <span class="element">&lt;cell <span class="attribute">role</span>="label"&gt;</span>Conduct in house<span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span>Orderly<span class="element">&lt;/cell&gt;</span><br/>  <span class="element">&lt;/row&gt;</span><br/>  <span class="element">&lt;row&gt;</span><br/>   <span class="element">&lt;cell <span class="attribute">role</span>="label"&gt;</span>General conduct<span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span>Not satisfactory, on
+       account of his great unpunctuality and inattention to
+       duties<span class="element">&lt;/cell&gt;</span><br/>  <span class="element">&lt;/row&gt;</span><br/> <span class="element">&lt;/table&gt;</span></div></div><p><span id="id2551096"/>Note that this encoding makes no attempt to represent the full
+significance of the ‘ditto’ cells above; these might be regarded as
+simple links between the cells containing them and that to which they
+refer, or as virtual copies of it.  For ways of representing either
+interpretation, see chapter <a class="link_ptr" href="SA.html" title="14">11  Linking, Segmentation, and Alignment</a>.
+ </p><div class="p"><span id="id2551112"/>The following example demonstrates how a simple statistical table may
+be represented using this scheme:
+<div class="pre"> <span class="element">&lt;table <span class="attribute">rows</span>="4" <span class="attribute">cols</span>="4"&gt;</span><br/>  <span class="element">&lt;head&gt;</span>Poor Man's Lodgings in Norfolk (Mayhew, 1843)<span class="element">&lt;/head&gt;</span><br/>  <span class="element">&lt;row <span class="attribute">role</span>="label"&gt;</span><br/>   <span class="element">&lt;cell/&gt;</span><br/>   <span class="element">&lt;cell&gt;</span>Dossing Cribs or Lodging Houses<span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span>Beds<span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span>Needys or Nightly Lodgers<span class="element">&lt;/cell&gt;</span><br/>  <span class="element">&lt;/row&gt;</span><br/>  <span class="element">&lt;row&gt;</span><br/>   <span class="element">&lt;cell <span class="attribute">role</span>="label"&gt;</span>Bury St Edmund's<span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span>5<span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span>8<span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span>128<span class="element">&lt;/cell&gt;</span><br/>  <span class="element">&lt;/row&gt;</span><br/>  <span class="element">&lt;row&gt;</span><br/>   <span class="element">&lt;cell <span class="attribute">role</span>="label"&gt;</span>Thetford<span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span>3<span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span>6<span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span>36<span class="element">&lt;/cell&gt;</span><br/>  <span class="element">&lt;/row&gt;</span><br/>  <span class="element">&lt;row&gt;</span><br/>   <span class="element">&lt;cell <span class="attribute">role</span>="label"&gt;</span>Attleboro'<span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span>3<span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span>5<span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span>20<span class="element">&lt;/cell&gt;</span><br/>  <span class="element">&lt;/row&gt;</span><br/>  <span class="element">&lt;row&gt;</span><br/>   <span class="element">&lt;cell <span class="attribute">role</span>="label"&gt;</span>Wymondham<span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span>1<span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span>11<span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span>22<span class="element">&lt;/cell&gt;</span><br/>  <span class="element">&lt;/row&gt;</span><br/> <span class="element">&lt;/table&gt;</span></div></div><p><span id="id2551226"/>Note the use of a blank cell in the first row to ensure that the
+column labels are correctly aligned with the data.  Again, this encoding
+does not explicitly represent the alignment between column and row
+labels and the data to which they apply.  Where the primary emphasis of
+an encoding is on the semantic content of a table, a more explicit
+mechanism for the representation of structured information such as that
+provided by the feature structure mechanism described in chapter <a class="link_ptr" href="FS.html" title="16">13  Feature Structures</a> may be preferred.  Alternatively, the general purpose linkage
+and alignment mechanisms described in chapter <a class="link_ptr" href="SA.html" title="14">11  Linking, Segmentation, and Alignment</a> may also
+be applied to individual cells of a table.
+ </p><div class="p"><span id="id2551250"/>The content of a table cell need not be simply character data.  It
+may also contain any sequence of the phrase level elements described in
+chapter <a class="link_ptr" href="CO.html" title="6">4  Elements Available in All TEI Documents</a>, thus allowing for the encoding of potentially
+more useful semantic information, as in the following example, where the
+fact that one cell contains a number and the other contains a place name
+has been explicitly recorded:
+<div class="pre"> <span class="element">&lt;table&gt;</span><br/>  <span class="element">&lt;head&gt;</span>US State populations, 1990<span class="element">&lt;/head&gt;</span><br/>  <span class="element">&lt;row&gt;</span><br/>   <span class="element">&lt;cell&gt;</span><br/>    <span class="element">&lt;name&gt;</span>Wyoming<span class="element">&lt;/name&gt;</span><br/>   <span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span><br/>    <span class="element">&lt;num&gt;</span>453,588<span class="element">&lt;/num&gt;</span><br/>   <span class="element">&lt;/cell&gt;</span><br/>  <span class="element">&lt;/row&gt;</span><br/>  <span class="element">&lt;row&gt;</span><br/>   <span class="element">&lt;cell&gt;</span><br/>    <span class="element">&lt;name&gt;</span>Alaska<span class="element">&lt;/name&gt;</span><br/>   <span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span><br/>    <span class="element">&lt;num&gt;</span>550,043<span class="element">&lt;/num&gt;</span><br/>   <span class="element">&lt;/cell&gt;</span><br/>  <span class="element">&lt;/row&gt;</span><br/>  <span class="element">&lt;row&gt;</span><br/>   <span class="element">&lt;cell&gt;</span><br/>    <span class="element">&lt;name&gt;</span>Vermont<span class="element">&lt;/name&gt;</span><br/>   <span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span><br/>    <span class="element">&lt;num&gt;</span>562,758<span class="element">&lt;/num&gt;</span><br/>   <span class="element">&lt;/cell&gt;</span><br/>  <span class="element">&lt;/row&gt;</span><br/>  <span class="element">&lt;row&gt;</span><br/>   <span class="element">&lt;cell&gt;</span><br/>    <span class="element">&lt;name&gt;</span>District of Columbia<span class="element">&lt;/name&gt;</span><br/>   <span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span><br/>    <span class="element">&lt;num&gt;</span>606,900<span class="element">&lt;/num&gt;</span><br/>   <span class="element">&lt;/cell&gt;</span><br/>  <span class="element">&lt;/row&gt;</span><br/>  <span class="element">&lt;row&gt;</span><br/>   <span class="element">&lt;cell&gt;</span><br/>    <span class="element">&lt;name&gt;</span>North Dakota<span class="element">&lt;/name&gt;</span><br/>   <span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span><br/>    <span class="element">&lt;num&gt;</span>638,800<span class="element">&lt;/num&gt;</span><br/>   <span class="element">&lt;/cell&gt;</span><br/>  <span class="element">&lt;/row&gt;</span><br/>  <span class="element">&lt;row&gt;</span><br/>   <span class="element">&lt;cell&gt;</span><br/>    <span class="element">&lt;name&gt;</span>Delaware<span class="element">&lt;/name&gt;</span><br/>   <span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span><br/>    <span class="element">&lt;num&gt;</span>666,168<span class="element">&lt;/num&gt;</span><br/>   <span class="element">&lt;/cell&gt;</span><br/>  <span class="element">&lt;/row&gt;</span><br/>  <span class="element">&lt;row&gt;</span><br/>   <span class="element">&lt;cell&gt;</span><br/>    <span class="element">&lt;name&gt;</span>South Dakota<span class="element">&lt;/name&gt;</span><br/>   <span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span><br/>    <span class="element">&lt;num&gt;</span>696,004<span class="element">&lt;/num&gt;</span><br/>   <span class="element">&lt;/cell&gt;</span><br/>  <span class="element">&lt;/row&gt;</span><br/>  <span class="element">&lt;row&gt;</span><br/>   <span class="element">&lt;cell&gt;</span><br/>    <span class="element">&lt;name&gt;</span>Montana<span class="element">&lt;/name&gt;</span><br/>   <span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span><br/>    <span class="element">&lt;num&gt;</span>799,065<span class="element">&lt;/num&gt;</span><br/>   <span class="element">&lt;/cell&gt;</span><br/>  <span class="element">&lt;/row&gt;</span><br/>  <span class="element">&lt;row&gt;</span><br/>   <span class="element">&lt;cell&gt;</span><br/>    <span class="element">&lt;name&gt;</span>Rhode Island<span class="element">&lt;/name&gt;</span><br/>   <span class="element">&lt;/cell&gt;</span><br/>   <span class="element">&lt;cell&gt;</span><br/>    <span class="element">&lt;num&gt;</span>1,003,464<span class="element">&lt;/num&gt;</span><br/>   <span class="element">&lt;/cell&gt;</span><br/>  <span class="element">&lt;/row&gt;</span><br/> <span class="element">&lt;/table&gt;</span></div></div><p><span id="id2551404"/>In syntactic terms this is little more than a name-change; however,
+the new names are more useful in that they convey something about the
+nature and significance of the information, rather than merely
+suggesting how to display it in rows and columns.</p><div class="p"><span id="id2551412"/>The TEI table elements are defined as follows:
+<div class="specgrp"><span id="DFTTAB"/><b>Specification group 142: Tables</b><dl><dt>Element table</dt><dd><pre class="eg">
+table = element table { table.content, table.attributes }
+
+table.content = ( <a class="link_odd" href="ref-head.html">head</a> | <a class="link_odd" href="ref-model.global.html">model.global</a> )*, ( <a class="link_odd" href="ref-row.html">row</a>, <a class="link_odd" href="ref-model.global.html">model.global</a>* )+
+
+table.attributes =
+   attribute rows { <a class="link_odd" href="ref-data.count.html">data.count</a> }?,
+   attribute cols { <a class="link_odd" href="ref-data.count.html">data.count</a> }?</pre></dd><dt>Element row</dt><dd><pre class="eg">
+row = element row { row.content, row.attributes }
+
+row.content = ( ( <a class="link_odd" href="ref-cell.html">cell</a> | <a class="link_odd" href="ref-table.html">table</a> ), <a class="link_odd" href="ref-model.global.html">model.global</a>* )+
+
+row.attributes = att.tableDecoration.attributes</pre></dd><dt>Element cell</dt><dd><pre class="eg">
+cell = element cell { cell.content, cell.attributes }
+
+cell.content = <a class="link_odd" href="ref-macro.paraContent.html">macro.paraContent</a>
+
+cell.attributes = att.tableDecoration.attributes</pre></dd></dl></div></div></div><div class="div3" id="FTTAB2"><h4>19.1.2  Other Table Schemas</h4><p><span id="id2551999"/>Many authoring systems include built-in support for their
+own or for public table schemas.  These often provide an enhanced user
+interface and good formatting capabilities, but are often
+product-specific, despite their use of a XML markup language.
+ </p><p><span id="id2552007"/>The DTD developed by the Association of American Publishers
+(AAP) and standardized in ANSI Z39.59 provided a very simple encoding
+for correspondingly simple tables.  This has been further developed,
+together with the table DTD documented in ISO Technical Report 9537, and
+now forms part of ISO 12083.  The TEI DTD fragment described above has
+functionality very similar to that defined by ISO 12083.
+ </p><p><span id="id2552025"/>For more complex tables, the most effective publically-available DTD
+is probably that developed by the US Department of Defense CALS project.
+This supports vertical and horizontal spanning and various kinds of text
+rotation and justification within cells and is also directly supported
+by a number of existing SGML software systems.
+ </p><p><span id="id2552035"/>The CALS table DTD is much too complex to describe fully here;
+information on it can be obtained, among other places, from the Graphic
+Communications Association in Alexandria, Virginia.  The formal name of
+the CALS SGML requirements is MIL-M-28001A.
+Tables conforming to the CALS DTD may be incorporated into documents
+conforming to these Guidelines, but this may require substantial
+modification of the TEI schema which may require
+expert advice.
+ </p><p><span id="id2552047"/>The apparent complexity of the CALS table DTD has led to
+simplification efforts, most notably by OASIS in the form of  <i>OASIS
+Technical Resolution 9503:1995, Exchange Table Model Document Type
+		Definition</i> (<a class="link_ptr" href="http://www.oasis-open.org/specs/a503.htm" title=""><span>http://www.oasis-open.org/specs/a503.htm</span></a>). An XML
+version of this is also defined in <i>OASIS Technical Memorandum TR 9901:1999,
+		XML Exchange Table Model DTD</i> (<a class="link_ptr" href="http://www.oasis-open.org/specs/tm9901.html" title=""><span>http://www.oasis-open.org/specs/tm9901.html</span></a>). </p><p><span id="id2552073"/>With the ascent of the Web, the HTML table model (<a class="link_ptr" href="http://www.w3.org/TR/html4/struct/tables.html" title=""><span>http://www.w3.org/TR/html4/struct/tables.html</span></a>) has become very popular and widespread in use. The
+last few years have seen a growing access to information via devices
+of varying capabilities ranging from desktop computers to handheld
+mobile phones.  In response to this demand, HTML has been both
+reformulated into XML and modularized into a family of modules (see
+<a class="link_ptr" href="http://www.w3.org/TR/xhtml-modularization" title=""><span>http://www.w3.org/TR/xhtml-modularization</span></a>) with semantically related elements. This
+family includes two Table Modules: the Basic Tables Module (<a class="link_ptr" href="http://www.w3.org/TR/xhtml-modularization/xhtml-modularization.html#s_simpletablemodule" title=""><span>http://www.w3.org/TR/xhtml-modularization/xhtml-modularization.html#s_simpletablemodule</span></a>) and the Tables
+Module (<a class="link_ptr" href="http://www.w3.org/TR/xhtml-modularization/xhtml-modularization.html#s_tablemodule" title=""><span>http://www.w3.org/TR/xhtml-modularization/xhtml-modularization.html#s_tablemodule</span></a>). The Tables
+Module mimics the functionality of HTML 4 (<a class="link_ptr" href="http://www.w3.org/TR/html401/" title=""><span>http://www.w3.org/TR/html401/</span></a>)
+tables and is a part of the XHTML 1.1 (<a class="link_ptr" href="http://www.w3.org/TR/xhtml11" title=""><span>http://www.w3.org/TR/xhtml11</span></a>)
+document type. The Basic Tables Module is a
+‘diluted’ version of the Tables Module, retaining
+only the minimal functionality with the purpose of extending XHTML's
+reach onto resource-constrained devices. It is a part of the XHTML
+Basic document type (<a class="link_ptr" href="http://www.w3.org/TR/xhtml-basic" title=""><span>http://www.w3.org/TR/xhtml-basic</span></a>).</p><p><span id="id2552131"/>The XHTML table model is based on the HTML table model (<a class="link_ptr" href="http://www.w3.org/TR/html4/struct/tables.html" title=""><span>http://www.w3.org/TR/html4/struct/tables.html</span></a>). It
+allows arrangement of data into rows and columns of cells. Table rows
+and columns may be grouped to convey additional structural information
+and may be rendered by user agents in ways that emphasize this
+structure. Support for incremental rendering of tables and for
+rendering on non-visual user agents (<a class="link_ptr" href="http://www.w3.org/TR/html4/struct/tables.html#non-visual-rendering" title=""><span>http://www.w3.org/TR/html4/struct/tables.html#non-visual-rendering</span></a>)
+is also available. Special elements and attributes are provided to
+associate metadata with tables. They indicate the table's purpose, or
+are for the benefit of people using speech or Braille-based user
+agents. It is recommended that tables should not be used purely as a
+means to layout document content as this leads to many accessibility
+problems (see further <a class="link_ptr" href="http://www.w3.org/TR/WCAG10-HTML-TECHS/#tables" title=""><span>http://www.w3.org/TR/WCAG10-HTML-TECHS/#tables</span></a>).
+Style sheets provide a far more effective means of controlling layout
+and other visual characteristics, in both HTML and XML documents.
+</p></div></div><div class="div2" id="FTFOR"><h3>19.2  Formulae and
+Mathematical Expressions</h3><p><span id="id2552178"/>Mathematical and chemical formulæ pose similar problems to
+those posed by tables in that rendition may be of great significance and
+hard to disentangle from content.  They also require access to a wide
+range of special characters, for most of which standard entity names
+already exist in the documented ISO entity sets (see further chapters <a class="link_ptr" href="CH.html" title="4">1  Languages and Character Sets</a>
+ and <a class="link_ptr" href="WD.html" title="25">21  Representation of non-standard characters and glyphs</a>).
+ </p><p><span id="id2552204"/>Formulæ and tables are also similar in that well-researched and
+detailed DTD fragments have already been developed for them
+independently of the TEI.  They differ in that (for mathematics at
+least) there also exists a richly detailed text-based but non-SGML
+notation which is very widely used:  this is the TeX system, and the
+sets of descriptive macros developed for it such as LaTeX, AMS-TeX,
+and AMS-LaTeX.
+ </p><p><span id="id2552222"/>The AAP and ISO standards mentioned in section <a class="link_ptr" href="FT.html#FTTAB" title="Tables">19.1  Tables</a> above both provide DTDs for equations as well as for
+tables, which now form part of ISO 12083.  The European Mathematical
+Trust, an organization set up specifically to enhance research support
+for European mathematicians, has also defined a general purpose
+mathematical DTD known as EuroMath (<a class="link_ptr" href="http://www.dcs.fmph.uniba.sk/~emt/" title=""><span>http://www.dcs.fmph.uniba.sk/~emt/</span></a>), for which it provides
+both software and services.
+</p><p><span id="id2552243"/>Most if not all of the functionality provided by these DTDs can now
+be found in the OpenMath and MathML XML-based systems briefly
+described below.
+</p><p><span id="id2552249"/>As with tables, in all the SGML and XML solutions a tension exists between
+the need to encode the way a formula is written (its appearance) and the
+need to represent its semantics.  If the object of the encoding is
+purely to act as an interchange format among different formatting
+programs, then there is no need to represent the mathematical meaning of
+an expression.  If however the object is to use the encoding as
+input to an algebraic manipulation system (such as Mathematica or Maple)
+or a database system, clearly simply representing superscripts and subscripts
+will be inadequate.
+ </p><div class="p"><span id="id2552264"/>The present Guidelines make no attempt to add to the number of
+available DTDs for representing formulæ.  Instead, we recommend
+that the user make an informed choice from those already available.  The
+module described in this chapter makes available only the
+following element, which should be used to encode any formula, no matter
+what notation is employed:
+<ul class="specList"><li><b>&lt;<a href="ref-formula.html">formula</a>&gt;</b> contains a mathematical or other formula.<table class="attList"><tr><td class="Attribute">notation</td><td colspan="2">supplies the name of a previously defined notation used for the
+content of the
+element.</td></tr></table></li></ul></div><div class="p"><span id="id2552291"/>By default, a <code>&lt;formula&gt;</code> is assumed to
+contain character data which is not validated in any way:
+<div class="pre"> <span class="element">&lt;formula <span class="attribute">notation</span>="TeX"&gt;</span> a&lt;b <span class="element">&lt;/formula&gt;</span></div></div><p><span id="id2552308"/>If desired, the content of the <code>&lt;formula&gt;</code> element may be
+redefined to include elements defined by some other module, such as
+that of ISO 12083, or to use the more recently defined OpenMath or
+MathML DTDs.<a class="notelink" href="#Note135"><sup>135</sup></a></p><div class="p"><span id="id2552332"/>When the content of a <code>&lt;formula&gt;</code> element is not expressed in
+XML the notation used should
+specified using the <span class="att">notation</span> attribute as above,
+and in the following longer example:
+<div class="pre"> <span class="element">&lt;p&gt;</span>Achilles runs ten times faster than the tortoise and
+gives the animal a headstart of ten meters.  Achilles runs
+those ten meters, the tortoise one; Achilles runs that
+meter, the tortoise runs a decimeter; Achilles runs that
+decimeter, the tortoise runs a centimeter; Achilles runs
+that centimeter, the tortoise, a millimeter; Fleet-footed
+Achilles, the millimeter, the tortoise, a tenth of a
+millimeter, and so on to infinity, without the tortoise ever
+being overtaken. . . Such is the customary version.
+<br/>&lt;!-- ... --&gt;<br/> The problem does not change, as you can see; but I would<br/> like to know the name of the poet who provided it with a<br/> hero and a tortoise.  To those magical competitors and to<br/> the series<br/> <span class="element">&lt;formula <span class="attribute">notation</span>="TeX"&gt;</span>$$
+{1 \over 10} +
+{1 \over 100} +
+{1 \over 1000} +
+{1 \over 10,\!000} +
+\dots
+$$<span class="element">&lt;/formula&gt;</span><br/> the argument owes its fame.<span class="element">&lt;/p&gt;</span></div>
+The <span class="att">notation</span> attribute supplies the name of a
+notation (‘TeX’), which is expected to be identified somewhere
+in document metadata. </div><p><span id="id2552396"/>Mathematical Markup Language (MathML)
+(<a class="link_ptr" href="http://www.w3.org/Math/" title=""><span>http://www.w3.org/Math/</span></a>) is a vocabulary for describing
+mathematical notation, capturing both its structure and
+content. MathML 1.0, which became a W3C Recommendation on April 7
+1998, was the first vocabulary based on XML syntax to reach that
+status. It was subsequently revised, as MathML 1.01 (W3C
+Recommendation July 7, 1999), and as the current version MathML 2.0,
+which became a W3C recommendation on February 21, 2001.</p><div class="p"><span id="id2552412"/>MathML provides two types of markup: Presentation Markup, which
+captures the <strong>notational</strong> structure of an expression and could
+be seen as the ‘TeX for the Web’ and Content
+Markup, which captures the <strong>mathematical</strong> structure of an
+expression. Most of its content elements correspond with the range of
+operators, relations, and named functions typically found at the high
+school level of mathematics. The tortoise example given above
+in TeX can be re-expressed in MathML as
+<div class="pre"> <span class="element">&lt;m:math&gt;</span><br/>  <span class="element">&lt;m:mfrac&gt;</span><br/>   <span class="element">&lt;m:mrow&gt;</span><br/>    <span class="element">&lt;m:mn&gt;</span>1<span class="element">&lt;/m:mn&gt;</span><br/>   <span class="element">&lt;/m:mrow&gt;</span><br/>   <span class="element">&lt;m:mrow&gt;</span><br/>    <span class="element">&lt;m:mn&gt;</span>10<span class="element">&lt;/m:mn&gt;</span><br/>   <span class="element">&lt;/m:mrow&gt;</span><br/>  <span class="element">&lt;/m:mfrac&gt;</span><br/>  <span class="element">&lt;m:mo&gt;</span>+<span class="element">&lt;/m:mo&gt;</span><br/>  <span class="element">&lt;m:mfrac&gt;</span><br/>   <span class="element">&lt;m:mrow&gt;</span><br/>    <span class="element">&lt;m:mn&gt;</span>1<span class="element">&lt;/m:mn&gt;</span><br/>   <span class="element">&lt;/m:mrow&gt;</span><br/>   <span class="element">&lt;m:mrow&gt;</span><br/>    <span class="element">&lt;m:mn&gt;</span>100<span class="element">&lt;/m:mn&gt;</span><br/>   <span class="element">&lt;/m:mrow&gt;</span><br/>  <span class="element">&lt;/m:mfrac&gt;</span><br/>  <span class="element">&lt;m:mo&gt;</span>+<span class="element">&lt;/m:mo&gt;</span><br/>  <span class="element">&lt;m:mfrac&gt;</span><br/>   <span class="element">&lt;m:mrow&gt;</span><br/>    <span class="element">&lt;m:mn&gt;</span>1<span class="element">&lt;/m:mn&gt;</span><br/>   <span class="element">&lt;/m:mrow&gt;</span><br/>   <span class="element">&lt;m:mrow&gt;</span><br/>    <span class="element">&lt;m:mn&gt;</span>1000<span class="element">&lt;/m:mn&gt;</span><br/>   <span class="element">&lt;/m:mrow&gt;</span><br/>  <span class="element">&lt;/m:mfrac&gt;</span><br/>  <span class="element">&lt;m:mo&gt;</span>+<span class="element">&lt;/m:mo&gt;</span><br/>  <span class="element">&lt;m:mfrac&gt;</span><br/>   <span class="element">&lt;m:mrow&gt;</span><br/>    <span class="element">&lt;m:mn&gt;</span>1<span class="element">&lt;/m:mn&gt;</span><br/>   <span class="element">&lt;/m:mrow&gt;</span><br/>   <span class="element">&lt;m:mrow&gt;</span><br/>    <span class="element">&lt;m:mn&gt;</span>10000<span class="element">&lt;/m:mn&gt;</span><br/>   <span class="element">&lt;/m:mrow&gt;</span><br/>  <span class="element">&lt;/m:mfrac&gt;</span><br/>  <span class="element">&lt;m:mo&gt;</span>+<span class="element">&lt;/m:mo&gt;</span><br/>  <span class="element">&lt;m:mo&gt;</span>…<span class="element">&lt;/m:mo&gt;</span><br/> <span class="element">&lt;/m:math&gt;</span></div></div><p><span id="id2552523"/>MathML 2.0 (<a class="link_ptr" href="http://www.w3.org/TR/MathML2" title=""><span>http://www.w3.org/TR/MathML2</span></a>)
+adds to these some additional elements for MathML Content Markup,
+thereby further strengthening the support for a ‘Semantic
+Math-Web’. It also provides support for XML namespaces, and
+other current XML standards, such as XML DOM, OMG IDL, ECMAScript and
+Java. It also provided a modularized version of the MathML DTD so that
+MathML fragments ‘embedded’ in XHTML 1.1 documents
+as data islands can be correctly validated.</p><p><span id="id2552546"/>The OpenMath (<a class="link_ptr" href="http://www.nag.co.uk/projects/OpenMath.html" title=""><span>http://www.nag.co.uk/projects/OpenMath.html</span></a>) project is
+coordinated by the OpenMath Society (<a class="link_ptr" href="http://www.openmath.org/" title=""><span>http://www.openmath.org/</span></a>)and funded by the European
+Commission under the Esprit Multimedia Standards Initiative that
+commenced in September 1997. It is likely to become a key standard for
+communicating semantically-rich representations of mathematical
+objects both on and off the Web in a platform-independent manner.</p><div class="p"><span id="id2552567"/>The OpenMath Standard (<a class="link_ptr" href="http://www.openmath.org/V2/standard/index.html" title=""><span>http://www.openmath.org/V2/standard/index.html</span></a>) consists of
+specifications for
+<ol><li>OpenMath objects, representing the structure of formulas (<a class="link_ptr" href="http://www.openmath.org/V2/standard/objects.html" title=""><span>http://www.openmath.org/V2/standard/objects.html</span></a>);</li><li>Content Dictionaries, providing semantic context (<a class="link_ptr" href="http://www.openmath.org/V2/standard/cd.html" title=""><span>http://www.openmath.org/V2/standard/cd.html</span></a>);</li><li>Encodings, both binary (<a class="link_ptr" href="http://www.openmath.org/V2/standard/binary.html" title=""><span>http://www.openmath.org/V2/standard/binary.html</span></a>) and
+XML (<a class="link_ptr" href="http://www.openmath.org/V2/standard/xml.html" title=""><span>http://www.openmath.org/V2/standard/xml.html</span></a>).</li></ol></div><p><span id="id2552613"/>OpenMath and MathML have certain common aspects. They both use
+prefix operators, both are XML based and they both construct their
+objects by applying certain rules recursively. Such similarities
+facilitate mapping across both standards. There are also some key
+differences between MathML and OpenMath. OpenMath does not provide
+support for presentation of mathematical objects and its scope of
+semantically-oriented elements is much broader that of MathML, with
+the expressive power to cover virtually all areas of computational
+mathematics. In fact, a particular set of Content Dictionaries, the
+‘MathML CD Group’, covers the same areas of
+mathematics as the Content Markup elements of MathML 2.0.</p><p><span id="id2552632"/>Finally, OMDoc (<a class="link_ptr" href="http://www.mathweb.org/omdoc/" title=""><span>http://www.mathweb.org/omdoc/</span></a>) is
+an extension of the OpenMath standard that supplies markup for
+structures such as axioms, theorems, proofs, definitions, texts
+(mixing formal content with mathematical text). </p><div class="p"><span id="id2552645"/>In-line versus block placement for an equation can be distinguished
+if desired, via the global <span class="att">rend</span> attribute.  The global
+<span class="att">n</span> and <span class="att">xml:id</span> attributes may also be used to label or
+identify the formula, as in the following (imaginary) example:<a class="notelink" href="#Note136"><sup>136</sup></a><div class="pre"> <span class="element">&lt;p&gt;</span>The volume of a sphere is given by the formula:
+<span class="element">&lt;formula <span class="attribute">xml:id</span>="f12" <span class="attribute">n</span>="12" <span class="attribute">rend</span>="inline"&gt;</span><br/>   <span class="element">&lt;m:math&gt;</span><br/>    <span class="element">&lt;m:mi&gt;</span>V<span class="element">&lt;/m:mi&gt;</span><br/>    <span class="element">&lt;m:mo&gt;</span>=<span class="element">&lt;/m:mo&gt;</span><br/>    <span class="element">&lt;m:mfrac&gt;</span><br/>     <span class="element">&lt;m:mrow&gt;</span><br/>      <span class="element">&lt;m:mn&gt;</span>4<span class="element">&lt;/m:mn&gt;</span><br/>     <span class="element">&lt;/m:mrow&gt;</span><br/>     <span class="element">&lt;m:mrow&gt;</span><br/>      <span class="element">&lt;m:mn&gt;</span>3<span class="element">&lt;/m:mn&gt;</span><br/>     <span class="element">&lt;/m:mrow&gt;</span><br/>    <span class="element">&lt;/m:mfrac&gt;</span><br/>    <span class="element">&lt;m:mi&gt;</span>π<span class="element">&lt;/m:mi&gt;</span><br/>    <span class="element">&lt;m:msup&gt;</span><br/>     <span class="element">&lt;m:mrow&gt;</span><br/>      <span class="element">&lt;m:mi&gt;</span>r<span class="element">&lt;/m:mi&gt;</span><br/>     <span class="element">&lt;/m:mrow&gt;</span><br/>     <span class="element">&lt;m:mrow&gt;</span><br/>      <span class="element">&lt;m:mn&gt;</span>3<span class="element">&lt;/m:mn&gt;</span><br/>     <span class="element">&lt;/m:mrow&gt;</span><br/>    <span class="element">&lt;/m:msup&gt;</span><br/>   <span class="element">&lt;/m:math&gt;</span><br/>  <span class="element">&lt;/formula&gt;</span><br/> which is readily calculated.<span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;p&gt;</span>As we have seen in equation 
+<span class="element">&lt;ptr <span class="attribute">target</span>="#f12"/&gt;</span>, ... <span class="element">&lt;/p&gt;</span></div></div><div class="p"><span id="id2552744"/>The formula element itself is defined as follows:
+<div class="specgrp"><span id="DFTFOR"/><b>Specification group 143: Formulae</b><dl><dt>Element formula</dt><dd><pre class="eg">
+formula = element formula { formula.content, formula.attributes }
+
+formula.content = text
+
+formula.attributes = attribute notation { <a class="link_odd" href="ref-data.code.html">data.code</a> }?</pre></dd></dl></div></div></div><div class="div2" id="FTGRA"><h3>19.3  Specific Elements for Graphic Images</h3><div class="p"><span id="id2552903"/>The following special purpose elements are used to indicate the presence of graphic images within a document:
+<ul class="specList"><li><b>&lt;<a href="ref-figure.html">figure</a>&gt;</b> contains a block containing graphics, illustrations, or figures.</li><li><b>&lt;<a href="ref-graphic.html">graphic</a>&gt;</b> indicates the location of an inline graphic, illustration, or figure.</li><li><b>&lt;<a href="ref-binaryObject.html">binaryObject</a>&gt;</b> provides encoded binary data representing an inline graphic or other object.</li><li><b>&lt;<a href="ref-figDesc.html">figDesc</a>&gt;</b> (Description of Figure) contains a brief prose description of the appearance or content
+of a graphic figure, for use when documenting an image without
+displaying it.</li></ul></div><p><span id="id2552929"/>The <code>&lt;graphic&gt;</code> and <code>&lt;binaryObject&gt;</code> elements form part
+of the common core module, and are discussed in section <a class="link_ptr" href="CO.html#COGR" title="Graphics and other non-textual components">4.9  Graphics and other non-textual components</a>.
+</p><div class="p"><span id="id2552947"/>The <code>&lt;figure&gt;</code> element is used to contain images, captions,
+and textual descriptions of the pictures.  The images themselves are
+specified using the <code>&lt;graphic&gt;</code> element, whose <span class="att">url</span>
+attribute provides the location of an image.  For example: <div class="pre"> <span class="element">&lt;figure&gt;</span><br/>  <span class="element">&lt;graphic <span class="attribute">url</span>="Fig1.pdf"/&gt;</span><br/> <span class="element">&lt;/figure&gt;</span></div></div><div class="p"><span id="id2552972"/>Three kinds of content may be supplied in <code>&lt;figure&gt;</code>: the
+element <code>&lt;head&gt;</code> may be used to transcribe (or supply) a
+descriptive heading or title for the graphic itself as in this
+example: <div class="pre"> <span class="element">&lt;figure&gt;</span><br/>  <span class="element">&lt;graphic <span class="attribute">url</span>="Fig1.pdf"/&gt;</span><br/>  <span class="element">&lt;head&gt;</span>Figure One: The View from the
+Bridge<span class="element">&lt;/head&gt;</span><br/> <span class="element">&lt;/figure&gt;</span></div></div><div class="p"><span id="id2552996"/>Figures are often accompanied not only by a title or heading, but
+by a paragraph or so of commentary or caption.  One or more <code>&lt;p&gt;</code>
+elements following the <code>&lt;head&gt;</code> may be used to transcribe any
+caption or discussion of the figure in the source:
+<div class="pre"> <span class="element">&lt;figure&gt;</span><br/>  <span class="element">&lt;graphic <span class="attribute">url</span>="pullman.png"/&gt;</span><br/>  <span class="element">&lt;head&gt;</span>Above:<span class="element">&lt;/head&gt;</span><br/>  <span class="element">&lt;p&gt;</span>The drawing room of the Pullman house, the white and gold saloon
+    where the magnate delighted in giving receptions for several
+    hundred people.<span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;figDesc&gt;</span>The figure shows an elaborately decorated room, at least
+    twenty-five feet side to side and fifty feet long, with ornate
+    mouldings and Corinthian columns on the walls, overstuffed
+    armchairs and loveseats arranged in several conversational
+    groupings, and two large chandeliers.<span class="element">&lt;/figDesc&gt;</span><br/> <span class="element">&lt;/figure&gt;</span></div>
+Here, the paragraph ‘The drawing room ... several hundred people’
+is transcribed from the source, while the description is provided by
+the encoder, for use by applications which cannot display the graphic
+directly. In documents created in electronic form with the needs of
+print-handicapped readers in mind, the <code>&lt;figDesc&gt;</code> element may be
+provided by the author rather than a subsequent encoder.
+<div class="pre"> <span class="element">&lt;figure&gt;</span><br/>  <span class="element">&lt;graphic <span class="attribute">url</span>="Fig1.jpg"/&gt;</span><br/>  <span class="element">&lt;head&gt;</span>Figure One: The View from the Bridge<span class="element">&lt;/head&gt;</span><br/>  <span class="element">&lt;figDesc&gt;</span>A Whistleresque view showing four
+    or five sailing boats in the foreground, and a
+    series of buoys strung out between them.<span class="element">&lt;/figDesc&gt;</span><br/> <span class="element">&lt;/figure&gt;</span></div></div><p><span id="id2553076"/>Where the graphic itself contains large amounts of text, perhaps
+with a complex structure, and perhaps difficult to distinguish from
+the graphic, the encoder should choose whether to regard the graphic
+as containing the text (in which case, a nested <code>&lt;text&gt;</code> element
+may be included within the <code>&lt;figure&gt;</code> element) or to regard the
+enclosed text as being a separate division of the <code>&lt;text&gt;</code>
+element in which the graphic appears.  In this latter case, an
+appropriate <em>divn</em> class element may be used for the text
+represented within the graphic, and the <code>&lt;figure&gt;</code> element
+embedded within it.  The choice will depend to a large degree on the
+encoder's understanding of the relationship between the graphic and
+the surrounding text.</p><p><span id="id2553110"/>Like any other element in the TEI scheme, figures may be given
+identifiers so that they can be aligned with other elements, and linked
+to or from them, as described in chapter <a class="link_ptr" href="SA.html" title="14">11  Linking, Segmentation, and Alignment</a>.  Some common
+examples are discussed briefly here;  full information is provided in
+that chapter.</p><div class="p"><span id="id2553123"/>It is often desirable to maintain two versions of an image in an
+electronic file:  one a low resolution or ‘thumbnail’
+version which, when selected by the user, causes the other, high
+resolution, version to be accessed.  In TEI terms, the thumbnail image
+acts as a <em>reference</em> to the other.  Referring to the example
+above, we will assume that the entity <strong>Fig1th</strong> contains a thumbnail
+version of the full Fig1.  We can now embed a reference to that
+image using the simple <code>&lt;ref&gt;</code> element discussed in section <a class="link_ptr" href="CO.html#COXR" title="Simple Links and Cross References">4.6  Simple Links and Cross References</a>:
+<div class="pre"> <span class="element">&lt;ref <span class="attribute">target</span>="#IM1"&gt;</span>Click here
+  <span class="element">&lt;graphic <span class="attribute">url</span>="fig1th.png"/&gt;</span><br/>   for enlightenment<br/> <span class="element">&lt;/ref&gt;</span><br/> <span class="element">&lt;figure <span class="attribute">xml:id</span>="IM1"&gt;</span><br/>  <span class="element">&lt;graphic <span class="attribute">url</span>="fig1.jpg"/&gt;</span><br/> <span class="element">&lt;/figure&gt;</span></div></div><p><span id="id2553175"/>Another common requirement is to associate part or the whole of an
+image with a textual element not necessarily contiguous to it in the
+text; this is sometimes known as a <em>callout</em>. Again,
+chapter <a class="link_ptr" href="SA.html" title="14">11  Linking, Segmentation, and Alignment</a> should be consulted for the full details of
+the mechanisms available for this purpose. This example assumes that
+we wish to associate one portion of the image held as ‘fig1’ with
+chapter two of some text, and another portion of it with chapter
+three. The application may be thought of as a hypertext browser in
+which the user selects from a graphic image which part of a text to
+read next, but the mechanism is independent of this particular
+application.</p><div class="p"><span id="id2553202"/>The first requirement is some way of identifying
+and hence pointing to sub-parts of a graphic image. This is most
+easily done by pointing into an XML graphic representation, for example an SVG file. Thus
+<div class="pre"> <span class="element">&lt;ptr <span class="attribute">xml:id</span>="PD1" <span class="attribute">target</span>="Fig1.svg#object1"/&gt;</span><br/> <span class="element">&lt;ptr <span class="attribute">target</span>="Fig1.svg#object2"/&gt;</span></div></div><div class="p"><span id="id2553223"/>These <code>&lt;ptr&gt;</code> elements identify two areas within the image
+‘Fig1’ by pointing at elements inside the XML file <span class="ident-file">Fig1.svg</span>, which contains the following.
+
+<div class="pre">
+&lt;svg width="8cm" height="3cm" viewBox="2 1 8 3"&gt;
+ &lt;g id="object1"&gt;
+  &lt;ellipse style="fill: #ffffff" cx="3.875" cy="3.025" rx="1.175" ry="1.175"/&gt;
+ &lt;/g&gt;
+ &lt;g id="object2"&gt;
+  &lt;rect style="fill: #a81616" x="7.8" y="1.9" width="2.17581" height="2.24833"/&gt;
+&lt;/g&gt;
+&lt;/svg&gt;</div></div><div class="p"><span id="id2553245"/>The next requirement is some way of identifying the parts of the
+document to which a link is to be made. The most obvious way of doing
+this is to use the global <span class="att">xml:id</span> attribute:
+<div class="pre"> <span class="element">&lt;div1 <span class="attribute">type</span>="chapter" <span class="attribute">xml:id</span>="CHAP1"&gt;</span><br/>&lt;!-- ... --&gt;<br/> <span class="element">&lt;/div1&gt;</span><br/> <span class="element">&lt;div1 <span class="attribute">type</span>="chapter" <span class="attribute">xml:id</span>="CHAP2"&gt;</span><br/>&lt;!-- ... --&gt;<br/> <span class="element">&lt;/div1&gt;</span></div></div><div class="p"><span id="id2553286"/>Now, all that is needed to linking these areas to the relevant
+chapters is a <code>&lt;linkGrp&gt;</code> element, as described in section <a class="link_ptr" href="SA.html#SAPT" title="Links">11.1  Links</a>:
+<div class="pre"> <span class="element">&lt;linkGrp <span class="attribute">type</span>="callout"&gt;</span><br/>  <span class="element">&lt;link <span class="attribute">targets</span>="#CHAP1 #PD1"/&gt;</span><br/>  <span class="element">&lt;link <span class="attribute">targets</span>="#CHAP2 #PD2"/&gt;</span><br/> <span class="element">&lt;/linkGrp&gt;</span></div></div><p><span id="id2553316"/>In this example, the SVG representation of the graphic is stored
+externally to the TEI document and linked by means of a pointer. It is
+also possible to embed the SVG representation directly within the TEI
+by extending the content model of the <code>&lt;figure&gt;</code> element to
+permit an element <code>&lt;svg&gt;</code> from the SVG namespace. Like other
+customizations of the TEI scheme, this is carried out using the
+techniques documented in section <a class="link_ptr" href="ST.html#STIN" title="Defining a TEI schema">2.2  Defining a TEI schema</a>; further
+examples are provided in chapter <a class="link_ptr" href="SA.html" title="14">11  Linking, Segmentation, and Alignment</a>.</p><div class="p"><span id="id2553344"/>The elements discussed in this section are defined as follows:
+<div class="specgrp"><span id="DFTGRA"/><b>Specification group 144: Figures</b><dl><dt>Element figure</dt><dd><pre class="eg">
+figure = element figure { figure.content }
+
+figure.content =
+   ( <a class="link_odd" href="ref-model.pLike.html">model.pLike</a> | <a class="link_odd" href="ref-model.global.html">model.global</a> | <a class="link_odd" href="ref-figure.html">figure</a> | <a class="link_odd" href="ref-figDesc.html">figDesc</a> | <a class="link_odd" href="ref-model.graphicLike.html">model.graphicLike</a> | <a class="link_odd" href="ref-head.html">head</a> )*</pre></dd><dt>Element figDesc</dt><dd><pre class="eg">
+figDesc = element figDesc { figDesc.content }
+
+figDesc.content = <a class="link_odd" href="ref-macro.paraContent.html">macro.paraContent</a></pre></dd></dl></div></div></div><div class="div2" id="FTGROV"><h3>19.4  Overview of Basic Graphics Concepts</h3><p><span id="id2553585"/>The first major distinction in graphic representation is that between
+raster graphics and vector graphics.  A <em>raster image</em> is a
+list of points, or dots.  Scanners, fax machines and other simple
+devices easily produce digital raster images, and such images are
+therefore quite common.  A <em>vector image</em>, in contrast, is a
+list of geometrical objects, such as lines, circles, arcs, or even
+cubes.  These are much more difficult to produce, and so are mainly
+encountered as the output of sophisticated systems such as architectural
+and engineering CAD programs.</p><p><span id="id2553606"/>Raster images are difficult to modify because by definition they only
+encode single points:  a line, for example, cannot grow or shrink as
+such, since it is not identified as such.  Only its component parts are
+identified, and only they can be manipulated.  Therefore the resolution
+or dot-size of a raster image is important, which is not the case with
+vector images.  It is also far more difficult to convert raster images
+to vector images than to perform the opposite conversion.  Raster images
+generally require more storage space than vector images, and a wide
+variety of methods exists for compressing them; the variation in these
+methods leads to corresponding variations in representations for storage
+and transmission of raster images.</p><p><span id="id2553623"/>Motion video usually consists of a long series of raster images.
+Data compression is even more effective on video than on single raster
+images (mainly owing to redundancy which arises from the usual similarity
+of adjacent frames).  Notations for representing full-motion video
+are hotly debated at this time, and any user of these Guidelines would
+do well to obtain up-to-date expert advice before undertaking a project
+using them.</p><p><span id="id2553634"/>The compression methods used with any of these image types may be
+‘lossy’ or ‘lossless’.  Methods
+for <em>lossy compression</em> save space by discarding a small
+portion of the image's detail, such as fine distinctions of shading.
+When decompressed, therefore, such an image will be only a close
+approximation of the original.  In contrast, <em>lossless
+compression</em> guarantees that the exact uncompressed image will be
+reproducible from the compressed form:  only truly redundant information
+is removed. In general, therefore, lossless compression does not save
+quite so much space as lossy compression, though it does guarantee
+fidelity to the original uncompressed image.</p><p><span id="id2553663"/>Raster images may be characterized by their <em>resolution</em>,
+which is the number of dots per inch used to represent the image.
+Doubling the resolution will give a more precise image, but also
+quadruple the storage requirement (before compression), and affect
+processing time for any operations to be performed, such as displaying
+an image for a reader. Motion video also has resolution in time:  the
+number of frames to be shown per second.  Encoders should consider
+carefully what resolution(s) and frame rate(s) to use for particular
+applications; these Guidelines express no recommendation in this matter,
+save the universal ones of consistency and documentation.</p><p><span id="id2553682"/>Within any image, it is typical to refer to locations via Cartesian
+co-ordinate axes: values for x, y, and sometimes z and/or time.
+However, graphic notations vary in whether co-ordinates
+count from left-to-right and top-to-bottom, or another way. They also
+vary in whether co-ordinates are considered real (inches, millimeters,
+and so on), or virtual (dots). These Guidelines do not recommend any of
+these methods over another, but all decisions made should be applied
+consistently, and documented in the <code>&lt;encodingDesc&gt;</code> section of the
+TEI header.<a class="notelink" href="#Note137"><sup>137</sup></a></p><p><span id="id2553715"/>The way in which the color of an image is rendered also varies
+greatly. In monochrome images every displayed point is either black or
+white. In <em>gray-scale</em> images, each point is rendered in
+some shade of gray, the number of shades varying from system to system.
+In true polychrome images, points are rendered in different colours,
+again with varying limitations affecting the number of distinct shades
+and the means by which they are displayed.</p></div><div class="div2" id="FTGRNO"><h3>19.5  Graphic Image Formats</h3><p><span id="id2553742"/>As noted above, there exists a bewildering variety of different
+graphics formats, and the following list is in no way exhaustive.
+Moreover, inclusion of any format in this list should not be taken as
+indicating endorsement by the TEI of this format or any products
+associated with it. With the exception of CGM, JPEG, PNG, and SVG, all the formats listed
+here are proprietary to a greater or lesser extent and cannot therefore
+be regarded as standards in any meaningful sense. They are however
+widely used by many different vendors.</p><div class="p"><span id="id2553756"/>The following formats are widely used at the present time, and likely to
+remain supported by more than one vendor's software:
+<ul><li>BMP:   Microsoft bitmap format</li><li>CGM:  Computer Graphics Metafile</li><li>GIF:  Graphics Interchange Format</li><li>JPEG:  Joint Photographic Expert Group</li><li>PBM:  Portable Bit Map</li><li>PCX:  IBM PC raster format</li><li>PICT:  Macintosh drawing format</li><li>PNG:  Portable Network Graphics format</li><li>Photo-CD:  Kodak Photo Compact Disk format</li><li>QuickTime:  Apple real-time image system</li><li>SMIL: Synchronized Multimedia Integration Language format</li><li>SVG:  Scalable Vector Graphics format</li><li>SVG: Scalable Vector Graphics format</li><li>TIFF:  Tagged Image File Format</li></ul></div><p><span id="id2553822"/>Brief descriptions of all the above are given below.  Where possible,
+current addresses or other contact information are shown for the
+originator of each format.  Many formal standards, especially those
+promulgated by ISO and many related national organizations (ANSI, DIN,
+BSI, and many more), are available from those national organizations.
+Addresses may be found in any standard organizational directory for the
+country in question.
+	</p><div class="div3" id="FTGRAVGF"><h4>19.5.1  Vector Graphic Formats</h4><dl><dt>CGM:  Computer Graphics Metafile</dt><dd>This  vector graphics format is
+specified by an ISO standard, ISO 8632:1987, amended in 1990.
+It defines binary, character, and plain-text encodings;
+the non-binary forms are safer for blind interchange,
+especially over networks.  Documentation on CGM is available from ISO
+and from its member national bodies such as AFNOR, ANSI, BSI, DIN, JIS,
+etc.  </dd><dt>SVG:  Scalable Vector Graphics format</dt><dd>SVG is a language for describing two-dimensional vector and 
+mixed vector or raster graphics in XML.  
+It is defined by the Scalable
+Vector Graphics (SVG) 1.0 Specification, W3C Recommendation, 04 September 2001, and is
+		available at <a class="link_ptr" href="http://www.w3.org/TR/2001/REC-SVG-20010904/" title=""><span>http://www.w3.org/TR/2001/REC-SVG-20010904/</span></a>.
+</dd><dt>PICT:  Macintosh drawing format</dt><dd>This format is universally supported on Macintosh(tm) systems, and
+readable by a limited range of software for other systems.
+Documentation is available from Apple Computer Company, Cupertino,
+California USA.
+ </dd></dl></div><div class="div3" id="FTGRARGF"><h4>19.5.2  Raster Graphic Formats</h4><dl><dt>PNG:  Portable Network Graphics format</dt><dd>PNG is the only non-proprietary raster format currently widely
+available. It provides an
+   extensible file format for the lossless, portable, well-compressed
+   storage of raster images.  As such, it is a patent-free replacement for
+   GIF and can also replace many common uses of TIFF.  Indexed-color,
+   grayscale, and truecolor images are supported, plus an optional alpha
+   channel.  Sample depths range from 1 to 16 bits.
+   It is defined by IETF RFC 2083, March 1997.
+</dd><dt>TIFF:  Tagged Image File Format</dt><dd>Currently the most widely supported raster image format,
+especially for black and white images, TIFF is also one of the few
+formats commonly supported on more than one operating system.  The
+drawback to TIFF is that it actually is a wrapper for several formats,
+and some TIFF-supporting software does not support all variants.  TIFF
+files may use LZW, CCITT Group 4, or PackBits compression methods, or
+may use no compression at all.  Also, TIFF files may be monochrome,
+greyscale, or color.  All such options should be specified in prose at
+the end of the <code>&lt;encodingDesc&gt;</code> section of the TEI header for any
+document including TIFF images.  TIFF is owned by Aldus Corporation.
+Documentation on TIFF is available from them at Craigcook Castle,
+Craigcook Road, Edinburgh EH4 3UH, Scotland, or 411 First Avenue
+South, Seattle, Washington 98104 USA.
+</dd><dt>GIF:  Graphics Interchange Format</dt><dd>Color raster images are widely available in this form, which was
+created by CompuServe Information Services, but has by now been
+implemented for many other systems as well.  Documentation on GIF is
+copyright by, and is available from, CompuServe Incorporated, Graphics
+Technology Department, 5000 Arlington Center Boulevard, Columbus, Ohio
+43220 USA.
+</dd><dt>PBM:  Portable Bit Map</dt><dd>PBM files are easy to process, eschewing all compression in favor
+of transparency of file format.  PBM files can, of course, be compressed
+by generic file-compression tools for storage and transfer.  Public
+domain software exists which will convert many other formats to and from
+PBM.  Documentation on PBM is copyright by Jeff Poskanzer, and is available
+widely on the Internet.
+</dd><dt>PCX:  IBM PC raster format</dt><dd>This format is used by most IBM PC paint programs, and supports
+both monochrome and color images.  Documentation is available from
+ZSoft Corporation, Technical Support Department, ATTN: Technical
+Reference Manual, 450 Franklin Rd. Suite 100, Marietta, GA 30067 USA.
+ </dd><dt>BMP:   Microsoft bitmap format</dt><dd>This format is the standard raster format for computer using
+Microsoft Windows (tm) or Presentation Manager (tm).  Documentation
+is available from Microsoft Corporation.
+ </dd></dl></div><div class="div3" id="FTGRAMPEG"><h4>19.5.3  Photographic and Motion Video Formats</h4><dl><dt>JPEG:  Joint Photographic Experts Group</dt><dd>This standard is sponsored by CCITT and by ISO.  It is ISO/IEC
+Draft International Standard 10918-1, and CCITT T.81.  It handles
+monochrome and color images with a variety of compression techniques.
+JPEG per se, like CCITT Group IV, must be encapsulated before
+transmission; this can be done via TIFF, or via the JPEG File
+Interchange Format (JFIF), as commonly done for Internet delivery.
+ </dd><dt>QuickTime:  Apple real-time image system</dt><dd>QuickTime is a proprietary method introduced by Apple Computer
+Company to synchronize the display of various data.  The data can
+include frames of video, sound, lighting control equipment, and other
+things.  Viewers for QuickTime productions are available for Apple and
+other computers.  Further information is available from Apple Computer
+Incorporated, 10201 North de Anza Boulevard MS 23AQ, Cupertino,
+California 95014 USA.
+</dd><dt>Photo-CD:  Kodak Photo Compact Disk format</dt><dd>This format was introduced by Kodak for rasterizing photographs
+and storing them on CD-ROMs (about one hundred 35mm file images fit on
+one disk), for display on televisions or CD-I systems.  Information on
+Photo-CD is available from Kodak Limited, Research and Development,
+Headstone Drive, Harrow, Middlesex HA1 4TY, UK.
+</dd><dt>SMIL: Synchronized Multimedia Integration Language
+    format</dt><dd>SMIL is a W3C Recommendation which supports
+    the integration of independent multimedia objects into a
+    synchronized multimedia presentation. It provides multimedia
+    authors with easily-defined basic timing relationships, fine-tuned
+    synchronization, spatial layout, direct inclusion of non-text and
+    non-image media objects, hyperlink support for time-based media,
+    adaptiveness to varying user and system characteristics.  SMIL 1.0
+		(<a class="link_ptr" href="http://www.w3.org/TR/REC-smil/" title=""><span>http://www.w3.org/TR/REC-smil/</span></a>) became a
+    W3C Recommendation on June 15, 1998, and was further developed
+     in
+    SMIL 2.0.  SMIL 2.0 adds native support for transitions,
+    animation, event-based interaction, extended layout facilities,
+    and more sophisticated timing and synchronization primitives to
+    the SMIL 1.0 language. It also allows reuse of SMIL syntax and
+    semantics in other XML-based languages, in particular those who
+    need to represent timing and synchronization.  For example, SMIL
+    2.0 components are used for integrating timing into XHTML Document
+    Types and into SVG. SMIL 2.0 also provides recommendations for
+		Document Types based on SMIL 2.0 Modules (<a class="link_ptr" href="http://www.w3.org/TR/smil20/smil-modules.html" title=""><span>http://www.w3.org/TR/smil20/smil-modules.html</span></a>). One
+		such Document Type is the SMIL 2.0 Language Profile (<a class="link_ptr" href="http://www.w3.org/TR/smil20/smil20-profile.html" title=""><span>http://www.w3.org/TR/smil20/smil20-profile.html</span></a>). It
+    contains support for all of the major SMIL 2.0 features including
+    animation, content control, layout, linking, media object,
+    meta-information, structure, timing and transition effects and is
+    designed for Web clients that support direct playback from SMIL
+		2.0 markup.  SMIL 2.0 (<a class="link_ptr" href="http://www.w3.org/TR/smil20/" title=""><span>http://www.w3.org/TR/smil20/</span></a>) became a W3C
+    Recommendation on August 7, 2001, becoming the first vocabulary to
+    provide XML Schema support and to have reached such status.
+</dd></dl><p><span id="id2554121"/>As noted above, the reader will encounter many, many other graphics
+formats.  
+</p></div></div><p class="left"><i> Up: </i><a class="navigation" href="index.html">Contents</a><i> Previous: </i><a class="navigation" href="GD.html">18  Graphs, Networks, and Trees</a><i> Next: </i><a class="navigation" href="CC.html">20  Language Corpora</a></p><div class="notes"><div class="noteHeading">Notes</div><div class="note"><a id="Note135">135.</a> In this case additional redefinitions
+may also be needed to avoid name clashes with existing TEI elements.
+For further details see chapter <a class="link_ptr" href="USE.html#MD" title="29">24.2  Modifying and Customizing the TEI DTD</a>.</div><div class="note"><a id="Note136">136.</a>We do not show here how the MathML names are to be
+included in the TEI name space</div><div class="note"><a id="Note137">137.</a>Since no special purpose element is provided for this purpose
+by the current version of the Guidelines, such information should be
+provided as one or more distinct paragraphs at the end of the
+<code>&lt;encodingDecl&gt;</code> element described in section <a class="link_ptr" href="HD.html#HD5" title="The Encoding Description">3.3  The Encoding Description</a>.</div></div><div class="stdfooter"><hr/><div class="footer"><a class="plain" href="http://www.tei-c.org/Consortium/">TEI Consortium</a> | <a class="plain" href="index.html">TEI P5</a> | <a class="plain" href="http://www.tei-c.org/Consortium/contact.xml">Feedback</a></div><hr/><address> edited by C.M. Sperberg-McQueen and
+	Lou Burnard.
+      Date: 2007<br/>Copyright TEI Consortium 2007<!--
+	  Generated  using an XSLT version 1.0 stylesheet
+	  based on http://www.tei-c.org/Stylesheets/teic/tei.xsl
+	  processed using libxslt
+	  on 2007-03-13T16:03:02Z--></address></div></div></div></div></body></html>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;hand&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;hand&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;hand&gt;</h1></div><div><span id="hand"/><table border="1" class="wovenodd"><tr><td class="elementSpec">hand</td><td colspan="2" class="wovenodd-col2">used in the header to define each distinct scribe or
+handwriting style.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element hand
+{
+   att.global.attributes,
+   attribute scribe { <a class="link_odd" href="ref-data.code.html">data.code</a> }?,
+   attribute style { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> }?,
+   attribute mainLang { <a class="link_odd" href="ref-data.language.html">data.language</a> }?,
+   attribute ink { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> }?,
+   attribute writing { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> }?,
+   attribute first { <a class="link_odd" href="ref-data.truthValue.html">data.truthValue</a> }?,
+   attribute resp { <a class="link_odd" href="ref-data.code.html">data.code</a> }?,
+   empty
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>In addition to global attributes<table><tr><td class="attDef">scribe</td><td colspan="2">gives the name of,or other identifier for, the scribe.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.code.html">data.code</a></code></td></tr><tr><td/><td><span class="label">Values: </span>Any name, such as tremulous
+ hand, Hand B, Hoccleve,
+ used to identify a scribe</td></tr><tr><td class="attDef">style</td><td colspan="2">indicates recognized writing styles.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a></code></td></tr><tr><td/><td><span class="label">Values: </span>Any descriptive name such as secretary,
+copperplate, Chancery, Italian, etc.</td></tr><tr><td class="attDef">mainLang</td><td colspan="2">indicates dominant language of hand.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.language.html">data.language</a></code></td></tr><tr><td/><td><span class="label">Values: </span>As per RFC 3066 or its successor; e.g. <span class="val">la</span>
+      (latin), <span class="val">en-NZ</span> (English as spoken in New Zealand), <span class="val">zh-TW</span>
+      (Taiwanese).</td></tr><tr><td class="attDef">ink</td><td colspan="2">describes tint or type
+of ink, e.g. brown.  May also be used to indicate the writing medium, e.g. pencil</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a></code></td></tr><tr><td class="attDef">writing</td><td colspan="2">describes other characteristics of the hand,
+particularly those related to the quality of the writing.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a></code></td></tr><tr><td><!-- --></td><td valign="top">Sample values include:<table class="valList"><tr><td valign="top"><b>shaky</b></td><td valign="top">(handwriting is shaky) </td></tr><tr><td valign="top"><b>thick</b></td><td valign="top">(strokes are unusually thick) </td></tr><tr><td valign="top"><b>regular</b></td><td valign="top">(writing is regular) </td></tr></table></td></tr><tr><td class="attDef">first</td><td colspan="2">indicates whether or
+not this is the first or main scribe of the document.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.truthValue.html">data.truthValue</a></code></td></tr><tr><td/><td><span class="label">Values: </span>true or false</td></tr><tr><td class="attDef">resp</td><td colspan="2">indicates the editor or transcriber responsible for identifying
+the hand.</td></tr><tr><td/><td><span class="label">Status: </span>Recommended</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.code.html">data.code</a></code></td></tr><tr><td/><td><span class="label">Values: </span>a pointer to one of the identifiers declared in the
+      document header, associated with a person asserted as
+      responsible for some aspect of the text's creation,
+      transcription, editing, or encoding (see chapter <a class="link_ptr" href="CE.html" title="17">14  Certainty and Responsibility</a>)</td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p><span id="id2521308"/>The global <span class="att">xml:id</span> attribute is required on this element, and
+supplies an identifier, either numeric or alphanumeric, used
+thereafter in the document to refer to this scribe or handwriting
+style.</p><p><span id="id2521317"/>The <code>&lt;hand&gt;</code>  element is used in the header to
+define each unique hand, including unique scribes, distinguished by
+the encoder in the document.  One such element must appear within the
+header for each hand distinguished in the text.   Each location where
+a change of hands occurs is marked in the text by the
+<code>&lt;handShift&gt;</code> milestone element.</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="PH.html#PHDH" title="Document Hands">15.2.1  Document Hands</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">transcr</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

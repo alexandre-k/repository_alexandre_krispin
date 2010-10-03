@@ -1,0 +1,7 @@
+\documentclass{article}
+\usepackage{xltxtra}
+\usepackage{bidi}
+\newfontfamily\jap[Scale=0.8]{IPA明朝}
+\begin{document}
+{\jap \setRL{ここはテストです。完璧な成功ですね。}}
+\end{document}

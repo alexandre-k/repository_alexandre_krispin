@@ -1,0 +1,898 @@
+namespace a1 = "http://relaxng.org/ns/compatibility/annotations/1.0"
+namespace rng = "http://relaxng.org/ns/structure/1.0"
+
+# Schema generated 2007-03-13T16:02:28Z..
+# Copyright 2005 TEI Consortium.
+# This is free software; you can redistribute it and/or
+#	    modify it under the terms of the GNU General Public
+#	    License as published by the Free Software Foundation;
+#	    either version 2 of the License, or (at your option) any
+#	    later version.
+# This material is distributed in the hope that it will be
+#	    useful, but WITHOUT ANY WARRANTY; without even the implied
+#	    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+#	    PURPOSE. See the GNU General Public License for more
+#	    details.
+# You should have received a copy of the GNU General Public
+#	    License along with this file; if not, write to the Free
+#	    Software Foundation, Inc., 59 Temple Place, Suite 330,
+#	    Boston, MA 02111-1307, USA.
+# To contact the TEI Consortium use the following addresses.
+#	    For general (non-technical) enquiries: 
+#		  target="mailto:info@tei-c.org"/>info@tei-c.orgFor membership enquiries: membership@tei-c.orgFor technical enquiries, particularly about the
+#		Guidelines, DTDs, schemas, or software available from
+#		the TEI-C: editors@tei-c.orgFor up to date information, consult the TEI web site at http://www.tei-c.org/P5The TEI Header
+
+# Definitions from module header
+
+# Set global predeclared macros
+
+# Set predeclared macros
+
+# 0. predeclared macros
+
+# 1. classes
+model.headerPart = encodingDesc | profileDesc
+model.headerPart_sequence = encodingDesc, profileDesc
+model.headerPart_sequenceOptional = encodingDesc?, profileDesc?
+model.headerPart_sequenceOptionalRepeatable =
+  encodingDesc*, profileDesc*
+model.headerPart_sequenceRepeatable = encodingDesc+, profileDesc+
+model.sourceDescPart = scriptStmt | recordingStmt
+model.sourceDescPart_sequence = scriptStmt, recordingStmt
+model.sourceDescPart_sequenceOptional = scriptStmt?, recordingStmt?
+model.sourceDescPart_sequenceOptionalRepeatable =
+  scriptStmt*, recordingStmt*
+model.sourceDescPart_sequenceRepeatable = scriptStmt+, recordingStmt+
+model.encodingPart =
+  projectDesc
+  | samplingDecl
+  | editorialDecl
+  | tagsDecl
+  | refsDecl
+  | classDecl
+  | fsdDecl
+  | metDecl
+  | variantEncoding
+  | charDesc
+model.encodingPart_sequence =
+  projectDesc,
+  samplingDecl,
+  editorialDecl,
+  tagsDecl,
+  refsDecl,
+  classDecl,
+  fsdDecl,
+  metDecl,
+  variantEncoding,
+  charDesc
+model.encodingPart_sequenceOptional =
+  projectDesc?,
+  samplingDecl?,
+  editorialDecl?,
+  tagsDecl?,
+  refsDecl?,
+  classDecl?,
+  fsdDecl?,
+  metDecl?,
+  variantEncoding?,
+  charDesc?
+model.encodingPart_sequenceOptionalRepeatable =
+  projectDesc*,
+  samplingDecl*,
+  editorialDecl*,
+  tagsDecl*,
+  refsDecl*,
+  classDecl*,
+  fsdDecl*,
+  metDecl*,
+  variantEncoding*,
+  charDesc*
+model.encodingPart_sequenceRepeatable =
+  projectDesc+,
+  samplingDecl+,
+  editorialDecl+,
+  tagsDecl+,
+  refsDecl+,
+  classDecl+,
+  fsdDecl+,
+  metDecl+,
+  variantEncoding+,
+  charDesc+
+model.editorialDeclPart =
+  correction
+  | normalization
+  | quotation
+  | hyphenation
+  | segmentation
+  | stdVals
+  | interpretation
+model.editorialDeclPart_sequence =
+  correction,
+  normalization,
+  quotation,
+  hyphenation,
+  segmentation,
+  stdVals,
+  interpretation
+model.editorialDeclPart_sequenceOptional =
+  correction?,
+  normalization?,
+  quotation?,
+  hyphenation?,
+  segmentation?,
+  stdVals?,
+  interpretation?
+model.editorialDeclPart_sequenceOptionalRepeatable =
+  correction*,
+  normalization*,
+  quotation*,
+  hyphenation*,
+  segmentation*,
+  stdVals*,
+  interpretation*
+model.editorialDeclPart_sequenceRepeatable =
+  correction+,
+  normalization+,
+  quotation+,
+  hyphenation+,
+  segmentation+,
+  stdVals+,
+  interpretation+
+model.profileDescPart =
+  langUsage
+  | textClass
+  | handShift
+  | handList
+  | textDesc
+  | particDesc
+  | settingDesc
+model.profileDescPart_sequence =
+  langUsage,
+  textClass,
+  handShift,
+  handList,
+  textDesc,
+  particDesc,
+  settingDesc
+model.profileDescPart_sequenceOptional =
+  langUsage?,
+  textClass?,
+  handShift?,
+  handList?,
+  textDesc?,
+  particDesc?,
+  settingDesc?
+model.profileDescPart_sequenceOptionalRepeatable =
+  langUsage*,
+  textClass*,
+  handShift*,
+  handList*,
+  textDesc*,
+  particDesc*,
+  settingDesc*
+model.profileDescPart_sequenceRepeatable =
+  langUsage+,
+  textClass+,
+  handShift+,
+  handList+,
+  textDesc+,
+  particDesc+,
+  settingDesc+
+# 2. elements
+
+authority =
+  ## (release authority) supplies the name of a person or other agency responsible for
+  ##   making an electronic file available, other than a publisher or
+  ##   distributor.
+  element authority { authority.content, authority.attributes }
+authority.content = macro.phraseSeq
+authority.attributes = att.global.attributes, empty
+
+availability =
+  ## supplies information about the availability of a text, for
+  ##   example any restrictions on its use or distribution, its copyright
+  ##   status, etc.
+  element availability { availability.content, availability.attributes }
+availability.content = model.pLike+
+availability.attributes =
+  att.global.attributes,
+  ## supplies a code identifying the current availability of the
+  ## text.
+  [ a1:defaultValue = "unknown" ]
+  attribute status {
+    ## (the text is freely available.
+    ##     ) 
+    "free" | ## (the status of the text is unknown.
+      ##     ) 
+      "unknown" | ## (the text is not freely available.
+      ##    ) 
+      "restricted"
+  }?,
+  empty
+
+broadcast =
+  ## (broadcast) describes a broadcast used as the source of a spoken text.
+  element broadcast { broadcast.content, broadcast.attributes }
+broadcast.content = model.pLike+ | model.biblLike | recording
+broadcast.attributes =
+  att.global.attributes, att.declarable.attributes, empty
+
+cRefPattern =
+  ## (defines how to convert a canonical reference into a URI) specifies an expression and replacement pattern for
+  ##   tranforming a canonical reference into a URI
+  element cRefPattern { cRefPattern.content, cRefPattern.attributes }
+cRefPattern.content = model.pLike*
+cRefPattern.attributes =
+  att.global.attributes,
+  ## specifies a regular expression against which the values of
+  ##       cRef attributes can be matched.
+  attribute matchPattern { data.pattern },
+  ## specifies a replacement pattern
+  ##       which, once subpattern substitution has been performed, provides
+  ##       a URI.
+  attribute replacementPattern { text },
+  empty
+
+catDesc =
+  ## (category description) describes some category within a taxonomy
+  ## or text typology, either in the form of a brief prose description
+  ## or in terms of the situational parameters used by the TEI
+  ## formal textDesc.
+  element catDesc { catDesc.content, catDesc.attributes }
+catDesc.content = (text | model.phrase | model.catDescPart)*
+catDesc.attributes = att.global.attributes, empty
+
+catRef =
+  ## (category reference) specifies one or more defined categories
+  ## within some taxonomy or text typology.
+  element catRef { catRef.content, catRef.attributes }
+catRef.content = empty
+catRef.attributes =
+  att.global.attributes,
+  ## identifies the categories concerned
+  attribute target {
+    list { data.pointer+ }
+  },
+  ## identifies the classification scheme within which the set of
+  ##     categories concerned is defined
+  attribute scheme { data.pointer }?,
+  empty
+
+category =
+  ## (category) contains an individual descriptive category, possibly nested
+  ## within a superordinate category, within a user-defined taxonomy.
+  element category { category.content, category.attributes }
+category.content = (catDesc | model.glossLike), category*
+category.attributes = att.global.attributes, empty
+
+change =
+  ## summarizes a particular change or correction made
+  ## to a particular version of an electronic text which is
+  ## shared between several researchers.
+  element change { change.content, change.attributes }
+change.content = macro.specialPara
+change.attributes =
+  att.global.attributes,
+  att.ascribed.attributes,
+  ## supplies the date of the change in standard form,  i.e. yyyy-mm-dd.
+  attribute date { data.temporal }?,
+  empty
+
+classCode =
+  ## contains the classification code used for this text in some
+  ## standard classification system.
+  element classCode { classCode.content, classCode.attributes }
+classCode.content = macro.phraseSeq
+classCode.attributes =
+  att.global.attributes,
+  ## identifies the classification system or taxonomy in use.
+  attribute scheme { data.pointer },
+  empty
+
+classDecl =
+  ## (classification declarations) contains one or more taxonomies defining any classificatory
+  ## codes used elsewhere in the text.
+  element classDecl { classDecl.content, classDecl.attributes }
+classDecl.content = taxonomy+
+classDecl.attributes = att.global.attributes, empty
+
+correction =
+  ## (correction principles) states how and under what circumstances corrections have been
+  ## made in the text.
+  element correction { correction.content, correction.attributes }
+correction.content = model.pLike+
+correction.attributes =
+  att.global.attributes,
+  att.declarable.attributes,
+  ## indicates the degree of correction applied to the text.
+  [ a1:defaultValue = "unknown" ]
+  attribute status {
+    ## (the text has been thoroughly checked and
+    ##                        proofread.
+    ##     ) 
+    "high" | ## (the text has been checked at least once.
+      ##     ) 
+      "medium" | ## (the text has not been checked.
+      ##     ) 
+      "low" | ## (the correction status of the text is unknown.
+      ##    ) 
+      "unknown"
+  }?,
+  ## indicates the method adopted to indicate corrections within the
+  ##          text.
+  [ a1:defaultValue = "silent" ]
+  attribute method {
+    ## (corrections have been made silently
+    ##     ) 
+    "silent" | ## (corrections have been represented using editorial tags
+      ##    ) 
+      "tags"
+  }?,
+  empty
+
+creation =
+  ## contains information about the creation of a text.
+  element creation { creation.content, creation.attributes }
+creation.content = macro.phraseSeq
+creation.attributes = att.global.attributes, empty
+
+distributor =
+  ## supplies the name of a person or other agency responsible for the
+  ## distribution of a text.
+  element distributor { distributor.content, distributor.attributes }
+distributor.content = macro.phraseSeq
+distributor.attributes = att.global.attributes, empty
+
+edition =
+  ## (Edition) describes the particularities of one edition of a text.
+  element edition { edition.content, edition.attributes }
+edition.content = macro.phraseSeq
+edition.attributes = att.global.attributes, empty
+
+editionStmt =
+  ## (edition statement) groups information relating to one edition of a text.
+  element editionStmt { editionStmt.content, editionStmt.attributes }
+editionStmt.content = model.pLike+ | (edition, respStmt*)
+editionStmt.attributes = att.global.attributes, empty
+
+editorialDecl =
+  ## (editorial practice declaration) provides details of editorial principles and practices applied
+  ## during the encoding of a text.
+  element editorialDecl {
+    editorialDecl.content, editorialDecl.attributes
+  }
+editorialDecl.content = model.pLike+ | model.editorialDeclPart+
+editorialDecl.attributes =
+  att.global.attributes, att.declarable.attributes, empty
+
+encodingDesc =
+  ## (Encoding description) documents the relationship between an electronic text and the
+  ## source or sources from which it was derived.
+  element encodingDesc { encodingDesc.content, encodingDesc.attributes }
+encodingDesc.content = (model.encodingPart | model.pLike)+
+encodingDesc.attributes = att.global.attributes, empty
+
+equipment =
+  ## (equipment) provides technical details of the equipment and media used for
+  ## an audio or video recording used as the source for a spoken text.
+  element equipment { equipment.content, equipment.attributes }
+equipment.content = model.pLike+
+equipment.attributes =
+  att.global.attributes, att.declarable.attributes, empty
+
+extent =
+  ## describes the approximate size of a text as stored on
+  ## some carrier medium, whether digital or non-digital, specified in any convenient units.
+  element extent { extent.content, extent.attributes }
+extent.content = macro.phraseSeq
+extent.attributes = att.global.attributes, empty
+
+fileDesc =
+  ## (File Description) contains a full bibliographic description of an electronic
+  ## file.
+  element fileDesc { fileDesc.content, fileDesc.attributes }
+fileDesc.content = macro.fileDescPart, sourceDesc+
+fileDesc.attributes = att.global.attributes, empty
+
+fsdDecl =
+  ## (FSD (feature-system declaration) declaration) identifies the feature system declaration which contains
+  ## definitions for a particular type of feature structure.
+  element fsdDecl { fsdDecl.content, fsdDecl.attributes }
+fsdDecl.content = empty
+fsdDecl.attributes =
+  att.global.attributes,
+  ## identifies the type of feature structure documented by the FSD;
+  ## this will be the value of the type attribute on at least one
+  ## feature structure.
+  attribute type { data.enumerated },
+  ## supplies a link to the entity containing the feature system
+  ## declaration. 
+  attribute url { data.pointer },
+  empty
+
+funder =
+  ## (Funding body) specifies the name of an individual, institution, or organization
+  ## responsible for the funding of a project or text.
+  element funder { funder.content, funder.attributes }
+funder.content = macro.phraseSeq
+funder.attributes = att.global.attributes, empty
+
+hyphenation =
+  ## (Hyphenation) summarizes the way in which hyphenation in a source text has been
+  ## treated in an encoded version of it.
+  element hyphenation { hyphenation.content, hyphenation.attributes }
+hyphenation.content = model.pLike+
+hyphenation.attributes =
+  att.global.attributes,
+  att.declarable.attributes,
+  ## indicates whether or not end-of-line hyphenation has been
+  ##	retained in a text.
+  [ a1:defaultValue = "some" ]
+  attribute eol {
+    ## (all end-of-line hyphenation has been retained,
+    ##                    even though the lineation of the original
+    ##                    may not have been.
+    ##    ) 
+    "all" | ## (end-of-line hyphenation has been retained in some
+      ##                    cases.
+      ##    ) 
+      "some" | ## (all soft end-of-line hyphenation has been removed:
+      ##                    any remaining end-od-line hyphenation should be retained.
+      ##   ) 
+      "hard" | ## (all end-of-line hyphenation has been removed:
+      ##                   any remaining hyphenation occurred within the line.
+      ##    ) 
+      "none"
+  }?,
+  empty
+
+idno =
+  ## (identifying number) supplies any standard or non-standard number used to identify a
+  ## bibliographic item.
+  element idno { idno.content, idno.attributes }
+idno.content = text
+idno.attributes =
+  att.global.attributes,
+  ## categorizes the number, for example as an ISBN or other
+  ##          standard series.
+  attribute type { data.enumerated }?,
+  empty
+
+interpretation =
+  ## describes the scope of any analytic or interpretive information
+  ## added to the text in addition to the transcription. 
+  element interpretation {
+    interpretation.content, interpretation.attributes
+  }
+interpretation.content = model.pLike+
+interpretation.attributes =
+  att.global.attributes, att.declarable.attributes, empty
+
+keywords =
+  ## contains a list of keywords or phrases identifying the topic or
+  ## nature of a text.
+  element keywords { keywords.content, keywords.attributes }
+keywords.content = term+ | \list
+keywords.attributes =
+  att.global.attributes,
+  ## identifies the controlled vocabulary within which the set of
+  ##   keywords concerned is defined.
+  attribute scheme { data.pointer },
+  empty
+
+langUsage =
+  ## (language usage) describes the languages, sublanguages, registers, dialects etc.
+  ## represented within a text.
+  element langUsage { langUsage.content, langUsage.attributes }
+langUsage.content = language+
+langUsage.attributes =
+  att.global.attributes, att.declarable.attributes, empty
+
+language =
+  ## characterizes a single language or sublanguage used within a
+  ##   text.
+  element language { language.content, language.attributes }
+language.content = macro.phraseSeq
+language.attributes =
+  att.global.attributes,
+  ## Supplies a language code constructed as defined in RFC 3066 (or
+  ##       its successor) which is used to identify the language documented
+  ##       by this element, and which is referenced by the global xml:lang attribute.
+  attribute ident { data.language },
+  ## specifies the approximate percentage (by volume) of the
+  ##       text which uses this language.
+  attribute usage {
+    xsd:nonNegativeInteger { maxInclusive = "100" }
+  }?,
+  empty
+
+metDecl =
+  ## documents the notation employed to represent a metrical
+  ##   pattern when this is specified as the value of a met,
+  ##   real, or rhyme attribute on any structural
+  ##   element of a metrical text (e.g. lg, l, or
+  ##   seg).
+  element metDecl { metDecl.content, metDecl.attributes }
+metDecl.content = macro.componentSeq | metSym+
+metDecl.attributes =
+  att.global.attributes,
+  att.declarable.attributes,
+  ## indicates whether the notation conveys the abstract
+  ##       metrical form, its actual prosodic realization, or the rhyme
+  ##       scheme, or some combination thereof.
+  ## Sorry, unable to create schema that uses actual counts minOccurs=1 and maxOccurs=3; approximating to minOccurs=1 and maxOccurs=unbounded.
+  [ a1:defaultValue = "met real" ]
+  attribute type {
+    list { data.enumerated, data.enumerated* }
+  }?,
+  ## specifies a regular expression defining any value that
+  ##	is legal for this notation.
+  attribute pattern { data.pattern }?,
+  empty
+
+metSym =
+  ## documents the intended significance of a particular character or
+  ## character sequence within a metrical notation, either explicitly or in
+  ## terms of other symbol elements in the same metDecl.
+  element metSym { metSym.content, metSym.attributes }
+metSym.content = macro.phraseSeq
+metSym.attributes =
+  att.global.attributes,
+  ## specifies the character or character sequence being documented.
+  attribute value {
+    list { data.word+ }
+  },
+  ## specifies whether the symbol is defined in terms of other
+  ## symbols (terminal is set to false) or in prose
+  ## (terminal is set to true).
+  [ a1:defaultValue = "true" ]
+  attribute terminal {
+    ## (the element contains a prose definition of its meaning.) 
+    "true" | ## (the element contains a definition of its meaning given using
+      ## symbols defined elsewhere in the same metDecl element.) 
+      "false"
+  }?,
+  empty
+
+\namespace =
+  ## supplies the formal name of the namespace to which the elements
+  ## documented by its children belong. 
+  element namespace { namespace.content, namespace.attributes }
+namespace.content = tagUsage+
+namespace.attributes =
+  att.global.attributes,
+  ## the full formal name of the namespace concerned.
+  attribute name { data.namespace },
+  empty
+
+normalization =
+  ## indicates the extent of normalization or regularization of the
+  ## original source carried out in converting it to electronic form.
+  element normalization {
+    normalization.content, normalization.attributes
+  }
+normalization.content = model.pLike+
+normalization.attributes =
+  att.global.attributes,
+  att.declarable.attributes,
+  ## indicates the authority for any normalization carried out.
+  attribute source { data.pointer }?,
+  ## indicates the method adopted to indicate normalizations within
+  ##          the text.
+  [ a1:defaultValue = "silent" ]
+  attribute method {
+    ## (normalization made silently
+    ##   ) 
+    "silent" | ## (normalization represented using editorial tags
+      ##    ) 
+      "tags"
+  }?,
+  empty
+
+notesStmt =
+  ## (Notes statement) collects together any notes providing information about a text
+  ## additional to that recorded in other parts of the bibliographic
+  ## description.
+  element notesStmt { notesStmt.content, notesStmt.attributes }
+notesStmt.content = model.noteLike+
+notesStmt.attributes = att.global.attributes, empty
+
+principal =
+  ## (principal researcher) supplies the name of the principal researcher responsible for the
+  ## creation of an electronic text.
+  element principal { principal.content, principal.attributes }
+principal.content = macro.phraseSeq
+principal.attributes = att.global.attributes, empty
+
+profileDesc =
+  ## (text-profile description) provides a detailed description of non-bibliographic aspects of a
+  ## text, specifically the languages and sublanguages used, the situation in
+  ## which it was produced, the participants and their setting.
+  element profileDesc { profileDesc.content, profileDesc.attributes }
+profileDesc.content = creation?, model.profileDescPart*
+profileDesc.attributes = att.global.attributes, empty
+
+projectDesc =
+  ## (project description) describes in detail the aim or purpose for which an electronic
+  ## file was encoded, together with any other relevant information
+  ## concerning the process by which it was assembled or collected.
+  element projectDesc { projectDesc.content, projectDesc.attributes }
+projectDesc.content = model.pLike+
+projectDesc.attributes =
+  att.global.attributes, att.declarable.attributes, empty
+
+publicationStmt =
+  ## (publication statement) groups information concerning the publication or distribution
+  ## of an electronic or other text. 
+  element publicationStmt {
+    publicationStmt.content, publicationStmt.attributes
+  }
+publicationStmt.content = model.pLike+ | model.publicationStmtPart+
+publicationStmt.attributes = att.global.attributes, empty
+
+quotation =
+  ## specifies editorial practice adopted with respect to quotation
+  ##   marks in the original. 
+  element quotation { quotation.content, quotation.attributes }
+quotation.content = model.pLike+
+quotation.attributes =
+  att.global.attributes,
+  att.declarable.attributes,
+  ## indicates whether or not quotation marks have been retained as
+  ##       content within the text. 
+  [ a1:defaultValue = "all" ]
+  attribute marks {
+    ## (no quotation marks have been retained ) 
+    "none" | ## (some quotation marks have been retained ) 
+      "some" | ## (all quotation marks have been retained ) 
+      "all"
+  }?,
+  ## specifies how quotation marks are indicated within the
+  ##       text.
+  [ a1:defaultValue = "unknown" ]
+  attribute form {
+    ## (quotation marks are retained as data.) 
+    "data" | ## (the rendition attribute is consistently used to
+      ##           indicate the form of quotation marks.) 
+      "rend" | ## (use of quotation marks has been standardized.) 
+      "std" | ## (quotation marks are represented inconsistently.) 
+      "nonstd" | ## (use of quotation marks is unknown.) 
+      "unknown"
+  }?,
+  empty
+
+recording =
+  ## (recording event) details of an audio or video recording event
+  ## used as the source of a spoken text, either directly or from
+  ## a public broadcast. 
+  element recording { recording.content, recording.attributes }
+recording.content = model.pLike+ | model.recordingPart*
+recording.attributes =
+  att.global.attributes,
+  att.declarable.attributes,
+  ## the kind of recording.
+  [ a1:defaultValue = "audio" ]
+  attribute type {
+    ## (audio recording) 
+    "audio" | ## (audio and video recording) 
+      "video"
+  }?,
+  ## the original duration of the recording. 
+  attribute dur { data.duration }?,
+  empty
+
+recordingStmt =
+  ## (recording statement) describes a set of recordings used in transcription of a
+  ## spoken text.
+  element recordingStmt {
+    recordingStmt.content, recordingStmt.attributes
+  }
+recordingStmt.content = model.pLike+ | recording+
+recordingStmt.attributes = att.global.attributes, empty
+
+refsDecl =
+  ## (references declaration) specifies how canonical references are constructed for this
+  ##   text.
+  element refsDecl { refsDecl.content, refsDecl.attributes }
+refsDecl.content = model.pLike+ | cRefPattern+ | state+
+refsDecl.attributes =
+  att.global.attributes,
+  att.declarable.attributes,
+  ## identifies the document type within which
+  ##       this reference declaration is used.
+  [ a1:defaultValue = "TEI" ] attribute doctype { data.name }?,
+  empty
+
+rendition =
+  ## (rendition) supplies information about the intended rendition of one or more
+  ## elements.
+  element rendition { rendition.content, rendition.attributes }
+rendition.content = macro.paraContent
+rendition.attributes = att.global.attributes, empty
+
+revisionDesc =
+  ## (revision description) summarizes the revision history for a file.
+  element revisionDesc { revisionDesc.content, revisionDesc.attributes }
+revisionDesc.content = \list | change+
+revisionDesc.attributes = att.global.attributes, empty
+
+samplingDecl =
+  ## (sampling declaration) contains a prose description of the rationale and methods used
+  ## in sampling texts in the creation of a corpus or collection.
+  element samplingDecl { samplingDecl.content, samplingDecl.attributes }
+samplingDecl.content = model.pLike+
+samplingDecl.attributes =
+  att.global.attributes, att.declarable.attributes, empty
+
+scriptStmt =
+  ## (script statement) contains a citation giving details of the script used for
+  ## a spoken text.
+  element scriptStmt { scriptStmt.content, scriptStmt.attributes }
+scriptStmt.content = model.pLike+ | model.biblLike
+scriptStmt.attributes =
+  att.global.attributes, att.declarable.attributes, empty
+
+segmentation =
+  ## describes the principles according to which the text has been
+  ## segmented, for example into sentences, tone-units, graphemic strata,
+  ## etc.
+  element segmentation { segmentation.content, segmentation.attributes }
+segmentation.content = model.pLike+
+segmentation.attributes =
+  att.global.attributes, att.declarable.attributes, empty
+
+seriesStmt =
+  ## (series statement) groups information about the series, if any, to which
+  ## a publication belongs.
+  element seriesStmt { seriesStmt.content, seriesStmt.attributes }
+seriesStmt.content =
+  model.pLike+
+  | (title+, (idno | respStmt)*)
+seriesStmt.attributes = att.global.attributes, empty
+
+sourceDesc =
+  ## supplies a description of the source text(s) from
+  ## which an electronic text was derived or generated.
+  element sourceDesc { sourceDesc.content, sourceDesc.attributes }
+sourceDesc.content =
+  model.pLike+ | listBibl | (model.biblLike | model.sourceDescPart)+
+sourceDesc.attributes =
+  att.global.attributes, att.declarable.attributes, empty
+
+sponsor =
+  ## specifies the name of a sponsoring organization or
+  ## institution.
+  element sponsor { sponsor.content, sponsor.attributes }
+sponsor.content = macro.phraseSeq
+sponsor.attributes = att.global.attributes, empty
+
+state =
+  ## specifies one component of a canonical reference defined by
+  ## the milestone method.
+  element state { state.content, state.attributes }
+state.content = empty
+state.attributes =
+  att.global.attributes,
+  ## indicates which edition or version the milestone applies to.
+  attribute ed { data.code }?,
+  ## indicates what kind of state is changing at this milestone.
+  ## Suggested values include: 1] page (page breaks in the reference edition.
+  ##     ); 2] column (column breaks.
+  ##     ); 3] line (line breaks.
+  ##     ); 4] book (any units termed book, liber, etc.
+  ##     ); 5] poem (individual poems in a collection.
+  ##     ); 6] canto (cantos or other major sections of a poem.
+  ##     ); 7] stanza (stanzas within a poem, book, or canto.
+  ##     ); 8] act (acts within a play.
+  ##     ); 9] scene (scenes within a play or act.
+  ##     ); 10] section (sections of any kind.
+  ##     ); 11] absent (passages not present in the reference edition.)
+  attribute unit { data.enumerated },
+  ## specifies the fixed length of the reference component.
+  attribute length { data.count }?,
+  ## supplies a delimiting string following the reference
+  ##           component.
+  attribute delim { text }?,
+  empty
+
+stdVals =
+  ## (Standard values) specifies the format used when standardized date or number
+  ## values are supplied.
+  element stdVals { stdVals.content, stdVals.attributes }
+stdVals.content = model.pLike+
+stdVals.attributes =
+  att.global.attributes, att.declarable.attributes, empty
+
+tagUsage =
+  ## (tag usage) supplies information about the usage of a specific element
+  ## within a text. 
+  element tagUsage { tagUsage.content, tagUsage.attributes }
+tagUsage.content = macro.paraContent
+tagUsage.attributes =
+  att.global.attributes,
+  ## the name (generic identifier)
+  ## of the element indicated by the tag.
+  attribute gi { data.name },
+  ## specifies the number of occurrences of this element within the text.
+  attribute occurs { data.count }?,
+  ## specifies the number of occurrences of this element within the text
+  ## which bear a distinct value for the global xml:id attribute. 
+  attribute withId { data.count }?,
+  ## specifies the identifier of a rendition element which
+  ## defines how this element is to be rendered.
+  attribute render { data.pointer }?,
+  empty
+
+tagsDecl =
+  ## (tagging declaration) provides detailed information about the tagging applied to an SGML or XML document.
+  element tagsDecl { tagsDecl.content, tagsDecl.attributes }
+tagsDecl.content = rendition*, \namespace*
+tagsDecl.attributes = att.global.attributes, empty
+
+taxonomy =
+  ## (taxonomy) defines a typology used to classify texts either implicitly, by
+  ## means of a bibliographic citation, or explicitly by a structured
+  ## taxonomy.
+  element taxonomy { taxonomy.content, taxonomy.attributes }
+taxonomy.content =
+  model.glossLike* | category+ | (model.biblLike, category*)
+taxonomy.attributes = att.global.attributes, empty
+
+teiHeader =
+  ## (TEI Header) supplies the descriptive and declarative information making
+  ##	up an electronic title page prefixed to every TEI-conformant
+  ##	text.
+  element teiHeader { teiHeader.content, teiHeader.attributes }
+teiHeader.content = fileDesc, model.headerPart*, revisionDesc?
+teiHeader.attributes =
+  att.global.attributes,
+  ## specifies the kind of document to which the header is attached.
+  ## Sample values include: 1] text (the header is attached to a single text.); 2] corpus (the header is attached to a corpus.)
+  [ a1:defaultValue = "text" ] attribute type { data.enumerated }?,
+  empty
+
+textClass =
+  ## (text classification) groups information which describes the nature or topic of a text
+  ## in terms of a standard classification scheme, thesaurus, etc.
+  element textClass { textClass.content, textClass.attributes }
+textClass.content = (classCode | catRef | keywords)*
+textClass.attributes =
+  att.global.attributes, att.declarable.attributes, empty
+
+titleStmt =
+  ## (title statement) groups information about the title of a work and those
+  ## responsible for its intellectual content.
+  element titleStmt { titleStmt.content, titleStmt.attributes }
+titleStmt.content =
+  title+, (author | editor | sponsor | funder | principal | respStmt)*
+titleStmt.attributes = att.global.attributes, empty
+
+variantEncoding =
+  ## declares the method used to encode text-critical variants.
+  element variantEncoding {
+    variantEncoding.content, variantEncoding.attributes
+  }
+variantEncoding.content = empty
+variantEncoding.attributes =
+  att.global.attributes,
+  ## indicates which method is used to encode the apparatus of
+  ## variants.
+  attribute method {
+    ## (apparatus uses line numbers or other canonical reference scheme
+    ## referenced in a base text.) 
+    "location-referenced" | ## (apparatus indicates the precise locations of the beginning and
+      ## ending of each lemma relative to a base text.) 
+      "double-end-point" | ## (alternate readings of a passage are given in parallel in the
+      ## text; no notion of a base text is necessary.) 
+      "parallel-segmentation"
+  },
+  ## indicates whether the apparatus appears within the running text
+  ## or external to it.
+  attribute location {
+    ## (apparatus appears within the running text.) 
+    "internal" | ## (apparatus appears outside the base text.) 
+      "external"
+  },
+  empty
+# 3. macros

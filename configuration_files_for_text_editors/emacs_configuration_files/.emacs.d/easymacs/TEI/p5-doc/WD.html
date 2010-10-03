@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><!--THIS FILE IS GENERATED FROM AN XML MASTER. DO NOT EDIT (4)-->
+<head><title> TEI P5: Guidelines for Electronic Text Encoding and Interchange: 21  Representation of non-standard characters and glyphs</title><link href="/favicon.ico" rel="icon" type="image/x-icon"/><link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/><meta name="author" content="edited by C.M. Sperberg-McQueen and&#10;&#9;Lou Burnard"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="TEI P5: Guidelines for Electronic Text Encoding and Interchange: 21  Representation of non-standard characters and glyphs"/><meta name="DC.Type" content="Text"/><meta name="DC.Format" content="application/xhtml+xml"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/><link href="guidelines.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body onload="startUp()"><div id="hdr"><h2 class="subtitle">Representation of non-standard characters and glyphs</h2><h1 class="title">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h1></div><div id="accessibility"><span class="tocontent"><a href="?style=text">Text only</a>
+      | <a class="skiplinks" href="#rh-column" title="Go to main page content">Skip links</a></span></div><div id="hdr2"><!--no nav --></div><div id="hdr3"><a href="#rh-column" title="Go to main page content" class="skiplinks">Skip links</a><a class="hide">|</a><div class="breadcrumb"><ul class="breadcrumb"><li class="breadcrumb-first"><a class="breadcrumb" href="index.html">TEI P5 Guidelines</a></li><li class="breadcrumb"><a class="breadcrumb" href="/"></a></li></ul></div><a class="hide">|</a><a class="bannerright" href="http://www.tei-c.org/Consortium/" title="Go to home page">TEI Consortium</a></div><div class="column-wrapper"><div id="lh-col"><div id="lh-col-top"><!--top of left-hand column--></div><div id="lh-col-bottom"><!--bottom of left-hand column--><div class="tocFront"><div class="tocContainer"><div class="toclist0"><a class="toclist" href="FM1.html"> Introductory Note</a>
+</div><div class="toclist0"><a class="toclist" href="AB.html"> About These Guidelines</a>
+</div><div class="toclist0"><a class="toclist" href="SG.html"> A Gentle Introduction to XML</a>
+</div></div></div><div class="tocBody"><!--start TOC--><div class="tocContainer"><!--TOC components--><div class="toclist0"><a class="toclist" href="CH.html">1  Languages and Character Sets</a>
+</div><div class="toclist0"><a class="toclist" href="ST.html">2  The TEI infrastructure</a>
+</div><div class="toclist0"><a class="toclist" href="HD.html">3  The TEI Header</a>
+</div><div class="toclist0"><a class="toclist" href="CO.html">4  Elements Available in All TEI Documents</a>
+</div><div class="toclist0"><a class="toclist" href="DS.html">5  Default Text Structure</a>
+</div><div class="toclist0"><a class="toclist" href="VE.html">6  Verse</a>
+</div><div class="toclist0"><a class="toclist" href="DR.html">7  Performance Texts</a>
+</div><div class="toclist0"><a class="toclist" href="TS.html">8  Transcriptions of Speech</a>
+</div><div class="toclist0"><a class="toclist" href="DI.html">9  Print Dictionaries</a>
+</div><div class="toclist0"><a class="toclist" href="MS.html">10  Manuscript Description</a>
+</div><div class="toclist0"><a class="toclist" href="SA.html">11  Linking, Segmentation, and Alignment</a>
+</div><div class="toclist0"><a class="toclist" href="AI.html">12  Simple Analytic Mechanisms</a>
+</div><div class="toclist0"><a class="toclist" href="FS.html">13  Feature Structures</a>
+</div><div class="toclist0"><a class="toclist" href="CE.html">14  Certainty and Responsibility</a>
+</div><div class="toclist0"><a class="toclist" href="PH.html">15  Transcription of Primary Sources</a>
+</div><div class="toclist0"><a class="toclist" href="TC.html">16  Critical Apparatus</a>
+</div><div class="toclist0"><a class="toclist" href="ND.html">17  Names and Dates</a>
+</div><div class="toclist0"><a class="toclist" href="GD.html">18  Graphs, Networks, and Trees</a>
+</div><div class="toclist0"><a class="toclist" href="FT.html">19  Tables, Formulae, and Graphics</a>
+</div><div class="toclist0"><a class="toclist" href="CC.html">20  Language Corpora</a>
+</div><div class="toclist0"><span class="toclist-this">21  Representation of non-standard characters and glyphs</span>
+<div class="toclist1"><a class="toclist" href="WD.html#body.1_div.21_div.1">21.1  Is your journey really necessary?</a>
+</div><div class="toclist1"><a class="toclist" href="WD.html#D25-20">21.2  Markup constructs for representation of characters and glyphs</a>
+</div><div class="toclist1"><a class="toclist" href="WD.html#D25-30">21.3  Annotating characters</a>
+</div><div class="toclist1"><a class="toclist" href="WD.html#D25-40">21.4  Adding new characters</a>
+</div><div class="toclist1"><a class="toclist" href="WD.html#D25-50">21.5  How to use codepoints from the Private Use Area</a>
+</div><div class="toclist1"><a class="toclist" href="WD.html#WSD-DEF">21.6  Additional module defined by this section</a>
+</div></div><div class="toclist0"><a class="toclist" href="FD.html">22  Feature System Declaration</a>
+</div><div class="toclist0"><a class="toclist" href="TD.html">23  Documentation Elements</a>
+</div><div class="toclist0"><a class="toclist" href="USE.html">24  Using The TEI</a>
+</div></div></div><div class="tocBack"><div class="tocContainer"><div class="toclist0"><a class="toclist" href="REFCLA.html">Appendix A  Classes</a>
+</div><div class="toclist0"><a class="toclist" href="REFTAG.html">Appendix B  Elements</a>
+</div><div class="toclist0"><a class="toclist" href="REFENT.html">Appendix C  Macros</a>
+</div><div class="toclist0"><a class="toclist" href="BIB.html">Appendix D  Bibliography</a>
+</div><div class="toclist0"><a class="toclist" href="PARTIND.html">Appendix E  Index</a>
+</div><div class="toclist0"><a class="toclist" href="PREFS.html">Appendix F  Prefatory Notes</a>
+</div><div class="toclist0"><a class="toclist" href="COL.html">Appendix G  Colophon</a>
+</div></div></div></div></div><div id="rh-col"><a id="rh-column"/><div id="rh-col-top"><!--top of right-hand column--></div><div id="rh-col-bottom"><!--bottom of right-hand column--><h2>21  Representation of non-standard characters and glyphs</h2><p><span id="id2559564"/>Despite the availability of Unicode, text encoders still
+    sometimes find that the published repertoire of available
+    characters is inadequate to their needs. This is particularly the
+    case when dealing with ancient languages, for which encoding
+    standards do not yet exist, or where an encoder wishes to
+    represent variant forms of a character or <em>glyphs</em>.
+    The module defined by this chapter provides a mechanism to satisfy
+    that need, while retaining compatibility with standards.
+</p><div class="div2" id="body.1_div.21_div.1"><h3>21.1  Is your journey really necessary?</h3><p><span id="id2559588"/>When encoders encounter some graphical unit in a document which
+    is to be represented electronically, the first issue to be
+    resolved should be ‘Is this really a different character?’ To determine
+    whether a particular graphical unit <em>is</em> a character or
+    not, see <a class="link_ptr" href="CH.html#D4-42" title="Terminology and key concepts">1.2.2  Terminology and key
+   concepts</a>. </p><div class="p"><span id="id2559609"/>If the unit is indeed determined to be a character, the next
+    question should be ‘Has this character been encoded already?’
+    In order to determine whether a character has been encoded,
+    encoders should follow the following steps:
+<ol><li><p><span id="id2559623"/>Check the Unicode
+      website at <a class="link_ptr" href="http://www.unicode.org" title=""><span>http://www.unicode.org</span></a>, in particular the page <a class="link_ref" href="http://unicode.org/standard/where/" title="&quot;Where is my Character?&quot;">"Where is my
+      Character?"</a>, and the associated character code charts.
+      Alternatively, users can check the latest published version of
+      <i>The Unicode Standard</i> , though the website is
+      often more up to date than the printed version, and should be
+      checked for preference.</p><p><span id="id2559647"/>The pictures (‘glyphs’) in the Unicode code
+charts are only meant to be representative, not definitive. If a
+specific form of an already encoded character is required for a
+project, refer to the guidelines contained below under <a class="link_ref" href="WD.html#D25-30" title="Annotating characters">Annotating Characters</a>. Remember that your
+encoded document may be rendered on a system which has different fonts
+from yours: if the specific form of a character is important to you,
+then you should document it. </p></li><li>Check the Proposed New Characters webpage (<a class="link_ptr" href="http://unicode.org/alloc/Pipeline.html" title=""><span>http://unicode.org/alloc/Pipeline.html</span></a>) to see whether
+      the character is in line for approval.</li><li>Ask on the Unicode email list (<a class="link_ptr" href="http://www.unicode.org/consortium/distlist.html" title=""><span>http://www.unicode.org/consortium/distlist.html</span></a>) to determine if a proposal is
+pending, or whether this is indeed a new character (or if this not a
+character at all, in which case it would not be eligible for addition
+to the Unicode Standard).  </li></ol></div><p><span id="id2559693"/>Since there are now close to 100,000 characters in Unicode,
+    chances are good that what you need is already there, but it might
+    not be easy to find, since it might have a different name in
+    Unicode.  Look again, this time at other sites, for example <a class="link_ptr" href="http://www.eki.ee/letter" title=""><span>http://www.eki.ee/letter</span></a>, which also provide searches
+    based on scripts and languages. Take care, however, that all the
+    properties of what seems to be a relevant character are consistent
+    with those of the character you are looking for. For example, if
+    your character is definitely a digit, but the properties of the
+    best match you can find for it say that it is a letter, you may
+    have a character not yet defined in Unicode.  </p><p><span id="id2559714"/>In general, it is advisable to avoid Unicode characters generally
+described as presentation forms<a class="notelink" href="#Note142"><sup>142</sup></a> However, if the character you are looking for
+is being used in a notation (rather than as part of the orthography of
+a language) then it is quite acceptable to select characters from the
+Mathematical Operators block, provided that they have the appropriate
+properties (i.e. <tt>So</tt>: Symbol, Other; or <tt>Sm</tt>:
+Symbol, Math).</p><p><span id="id2559740"/>An encoded character may be precomposed or it may be formed
+    from base characters and combining diacritical marks. Either will
+    suffice for a character to be "found" as an encoded character. </p><p><span id="id2559748"/>If there are several possible Unicode characters to choose amongst,
+it is good practice to consult other colleagues and practitioners to
+see whether a consensus has emerged in favour of one or other of
+them. </p><p><span id="id2559756"/>If, however, no suitable form of your character seems to exist,
+    the next question will be: ‘Does the graphical unit in question
+    represent a variant form of a known character, or does it
+    represent a completely unencoded character?’ If the character
+    is determined to be missing from the Unicode Standard, it would be helpful to
+    submit the new character for inclusion (see <a class="link_ptr" href="http://unicode.org/pending/proposals.html" title=""><span>http://unicode.org/pending/proposals.html</span></a>).  </p><p><span id="id2559775"/>These guidelines will help you proceed once you have
+     identified a given graphical unit as either a variant or an
+     unencoded character. Determining this will require knowledge of
+     the contents of the document that you have. The first case will
+     be called <em>annotation</em> of a character, while the
+     second case will be called <em>adding</em> of a new
+     character. How to handle graphical units that represent variants
+     will be discussed below (<a class="link_ptr" href="WD.html#D25-30" title="Annotating characters">21.3  Annotating characters</a>)
+     while the problem of representing new characters will be dealt
+     with in section <a class="link_ptr" href="WD.html#D25-40" title="Adding new characters">21.4  Adding new characters</a>.    </p><p><span id="id2559805"/>While there is some overlap between these requirements,
+    distinct specialized markup constructs have been created for each
+    of these cases as explained in section <a class="link_ptr" href="WD.html#D25-20" title="Markup constructs for representation of characters and glyphs">21.2  Markup constructs for representation of characters and glyphs</a>
+    below.  The following section will then proceed to discuss how to
+    apply them to the problems at hand, discussing annotation of
+    existing characters in section <a class="link_ptr" href="WD.html#D25-30" title="Annotating characters">21.3  Annotating characters</a> and finally
+    creation of new ones in <a class="link_ptr" href="WD.html#D25-40" title="Adding new characters">21.4  Adding new characters</a>.</p></div><div class="div2" id="D25-20"><h3>21.2  Markup constructs for representation of characters and glyphs</h3><p><span id="id2559845"/>An XML document can, in principle, contain any defined Unicode
+character. The standard allows these characters to be represented
+either directly, using an appropriate encoding (UTF-8 by defaut), or
+indirectly by means of numeric character references (NCR), such as
+<tt>&amp;#1234;</tt> (A-umlaut). The encoder can also restrict the
+range of characters which are represented directly in a document (or
+part of it) by adding a suitable encoding declaration. For example, if
+a document begins with the declaration <tt>&lt;?xml
+encoding="iso-8859-1"?&gt;</tt> any Unicode characters which are not
+in the ISO-8859-1 character set must be represented by NCRs. </p><p><span id="id2559884"/>The gaiji module defined by this chapter adds a further way of
+representing specific characters and glyphs in a document. This allows
+the encoder to distinguish characters and glyphs which Unicode regards
+as identical, to add new nonstandard characters or glyphs, and to
+represent Unicode characters not available in the document encoding by
+an alternative means.</p><div class="p"><span id="id2559894"/>The mechanism provided here consists functionally of two parts:
+     <ul><li>an element <code>&lt;g&gt;</code>, which serves as a proxy for new
+       characters or glyphs</li><li>an element <code>&lt;charDesc&gt;</code>, which serves as a container
+       for information about this character. Such information is
+       needed to identify and process this character
+       properly. </li></ul></div><p><span id="id2559921"/>When the gaiji module is included in a schema, the
+<code>&lt;charDesc&gt;</code> element is added to the <span class="ident-class">model.encodingPart</span>
+class, and the <code>&lt;g&gt;</code> element is added to the phrase class. These
+elements and their components are documented in the rest of this
+section. </p><p><span id="id2559941"/>The Unicode standard defines properties for all the characters it
+defines in the Unicode Character Database, knowledge of which is
+usually built into text processing systems.  If the character
+represented by the <code>&lt;g&gt;</code> element does not exist in Unicode at
+all, its properties are not available. If the character represented is
+an existing Unicode character, but is not available in the document
+character set recognized by a given text processing system, it may
+also be convenient to have access to its properties in the same way.
+The <code>&lt;charDesc&gt;</code> element makes it possible to store properties
+for use by such applications in a standard way.</p><p><span id="id2559963"/> The list of attributes (properties) for characters is modelled on
+those in the Unicode Character Database, which distinguishes
+<em>normative</em> and <em>informative</em> character
+properties. Additional, non-Unicode, properties may also be supplied.
+Since the list of properties will vary with different versions of
+the Unicode Standard, there may not be an exact correspondence between them and the
+list of properties defined in these Guidelines.</p><div class="p"><span id="id2559981"/>Usage examples for  these elements are given below at <a class="link_ptr" href="WD.html#D25-30" title="Annotating characters">21.3  Annotating characters</a>
+     and  <a class="link_ptr" href="WD.html#D25-40" title="Adding new characters">21.4  Adding new characters</a>.
+The gaiji module itself is formally defined in section <a class="link_ptr" href="WD.html#WSD-DEF" title="Additional module defined by this section">21.6  Additional module defined by this section</a> below. It defines the following  additional
+     elements:
+<ul class="specList"><li><b>&lt;<a href="ref-charDesc.html">charDesc</a>&gt;</b> (character description) provides descriptive information about characters or
+glyphs. </li><li><b>&lt;<a href="ref-g.html">g</a>&gt;</b> (character or glyph) represents a non-standard character or glyph.<table class="attList"><tr><td class="Attribute">ref</td><td colspan="2">points to a description of the  character or glyph intended.</td></tr></table></li></ul></div><div class="p"><span id="id2560016"/>The following elements may appear within a <code>&lt;charDesc&gt;</code>
+     element:
+<ul class="specList"><li><b>&lt;<a href="ref-desc.html">desc</a>&gt;</b> (description) contains a brief description of the purpose and application for
+an element, attribute, or attribute value.</li><li><b>&lt;<a href="ref-char.html">char</a>&gt;</b> (character) provides descriptive information about a character. </li><li><b>&lt;<a href="ref-glyph.html">glyph</a>&gt;</b> (character glyph) provides descriptive information about a character glyph. </li></ul></div><p><span id="id2560041"/>The <code>&lt;char&gt;</code> and <code>&lt;glyph&gt;</code> elements have similar contents
+and are used in similar ways, but their functions are different.  The
+<code>&lt;char&gt;</code> element is provided to define a character which is not
+available in the current document character set, for whatever reason,
+as stated above.  The <code>&lt;glyph&gt;</code> element is used to annotate an
+existing character, usually by providing a specific glyph that shows
+how a character appeared in the original document.  Unicode codepoints
+refer to a very general abstract character, which can be rendered by a
+very large number of possible representations.  The <code>&lt;glyph&gt;</code>
+element is provided for cases where the encoder wants to specify a
+specific glyph (or family of glyphs) out of all possible glyphs.</p><div class="p"><span id="id2560077"/>The Unicode Standard recommends naming conventions which must be followed strictly
+where the intention is to annotate an existing Unicode character, and
+which should also be used as a model when creating new names for
+characters or glyphs. For convenience of processing, the following
+distinct elements are proposed for naming characters and glyphs:
+<ul class="specList"><li><b>&lt;<a href="ref-charName.html">charName</a>&gt;</b> (character name) contains the name of a character, expressed following Unicode conventions. </li><li><b>&lt;<a href="ref-glyphName.html">glyphName</a>&gt;</b> (character glyph name) contains the name of a glyph, expressed following Unicode
+conventions for character names. </li></ul></div><div class="p"><span id="id2560108"/>Within both <code>&lt;char&gt;</code> and <code>&lt;glyph&gt;</code>, the following elements are available:
+<ul class="specList"><li><b>&lt;<a href="ref-gloss.html">gloss</a>&gt;</b> identifies a phrase or word used to provide a gloss or
+  definition for some other word or phrase.</li><li><b>&lt;<a href="ref-charProp.html">charProp</a>&gt;</b> (character property) provides a name and value for some property of the parent
+character or glyph. </li><li><b>&lt;<a href="ref-desc.html">desc</a>&gt;</b> (description) contains a brief description of the purpose and application for
+an element, attribute, or attribute value.</li><li><b>&lt;<a href="ref-mapping.html">mapping</a>&gt;</b> (character mapping) contains one or more
+	 characters which are related to the parent character or glyph
+	 in some respect, as specified by the type
+	 attribute.
+</li><li><b>&lt;<a href="ref-graphic.html">graphic</a>&gt;</b> indicates the location of an inline graphic, illustration, or figure.</li><li><b>&lt;<a href="ref-remarks.html">remarks</a>&gt;</b> contains any commentary or discussion about the usage of an
+element, attribute, class, or entity not otherwise documented within the
+containing element.</li></ul></div><p><span id="id2560150"/>Four of these elements (<code>&lt;gloss&gt;</code>, <code>&lt;desc&gt;</code>,
+<code>&lt;graphic&gt;</code> and <code>&lt;remarks&gt;</code>) are defined by other TEI
+modules, and their usage here is no different from their usage
+elsewhere. The <code>&lt;graphic&gt;</code> element, however, is used here only to
+link to an image of the character or glyph under discussion, or to
+contain a representation of it in SVG. Several <code>&lt;graphic&gt;</code>
+elements may be given, for example to provide images with different
+resolution, or in different formats. The <span class="att">type</span> attribute may
+be used to specify the type of image.</p><div class="p"><span id="id2560186"/>The <code>&lt;mapping&gt;</code> element is similar to the standard TEI
+<code>&lt;equiv&gt;</code> element. While the latter is used to express correspondence 
+relationships between TEI concepts or elements and those in other
+systems or ontologies, the former is used to express any kind of
+relationship between the character or glyph under discussion and
+characters or glyphs defined elsewhere. It may contain any Unicode
+character, or a <code>&lt;g&gt;</code> element linked to some other <code>&lt;char&gt;</code> or
+<code>&lt;glyph&gt;</code> element, if, for example, the intention is to express an association
+between two non-standard characters. The type of association is
+indicated by the <span class="att">type</span> attribute, which may take such values
+as <tt>exact</tt> for exact equivalences, <tt>uppercase</tt>
+for uppercase equivalences, <tt>lowercase</tt>  for lowercase equivalences,
+<tt>standardized</tt> for standardized forms,  and
+<tt>simplified</tt>  for simplified characters, etc., as in the following example:
+<div class="pre"> <span class="element">&lt;charDesc&gt;</span><br/>  <span class="element">&lt;char <span class="attribute">xml:id</span>="aenl"&gt;</span><br/>   <span class="element">&lt;charName&gt;</span>LATIN LETTER ENLARGED SMALL A<span class="element">&lt;/charName&gt;</span><br/>   <span class="element">&lt;charProp&gt;</span><br/>    <span class="element">&lt;localName&gt;</span>entity<span class="element">&lt;/localName&gt;</span><br/>    <span class="element">&lt;value&gt;</span>aenl<span class="element">&lt;/value&gt;</span><br/>   <span class="element">&lt;/charProp&gt;</span><br/>   <span class="element">&lt;mapping <span class="attribute">type</span>="standardized"&gt;</span>a<span class="element">&lt;/mapping&gt;</span><br/>  <span class="element">&lt;/char&gt;</span><br/> <span class="element">&lt;/charDesc&gt;</span></div></div><div class="p"><span id="id2560277"/>The mapping element may also be used to represent a mapping of the
+character or (more likely) glyph under discussion onto a character
+from the private use area as in this example:
+<div class="pre"> <span class="element">&lt;charDesc&gt;</span><br/>  <span class="element">&lt;glyph <span class="attribute">xml:id</span>="z103"&gt;</span><br/>   <span class="element">&lt;glyphName&gt;</span>LATIN LETTER Z WITH TWO STROKES<span class="element">&lt;/glyphName&gt;</span><br/>   <span class="element">&lt;mapping <span class="attribute">type</span>="standardized"&gt;</span>Z<span class="element">&lt;/mapping&gt;</span><br/>   <span class="element">&lt;mapping <span class="attribute">type</span>="PUA"&gt;</span>U+E304<span class="element">&lt;/mapping&gt;</span><br/>  <span class="element">&lt;/glyph&gt;</span><br/> <span class="element">&lt;/charDesc&gt;</span></div></div><p><span id="id2560314"/>A more precise documentation of the properties of any character or
+glyph may be supplied using the generic <code>&lt;charProp&gt;</code> element
+described in the next section. Despite its name, this element may be
+used for either characters or glyphs.
+</p><div class="div3" id="ucsprops"><h4>21.2.1  Character Properties</h4><p><span id="id2560337"/>The Unicode Standard documents ‘ideal’ characters, defined by reference
+to a number of <em>properties</em> (or attribute-value pairs)
+which they are said to possess. For example, a lower case letter is
+said to have the value <tt>Ll</tt> for the property
+<tt>general-category</tt>. The Standard distinguishes between
+<em>normative</em> properties (i.e. properties which form part of
+the definition of a given character), and <em>informative</em> or
+<em>additional</em> properties which are not normative. It
+also allows for the addition of new properties, and (in some
+circumstances) alteration of the values currently assigned to certain
+properties. When making such modifications however, great care should
+be taken not to over-ride standard informative properties for
+characters which exist in the Unicode Standard.<a class="notelink" href="#Note143"><sup>143</sup></a></p><p><span id="id2560390"/>The <code>&lt;charProp&gt;</code> element allows an encoder to supply information
+about a character or glyph. Where the information concerned relates to
+a property which has already been identified in the Unicode Standard, encoders are
+urged to use the appropriate Unicode property name. </p><div class="p"><span id="id2560403"/>The following elements are used to record character properties:
+<ul class="specList"><li><b>&lt;<a href="ref-unicodeName.html">unicodeName</a>&gt;</b> (Unicode Property Name) contains the name of a registered Unicode normative or
+informative property. </li><li><b>&lt;<a href="ref-localName.html">localName</a>&gt;</b> (Locally-defined Property Name) contains a locally defined name for some property. </li><li><b>&lt;<a href="ref-value.html">value</a>&gt;</b> (value) contains a single value for some property, attribute, or other
+  analysis.</li></ul>
+For each property, the encoder must supply either a
+<code>&lt;unicodeName&gt;</code> or a <code>&lt;localName&gt;</code>, followed by a
+<code>&lt;value&gt;</code>. </div><div class="p"><span id="id2560437"/>For convenience, we list here some of the normative character
+properties and their values. For full information, refer to chapter 4 of
+<i>The Unicode Standard</i>, or the online documentation of the Unicode Character Database.
+<dl><dt>general-category</dt><dd>The general
+	  category (described in the Unicode Standard chapter 4 section 5) is an assignment to some
+	  major classes and subclasses of characters.  Suggested
+	  values for this property are listed here:
+<dl><dt>Ll</dt><dd>Letter, lowercase</dd><dt>Lu</dt><dd>Letter, uppercase</dd><dt>Lt</dt><dd>Letter, titlecase</dd><dt>Lm </dt><dd>Letter, modifier</dd><dt>Lo</dt><dd>Letter, other</dd><dt>Mn</dt><dd>Mark, nonspacing</dd><dt>Mc</dt><dd>Mark, spacing combining</dd><dt>Me</dt><dd>Mark, enclosing</dd><dt>Nd</dt><dd>Number, decimal digit</dd><dt>Nl</dt><dd>Number, letter</dd><dt>No</dt><dd>Number, other</dd><dt>Pc</dt><dd>Punctuation, connector</dd><dt>Pd</dt><dd>Punctuation, dash</dd><dt>Ps</dt><dd>Punctuation, open</dd><dt>Pe</dt><dd>Punctuation, close</dd><dt>Pi</dt><dd>Punctuation, initial quote</dd><dt>Pf</dt><dd>Punctuation, final quote</dd><dt>Po</dt><dd>Punctuation, other</dd><dt>Sm</dt><dd>Symbol, math</dd><dt>Sc</dt><dd>Symbol, currency</dd><dt>Sk</dt><dd>Symbol, modifier</dd><dt>So</dt><dd>Symbol, other</dd><dt>Zs</dt><dd>Separator, space</dd><dt>Zl</dt><dd>Separator, line</dd><dt>Zp</dt><dd>Separator, paragraph</dd><dt>Cc</dt><dd>Other, control</dd><dt>Cf</dt><dd>Other, format</dd><dt>Cs</dt><dd>Other, surrogate</dd><dt>Co</dt><dd>Other, private use</dd><dt>Cn</dt><dd>Other, not assigned</dd></dl></dd><dt>directional-category</dt><dd>This property applies to all Unicode characters. It governs the
+application of the algorithm for bi-directional behaviour, as further
+specified in Unicode Annex 9, <i>The Bidirectional
+Algorithm</i>. The following 19 different values are currently
+defined for this property in the <a class="link_ref" href="http://www.unicode.org/Public/UNIDATA/UCD.html" title="Unicode Character Database">Unicode Character
+Database</a>:<dl><dt>AL</dt><dd>right to left Arabic</dd><dt>AN</dt><dd>Arabic Number</dd><dt>B</dt><dd>Paragraph separator</dd><dt>BN</dt><dd>Boundary Neutral</dd><dt>CS</dt><dd>Common Number Separator</dd><dt>EN</dt><dd>European Number</dd><dt>ES</dt><dd>European Number Separator</dd><dt>ET</dt><dd>European Number Terminator</dd><dt>L</dt><dd>left to right</dd><dt>LRE</dt><dd>left to right embedding</dd><dt>LRO</dt><dd>left to right override</dd><dt>NSM</dt><dd>Non-spacing Mark</dd><dt>ON</dt><dd>Other neutrals</dd><dt>PDF</dt><dd>Pop Directional Format</dd><dt>R</dt><dd>right to left</dd><dt>RLE</dt><dd>right to left embedding</dd><dt>RLO</dt><dd>right to left override</dd><dt>S</dt><dd>Segment separator</dd><dt>WS</dt><dd>Whitespace</dd></dl></dd><dt>canonical-combining-class</dt><dd>This
+	  property exists for characters that are not used
+	  independently, but in combination with other characters, for
+	  example the strokes making up CJK characters.  It
+	  records a class for these characters, which is used to
+	  determine how they interact typographically.  The following
+	  values are defined in  the Unicode Standard 4.2:<dl><dt>0</dt><dd>Spacing, split, enclosing, reordrant, and Tibetan subjoined </dd><dt>1</dt><dd>Overlays and interior </dd><dt>7</dt><dd>Nuktas </dd><dt>8</dt><dd>Hiragana/Katakana voicing marks </dd><dt>9</dt><dd>Viramas </dd><dt>10</dt><dd>Start of fixed position classes </dd><dt>199</dt><dd>End of fixed position classes </dd><dt>200</dt><dd>Below left attached </dd><dt>202</dt><dd>Below attached </dd><dt>204</dt><dd>Below right attached </dd><dt>208</dt><dd>Left attached (reordrant around single base character) </dd><dt>210</dt><dd>Right attached </dd><dt>212</dt><dd>Above left attached </dd><dt>214</dt><dd>Above attached </dd><dt>216</dt><dd>Above right attached </dd><dt>218</dt><dd>Below left </dd><dt>220</dt><dd>Below </dd><dt>222</dt><dd>Below right </dd><dt>224</dt><dd>Left (reordrant around single base character) </dd><dt>226</dt><dd>Right </dd><dt>228</dt><dd>Above left </dd><dt>230</dt><dd>Above </dd><dt>232</dt><dd>Above right </dd><dt>233</dt><dd>Double below </dd><dt>234</dt><dd>Double above </dd><dt>240</dt><dd>Below (iota subscript) </dd></dl></dd><dt>character-decomposition-mapping</dt><dd>This property is defined for characters,
+	  which may be decomposed, for example to a canonical form
+	  plus a typographic variation of some kind. For such characters the Unicode standard  specifies both
+	  a decomposition type and a decomposition mapping
+	  (i.e. another Unicode character to which this one may be
+	  mapped in the way specified by the decomposition type). The
+	  following types of mapping are defined in the Unicode Standard:
+<dl><dt>font</dt><dd>   A font variant (e.g. a blackletter form)</dd><dt>noBreak</dt><dd>   A no-break version of a space or hyphen</dd><dt>initial</dt><dd>   An initial presentation form (Arabic)</dd><dt>medial</dt><dd>   A medial presentation form (Arabic)</dd><dt>final</dt><dd>   A final presentation form (Arabic)</dd><dt>isolated</dt><dd>   An isolated presentation form (Arabic)</dd><dt>circle</dt><dd>   An encircled form</dd><dt>super</dt><dd>   A superscript form</dd><dt>sub</dt><dd>   A subscript form</dd><dt>vertical</dt><dd>   A vertical layout presentation form</dd><dt>wide</dt><dd>   A wide (or zenkaku) compatibility character</dd><dt>narrow</dt><dd>   A narrow (or hankaku) compatibility character</dd><dt>small</dt><dd>   A small variant form (CNS compatibility)</dd><dt>square</dt><dd>   A CJK squared font variant</dd><dt>fraction</dt><dd>   A vulgar fraction form</dd><dt>compat</dt><dd>   Otherwise unspecified compatibility character</dd></dl></dd><dt>numeric-value</dt><dd>This property applies for
+	 any character which expresses any kind of numeric value. Its
+	 value is the intended value in decimal notation.</dd><dt>mirrored</dt><dd>The mirrored
+	 character property is used to properly render characters such
+	   as U+0028, <tt>OPENING PARENTHESIS</tt> independent of
+	 the text direction: it has the value <tt>Y</tt>
+(character is mirrored) or <tt>N</tt> (code is not mirrored).</dd></dl></div><p><span id="id2561116"/>the Unicode Standard also defines a set of informative (but non-normative)
+properties for Unicode characters.  If encoders want to provide such
+properties, they may be included using the suggested Unicode name,
+tagged using the <code>&lt;unicodeName&gt;</code> element. However, encoders may
+also supply other locally-defined properties, which must be named using
+the <code>&lt;localName&gt;</code> element to distinguish them. If a Unicode name
+exists for a given property, it should however always be preferred to
+a locally defined name. Locally defined names should be used only for   properties
+which are not specified by the Unicode Standard.</p></div></div><div class="div2" id="D25-30"><h3>21.3  Annotating characters</h3><p><span id="id2561153"/>Annotation of a character becomes necessary when it is desired
+    to distinguish it on the basis of certain aspects (typically, its
+    graphical appearance) only.  In a manuscript, for example, where
+    distinctly different forms of the letter "r" can be recognized, it
+    might be useful to distinguish them for analytic purposes, quite
+    distinct from the need to provide a accurate representation of the
+    page. A digital facsimile, particularly one linked to a
+    transcribed and encoded version of the text, will always provide a
+    superior visual representation, but cannot be used to support
+    arguments based on the distribution of such different
+    forms. Character annotation as described here provides a solution
+    to this problem.<a class="notelink" href="#Note144"><sup>144</sup></a></p><div class="p"><span id="id2561190"/>Assuming that we wish to distinguish the variant glyphs from the standard representation for the character
+concerned, we will need to define distinct <code>&lt;glyph&gt;</code> elements, one for
+each of the forms of the letter we wish to distinguish:
+     <div class="pre"> <span class="element">&lt;charDesc&gt;</span><br/>  <span class="element">&lt;glyph <span class="attribute">xml:id</span>="r1"&gt;</span><br/>   <span class="element">&lt;glyphName&gt;</span>LATIN SMALL LETTER R WITH ONE FUNNY STROKE<span class="element">&lt;/glyphName&gt;</span><br/>   <span class="element">&lt;charProp&gt;</span><br/>    <span class="element">&lt;localName&gt;</span>entity<span class="element">&lt;/localName&gt;</span><br/>    <span class="element">&lt;value&gt;</span>r1<span class="element">&lt;/value&gt;</span><br/>   <span class="element">&lt;/charProp&gt;</span><br/>   <span class="element">&lt;graphic <span class="attribute">url</span>="r1img.png"/&gt;</span><br/>  <span class="element">&lt;/glyph&gt;</span><br/>  <span class="element">&lt;glyph <span class="attribute">xml:id</span>="r2"&gt;</span><br/>   <span class="element">&lt;glyphName&gt;</span>LATIN SMALL LETTER R WITH TWO FUNNY STROKES<span class="element">&lt;/glyphName&gt;</span><br/>   <span class="element">&lt;charProp&gt;</span><br/>    <span class="element">&lt;localName&gt;</span>entity<span class="element">&lt;/localName&gt;</span><br/>    <span class="element">&lt;value&gt;</span>r2<span class="element">&lt;/value&gt;</span><br/>   <span class="element">&lt;/charProp&gt;</span><br/>   <span class="element">&lt;graphic <span class="attribute">url</span>="r2img.png"/&gt;</span><br/>  <span class="element">&lt;/glyph&gt;</span><br/> <span class="element">&lt;/charDesc&gt;</span></div>
+     With these definitions in place, occurrences of these two special
+     "r"s in the text can be annotated using the element <code>&lt;g&gt;</code>:
+     <div class="pre"> <span class="element">&lt;p&gt;</span>Wo<span class="element">&lt;g <span class="attribute">ref</span>="#r1"&gt;</span>r<span class="element">&lt;/g&gt;</span>ds in this <br/>       manusc<span class="element">&lt;g <span class="attribute">ref</span>="#r2"&gt;</span>r<span class="element">&lt;/g&gt;</span>ipt are sometimes<br/>       written in a funny way.<span class="element">&lt;/p&gt;</span></div></div><div class="p"><span id="id2561283"/>
+     As can be seen in this example, the <code>&lt;glyph&gt;</code> element pointed
+     to from the <code>&lt;g&gt;</code> element will be interpreted as an
+     annotation on the content of the element <code>&lt;g&gt;</code>.  This mechanism
+     can also be used to indicate ligatures, as in the
+     following example:
+<div class="pre"> <span class="element">&lt;p&gt;</span> ... <span class="element">&lt;g <span class="attribute">ref</span>="#Filig"&gt;</span>Fi<span class="element">&lt;/g&gt;</span>lthy riches...<span class="element">&lt;/p&gt;</span><br/>&lt;!-- in the chardesc --&gt;<br/> <span class="element">&lt;glyph <span class="attribute">xml:id</span>="Filig"&gt;</span><br/>  <span class="element">&lt;glyphName&gt;</span>LATIN UPPER F AND LATIN LOWER I LIGATURE<span class="element">&lt;/glyphName&gt;</span><br/>  <span class="element">&lt;graphic <span class="attribute">url</span>="Filig.png"/&gt;</span><br/> <span class="element">&lt;/glyph&gt;</span></div>
+(In fact the Unicode Standard does provide a character to represent the
+      <tt>Fi</tt> ligature; the encoder may however prefer not to
+      use it in order to simplify other text processing  operations,
+      such as indexing).    </div><p><span id="id2561340"/>With this
+     markup in place, it will be possible to write programs to analyze
+     the distribution of the different letters "r" as well as produce
+     more ‘faithful’ renderings of the original. It
+     will also be possible to produce normalized versions by simple ignoring
+     the annotation pointed to by the element <code>&lt;g&gt;</code>.  </p><div class="p"><span id="id2561362"/>For brevity of encoding, it may be preferred to pre-define
+    internal entities such as the following:
+     <div class="pre">&lt;!ENTITY r1 '&lt;g ref="#r1"&gt;r&lt;/g&gt;' &gt;
+&lt;!ENTITY r2 '&lt;g ref="#r2"&gt;r&lt;/g&gt;' &gt; </div>
+which would enable the same material to be encoded as follows:
+     <div class="pre"> <span class="element">&lt;p&gt;</span>Wo&amp;r1;ds in this manusc&amp;r2;ipt are 
+      sometimes written in a funny way.<span class="element">&lt;/p&gt;</span></div></div><div class="p"><span id="id2561386"/>The same technique may be used to represent particular
+abbreviation marks as well as to represent other characters or
+glyphs. For example, if we believe that the r-with-one-funny-stroke is
+being used as an abbreviation for <tt>receipt</tt>, this might be
+represented as follows:<div class="pre"> <span class="element">&lt;abbr&gt;</span>&amp;r1;<span class="element">&lt;/abbr&gt;</span></div></div><p><span id="id2561406"/>Note however that this technique employs markup objects to
+    provide a link between a character in the document and some
+    annotation on that character. It cannot therefore be used in
+    places where such markup constructs are not allowed, notably in
+    attribute values. 
+    </p></div><div class="div2" id="D25-40"><h3>21.4  Adding new characters</h3><p><span id="id2561429"/>The creation of additional characters for use in text encoding
+    is similar to the annotation of an existing character.  The same
+    element <code>&lt;g&gt;</code> is used to provide a link from the character
+    instance in the text to the character definition in
+    <code>&lt;charDesc&gt;</code> element. The main difference is that the
+    <code>&lt;g&gt;</code> element now points to a <code>&lt;char&gt;</code> element.  The
+    element <code>&lt;g&gt;</code> itself will generally be empty, but could
+    contain a codepoint from the Private Use Area (PUA) of the Unicode Standard,
+    which is an area set aside for the very purpose of privately
+    adding new characters to a document.  Recommendations on how to
+    use such PUA characters are given in the following section.  </p><div class="p"><span id="id2561462"/>In some circumstances, it may be desirable to provide a single
+precomposed form of a character that is encoded in Unicode only as a
+sequence of codepoints. For example, in Medieval
+Nordic material, a character looking like a lower case letter Y with a
+dot and an acute-accent above it may be encountered so frequently that
+the encoder wishes to treat it as a distinct character. In the
+transcription concerned, the encoder enters this letter as
+<tt>&amp;ydotacute;</tt>, which  when the
+transcription is processed can then be expanded in one of three ways,
+depending on the DTD in force. It might simply be translated into the
+sequence of corrsponding Unicode codepoints: this has the drawback
+that the sequence cannot be treated as a unit of any kind once entity
+translation has taken place.  It may be translated directly into a
+locally-defined PUA character (say <tt>&amp;#xE0A4</tt>) for local
+processing only; the more
+portable representation <div class="pre"> <span class="element">&lt;g <span class="attribute">ref</span>="#ydotacute"/&gt;</span></div>. In
+either case, the following new character definition should be supplied:
+<div class="pre"> <span class="element">&lt;char <span class="attribute">xml:id</span>="ydotacute"&gt;</span><br/>  <span class="element">&lt;charName&gt;</span>LATIN SMALL LETTER Y WITH DOT ABOVE AND ACUTE<span class="element">&lt;/charName&gt;</span><br/>  <span class="element">&lt;charProp&gt;</span><br/>   <span class="element">&lt;localName&gt;</span>entity<span class="element">&lt;/localName&gt;</span><br/>   <span class="element">&lt;value&gt;</span>ydotacute<span class="element">&lt;/value&gt;</span><br/>  <span class="element">&lt;/charProp&gt;</span><br/>  <span class="element">&lt;mapping <span class="attribute">type</span>="composed"&gt;</span>&amp;#x0079;&amp;#x0307;&amp;#x0301;<span class="element">&lt;/mapping&gt;</span><br/>  <span class="element">&lt;mapping <span class="attribute">type</span>="PUA"&gt;</span>U+E0A4<span class="element">&lt;/mapping&gt;</span><br/> <span class="element">&lt;/char&gt;</span></div>
+This definition  specifies the mapping between this composed
+character and the individual Unicode-defined characters which make it
+up. It also supplies a single locally-defined property (‘entity’)for the
+character concerned, the purpose of which is
+to supply a recommended character entity name for the character. 
+</div><div class="p"><span id="id2561540"/>Under certain circumstances, Han characters can be written
+    within a circle.  Rather than considering this as simply an aspect of the
+    rendering, an encoder may wish to treat such circled characters as
+    entirely distinct  derived characters. For a given character
+    (say that represented by the numeric-character reference <tt>&amp;#x4EBA;</tt>)
+    the circled variant might conveniently be represented as
+    <div class="pre"> <span class="element">&lt;g <span class="attribute">ref</span>="#U4EBA-circled"/&gt;</span></div>, which references a
+    definition such as the following:
+<div class="pre"> <span class="element">&lt;char <span class="attribute">xml:id</span>="U4EBA-circled"&gt;</span><br/>  <span class="element">&lt;charName&gt;</span>CIRCLED IDEOGRAPH<span class="element">&lt;/charName&gt;</span><br/>  <span class="element">&lt;charProp&gt;</span><br/>   <span class="element">&lt;unicodeName&gt;</span>character-decomposition-mapping<span class="element">&lt;/unicodeName&gt;</span><br/>   <span class="element">&lt;value&gt;</span>circle<span class="element">&lt;/value&gt;</span><br/>  <span class="element">&lt;/charProp&gt;</span><br/>  <span class="element">&lt;charProp&gt;</span><br/>   <span class="element">&lt;localName&gt;</span>daikanwa<span class="element">&lt;/localName&gt;</span><br/>   <span class="element">&lt;value&gt;</span>36<span class="element">&lt;/value&gt;</span><br/>  <span class="element">&lt;/charProp&gt;</span><br/>  <span class="element">&lt;mapping <span class="attribute">type</span>="standard"&gt;</span>
+   &amp;U+4EBA;
+  <span class="element">&lt;/mapping&gt;</span><br/>  <span class="element">&lt;mapping <span class="attribute">type</span>="PUA"&gt;</span>
+   &amp;U+E000;
+  <span class="element">&lt;/mapping&gt;</span><br/> <span class="element">&lt;/char&gt;</span></div></div><p><span id="id2561608"/>In this example, the ‘circled ideograph’
+character has been defined with two mappings, and with two
+properties. The two properties are the Unicode-defined
+character-decomposition which specifies that this is a circled
+character, using the appropriate terminology (see <a class="link_ptr" href="WD.html#ucsprops" title="Character Properties">21.2.1  Character Properties</a> above) and a locally defined property known as
+‘daikanwa’. The two
+mappings indicate firstly that the standard form of this character is
+the character <tt>&amp;#x4EBA;</tt>, and secondly that the
+character used to represent this character locally is the PUA
+character  <tt>&amp;#xE000;</tt>. For convenience of local
+processing this PUA character may in fact appear  as content of
+the <code>&lt;g&gt;</code> element. In general, however, the <code>&lt;g&gt;</code> element
+will be empty.</p></div><div class="div2" id="D25-50"><h3>21.5  How to use codepoints from the Private Use Area</h3><p><span id="id2561666"/>The developers of the Unicode Standard have set aside an
+    area of the codespace for the private use of software vendors,
+    user groups or individuals.  As of this writing (Unicode 4.0),
+    there are around 137,000 codepoints available in this area, which
+    should be enough for most needs. No codepoint assignments will be made
+    to this area by standard bodies and only some very basic default
+    properties have been assigned (which may be overwritten where
+    necessary by the mechanism outlined in this chapter). Therefore,
+    unlike all other codepoints defined by the Unicode Standard, PUA codepoints should
+    <em>not</em> be used directly in documents intended for blind interchange.
+    Instead of using PUA codepoints directly in the document content,
+    entity references should be used.  This will make it easier for
+    receiving parties to find out what PUA characters are used in a
+    document and where possible codepoint clashes with local use on
+    the receiving side occurs.</p><p><span id="id2561691"/>In the two previous examples, we mentioned that the variant
+characters concerned might well be assigned specific codepoints from
+the PUA. This might, for example, facilitate the use of a particular
+font which displays the desired character at this codepoint in the
+local processing environment.  Since however this assignment would be
+valid only on the local site, documents containing such codepoints are
+unsuitable for blind interchange.  During the process of preparing
+such documents for interchange, any PUA codepoints must be changed
+either to an encoding such as <code>&lt;c ref="#xxxx"&gt;</code> or to an
+equivalent character entity reference, thus associating the character
+with an explicitly defined <code>&lt;char&gt;</code> element.  The PUA character
+used during the preparation of the document might be recorded in the
+<code>&lt;char&gt;</code> element, as shown in the example in <a class="link_ptr" href="WD.html#D25-40" title="Adding new characters">21.4  Adding new characters</a>; however there is no requirement that the same PUA
+character be used to represent it at the receiving site. Indeed, it
+may well be the case that this other site has already made an
+assignment of some other character to the original PUA codepoint. For
+that reason, it is to be expected that a further translation into the
+local processing environment at the receiving site will be necessary
+to handle such characters, during which variant letters can be
+converted to hitherto unused codepoints on the basis of the
+information provided in the <code>&lt;charDesc&gt;</code> element.</p><p><span id="id2561737"/>This mechanism is rather weak in cases where DOM trees or
+    parsed XML fragments are exchanged, which may increasingly be the
+    case.  The best an application can do here is to treat any
+    occurrence of a PUA character only in the context of the local
+    document and use the properties provided through the <code>&lt;char&gt;</code>
+    element as a handle to the character in other contexts.  </p><p><span id="id2561751"/>In the fullness of time, a character may become standardized, and
+thus assigned a specific code point outside the PUA. Documents which
+have been encoded using the mechanism must at the least ensure that
+this changed code point is recorded within the relevant <code>&lt;char&gt;</code>
+element; it will however normally be simpler to remove the
+<code>&lt;char&gt;</code> element and replace all occurrences of <code>&lt;g&gt;</code>
+elements which reference it by occurrences of the specific coded
+character. </p></div><div class="div2" id="WSD-DEF"><h3>21.6  Additional module defined by this section</h3><div class="p"><span id="id2561786"/>The module described in this chapter makes available the following
+components:
+<div><hr/><strong>Module</strong> <em>gaiji</em>: Character and glyph documentation<ul><li>Elements defined: <a class="link_odd" href="ref-g.html">g</a> <a class="link_odd" href="ref-char.html">char</a> <a class="link_odd" href="ref-charName.html">charName</a> <a class="link_odd" href="ref-charProp.html">charProp</a> <a class="link_odd" href="ref-charDesc.html">charDesc</a> <a class="link_odd" href="ref-glyph.html">glyph</a> <a class="link_odd" href="ref-glyphName.html">glyphName</a> <a class="link_odd" href="ref-localName.html">localName</a> <a class="link_odd" href="ref-mapping.html">mapping</a> <a class="link_odd" href="ref-unicodeName.html">unicodeName</a> <a class="link_odd" href="ref-value.html">value</a> </li></ul><hr/></div>
+
+The selection and combination of modules to form a TEI schema is described in
+<a class="link_ptr" href="ST.html#STIN" title="Defining a TEI schema">2.2  Defining a TEI schema</a>.
+</div><div class="p"><span id="id2561814"/>The module is organized as follows:
+<div class="specgrp"><b>Specification group 148</b><dl><dt>Element g</dt><dd><pre class="eg">
+g = element g { g.content, g.attributes }
+
+g.content = text
+
+g.attributes = att.typed.attributes, attribute ref { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a> }?</pre></dd><dt>Element char</dt><dd><pre class="eg">
+char = element char { char.content }
+
+char.content =
+   <a class="link_odd" href="ref-charName.html">charName</a>,
+   <a class="link_odd" href="ref-macro.glossSeq.html">macro.glossSeq</a>,
+   <a class="link_odd" href="ref-charProp.html">charProp</a>*,
+   <a class="link_odd" href="ref-mapping.html">mapping</a>*,
+   <a class="link_odd" href="ref-model.graphicLike.html">model.graphicLike</a>*,
+   <a class="link_odd" href="ref-model.noteLike.html">model.noteLike</a>?</pre></dd><dt>Element charName</dt><dd><pre class="eg">
+charName = element charName { charName.content }
+
+charName.content = text</pre></dd><dt>Element charProp</dt><dd><pre class="eg">
+charProp = element charProp { charProp.content, charProp.attributes }
+
+charProp.content = ( <a class="link_odd" href="ref-unicodeName.html">unicodeName</a> | <a class="link_odd" href="ref-localName.html">localName</a> ), <a class="link_odd" href="ref-value.html">value</a>
+
+charProp.attributes = att.typed.attributes</pre></dd><dt>Element charDesc</dt><dd><pre class="eg">
+charDesc = element charDesc { charDesc.content }
+
+charDesc.content = <a class="link_odd" href="ref-desc.html">desc</a>?, ( <a class="link_odd" href="ref-char.html">char</a> | <a class="link_odd" href="ref-glyph.html">glyph</a> )+</pre></dd><dt>Element glyph</dt><dd><pre class="eg">
+glyph = element glyph { glyph.content }
+
+glyph.content =
+   <a class="link_odd" href="ref-glyphName.html">glyphName</a>,
+   <a class="link_odd" href="ref-macro.glossSeq.html">macro.glossSeq</a>,
+   <a class="link_odd" href="ref-charProp.html">charProp</a>*,
+   <a class="link_odd" href="ref-mapping.html">mapping</a>*,
+   <a class="link_odd" href="ref-model.graphicLike.html">model.graphicLike</a>*,
+   <a class="link_odd" href="ref-model.noteLike.html">model.noteLike</a>?</pre></dd><dt>Element glyphName</dt><dd><pre class="eg">
+glyphName = element glyphName { glyphName.content }
+
+glyphName.content = text</pre></dd><dt>Element localName</dt><dd><pre class="eg">
+localName = element localName { localName.content }
+
+localName.content = text</pre></dd><dt>Element mapping</dt><dd><pre class="eg">
+mapping = element mapping { mapping.content, mapping.attributes }
+
+mapping.content = <a class="link_odd" href="ref-macro.xtext.html">macro.xtext</a>
+
+mapping.attributes = att.typed.attributes</pre></dd><dt>Element unicodeName</dt><dd><pre class="eg">
+unicodeName =
+   element unicodeName { unicodeName.content, unicodeName.attributes }
+
+unicodeName.content = text
+
+unicodeName.attributes = attribute version { <a class="link_odd" href="ref-data.numeric.html">data.numeric</a> }?</pre></dd><dt>Element value</dt><dd><pre class="eg">
+value = element value { value.content }
+
+value.content = <a class="link_odd" href="ref-macro.xtext.html">macro.xtext</a></pre></dd></dl></div></div></div><p class="left"><i> Up: </i><a class="navigation" href="index.html">Contents</a><i> Previous: </i><a class="navigation" href="CC.html">20  Language Corpora</a><i> Next: </i><a class="navigation" href="FD.html">22  Feature System Declaration</a></p><div class="notes"><div class="noteHeading">Notes</div><div class="note"><a id="Note142">142.</a>Specifically,
+characters in the Unicode blocks Alphabetic Presentation Forms, Arabic
+Presentation Forms-A, Arabic Presentation Forms-B, Letterlike Symbols,
+and Number Forms.</div><div class="note"><a id="Note143">143.</a>See further the
+Unicode technical report TR23 <a class="link_ref" href="http://www.unicode.org/reports/tr23/" title="Character Property Model"><i>Character Property Model</i></a></div><div class="note"><a id="Note144">144.</a> It should be kept in mind that
+    any kind of text encoding is an abstraction and an interpretation of
+    the text at hand, which will not necessarily  be useful in reproducing an exact
+    facsimile of the appearance of a manuscript.</div></div><div class="stdfooter"><hr/><div class="footer"><a class="plain" href="http://www.tei-c.org/Consortium/">TEI Consortium</a> | <a class="plain" href="index.html">TEI P5</a> | <a class="plain" href="http://www.tei-c.org/Consortium/contact.xml">Feedback</a></div><hr/><address> edited by C.M. Sperberg-McQueen and
+	Lou Burnard.
+      Date: 2007<br/>Copyright TEI Consortium 2007<!--
+	  Generated  using an XSLT version 1.0 stylesheet
+	  based on http://www.tei-c.org/Stylesheets/teic/tei.xsl
+	  processed using libxslt
+	  on 2007-03-13T16:03:02Z--></address></div></div></div></div></body></html>

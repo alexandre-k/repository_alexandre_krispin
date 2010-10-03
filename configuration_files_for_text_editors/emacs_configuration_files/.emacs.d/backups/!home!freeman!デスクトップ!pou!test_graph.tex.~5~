@@ -1,0 +1,72 @@
+%xelatex -shell-escape test_graph.tex
+\documentclass{article}
+
+\usepackage{xltxtra}
+\usepackage{tikz}
+\usepackage{gnuplottex} %used for the environment gnuplot
+\setmainfont[Numbers=OldStyle,Ligatures=Historic]{TeX Gyre Pagella}
+\linespread{1.05}
+\newfontfamily\jap{IPA明朝}
+% GNUPLOT required
+\begin{document}
+\pagestyle{empty}
+
+
+\begin{tikzpicture}[domain=0:4]
+    \draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
+    \draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
+    \draw[->] (0,-1.2) -- (0,4.2) node[above] {$f(x)$};
+    \draw[color=red] plot[id=x] function{x} 
+        node[right] {$f(x) =x$};
+    \draw[color=blue] plot[id=sin] function{sin(x)} 
+        node[right] {$f(x) = \sin x {\jap 美しいですね}$};
+    \draw[color=orange] plot[id=exp] function{0.05*exp(x)} 
+        node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
+%\draw[color=green] plot[id=exp] function{exp(x)}
+%node[right]{$test$};
+\end{tikzpicture}
+
+\begin{gnuplot}
+set grid
+set title 'gnuplottex test $e^x$'
+set ylabel '$y$'
+set xlabel '$x$'
+plot exp(x) with linespoints
+\end{gnuplot}
+
+\begin{gnuplot}
+%set encoding iso_8859_1
+set term postscript eps enhanced monochrom \
+"Utopia-Regular" fontfile '/usr/local/gwTeX/texmf.texlive/fonts/type1/adobe/utopia/putri8a.pfb' 18
+set decimalsign ','
+set border  116 #lt -1 lw 1.000 
+set size square 1.2,1.2
+f(x,y)=x*x*y*exp(-x)
+set xrange[0:5]
+set yrange[0:10]
+set zrange[0:6]
+set ytics  0,2,8
+  set xlabel "X"
+set ylabel "Y"
+set zlabel "Z"
+unset key
+set ticslevel 0
+xdec=0.2
+zdec=0.2
+set label  "A" at 1+xdec,8,f(1,8)+zdec  front  left
+set label  "E" at 2+xdec,5.437,f(1,8)+zdec  front
+set grid ztics lt 1 lw 1
+set view 60,320,1,1
+set contour surface
+set samples 60, 72
+set isosamples 6, 11
+set grid  ztics lt 1 lw 2
+set pm3d  at s
+set cntrparam levels incremental 0,1,6
+set palette  negative  gamma 1.5
+set colorbox vert user origin .02,.4 size .04,.6
+splot  f(x,y) lw 2 ,'-' notitle with points pt 7 ps 1
+       2  5.437 2.943
+       1 8 2.943
+\end{gnuplot}
+\end{document}

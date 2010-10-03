@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<rng:grammar xmlns:rng="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<!--Schema generated 2007-03-13T16:02:29Z..
+Copyright 2005 TEI Consortium.
+This is free software; you can redistribute it and/or
+	    modify it under the terms of the GNU General Public
+	    License as published by the Free Software Foundation;
+	    either version 2 of the License, or (at your option) any
+	    later version.
+This material is distributed in the hope that it will be
+	    useful, but WITHOUT ANY WARRANTY; without even the implied
+	    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+	    PURPOSE. See the GNU General Public License for more
+	    details.
+You should have received a copy of the GNU General Public
+	    License along with this file; if not, write to the Free
+	    Software Foundation, Inc., 59 Temple Place, Suite 330,
+	    Boston, MA 02111-1307, USA.
+To contact the TEI Consortium use the following addresses.
+	    For general (non-technical) enquiries: 
+		  target="mailto:info@tei-c.org"/>info@tei-c.orgFor membership enquiries: membership@tei-c.orgFor technical enquiries, particularly about the
+		Guidelines, DTDs, schemas, or software available from
+		the TEI-C: editors@tei-c.orgFor up to date information, consult the TEI web site at http://www.tei-c.org/P5Tables, formulae, and figures-->
+<!--Definitions from module figures-->
+<!--Set global predeclared macros-->
+<!--Set predeclared macros-->
+<!--0. predeclared macros-->
+<!--1. classes-->
+<!--2. elements-->
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="cell">
+    <element name="cell">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains one cell of a table. </a:documentation>
+      <ref name="cell.content"/>
+      <ref name="cell.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="cell.content">
+    <ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="cell.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.tableDecoration.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="figDesc">
+    <element name="figDesc">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Description of Figure) contains a brief prose description of the appearance or content
+of a graphic figure, for use when documenting an image without
+displaying it.</a:documentation>
+      <ref name="figDesc.content"/>
+      <ref name="figDesc.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="figDesc.content">
+    <ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="figDesc.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="figure">
+    <element name="figure">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a block containing graphics, illustrations, or figures.</a:documentation>
+      <ref name="figure.content"/>
+      <ref name="figure.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="figure.content">
+    <zeroOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:choice>
+        <rng:ref name="model.pLike"/>
+        <rng:ref name="model.global"/>
+        <rng:ref name="figure"/>
+        <rng:ref name="figDesc"/>
+        <rng:ref name="model.graphicLike"/>
+        <rng:ref name="head"/>
+      </rng:choice>
+    </zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="figure.attributes">
+    <ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="formula">
+    <element name="formula">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a mathematical or other formula.</a:documentation>
+      <ref name="formula.content"/>
+      <ref name="formula.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="formula.content">
+    <text xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="formula.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <attribute name="notation">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the name of a previously defined notation used for the
+content of the
+element.</a:documentation>
+        <ref name="data.code"/>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="row">
+    <element name="row">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains one row of a table. </a:documentation>
+      <ref name="row.content"/>
+      <ref name="row.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="row.content">
+    <oneOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:choice>
+        <rng:ref name="cell"/>
+        <rng:ref name="table"/>
+      </rng:choice>
+      <rng:zeroOrMore>
+        <rng:ref name="model.global"/>
+      </rng:zeroOrMore>
+    </oneOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="row.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.tableDecoration.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="table">
+    <element name="table">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains text displayed in tabular form, in
+rows and columns.</a:documentation>
+      <ref name="table.content"/>
+      <ref name="table.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="table.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="head"/>
+          <rng:ref name="model.global"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+      <rng:oneOrMore>
+        <rng:ref name="row"/>
+        <rng:zeroOrMore>
+          <rng:ref name="model.global"/>
+        </rng:zeroOrMore>
+      </rng:oneOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="table.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <attribute name="rows">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the number of rows in the table.</a:documentation>
+        <ref name="data.count"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="cols">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the number of columns in each row of the table.</a:documentation>
+        <ref name="data.count"/>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+<!--3. macros-->
+</rng:grammar>

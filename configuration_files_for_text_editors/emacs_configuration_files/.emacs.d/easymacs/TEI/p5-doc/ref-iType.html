@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;iType&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;iType&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;iType&gt;</h1></div><div><span id="iType"/><table border="1" class="wovenodd"><tr><td class="elementSpec">iType</td><td colspan="2" class="wovenodd-col2">(inflectional class) indicates the inflectional class associated with a lexical item.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.entryParts.html">model.entryParts</a> <a class="link_odd" href="ref-model.morphLike.html">model.morphLike</a> <a class="link_odd" href="ref-att.lexicographic.html">att.lexicographic</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element iType
+{
+   att.global.attributes,
+   att.lexicographic.attributes,
+   attribute type { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> }?,
+   <a class="link_odd" href="ref-macro.paraContent.html">macro.paraContent</a>
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>  [<a class="classlink" href="ref-att.lexicographic.html">att.lexicographic</a> ] <table><tr><td class="attDef">type</td><td colspan="2">indicates the type of indicator used to specify the inflection class, when it is
+                necessary to distinguish between the usual abbreviated indications (e.g.
+                inv) and other kinds of indicators, such as special codes
+                referring to conjugation patterns, etc.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a></code></td></tr><tr><td><!-- --></td><td valign="top">Sample values include:<table class="valList"><tr><td valign="top"><b>abbrev</b></td><td valign="top">(abbreviated indicator) </td></tr><tr><td valign="top"><b>verbTable</b></td><td valign="top">(coded reference to a table of verbs) </td></tr></table></td></tr><tr><td/><td><p><span id="id2460702"/>This element is synonymous with <span class="tag">&lt;gram type='inflectional type'&gt;</span>.</p></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p class="dataDesc"><span id="id2460721"/>May contain character data and phrase-level elements. Typical content
+            will be invariant, n 3 etc.</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="DI.html#DITPFO" title="Information on Written and Spoken Forms">9.3.1  Information on Written and Spoken Forms</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">dictionaries</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

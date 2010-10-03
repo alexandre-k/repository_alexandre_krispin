@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;attDef&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;attDef&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;attDef&gt;</h1></div><div><span id="attDef"/><table border="1" class="wovenodd"><tr><td class="elementSpec">attDef</td><td colspan="2" class="wovenodd-col2">(attribute definition) contains the definition of a single attribute.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-att.identified.html">att.identified</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element attDef
+{
+   att.global.attributes,
+   att.identified.attributes,
+   attribute usage { "req" | "mwa" | "rec" | "rwa" | "opt" }?,
+   attribute ns { <a class="link_odd" href="ref-data.namespace.html">data.namespace</a> }?,
+   (
+      <a class="link_odd" href="ref-macro.glossSeq.html">macro.glossSeq</a>,
+      <a class="link_odd" href="ref-datatype.html">datatype</a>?,
+      <a class="link_odd" href="ref-defaultVal.html">defaultVal</a>?,
+      ( <a class="link_odd" href="ref-valList.html">valList</a> | <a class="link_odd" href="ref-valDesc.html">valDesc</a> )?,
+      <a class="link_odd" href="ref-exemplum.html">exemplum</a>*,
+      <a class="link_odd" href="ref-remarks.html">remarks</a>*
+   )
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>  [<a class="classlink" href="ref-att.identified.html">att.identified</a> ] <table><tr><td class="attDef">usage</td><td colspan="2">specifies the optionality of an attribute or element.
+ </td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Default</span>: opt</td></tr><tr><td><!-- --></td><td valign="top">Legal values are:<table class="valList"><tr><td valign="top"><b>req</b></td><td valign="top">(required) </td></tr><tr><td valign="top"><b>mwa</b></td><td valign="top">(mandatory when applicable  ) </td></tr><tr><td valign="top"><b>rec</b></td><td valign="top">(recommended  ) </td></tr><tr><td valign="top"><b>rwa</b></td><td valign="top">(recommended when applicable  ) </td></tr><tr><td valign="top"><b>opt</b></td><td valign="top">(optional ) </td></tr></table></td></tr><tr><td class="attDef">ns</td><td colspan="2">(namespace) specifies the namespace to which this attribute belongs</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.namespace.html">data.namespace</a></code></td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Default</span>: http://www.tei-c.org/ns/1.0</td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;attDef <span class="attribute">usage</span>="rec" <span class="attribute">ident</span>="type"&gt;</span><br/>  <span class="element">&lt;desc&gt;</span>specifies a name conventionally used for this
+	level of subdivision, e.g. <span class="element">&lt;q&gt;</span>act<span class="element">&lt;/q&gt;</span>, <span class="element">&lt;q&gt;</span>volume<span class="element">&lt;/q&gt;</span>,<br/>  	<span class="element">&lt;q&gt;</span>book<span class="element">&lt;/q&gt;</span>, <span class="element">&lt;q&gt;</span>section<span class="element">&lt;/q&gt;</span>, <span class="element">&lt;q&gt;</span>canto<span class="element">&lt;/q&gt;</span>, etc.<span class="element">&lt;/desc&gt;</span><br/> <span class="element">&lt;/attDef&gt;</span></div></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="TD.html#TDATT" title="Attribute list specification">23.3.3  Attribute list specification</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">tagdocs</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

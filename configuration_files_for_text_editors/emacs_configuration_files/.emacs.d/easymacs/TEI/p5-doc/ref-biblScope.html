@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;biblScope&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;biblScope&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;biblScope&gt;</h1></div><div><span id="biblScope"/><table border="1" class="wovenodd"><tr><td class="elementSpec">biblScope</td><td colspan="2" class="wovenodd-col2">(scope of citation) defines the scope of a bibliographic reference, for example as a
+list of pagenumbers, or a named subdivision of a larger work.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.imprintPart.html">model.imprintPart</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element biblScope
+{
+   att.global.attributes,
+   attribute type { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> }?,
+   <a class="link_odd" href="ref-macro.phraseSeq.html">macro.phraseSeq</a>
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>In addition to global attributes<table><tr><td class="attDef">type</td><td colspan="2">identifies the type of information conveyed by the element, e.g.
+pages, volume.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a></code></td></tr><tr><td><!-- --></td><td valign="top">Suggested values include:<table class="valList"><tr><td valign="top"><b>vol</b></td><td valign="top">(the element contains a volume number.) </td></tr><tr><td valign="top"><b>issue</b></td><td valign="top">(the element contains an issue number, or volume and
+issue numbers.) </td></tr><tr><td valign="top"><b>pp</b></td><td valign="top">(the element contains a page number or page range.) </td></tr><tr><td valign="top"><b>cap</b></td><td valign="top">(the element contains a chapter indication (number
+and/or title)) </td></tr><tr><td valign="top"><b>part</b></td><td valign="top">(the element identifies a part of a book or collection.) </td></tr></table></td></tr><tr><td/><td><p><span id="id2422992"/></p></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;biblScope&gt;</span>pp 12–34<span class="element">&lt;/biblScope&gt;</span><br/> <span class="element">&lt;biblScope <span class="attribute">type</span>="vol"&gt;</span>II<span class="element">&lt;/biblScope&gt;</span><br/> <span class="element">&lt;biblScope <span class="attribute">type</span>="pp"&gt;</span>12<span class="element">&lt;/biblScope&gt;</span></div></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="CO.html#COBICOI" title="Imprint, Pagination, and Other Details">4.11.2.3  Imprint, Pagination, and Other Details</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">core</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

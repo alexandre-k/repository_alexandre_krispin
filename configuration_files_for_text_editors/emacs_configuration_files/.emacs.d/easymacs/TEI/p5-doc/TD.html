@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><!--THIS FILE IS GENERATED FROM AN XML MASTER. DO NOT EDIT (4)-->
+<head><title> TEI P5: Guidelines for Electronic Text Encoding and Interchange: 23  Documentation Elements</title><link href="/favicon.ico" rel="icon" type="image/x-icon"/><link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/><meta name="author" content="edited by C.M. Sperberg-McQueen and&#10;&#9;Lou Burnard"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="TEI P5: Guidelines for Electronic Text Encoding and Interchange: 23  Documentation Elements"/><meta name="DC.Type" content="Text"/><meta name="DC.Format" content="application/xhtml+xml"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/><link href="guidelines.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body onload="startUp()"><div id="hdr"><h2 class="subtitle">Documentation Elements</h2><h1 class="title">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h1></div><div id="accessibility"><span class="tocontent"><a href="?style=text">Text only</a>
+      | <a class="skiplinks" href="#rh-column" title="Go to main page content">Skip links</a></span></div><div id="hdr2"><!--no nav --></div><div id="hdr3"><a href="#rh-column" title="Go to main page content" class="skiplinks">Skip links</a><a class="hide">|</a><div class="breadcrumb"><ul class="breadcrumb"><li class="breadcrumb-first"><a class="breadcrumb" href="index.html">TEI P5 Guidelines</a></li><li class="breadcrumb"><a class="breadcrumb" href="/"></a></li></ul></div><a class="hide">|</a><a class="bannerright" href="http://www.tei-c.org/Consortium/" title="Go to home page">TEI Consortium</a></div><div class="column-wrapper"><div id="lh-col"><div id="lh-col-top"><!--top of left-hand column--></div><div id="lh-col-bottom"><!--bottom of left-hand column--><div class="tocFront"><div class="tocContainer"><div class="toclist0"><a class="toclist" href="FM1.html"> Introductory Note</a>
+</div><div class="toclist0"><a class="toclist" href="AB.html"> About These Guidelines</a>
+</div><div class="toclist0"><a class="toclist" href="SG.html"> A Gentle Introduction to XML</a>
+</div></div></div><div class="tocBody"><!--start TOC--><div class="tocContainer"><!--TOC components--><div class="toclist0"><a class="toclist" href="CH.html">1  Languages and Character Sets</a>
+</div><div class="toclist0"><a class="toclist" href="ST.html">2  The TEI infrastructure</a>
+</div><div class="toclist0"><a class="toclist" href="HD.html">3  The TEI Header</a>
+</div><div class="toclist0"><a class="toclist" href="CO.html">4  Elements Available in All TEI Documents</a>
+</div><div class="toclist0"><a class="toclist" href="DS.html">5  Default Text Structure</a>
+</div><div class="toclist0"><a class="toclist" href="VE.html">6  Verse</a>
+</div><div class="toclist0"><a class="toclist" href="DR.html">7  Performance Texts</a>
+</div><div class="toclist0"><a class="toclist" href="TS.html">8  Transcriptions of Speech</a>
+</div><div class="toclist0"><a class="toclist" href="DI.html">9  Print Dictionaries</a>
+</div><div class="toclist0"><a class="toclist" href="MS.html">10  Manuscript Description</a>
+</div><div class="toclist0"><a class="toclist" href="SA.html">11  Linking, Segmentation, and Alignment</a>
+</div><div class="toclist0"><a class="toclist" href="AI.html">12  Simple Analytic Mechanisms</a>
+</div><div class="toclist0"><a class="toclist" href="FS.html">13  Feature Structures</a>
+</div><div class="toclist0"><a class="toclist" href="CE.html">14  Certainty and Responsibility</a>
+</div><div class="toclist0"><a class="toclist" href="PH.html">15  Transcription of Primary Sources</a>
+</div><div class="toclist0"><a class="toclist" href="TC.html">16  Critical Apparatus</a>
+</div><div class="toclist0"><a class="toclist" href="ND.html">17  Names and Dates</a>
+</div><div class="toclist0"><a class="toclist" href="GD.html">18  Graphs, Networks, and Trees</a>
+</div><div class="toclist0"><a class="toclist" href="FT.html">19  Tables, Formulae, and Graphics</a>
+</div><div class="toclist0"><a class="toclist" href="CC.html">20  Language Corpora</a>
+</div><div class="toclist0"><a class="toclist" href="WD.html">21  Representation of non-standard characters and glyphs</a>
+</div><div class="toclist0"><a class="toclist" href="FD.html">22  Feature System Declaration</a>
+</div><div class="toclist0"><span class="toclist-this">23  Documentation Elements</span>
+<div class="toclist1"><a class="toclist" href="TD.html#TDphrase">23.1  Phrase level documentary elements</a>
+</div><div class="toclist1"><a class="toclist" href="TD.html#TDmodules">23.2  Modules and schemas</a>
+</div><div class="toclist1"><a class="toclist" href="TD.html#TDcrystals">23.3  Specification elements</a>
+</div><div class="toclist1"><a class="toclist" href="TD.html#TDbuild">23.4  Building a schema</a>
+</div><div class="toclist1"><a class="toclist" href="TD.html#TDformal">23.5  Formal declaration</a>
+</div></div><div class="toclist0"><a class="toclist" href="USE.html">24  Using The TEI</a>
+</div></div></div><div class="tocBack"><div class="tocContainer"><div class="toclist0"><a class="toclist" href="REFCLA.html">Appendix A  Classes</a>
+</div><div class="toclist0"><a class="toclist" href="REFTAG.html">Appendix B  Elements</a>
+</div><div class="toclist0"><a class="toclist" href="REFENT.html">Appendix C  Macros</a>
+</div><div class="toclist0"><a class="toclist" href="BIB.html">Appendix D  Bibliography</a>
+</div><div class="toclist0"><a class="toclist" href="PARTIND.html">Appendix E  Index</a>
+</div><div class="toclist0"><a class="toclist" href="PREFS.html">Appendix F  Prefatory Notes</a>
+</div><div class="toclist0"><a class="toclist" href="COL.html">Appendix G  Colophon</a>
+</div></div></div></div></div><div id="rh-col"><a id="rh-column"/><div id="rh-col-top"><!--top of right-hand column--></div><div id="rh-col-bottom"><!--bottom of right-hand column--><h2>23  Documentation Elements</h2><p><span id="id2566641"/>This chapter describes a module which may be used for the
+documentation of the XML elements and element classes which make up
+any markup scheme, in particular that described by the TEI Guidelines,
+and also for the automatic generation of schemas or DTDs conforming to
+that documentation. It should be used also by those wishing to
+customize or modify these Guidelines in a conformant manner, as
+further described in chapters <a class="link_ptr" href="USE.html#MD" title="29">24.2  Modifying and Customizing the TEI DTD</a> and <a class="link_ptr" href="USE.html#CF" title="28">24.1  Conformance</a> and may also be useful in the documentation of any
+other comparable encoding scheme, even though it contains some aspects
+which are specific to the TEI and may not be generally applicable.</p><p><span id="id2566663"/>An overview of the kind of processing environment envisaged for the
+module described by this chapter may be helpful. In the remainder of
+this chapter we refer to software which provides such as a processing
+environment as an <em>ODD processor</em><a class="notelink" href="#Note148"><sup>148</sup></a>. Like any other piece of XML software, an ODD processor
+may be instantiated in many ways: the current system uses a number of
+XSLT stylesheets which are freely available from the TEI, but this
+specification makes no particular assumptions about the tools which
+will be used to provide an ODD processing environment.</p><div class="p"><span id="id2566690"/>As the name suggests, an ODD processor uses a single XML document
+to generate multiple outputs. These outputs will include:
+<ul><li>formal reference documentation for elements, attributes, element
+classes, patterns etc. like those provided in <a class="link_ptr" href="REFTAG.html" title="35">Appendix B  Elements</a>;</li><li>detailed descriptive documentation, embedding some parts of the
+formal reference documentation, such as the tag description lists
+provided in this and other chapters of these Guidelines;</li><li>declarative code for one or more XML schema languages,
+specifically Relax NG or W3C Schema.</li><li>declarative code for fragments which can be assembled to make up
+an XML Document Type Declaration.</li></ul></div><p><span id="id2566725"/>The input required to generate these outputs consists of running
+prose, and special purpose elements documenting the components
+(elements, classes, etc.) which are to be documented and also declared
+in the chosen schema language. All of this input is encoded in XML
+using the module defined by this chapter. In order to support more
+than one schema language, this module uses a comparatively high level
+model which can then be mapped by an ODD processor to the specific
+constructs appropriate to the schema language in use. Although some
+modern schema languages such as RelaxNG or W3Schema natively support
+self-documentary features of this kind, we have chosen to retain the
+ODD model, if only for reasons of compatibility with earlier versions
+of these Guidelines. We do however use the ISO standard XML schema
+language RelaxNG (<a class="link_ptr" href="http://www.relaxng.org" title=""><span>http://www.relaxng.org</span></a>) as a means
+of declaring content models, rather than inventing a completely new
+XML-based representation for them.</p><p><span id="id2566748"/> In the TEI abstract model, a markup scheme (a <em>schema</em>)
+consists of a number of discrete <em>modules</em>, which can be
+combined more or less as required. Each major chapter of these
+Guidelines defines a distinct module. Each module declares a number of
+<em>elements</em> specific to that module, and may also populate
+particular <em>classes</em>. All classes are declared globally;
+particular modules extend the meaning of a class by adding elements or attributes
+to it. Wherever possible, element content models are defined in terms
+of classes rather than in terms of specific elements. Modules can also declare particular
+<em>patterns</em>, which act as short-cuts for commonly used
+content models or class references.</p><p><span id="id2566780"/>In the present chapter, we discuss the elements needed to support
+this system. In addition, section <a class="link_ptr" href="TD.html#TDphrase" title="Phrase level documentary elements">23.1  Phrase level documentary elements</a> discusses
+some general purpose elements which may be useful in any kind of
+technical documentation, wherever there is need to talk about
+technical features of an XML encoding such as element names and
+attributes. Section <a class="link_ptr" href="TD.html#TDmodules" title="Modules and schemas">23.2  Modules and schemas</a> discusses the elements
+which are used to document XML <em>modules</em> and their high
+level components. Section <a class="link_ptr" href="TD.html#TDcrystals" title="Specification elements">23.3  Specification elements</a> discusses the
+elements which document  XML elements and their attributes,
+element classes, and generic patterns or macros. Finally, section <a class="link_ptr" href="TD.html#TDformal" title="Formal declaration">23.5  Formal declaration</a> gives an overview of the whole module.</p><div class="div2" id="TDphrase"><h3>23.1  Phrase level documentary elements</h3><div class="div3" id="body.1_div.23_div.1_div.1"><h4>23.1.1  Phrase level terms</h4><div class="p"><span id="id2566833"/>In any kind of technical documentation, the following phrase-level
+elements may be found useful for marking up parts of a markup language
+or other formal language when these occur within the body of running text.
+<ul class="specList"><li><b>&lt;<a href="ref-att.html">att</a>&gt;</b> (attribute) contains the name of an attribute appearing within running text.</li><li><b>&lt;<a href="ref-code.html">code</a>&gt;</b> contains literal code from some formal language such as a
+programming language</li><li><b>&lt;<a href="ref-eg.html">eg</a>&gt;</b> contains any kind of illustrative example. </li><li><b>&lt;<a href="ref-egXML.html">egXML</a>&gt;</b> contains a single well-formed XML example demonstrating the use
+of some XML element or attribute. </li><li><b>&lt;<a href="ref-gi.html">gi</a>&gt;</b> (generic identifier) contains the name (generic identifier) of an element.</li><li><b>&lt;<a href="ref-tag.html">tag</a>&gt;</b> contains text of a complete start- or end-tag, possibly
+including attribute specifications, but excluding the opening and
+closing markup delimiter characters.</li><li><b>&lt;<a href="ref-val.html">val</a>&gt;</b> (value) contains a single attribute value.</li></ul></div><div class="p"><span id="id2566873"/>As an example of the recommended use of these elements, we quote from
+an imaginary TEI working paper:
+<div class="pre"> <span class="element">&lt;p&gt;</span>The <span class="element">&lt;gi&gt;</span>gi<span class="element">&lt;/gi&gt;</span> element is used to tag<br/> element names when they appear in the text; the<br/> <span class="element">&lt;gi&gt;</span>tag<span class="element">&lt;/gi&gt;</span> element however is used to show how a tag as<br/> such might appear. So one might talk of an occurrence of the<br/> <span class="element">&lt;gi&gt;</span>blort<span class="element">&lt;/gi&gt;</span> element which had been tagged<br/> <span class="element">&lt;tag&gt;</span>blort type='runcible'<span class="element">&lt;/tag&gt;</span>. The<br/> <span class="element">&lt;att&gt;</span>type<span class="element">&lt;/att&gt;</span> attribute may take any name token as<br/> value; the default value is <span class="element">&lt;val&gt;</span>spqr<span class="element">&lt;/val&gt;</span>, in memory of<br/> its creator.<span class="element">&lt;/p&gt;</span></div></div><div class="p"><span id="id2566911"/>The <code>&lt;code&gt;</code> and <code>&lt;egXML&gt;</code> elements are used to mark
+strings of formal code, or passages of markup. The first of these is
+intended for use in citing brief passages in some formal language such
+as a programming language, as in the following example:
+<div class="pre"> <span class="element">&lt;p&gt;</span>If the variable <span class="element">&lt;ident&gt;</span>z<span class="element">&lt;/ident&gt;</span> has a value of zero, a statement <br/> such as <span class="element">&lt;code&gt;</span>x=y/z<span class="element">&lt;/code&gt;</span> will usually cause a fatal error.<span class="element">&lt;/p&gt;</span></div></div><p><span id="id2566940"/>If the cited phrase is a mathematical or chemical formula, the more
+specific <code>&lt;formula&gt;</code> element defined by the
+<span class="ident-module">figures</span> module (<a class="link_ptr" href="FT.html#FTFOR" title="Formulae and Mathematical Expressions">19.2  Formulae and
+Mathematical Expressions</a>) may be more
+appropriate. </p><p><span id="id2566960"/>The <code>&lt;eg&gt;</code> element may be used to enclose any kind of example,
+which will typically be rendered as a distinct block, possibly using
+particular formatting conventions, when the document is processed. It
+is a specialised form of the more general <code>&lt;q&gt;</code> element provided
+by the TEI core module. In documents containing 
+examples of XML markup, the <code>&lt;egXML&gt;</code> element should be used for
+preference, as further discussed below in <a class="link_ptr" href="TD.html#TDeg" title="Exemplification of components">23.3.1.2  Exemplification of components</a>, since
+the content of this element can be checked for well-formedness. </p><p><span id="id2566986"/>These elements are all members of the class
+<span class="ident-class">model.oddPhr</span>, which is turn a member of the general
+<span class="ident-class">phrase</span> class. When this module is included in a schema, this class is
+expanded to include these elements, and they are therefore available
+at any point that a phrase level element is available. </p></div><div class="div3" id="body.1_div.23_div.1_div.2"><h4>23.1.2  Element and attribute descriptions</h4><div class="p"><span id="id2567014"/>Within the body of a document using this module, the following
+elements may be used to reference parts of the specification elements
+discussed in section <a class="link_ptr" href="TD.html#TDcrystals" title="Specification elements">23.3  Specification elements</a>, in particular the
+brief prose descriptions these provide for elements and attributes.
+<ul class="specList"><li><b>&lt;<a href="ref-specList.html">specList</a>&gt;</b> marks where a list of descriptions is to be inserted into the prose documentation.</li><li><b>&lt;<a href="ref-specDesc.html">specDesc</a>&gt;</b> (Element or class description) indicates that a description of the specified element or class
+  should be included at this point within a document.</li></ul></div><div class="p"><span id="id2567038"/>TEI practice requires that a <code>&lt;specList&gt;</code> listing the elements
+under discussion introduce each subsection of a module's
+documentation. The source for for the present section, for example, begins
+as follows:
+<div class="pre"> <span class="element">&lt;div3&gt;</span><br/>  <span class="element">&lt;head&gt;</span>Element and attribute descriptions<span class="element">&lt;/head&gt;</span><br/>  <span class="element">&lt;p&gt;</span>Within the body of a document using this module, the following
+elements may be used to reference parts of the specification elements
+discussed in section <span class="element">&lt;ptr <span class="attribute">target</span>="#TDcrystals"/&gt;</span>, in particular the<br/>  brief prose descriptions these provide for elements and attributes.<br/>  <span class="element">&lt;specList&gt;</span><br/>    <span class="element">&lt;specDesc <span class="attribute">key</span>="specList"/&gt;</span><br/>    <span class="element">&lt;specDesc <span class="attribute">key</span>="specDesc"/&gt;</span><br/>   <span class="element">&lt;/specList&gt;</span><br/>  <span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;p&gt;</span>TEI practice requires that a <span class="element">&lt;gi&gt;</span>specList<span class="element">&lt;/gi&gt;</span> listing the elements<br/>  ...<br/>  <span class="element">&lt;/p&gt;</span><br/>&lt;!-- ... --&gt;<br/> <span class="element">&lt;/div3&gt;</span></div></div><p><span id="id2567090"/>When formatting the <code>&lt;ptr&gt;</code> element in this example, an ODD
+processor might simply generate the section number and title of the
+section referred to, perhaps additionally inserting a link to the
+section. In a similar way, when processing the <code>&lt;specDesc&gt;</code>
+elements, an ODD processor must recover relevant details of the
+element being specified (<code>&lt;specList&gt;</code> and <code>&lt;specDesc&gt;</code> in
+this case) from their associated declaration elements: typically, the
+details recovered will include a brief description of the element and
+its attributes. These, and other data, will be stored in a specification
+element elsewhere within the current document, or they may be supplied by the
+ODD processor in some other way, for example from a database. For this
+reason, the link to the required specification element is always made
+using a TEI-defined key rather than an XML IDREF value. The ODD
+processor uses this key as a means of accessing the specification
+element required. There is no requirement that this be performed using
+the XML ID/IDREF mechanism, but there is an assumption that the
+identifier be unique.</p><p><span id="id2567125"/>A <code>&lt;specDesc&gt;</code> generates in the documentation the identifier,
+and also the contents of the <code>&lt;desc&gt;</code> child of whatever
+specification element is indicated by its <span class="att">key</span> attribute,
+together with any associated attribute list, as in the example
+above.</p></div><div class="div3" id="body.1_div.23_div.1_div.3"><h4>23.1.3  Formal definitions</h4><div class="p"><span id="id2567149"/>The elements discussed in this section are formally defined as
+follows:
+<div class="specgrp"><span id="TDSG1"/><b>Specification group 152: Phrase-level elements for tag documentation</b><dl><dt>Element att</dt><dd><pre class="eg">
+att = element att { att.content, att.attributes }
+
+att.content = text
+
+att.attributes = attribute scheme { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> }?</pre></dd><dt>Element code</dt><dd><pre class="eg">
+code = element code { code.content, code.attributes }
+
+code.content = text
+
+code.attributes = attribute lang { <a class="link_odd" href="ref-data.word.html">data.word</a> }?</pre></dd><dt>Element eg</dt><dd><pre class="eg">
+eg = element eg { eg.content }
+
+eg.content = text</pre></dd><dt>Element egXML</dt><dd><pre class="eg">
+egXML = element id2427637:egXML { egXML.content }
+
+egXML.content = text</pre></dd><dt>Element gi</dt><dd><pre class="eg">
+gi = element gi { gi.content, gi.attributes }
+
+gi.content = text
+
+gi.attributes = attribute scheme { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> }?</pre></dd><dt>Element ident</dt><dd><pre class="eg">
+ident = element ident { ident.content, ident.attributes }
+
+ident.content = text
+
+ident.attributes = att.typed.attributes</pre></dd><dt>Element tag</dt><dd><pre class="eg">
+tag = element tag { tag.content, tag.attributes }
+
+tag.content = text
+
+tag.attributes = attribute scheme { "TEI" | "DBK" }?</pre></dd><dt>Element val</dt><dd><pre class="eg">
+val = element val { val.content }
+
+val.content = text</pre></dd><dt>Element specList</dt><dd><pre class="eg">
+specList = element specList { specList.content }
+
+specList.content = <a class="link_odd" href="ref-specDesc.html">specDesc</a>+</pre></dd><dt>Element specDesc</dt><dd><pre class="eg">
+specDesc = element specDesc { specDesc.content, specDesc.attributes }
+
+specDesc.content = empty
+
+specDesc.attributes =
+   attribute key { <a class="link_odd" href="ref-data.name.html">data.name</a> }?,
+   attribute atts { list { <a class="link_odd" href="ref-data.name.html">data.name</a>* } }?</pre></dd></dl></div></div></div></div><div class="div2" id="TDmodules"><h3>23.2  Modules and schemas</h3><div class="p"><span id="id2568411"/>As mentioned above, the primary purpose of this module is to facilitate
+the documentation of an XML schema derived from the TEI Guidelines. The following elements are
+provided for this purpose:
+<ul class="specList"><li><b>&lt;<a href="ref-schemaSpec.html">schemaSpec</a>&gt;</b> generates a TEI-conformant schema and documentation for it.</li><li><b>&lt;<a href="ref-moduleSpec.html">moduleSpec</a>&gt;</b> documents the structure, content, and purpose of a single
+module, i.e. a named and externally visible group of declarations.</li><li><b>&lt;<a href="ref-moduleRef.html">moduleRef</a>&gt;</b> references a module which is to be incorporated into a schema.</li><li><b>&lt;<a href="ref-specGrp.html">specGrp</a>&gt;</b> (specification group) contains any convenient grouping of specifications for use within
+  the current module.</li><li><b>&lt;<a href="ref-specGrpRef.html">specGrpRef</a>&gt;</b> (reference to a specification group) indicates that the  declarations contained by the
+  specGrp referenced should be inserted at this point.</li><li><b>&lt;<a href="ref-attRef.html">attRef</a>&gt;</b> (attribute pointer) points to the definition of an attribute or group of attributes.</li></ul>
+A <em>module</em> is a convenient way of grouping together element
+and other declarations and associating an externally-visible name with
+the group. A <em>specification group</em> performs essentially the
+same function, but the resulting group is not accessible outside the
+scope of the ODD document in which it is defined, whereas a module can
+be accessed by name from any TEI schema.  Modules, elements and their
+attributes, element classes, and patterns are all individually
+documented using further elements described in section <a class="link_ptr" href="TD.html#TDcrystals" title="Specification elements">23.3  Specification elements</a> below; part of that specification includes the
+name of a module to which the component belongs. An ODD processor
+generating XML DTD or schema fragments from a document marked up
+according to the recommendations of this chapter will generate such
+fragments for each <code>&lt;module&gt;</code> element found. For example, the
+chapter documenting the TEI module for names and dates contains a
+module specification like the following:
+<div class="pre"> <span class="element">&lt;moduleSpec <span class="attribute">xml:id</span>="XDND" <span class="attribute">ident</span>="namesdates"&gt;</span><br/>  <span class="element">&lt;altIdent <span class="attribute">type</span>="FPI"&gt;</span>Names and Dates<span class="element">&lt;/altIdent&gt;</span><br/>  <span class="element">&lt;desc&gt;</span>Additional elements for names and dates<span class="element">&lt;/desc&gt;</span><br/> <span class="element">&lt;/moduleSpec&gt;</span></div>
+together with specifications for all the elements, classes, and
+patterns which make up that module, expressed using
+<code>&lt;elementSpec&gt;</code>, <code>&lt;classSpec&gt;</code> or <code>&lt;patternSpec&gt;</code>
+elements as appropriate. (These elements are discussed in section <a class="link_ptr" href="TD.html#TDcrystals" title="Specification elements">23.3  Specification elements</a> below) Each of those specifications carries a
+<span class="att">module</span> attribute, the value of which is
+<tt>namesdates</tt>. An ODD processor encountering the
+<code>&lt;moduleSpec&gt;</code> element above can thus generate a schema fragment
+for the TEI namesdates module that includes declarations for all the
+elements (etc.) which reference it. </div><p><span id="id2568535"/>In most realistic applications, it will be desirable to combine
+more than one module together to form a complete <em>schema</em>.
+A schema consists of references to one or more modules or
+specification groups, and may also contain explicit declarations or
+redeclarations of elements (see further <a class="link_ptr" href="TD.html#TDbuild" title="Building a schema">23.4  Building a schema</a>). Any
+combination of modules can be used to create a schema: the distinction
+between base and additional tagsets in earlier versions of the TEI
+scheme has not been carried forward into P5. </p><p><span id="id2568554"/>A schema can combine references to TEI modules with references to
+other (non-TEI) modules using different namespaces, for example to
+include mathematical markup expressed using MathML in a TEI
+document. By default, the effect of combining modules is to allow all
+of the components declared by the constituent modules to coexist
+(where this is syntactically possible: where it is not — for
+example, because of name clashes — a schema cannot be
+generated). It is also possible to over-ride declarations contained by
+a module, as further discussed in section <a class="link_ptr" href="TD.html#TDbuild" title="Building a schema">23.4  Building a schema</a></p><p><span id="id2568574"/>It is often convenient to describe and operate on sets of
+declarations smaller than the whole, and to document them in a
+specific order: such collections are called <em>specGrps</em>
+(specification groups). Individual <code>&lt;specGrp&gt;</code> elements are
+identified using the global <span class="att">xml:id</span> attribute, and may then be
+referenced from any point in an ODD document using the
+<code>&lt;specGrpRef&gt;</code> element. This is useful if, for example, it is
+desired to describe particular groups of elements in a specific
+sequence. Note however that the order in which  element declarations
+appear within the schema code generated from a <code>&lt;moduleSpec&gt;</code>
+element cannot be altered, and is not affected by the order of
+declarations within a <code>&lt;specGrp&gt;</code>. </p><div class="p"><span id="id2568609"/>An ODD processor will generate a piece of schema code
+corresponding with the declarations contained by a <code>&lt;specGrp&gt;</code>
+element in the documentation being output, and a cross reference to
+such a piece of schema code when processing a <code>&lt;specGrpRef&gt;</code>. For
+example, if the input text reads
+<div class="pre"> <span class="element">&lt;p&gt;</span>This module contains three red elements:
+<span class="element">&lt;specGrp <span class="attribute">xml:id</span>="RED"&gt;</span><br/>   <span class="element">&lt;elementSpec <span class="attribute">ident</span>="beetroot"&gt;</span><br/>&lt;!-- ... --&gt;<br/>   <span class="element">&lt;/elementSpec&gt;</span><br/>   <span class="element">&lt;elementSpec <span class="attribute">ident</span>="east"&gt;</span><br/>&lt;!-- ... --&gt;<br/>   <span class="element">&lt;/elementSpec&gt;</span><br/>   <span class="element">&lt;elementSpec <span class="attribute">ident</span>="rose"&gt;</span><br/>&lt;!-- ... --&gt;<br/>   <span class="element">&lt;/elementSpec&gt;</span><br/>  <span class="element">&lt;/specGrp&gt;</span><br/> and two blue ones:<br/> <span class="element">&lt;specGrp <span class="attribute">xml:id</span>="BLUE"&gt;</span><br/>   <span class="element">&lt;elementSpec <span class="attribute">ident</span>="sky"&gt;</span><br/>&lt;!-- ... --&gt;<br/>   <span class="element">&lt;/elementSpec&gt;</span><br/>   <span class="element">&lt;elementSpec <span class="attribute">ident</span>="bayou"&gt;</span><br/>&lt;!-- ... --&gt;<br/>   <span class="element">&lt;/elementSpec&gt;</span><br/>  <span class="element">&lt;/specGrp&gt;</span><br/> <span class="element">&lt;/p&gt;</span></div>
+then the output documentation will replace the two <code>&lt;specGrp&gt;</code>
+elements above with a representation of the schema code declaring the
+elements <code>&lt;beetroot&gt;</code>, <code>&lt;east&gt;</code>, <code>&lt;rose&gt;</code> and that
+declaring the elements <code>&lt;sky&gt;</code> and <code>&lt;bayou&gt;</code>
+respectively. Similarly, if the input text contains elsewhere a
+passage such as
+<div class="pre"> <span class="element">&lt;div&gt;</span><br/>  <span class="element">&lt;head&gt;</span>An overview of the imaginary module<span class="element">&lt;/head&gt;</span><br/>  <span class="element">&lt;p&gt;</span>The imaginary module contains declarations for coloured things:
+<span class="element">&lt;specGrpRef <span class="attribute">target</span>="#RED"/&gt;</span><br/>   <span class="element">&lt;specGrpRef <span class="attribute">target</span>="#BLUE"/&gt;</span><br/>  <span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;/div&gt;</span></div>
+then the <code>&lt;specGrpref&gt;</code> elements may be replaced by an
+appropriate piece of reference text such as ‘The RED elements were
+declared in section 4.2 above’, or even by a copy of the relevant
+declarations. As stated above, the order of declarations within the
+imaginary module described above will not be affected in any
+way. Indeed, it is possible that the imaginary module will contain
+declarations not present in any specification group, or that the
+specification groups will refer to elements that come from different
+modules.  Specification groups are always local to the document in
+which they are defined, and cannot be referenced externally (unlike
+modules). </div><div class="div3" id="TDdeprecated"><h4>23.2.1  DTD specific elements</h4><div class="p"><span id="id2568749"/>The following deprecated elements are also currently defined in P5
+ODDs for compatability reasons only. They will be removed as soon as
+we find out how to do without them when generating SGML dtds.
+<ul class="specList"><li><b>&lt;<a href="ref-stringVal.html">stringVal</a>&gt;</b> contains the intended expansion for the entity documented
+by an patternSpec element, enclosed by quotation marks.</li></ul></div></div><div class="div3" id="body.1_div.23_div.2_div.2"><h4>23.2.2  Formal definitions</h4><div class="p"><span id="id2568771"/>The elements discussed in this section are formally defined as
+follows:
+<div class="specgrp"><span id="TDSG2"/><b>Specification group 153: Modules and Specification Groups</b><dl><dt>Element moduleRef</dt><dd><pre class="eg">
+moduleRef = element moduleRef { moduleRef.content, moduleRef.attributes }
+
+moduleRef.content = <a class="link_odd" href="ref-content.html">content</a>?
+
+moduleRef.attributes =
+   ( attribute key { xsd:NCName } | attribute url { xsd:anyURI } )?</pre></dd><dt>Element moduleSpec</dt><dd><pre class="eg">
+moduleSpec = element moduleSpec { moduleSpec.content, moduleSpec.attributes }
+
+moduleSpec.content = <a class="link_odd" href="ref-macro.glossSeq.html">macro.glossSeq</a>, <a class="link_odd" href="ref-exemplum.html">exemplum</a>*, <a class="link_odd" href="ref-remarks.html">remarks</a>?, <a class="link_odd" href="ref-listRef.html">listRef</a>*
+
+moduleSpec.attributes = att.identified.attributes, attribute type { text }?</pre></dd><dt>Element schemaSpec</dt><dd><pre class="eg">
+schemaSpec = element schemaSpec { schemaSpec.content, schemaSpec.attributes }
+
+schemaSpec.content =
+   <a class="link_odd" href="ref-macro.glossSeq.html">macro.glossSeq</a>, ( <a class="link_odd" href="ref-moduleRef.html">moduleRef</a> | <a class="link_odd" href="ref-specGrpRef.html">specGrpRef</a> | <a class="link_odd" href="ref-model.oddDecl.html">model.oddDecl</a> )*
+
+schemaSpec.attributes =
+   att.identified.attributes,
+   attribute start { list { <a class="link_odd" href="ref-data.name.html">data.name</a>+ } }?,
+   attribute ns { <a class="link_odd" href="ref-data.namespace.html">data.namespace</a> }?,
+   attribute prefix { <a class="link_odd" href="ref-data.name.html">data.name</a> }?,
+   attribute targetLang { <a class="link_odd" href="ref-data.language.html">data.language</a> }?,
+   attribute docLang { list { <a class="link_odd" href="ref-data.language.html">data.language</a>+ } }?</pre></dd><dt>Element specGrp</dt><dd><pre class="eg">
+specGrp = element specGrp { specGrp.content }
+
+specGrp.content = ( <a class="link_odd" href="ref-model.oddDecl.html">model.oddDecl</a> | <a class="link_odd" href="ref-model.oddRef.html">model.oddRef</a> | <a class="link_odd" href="ref-model.divPart.html">model.divPart</a> )*</pre></dd><dt>Element specGrpRef</dt><dd><pre class="eg">
+specGrpRef = element specGrpRef { specGrpRef.content, specGrpRef.attributes }
+
+specGrpRef.content = empty
+
+specGrpRef.attributes = attribute target { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a> }</pre></dd><dt>Element stringVal</dt><dd><pre class="eg">
+stringVal = element stringVal { stringVal.content }
+
+stringVal.content = text</pre></dd></dl></div></div></div></div><div class="div2" id="TDcrystals"><h3>23.3  Specification elements</h3><div class="p"><span id="id2569814"/>The following elements are used to specify elements, classes, and
+patterns for inclusion in a given module:
+<ul class="specList"><li><b>&lt;<a href="ref-elementSpec.html">elementSpec</a>&gt;</b> documents the structure, content, and purpose of a single
+element type.</li><li><b>&lt;<a href="ref-classSpec.html">classSpec</a>&gt;</b> contains reference information for a TEI element class; 
+that is a group of 
+  elements which appear together in  content models, or 
+  which share some common attribute, or both.</li><li><b>&lt;<a href="ref-macroSpec.html">macroSpec</a>&gt;</b> documents the function and implementation of a pattern. </li></ul></div><p><span id="id2569834"/>Unlike most elements in the TEI scheme, each of these elements has
+a fairly rigid internal structure consisting of a large number of
+child elements which are always presented in the same order. For this
+reason, we refer to them informally as
+‘crystals’. Furthermore, since these elements all
+describe markup objects in broadly similar ways, they have several
+child elements in common. In the remainder of this section, we discuss
+first the elements which are common to all the specification elements,
+and then those which are specific to a particular type.  </p><p><span id="id2569850"/>Specification elements may appear at any point in an ODD document,
+both between and within paragraphs as well as inside a
+<code>&lt;specGrp&gt;</code> element, but the specification element for any
+particular component may only appear once (except in the case where a
+modification is being defined; see further <a class="link_ptr" href="TD.html#TDbuild" title="Building a schema">23.4  Building a schema</a>). The order in which they appear will not affect
+the order in which they are presented within any schema module
+generated from the document. In documentation mode, however, an ODD
+processor will output the schema declarations corresponding with a
+specification element at the point in the text where they are
+encountered, provided that they are contained by a <code>&lt;specGrp&gt;</code>
+element,  as discussed in the previous section. An ODD processor will also
+associate all declarations found with the nominated module, thus
+including them within the schema code generated for that module, and
+it will also generate a full reference description for the object
+concerned in a catalogue of markup objects. These latter two actions
+always occur irrespective of whether or not the declaration is
+included in a <code>&lt;specGrp&gt;</code>. </p><div class="p"><span id="id2569891"/>These elements are formally declared as follows:
+<div class="specgrp"><span id="TDSG3"/><b>Specification group 154: Specification elements</b><dl><dt>Element elementSpec</dt><dd><pre class="eg">
+elementSpec =
+   element elementSpec { elementSpec.content, elementSpec.attributes }
+
+elementSpec.content =
+   <a class="link_odd" href="ref-macro.glossSeq.html">macro.glossSeq</a>, <a class="link_odd" href="ref-classes.html">classes</a>?, <a class="link_odd" href="ref-content.html">content</a>?, <a class="link_odd" href="ref-attList.html">attList</a>?, <a class="link_odd" href="ref-exemplum.html">exemplum</a>*, <a class="link_odd" href="ref-remarks.html">remarks</a>*, <a class="link_odd" href="ref-listRef.html">listRef</a>*
+
+elementSpec.attributes =
+   att.identified.attributes,
+   attribute ns { <a class="link_odd" href="ref-data.namespace.html">data.namespace</a> }?,
+   attribute usage { "req" | "mwa" | "rec" | "rwa" | "opt" }?</pre></dd><dt>Element classSpec</dt><dd><pre class="eg">
+classSpec = element classSpec { classSpec.content, classSpec.attributes }
+
+classSpec.content =
+   <a class="link_odd" href="ref-macro.glossSeq.html">macro.glossSeq</a>, <a class="link_odd" href="ref-classes.html">classes</a>?, <a class="link_odd" href="ref-attList.html">attList</a>?, <a class="link_odd" href="ref-exemplum.html">exemplum</a>*, <a class="link_odd" href="ref-remarks.html">remarks</a>*, <a class="link_odd" href="ref-listRef.html">listRef</a>*
+
+classSpec.attributes =
+   att.identified.attributes,
+   attribute type { "model" | "atts" },
+   attribute generate { list { <a class="link_odd" href="ref-data.name.html">data.name</a>, <a class="link_odd" href="ref-data.name.html">data.name</a>* } }?</pre></dd><dt>Element macroSpec</dt><dd><pre class="eg">
+macroSpec = element macroSpec { macroSpec.content, macroSpec.attributes }
+
+macroSpec.content =
+   <a class="link_odd" href="ref-macro.glossSeq.html">macro.glossSeq</a>, ( <a class="link_odd" href="ref-stringVal.html">stringVal</a> | <a class="link_odd" href="ref-content.html">content</a> )+, <a class="link_odd" href="ref-exemplum.html">exemplum</a>*, <a class="link_odd" href="ref-remarks.html">remarks</a>*, <a class="link_odd" href="ref-listRef.html">listRef</a>*
+
+macroSpec.attributes =
+   att.identified.attributes,
+   attribute type { "pe" | "epe" | "ge" | "dt" }?</pre></dd></dl></div></div><div class="div3" id="body.1_div.23_div.3_div.1"><h4>23.3.1  Common elements</h4><p><span id="id2570744"/>This section discusses the child elements common to all of the specification
+elements. These child elements  are used to specify the naming, description,
+exemplification, and classification of the specification elements.</p><div class="div4" id="body.1_div.23_div.3_div.1_div.1"><h5>23.3.1.1  Description of components</h5><div class="p"><span id="id2570758"/><ul class="specList"><li><b>&lt;<a href="ref-remarks.html">remarks</a>&gt;</b> contains any commentary or discussion about the usage of an
+element, attribute, class, or entity not otherwise documented within the
+containing element.</li><li><b>&lt;<a href="ref-listRef.html">listRef</a>&gt;</b> (list of references) supplies a list of significant references to places where this
+  element is discussed, in the current document or elsewhere.</li></ul></div><p><span id="id2570772"/>A <code>&lt;desc&gt;</code> element is used to provide a brief
+characterization of the intended function of the element, class,
+value etc. being documented.</p><div class="p"><span id="id2570781"/>The <code>&lt;remarks&gt;</code> element contains any additional
+commentary about how the item concerned may be used, details of
+implementation-related issues, suggestions for other ways of treating
+related information etc., as in the following example:
+<div class="pre"> <span class="element">&lt;elementSpec <span class="attribute">module</span>="core" <span class="attribute">ident</span>="foreign"&gt;</span><br/>&lt;!--... --&gt;<br/>  <span class="element">&lt;remarks&gt;</span><br/>   <span class="element">&lt;p&gt;</span>This element is intended for use only where no other element
+is available to mark the phrase or words concerned.  The global
+<span class="element">&lt;att&gt;</span>xml:lang<span class="element">&lt;/att&gt;</span> attribute should be used in preference to this element<br/>   where it is intended to mark the language of the whole of some text<br/>   element.<span class="element">&lt;/p&gt;</span><br/>   <span class="element">&lt;p&gt;</span>The <span class="element">&lt;gi&gt;</span>distinct<span class="element">&lt;/gi&gt;</span> element may be used to identify phrases<br/>   belonging to sublanguages or registers not generally regarded as true<br/>   languages.<span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;/remarks&gt;</span><br/>&lt;!--... --&gt;<br/> <span class="element">&lt;/elementSpec&gt;</span></div></div><div class="p"><span id="id2570832"/> A specification element will usually conclude with a list of
+references, each tagged using the standard <code>&lt;ptr&gt;</code> element, and
+grouped together into a <code>&lt;listRef&gt;</code> element: in the case of the
+<code>&lt;foreign&gt;</code> element discussed above, the list is as follows:
+<div class="pre"> <span class="element">&lt;listRef&gt;</span><br/>  <span class="element">&lt;ptr <span class="attribute">target</span>="#COHQHF"/&gt;</span><br/> <span class="element">&lt;/listRef&gt;</span></div></div></div><div class="div4" id="TDeg"><h5>23.3.1.2  Exemplification of components</h5><div class="p"><span id="id2570872"/><ul class="specList"><li><b>&lt;<a href="ref-exemplum.html">exemplum</a>&gt;</b> contains a single example demonstrating the use of an element,
+  together with optional paragraphs of commentary.</li><li><b>&lt;<a href="ref-eg.html">eg</a>&gt;</b> contains any kind of illustrative example. </li><li><b>&lt;<a href="ref-egXML.html">egXML</a>&gt;</b> contains a single well-formed XML example demonstrating the use
+of some XML element or attribute. </li></ul></div><p><span id="id2570890"/>The <code>&lt;exemplum&gt;</code> element is used to combine a single
+illustrative example with an optional paragraph of commentary
+following or preceding it. The illustrative example itself may be
+marked up using either the <code>&lt;eg&gt;</code> or the <code>&lt;egXML&gt;</code>
+element.</p><div class="p"><span id="id2570907"/>If an example contains  XML markup, it should be marked up using
+the <code>&lt;egXML&gt;</code> element. In such a case, it will clearly be necessary to
+distinguish the markup within the example from the
+markup of the document itself. In an XML schema environment, this is
+easily done by  nominating a different name
+space for the  <code>&lt;egXML&gt;</code> element. For example:
+<div class="pre"> <span class="element">&lt;p&gt;</span>The <span class="element">&lt;gi&gt;</span>term<span class="element">&lt;/gi&gt;</span> element may be used <br/> to mark any technical term, thus :<br/> <span class="element">&lt;egXML&gt;</span>
+  This    <span class="element">&lt;term&gt;</span>recursion<span class="element">&lt;/term&gt;</span> is <br/>    giving me a headache.<span class="element">&lt;/egXML&gt;</span><br/> <span class="element">&lt;/p&gt;</span></div></div><div class="p"><span id="id2570942"/>Alternatively, the XML tagging within an example may be
+‘escaped’, either by using entity
+references, or by wrapping the whole example in a CDATA marked
+section:
+<div class="pre"> <span class="element">&lt;p&gt;</span>The <span class="element">&lt;gi&gt;</span>term<span class="element">&lt;/gi&gt;</span> element may be used <br/> to mark any technical term, thus :<br/> <span class="element">&lt;egXML&gt;</span>
+  This &lt;term&gt;recursion&lt;/term&gt; is 
+  giving me a headache.<span class="element">&lt;/egXML&gt;</span><br/> <span class="element">&lt;/p&gt;</span></div>
+or, equivalently:
+<div class="pre_eg">&lt;p&gt;The &lt;gi&gt;term&lt;/gi&gt; element may be used 
+to mark any technical term, thus :
+&lt;eg&gt;&lt;![CDATA[
+  This &lt;term&gt;recursion&lt;/term&gt; is 
+  giving me a headache.]]&amp;gt;&lt;/eg&gt;
+</div></div><p><span id="id2570968"/>If the XML contained in an example is not well-formed then it must
+either be enclosed in a CDATA marked section, or
+‘escaped’ as above: this applies whether the
+<code>&lt;eg&gt;</code> or <code>&lt;egXML&gt;</code> is used. If it is well-formed but not
+valid, then it should be enclosed in a CDATA marked section within an
+<code>&lt;egXML&gt;</code>.</p><p><span id="id2570993"/>An <code>&lt;egXML&gt;</code> element should not be used to tag non-XML
+examples: the general purpose <code>&lt;eg&gt;</code> or <code>&lt;q&gt;</code> elements
+should be used for such purposes.</p></div><div class="div4" id="body.1_div.23_div.3_div.1_div.3"><h5>23.3.1.3  Classification of components</h5><div class="p"><span id="id2571016"/>In the TEI scheme elements are assigned to one or more
+<em>classes</em>, which  may themselves have subclasses. The
+following elements are used to indicate class membership:
+<ul class="specList"><li><b>&lt;<a href="ref-classes.html">classes</a>&gt;</b> specifies all the classes of which the documented element or
+class is a member or subclass.</li><li><b>&lt;<a href="ref-memberOf.html">memberOf</a>&gt;</b> specifies  class membership of the parent element or class.<table class="attList"><tr><td class="Attribute">key</td><td colspan="2">(a name) specifies the identifier for a class of which the documented
+ element or class is a member or subclass</td></tr></table></li></ul></div><p><span id="id2571040"/>The <code>&lt;classes&gt;</code> element appears within either the
+<code>&lt;elementSpec&gt;</code> or <code>&lt;classSpec&gt;</code> element. It specifies the
+classes of which the element or class concerned is a member by means
+of one or more <code>&lt;memberOf&gt;</code> child elements. Each such element
+references a class by means of its <span class="att">key</span> attribute. Classes
+themselves are defined by the <code>&lt;classSpec&gt;</code> element described in
+section <a class="link_ptr" href="TD.html#TDCLA" title="Element Classes">23.3.4  Element Classes</a> below.</p><div class="p"><span id="id2571075"/>For example, to show that the element <code>&lt;gi&gt;</code> is a member of the class
+<span class="ident-class">model.oddPhr</span>, the  <code>&lt;elementSpec&gt;</code> which documents this
+element contains the following <code>&lt;classes&gt;</code> element:
+<div class="pre"> <span class="element">&lt;classes&gt;</span><br/>  <span class="element">&lt;memberOf <span class="attribute">key</span>="model.oddPhr"/&gt;</span><br/> <span class="element">&lt;/classes&gt;</span></div></div></div><div class="div4" id="body.1_div.23_div.3_div.1_div.4"><h5>23.3.1.4  Formal declarations</h5><div class="p"><span id="id2571115"/>The elements discussed in this section are formally declared as
+follows:
+<div class="specgrp"><span id="TDSG4"/><b>Specification group 155: Common specification elements</b><dl><dt>Element remarks</dt><dd><pre class="eg">
+remarks = element remarks { remarks.content }
+
+remarks.content = <a class="link_odd" href="ref-macro.componentSeq.html">macro.componentSeq</a></pre></dd><dt>Element listRef</dt><dd><pre class="eg">
+listRef = element listRef { listRef.content }
+
+listRef.content = <a class="link_odd" href="ref-ptr.html">ptr</a>+</pre></dd><dt>Element exemplum</dt><dd><pre class="eg">
+exemplum = element exemplum { exemplum.content, exemplum.attributes }
+
+exemplum.content = <a class="link_odd" href="ref-model.pLike.html">model.pLike</a>*, ( <a class="link_odd" href="ref-egXML.html">egXML</a> | <a class="link_odd" href="ref-eg.html">eg</a> ), <a class="link_odd" href="ref-model.pLike.html">model.pLike</a>*
+
+exemplum.attributes = att.typed.attributes</pre></dd><dt>Element classes</dt><dd><pre class="eg">
+classes = element classes { classes.content }
+
+classes.content = <a class="link_odd" href="ref-memberOf.html">memberOf</a>*</pre></dd><dt>Element memberOf</dt><dd><pre class="eg">
+memberOf = element memberOf { memberOf.content, memberOf.attributes }
+
+memberOf.content = <a class="link_odd" href="ref-macro.xtext.html">macro.xtext</a>
+
+memberOf.attributes = attribute key { <a class="link_odd" href="ref-data.name.html">data.name</a> }?</pre></dd></dl></div></div></div></div><div class="div3" id="TDTAG"><h4>23.3.2  Element Specifications</h4><div class="p"><span id="id2571714"/>The <code>&lt;elementSpec&gt;</code> element is used to document an element type,
+together with its associated attributes.  In addition to the elements
+listed above, it may contain the following subcomponents:
+<ul class="specList"><li><b>&lt;<a href="ref-content.html">content</a>&gt;</b> (schema declaration) contains the text of a declaration for the schema
+documented.</li><li><b>&lt;<a href="ref-attList.html">attList</a>&gt;</b> contains documentation for all the attributes associated with this
+element, as a series of attDef elements.<table class="attList"><tr><td class="Attribute">org</td><td colspan="2">specifies whether all the attributes in the list are
+  available (org="group") or only  one of them (org="choice")</td></tr></table></li></ul></div><p><span id="id2571738"/>The content of the element <code>&lt;content&gt;</code> may be
+expressed in one of two ways. It may use a schema language of some
+kind, as defined by a pattern called
+<tt>macro.schemapattern</tt>, which is declared in the
+<span class="ident-module">tagdocs-decl</span> module, defined by this
+chapter. Alternatively, the legal content for an element may be fully
+specified using the <code>&lt;valList&gt;</code> element, described in <a class="link_ptr" href="TD.html#TDATT" title="Attribute list specification">23.3.3  Attribute list specification</a> below. </p><p><span id="id2571768"/>In the case of the TEI
+Guidelines, element content models are defined using Relax NG
+patterns, but the user may over-ride this by redefining this
+pattern.</p><div class="p"><span id="id2571774"/>Here is a very simple example
+<div class="pre"> <span class="element">&lt;content&gt;</span><br/>  <span class="element">&lt;rng:text/&gt;</span><br/> <span class="element">&lt;/content&gt;</span></div>
+This content model uses the Relax NG namespace, and will be copied
+unchanged to the output when Relax NG schemas are being generated. When
+an XML DTD is being generated, an equivalent declaration (in this
+case <tt>(#PCDATA)</tt>) will be output.</div><div class="p"><span id="id2571795"/>Here is a more complex example:
+<div class="pre"> <span class="element">&lt;content&gt;</span><br/>  <span class="element">&lt;rng:group&gt;</span><br/>   <span class="element">&lt;rng:ref <span class="attribute">name</span>="fileDesc"/&gt;</span><br/>   <span class="element">&lt;rng:zeroOrMore&gt;</span><br/>    <span class="element">&lt;rng:ref <span class="attribute">name</span>="model.headerPart"/&gt;</span><br/>   <span class="element">&lt;/rng:zeroOrMore&gt;</span><br/>   <span class="element">&lt;rng:optional&gt;</span><br/>    <span class="element">&lt;rng:ref <span class="attribute">name</span>="revisionDesc"/&gt;</span><br/>   <span class="element">&lt;/rng:optional&gt;</span><br/>  <span class="element">&lt;/rng:group&gt;</span><br/> <span class="element">&lt;/content&gt;</span></div>
+This is the content model for the <code>&lt;teiHeader&gt;</code> element,
+expressed in the Relax NG syntax, which again is copied unchanged to
+the output during schema generation. The equivalent DTD notation
+generated from this is <tt>(fileDesc, (%model.headerPart;)*,
+revisionDesc?)</tt>.
+</div><p><span id="id2571841"/>The Relax NG language does not formally distinguish element names,
+class names or macro names: all names are patterns which are handled
+in the same way, as the above example shows. Within the TEI scheme,
+however, different naming conventions are used to distinguish amongst
+the objects being named. Unqualified names (<tt>fileDesc</tt>,
+<tt>revisionDesc</tt>) are always element names. Names prefixed
+with <tt>model.</tt> or <tt>att.</tt> (e.g. <tt>model.headerPart</tt>) are always class
+names. In DTD language, element classes are represented by parameter
+entities (<tt>%model.headerPart;</tt> in the above example) See further
+<a class="link_ptr" href="ST.html" title="3">2  The TEI infrastructure</a>.</p></div><div class="div3" id="TDATT"><h4>23.3.3  Attribute list specification</h4><p><span id="id2571894"/>The <code>&lt;attList&gt;</code> element is used to document information about a
+collection of attributes, either within a <code>&lt;elementSpec&gt;</code>, or within a
+<code>&lt;classSpec&gt;</code>.  An attribute list can be organized either as a
+group of attribute definitions, all of which are understood to be
+available, or as a choice of attribute definitions, of which only one
+is understood to be available. An attribute list may also contain
+nested attribute lists.  </p><div class="p"><span id="id2571915"/>The <code>&lt;attDef&gt;</code> element is used to 
+document a single attribute, using an appropriate
+selection from the common elements already mentioned and the
+following which are specific to attributes:
+<ul class="specList"><li><b>&lt;<a href="ref-attDef.html">attDef</a>&gt;</b> (attribute definition) contains the definition of a single attribute.<table class="attList"><tr><td class="Attribute">usage</td><td colspan="2">specifies the optionality of an attribute or element.
+ </td></tr></table></li><li><b>&lt;<a href="ref-datatype.html">datatype</a>&gt;</b> specifies the declared value for an attribute, by referring to
+  any datatype defined by the chosen schema language.</li><li><b>&lt;<a href="ref-defaultVal.html">defaultVal</a>&gt;</b> specifies the default declared value for an attribute.</li><li><b>&lt;<a href="ref-valDesc.html">valDesc</a>&gt;</b> (value description) specifies any semantic or syntactic constraint on the value that
+an attribute may take, additional to the information carried by the
+datatype element.</li><li><b>&lt;<a href="ref-valList.html">valList</a>&gt;</b> (value list) contains one or more valItem elements defining possible
+  values for an attribute.</li><li><b>&lt;<a href="ref-valItem.html">valItem</a>&gt;</b> (value definition) contains a single value and gloss  pair for an attribute.</li></ul></div><p><span id="id2571963"/>The <code>&lt;attList&gt;</code> within a <code>&lt;elementSpec&gt;</code> is used to specify
+only the attributes which are specific to that particular
+element. Instances of the element may carry other attributes which are
+declared by the classes of which the element is a member.  These extra
+attributes, which are shared by other elements, or by all elements,
+are specified by an <code>&lt;attList&gt;</code> contained within a
+<code>&lt;classSpec&gt;</code> element, as described in section <a class="link_ptr" href="TD.html#TDCLA" title="Element Classes">23.3.4  Element Classes</a> below. </p><div class="div4" id="TD-datatypes"><h5>23.3.3.1  Datatypes</h5><div class="p"><span id="id2572002"/>The <code>&lt;datatype&gt;</code> element is used to state what kind of value
+an attribute may have, using whatever facilities are provided by the
+underlying  schema language. For the TEI scheme, expressed in
+relaxNG, elements from the Relax NG namespace may be used, for example
+<div class="pre"> <span class="element">&lt;datatype&gt;</span><br/>  <span class="element">&lt;rng:text/&gt;</span><br/> <span class="element">&lt;/datatype&gt;</span></div>
+permits any string of Unicode characters not containing markup, and is
+thus the equivalent of <tt>CDATA</tt> in DTD language. 
+</div><div class="p"><span id="id2572028"/>The Relax NG language also provides support for a number of
+primitive datatypes which may be specified here, using the
+<code>&lt;rng:data&gt;</code> element: thus one may write
+<div class="pre"> <span class="element">&lt;datatype&gt;</span><br/>  <span class="element">&lt;rng:data <span class="attribute">type</span>="Boolean"/&gt;</span><br/> <span class="element">&lt;/datatype&gt;</span></div>
+to specify that an element or attribute's contents should conform to
+the W3C definition for Boolean. </div><div class="p"><span id="id2572051"/>Although only one child element may be given, this might be a
+selector such as <span class="val">rng:choice</span> to indicate multiple
+possibilities:
+<div class="pre"> <span class="element">&lt;datatype&gt;</span><br/>  <span class="element">&lt;rng:choice&gt;</span><br/>   <span class="element">&lt;rng:data <span class="attribute">type</span>="Date"/&gt;</span><br/>   <span class="element">&lt;rng:data <span class="attribute">type</span>="Float"/&gt;</span><br/>  <span class="element">&lt;/rng:choice&gt;</span><br/> <span class="element">&lt;/datatype&gt;</span></div>
+which would permit either a date or a real number. In fact, the child
+element might be a <tt>rng:list</tt> element to indicate that a
+sequence of values is required, a <tt>rng:param</tt> element to
+specify a regular expression, or even a list of explicit
+<tt>rng:value</tt>s. Such usages are permitted by the scheme
+documented here, but are not recommended when it is desired to remain
+independent of a particular schema language, since the full generality
+of one schema language cannot readily be converted to that of
+another. In the TEI abstract model, datatyping should preferably be
+carried out either by explicit enumeration of permitted values (using
+the TEI-specific <code>&lt;valList&gt;</code> element described below), or by
+definition of an explicit pattern, using the TEI-specific
+<code>&lt;macroSpec&gt;</code> element.</div></div><div class="div4" id="body.1_div.23_div.3_div.3_div.2"><h5>23.3.3.2  Value specification</h5><div class="p"><span id="id2572116"/>The <code>&lt;valDesc&gt;</code> element may be used to specify 
+constraints on data content in an informal way: for example
+<div class="pre"> <span class="element">&lt;valDesc&gt;</span>must point to another <span class="element">&lt;gi&gt;</span>align<span class="element">&lt;/gi&gt;</span><br/>     element logically preceding this<br/>     one.<span class="element">&lt;/valDesc&gt;</span></div><div class="pre"> <span class="element">&lt;valDesc&gt;</span>Values should be Library of Congress subject
+headings.<span class="element">&lt;/valDesc&gt;</span></div><div class="pre"> <span class="element">&lt;valDesc&gt;</span>A bookseller's surname,
+ taken from the list in <span class="element">&lt;title&gt;</span>Pollard and Redgrave<span class="element">&lt;/title&gt;</span><br/> <span class="element">&lt;/valDesc&gt;</span></div></div><p><span id="id2572151"/>As noted above, the <code>&lt;datatype&gt;</code> element also constrains the
+possible values for an attribute. The <code>&lt;valDesc&gt;</code> can be used to
+specify further constraints. For example, to specify that an attribute
+<span class="att">age</span> can take positive integer values less than 100, the
+datatype <span class="ident-datatype">data.numeric</span> might be used in combination with
+a <code>&lt;valDesc&gt;</code> such as ‘values must be positive integers less
+than 100’. </p><div class="p"><span id="id2572182"/>More usually, however, where constraints on values are explicitly
+enumerated, the <code>&lt;valList&gt;</code> element is used, as in the
+following example:
+<div class="pre"> <span class="element">&lt;valList <span class="attribute">type</span>="closed"&gt;</span><br/>  <span class="element">&lt;valItem <span class="attribute">ident</span>="req"&gt;</span><br/>   <span class="element">&lt;gloss&gt;</span>required<span class="element">&lt;/gloss&gt;</span><br/>  <span class="element">&lt;/valItem&gt;</span><br/>  <span class="element">&lt;valItem <span class="attribute">ident</span>="mwa"&gt;</span><br/>   <span class="element">&lt;gloss&gt;</span>mandatory when applicable<span class="element">&lt;/gloss&gt;</span><br/>  <span class="element">&lt;/valItem&gt;</span><br/>  <span class="element">&lt;valItem <span class="attribute">ident</span>="rec"&gt;</span><br/>   <span class="element">&lt;gloss&gt;</span>recommended<span class="element">&lt;/gloss&gt;</span><br/>  <span class="element">&lt;/valItem&gt;</span><br/>  <span class="element">&lt;valItem <span class="attribute">ident</span>="rwa"&gt;</span><br/>   <span class="element">&lt;gloss&gt;</span>recommended when applicable<span class="element">&lt;/gloss&gt;</span><br/>  <span class="element">&lt;/valItem&gt;</span><br/>  <span class="element">&lt;valItem <span class="attribute">ident</span>="opt"&gt;</span><br/>   <span class="element">&lt;gloss&gt;</span>optional<span class="element">&lt;/gloss&gt;</span><br/>  <span class="element">&lt;/valItem&gt;</span><br/> <span class="element">&lt;/valList&gt;</span></div>
+Since this value list specifies that it is of type <span class="val">closed</span>,
+only the values enumerated and glossed above are legal, and an ODD
+processor will typically enforce these constraints in the schema
+fragment generated. </div><p><span id="id2572242"/>The <code>&lt;valList&gt;</code> element is also used to provide illustrative examples
+for the values permitted and their significance, or to gloss the
+meaning of values implied by an attribute's datatype.
+</p></div><div class="div4" id="body.1_div.23_div.3_div.3_div.3"><h5>23.3.3.3  Examples</h5><div class="p"><span id="id2572260"/>The following <code>&lt;attList&gt;</code> demonstrates some of the
+possibilities; for more detailed examples, consult the tagged version of
+the reference material in these Guidelines.
+<div class="pre"> <span class="element">&lt;attList&gt;</span><br/>  <span class="element">&lt;attDef <span class="attribute">ident</span>="type"&gt;</span><br/>   <span class="element">&lt;desc&gt;</span>describes the form of the list.<span class="element">&lt;/desc&gt;</span><br/>   <span class="element">&lt;datatype&gt;</span><br/>    <span class="element">&lt;rng:text/&gt;</span><br/>   <span class="element">&lt;/datatype&gt;</span><br/>   <span class="element">&lt;defaultVal&gt;</span>simple<span class="element">&lt;/defaultVal&gt;</span><br/>   <span class="element">&lt;valList <span class="attribute">type</span>="semi"&gt;</span><br/>    <span class="element">&lt;valItem <span class="attribute">ident</span>="ordered"&gt;</span><br/>     <span class="element">&lt;gloss&gt;</span>list items are numbered or lettered. <span class="element">&lt;/gloss&gt;</span><br/>    <span class="element">&lt;/valItem&gt;</span><br/>    <span class="element">&lt;valItem <span class="attribute">ident</span>="bulleted"&gt;</span><br/>     <span class="element">&lt;gloss&gt;</span>list items are marked with a bullet or other 
+                 typographic device. <span class="element">&lt;/gloss&gt;</span><br/>    <span class="element">&lt;/valItem&gt;</span><br/>    <span class="element">&lt;valItem <span class="attribute">ident</span>="simple"&gt;</span><br/>     <span class="element">&lt;gloss&gt;</span>list items are not numbered or bulleted.<span class="element">&lt;/gloss&gt;</span><br/>    <span class="element">&lt;/valItem&gt;</span><br/>    <span class="element">&lt;valItem <span class="attribute">ident</span>="gloss"&gt;</span><br/>     <span class="element">&lt;gloss&gt;</span>each list item glosses some term or
+            concept, which is given by a label element preceding
+           the list item.<span class="element">&lt;/gloss&gt;</span><br/>    <span class="element">&lt;/valItem&gt;</span><br/>   <span class="element">&lt;/valList&gt;</span><br/>   <span class="element">&lt;remarks&gt;</span><br/>    <span class="element">&lt;p&gt;</span>The formal syntax of the element declarations allows
+        <span class="element">&lt;gi&gt;</span>label<span class="element">&lt;/gi&gt;</span> tags to be omitted from lists tagged <span class="element">&lt;tag&gt;</span>list
+        type="gloss"<span class="element">&lt;/tag&gt;</span>; this is however a semantic error.<span class="element">&lt;/p&gt;</span><br/>   <span class="element">&lt;/remarks&gt;</span><br/>  <span class="element">&lt;/attDef&gt;</span><br/> <span class="element">&lt;/attList&gt;</span></div></div><div class="p"><span id="id2572357"/>In the following example, the <span class="att">org</span> attribute is used to
+indicate that instances of the element concerned may bear  either a <span class="att">bar</span>
+attribute or a <code>&lt;baz&gt;</code> attribute, but not both. The
+<span class="att">bax</span> element is always available:
+<div class="pre"> <span class="element">&lt;attList&gt;</span><br/>  <span class="element">&lt;attDef <span class="attribute">ident</span>="bax"&gt;</span><br/>&lt;!-- ... --&gt;<br/>  <span class="element">&lt;/attDef&gt;</span><br/>  <span class="element">&lt;attList <span class="attribute">org</span>="choice"&gt;</span><br/>   <span class="element">&lt;attDef <span class="attribute">ident</span>="bar"&gt;</span><br/>&lt;!-- ... --&gt;<br/>   <span class="element">&lt;/attDef&gt;</span><br/>   <span class="element">&lt;attDef <span class="attribute">ident</span>="baz"&gt;</span><br/>&lt;!-- ... --&gt;<br/>   <span class="element">&lt;/attDef&gt;</span><br/>  <span class="element">&lt;/attList&gt;</span><br/> <span class="element">&lt;/attList&gt;</span></div></div></div></div><div class="div3" id="TDCLA"><h4>23.3.4  Element Classes</h4><div class="p"><span id="id2572426"/>The element <code>&lt;classSpec&gt;</code> is used to document an <em>element
+class</em> or ‘class’, as defined in section <a class="link_ptr" href="ST.html#STEC" title="The TEI Class System">2.6  The TEI Class System</a>.  It has the
+following components, additional to those already mentioned:
+<ul class="specList"><li><b>&lt;<a href="ref-classSpec.html">classSpec</a>&gt;</b> contains reference information for a TEI element class; 
+that is a group of 
+  elements which appear together in  content models, or 
+  which share some common attribute, or both.<table class="attList"><tr><td class="Attribute">type</td><td colspan="2">indicates whether this is a model class or an attribute class</td></tr></table></li><li><b>&lt;<a href="ref-attList.html">attList</a>&gt;</b> contains documentation for all the attributes associated with this
+element, as a series of attDef elements.</li></ul></div><div class="p"><span id="id2572465"/>The attribute <span class="att">type</span> is used to distinguish between
+‘model’ and ‘attribute’
+classes. In the case of attribute classes, the attributes which define
+membership in the class are documented by an <code>&lt;attList&gt;</code> element
+contained within the <code>&lt;classSpec&gt;</code>.  Members of the class
+documented by a <code>&lt;classSpec&gt;</code> point to it by supplying its
+identifier as the value of the <span class="att">key</span> attribute on a
+<code>&lt;memberOf&gt;</code> element, given as a child of the <code>&lt;classes&gt;</code>
+element in the <code>&lt;elementSpec&gt;</code> that defines the element
+concerned. For example, the <code>&lt;elementSpec&gt;</code> for the element
+<code>&lt;hi&gt;</code> contains the following:
+<div class="pre"> <span class="element">&lt;classes&gt;</span><br/>  <span class="element">&lt;memberOf <span class="attribute">key</span>="model.hiLike"/&gt;</span><br/> <span class="element">&lt;/classes&gt;</span></div>
+which indicates that the <code>&lt;hi&gt;</code> element is a member of the class
+with identifier <span class="ident-class">model.hiLike</span>. The <code>&lt;classSpec&gt;</code>
+documenting this class is as follows:
+<div class="pre"> <span class="element">&lt;classSpec <span class="attribute">type</span>="model" <span class="attribute">ident</span>="model.hiLike"&gt;</span><br/>  <span class="element">&lt;desc&gt;</span>groups phrase-level elements related to highlighting. <span class="element">&lt;/desc&gt;</span><br/>  <span class="element">&lt;classes&gt;</span><br/>   <span class="element">&lt;memberOf <span class="attribute">key</span>="model.phrase"/&gt;</span><br/>  <span class="element">&lt;/classes&gt;</span><br/> <span class="element">&lt;/classSpec&gt;</span></div>
+which indicates that the class <span class="ident-class">model.hiLike</span> is actually
+a member (or subclass) of the class <span class="ident-class">model.phrase</span>.
+ </div><p><span id="id2572579"/>When a model class is referenced in the content model of an element
+(i.e. in the <code>&lt;content&gt;</code> of an <code>&lt;elementSpec&gt;</code>), its
+meaning will depend on the value of the <span class="att">generate</span>
+attribute on the class declaration, and also on the name used to reference the class. </p><div class="p"><span id="id2572597"/>The default and usual behaviour is to replace the class
+reference by an alternated list of all the current members of the
+class. For example, suppose that  the members of the class
+<strong>model.hiLike</strong> are elements  <code>&lt;hi&gt;</code>,  <code>&lt;it&gt;</code>,
+and <code>&lt;bo&gt;</code>. Then a content model such as
+<div class="pre"> <span class="element">&lt;content&gt;</span><br/>  <span class="element">&lt;rng:optional&gt;</span><br/>   <span class="element">&lt;rng:ref <span class="attribute">name</span>="model.hiLike"/&gt;</span><br/>  <span class="element">&lt;/rng:optional&gt;</span><br/> <span class="element">&lt;/content&gt;</span></div>
+would be equivalent to the explicit content model:
+<div class="pre"> <span class="element">&lt;content&gt;</span><br/>  <span class="element">&lt;rng:zeroOrMore&gt;</span><br/>   <span class="element">&lt;rng:choice&gt;</span><br/>    <span class="element">&lt;rng:ref <span class="attribute">name</span>="hi"/&gt;</span><br/>    <span class="element">&lt;rng:ref <span class="attribute">name</span>="it"/&gt;</span><br/>    <span class="element">&lt;rng:ref <span class="attribute">name</span>="bo"/&gt;</span><br/>   <span class="element">&lt;/rng:choice&gt;</span><br/>  <span class="element">&lt;/rng:zeroOrMore&gt;</span><br/> <span class="element">&lt;/content&gt;</span></div> and would generate, in DTD
+language, a model such as <tt>(hi|it|bo)*</tt>. However, if the <span class="att">generate</span>
+attribute on the <code>&lt;classSpec&gt;</code>
+defining <code>&lt;model.hiLike&gt;</code> had the value <span class="val">sequence</span>, a
+content model referencing the class as
+<tt>model.hiLike_sequence</tt> would be equivalent   to the
+following explicit content model:
+<div class="pre"> <span class="element">&lt;content&gt;</span><br/>  <span class="element">&lt;rng:zeroOrMore&gt;</span><br/>   <span class="element">&lt;rng:ref <span class="attribute">name</span>="hi"/&gt;</span><br/>   <span class="element">&lt;rng:ref <span class="attribute">name</span>="it"/&gt;</span><br/>   <span class="element">&lt;rng:ref <span class="attribute">name</span>="bo"/&gt;</span><br/>  <span class="element">&lt;/rng:zeroOrMore&gt;</span><br/> <span class="element">&lt;/content&gt;</span></div> and would generate, in DTD
+language, a model such as <tt>(hi,it,bo)*</tt>. Similarly, a value of
+<span class="val">sequenceOptional</span> for this attribute (referenced as
+model.hiLike_sequenceOptional) would be equivalent to:
+<div class="pre"> <span class="element">&lt;content&gt;</span><br/>  <span class="element">&lt;rng:zeroOrMore&gt;</span><br/>   <span class="element">&lt;rng:optional&gt;</span><br/>    <span class="element">&lt;rng:ref <span class="attribute">name</span>="hi"/&gt;</span><br/>   <span class="element">&lt;/rng:optional&gt;</span><br/>   <span class="element">&lt;rng:optional&gt;</span><br/>    <span class="element">&lt;rng:ref <span class="attribute">name</span>="it"/&gt;</span><br/>   <span class="element">&lt;/rng:optional&gt;</span><br/>   <span class="element">&lt;rng:optional&gt;</span><br/>    <span class="element">&lt;rng:ref <span class="attribute">name</span>="bo"/&gt;</span><br/>   <span class="element">&lt;/rng:optional&gt;</span><br/>  <span class="element">&lt;/rng:zeroOrMore&gt;</span><br/> <span class="element">&lt;/content&gt;</span></div> and would generate, in DTD
+language, a model such as <tt>(hi?,it?,bo?)*</tt>.</div><div class="p"><span id="id2572743"/>The repeatability of members of a class may also be specified
+independently, using the same mechanism. For example, a value
+of<span class="val">sequenceRepeatable</span> for the <span class="att">generate</span> attribute would be equivalent to:
+<div class="pre"> <span class="element">&lt;content&gt;</span><br/>  <span class="element">&lt;rng:zeroOrMore&gt;</span><br/>   <span class="element">&lt;rng:oneOrMore&gt;</span><br/>    <span class="element">&lt;rng:ref <span class="attribute">name</span>="hi"/&gt;</span><br/>   <span class="element">&lt;/rng:oneOrMore&gt;</span><br/>   <span class="element">&lt;rng:oneOrMore&gt;</span><br/>    <span class="element">&lt;rng:ref <span class="attribute">name</span>="it"/&gt;</span><br/>   <span class="element">&lt;/rng:oneOrMore&gt;</span><br/>   <span class="element">&lt;rng:oneOrMore&gt;</span><br/>    <span class="element">&lt;rng:ref <span class="attribute">name</span>="bo"/&gt;</span><br/>   <span class="element">&lt;/rng:oneOrMore&gt;</span><br/>  <span class="element">&lt;/rng:zeroOrMore&gt;</span><br/> <span class="element">&lt;/content&gt;</span></div> and would generate, in DTD
+language, a model such as <tt>(hi+,it+,bo+)*</tt>.   Similarly, a value
+of <span class="val">sequenceOptionalRepeatable</span> for the <span class="att">generate</span> attribute would be equivalent to:
+<div class="pre"> <span class="element">&lt;content&gt;</span><br/>  <span class="element">&lt;rng:zeroOrMore&gt;</span><br/>   <span class="element">&lt;rng:zeroOrMore&gt;</span><br/>    <span class="element">&lt;rng:ref <span class="attribute">name</span>="hi"/&gt;</span><br/>   <span class="element">&lt;/rng:zeroOrMore&gt;</span><br/>   <span class="element">&lt;rng:zeroOrMore&gt;</span><br/>    <span class="element">&lt;rng:ref <span class="attribute">name</span>="it"/&gt;</span><br/>   <span class="element">&lt;/rng:zeroOrMore&gt;</span><br/>   <span class="element">&lt;rng:zeroOrMore&gt;</span><br/>    <span class="element">&lt;rng:ref <span class="attribute">name</span>="bo"/&gt;</span><br/>   <span class="element">&lt;/rng:zeroOrMore&gt;</span><br/>  <span class="element">&lt;/rng:zeroOrMore&gt;</span><br/> <span class="element">&lt;/content&gt;</span></div> and would generate, in DTD
+language, a model such as <tt>(hi*,it*,bo*)*</tt>.</div><p><span id="id2572824"/>The generate attribute may specify more than one possible value.
+for example a value of <span class="val">sequence alternates</span> would make
+available both a content model such as  <tt>(hi,it,bo)*</tt>,
+which would be referenced as <strong>model.hiLike_sequence</strong>, and a content
+model such as <tt>(hi|it|bo)*</tt>, which would be referenced as <strong>model.hiLike_alternates</strong>.</p><p><span id="id2572849"/>The sequence in which members of a class appear in a content model when one of the
+sequence options is used is that in which the elements are declared. </p><p><span id="id2572855"/>When a <code>&lt;classSpec&gt;</code> contains an <code>&lt;attList&gt;</code> element, all
+the members of that class inherit the attributes specified by it. For
+example, the class <span class="ident-class">att.interpLike</span> defines a small set of
+attributes common to all elements which are members of that
+class: those attributes are listed by the <code>&lt;attList&gt;</code> element
+contained by the <code>&lt;classSpec&gt;</code> for
+<span class="ident-class">att.interpLike</span>. When processing the documentation
+elements for elements which are members of that class, an ODD
+processor is required to extend the <code>&lt;attList&gt;</code> (or equivalent)
+for such elements to include any attributes defined by the
+<code>&lt;classSpec&gt;</code> elements concerned.  There is a single global
+attribute class, <span class="ident-class">att.global</span>.
+</p></div><div class="div3" id="body.1_div.23_div.3_div.5"><h4>23.3.5  Formal declarations</h4><div class="p"><span id="id2572925"/>The elements discussed in this section are formally defined as
+follows:
+<div class="specgrp"><span id="TDSG5"/><b>Specification group 156: Element specification elements</b><dl><dt>Element content</dt><dd><pre class="eg">
+content = element content { content.content }
+
+content.content = ( <a class="link_odd" href="ref-macro.schemapattern.html">macro.schemapattern</a> | <a class="link_odd" href="ref-valList.html">valList</a> )*</pre></dd><dt>macro.schemapattern</dt><dd><pre class="eg">
+macro.schemapattern = text</pre></dd><dt>Element attList</dt><dd><pre class="eg">
+attList = element attList { attList.content, attList.attributes }
+
+attList.content = ( <a class="link_odd" href="ref-attRef.html">attRef</a> | <a class="link_odd" href="ref-attDef.html">attDef</a> | <a class="link_odd" href="ref-attList.html">attList</a> )+
+
+attList.attributes = attribute org { "group" | "choice" }?</pre></dd><dt>Element attDef</dt><dd><pre class="eg">
+attDef = element attDef { attDef.content, attDef.attributes }
+
+attDef.content =
+   <a class="link_odd" href="ref-macro.glossSeq.html">macro.glossSeq</a>,
+   <a class="link_odd" href="ref-datatype.html">datatype</a>?,
+   <a class="link_odd" href="ref-defaultVal.html">defaultVal</a>?,
+   ( <a class="link_odd" href="ref-valList.html">valList</a> | <a class="link_odd" href="ref-valDesc.html">valDesc</a> )?,
+   <a class="link_odd" href="ref-exemplum.html">exemplum</a>*,
+   <a class="link_odd" href="ref-remarks.html">remarks</a>*
+
+attDef.attributes =
+   att.identified.attributes,
+   attribute usage { "req" | "mwa" | "rec" | "rwa" | "opt" }?,
+   attribute ns { <a class="link_odd" href="ref-data.namespace.html">data.namespace</a> }?</pre></dd><dt>Element attRef</dt><dd><pre class="eg">
+attRef = element attRef { attRef.content, attRef.attributes }
+
+attRef.content = empty
+
+attRef.attributes = attribute name { <a class="link_odd" href="ref-data.word.html">data.word</a> }</pre></dd><dt>Element datatype</dt><dd><pre class="eg">
+datatype = element datatype { datatype.content, datatype.attributes }
+
+datatype.content = <a class="link_odd" href="ref-macro.schemapattern.html">macro.schemapattern</a>*
+
+datatype.attributes =
+   attribute minOccurs { <a class="link_odd" href="ref-data.count.html">data.count</a> }?,
+   attribute maxOccurs { <a class="link_odd" href="ref-data.count.html">data.count</a> | "unbounded" }?</pre></dd><dt>Element defaultVal</dt><dd><pre class="eg">
+defaultVal = element defaultVal { defaultVal.content }
+
+defaultVal.content = text</pre></dd><dt>Element valDesc</dt><dd><pre class="eg">
+valDesc = element valDesc { valDesc.content, valDesc.attributes }
+
+valDesc.content = <a class="link_odd" href="ref-macro.phraseSeq.html">macro.phraseSeq</a>
+
+valDesc.attributes =
+   attribute mode { "add" | "delete" | "change" | "replace" }?</pre></dd><dt>Element valItem</dt><dd><pre class="eg">
+valItem = element valItem { valItem.content, valItem.attributes }
+
+valItem.content = <a class="link_odd" href="ref-macro.glossSeq.html">macro.glossSeq</a>
+
+valItem.attributes = att.identified.attributes</pre></dd><dt>Element valList</dt><dd><pre class="eg">
+valList = element valList { valList.content, valList.attributes }
+
+valList.content = <a class="link_odd" href="ref-valItem.html">valItem</a>+
+
+valList.attributes =
+   attribute mode { "add" | "delete" | "change" | "replace" }?,
+   attribute type { "closed" | "semi" | "open" }?</pre></dd></dl></div></div></div><div class="div3" id="TDENT"><h4>23.3.6  Pattern Documentation</h4><div class="p"><span id="id2574617"/>The <code>&lt;macroSpec&gt;</code> element is used to document patterns not
+otherwise documented by the elements described in this chapter.  Its
+chief uses are to provide systematic documentation of the parameter
+entities used within TEI DTD fragments and to describe common
+content models, but it may be used for any purpose.  It has the
+following components additional to those already introduced:
+ <ul class="specList"><li><b>&lt;<a href="ref-macroSpec.html">macroSpec</a>&gt;</b> documents the function and implementation of a pattern. <table class="attList"><tr><td class="Attribute">type</td><td colspan="2">indicates which type of entity should be generated, when an ODD
+	processor is generating a module using SGML syntax.</td></tr></table></li><li><b>&lt;<a href="ref-remarks.html">remarks</a>&gt;</b> contains any commentary or discussion about the usage of an
+element, attribute, class, or entity not otherwise documented within the
+containing element.</li><li><b>&lt;<a href="ref-stringVal.html">stringVal</a>&gt;</b> contains the intended expansion for the entity documented
+by an patternSpec element, enclosed by quotation marks.</li></ul></div></div></div><div class="div2" id="TDbuild"><h3>23.4  Building a schema</h3><div class="p"><span id="id2574672"/>The specification elements, and several of their children, are all members of
+the <span class="ident-class">att.identified</span> class, from which they inherit the
+following attributes:
+
+<ul class="specList"><li><b><a href="ref-att.identified.html">att.identified</a></b> elements which can be referenced by means of a key attribute</li></ul></div><p><span id="id2574965"/>These attributes are used by an ODD processor to determine how
+declarations are to be combined to form a schema or DTD, as further
+discussed in this section.</p><p><span id="id2574971"/>As noted above, a TEI schema is defined by a <code>&lt;schemaSpec&gt;</code>
+element containing an arbitrary mixture of explicit declarations for
+objects (i.e. elements, classes, patterns, or macro specifications)
+and references to other objects containing such declarations
+(i.e. references to specification groups, or to modules). A major
+purpose of this mechanism is to simplify the process of defining user
+customizations, by providing a formal method for the user to combine
+new declarations with existing ones, or to modify particular parts of
+existing declarations.</p><div class="p"><span id="id2574987"/>In the simplest case, a user-defined schema might simply combine
+all the declarations from two nominated modules:
+<div class="pre"> <span class="element">&lt;schemaSpec <span class="attribute">ident</span>="example"&gt;</span><br/>  <span class="element">&lt;moduleRef <span class="attribute">key</span>="teistructure"/&gt;</span><br/>  <span class="element">&lt;moduleRef <span class="attribute">key</span>="linking"/&gt;</span><br/> <span class="element">&lt;/schemaSpec&gt;</span></div>
+An ODD processor, given such a document, would combine the
+declarations which belong to the named modules, and deliver the result
+as a schema of the requested type. It might also generate documentation for
+all and only the elements declared by those modules.</div><div class="p"><span id="id2575013"/>A schema might also include declarations for new elements, as in
+the following example:
+<div class="pre"> <span class="element">&lt;schemaSpec <span class="attribute">ident</span>="example"&gt;</span><br/>  <span class="element">&lt;moduleRef <span class="attribute">key</span>="teiheader"/&gt;</span><br/>  <span class="element">&lt;moduleRef <span class="attribute">key</span>="verse"/&gt;</span><br/>  <span class="element">&lt;elementSpec <span class="attribute">ident</span>="soundClip"&gt;</span><br/>   <span class="element">&lt;classes&gt;</span><br/>    <span class="element">&lt;memberOf <span class="attribute">key</span>="model.pPart.data"/&gt;</span><br/>   <span class="element">&lt;/classes&gt;</span><br/>  <span class="element">&lt;/elementSpec&gt;</span><br/> <span class="element">&lt;/schemaSpec&gt;</span></div>
+A declaration for the element <code>&lt;soundClip&gt;</code>, which is not defined in the TEI
+scheme, will be added to the output schema. This element will also be added to
+the existing TEI class <span class="ident-class">model.pPart.data</span>, and will thus be
+avilable in TEI conformant documents.</div><div class="p"><span id="id2575059"/>A schema might also include re-declarations of existing elements, as
+in the following example:
+<div class="pre"> <span class="element">&lt;schemaSpec <span class="attribute">ident</span>="example"&gt;</span><br/>  <span class="element">&lt;moduleRef <span class="attribute">key</span>="teiheader"/&gt;</span><br/>  <span class="element">&lt;moduleRef <span class="attribute">key</span>="teistructure"/&gt;</span><br/>  <span class="element">&lt;elementSpec <span class="attribute">ident</span>="head" <span class="attribute">mode</span>="change"&gt;</span><br/>   <span class="element">&lt;content&gt;</span><br/>    <span class="element">&lt;rng:text/&gt;</span><br/>   <span class="element">&lt;/content&gt;</span><br/>  <span class="element">&lt;/elementSpec&gt;</span><br/> <span class="element">&lt;/schemaSpec&gt;</span></div>
+The effect of this is to redefine the content model for the element
+<code>&lt;head&gt;</code> as plain text, by over-riding the <code>&lt;content&gt;</code> child
+of the selected <code>&lt;elementSpec&gt;</code>. The attribute specification
+<tt>mode="change"</tt> has the effect of over-riding only those
+children elements of the <code>&lt;elementSpec&gt;</code> which appear both in the
+original specification and in the new specification supplied above:
+<code>&lt;content&gt;</code> in this example. Note that if the value for
+<span class="att">mode</span> were <span class="val">replace</span>, the effect would be to
+replace all children elements of the original specification with the 
+the children elements of the new specification, and thus (in this
+example) to delete all of them except <code>&lt;content&gt;</code>. </div><div class="p"><span id="id2575136"/>A schema may not contain more than two declarations for any given
+component. The value of the <span class="att">mode</span> attribute is used to
+determine exactly how the second declaration (and its constituents)
+should be combined with the first. The
+ following table summarizes how a processor should resolve duplicate declarations:
+<div class="left"><table><tr class="label"><td valign="top">mode value</td><td valign="top">existing declaration</td><td valign="top">effect</td></tr><tr><td valign="top">add</td><td valign="top">no</td><td valign="top">add new declaration to schema; process its children in add mode</td></tr><tr><td valign="top">add</td><td valign="top">yes</td><td valign="top">raise error</td></tr><tr><td valign="top">replace</td><td valign="top">no</td><td valign="top">raise error</td></tr><tr><td valign="top">replace</td><td valign="top">yes</td><td valign="top">retain existing declaration; process new children in replace
+mode; ignore existing children</td></tr><tr><td valign="top">change</td><td valign="top">no</td><td valign="top">raise error</td></tr><tr><td valign="top">change</td><td valign="top">yes</td><td valign="top">replace existing declaration; process new children in replace
+mode; retain existing (unreplaced) children</td></tr><tr><td valign="top">delete</td><td valign="top">no</td><td valign="top">remove existing declaration; ignore this declaration and its children</td></tr><tr><td valign="top">delete</td><td valign="top">yes</td><td valign="top">ignore existing declaration and its children</td></tr></table></div></div></div><div class="div2" id="TDformal"><h3>23.5  Formal declaration</h3><div class="p"><span id="id2575291"/>This module makes available the following components:
+<div><hr/><strong>Module</strong> <em>tagdocs</em>: Documentation of TEI modules<ul><li>Elements defined: <a class="link_odd" href="ref-att.html">att</a> <a class="link_odd" href="ref-code.html">code</a> <a class="link_odd" href="ref-eg.html">eg</a> <a class="link_odd" href="ref-egXML.html">egXML</a> <a class="link_odd" href="ref-gi.html">gi</a> <a class="link_odd" href="ref-ident.html">ident</a> <a class="link_odd" href="ref-tag.html">tag</a> <a class="link_odd" href="ref-val.html">val</a> <a class="link_odd" href="ref-specList.html">specList</a> <a class="link_odd" href="ref-specDesc.html">specDesc</a> <a class="link_odd" href="ref-moduleRef.html">moduleRef</a> <a class="link_odd" href="ref-moduleSpec.html">moduleSpec</a> <a class="link_odd" href="ref-schemaSpec.html">schemaSpec</a> <a class="link_odd" href="ref-specGrp.html">specGrp</a> <a class="link_odd" href="ref-specGrpRef.html">specGrpRef</a> <a class="link_odd" href="ref-stringVal.html">stringVal</a> <a class="link_odd" href="ref-elementSpec.html">elementSpec</a> <a class="link_odd" href="ref-classSpec.html">classSpec</a> <a class="link_odd" href="ref-macroSpec.html">macroSpec</a> <a class="link_odd" href="ref-remarks.html">remarks</a> <a class="link_odd" href="ref-listRef.html">listRef</a> <a class="link_odd" href="ref-exemplum.html">exemplum</a> <a class="link_odd" href="ref-classes.html">classes</a> <a class="link_odd" href="ref-memberOf.html">memberOf</a> <a class="link_odd" href="ref-content.html">content</a> <a class="link_odd" href="ref-attList.html">attList</a> <a class="link_odd" href="ref-attDef.html">attDef</a> <a class="link_odd" href="ref-attRef.html">attRef</a> <a class="link_odd" href="ref-datatype.html">datatype</a> <a class="link_odd" href="ref-defaultVal.html">defaultVal</a> <a class="link_odd" href="ref-valDesc.html">valDesc</a> <a class="link_odd" href="ref-valItem.html">valItem</a> <a class="link_odd" href="ref-valList.html">valList</a> </li><li>Classes defined: <a class="link_odd" href="ref-att.identified.html">att.identified</a> </li><li>Macros defined: <a class="link_odd" href="ref-macro.schemapattern.html">macro.schemapattern</a> </li></ul><hr/></div>
+
+The selection and combination of modules to form a TEI schema is described in
+<a class="link_ptr" href="ST.html#STIN" title="Defining a TEI schema">2.2  Defining a TEI schema</a>.
+</div><p><span id="id2575321"/>The elements described in this chapter are all members of one of
+three classes: <span class="ident-class">model.oddDecl</span>, <span class="ident-class">model.oddRef</span>, or <span class="ident-class">model.oddPhr</span>, with the exceptions of
+<code>&lt;schemaSpec&gt;</code> (a member of <span class="ident-class">model.divPart</span>)
+and both <code>&lt;eg&gt;</code> and <code>&lt;egXML&gt;</code> (members of <span class="ident-class">model.common</span> and <span class="ident-class">model.graphicLike</span>). All of these classes are
+declared along with the other general TEI classes, in the basic
+structure module documented in <a class="link_ptr" href="ST.html" title="3">2  The TEI infrastructure</a>. </p><p><span id="id2575386"/>In addition, some elements are members of the
+<span class="ident-class">att.identified</span> class, which is documented in <a class="link_ptr" href="TD.html#TDbuild" title="Building a schema">23.4  Building a schema</a> above, and make use of the
+<tt>macro.schemapattern</tt> pattern, which is documented in <a class="link_ptr" href="TD.html#TDTAG" title="Element Specifications">23.3.2  Element Specifications</a> above. 
+</p><div class="p"><span id="id2575410"/>The <span class="ident-module">tagdocs</span> module is organized as
+follows:
+<div class="specgrp"><b>Specification group 157</b><dl><dt><!-- --></dt><dd>« <a href="#TDSG1"><span class="label">include 152: Phrase-level elements for tag documentation</span></a> » </dd><dt><!-- --></dt><dd>« <a href="#TDSG2"><span class="label">include 153: Modules and Specification Groups</span></a> » </dd><dt><!-- --></dt><dd>« <a href="#TDSG3"><span class="label">include 154: Specification elements</span></a> » </dd><dt><!-- --></dt><dd>« <a href="#TDSG4"><span class="label">include 155: Common specification elements</span></a> » </dd><dt><!-- --></dt><dd>« <a href="#TDSG5"><span class="label">include 156: Element specification elements</span></a> » </dd></dl></div></div></div><p class="left"><i> Up: </i><a class="navigation" href="index.html">Contents</a><i> Previous: </i><a class="navigation" href="FD.html">22  Feature System Declaration</a><i> Next: </i><a class="navigation" href="USE.html">24  Using The TEI</a></p><div class="notes"><div class="noteHeading">Notes</div><div class="note"><a id="Note148">148.</a>ODD is
+short for ‘One Document Does it all’, and was the name invented
+by the original TEI Editors for the predecessor of the system
+currently used for this purpose. See further Rahtz et al
+2002</div></div><div class="stdfooter"><hr/><div class="footer"><a class="plain" href="http://www.tei-c.org/Consortium/">TEI Consortium</a> | <a class="plain" href="index.html">TEI P5</a> | <a class="plain" href="http://www.tei-c.org/Consortium/contact.xml">Feedback</a></div><hr/><address> edited by C.M. Sperberg-McQueen and
+	Lou Burnard.
+      Date: 2007<br/>Copyright TEI Consortium 2007<!--
+	  Generated  using an XSLT version 1.0 stylesheet
+	  based on http://www.tei-c.org/Stylesheets/teic/tei.xsl
+	  processed using libxslt
+	  on 2007-03-13T16:03:02Z--></address></div></div></div></div></body></html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;variantEncoding&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;variantEncoding&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;variantEncoding&gt;</h1></div><div><span id="variantEncoding"/><table border="1" class="wovenodd"><tr><td class="elementSpec">variantEncoding</td><td colspan="2" class="wovenodd-col2">declares the method used to encode text-critical variants.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.encodingPart.html">model.encodingPart</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element variantEncoding
+{
+   att.global.attributes,
+   attribute method
+   {
+      "location-referenced" | "double-end-point" | "parallel-segmentation"
+   },
+   attribute location { "internal" | "external" },
+   empty
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>In addition to global attributes<table><tr><td class="attDef">method</td><td colspan="2">indicates which method is used to encode the apparatus of
+variants.</td></tr><tr><td/><td><span class="label">Status: </span><b>Required</b></td></tr><tr><td><!-- --></td><td valign="top">Legal values are:<table class="valList"><tr><td valign="top"><b>location-referenced</b></td><td valign="top">(apparatus uses line numbers or other canonical reference scheme
+referenced in a base text.) </td></tr><tr><td valign="top"><b>double-end-point</b></td><td valign="top">(apparatus indicates the precise locations of the beginning and
+ending of each lemma relative to a base text.) </td></tr><tr><td valign="top"><b>parallel-segmentation</b></td><td valign="top">(alternate readings of a passage are given in parallel in the
+text; no notion of a base text is necessary.) </td></tr></table></td></tr><tr><td/><td><p><span id="id2389968"/>The value ‘parallel-segmentation’ requires in-line
+encoding of the apparatus.</p></td></tr><tr><td class="attDef">location</td><td colspan="2">indicates whether the apparatus appears within the running text
+or external to it.</td></tr><tr><td/><td><span class="label">Status: </span><b>Required</b></td></tr><tr><td><!-- --></td><td valign="top">Legal values are:<table class="valList"><tr><td valign="top"><b>internal</b></td><td valign="top">(apparatus appears within the running text.) </td></tr><tr><td valign="top"><b>external</b></td><td valign="top">(apparatus appears outside the base text.) </td></tr></table></td></tr><tr><td/><td><p><span id="id2390079"/>The value ‘external’ is inconsistent with the
+parallel-segmentation method of apparatus markup.</p></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;variantEncoding <span class="attribute">method</span>="location-referenced" <span class="attribute">location</span>="external"/&gt;</span></div></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="TC.html#TCAPEN" title="The Apparatus Entry">16.1.1  The Apparatus Entry</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">header</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

@@ -1,0 +1,6 @@
+#! /bin/bash
+
+nitrogen --restore &
+wicd &
+tint2 &
+gmrun &

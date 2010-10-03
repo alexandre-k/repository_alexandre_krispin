@@ -1,0 +1,519 @@
+namespace a1 = "http://relaxng.org/ns/compatibility/annotations/1.0"
+namespace ns1 = "http://www.tei-c.org/ns/Examples"
+namespace rng = "http://relaxng.org/ns/structure/1.0"
+
+# Schema generated 2007-03-13T16:02:29Z..
+# Copyright 2005 TEI Consortium.
+# This is free software; you can redistribute it and/or
+#	    modify it under the terms of the GNU General Public
+#	    License as published by the Free Software Foundation;
+#	    either version 2 of the License, or (at your option) any
+#	    later version.
+# This material is distributed in the hope that it will be
+#	    useful, but WITHOUT ANY WARRANTY; without even the implied
+#	    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+#	    PURPOSE. See the GNU General Public License for more
+#	    details.
+# You should have received a copy of the GNU General Public
+#	    License along with this file; if not, write to the Free
+#	    Software Foundation, Inc., 59 Temple Place, Suite 330,
+#	    Boston, MA 02111-1307, USA.
+# To contact the TEI Consortium use the following addresses.
+#	    For general (non-technical) enquiries: 
+#		  target="mailto:info@tei-c.org"/>info@tei-c.orgFor membership enquiries: membership@tei-c.orgFor technical enquiries, particularly about the
+#		Guidelines, DTDs, schemas, or software available from
+#		the TEI-C: editors@tei-c.orgFor up to date information, consult the TEI web site at http://www.tei-c.org/P5Documentation of TEI modules
+
+# Definitions from module tagdocs
+
+# Set global predeclared macros
+
+# Set predeclared macros
+
+# 0. predeclared macros
+
+# 1. classes
+att.identified.attributes =
+  att.identified.attribute.ident,
+  att.identified.attribute.depend,
+  att.identified.attribute.predeclare,
+  att.identified.attribute.module,
+  att.identified.attribute.mode,
+  empty
+att.identified.attribute.ident =
+  ## Supplies the identifier by which this element is referenced.
+  attribute ident { data.name }
+att.identified.attribute.depend =
+  ## The name of a module on which this object depends.
+  attribute depend { xsd:NCName }?
+att.identified.attribute.predeclare =
+  ## Says whether the class should be treated as global, and so
+  ##       needs predefining in the core.
+  [ a1:defaultValue = "false" ] attribute predeclare { xsd:boolean }?
+att.identified.attribute.module =
+  ## Supplies the name of the module in which this object is to
+  ##       be defined.
+  attribute module { xsd:NCName }?
+att.identified.attribute.mode =
+  ## specifies the effect of this declaration on its parent
+  ##     module.
+  [ a1:defaultValue = "add" ]
+  attribute mode {
+    ## (this declaration is added to the current definitions) 
+    "add" | ## (this declaration and all of its children are removed from the current setup) 
+      "delete" | ## (this declaration changes the declaration of the same
+      ##     name in the current definition) 
+      "change" | ## (this declaration replaces the declaration of the same
+      ##     name in the current definition) 
+      "replace"
+  }?
+# 2. elements
+
+att =
+  ## (attribute) contains the name of an attribute appearing within running text.
+  element att { att.content, att.attributes }
+att.content = text
+att.attributes =
+  att.global.attributes,
+  ## supplies an identifier for  the scheme in which this name is defined.
+  ## Sample values include: 1] TEI (this attribute is part of the TEI scheme.); 2] DBK (this attribute is  part of the Docbook scheme.); 3] XX (this attribute is  part of an unknown scheme.)
+  [ a1:defaultValue = "TEI" ] attribute scheme { data.enumerated }?,
+  empty
+
+attDef =
+  ## (attribute definition) contains the definition of a single attribute.
+  element attDef { attDef.content, attDef.attributes }
+attDef.content =
+  macro.glossSeq,
+  datatype?,
+  defaultVal?,
+  (valList | valDesc)?,
+  exemplum*,
+  remarks*
+attDef.attributes =
+  att.global.attributes,
+  att.identified.attributes,
+  ## specifies the optionality of an attribute or element.
+  [ a1:defaultValue = "opt" ]
+  attribute usage {
+    ## (required) 
+    "req" | ## (mandatory when applicable  ) 
+      "mwa" | ## (recommended  ) 
+      "rec" | ## (recommended when applicable  ) 
+      "rwa" | ## (optional ) 
+      "opt"
+  }?,
+  ## (namespace) specifies the namespace to which this attribute belongs
+  [ a1:defaultValue = "http://www.tei-c.org/ns/1.0" ]
+  attribute ns { data.namespace }?,
+  empty
+
+attList =
+  ## contains documentation for all the attributes associated with this
+  ## element, as a series of attDef elements.
+  element attList { attList.content, attList.attributes }
+attList.content = (attRef | attDef | attList)+
+attList.attributes =
+  att.global.attributes,
+  ## specifies whether all the attributes in the list are
+  ##   available (org="group") or only  one of them (org="choice")
+  [ a1:defaultValue = "group" ]
+  attribute org {
+    ## (grouped) 
+    "group" | ## (alternated) 
+      "choice"
+  }?,
+  empty
+
+attRef =
+  ## (attribute pointer) points to the definition of an attribute or group of attributes.
+  element attRef { attRef.content, attRef.attributes }
+attRef.content = empty
+attRef.attributes =
+  att.global.attributes,
+  ## the name of the pattern defining the attribute(s)
+  attribute name { data.word },
+  empty
+
+classSpec =
+  ## contains reference information for a TEI element class; 
+  ## that is a group of 
+  ##   elements which appear together in  content models, or 
+  ##   which share some common attribute, or both.
+  element classSpec { classSpec.content, classSpec.attributes }
+classSpec.content =
+  macro.glossSeq, classes?, attList?, exemplum*, remarks*, listRef*
+classSpec.attributes =
+  att.global.attributes,
+  att.identified.attributes,
+  ## indicates whether this is a model class or an attribute class
+  attribute type {
+    ## (members of this class appear in the same  content models) 
+    "model" | ## (members of this class share common attributes) 
+      "atts"
+  },
+  ## indicates which alternation and sequence instantiations
+  ##	of a model class should be created. By default, all variations
+  ##	are provided.
+  ## Sample values include: 1] alternation (members of the class are alternatives); 2] sequence (members of the class are to be provided in sequence); 3] sequenceOptional (members of the class may be provided, in sequence,
+  ##	    but are optional); 4] sequenceOptionalRepeatable (members of the class may be provided one or more
+  ##	    times, in sequence, but are optional. ); 5] sequenceRepeatable (members of the class may be provided one or more times, in sequence)
+  ## Sorry, unable to create schema that uses actual counts minOccurs=1 and maxOccurs=5; approximating to minOccurs=1 and maxOccurs=unbounded.
+  attribute generate {
+    list { data.name, data.name* }
+  }?,
+  empty
+
+classes =
+  ## specifies all the classes of which the documented element or
+  ## class is a member or subclass.
+  element classes { classes.content, classes.attributes }
+classes.content = memberOf*
+classes.attributes = att.global.attributes, empty
+
+code =
+  ## contains literal code from some formal language such as a
+  ## programming language
+  element code { code.content, code.attributes }
+code.content = text
+code.attributes =
+  att.global.attributes,
+  ## a name identifying the formal language in which  the
+  ##	code is expressed
+  attribute lang { data.word }?,
+  empty
+
+content =
+  ## (schema declaration) contains the text of a declaration for the schema
+  ## documented.
+  element content { content.content, content.attributes }
+content.content = (macro.schemapattern | valList)*
+content.attributes = att.global.attributes, empty
+
+datatype =
+  ## specifies the declared value for an attribute, by referring to
+  ##   any datatype defined by the chosen schema language.
+  element datatype { datatype.content, datatype.attributes }
+datatype.content = macro.schemapattern*
+datatype.attributes =
+  att.global.attributes,
+  ## (minimum number of occurences) indicates the minimum number of times this datatype may
+  ##       occur in the specification of the attribute being defined
+  [ a1:defaultValue = "1" ] attribute minOccurs { data.count }?,
+  ## (maximum number of occurences) indicates the maximum number of times this datatype may
+  ##       occur in the specification of the attribute being defined
+  [ a1:defaultValue = "1" ]
+  attribute maxOccurs { data.count | "unbounded" }?,
+  empty
+
+defaultVal =
+  ## specifies the default declared value for an attribute.
+  element defaultVal { defaultVal.content, defaultVal.attributes }
+defaultVal.content = text
+defaultVal.attributes = att.global.attributes, empty
+
+eg =
+  ## contains any kind of illustrative example. 
+  element eg { eg.content, eg.attributes }
+eg.content = text
+eg.attributes = att.global.attributes, empty
+
+egXML =
+  ## contains a single well-formed XML example demonstrating the use
+  ## of some XML element or attribute. 
+  element ns1:egXML { egXML.content, egXML.attributes }
+egXML.content = text
+egXML.attributes = att.global.attributes, empty
+
+elementSpec =
+  ## documents the structure, content, and purpose of a single
+  ## element type.
+  element elementSpec { elementSpec.content, elementSpec.attributes }
+elementSpec.content =
+  macro.glossSeq,
+  classes?,
+  content?,
+  attList?,
+  exemplum*,
+  remarks*,
+  listRef*
+elementSpec.attributes =
+  att.global.attributes,
+  att.identified.attributes,
+  ## (namespace) specifies the namespace to which this element belongs
+  [ a1:defaultValue = "http://www.tei-c.org/ns/1.0" ]
+  attribute ns { data.namespace }?,
+  ## specifies the optionality of an attribute or element. 
+  [ a1:defaultValue = "opt" ]
+  attribute usage {
+    ## (required) 
+    "req" | ## (mandatory when applicable) 
+      "mwa" | ## (recommended) 
+      "rec" | ## (recommended when applicable) 
+      "rwa" | ## (optional) 
+      "opt"
+  }?,
+  empty
+
+exemplum =
+  ## contains a single example demonstrating the use of an element,
+  ##   together with optional paragraphs of commentary.
+  element exemplum { exemplum.content, exemplum.attributes }
+exemplum.content = model.pLike*, (egXML | eg), model.pLike*
+exemplum.attributes = att.global.attributes, att.typed.attributes, empty
+
+gi =
+  ## (generic identifier) contains the name (generic identifier) of an element.
+  element gi { gi.content, gi.attributes }
+gi.content = text
+gi.attributes =
+  att.global.attributes,
+  ## supplies the name of the scheme in which this name is defined.
+  ## Sample values include: 1] TEI (this element is part of the TEI scheme.); 2] DBK (this element is  part of the Docbook scheme.); 3] XX (this element is  part of an unknown scheme.)
+  [ a1:defaultValue = "TEI" ] attribute scheme { data.enumerated }?,
+  empty
+
+ident =
+  ## contains an identifier or name for an object of some kind in a formal language
+  element ident { ident.content, ident.attributes }
+ident.content = text
+ident.attributes = att.global.attributes, att.typed.attributes, empty
+
+listRef =
+  ## (list of references) supplies a list of significant references to places where this
+  ##   element is discussed, in the current document or elsewhere.
+  element listRef { listRef.content, listRef.attributes }
+listRef.content = ptr+
+listRef.attributes = att.global.attributes, empty
+
+macroSpec =
+  ## documents the function and implementation of a pattern. 
+  element macroSpec { macroSpec.content, macroSpec.attributes }
+macroSpec.content =
+  macro.glossSeq, (stringVal | content)+, exemplum*, remarks*, listRef*
+macroSpec.attributes =
+  att.global.attributes,
+  att.identified.attributes,
+  ## indicates which type of entity should be generated, when an ODD
+  ##	processor is generating a module using SGML syntax.
+  attribute type {
+    ## (parameter entity) 
+    "pe" | ## (element parameter entity) 
+      "epe" | ## (general entity) 
+      "ge" | ## (datatype entity) 
+      "dt"
+  }?,
+  empty
+
+memberOf =
+  ## specifies  class membership of the parent element or class.
+  element memberOf { memberOf.content, memberOf.attributes }
+memberOf.content = macro.xtext
+memberOf.attributes =
+  att.global.attributes,
+  ## (a name) specifies the identifier for a class of which the documented
+  ##  element or class is a member or subclass
+  attribute key { data.name }?,
+  empty
+
+moduleRef =
+  ## references a module which is to be incorporated into a schema.
+  element moduleRef { moduleRef.content, moduleRef.attributes }
+moduleRef.content = content?
+moduleRef.attributes =
+  att.global.attributes,
+  (
+   ## the name of a TEI module
+   attribute key { xsd:NCName } | ## refers to a non-TEI module by external location 
+     attribute url { xsd:anyURI })?,
+  empty
+
+moduleSpec =
+  ## documents the structure, content, and purpose of a single
+  ## module, i.e. a named and externally visible group of declarations.
+  element moduleSpec { moduleSpec.content, moduleSpec.attributes }
+moduleSpec.content = macro.glossSeq, exemplum*, remarks?, listRef*
+moduleSpec.attributes =
+  att.global.attributes,
+  att.identified.attributes,
+  ## type of module to be generated
+  attribute type { text }?,
+  empty
+
+remarks =
+  ## contains any commentary or discussion about the usage of an
+  ## element, attribute, class, or entity not otherwise documented within the
+  ## containing element.
+  element remarks { remarks.content, remarks.attributes }
+remarks.content = macro.componentSeq
+remarks.attributes = att.global.attributes, empty
+
+schemaSpec =
+  ## generates a TEI-conformant schema and documentation for it.
+  element schemaSpec { schemaSpec.content, schemaSpec.attributes }
+schemaSpec.content =
+  macro.glossSeq, (moduleRef | specGrpRef | model.oddDecl)*
+schemaSpec.attributes =
+  att.global.attributes,
+  att.identified.attributes,
+  ## specifies entry points to the schema, i.e. which elements
+  ##       are allowed to be used as the root of documents conforming to
+  ##       it. 
+  [ a1:defaultValue = "TEI" ]
+  attribute start {
+    list { data.name+ }
+  }?,
+  ## specifies the default namespace (if any) applicable to
+  ##       components of the schema.
+  [ a1:defaultValue = "http://www.tei-c.org/ns/1.0" ]
+  attribute ns { data.namespace }?,
+  ## specifies a prefix which will be appended to all patterns
+  ##       relating to TEI elements. This allows for external schemas to be mixed in
+  ##       which have elements of the same names as the TEI.
+  attribute prefix { data.name }?,
+  ## Where names for element or attribute
+  ##       are available
+  ##       in more than one language, specifies which language to
+  ##       use when creating the objects in a schema.
+  attribute targetLang { data.language }?,
+  ## Where the descrition for an element, attribute, class or macro
+  ##       is available in more than one language, specifies which languages to
+  ##       use when creating documentation.
+  attribute docLang {
+    list { data.language+ }
+  }?,
+  empty
+
+specDesc =
+  ## (Element or class description) indicates that a description of the specified element or class
+  ##   should be included at this point within a document.
+  element specDesc { specDesc.content, specDesc.attributes }
+specDesc.content = empty
+specDesc.attributes =
+  att.global.attributes,
+  ## (identifier) supplies the identifier of the documentary element or class for
+  ##       which a description is to be obtained.
+  attribute key { data.name }?,
+  ## (attributes) supplies attribute names for which descriptions should
+  ##       additionally be obtained.
+  attribute atts {
+    list { data.name* }
+  }?,
+  empty
+
+specGrp =
+  ## (specification group) contains any convenient grouping of specifications for use within
+  ##   the current module.
+  element specGrp { specGrp.content, specGrp.attributes }
+specGrp.content = (model.oddDecl | model.oddRef | model.divPart)*
+specGrp.attributes = att.global.attributes, empty
+
+specGrpRef =
+  ## (reference to a specification group) indicates that the  declarations contained by the
+  ##   specGrp referenced should be inserted at this point.
+  element specGrpRef { specGrpRef.content, specGrpRef.attributes }
+specGrpRef.content = empty
+specGrpRef.attributes =
+  att.global.attributes,
+  ## points at the specification group  which logically belongs here.
+  attribute target { data.pointer },
+  empty
+
+specList =
+  ## marks where a list of descriptions is to be inserted into the prose documentation.
+  element specList { specList.content, specList.attributes }
+specList.content = specDesc+
+specList.attributes = att.global.attributes, empty
+
+stringVal =
+  ## contains the intended expansion for the entity documented
+  ## by an patternSpec element, enclosed by quotation marks.
+  element stringVal { stringVal.content, stringVal.attributes }
+stringVal.content = text
+stringVal.attributes = att.global.attributes, empty
+
+tag =
+  ## contains text of a complete start- or end-tag, possibly
+  ## including attribute specifications, but excluding the opening and
+  ## closing markup delimiter characters.
+  element tag { tag.content, tag.attributes }
+tag.content = text
+tag.attributes =
+  att.global.attributes,
+  ## supplies the name of the scheme in which this name is defined.
+  [ a1:defaultValue = "TEI" ]
+  attribute scheme {
+    ## (this tag is part of the TEI scheme.) 
+    "TEI" | ## (this element is  part of the Docbook scheme.) 
+      "DBK"
+  }?,
+  empty
+
+val =
+  ## (value) contains a single attribute value.
+  element val { val.content, val.attributes }
+val.content = text
+val.attributes = att.global.attributes, empty
+
+valDesc =
+  ## (value description) specifies any semantic or syntactic constraint on the value that
+  ## an attribute may take, additional to the information carried by the
+  ## datatype element.
+  element valDesc { valDesc.content, valDesc.attributes }
+valDesc.content = macro.phraseSeq
+valDesc.attributes =
+  att.global.attributes,
+  ## specifies the effect of this declaration on its parent module.
+  [ a1:defaultValue = "add" ]
+  attribute mode {
+    ## (this declaration is added to the current definitions) 
+    "add" | ## (this declaration and all of its children are removed from the current setup) 
+      "delete" | ## (this declaration changes the declaration of the same
+      ##	 name in the current definition) 
+      "change" | ## (this declaration replaces the declaration of the same
+      ##	name in the current definition) 
+      "replace"
+  }?,
+  empty
+
+valItem =
+  ## (value definition) contains a single value and gloss  pair for an attribute.
+  element valItem { valItem.content, valItem.attributes }
+valItem.content = macro.glossSeq
+valItem.attributes =
+  att.global.attributes, att.identified.attributes, empty
+
+valList =
+  ## (value list) contains one or more valItem elements defining possible
+  ##   values for an attribute.
+  element valList { valList.content, valList.attributes }
+valList.content = valItem+
+valList.attributes =
+  att.global.attributes,
+  ## specifies the effect of this declaration on its parent
+  ##     module.
+  [ a1:defaultValue = "add" ]
+  attribute mode {
+    ## (this declaration is added to the current definitions) 
+    "add" | ## (this declaration and all of its children are removed from the current setup) 
+      "delete" | ## (this declaration changes the declaration of the same
+      ##	 name in the current definition) 
+      "change" | ## (this declaration replaces the declaration of the same
+      ##	name in the current definition) 
+      "replace"
+  }?,
+  ## specifies the extensibility of the list of attribute values
+  ##       specified.
+  [ a1:defaultValue = "open" ]
+  attribute type {
+    ## (only the values specified are permitted.) 
+    "closed" | ## (all the values specified should be supported, but
+      ##	  other values are legal and software should have appropriate
+      ##	  fallback processing for them.
+      ##	  ) 
+      "semi" | ## (the values specified are sample values only.) 
+      "open"
+  }?,
+  empty
+# 3. macros
+macro.schemapattern = text

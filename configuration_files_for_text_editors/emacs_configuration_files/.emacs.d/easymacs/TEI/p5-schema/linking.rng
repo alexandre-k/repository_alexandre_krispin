@@ -1,0 +1,586 @@
+<?xml version="1.0"?>
+<rng:grammar xmlns:rng="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<!--Schema generated 2007-03-13T16:02:29Z..
+Copyright 2005 TEI Consortium.
+This is free software; you can redistribute it and/or
+	    modify it under the terms of the GNU General Public
+	    License as published by the Free Software Foundation;
+	    either version 2 of the License, or (at your option) any
+	    later version.
+This material is distributed in the hope that it will be
+	    useful, but WITHOUT ANY WARRANTY; without even the implied
+	    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+	    PURPOSE. See the GNU General Public License for more
+	    details.
+You should have received a copy of the GNU General Public
+	    License along with this file; if not, write to the Free
+	    Software Foundation, Inc., 59 Temple Place, Suite 330,
+	    Boston, MA 02111-1307, USA.
+To contact the TEI Consortium use the following addresses.
+	    For general (non-technical) enquiries: 
+		  target="mailto:info@tei-c.org"/>info@tei-c.orgFor membership enquiries: membership@tei-c.orgFor technical enquiries, particularly about the
+		Guidelines, DTDs, schemas, or software available from
+		the TEI-C: editors@tei-c.orgFor up to date information, consult the TEI web site at http://www.tei-c.org/P5Linking, segmentation and alignment-->
+<!--Definitions from module linking-->
+<!--Set global predeclared macros-->
+<!--Set predeclared macros-->
+<!--0. predeclared macros-->
+<!--1. classes-->
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.global.linking.attributes">
+    <ref name="att.global.linking.attribute.corresp"/>
+    <ref name="att.global.linking.attribute.synch"/>
+    <ref name="att.global.linking.attribute.sameAs"/>
+    <ref name="att.global.linking.attribute.copyOf"/>
+    <ref name="att.global.linking.attribute.next"/>
+    <ref name="att.global.linking.attribute.prev"/>
+    <ref name="att.global.linking.attribute.exclude"/>
+    <ref name="att.global.linking.attribute.select"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.global.linking.attribute.corresp">
+    <optional>
+      <attribute name="corresp">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to elements that correspond to the current
+      element in some way.</a:documentation>
+        <list>
+          <oneOrMore>
+            <ref name="data.pointer"/>
+          </oneOrMore>
+        </list>
+      </attribute>
+    </optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.global.linking.attribute.synch">
+    <optional>
+      <attribute name="synch">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to elements that are synchronous with the current
+      element.</a:documentation>
+        <list>
+          <oneOrMore>
+            <ref name="data.pointer"/>
+          </oneOrMore>
+        </list>
+      </attribute>
+    </optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.global.linking.attribute.sameAs">
+    <optional>
+      <attribute name="sameAs">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to an element that is the same as the current
+      element.</a:documentation>
+        <ref name="data.pointer"/>
+      </attribute>
+    </optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.global.linking.attribute.copyOf">
+    <optional>
+      <attribute name="copyOf">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to an element of which the current element is a
+	copy.</a:documentation>
+        <ref name="data.pointer"/>
+      </attribute>
+    </optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.global.linking.attribute.next">
+    <optional>
+      <attribute name="next">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to the next element of a virtual aggregate of which
+      the current element is part.</a:documentation>
+        <ref name="data.pointer"/>
+      </attribute>
+    </optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.global.linking.attribute.prev">
+    <optional>
+      <attribute name="prev">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to the previous element of a virtual aggregate of
+      which the current element is part.</a:documentation>
+        <ref name="data.pointer"/>
+      </attribute>
+    </optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.global.linking.attribute.exclude">
+    <optional>
+      <attribute name="exclude">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to elements that are in exclusive alternation
+      with the current element.</a:documentation>
+        <list>
+          <oneOrMore>
+            <ref name="data.pointer"/>
+          </oneOrMore>
+        </list>
+      </attribute>
+    </optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.global.linking.attribute.select">
+    <optional>
+      <attribute name="select">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">selects one or more alternants; if one alternant is
+      selected, the ambiguity or uncertainty is marked as resolved. If
+      more than one alternant is selected, the degree of ambiguity or
+      uncertainty is marked as reduced by the number of alternants not
+      selected.</a:documentation>
+        <list>
+          <oneOrMore>
+            <ref name="data.pointer"/>
+          </oneOrMore>
+        </list>
+      </attribute>
+    </optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.pointing.attributes">
+    <ref name="att.pointing.attribute.type"/>
+    <ref name="att.pointing.attribute.evaluate"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.pointing.attribute.type">
+    <optional>
+      <attribute name="type">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">categorizes the pointer in some respect, using any
+      convenient set of categories.</a:documentation>
+        <ref name="data.word"/>
+      </attribute>
+    </optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.pointing.attribute.evaluate">
+    <optional>
+      <attribute name="evaluate">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the intended meaning when the target of a
+      pointer is itself a pointer.</a:documentation>
+        <choice>
+          <value>all</value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(if the element pointed to is itself a pointer, then
+	  the target of that pointer will be taken, and so on, until
+	  an element is found which is not a pointer.) </a:documentation>
+          <value>one</value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(if the element pointed to is itself a pointer, then
+	  its target (whether a pointer or not) is taken as the target
+	  of this pointer.) </a:documentation>
+          <value>none</value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(no further evaluation of targets is carried out
+	  beyond that needed to find the element specified in the
+	  pointer's target.) </a:documentation>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.pointing.group.attributes">
+    <ref name="att.pointing.attributes"/>
+    <ref name="att.pointing.group.attribute.domains"/>
+    <ref name="att.pointing.group.attribute.targFunc"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.pointing.group.attribute.domains">
+    <optional>
+      <attribute name="domains">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">optionally specifies the identifiers of the elements
+      within which all elements indicated by the contents of this
+      element lie.</a:documentation>
+        <list>
+          <oneOrMore>
+            <ref name="data.name"/>
+          </oneOrMore>
+        </list>
+      </attribute>
+    </optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.pointing.group.attribute.targFunc">
+    <optional>
+      <attribute name="targFunc">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes the function of each of the values of the
+      targets attribute of the enclosed link,
+      join or alt tags.</a:documentation>
+        <list>
+          <oneOrMore>
+            <ref name="data.word"/>
+          </oneOrMore>
+        </list>
+      </attribute>
+    </optional>
+  </define>
+<!--2. elements-->
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="ab">
+    <element name="ab">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(anonymous block) contains any arbitrary component-level unit of text, acting as
+an anonymous container for phrase or inter level elements analogous to, but
+without the semantic baggage of, a paragraph.</a:documentation>
+      <ref name="ab.content"/>
+      <ref name="ab.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="ab.content">
+    <ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="ab.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="part" a1:defaultValue="N">
+        <a1:documentation>specifies whether or not the block is complete. </a1:documentation>
+        <choice>
+          <value>Y</value>
+          <a1:documentation>(the block is incomplete) </a1:documentation>
+          <value>N</value>
+          <a1:documentation>(either the block is complete, or no claim is made as to its
+completeness) </a1:documentation>
+          <value>I</value>
+          <a1:documentation>(the initial part of an incomplete block) </a1:documentation>
+          <value>M</value>
+          <a1:documentation>(a medial part of an incomplete block) </a1:documentation>
+          <value>F</value>
+          <a1:documentation>(the final part of an incomplete block) </a1:documentation>
+        </choice>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="alt">
+    <element name="alt">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(alternation) identifies an alternation or a set of choices among elements or passages.</a:documentation>
+      <ref name="alt.content"/>
+      <ref name="alt.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="alt.content">
+    <empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="alt.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.pointing.attributes"/>
+    <attribute name="targets">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the identifiers of the alternative elements or passages.</a:documentation>
+      <list>
+        <ref name="data.pointer"/>
+        <oneOrMore>
+          <ref name="data.pointer"/>
+        </oneOrMore>
+      </list>
+    </attribute>
+    <optional>
+      <attribute name="mode">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">states whether the alternations gathered in this collection are exclusive or inclusive.</a:documentation>
+        <choice>
+          <value>excl</value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(indicates that the alternation is exclusive, i.e. that
+		  at most one of the alternatives occurs.) </a:documentation>
+          <value>incl</value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(indicates that the alternation is not exclusive, i.e. that
+		  one or more of the alternatives occur.) </a:documentation>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="weights">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">If mode is excl, each weight
+      states the probability that the corresponding alternative
+      occurs. If modeincl each weight states
+      the probability that the corresponding alternative occurs given
+      that at least one of the other alternatives occurs.</a:documentation>
+        <list>
+          <oneOrMore>
+            <ref name="data.probability"/>
+          </oneOrMore>
+        </list>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="altGrp">
+    <element name="altGrp">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(alternation group) groups a collection of alt elements and possibly
+pointers.</a:documentation>
+      <ref name="altGrp.content"/>
+      <ref name="altGrp.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="altGrp.content">
+    <zeroOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:choice>
+        <rng:ref name="alt"/>
+        <rng:ref name="ptr"/>
+      </rng:choice>
+    </zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="altGrp.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.pointing.group.attributes"/>
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="mode" a1:defaultValue="excl">
+        <a1:documentation>states whether the alternations gathered in this collection are
+exclusive or inclusive.</a1:documentation>
+        <choice>
+          <value>excl</value>
+          <a1:documentation>(indicates that the alternation is exclusive, i.e. that at
+most one of the alternatives occurs.) </a1:documentation>
+          <value>incl</value>
+          <a1:documentation>(indicates that the alternation is not exclusive, i.e. that
+one or more of the alternatives occur.) </a1:documentation>
+        </choice>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="anchor">
+    <element name="anchor">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(anchor point) attaches an identifier to a
+point within a text, whether or not it corresponds with a textual
+element.</a:documentation>
+      <ref name="anchor.content"/>
+      <ref name="anchor.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="anchor.content">
+    <empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="anchor.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="join">
+    <element name="join">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies a possibly fragmented segment of text, by pointing
+at the possibly discontiguous elements which compose it.</a:documentation>
+      <ref name="join.content"/>
+      <ref name="join.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="join.content">
+    <ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.glossSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="join.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.pointing.attributes"/>
+    <attribute name="targets">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the identifiers of the elements or passages
+       to be joined into a virtual
+       element.</a:documentation>
+      <list>
+        <ref name="data.pointer"/>
+        <oneOrMore>
+          <ref name="data.pointer"/>
+        </oneOrMore>
+      </list>
+    </attribute>
+    <optional>
+      <attribute name="result">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the name of an element
+which this aggregation
+may be understood to represent.</a:documentation>
+        <ref name="data.name"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute xmlns:a1="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" name="scope" a1:defaultValue="root">
+        <a1:documentation>indicates whether the targets to be joined include the
+entire element indicated (the entire subtree including its root),
+or just the children of the target (the branches of the subtree).</a1:documentation>
+        <choice>
+          <value>root</value>
+          <a1:documentation>(the rooted subtrees indicated by the targets
+attribute are joined, each subtree become a child of the virtual
+element created by the join) </a1:documentation>
+          <value>branches</value>
+          <a1:documentation>(the children of the subtrees indicated by the
+targets attribute become the children of the virtual element
+(i.e. the roots of the subtrees are discarded)) </a1:documentation>
+        </choice>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="joinGrp">
+    <element name="joinGrp">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(join group) groups a collection of join elements and possibly
+  pointers.</a:documentation>
+      <ref name="joinGrp.content"/>
+      <ref name="joinGrp.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="joinGrp.content">
+    <group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:optional>
+        <rng:ref name="macro.glossSeq"/>
+      </rng:optional>
+      <rng:oneOrMore>
+        <rng:choice>
+          <rng:ref name="join"/>
+          <rng:ref name="ptr"/>
+        </rng:choice>
+      </rng:oneOrMore>
+    </group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="joinGrp.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.pointing.group.attributes"/>
+    <optional>
+      <attribute name="result">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes the result of the joins gathered in this collection.</a:documentation>
+        <ref name="data.name"/>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="link">
+    <element name="link">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines an association or hypertextual link
+among elements or passages, of some type
+not more precisely specifiable by other elements.</a:documentation>
+      <ref name="link.content"/>
+      <ref name="link.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="link.content">
+    <empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="link.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.pointing.attributes"/>
+    <attribute name="targets">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the identifiers of the elements or passages
+    to be linked or associated.
+ </a:documentation>
+      <list>
+        <ref name="data.pointer"/>
+        <oneOrMore>
+          <ref name="data.pointer"/>
+        </oneOrMore>
+      </list>
+    </attribute>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="linkGrp">
+    <element name="linkGrp">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines a collection of associations or hypertextual links.</a:documentation>
+      <ref name="linkGrp.content"/>
+      <ref name="linkGrp.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="linkGrp.content">
+    <oneOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:choice>
+        <rng:ref name="link"/>
+        <rng:ref name="ptr"/>
+      </rng:choice>
+    </oneOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="linkGrp.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.pointing.group.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="seg">
+    <element name="seg">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(arbitrary segment) contains any arbitrary phrase-level unit of text (including
+other seg elements).</a:documentation>
+      <ref name="seg.content"/>
+      <ref name="seg.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="seg.content">
+    <ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="seg.attributes">
+    <ref name="att.global.attributes"/>
+    <ref name="att.segLike.attributes"/>
+    <optional>
+      <attribute name="subtype">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides a sub-categorization of the segment marked.</a:documentation>
+        <ref name="data.word"/>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="timeline">
+    <element name="timeline">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(timeline) provides a set of ordered points in time which can be linked to
+elements of a spoken text to create a temporal alignment of that text.</a:documentation>
+      <ref name="timeline.content"/>
+      <ref name="timeline.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="timeline.content">
+    <oneOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <rng:ref name="when"/>
+    </oneOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="timeline.attributes">
+    <ref name="att.global.attributes"/>
+    <attribute name="origin">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">designates the origin of the timeline, i.e. the time at which it
+begins.</a:documentation>
+      <ref name="data.pointer"/>
+    </attribute>
+    <optional>
+      <attribute name="unit">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the unit of time corresponding to the
+	interval value of the timeline or of its
+	constituent points in time.
+Suggested values include: 1] d (days); 2] h (hours); 3] m (minutes); 4] s (seconds); 5] ms (milliseconds)</a:documentation>
+        <ref name="data.enumerated"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="interval">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the numeric portion of a time interval</a:documentation>
+        <choice>
+          <data type="float">
+            <param name="minExclusive">0</param>
+          </data>
+          <value>regular</value>
+          <value>irregular</value>
+        </choice>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="when">
+    <element name="when">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(when) indicates a point in time either relative to other elements in the
+same timeline tag, or absolutely.</a:documentation>
+      <ref name="when.content"/>
+      <ref name="when.attributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="when.content">
+    <empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="when.attributes">
+    <ref name="att.global.attributes"/>
+    <optional>
+      <attribute name="absolute">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies an absolute value for the time.</a:documentation>
+        <ref name="data.temporal"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="unit">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the unit of time in which the  interval
+value is expressed, if this is not inherited from the parent timeLine.
+Suggested values include: 1] s (seconds); 2] ms (milliseconds); 3] m (minutes); 4] h (hours); 5] d (days)</a:documentation>
+        <ref name="data.enumerated"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="interval">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the numeric portion of a time interval</a:documentation>
+        <choice>
+          <data type="float">
+            <param name="minExclusive">0</param>
+          </data>
+          <value>unknown</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="since">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies the reference point for determining the time of the
+current when element, which is obtained by adding the interval to the
+time of the reference point.</a:documentation>
+        <ref name="data.pointer"/>
+      </attribute>
+    </optional>
+    <empty/>
+  </define>
+<!--3. macros-->
+</rng:grammar>

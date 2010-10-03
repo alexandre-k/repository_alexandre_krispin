@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;front&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;front&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;front&gt;</h1></div><div><span id="front"/><table border="1" class="wovenodd"><tr><td class="elementSpec">front</td><td colspan="2" class="wovenodd-col2">(front matter) contains any prefatory matter (headers,
+title page, prefaces, dedications, etc.)
+found  at the start of a document, before the main body.</td></tr><tr><td valign="top"><span class="label">Attributes: </span></td><td>  [<a class="classlink" href="ref-att.declaring.html">att.declaring</a> ] </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-att.declaring.html">att.declaring</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element front
+{
+   att.global.attributes,
+   att.declaring.attributes,
+   (
+      ( <a class="link_odd" href="ref-model.frontPart.html">model.frontPart</a> | <a class="link_odd" href="ref-model.pLike.front.html">model.pLike.front</a> | <a class="link_odd" href="ref-model.global.html">model.global</a> )*,
+      (
+         (
+            (
+               ( <a class="link_odd" href="ref-model.div1Like.html">model.div1Like</a> ),
+               ( <a class="link_odd" href="ref-model.frontPart.html">model.frontPart</a> | <a class="link_odd" href="ref-model.div1Like.html">model.div1Like</a> | <a class="link_odd" href="ref-model.global.html">model.global</a> )*
+            )
+          | (
+               ( <a class="link_odd" href="ref-model.divLike.html">model.divLike</a> ),
+               ( <a class="link_odd" href="ref-model.frontPart.html">model.frontPart</a> | <a class="link_odd" href="ref-model.divLike.html">model.divLike</a> | <a class="link_odd" href="ref-model.global.html">model.global</a> )*
+            )
+         )?
+      )
+   )
+}</pre></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;front&gt;</span><br/>  <span class="element">&lt;epigraph&gt;</span><br/>   <span class="element">&lt;quote&gt;</span>Nam Sibyllam quidem Cumis ego ipse oculis meis
+	  vidi in ampulla pendere, et cum illi pueri dicerent:
+	  <span class="element">&lt;q <span class="attribute">xml:lang</span>="grc"&gt;</span>Sibylla ti weleis<span class="element">&lt;/q&gt;</span>; respondebat<br/>   	  illa: <span class="element">&lt;q <span class="attribute">xml:lang</span>="grc"&gt;</span>apowanein welo.<span class="element">&lt;/q&gt;</span><br/>   <span class="element">&lt;/quote&gt;</span><br/>  <span class="element">&lt;/epigraph&gt;</span><br/>  <span class="element">&lt;div <span class="attribute">type</span>="dedication"&gt;</span><br/>   <span class="element">&lt;p&gt;</span>For Ezra Pound <span class="element">&lt;q <span class="attribute">xml:lang</span>="it"&gt;</span>il miglior fabbro.<span class="element">&lt;/q&gt;</span><br/>   <span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;/div&gt;</span><br/> <span class="element">&lt;/front&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;front&gt;</span><br/>  <span class="element">&lt;div <span class="attribute">type</span>="dedication"&gt;</span><br/>   <span class="element">&lt;p&gt;</span>To our three selves<span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;/div&gt;</span><br/>  <span class="element">&lt;div <span class="attribute">type</span>="preface"&gt;</span><br/>   <span class="element">&lt;head&gt;</span>Author's Note<span class="element">&lt;/head&gt;</span><br/>   <span class="element">&lt;p&gt;</span>All the characters in this book are purely imaginary, and if the
+author has used names that may suggest a reference to living persons
+she has done so inadvertently.
+ ...<span class="element">&lt;/p&gt;</span><br/>  <span class="element">&lt;/div&gt;</span><br/> <span class="element">&lt;/front&gt;</span></div></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="DS.html#DSTITL" title="Title Pages">5.5  Title Pages</a></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="DS.html" title="7">5  Default Text Structure</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">textstructure</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

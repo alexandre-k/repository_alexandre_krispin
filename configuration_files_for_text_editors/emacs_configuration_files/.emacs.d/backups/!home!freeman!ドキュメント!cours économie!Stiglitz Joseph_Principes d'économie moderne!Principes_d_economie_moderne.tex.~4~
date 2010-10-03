@@ -1,0 +1,1412 @@
+% Time-stamp: <2010-09-08 19:13:46 (freeman)>
+\documentclass[twoside,openright,titlepage,fleqn,numbers=noenddot,headinclude,11pt,a4paper,BCOR5mm,footinclude,cleardoublepage=empty,abstractoff]{scrreprt}
+% ********************************************************************
+% Development Stuff
+% ********************************************************************
+\listfiles
+% \usepackage[l2tabu, orthodox, abort]{nag} \usepackage[warning,
+% all]{onlyamsmath}
+% ********************************************************************
+% Re-usable information
+% ********************************************************************
+\newcommand{\myTitle}{Principes d'\'economie moderne\xspace}
+\newcommand{\myDegree}{Master of Jedi\xspace} \newcommand{\myName}{Da
+  Big Boss\xspace} \newcommand{\myProf}{God\xspace}
+% \newcommand{\myOtherProf}{Put name here\xspace}
+% \newcommand{\mySupervisor}{Put name here\xspace}
+\newcommand{\myFaculty}{Science Politique\xspace}
+\newcommand{\myDepartment}{Sciences humaines\xspace}
+\newcommand{\myUni}{\protect{Paris 8}\xspace}
+\newcommand{\myLocation}{Paname\xspace} \newcommand{\myTime}{Avril
+  2010\xspace}
+% \newcommand{\myVersion}{\xspace}
+\usepackage{classicthesis-ldpkg} % [backref]
+% ******************************************************* Options for
+% classicthesis.sty: tocaligned eulernumbers drafting linedheaders
+% listsseparated subfig nochapters beramono eulermath parts minionpro
+% pdfspacing listings dottedtoc minionprospacing manychapters
+\usepackage[T1]{fontenc} \usepackage[frenchb]{babel}
+\usepackage{lipsum}
+\usepackage[eulerchapternumbers,drafting,listings,listsseparated,%pdfspacing,%
+subfig,beramono,parts]{classicthesis}
+% ******************************************************* Some font
+% experiments *******************************************************
+% \usepackage[osf]{libertine} \usepackage{hfoldsty}
+% \usepackage[light,condensed,math]{iwona}
+% \renewcommand{\sfdefault}{iwona}
+% \usepackage{lmodern} % <-- no osf support :-(
+% \usepackage[urw-garamond]{mathdesign} %<-- no osf support :-(
+% ******************************************************* Fine-tuning
+% for the text area
+% *******************************************************
+\linespread{1.05} % a bit more for Palatino
+\areaset[5mm]{312pt}{761pt} % 686 (factor 2.2) + 33 head + 42 head \the\footskip
+\setlength{\marginparwidth}{7em}%
+\setlength{\marginparsep}{2em}%
+
+% ******************************************************* hack to use
+% citations in float environments will be fixed with caption package
+% version 3.2 *******************************************************
+\usepackage{makerobust} \makeatletter \MakeRobustCommand\caption@xref
+\makeatother
+% *******************************************************
+% \usepackage[section,below]{placeins} <--- not everybody wants this
+% \usepackage[all]{hypcap} <--- does not work with MiKTeX 2.6
+% ********************************************************************
+% Language/strings for backrefs (change here, thanks, Lorenzo)
+% *******************************************************
+% \renewcommand{\backrefnotcitedstring}{\relax}%(Not cited.)
+% \renewcommand{\backrefcitedsinglestring}[1]{(Citato a pagina~#1.)}
+% \renewcommand{\backrefcitedmultistring}[1]{(Citato alle pagine~#1.)}
+% \renewcommand{\backreftwosep}{ e~} \renewcommand{\backreflastsep}{
+%   e~}
+% ********************************************************************
+% Setup and Finetuning
+% *******************************************************
+\newlength{\abcd} % for ab..z string length calculation
+\newcommand{\myfloatalign}{\centering} % how all the floats will be aligned
+\setlength{\extrarowheight}{3pt} % increase table row height
+% ********************************************************************
+% Captions look and feel
+% *******************************************************
+\captionsetup{format=hang,font=small}
+% ********************************************************************
+% Listings setup
+% ********************************************************************
+\lstset{emph={trueIndex,root},emphstyle=\color{BlueViolet}}%\underbar} % for special keywords
+% ********************************************************************
+\lstset{language=[LaTeX]Tex,%C++,
+  keywordstyle=\color{RoyalBlue},%\bfseries,
+  basicstyle=\small\ttfamily,
+  % identifierstyle=\color{NavyBlue},
+  commentstyle=\color{Green}\ttfamily, stringstyle=\rmfamily,
+  numbers=none,%left,%
+  numberstyle=\scriptsize,%\tiny
+  stepnumber=5, numbersep=8pt, showstringspaces=false,
+  breaklines=true, frameround=ftff, frame=single,
+  belowcaptionskip=.75\baselineskip, numberbychapter=false
+  % frame=L
+}
+% ********************************************************************
+% Where to look for graphics
+% *******************************************************
+\graphicspath{{gfx/}{misc/}} % considered harmful according to l2tabu
+% ********************************************************************
+% Hyperreferences
+% *******************************************************
+\hypersetup{%
+  colorlinks=true, linktocpage=true, pdfstartpage=3,
+  pdfstartview=FitV,%
+  % uncomment the following line if you want to have black links
+  % (e.g., for printing)
+  % colorlinks=false, linktocpage=false, pdfborder={0 0 0},
+  % pdfstartpage=3, pdfstartview=FitV,%
+  breaklinks=true, pdfpagemode=UseNone, pageanchor=true,
+  pdfpagemode=UseOutlines,%
+  plainpages=false, bookmarksnumbered, bookmarksopen=true,
+  bookmarksopenlevel=1,%
+  hypertexnames=true,
+  pdfhighlight=/O,%hyperfootnotes=true,%nesting=true,%frenchlinks,%
+  urlcolor=webbrown, linkcolor=RoyalBlue,
+  citecolor=webgreen, %pagecolor=RoyalBlue,%
+  % urlcolor=Black, linkcolor=Black,
+  % citecolor=Black, %pagecolor=Black,%
+  pdftitle={\myTitle},%
+  pdfauthor={\textcopyright\ \myName, \myUni, \myFaculty},%
+  pdfsubject={},%
+  pdfkeywords={},%
+  pdfcreator={pdfLaTeX},%
+  pdfproducer={LaTeX with hyperref and classicthesis}%
+}
+
+\usepackage{enumitem} %\usepackage[square,numbers]{natbib}
+\usepackage{array} \usepackage{natbib}
+\usepackage{amsmath} %\usepackage{mfpic4ode}
+\usepackage{color} \usepackage{amsfonts} \usepackage{amssymb}
+\usepackage{url} \usepackage[utf8]{inputenc} \usepackage{graphicx}
+\usepackage{multirow} \usepackage{hyperref}
+% \usepackage[usenames,dvipsnames]{pstricks} \usepackage{epsfig}
+% \usepackage{pst-grad} % For gradients
+% \usepackage{pst-plot} % For axes
+\begin{document}
+\frenchspacing \raggedbottom
+% \selectlanguage{french} % american ngerman
+% \renewcommand*{\bibname}{new name} \setbibpreamble{}
+\pagenumbering{roman} \pagestyle{plain}
+% ******************************************************* Titlepage
+% *******************************************************
+\begin{titlepage}
+  % if you want the titlepage to be centered, uncomment and fine-tune
+  % the line below (KOMA classes environment)
+  \begin{addmargin}[-1cm]{-3cm}
+    \begin{center}
+      \large
+
+      \hfill
+
+      \vfill
+
+        \begingroup
+        \color{Maroon}\spacedallcaps{\myTitle} \\ \bigskip
+        \endgroup
+
+        \spacedlowsmallcaps{\myName}
+
+        \vfill
+
+        \includegraphics[width=6cm]{TFZsuperellipse_bw} \\ \medskip
+
+        \myDegree \\ \medskip
+        \myDepartment \\
+        \myFaculty \\
+        \myUni \\ \bigskip
+
+        \myTime
+
+        \vfill
+
+      \end{center}
+    \end{addmargin}
+  \end{titlepage}
+
+  % ******************************************************* Table of
+  % Contents *******************************************************
+  % \phantomsection
+  \refstepcounter{dummy}
+  \pdfbookmark[1]{\contentsname}{tableofcontents}
+
+
+
+  \setcounter{tocdepth}{2} % <-- 2 includes up to subsections in the ToC
+  \setcounter{secnumdepth}{3} % <-- 3 numbers up to subsubsections
+  \manualmark
+  \markboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}
+  \tableofcontents
+  \automark[section]{chapter}
+  \renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+  \renewcommand{\sectionmark}[1]{\markright{\thesection\enspace\spacedlowsmallcaps{#1}}}
+  % ******************************************************* List of
+  % Figures and of the Tables
+  % *******************************************************
+  \clearpage
+  % ********************************************************************
+  % Frontmatter
+  % *******************************************************
+  % \include{FrontBackmatter/DirtyTitlepage}
+  % \include{FrontBackmatter/Titlepage}
+  % \include{FrontBackmatter/Titleback}
+  % \cleardoublepage\include{FrontBackmatter/Dedication}
+  % \cleardoublepage\include{FrontBackmatter/Abstract}
+  % \cleardoublepage\include{FrontBackmatter/Publication}
+  % \cleardoublepage\include{FrontBackmatter/Acknowledgments}
+  \pagestyle{scrheadings}
+  % \cleardoublepage\include{FrontBackmatter/Contents}
+  % ********************************************************************
+  % Mainmatter *******************************************************
+  \pagenumbering{arabic}
+  % use \cleardoublepage here to avoid problems with pdfbookmark
+  \cleardoublepage
+
+  \part{Macro\'economie}
+  
+  \chapter{Les mesures du produit et du ch\^omage}
+
+  \section{Les m\'ethodes de mesure du produit et de la croissance}
+
+  \subsection{La mesure du produit int\'erieur brut}
+
+  Le calcul du PIB consiste à additionner la \emph{valeur monétaire}
+  de tous les \emph{biens finals} (biens qui ne sont pas utilisés pour
+  fabriquer d'autres biens), afin d'obtenir un seul chiffre résumant
+  la production de l'économie. Ce \textbf{produit intérieur brut}
+  consiste donc en la valeur monétaire totale des biens et services
+  produits par les habitants d'un pays au cours d'une période donnée.
+  \begin{center}
+    \fbox{
+      \begin{minipage}{10cm}
+        \paragraph{PRODUIT INT\'ERIEUR BRUT}
+        \textcolor{red}{Il correspond à la valeur monétaire du total
+          des biens et services produits pour la consommation finale à
+          l'intérieur des frontières d'un pays au cours d'une période
+          de temps (généralement un an)}
+      \end{minipage}
+    }
+  \end{center}
+  \paragraph{PIB nominal et PIB r\'eel}
+  Le PIB se mesure à partir de la valeur monétaire des biens et des
+  services produits, cependant l'utilisation de la monnaie comme
+  instrument de mesure de la productivité pose problème à partir du
+  moment où il y a inflation (ou déflation). Ainsi, pour pouvoir
+  effectuer des comparaison significatives entre des années
+  différentes, les économistes ajustent le PIB en fonction du niveau
+  général de prix. Le PIB avant ajustement est appelé \textbf{PIB
+    nominal}. Le terme \textbf{PIB réel} désigne les chiffres du PIB
+  corrigés de l'inflation, lesquels correspondent à des mesures plus
+  exactes de ce que l'économie produit réellement année après année.
+  D'autre part, on appelle \emph{année de base} l'année à partir de
+  laquelle on calcule la valeur du PIB réel.
+
+
+  Quand les économistes disent qu'il \og ajustent\fg\ le PIB nominal
+  des changement de prix afin d'obtenir une mesure du PIB réel, ils
+  veulent dire qu'ils \og déflatent\fg\ le PIB nominal à l'aide d'une
+  mesure du niveau moyen de prix appelée \emph{indice de prix}.
+  L'indice des prix pour le PIB est appelé le \textbf{déflateur du
+    PIB}. Comme nous l'avons déjà vu, le PIB nominal reflète à la fois
+  les changements dans les prix et dans les quantités, alors que le
+  PIB réel est une mesure des modifications dans les seules quantités.
+  Ainsi, le PIB réel est défini par l'équation :
+  \[
+  PIB~r\acute{e}el = \frac{PIB~nominal}{indice~des~prix}
+  \]
+  Si le PIB nominal a augmenté de 3\%~au cours de l'année précédente,
+  mais si l'inflation a aussi augmenté les prix de 3\%, alors le PIB
+  réel est inchangé.
+  \\
+  Cependant, cette façon de procéder dans le calcul du PIB réel pose
+  un problème lorsque les prix \emph{relatifs} changent fortement. Si
+  le prix des ordinateurs baisse rapidement quand la production des
+  ordinateurs augmente \textemdash\ comme cela a été le cas pendant
+  ces vingt dernières années \textemdash, alors la production
+  \emph{réelle} calculée à partir d'une année de \emph{référence}
+  antérieure, 1987 par exemple, risque de donner une image déformée de
+  la réalité. Les hausses importantes de la production d'ordinateurs
+  sont valorisées aux prix élevés qui existaient antérieurement. La
+  valeur totale de la production correspondante sera plus forte et
+  cela donnera l'impression d'une croissance très rapide du PIB. Si
+  l'on change d'année de référence \textemdash\ comme cela a lieu
+  périodiquement \textemdash, on aura l'effet inverse, c'est-à-dire
+  l'impression d'une baisse brutale de la croissance économique. Dans
+  la nouvelle année de base, les prix des ordinateurs sont plus bas,
+  de sorte que chaque ordinateur \og compte\fg\ moins dans le
+  PIB. Bien sûr, la croissance économique n'a pas réellement baissé ;
+  c'est uniquement notre étalon de mesure qui a faussé le résultat.
+
+
+  Face à ce problème, le Bureau of Economics Analysis (BEA)
+  \textemdash\ agence gouvernementale responsable de chiffres du PIB
+  \textemdash\ a changé sa méthodologie en janvier 1996. Il fournit
+  maintenant une mesure appelée le \emph{PIB réel avec chaînage des
+    pondérations}.
+
+  \subsection{Les m\'ethodes de mesure du PIB : la valeur de la
+    production}
+
+  \subsubsection{L'optique de la production des biens finals}
+
+  À première vue, la mesure du PIB est une tâche simple. Elle implique
+  de connaître les valeurs monétaires de tous les biens et service
+  vendus dans un pays, puis de les additionner. Malheureusement, les
+  choses se compliquent dans la pratique quand il faut d'abord faire
+  la distinction entre les biens finals et les biens intermédiaires.
+  Les biens finals \textemdash\ comme les voiture, les livres, le pain
+  et les chaussures \textemdash\ sont vendus aux consommateur. Les
+  biens intermédiaires servent à produire d'autres biens, comme le
+  charbon quand il est utilisé pour fabriquer de l'acier, ou les
+  pommes pour faire de la compote. Un produit tel que la pomme peut
+  être soit un bien final, oit un bien intermédiaire, selon la manière
+  dont on l'utilise. Le calcul du PIB dans l'optique de la production
+  des biens finals consiste à additionner la valeur totale des biens
+  et services produits, classés selon leurs utilisateurs finals.
+  \\
+  L'un des moyens de calculer la valeur des bien finals de l'économie
+  est de tenir compte de leur destination. On dénombre quatre
+  possibilités :
+  \begin{enumerate}
+  \item certains biens finals sont consommés par les individus
+    \textemdash c'est ce que l'on nomme la \emph{consommation}
+    globale.
+  \item d'autre biens sont utilisés par les entreprises pour
+    construire des immeubles et pour fabriquer des machines
+    \textemdash c'est ce que l'on appelle l'\emph{investissement}
+    global.
+  \item certains biens sont aussi acheté par l'État et sont appelés
+    \emph{acquisitions publiques}.
+  \item certain biens, appelés \emph{exportations}, partent à
+    l'étranger.
+  \end{enumerate}
+  Mais la consommation, l'investissement ou les acquisitions publiques
+  ne correspondent pas tous à des biens et service produits dans le
+  pays. Par conséquent, nous devons franchir une dernière étape pour
+  obtenir le PIB selon cette méthode. Il faut soustraire le montant
+  importé :
+  \[
+  PIB=C+I+G+X-M
+  \]
+  où C = consommation, I = investissement, G = acquisitions publiques,
+  X = exportations, et M = importations. La différence entre les
+  exportations et les importations correspond aux \emph{exportations
+    nettes}.
+  \\
+  On peut toutefois se demander ce qu'il advient des biens porduits
+  pendant une année donnée mais qui ne sont pas vendus à la fin de
+  cette même année. La valeur de ces biens ont été produits au cours
+  de l'année considérée. Par exemple dans le cas d'ordinateurs que
+  \emph{Dell Computer} a produit mais qu'il n'a pas vendu avant la fin
+  de l'année, tout s'est passé comme si \emph{Dell} avait acheté
+  l'ordinateur portable pour son propre usage. L'accroissement des
+  stocks de l'entreprise qui en est résulté est comptabilisé comme une
+  vente à une entreprise; à ce titre, il est considéré comme un
+  investissement.
+
+  \fbox{
+    \begin{minipage}{10cm}
+      \paragraph{EN BREF}
+      \textcolor{red}{Le PIB est égal à la consommation plus
+        l'investissement plus les acquisitions publiques plus les
+        exportations moins les importations.}
+    \end{minipage}
+  }
+  \subsubsection{L'optique de la valeur ajout\'ee}
+
+  La 2\ieme~façon de calculer la valeur du PIB consiste à étudier
+  directement les biens intermédiaires. En effet, le PIB peut être
+  mesuré en calculant la \textbf{valeur ajoutée} à chaque stade de la
+  production :
+  \[PIB = \begin{pmatrix}
+    somme~des~valeurs~ajout\acute{e}es\\de~toutes~les~entreprises\end{pmatrix}\]
+  Où la valeur ajoutée de l'entreprise se calcule ainsi :\\
+  \[\begin{pmatrix}valeur\\ajout\acute{e}e\end{pmatrix}
+  = \begin{pmatrix}recettes\\de~l'entreprise\end{pmatrix}
+  - \begin{pmatrix}co\hat{u}t~des~biens\\interm\acute{e}diaires\end{pmatrix}\]
+
+  \subsubsection{L'optique du revenu}
+
+  La 3\ieme~méthode employée pour calculer le PIB consiste à mesurer
+  le revenu issu de la vente des produits plutôt que la valeur des
+  produits eux-mêmes. On la nomme \textbf{optique du revenu}. Les
+  entreprises emploient leurs recettes de quatre façons différentes :
+  elles rémunèrent leur main-d'œuvre, elles paient des intérêts sur
+  les fonds qu'elles ont empruntés, elles achètent des biens
+  intermédiaires, elles paient de impôts indirects à l'État (sur leurs
+  ventes par exemple). Le solde correspond au revenu de
+  l'entreprise. Une partie de ce revenu doit être mise de côté pour
+  remplacer l'équipement usagé au cours du processus de production
+  (phénomène d'amortissement \textemdash ou de dépréciation
+  \textemdash\ du capital, sur lequel nous reviendrons
+  ultérieurement). Ce qui reste représente le profit de l'entreprise :
+  \[
+  revenu
+  = \begin{pmatrix}salaires\\+\\paiement~des~int\acute{e}r\hat{e}ts\\+\\co\hat{u}t~de~l'achat~des~biens~interm\acute{e}diaires\\+\\imp\hat{o}ts~indirects\\+\\amortissement\\+\\profits\end{pmatrix}
+  \]
+  Mais nous savons déjà que la valeur ajoutée de l'entreprise est
+  égale à son revenu moins le coût des biens intermédiaires. Par
+  conséquent,
+  \[
+  valeur~ajout\acute{e}e
+  = \begin{pmatrix}salaires\\+\\paiement~des~int\acute{e}r\hat{e}ts\\+\\imp\hat{o}ts~indirects\\+\\amortissement\\+\\profits\end{pmatrix}
+  \]
+  Et la valeur du PIB est égale à la somme de la valeur ajoutée de
+  toutes les entreprises, celui-ci doit être aussi égal à la somme de
+  la valeur de l'ensemble des salaires versés, des intérêts payés, des
+  impôts, de l'amortissement et des profits de toutes les entreprises
+  :
+  \[
+  PIB
+  = \begin{pmatrix}salaires\\+\\paiement~des~int\acute{e}r\hat{e}ts\\+\\imp\hat{o}ts~indirects\\+\\amortissement\\+\\profits\end{pmatrix}
+  \]
+  La rémunération perçue par les individus provient de leur salaire,
+  de leur capital et des profits réalisés par les entreprises qu'ils
+  possèdent (ou des parts qu'ils détiennent dans ces entreprises).
+  Ainsi, la partie droite de cette identité est égale aux revenus de
+  l'ensemble des individus plus les recettes de l'État provenant des
+  impôts indirects. Ce résultat est extrêmement important. Les
+  économistes y faisant souvent appel, il ne faut pas hésiter à
+  l'apprendre par cœur : \emph{la production totale est égale au
+    revenu total}.
+
+  \subsubsection{Diff\'erences entre le revenu individuel et le revenu
+    national :}
+
+  \begin{enumerate}
+  \item Il y a de fortes chances pour que les individus fassent entrer
+    dans ce qu'ils considèrent comme leur revenu tous les gains en
+    capital qu'ils réalisent. Les gains (ou plus-values) en capital
+    sont des accroissements de la valeur des actifs. Par conséquent,
+    ils ne correspondent à aucune production. Les comptes nationaux
+    utilisés pour calculer le PIB, qui concernent en priorité la
+    production des biens et services, n'incluent pas les gains en
+    capital.
+  \item Les profits non distribués par les entreprises sont inclus
+    dans le revenu national, mais les individus ne sont pas toujours
+    conscients de ce que ces profits non distribués font partie du
+    revenu. Là encore, cela tient à ce que les comptes du PIB mesurent
+    la valeur de la production. Les bénéfices font partie de cette
+    valeur, qu'ils soient distribués aux actionnaires ou conservés par
+    les entreprises.
+  \end{enumerate}
+
+  \subsection{Le PIB potentiel}
+
+  Le PIB réel mesure la quantité réellement produite par l'économie.
+  Mais dans certains cas les salariés peuvent ne pas être employés à
+  temps lein et certains équipements ou bâtiments être
+  sous-utilisés. À d'autres moments, l'économie peut produire plus que
+  ce qui est normalement soutenable. Pour augmenter temporairement la
+  production, les entreprises peuvent créer de postes supplémentaires,
+  accroître le temps de travail et retarder les opérations de
+  maintenance. Le \textbf{PIB potentiel} est un autre indicateur
+  macroéconomique important. Il mesure le montant que pourrait
+  produire l'économie si le travail était pleinement employé, à des
+  niveaux supportables d'heures supplémentaires, et si les machines et
+  les bâtiments étaient utilisé dans de conditions normales.
+
+  La production ne croît pas de façon régulière, il y a des
+  fluctuations autour d'une tendance générale à la croissance (d'un
+  \og trend\fg\ croissant). Un \textbf{boom} correspond à une forte
+  fluctuation à la hausse. On appelle \textbf{récession} une
+  fluctuation à la baisse. Lorsque cette récession est très profonde,
+  on dit qu'il s'agit d'une \textbf{dépression}. Il n'y a aucune
+  définition particulière d'un boom. En revanche, on admet en général
+  qu'il y a récession quand le PIB réel baisse pendant deux trimestres
+  consécutifs.
+
+  La faible utilisation des capacités, le sous-emploi des travailleurs
+  notamment, représente un gaspillage de ressources économiques rares.
+  En période de récession, l'économie fonctionne très en dessous de
+  ses capacités. Le chômage est élevé et de nombreuses machines
+  restent inemployées.
+
+  La différence entre le niveau effectif du PIB d'une économie et sa
+  valeur potentielle constitue une mesure importante des fluctuations.
+  Pour cette raison, les économistes lui ont donné un nom particulier.
+  La différence en pourcentage entre le PIB effectif et le PIB
+  potentiel s'appelle \textbf{l'écart de production}. Quand l'économie
+  est en récession, le PIB effectif est inférieur au PIB potentiel et
+  l'écart de production et l'écart de production est négatif. Si le
+  PIB effectif est supérieur au PIB potentiel, l'écart de production
+  est positif.
+
+  \fbox{
+    \begin{minipage}{10cm}
+      \paragraph{EN BREF : LES DIFF\'ERENTES FA\c{C}ONS DE CALCULER LA
+        PRODUCTION NATIONALE}
+
+      \begin{itemize}
+      \item Mesure de la valeur du produit :
+        \begin{itemize}
+        \item Consommation + Investissement + Acquisitions publiques +
+          Exportations nettes
+        \item Somme de la valeur ajoutée à chaque stade de production
+        \end{itemize}
+      \item Mesure du revenu :
+        \begin{itemize}
+        \item Rémunération des salariés + Profits, Rentes, Intérêt +
+          Impôts indirects + Amortissement
+        \end{itemize}
+      \item Production = Revenu
+      \end{itemize}
+
+\end{minipage}
+}
+\subsection{La mesure du niveau de vie}
+
+Le PIB constitue la meilleure estimation disponible du niveau de la
+production résultant de l'activité de marchés, une activité qui est
+par ailleurs étroitement liée au niveau de l'emploi, autre variable
+macroéconomique centrale.Toujours est-il que le PIB n'est qu'une
+mesure partielle du bien-être total la société. On utilise
+parallèlement d'autres indicateurs sociaux, tels que le taux
+d'alphabétisation, le taux de mortalité infantile et l'espérance de
+vie.
+
+\section{Ch\^omage}
+
+Le chômage correspond à une sous-utilisation des ressource. Les gens
+qui veulent et peuvent travailler ne sont pas employés de façon
+productive. Pour les personnes sans emploi et leur famille, le chômage
+représente une épreuve financière et un changement dans leur mode de
+vie. Le chômage n'a pas seulement un coût financier pour les
+individus, il constitue également une atteinte à leur dignité
+personnelle, et leur famille n'aura parfois d'autre solution que de
+choisir entre la pauvreté et la charité publique ou privée. Bien des
+familles ne résistent pas à cette épreuve.
+
+Le chômage pose des problèmes différents à chaque groupe salariés. Les
+jeunes ont besoin d'un emploi pour développer leurs compétences
+professionnelles, qu'il s'agisse d'aptitudes techniques ou de qualités
+fondamentales comme la ponctualité et le sens des responsabilités. En
+ce qui les concerne, le chômage de longue durée n'est pas seulement un
+gaspillage de ressources humaines immédiat, il correspond encore à une
+baisse de la productivité future de la population active.
+
+Pour les personnes plus âgées, la perte d'un emploi pose des problèmes
+différents. Aux États-Unis, malgré les législations fédérales et
+celles des États interdisant la discrimination fondée sur l'âge, les
+employeurs hésitent souvent à embaucher un salarié trop âgé. Il
+craignent que celui-ci soit plus souvent malade ou ait plus de chances
+de devenir invalide qu'une personne plus jeune. Ils peuvent aussi
+douter de sa capacité d'adaptation. Des individus âgés qui sont au
+chômage depuis longtemps risquent enfin d'avoir perdu certaines de
+leurs compétences.
+
+Le chômage impose des coûts énormes à la collectivité. Si certains
+habitants d'une ville perdent leur emploi, tous les autres habitants
+risquent également d'en pâtir car il y aura moins d'argent en
+circulation pour consommer des biens comme les voitures, les
+logements, l'essence ou les produits alimentaires. Dans la mesure où
+un accroissement du chômage implique une diminution du nombre des
+personnes susceptibles de payer des impôts locaux, cela risque d'avoir
+des répercussions sur la qualité des écoles, de bibliothèques, des
+parcs et de la sécurité publique.
+
+Le chômage peut également renforcer les divisions communautaires ou
+raciales au sein de la société. Aux États-Unis, le taux de chômage des
+noirs est généralement plus du double de celui des blancs. À la fin de
+l'année 2002, le taux de chômage des Afro-Américains a atteint un
+sommet à 11.4\%, tandis que celui des Américains blancs n'était que de
+5.2\%.
+
+\subsection{Statistiques du ch\^omage}
+
+Aux États-Unis, les chiffres du chômage sont collectés chaque mois par
+le Department of Labor, à partir d'un échantillon représentatif de
+ménages. Les enquêteurs demandent à chaque ménage lesquels de ses
+membres ont un emploi et, dans le cas contraire, lesquel sont
+actuellement à la recherche d'un emploi. La \emph{population active}
+correspond au nombre total de personnes employées ou cherchant
+activement un emploi. Le \textbf{taux de chômage} correspond au
+pourcentage de celles qui, dans la population active totale, sont à la
+recherche d'un emploi.
+\begin{eqnarray*}
+  \begin{pmatrix}taux~de\\ch\hat{o}mage\end{pmatrix} &=& \frac{nombre~de~ch\hat{o}meurs}{population~active}\\
+  &=&\frac{nombre~de~ch\hat{o}meurs}{\begin{pmatrix}nombre~de~travailleurs\\employ\acute{e}\end{pmatrix}+\begin{pmatrix}nombre~de~ch\hat{o}meurs\\cherchant~activement\\un~emploi\end{pmatrix}}
+\end{eqnarray*}
+L'un des problèmes de mesure que pose le chômage est que, notamment en
+période de récession prolongée, de nombreux individus sont
+\emph{découragés} et ont abandonné toute recherche active d'un emploi.
+De ce fait, ils ne sont plus répertoriés comme chômeurs dans les
+statistiques, ce qui entraîne une sous-évaluation du nombre des
+personnes qui accepteraient de travailler si un emploi leur était
+offert. On appelle \textbf{taux d'activité de la population en âge de
+  travailler} le pourcentage de cette population qui est soit
+employée, soit à la recherche d'un emploi. En raison du phénomène de
+découragement des travailleurs, ce taux tend à décliner pendant les
+périodes de récession et à augmenter dans les situations de boom.
+
+\subsection{Les formes de ch\^omage}
+
+Même quand le produit réel est égal au produit potentiel, le chômage
+n'est pas nul. Pour comprendre pourquoi cela a été le cas en moyenne
+aux États-Unis au cours des quarante dernières années et pourquoi ce
+taux fluctue, les économistes font une distinction enre les quatre
+grandes catégories de chômages : le chômage saisonnier, le chômage
+frictionnel, le chômage structurel et le chômage cyclique. Peu avant
+Noël, la demande de vendeurs dans les grands magasins et les centres
+commerciaux augmente très fortement dans tout le pays. L'offre de
+travail s'accroît également pendant l'été, car les étudiants et les
+lycéens entrent de façon temporaire sur le marché du travail. On
+appelle \textbf{chômage saisonnier} le chômage qui varie suivant les
+saisons. Comme ce fluctuations de l'emploi et du chômage correspondent
+à des phénomènes saisonniers normaux, le taux de chômage que publie la
+presse est corrigé du volume moyen de chômage pendant la saison
+considérée. Ces ajustements sont appelés \emph{ajustements des
+  variations saisonnières}.
+
+Si les employés du bâtiment, de l'agriculture et du tourisme sont
+régulièrement confrontés à des problèmes de chômage saisonnier,
+d'autres travailleurs deviennent chômeurs du fait d'un processus
+normal de transition d'un emploi à un autre. C'est ce que l'on nomme
+le \textbf{chômage frictionnel}. Dans une économie dynamique comme
+l'économie américaine, où certains secteurs sont en croissance et
+d'autres en déclin, il y aura toujours des mouvements d'un emploi à
+l'autre, et donc du chômage frictionnel.
+
+La plupart des périodes de chômage sont de courte durée. Aux
+États-Unis, les chômeurs sont en moyenne sans emploi pendant trois
+mois seulement. Cependant, près de 10\%~des chômeurs ont été sans
+travail pendant plus de six mois. Ce type de chômage de long terme,
+qui résulte souvent de facteurs liés aux structures de l'économie, est
+appelé chômage structurel. Un chômage structurel important coexiste
+souvent avec des emploi vacants, parce que les chômeurs ne possèdent
+pas les qualifications recquises pour les nouveaux emplois créés. Il
+peut par exemple y avoir simultanément des emplois vacants de
+programmeurs informatique et du chômage dans le secteur du bâtiment.
+De même, de la main-d'œuvre peut manquer dans les zones en forte
+croisance et être surabondante dans les zones en déclin.
+
+Le chômage saisonnier, frictionnel et structurel survient même lorsque
+l'économie se situe à son niveau de production potentielle. La somme
+de ces trois types de chômage correspond à ce que l'on appelle le taux
+de chômage structurel.
+
+Enfin, le chômage qui augmente en période de ralentissement économique
+et baisse en période de prospérité est appelé \emph{chômage cyclique}.
+Les responsables de la politique économique sont particulièrement
+attachés à réduire la fréquence et l'ampleur de cette forme de chômage
+(associée aux fluctuations économiques lorsque l'économie descend en
+dessous de son niveau potentiel) en limitant la fréquence et l'ampleur
+des récessions qui en sont la cause. Le gouvernement cherche également
+à restreindre l'impact du chômage cyclique en accordant des indemnités
+de chômage à ceux qui sont temporairement privés d'emploi.
+
+\subsection{\'Ecarts de production et taux de ch\^omage naturel}
+
+Nous avons défini précédemment l'écart de production comme la
+différence entre le PIB et le PIB potentiel exprimée en pourcentage du
+PIB potentiel. Quand l'écart de production est nul, le PIB réel est
+égal au PIB potentiel et l'économie est en \emph{plein emploi}. Être
+au \emph{plein emploi} ne signifie pas que le taux de chômage et nul :
+il y aura toujours du chômage saisonnier, frictionnel ou structurel.
+En revanche, il n'y a pas de chômage cyclique. On appelle taux de
+chômage naturel le taux de chômage qui prévaut quand le chômage
+cyclique est nul. Quand l'écart de production est positif, le taux de
+chômage effectif est inférieur au taux de chômage naturel. Quand il
+est négatif, le taux de chômage effectif est supérieur au taux de
+chômage naturel.
+
+Okun a montré qu'il existe une relation entre les fluctuations du taux
+de chômage et celles du produit de l'économie. Plus le taux de chômage
+diminue, plus l'écart de production est grand. Ainsi, quand une
+économie sort d'une récession, la production augmente d'un pourcentage
+supérieur à celui de l'emploi. En sens inverse, quand une économie
+entre en récession, la production baisse d'un pourcentage supérieur à
+celui de l'emploi. Ce résultat est connu sous le nom de loi d'Okun, et
+se calcule de la manière suivante :
+\[
+\frac{\Delta Y}{Y} = k - c\Delta U
+\]
+Où $\Delta Y$~is potential output or GDP at full-employment, Y is
+actual output, k is the average annual growth rate of full-employment
+output, c is the factor relating changes in unemployment to changes in
+output, $\Delta U$~is the change in actual unemployment from one year
+to the next.
+
+Du point de vue de l'économie, la perte due à une augmentation du
+chômage durant une récession correspond au produit qui aurait pu être
+obtenu si tous les salariés étaient restés au travail. Cette perte de
+produit représente le \emph{coût d'opportunité} pour les Américains
+d'un chômage plus important et il est possible de calculer
+grossièrement ce coût en ayant recours à la loi d'Okun.
+
+\section{Flux et stocks}
+
+Le PIB mesure la production \emph{annuelle}. Ce type de mesure est
+appelé un \textbf{flux}. Quand on lit dans la presse que \og les
+dernières statistiques trimestrielles du PIB montrent que le PIB est
+de 10 000 milliards de dollars en base annuelle\fg, cela ne veut pas
+dire que 10 000 milliards de dollars de biens et services ont été
+produits pendant le trimestre. Cela signifie plutôt que 2 500
+milliards de dollars ont été produits au cours de ce trimestre et que,
+si ce taux de production se maintenait pendant une année entière, la
+valeur totale des biens et services produits serait de 10 000
+milliards de dollars.
+
+Les statistiques de flux sont à comparer avec le statistiques de
+\textbf{stock}, lesquelles fournissent des mesures à un moment précis.
+Le taux de chômage, c'est-à-dire le nombre de personnes employées un
+mois donné en pourcentage de la population active de ce mois, est un
+stock. Le stock de capital \textemdash la valeur totale de tous les
+bâtiments et machines qui constituent le potentiel productif de
+l'économie \textemdash\ fait également partie des variables de stock
+les plus importantes d'une économie. Le montant de monnaie que vous
+détenez sur votre compte en banque est un autre exemple de stock.
+
+\chapter{Co\^ut de la vie et inflation}
+
+\section{Les co\^uts de l'inflation}
+
+Il ne suffit pas que le prix d'un seul bien augmente pour qu'il y ait
+inflation. Il faut que les prix de \emph{la plupart} des biens
+augmentent. Le \textbf{taux d'inflation} correspond au taux
+d'accroissement du \emph{niveau général} des prix. Quand l'inflation
+est positive, c'est-à-dire quand le niveau moyen des prix augmente,
+l'unité monétaire du ou des pays concernés (dollar, euro, etc.) permet
+d'acheter une quantité de biens et services de plus en plus faible au
+cours du temps. En d'autres termes, il faut de plus en plus de dollars
+(ou d'euros) pour acheter le même panier de biens et services.
+
+Les salariés redouent que leur salaire ne suive pas la hausse des prix
+et donc que leur niveau de vie diminue. Les investisseurs craignent
+que les dollars qu'ils recevront dans le futur valent moins que les
+dollars qu'ils ont investis aujourd'hui, ce qui risque de les empêcher
+de profiter d'une retraite confortable.
+
+Lorsque l'inflation est anticipée, bon nombre de ses coûts économiques
+disparaissent. Les salariés qui savent que les prix augmenteront de
+5\%~cette année, par exemple, pourront négocier des salaires dont la
+hausse sera suffisamment rapide pour compenser l'inflation. Les
+prêteurs savent que les dollars qui leur seront remboursés vaudront
+moins que les dollars qu'ils ont prêtés, et ils en tiennent compte au
+moment de fixer un taux d'intérêt ou de contracter un prêt.
+
+Même lorsque l'inflation n'est pas parfaitement anticipée, les
+salariés et les investisseurs peuvent se prémunir contre ses effets en
+indexant les salaires et les rendements sur l'inflation.
+
+\subsection{Qui est victime de l'inflation ?}
+
+Même si l'indexation atténue les effets de l'inflation, elle est loin
+de présenter une assurance contre tous ses désagréments. Qui est
+aujourd'hui victime de l'inflation ?
+\begin{description}
+\item[Les pr\^eteurs] Puisque la plupart des crédits ne sont pas
+  totalement indexés, toute hausse de l'inflation implique un
+  remboursement inférieur au montant prêté. Beaucoup de gens placent
+  une partie importante de l'épargne qu'ils constituent en vue de leur
+  retraite sous forme d'obligations ou d'autres valeurs à revenu fixe.
+  [...] Si les variations d'inflation sont anticipées, les taux
+  d'intérêt peuvent totalement s'ajuster et entièrement dédommager les
+  prêteurs.
+\item[Les contribuables] Le système fiscal américain n'est que
+  partiellement indexé et il arrive souvent que les investisseurs
+  soient fortement affectés par l'inflation au travers du système
+  fiscal. Le rendement des investissements est taxé en totalité, y
+  compris la partie qui permet seulement de compenser la hausse des
+  prix. Par conséquent, les rendements réels après impôt sont souvent
+  négatifs.
+\item[Les d\'etenteurs de monnaie] L'inflation a également pour effet
+  de rendre coûteuse la détention de monnaie car l'argent liquide perd
+  de sa valeur. Comme la monnaie a pour fonction de faciliter tout un
+  ensembel de transactions, l'inflation diminue l'efficacité de
+  l'économie car elle décourage la détention de monnaie. Dans la
+  mesure où l'inflation fait perdre de la valeur à la monnaie, on peut
+  dire qu'elle s'apparente à un impôt sur les encaisses monétaires.
+  Les économistes appellent cet effet de distorsion la \emph{taxe
+    d'inflation}.
+\end{description}
+
+\subsection{Les co\^uts de l'\'economie}
+
+L'inflation est la source de deux types de co\^uts pour l'économie
+dans son ensemble. Le premier concerne les prix relatifs. Comme les
+hausses des prix ne sont jamais parfaitement coordonées, les
+accroissements du taux d'inflation entraînent une plus grande
+variabilité des prix relatifs. [...] Lorsque l'inflation est très
+élevée, les ménages ont tendance à allouer des ressources
+considérables et beaucoup de temps pour éviter les coûts de
+l'inflation et pour tirer profit des écarts entre les prix affichés
+par les différents points de vente. Plutôt que de détenir de l'argent
+dont la valeur s'érode rapidement, les gens se précipitent pour le
+déposer sur des comptes bancaires susceptibles de leur rapporte des
+intérêts.
+
+Le deuxième coût provoqué par l'inflation concerne l'économie dans son
+ensemble. Il provoque du risque et de l'incertitude qu'elle suscite.
+Si l'indexation était parfaite, l'incertitude concernant le taux
+d'inflation serait négligeable. Mais comme ce n'est pas le cas,
+l'incertitude qui en résulte rend toute prévision plus difficile. Les
+gens qui épargent pour leur retraite ne pourront pas anticiper le
+montant qu'ils doivent mettre de côté. Les entreprises qui emprutent
+de l'argent ne pourront pas anticiper le prix qu'il convient de faire
+payer en échange des biens qu'elle produisent. Les entreprises qui
+empruntent de l'argent ne pourront pas anticiper le prix qu'il
+convient de faire payer en échange des biens qu'elles produisent.
+
+\section{Les co\^uts de la d\'eflation}
+
+La plupart des coûts de la déflation sont du même ordre que ceux de
+l'inflation. Par exemple, on peut rencontrer des problèmes liés à la
+variabilité des prix relatifs et à l'incertitude accrue que provoque
+la baisse de la moyenne des prix. De plus, la déflation est coûteuse
+pour les emprunteurs \textemdash\ tout comme l'inflation l'est pour
+les prêteurs. Quand les prix baissent, les dollars qu'un emprunteur
+doit rembourser valent plus que les dollars prêtés.
+
+Les périodes de déflation ont coïncidé avec des périodes de crises
+financières et bancaires. Si les entreprises qui ont contracté des
+emprunts sont incapables de rembourser du fait de la baisse des prix,
+elles peuvent être mises en faillite. Dans ces conditions, les banques
+qui ont prêté de l'argent ne seront pas remboursées. Elles risquent
+donc de se retrouver à leur tour en faillite.
+
+\fbox{
+  \begin{minipage}{10cm}
+    \paragraph{EN BREF : LES CO\^UTS R\'EELSDE L'INFLATION}
+    \begin{itemize}
+    \item Variabilité des prix relatifs
+    \item Ressources utilisées pour atténuer les coûts de l'inflation
+      et tirer parti des différences de prix
+    \item Incertitude accrue
+    \end{itemize}
+  \end{minipage}
+}
+
+Voir à ce propos \emph{Les Conséquences économiques de la paix}, de
+John Maynard \textsc{Keynes}.
+
+À noter également que durant les périodes d'hyperinflation, il y a une
+redistribution massive de la richesse. Si un individu est suffisamment
+intelligent ou chanceux pour détenir des actifs sous forme de terres
+ou de fonds étrangers, alors l'hyperinflation aura très peu
+d'incidence sur sa richesse réelle. Ceux qui n'ont ni la possiblité ni
+la chance d'acquérir ou de détenir ce type d'actifs \og immunisés\fg\
+contre l'inflation verront leur richesse baisser.
+
+\section{Mesurer l'inflation}
+
+Si les prix de tous les biens ont augmenté dans la même proportion,
+par exemple de 5\%~en un an, l'inflation sera facile à mesurer : le
+taux d'inflation annuel sera de 5\%. Toute la difficulté vient de ce
+que les prix de biens différents augmentent à des taux différents. Il
+peut même arriver que certains prix baissent. Pour déterminer les
+variations du niveau général des prix, les économistes calculent un
+accroissement \emph{moyen} en pourcentage. Toutefois, puisque certains
+biens pèsent beaucoup plus que d'autres dans le budget du consommateur
+type, il faut tenir compte de leurs parts relatives dans ce budget.
+Une variation du prix des loyers, par exemple, est beaucoup plus
+importante qu'une variation du prix des stylos. Si le prix des stylos
+baisse de 5\%~mais si le prix du logement augmente de 5\%~la mesure
+globale du niveau des prix doit indiquer un accroissement.
+
+Les économistes ont un moyen très simple de tenir compte de
+l'importance relative des différents biens. Ils se demandent combien
+les consommateurs devront payer pour acquérir le même panier de biens
+que l'année précédente. S'il faut 22 000 dollars en 2005 pour acheter
+ce qui coûtait aux consommateurs seulement 20 000 dollars en 2004, on
+dit dans ce cas que les prix ont augmenté, \emph{en moyenne} de 10\%.
+Ces résultats sont fréquemment exprimés sous forme d'un indice des
+prix, lequel, pour faciliter les comparaisons, mesure le niveau des
+prix pour chaque année par rapport à une année de base commune.
+
+L'indice des prix pour l'année de base est égal à 100 par définition.
+On calcule alors l'indice des prix pour une année donnée en divisant
+le niveau des prix pour cette année par le niveau des prix de l'année
+de base et l'on multiplie par 100.
+
+Il existe plusieurs indices de prix, chacun fondé sur un panier de
+biens différents. Pour savoir comment varient les prix qui ont de
+l'importance pour les ménages américains, l'État choisit un panier de
+biens représentatif de la façon dont le ménage moyen dépense son
+revenu, et il suit l'évolution des prix de ces biens. L'indice ainsi
+obtenu est appelé \textbf{indice des prix à la consommation (des
+  ménages)} (\emph{CPI \textemdash Consumer Price Index}). Aux
+État-Unis, pour déterminer le panier adéquat, le \emph{Bureau of Labor
+  Statistics} du \emph{Department of Labor} effectue une enquête sur
+les dépenses des consommateurs. Voir à ce propos le site suivant :
+\url{www.bls.gov/cpi/cpifaq.htm}.
+
+\chapter{Le mod\`ele de plein emploi}
+
+Les ménages fournissent de la main-d'\oe uvre aux entreprises qui
+utilisent celle-ci pour produire des biens. En échange, les
+entreprises leur versent un salaire. Les ménages utilisent leur revenu
+pour acheter les biens et services que les entreprises produisent. Les
+ménages épargnent également et cette épargne finance les
+investissements des entreprises, notamment les bâtiments et les
+équipements dont elles ont besoin pour produire. En échange de
+l'utilisation de leurs fonds, les ménages perçoivent des intérêts et
+des dividendes de la part des entreprises.
+
+Deux enseignements fondamentaux ressortent du modèle concurrentiel de
+base. Le premier est que tous les marchés sont liés entre eux. Ce qui
+se produit sur un marché a un impact sur les autres. (...) Le second
+enseignement est que les salaires, les taux d'intérêt et les prix
+s'ajustent pour égaliser l'offre et la demande. L'une des hypothèses
+fondamentales de cette partie de l'ouvrage sera que les salaires, les
+taux d'intérêt et les prix s'ajustent de telle sorte qu'en pratique,
+on peut considérer que tous les marchés sont à l'équilibre. En
+d'autres termes, l'offre est égale à la demande sur tous les marchés.
+
+L'hypothèse que les prix, les salaires et les taux d'intérêt
+s'ajustent afin d'équilibrer l'offre et la demande dans l'ensemble de
+l'économie est un instrument puissant, qui permet de bien comprendre
+certaines questions macroéconomiques fondamentales.
+
+\section{Le march\'e du travail}
+
+Le march\'e du travail est au plein emploi quand la demande de travail
+est égale à l'offre. Tout travailleur qui souhaite obtenir un emploi
+au salaire courant du marché, s'il possède les compétences requises,
+pourra en trouver un. Toute entreprise qui souhaite embaucher une
+personne au taux de salaire du marché parviendra à trouver un employé
+ayant la qualification qu'elle souhaite. Ce phénomène est dû à
+l'ajustement des salaires. Bien sûr, même quand les économistes
+estiment qu'il y a plein emploi de la main-d'\oe uvre \textemdash\ que
+la demande de travail est égale à l'offre \textemdash, il subsiste une
+faible partie de la population active qui est au chômage [voir le
+chômage frictionnel, structurel et saisonnier]. [...] Ainsi, même au
+plein emploi, le taux de chômage mesuré ne sera jamais nul.
+
+Pour comprendre comment l'économie atteint le plein emploi, la
+relation entre les salaires nominaux (\emph{w}) et le niveau des prix
+(\emph{P}) est très importante. Les travailleurs gagnent des salaires
+et les utilisent pour acheter des biens et des services. Ce qui compte
+pour eux, c'est le montant de biens et de services que leur salaire
+leur permet d'acquérir. Si le salaire d'une personne passe de 6 à 12
+dollars par heure mais si, parallèlement, les prix de tous les biens
+qye celle-ci achète doublent, la valeur réelle de son salaire reste la
+même. L'important pour un salarié est son salaire réel, c'est-à-dire
+son salaire nominal corrigé des variations des prix. Les entreprises
+prennent également en compte le salaire réel, dans la mesure où, pour
+elles, l'élément décisif est le coût du travail (le salaire nominal)
+comparé au prix qu'elles peuvent obtenir quand elles vendent leur
+production (le niveau des prix).
+
+On calcule le salaire réel en divisant le salaire nominal par le
+niveau des prix, doit : frac{w}{P}. Le salaire réel constitue une
+mesure du pouvoir d'achat des salaires.
+
+\fbox{
+  \begin{minipage}{10cm}
+    \paragraph{EN BREF : LES SALAIRES R\'EELS}
+    \begin{itemize}
+    \item Le salaire réel correspond au salaire nominal (ou salaire
+      monétaire) corrigé des modifications de prix.
+    \item Les salariés prennent en compte le salaire réel qu'ils
+      reçoivent parce qu'ils s'agit d'une mesure du pouvoir d'achat de
+      ce salaire.
+    \item Les entreprises prennent en compte le salaire réel parce
+      qu'il s'agit d'une mesure du coût du travail.
+    \end{itemize}
+  \end{minipage}
+}
+
+
+Pour des salaires peu élevés, la quantité de travail demandée est plus
+importante. Il y a deux raisons à cela. Premièrement, quand les
+salaires baissent, le travail devient relativement meilleur marché
+comparé aux prix des biens produits par les entreprises. Les profits
+sont alors plus élevés et les entreprises sont incitées à accroître
+leur production et à embaucher plus de salariés. Deuxièmement, puisque
+les salaires baissent par rapport au coût des machines, les
+entreprises ont intérêt à remplacer les machines par des travailleurs.
+Par conséquent, la courbe de demande de travail est décroissante.
+
+Si les salaires baissent \emph{et si tous les autres prix de
+  l'économie baissent aussi dans la même proportion}, la demande de
+travail reste la même. C'est pourquoi nous avons représenté la demande
+de travail comme une fonction du salaire réel, $\frac{w}{P}$.
+
+Tout d'abord, l'augmentation des salaires, parce qu'elle implique une
+augmentation des gains procurés par le tavail, incite les travailleurs
+à travailler plus longtemps \textemdash\ le coût d'opportunité du
+loisir est maintenant plus élevé et l'effet de substitution pousse les
+individus à travailler davantage lorsque les salaires réels montent.
+Cependant, l'accroissement des salaires implique aussi un
+accroissement du revenu des salariés. En raison de leurs revenus plus
+élevés, ces derniers voudront accroître leur consommation, y compris
+leur consommation de loisir. Il y a donc, lorsque les salaires réels
+augmentent, un effet revenu qui exerce des pressions à la baisse sur
+l'offre de tavail. L'effet revenu et l'effet substitution agissent
+dans des directions opposées.
+
+\subsection{D\'eplacements de la demande et de l'offre de travail}
+
+(Si) pour un même niveau de salaire réel, il y a un plus grand nombre
+de personnes dans la population active [alors] le salaire réel
+d'équilibre baisse. Cette baisse des salaires réels est le signe que
+le travail est moins rare qu'auparavant. Les entreprises devront donc
+moins économiser la main-d'\oe uvre L'emploi augmente pour absorber
+l'accroissement de l'offre de travail.
+
+L'une des principales imperfections du march\'e du travail vient de ce
+que la recherche d'un nouvel emploi est une source de coûts, en temps
+et en argent. L'information est imparfaite et coûteuse à obtenir. Les
+annonces d'emplois vacants jouent un rôle important dans le
+fonctionnement du march\'e du travail, mais il est souvent difficile,
+quand on habite une région, de consulter sur une base régulière et en
+temps utile les journaux des autres régions.
+
+Les agences d'emploi, publiques ou privées, ont manifestement
+contribué à améliorer le fonctionnement du march\'e du travail.
+Cependant, l'Internet devrait apporter une véritable révolution
+\textemdash\ ou au moins une très forte amélioration \textemdash\ sur
+les marchés du travail.
+
+\fbox{
+  \begin{minipage}{10cm}
+    \paragraph{EN BREF : L'\'EQUILIBRE SUR LE MARCH\'E DU TRAVAIL}
+    \begin{itemize}
+    \item Les salaires s'ajustent afin d'égaliser l'offre et la
+      demande de travail.
+    \item Une augmentation de l'offre de travail pour toute valeur
+      donnée du salaire réel (un déplacement vers la droite de la
+      courbe d'offre de travail) fait baisser le taux de salaire
+      d'équilibre et permet ainsi aux entreprises de créer des emplois
+      supplémentaires.
+    \item Le progrès technique ou un nouvel investissement augmentent
+      la demande de travail pour toute valeur donnée du salaire réel
+      (la courbe de demande de travail se déplace alors vers la
+      droite). Il en résulte une hausse du salaire réel d'équilibre.
+      Les accroissements de la productivité du travail augmentent la
+      demande de travail et donnent ainsi lieu à une augmentation du
+      salaire réel d'équilibre.
+    \end{itemize}
+  \end{minipage}
+}
+
+\section{Le march\'e des biens}
+
+\subsection{Le PIB potentiel}
+
+À tout moment, l'économie dispose d'un certain stock de capital
+(c'est-à-dire d'un ensemble de machines, d'équipements et de
+bâtiments), qui, avec la main-d'\oe uvre et le stock de matières
+premières, permet de produire des biens. Si les entreprises embauchent
+plus d'ouvriers, la production s'accroît. Ci-dessous est représentée
+la relation entre l'emploi et la production, appelée \textbf{fonction
+  de production globale à court terme}. On notera que, quand le nombre
+de travailleurs employés progresse, la production s'élève mais à un
+taux décroissant. En d'autres termes, les rendements du travail sont
+décroissants. Avec un montant fixe de capital, la quantité des
+équipements et des machines disponibles pour chaque travailleur baisse
+quand le nombre de personnes employées augmente. Par exemple, il est
+possible ques les premières personnes embauchées aient chacune leur
+propre ordinateur personnel. Cependant, quand le nombre des personnes
+employées s'accroît, il faut partager les ordinateurs existants si le
+montant de capital reste fixe. Par conséquent, le produit s'accroît à
+mesure que le nombre des salariés augmente, mais il le fait à un
+rythme en constante diminution.
+
+À long terme, quand le marché du travail est en équilibre, on atteint
+une situation appelée \og plein emploi\fg. On appelle \textbf{PIB
+  potentiel} ou \textbf{niveau de production de plein emploi} le
+niveau d'équilibre de la production quand l'économie est au plein
+emploi.
+
+\subsection{Demande et produit d'\'equilibre}
+
+Pour que le marché des biens soit en équilibre, il faut que l'offre
+des biens et services produits par les entreprises dans une économie
+soit égale à la demande pour les biens et services de cette économie.
+Les entreprises ne continueront pas à produire au plein emploi si
+elles ne peuvent pas vendre leur production. Les entreprises ne
+continueront pas à produire au plein emploi si elles ne peuvent pas
+vendre leur production. Si l'on veut que l'économie se maintienne au
+plein emploi, il est nécessaire que le montant total de la demande
+s'ajuste pour équilibrer le produit au niveau correspondant.
+
+Pour comprendre comment la demande s'égalise au produit de plein
+emploi, il est utile de partir de l'analyse du flux circulaire du
+revenu.
+
+voir figure xx
+
+Le graphique du flux circulaire de revenu montre comment le revenu et
+les biens et services circulent entre les ménages, les entreprises et
+le secteur financier.
+
+Les ménages offrent des ressources (travaux, capitaux, terre) aux
+entreprises et reçoivent en retour des paiements pour ces ressources.
+Nous avons déjà vu que ces paiements de revenus ssont égaux à la
+valeur de la production totale. Cela signifie que le secteur des
+ménages reçoit un montant suffisant de revenus pour acheter tous les
+biens et services produits par les entreprises.
+
+Les ménages ne choisissent pas de dépenser tous leurs revenus en biens
+et services. Ils en épargnent une partie. Dans le graphique du flux
+circulaire, cela se manifeste par la présence d'un flux d'épargne vers
+le marché du capital. L'épargne des ménages correspod donc à une
+\emph{fuite} en dehors du flux de dépenses.
+
+Si, au niveau agrégé, les ménages ne dépensent pas la totalité de
+leurs revenus, d'autres agents économiques dépensent, en sesns
+inverse, un montant de revenu supérieur à celui qu'ils reçoivent. Les
+entreprises, par exemple, peuvent vouloir inverstir dans la
+construction de nouveaux bâtiments [...] La dépense d'investissement
+s'analyse comme une \emph{injection} dans le flux de dépenses.
+
+Le montant total des dépenses sera égal au niveau de la production si
+les fuites en dehors du flux de dépenses sous forme d'épargne sont
+équilibrées par des injections dans ce même flux sous forme
+d'investissement. On peut représenter cette situation de façon
+algébrique en remarquant que, dans une économie fermée sans secteur
+public, la demande globale pour ce qui est produit est égale à la
+dépense de consommation (\emph{C}) des ménages plus la dépense en
+investissement (\emph{I}) des entreprises. À l'équilibre de plein
+emploi, la somme de la consommation et de l'investissement doit être
+égale au produit de plein emploi Y\up{f}, soit $C+I=Y\up{f}$. Si l'on
+enlève C de chaque côté de cette équation, on voit quela deamnde sera
+égale au produit de plein emploi si : $I=Y\up{f}-C$. Or, $Y\up{f}-C$
+correspond à l'épargne de plein emploi.Par conséquent, la demande sera
+égale au produit de plein emploi si l'investissement est égal à
+l'épargne de plein emploi.
+
+\fbox{
+  \begin{minipage}{10cm}
+    \paragraph{EN BREF : \'EQUILIBRE SUR LE MARCH\'E DES BIENS}
+    \begin{itemize}
+    \item Quand l'économie est au plein emploi, le produit est égal au
+      PIB potentiel, c'est-à-dire au produit que peut fournir la
+      population active disponible, pour un ensemble donné de
+      bâtiments et d'équipements, pour des niveaux acceptables
+      d'utilisation des capacités de production et pour des horaires
+      hebdomadaires de travail normaux.
+    \item Une hausse de l'offre de travail (un déplacement de la
+      courbe d'offre de travail vers la droite), un accroissement du
+      stock de bâtiments et d'équipements par suite d'un nouvel
+      investissement, des changements technologiques sont autant de
+      facteurs qui entraîneront une hausse du PIB potentiel.
+    \item Les dépenses globales seront égales au PIB potentiel si les
+      fuites et les injections s'équilibrent. Dans une économie fermée
+      et sans secteur public, les fuites correspondent à des
+      injections à l'investissement.
+    \end{itemize}
+  \end{minipage}
+}
+
+\section{Le march \'e du capital}
+
+Quand les ménages épargnent, ils mettent des fonds à la disposition
+des emprunteurs. De leur côté, les entreprises qui investissent ont
+besoin de fonds à emprunter. Le marché du capital est le marché où
+l'offre de fonds est allouée aux agents qui désirent emprunter. Pour
+cette raison, ce marché est également appelé \textbf{marché des fonds
+  prêtables}.
+
+\subsection{L'\'epargne des m\'enages}
+
+Les principaux déterminants de l'épargne des ménages sont le revenu et
+le taux d'intérêt. Chaque année, les ménages doivent décider de
+l'affectation de leur revenu entre leurs dépesenses de consommation
+courante et leur épargne (en vue d'une consommation future, pour leur
+retraite, pour les urgences, etc). En moyenne, les familles disposant
+de revenus élevés dépensent davantage \emph{et} épargnent davantage.
+Bien sûr, ce qui importe, c'est le montant du revenu qu'elles ont à
+dépenser, ce que l'on appelle leur \textbf{revenu disponible},
+c'est-à-dire leur revenu après imposition. Ainsi, lorsque l'État
+augmente les impôts, il fait baisser le revenu disponible, ce qui a
+pour effet de réduire l'épargne des ménages.
+
+Si le produit global est fixe et au niveau de plein emploi, le niveau
+de l'épargne dépendra du rendement que celle-ci rapporte aux ménages.
+Quand les ménages épargnent, ils mettent de côté une partie de leur
+revenu courant afin de pouvoir dépenser plus dans le futur. Le facteur
+décisif dans les décisions d'épargne est le taux d'intérêt qu'il est
+possible d'obtenir, \emph{corrigé des changements dans le prix des
+  biens que l'on achète}. Le \textbf{taux d'intérêt réel} est la
+mesure adéquate du rendement de l'épargne car il tient compte des
+variations des prix. Le taux d'intérêt réel est égal au taux d'intérêt
+du marché \emph{moins} le taux d'inflation. Si le taux d'intérêt du
+marché est de 5\%~et si l'inflation est de 2\%, alors le taux de
+rendement réel de l'épargne est de 3\%.
+
+Le taux d'intérêt réel est un bon moyen de mesurer le taux de
+rendement de l'épargne parce qu'il tient compte des variations des
+prix. Les faits laissent à penser, au moins aux États-Unis, que
+l'épargne des ménages es relativement peu sensible aux changements
+dans le taux d'intérêt réel (avec peut-être un lien positif). Pour
+simplifier, on supposera souvent que l'épargne est totalement
+inélastique \textemdash\ c'est-à-dire qu'elle ne change pas quand le
+taux d'intérêt varie.
+
+L'hypothèse que l'épargne ne réagit pas au taux d'intérêt peut sembler
+incompatible avec l'une des idées clés de l'économie, selon laquelle
+les incitations comptent. Dans la mesure où une hausse du taux
+d'intérêt réel constitue une incitation à épargner plus, on devrait
+observer une augmentation de l'épargne des ménages. Mais il faut aussi
+tenir compte des l'effet revenu qui s'exerce en sens inverse. Si les
+parents épargnent à la fois pour financer les études universitaires de
+leurs enfants et pour améliorer leur propre retraite, une hausse du
+taux d'intérêt réel signifie qu'ils doivent épargner moins chaque
+année afin d'atteindre les objectifs qu'ils se sont fixés pour le
+futur.
+
+\subsection{L'investissement}
+
+Le terme \og investissement\fg\ est employé dans deux acceptations
+différentes :
+\begin{enumerate}
+\item[investissements financiers] Les ménages considèrent les actions
+  et les obligations qu'ils achètent comme des investissements
+  \textemdash\ des investissements financiers. De la sorte, ils
+  fournissent des fonds aux entreprises qui peuvent alors acheter des
+  biens d'équipements.
+\item[investissements en biens de capital] ces achats correspondent
+  aux investissements des entreprises, appelés investissements en
+  biens de capital ou simplement \emph{investissements}. \emph{En
+    macroéconomie, le terme d'investissement fait réfécence à des
+    investissements en capital physique et non à des investissements
+    financiers.}
+
+  \chapter{Les finances publiques en plein emploi}
+
+  \section{La structure des d\’epenses publiques et des imp\^ots}
+
+  Parmi les dépenses du gouvernement il y a :
+  \begin{description}
+  \item[les d\'epenses discr\'etionnaires] dépenses militaires,
+    dépenses de fonctionnement général de l'État et la plupart des
+    programmes d'éducation et de formation.
+  \item[les d\'epenses non discr\'etionnaires] paiement des intérêts
+    de la dette nationale ou des transferts liés à des droits
+    sociaux. Ou également des droits à des avantages fixés par la
+    législation.
+  \end{description}
+
+  \section{l'extension du mod\`ele de base de plein emploi}
+
+  Le modèle de base de plein emploi ne tenait pas compte du rôle de
+  l'État. Dans la réalité, l'État joue cependant un rôl central dans
+  toutes les économies. Les grandes questions de politique économique
+  tournent souvent autour de l'influence des décisions en matière de
+  dépenses publiques et de fiscalité.
+
+  \section{La prise en compte du secteur publique}
+
+  Si les recettes fiscales sont insuffisantes pour couvrir les
+  dépenses publiques, l'État a un \textbf{déficit budgétaire} et il
+  devra emprunter sur le marché du capital pour couvrir l'écart de
+  financement. Si l'État a un \textbf{excédent budgétaire} parce que
+  ses recettes fiscales sont supérieures à ses dépenses, alors, tout
+  comme les ménages, il sera un épargnant et et, à c titre, il
+  constituera une sources d'épargnes pour le reste de l'économie.
+
+  Le \emph{déficit} public correspond à l'emprunt supplémentaire qu'il
+  doit effectuer pour une année donnée. En revanche, le montant cumulé
+  de ce que doit l'État \textemdash sa \emph{dette} \textemdash\
+  reflète l'ensemble des emprunts que l'État a contracté dans le
+  passé.
+
+  \subsection{L'\'Etat et le march\'e du capital}
+
+  Examinons maintenant comment l'équilibre sur le marché du capital et
+  le taux d'intérêt sont modifés lorsque l'on fait intervenir l'État
+  dans le système. Si le acquisitions publiques ($G$) sont supérieures
+  aux impôts ($T$), l'État doit emprunter la différence. L'État est
+  maintenant en concurrence avec les emprunteurs privés face à l'offre
+  d'épargne privée. Le montant d'épargne disponible pourl
+  'investissement privé est donc plus faible.
+ 
+  Quand l'État est en déficit, l'épargne privée, $S_{p}$, a deux
+  fonctions, financer le déficit public ($G-T$) et financer
+  l'investissement ($I$) :
+  \[S_{p}=I+(G-T)\] On peut considérer également que le déficit
+  correspond à une épargne publique négative : \[G-T=-S_{g}\] On peut
+  alors réécrire la première équation comme suit : \[S_{p}+S_{g}=I\]
+  Le côté gauche de l'égalité correspond à \textbf{l'épargne
+    nationale}, c'est-à-dire à la somme de l'épargne privée (des
+  ménages et des entreprises) et de l'épargne publique (de
+  l'État). Quand le marché du capital est à l'équilibre dans une
+  économie fermée, \emph{l'épargne nationale est égale à
+    l'investissement}.
+
+  L'accroissement du déficit public réduit l'épargne nationale. Il y a
+  toujours équilibre sur le marché du capital mais à un taux d'intérêt
+  réel plus élevé.  Cette augmentation du taux d'intérêt réel réduit
+  la dépense d'investissement privé. Par conséquent, l'emprunt public
+  exerce un \textbf{effet d'éviction} d'un montant égal à sa valeur
+  sur l'investissement privé. En d'autres termes, une hausse des
+  dépenses publiques a pour seul effet de prendre la place d'un
+  montant équivalent d'investissement privé.
+
+  Quand l'État dispose d'un excédent budgétaire, on observer les
+  effets opposés.  En cas d'excédent, l'épargne publique est
+  positive. Une baisse dans les dépenses publiques sans réduction
+  corrélative des impôts accroît l'excédent budgétaire et déplace la
+  courbe d'épargne nationale vers la droite. Par conséquent, le taux
+  d'intérêt réel d'équilibre baisse et l'investissement privé
+  augmente.
+
+  \subsubsection{Effets des changements dans la fiscalité}
+
+  Une baisse des impôts augmente le revenu disponible des
+  ménages. [\ldots] Les ménages vont utiliser ce supplément de revenu
+  disponible pour accroître leur consommation et/ou pour accroître
+  leur épargne.
+
+  \subsubsection{Variation budgétaire équilibrée des impôts et des
+    dépenses publiques}
+
+  On peut se demander ce qui se produit lorsque l'État modifie \emph{à
+    la fois} les dépenses et les impôts d'un montant égal afin que
+  l'épargne du secteur public demeure inchangée.
+
+  Supposons que l'État augmente les dépenses publiques de 100
+  milliards de dollars et que, pour financer cette augmentation, il
+  accroisse les impôts d'un montant identique. On dit alors qu'il y a
+  une \emph{une variation budgétaire équilibrée des impôts et des
+    dépenses publiques}. Puisque les dépenses et les recettes
+  s'accroissent d'un montant égal, le budget reste équilibré. Quel
+  sera l'effet macroéconomique d'un tel accroissement équilibré des
+  dépenses ?
+
+  Puisque les impôts sont plus élevés, le revenu disponible du secteur
+  privé (c'est-à-dire son revenu diminué des impôts qu'il paie) est
+  plus faible de 100 milliards de dollars. Quand leur revenu
+  disponible diminue, les individus réduisent en général à la fois
+  leur consommation et leur épargne.
+
+  La baisse du revenu disponible due aux impôts supplémentaire réduit
+  l'épargne.  Puisque l'épargne publique reste inchangée, l'épargne
+  nationale baisse. Sur le marché du capital, cela signifie que la
+  courbe d'épargne se déplace vers la gauche. Si la courbe
+  d'investissement reste la même, le taux d'intérêt réel d'équilibre
+  augmentera et le niveau d'équilibre de l'investissement baissera. Ce
+  résultat est important. Toute modification égale des dépenses et des
+  recettes budgétaires (c'est-à-dire toute variation équilibrée du
+  budget) agit sur l'investissement et sur le taux d'intérêt. Un
+  \emph{accroissement} équilibré du budget \emph{réduit} la
+  consommation et l'investissement et \emph{augmente} le taux
+  d'intérêt. Inversement, une \emph{baisse} équilibrée du budget
+  \emph{augmente} la consommation et l'investissement et \emph{diminue
+    le taux d'intérêt}.
+
+  \subsection{Fuites et injections}
+
+  \subsubsection{L'adjonction de l'État}
+
+  Quand on incorpore l'État dans le modèle, le nombre des sources de
+  demande globale est alors de trois : la consommation ($C$),
+  l'investissement ($I$) et les acquisitions publiques
+  : \[demande=C+I+G\]
+
+  \fbox{
+    \begin{minipage}{10cm}
+      \paragraph{EN BREF : Les cons\'equences des d\'eficits publics}
+      \textcolor{red}{
+        \begin{itemize}
+        \item Si le budget d'un État est en déficit,
+          \begin{itemize}
+          \item une partie du poids des dépenses publiques courantes
+            est directement reportée sur les générations futures.
+          \item l'épargne nationale est réduite, le taux d'intérêt
+            réel est plus élevé et le niveau de l'investissement privé
+            est plus bas. Par conséquent, le bien-être des générations
+            futures sera plus faible.
+          \end{itemize}
+        \item Si le budget d'un État est en excédent,
+          \begin{itemize}
+          \item le poids des dépenses publiques futures est supporté
+            en partie par la génération actuelle.
+          \item le remboursement de la dette publique augmente
+            l'épargne nationale, diminue le taux d'intérêt réel et
+            augmente l'investissement privé. Le bien-être des
+            générations futures sera donc plus élevé.
+          \end{itemize}
+        \end{itemize}
+      }
+    \end{minipage}
+  }
+
+  \chapter{\'Economie ouverte et \'equilibre de plein emploi}
+
+  \section{L'\'economie ouverte}
+
+  Une \textbf{économie ouverte} est une économie où les ménages et les
+  entreprises du pays considéré échangent avec des ménages ou des
+  entreprises d'autres pays et empruntent sur des marchés étrangers.
+
+  Le commerce extérieur influe sur les marchés des biens parce que les
+  exportations nettes constituent l'une des composantes de la demande
+  globale. De façon au moins aussi décisive, une économie ouverte peut
+  accéder à des sources internationales de fonds prêtables afin de
+  financer l'investissement domestique ou le déficit public. Si la
+  demande de fonds prêtables pour investir est supérieure à l'épargne
+  natioanle, les entreprises et l'État peuvent emprunter à l'étranger.
+
+  \subsection{Le marché du capital en économie ouverte}
+
+  On appelle \textbf{entrées de capitaux} \textemdash\ ou flux entrant
+  de capitaux \textemdash\ fonds qui entrent aux États-Unis en vue
+  d'investissement sous forme d'un dép^ot dans une banque américaine,
+  d'un achat d'obligations d'État, ou d'un prêt dirct à des citoyens
+  américains (pour quelque raison que ce soit). Les dollars
+  américains qui vont dans des pays à des fins similaires sont appelés
+  des \textbf{sorties de capitaux} \textemdash\ ou flux sortants de
+  capitaux. Dans une économie fermée, l'équilibre est atteint quand
+  l'épargne nationale est égale à l'investissement. Dans une économie
+  ouverte, l'investissement peut être financé soit par l'épargne
+  extérieure, soit par des emprunts à l'étranger (emprunts qui
+  mobilisent essentiellement l'épargne dans les pays étrangers). Par
+  conséquent :
+  \[
+  \begin{pmatrix}
+    \textbox{épargne nationale ($Sn$)} + \textbox{emprunts à l'étranger}
+  \end{pmatrix}
+= investissement
+  \[
+ENC désigne les \textbf{entrées nettes de capitaux} (c'est-à-dire les
+entrées moins les sorties)
+\end{document}

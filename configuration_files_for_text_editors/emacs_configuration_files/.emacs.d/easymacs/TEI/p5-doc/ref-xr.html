@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;xr&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;xr&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;xr&gt;</h1></div><div><span id="xr"/><table border="1" class="wovenodd"><tr><td class="elementSpec">xr</td><td colspan="2" class="wovenodd-col2">(cross-reference phrase) contains a phrase, sentence, or icon referring the reader to
+some other location in this or another text.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.entryParts.top.html">model.entryParts.top</a> <a class="link_odd" href="ref-model.entryParts.html">model.entryParts</a> <a class="link_odd" href="ref-att.lexicographic.html">att.lexicographic</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element xr
+{
+   att.global.attributes,
+   att.lexicographic.attributes,
+   attribute type { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> }?,
+   (
+      text
+    | <a class="link_odd" href="ref-model.gLike.html">model.gLike</a>
+    | <a class="link_odd" href="ref-model.phrase.html">model.phrase</a>
+    | <a class="link_odd" href="ref-model.inter.html">model.inter</a>
+    | <a class="link_odd" href="ref-usg.html">usg</a>
+    | <a class="link_odd" href="ref-lbl.html">lbl</a>
+    | <a class="link_odd" href="ref-model.global.html">model.global</a>
+   )*
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>  [<a class="classlink" href="ref-att.lexicographic.html">att.lexicographic</a> ] <table><tr><td class="attDef">type</td><td colspan="2">indicates the type of cross reference, using any convenient
+typology.</td></tr><tr><td/><td><span class="label">Status: </span>Recommended</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a></code></td></tr><tr><td><!-- --></td><td valign="top">Sample values include:<table class="valList"><tr><td valign="top"><b>syn</b></td><td valign="top">(cross reference for synonym information) </td></tr><tr><td valign="top"><b>etym</b></td><td valign="top">(etymological information) </td></tr><tr><td valign="top"><b>cf</b></td><td valign="top">(related or similar term) </td></tr><tr><td valign="top"><b>illus</b></td><td valign="top">(illustration of an object) </td></tr></table></td></tr><tr><td/><td><p><span id="id2466403"/></p></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;entry&gt;</span><br/>  <span class="element">&lt;form&gt;</span><br/>   <span class="element">&lt;orth&gt;</span>lavage<span class="element">&lt;/orth&gt;</span><br/>  <span class="element">&lt;/form&gt;</span><br/>  <span class="element">&lt;etym&gt;</span>[Fr. &lt; <span class="element">&lt;mentioned&gt;</span>laver<span class="element">&lt;/mentioned&gt;</span>;<br/>       L. <span class="element">&lt;mentioned&gt;</span>lavare<span class="element">&lt;/mentioned&gt;</span>,<br/>       to wash; <span class="element">&lt;xr&gt;</span>see <span class="element">&lt;ref&gt;</span>lather<span class="element">&lt;/ref&gt;</span><br/>   <span class="element">&lt;/xr&gt;</span>].<br/>     <span class="element">&lt;/etym&gt;</span><br/> <span class="element">&lt;/entry&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;entry&gt;</span><br/>  <span class="element">&lt;form&gt;</span><br/>   <span class="element">&lt;orth&gt;</span>lawful<span class="element">&lt;/orth&gt;</span><br/>  <span class="element">&lt;/form&gt;</span><br/>  <span class="element">&lt;xr <span class="attribute">type</span>="syn"&gt;</span>SYN. see <span class="element">&lt;ref&gt;</span>legal<span class="element">&lt;/ref&gt;</span><br/>  <span class="element">&lt;/xr&gt;</span><br/> <span class="element">&lt;/entry&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p class="dataDesc"><span id="id2466472"/>May contain character data and phrase-level elements; usually
+contains a <code>&lt;ref&gt;</code> or a <code>&lt;ptr&gt;</code> element.</p><p><span id="id2466486"/>This element encloses both the actual indication of the
+location referred to, which may be tagged using the <code>&lt;ref&gt;</code> or
+<code>&lt;ptr&gt;</code> elements, and any accompanying material which gives more
+information about why the reader is being referred there.</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="DI.html#DITPXR" title="Cross References to Other Entries">9.3.5.3  Cross References to Other Entries</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">dictionaries</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

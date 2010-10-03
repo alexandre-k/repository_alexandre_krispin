@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;head&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;head&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;head&gt;</h1></div><div><span id="head"/><table border="1" class="wovenodd"><tr><td class="elementSpec">head</td><td colspan="2" class="wovenodd-col2">(heading) contains any type of heading, for example the title of a section,
+or the heading of a list, glossary, manuscript description, etc.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.divWrapper.html">model.divWrapper</a> <a class="link_odd" href="ref-model.pLike.front.html">model.pLike.front</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element head
+{
+   att.global.attributes,
+   attribute type { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> }?,
+   <a class="link_odd" href="ref-macro.paraContent.html">macro.paraContent</a>
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>In addition to global attributes<table><tr><td class="attDef">type</td><td colspan="2">categorizes the heading in any way meaningful 
+         to the encoder. </td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a></code></td></tr><tr><td/><td><span class="label">Values: </span>A set of user-defined keywords may be employed. Their
+            significance should be documented in the header.
+        </td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><p><span id="id2411063"/>The most common use for the <code>&lt;head&gt;</code> element
+is to mark the headings of sections.  In older writings, the
+headings or <em>incipits</em> may be rather longer than
+usual in modern works.	If a section has an explicit ending as
+well as a heading, it should be marked as a <code>&lt;trailer&gt;</code>, as
+in this example:</p><div class="pre"> <span class="element">&lt;div1 <span class="attribute">n</span>="I" <span class="attribute">type</span>="book"&gt;</span><br/>  <span class="element">&lt;head&gt;</span>In the name of Christ here begins
+the first book of the ecclesiastical history of Georgius
+Florentinus, known as Gregory, Bishop of Tours.<span class="element">&lt;/head&gt;</span><br/>  <span class="element">&lt;list&gt;</span><br/>   <span class="element">&lt;head&gt;</span>Chapter-Headings<span class="element">&lt;/head&gt;</span><br/>  <span class="element">&lt;/list&gt;</span><br/>  <span class="element">&lt;div2 <span class="attribute">type</span>="section"&gt;</span><br/>   <span class="element">&lt;head&gt;</span>In the name of Christ here begins Book I of the
+history.<span class="element">&lt;/head&gt;</span><br/>   <span class="element">&lt;p&gt;</span>Proposing as I do ...<span class="element">&lt;/p&gt;</span><br/>   <span class="element">&lt;p&gt;</span>From the Passion of our Lord until the death of Saint Martin
+four hundred and twelve years passed.<span class="element">&lt;/p&gt;</span><br/>   <span class="element">&lt;trailer&gt;</span>Here ends the first Book, which covers five thousand,
+ five hundred and ninety-six years from the beginning of the
+ world down to the death of Saint Martin.<span class="element">&lt;/trailer&gt;</span><br/>  <span class="element">&lt;/div2&gt;</span><br/> <span class="element">&lt;/div1&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><p><span id="id2411119"/>The <code>&lt;head&gt;</code> tag is also used to mark headings
+of other units, such as lists:</p><div class="pre">With a few exceptions, connectives are equally useful in
+all kinds of discourse:  description, narration, exposition,
+argument.
+ <span class="element">&lt;list <span class="attribute">type</span>="simple"&gt;</span><br/>  <span class="element">&lt;head&gt;</span>Connectives<span class="element">&lt;/head&gt;</span><br/>  <span class="element">&lt;item&gt;</span>above<span class="element">&lt;/item&gt;</span><br/>  <span class="element">&lt;item&gt;</span>accordingly<span class="element">&lt;/item&gt;</span><br/>  <span class="element">&lt;item&gt;</span>across from<span class="element">&lt;/item&gt;</span><br/>  <span class="element">&lt;item&gt;</span>adjacent to<span class="element">&lt;/item&gt;</span><br/>  <span class="element">&lt;item&gt;</span>again<span class="element">&lt;/item&gt;</span><br/>  <span class="element">&lt;item&gt;</span><br/>&lt;!-- ... --&gt;<br/>  <span class="element">&lt;/item&gt;</span><br/> <span class="element">&lt;/list&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p><span id="id2411169"/>The <code>&lt;head&gt;</code> element is used for headings at all
+levels; software which treats (e.g.) chapter headings,
+section headings, and list titles differently must determine the
+proper processing of a <code>&lt;head&gt;</code> element based on its
+structural position.  A <code>&lt;head&gt;</code> occurring as the first
+element of a list is the title of that list; one occurring as
+the first element of a <code>&lt;div1&gt;</code> is the title of that
+chapter or section.</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="CO.html#COLI" title="Lists">4.7  Lists</a></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="DS.html#DSDTB" title="Elements Common to All Divisions">5.2  Elements Common to All Divisions</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">core</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

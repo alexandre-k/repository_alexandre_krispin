@@ -1,0 +1,21 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>[Untitled]</title>
+            <author>[Unknown author]</author>
+         </titleStmt>
+         <publicationStmt>
+	   <p>[vacuous publication statement]</p>
+	 </publicationStmt>
+         <sourceDesc>
+            <p>[vacuous source description]</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+<text>
+<body>
+<!-- the main text of the file -->
+</body>
+</text>
+</TEI>

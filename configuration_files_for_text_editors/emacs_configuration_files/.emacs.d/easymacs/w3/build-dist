@@ -1,0 +1,45 @@
+#!/bin/sh
+
+while [ $# != 0 ]; do
+  switch="$1"
+  shift
+  case "$switch" in
+    --*=*)
+      opt=`echo '' ${switch} | sed -e 's:^ ::' -e 's:^-*\([^=]*\)=.*$:\1:'`
+      val=`echo '' ${switch} | sed -e 's:^ ::' -e 's:^-*[^=]*=\(.*\)$:\1:'`
+      ;;
+    --*)
+      opt=`echo '' ${switch} | sed -e 's:^ ::' -e 's:^-*\(.*\)$:\1:'`
+      val='yes'
+      ;;
+  esac
+  ARGS="${ARGS} --${opt}='${val}'"
+  case "${opt}" in
+    *) eval "${opt}='${val}'";;
+  esac
+done
+
+if [ -z "${version}" ]; then
+   exit
+fi
+
+CVSROOT=:pserver:wmperry@cvs.gnu.org:/gd/gnu/cvsroot
+export CVSROOT
+
+( cd .    ; cvs admin -s"p${version}" README )
+( cd lisp ; cvs admin -s"p${version}" w3-vars.el )
+( cd texi ; cvs admin -s"v${version}" w3.txi )
+( cd texi ; cvs admin -s"v${version}" w3-faq.txi )
+
+cd /usr/tmp/
+rm -fr w3
+cvs export -f -D now -kv w3
+cd w3
+autoconf
+rm -f lisp/auto-autoloads.el lisp/custom-load.el
+./configure --with-xemacs --with-custom=`pwd`/lisp
+make realversion
+cd
+rm -fr /usr/tmp/w3
+TAG=v`echo ${version} | tr . -`
+cvs rtag ${TAG} w3

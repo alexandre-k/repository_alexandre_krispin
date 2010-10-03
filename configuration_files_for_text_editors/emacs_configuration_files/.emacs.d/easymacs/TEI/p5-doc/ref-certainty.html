@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;certainty&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;certainty&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;certainty&gt;</h1></div><div><span id="certainty"/><table border="1" class="wovenodd"><tr><td class="elementSpec">certainty</td><td colspan="2" class="wovenodd-col2">indicates the degree of certainty or uncertainty associated
+  with some aspect of the text markup. </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.global.meta.html">model.global.meta</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element certainty
+{
+   att.global.attributes,
+   attribute target { list { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a>+ } },
+   attribute locus { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> },
+   attribute assertedValue { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a> | <a class="link_odd" href="ref-data.name.html">data.name</a> | <a class="link_odd" href="ref-data.word.html">data.word</a> }?,
+   attribute given { list { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a>+ } }?,
+   attribute degree { <a class="link_odd" href="ref-data.probability.html">data.probability</a> }?,
+   <a class="link_odd" href="ref-macro.glossSeq.html">macro.glossSeq</a>
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>In addition to global attributes<table><tr><td class="attDef">target</td><td colspan="2">points at the elements whose markup is
+      uncertain.</td></tr><tr><td/><td><span class="label">Status: </span><b>Required</b></td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span> [n &lt;= unbounded] <code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>a series of one or more identifiers (URIs), separated by white space</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Example: </span><div class="pre">Elizabeth went to  <span class="element">&lt;persName <span class="attribute">xml:id</span>="ESX"&gt;</span>Essex<span class="element">&lt;/persName&gt;</span><br/> <span class="element">&lt;certainty <span class="attribute">target</span>="#ESX" <span class="attribute">locus</span>="gi" <span class="attribute">degree</span>="0.6"/&gt;</span></div></td></tr><tr><td/><td><p><span id="id2516061"/>If more than one identifier is given, the
+        <code>&lt;certainty&gt;</code> element is interpreted as applying to all.
+        If no identifier is present on the element being annotated,
+        the attribute should give the identifier of a <code>&lt;ptr&gt;</code>
+        element which points at the element being annotated; for
+        further discussion of this indirect pointing mechanism, see
+        chapter <a class="link_ptr" href="SA.html" title="14">11  Linking, Segmentation, and Alignment</a>.</p></td></tr><tr><td class="attDef">locus</td><td colspan="2">indicates the precise location of the uncertainty in the
+	markup: applicability of the element, precise position of the
+	start- or end-tag, value of a specific attribute,
+	etc.</td></tr><tr><td/><td><span class="label">Status: </span><b>Required</b></td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a></code></td></tr><tr><td><!-- --></td><td valign="top">Suggested values include:<table class="valList"><tr><td valign="top"><b>gi</b></td><td valign="top">(uncertain whether the element used actually applies
+	    to the passage.) </td></tr><tr><td valign="top"><b>startloc</b></td><td valign="top">(start-tag may not be correctly located.) </td></tr><tr><td valign="top"><b>endloc</b></td><td valign="top">(end-tag may not be correctly located.) </td></tr><tr><td valign="top"><b>location</b></td><td valign="top">(both the start-tag and the end-tag may not be
+	    correctly located.) </td></tr><tr><td valign="top"><b>att.name</b></td><td valign="top">(the value given for the attribute name is
+	    uncertain.) </td></tr><tr><td valign="top"><b>transcribedContent</b></td><td valign="top">(the content of the element may not be a correct
+	    transcription of the source text.) </td></tr><tr><td valign="top"><b>suppliedContent</b></td><td valign="top">(the content of the element may not have been
+	    correctly supplied by the reader, e.g. as in the cases of
+	    corr and abbrev elements.) </td></tr></table></td></tr><tr><td/><td><p><span id="id2516206"/>If the name of an attribute is supplied, it must be
+	  prefixed by <tt>att.</tt>. </p></td></tr><tr><td class="attDef">assertedValue</td><td colspan="2">provides an alternative value for the aspect of the markup in
+question—an alternative generic identifier, transcription,
+or attribute value, or the identifier of an anchor element (to
+indicate an alternative starting or ending location).  If an
+assertedValue is given, the confidence level specified by
+degree applies to the alternative markup specified by
+assertedValue; if none is given, it applies to the markup
+in the text.</td></tr><tr><td/><td><span class="label">Status: </span>Recommended</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a> | <a class="link_odd" href="ref-data.name.html">data.name</a> | <a class="link_odd" href="ref-data.word.html">data.word</a></code></td></tr><tr><td/><td><span class="label">Values: </span>generic identifier, attribute value, location (e.g.
+indicated by a reference to an <code>&lt;anchor&gt;</code> element or to an
+<code>&lt;ptr&gt;</code> element), or other appropriate alternative
+value.</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Example: </span><div class="pre"> <span class="element">&lt;certainty<br/>   <span class="attribute">target</span>="#ESX"<br/>   <span class="attribute">locus</span>="gi"<br/>   <span class="attribute">assertedValue</span>="place"<br/>   <span class="attribute">degree</span>="0.2"/&gt;</span></div></td></tr><tr><td/><td><p><span id="id2516318"/>This attribute makes it possible to indicate the
+degree of confidence in a specific alternative to some aspect
+of the markup. In the example above the encoder is expressing
+the likelihood (.2) that the generic identifier should be
+<code>&lt;place&gt;</code> rather than <code>&lt;persName&gt;</code>, which is the coded
+element.</p></td></tr><tr><td class="attDef">given</td><td colspan="2">indicates conditions assumed in the assignment of a degree
+      of confidence.</td></tr><tr><td/><td><span class="label">Status: </span>Recommended</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span> [n &lt;= unbounded] <code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>a pointer to a characterization of the conditions which
+      are assumed in the assignment of a degree of
+      confidence.</td></tr><tr><td/><td><p><span id="id2516392"/>A project may wish to control the vocabulary used in this
+	attribute.</p><p><span id="id2516396"/>The envisioned typical value of this attribute would be the
+	identifier of another <code>&lt;certainty&gt;</code> element or a list of
+	such identifiers. It may thus be possible to construct
+	probability networks by chaining <code>&lt;certainty&gt;</code> elements
+	together. Such networks would ultimately be grounded in
+	unconditional <code>&lt;certainty&gt;</code> elements (with no value for
+	<span class="att">given</span>). The semantics of this chaining would be
+	understood in this way: if a <code>&lt;certainty&gt;</code> element is
+	specified, via a reference, as the assumption, then it is not
+	the attribution of uncertainty that is the assumption, but
+	rather the assertion itself. For instance, in the example
+	above, the first <code>&lt;certainty&gt;</code> element indicates that the
+	confidence in the identification of the new scribe as
+	msm. The second indicates the degree of
+	confidence that Essex is a personal
+	name, given that the new scribe is msm.
+	Note that the given in the second <code>&lt;certainty&gt;</code> element
+	is not the assertion that the likelihood that msm is the new
+	scribe is 0.6, but simply the assertion that msm is the new
+	scribe; this is a recommended convention to facilitate
+	building networks.</p><p><span id="id2516452"/>The ambitious encoder may wish to attempt complex networks
+or probability assertions, experimenting with references to
+other elements or prose assertions, and deploying feature
+structure connectives such as <code>&lt;alt&gt;</code>, <code>&lt;join&gt;</code>, and
+<code>&lt;not&gt;</code>.  However, we do not believe that the
+<code>&lt;certainty&gt;</code> element gives, at this time, a comprehensive
+ambiguity-free system for indicating certainty.</p></td></tr><tr><td class="attDef">degree</td><td colspan="2">indicates the degree of confidence assigned to the aspect
+of the markup named by the locus attribute.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.probability.html">data.probability</a></code></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><p><span id="id2516512"/>(For discussion of this example, see section <a class="link_ptr" href="CE.html#CECECE" title="Structured Indications of Uncertainty">14.1.2  Structured Indications of Uncertainty</a>)</p><div class="pre">Earnest went to  <span class="element">&lt;anchor <span class="attribute">xml:id</span>="A1"/&gt;</span> old<br/><br/> <span class="element">&lt;persName <span class="attribute">xml:id</span>="SYB"&gt;</span>Saybrook<span class="element">&lt;/persName&gt;</span>.<br/><br/> <span class="element">&lt;certainty<br/>   <span class="attribute">xml:id</span>="c1"<br/>   <span class="attribute">target</span>="#SYB"<br/>   <span class="attribute">locus</span>="gi"<br/>   <span class="attribute">degree</span>="0.6"/&gt;</span><br/> <span class="element">&lt;certainty<br/>   <span class="attribute">target</span>="#SYB"<br/>   <span class="attribute">locus</span>="startloc"<br/>   <span class="attribute">given</span>="#c1"<br/>   <span class="attribute">degree</span>="0.9"/&gt;</span><br/> <span class="element">&lt;certainty<br/>   <span class="attribute">xml:id</span>="C-c2"<br/>   <span class="attribute">target</span>="#SYB"<br/>   <span class="attribute">locus</span>="gi"<br/>   <span class="attribute">assertedValue</span>="persName"<br/>   <span class="attribute">degree</span>="0.4"/&gt;</span><br/> <span class="element">&lt;certainty<br/>   <span class="attribute">target</span>="#SYB"<br/>   <span class="attribute">locus</span>="startloc"<br/>   <span class="attribute">given</span>="#C-c2"<br/>   <span class="attribute">degree</span>="0.5"/&gt;</span><br/> <span class="element">&lt;certainty<br/>   <span class="attribute">target</span>="#SYB"<br/>   <span class="attribute">locus</span>="startloc"<br/>   <span class="attribute">assertedValue</span>="#a1"<br/>   <span class="attribute">given</span>="#c1"<br/>   <span class="attribute">degree</span>="0.5"/&gt;</span></div></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="CE.html#CECECE" title="Structured Indications of Uncertainty">14.1.2  Structured Indications of Uncertainty</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">certainty</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

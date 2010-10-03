@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><!--THIS FILE IS GENERATED FROM AN XML MASTER. DO NOT EDIT (4)-->
+<head><title> TEI P5: Guidelines for Electronic Text Encoding and Interchange: 12  Simple Analytic Mechanisms</title><link href="/favicon.ico" rel="icon" type="image/x-icon"/><link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/><meta name="author" content="edited by C.M. Sperberg-McQueen and&#10;&#9;Lou Burnard"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="TEI P5: Guidelines for Electronic Text Encoding and Interchange: 12  Simple Analytic Mechanisms"/><meta name="DC.Type" content="Text"/><meta name="DC.Format" content="application/xhtml+xml"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/><link href="guidelines.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body onload="startUp()"><div id="hdr"><h2 class="subtitle">Simple Analytic Mechanisms</h2><h1 class="title">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h1></div><div id="accessibility"><span class="tocontent"><a href="?style=text">Text only</a>
+      | <a class="skiplinks" href="#rh-column" title="Go to main page content">Skip links</a></span></div><div id="hdr2"><!--no nav --></div><div id="hdr3"><a href="#rh-column" title="Go to main page content" class="skiplinks">Skip links</a><a class="hide">|</a><div class="breadcrumb"><ul class="breadcrumb"><li class="breadcrumb-first"><a class="breadcrumb" href="index.html">TEI P5 Guidelines</a></li><li class="breadcrumb"><a class="breadcrumb" href="/"></a></li></ul></div><a class="hide">|</a><a class="bannerright" href="http://www.tei-c.org/Consortium/" title="Go to home page">TEI Consortium</a></div><div class="column-wrapper"><div id="lh-col"><div id="lh-col-top"><!--top of left-hand column--></div><div id="lh-col-bottom"><!--bottom of left-hand column--><div class="tocFront"><div class="tocContainer"><div class="toclist0"><a class="toclist" href="FM1.html"> Introductory Note</a>
+</div><div class="toclist0"><a class="toclist" href="AB.html"> About These Guidelines</a>
+</div><div class="toclist0"><a class="toclist" href="SG.html"> A Gentle Introduction to XML</a>
+</div></div></div><div class="tocBody"><!--start TOC--><div class="tocContainer"><!--TOC components--><div class="toclist0"><a class="toclist" href="CH.html">1  Languages and Character Sets</a>
+</div><div class="toclist0"><a class="toclist" href="ST.html">2  The TEI infrastructure</a>
+</div><div class="toclist0"><a class="toclist" href="HD.html">3  The TEI Header</a>
+</div><div class="toclist0"><a class="toclist" href="CO.html">4  Elements Available in All TEI Documents</a>
+</div><div class="toclist0"><a class="toclist" href="DS.html">5  Default Text Structure</a>
+</div><div class="toclist0"><a class="toclist" href="VE.html">6  Verse</a>
+</div><div class="toclist0"><a class="toclist" href="DR.html">7  Performance Texts</a>
+</div><div class="toclist0"><a class="toclist" href="TS.html">8  Transcriptions of Speech</a>
+</div><div class="toclist0"><a class="toclist" href="DI.html">9  Print Dictionaries</a>
+</div><div class="toclist0"><a class="toclist" href="MS.html">10  Manuscript Description</a>
+</div><div class="toclist0"><a class="toclist" href="SA.html">11  Linking, Segmentation, and Alignment</a>
+</div><div class="toclist0"><span class="toclist-this">12  Simple Analytic Mechanisms</span>
+<div class="toclist1"><a class="toclist" href="AI.html#AILC">12.1  Linguistic Segment Categories</a>
+</div><div class="toclist1"><a class="toclist" href="AI.html#AIATTS">12.2  Global Attributes for Simple Analyses</a>
+</div><div class="toclist1"><a class="toclist" href="AI.html#AISP">12.3  Spans and Interpretations</a>
+</div><div class="toclist1"><a class="toclist" href="AI.html#AILA">12.4  Linguistic Annotation</a>
+</div></div><div class="toclist0"><a class="toclist" href="FS.html">13  Feature Structures</a>
+</div><div class="toclist0"><a class="toclist" href="CE.html">14  Certainty and Responsibility</a>
+</div><div class="toclist0"><a class="toclist" href="PH.html">15  Transcription of Primary Sources</a>
+</div><div class="toclist0"><a class="toclist" href="TC.html">16  Critical Apparatus</a>
+</div><div class="toclist0"><a class="toclist" href="ND.html">17  Names and Dates</a>
+</div><div class="toclist0"><a class="toclist" href="GD.html">18  Graphs, Networks, and Trees</a>
+</div><div class="toclist0"><a class="toclist" href="FT.html">19  Tables, Formulae, and Graphics</a>
+</div><div class="toclist0"><a class="toclist" href="CC.html">20  Language Corpora</a>
+</div><div class="toclist0"><a class="toclist" href="WD.html">21  Representation of non-standard characters and glyphs</a>
+</div><div class="toclist0"><a class="toclist" href="FD.html">22  Feature System Declaration</a>
+</div><div class="toclist0"><a class="toclist" href="TD.html">23  Documentation Elements</a>
+</div><div class="toclist0"><a class="toclist" href="USE.html">24  Using The TEI</a>
+</div></div></div><div class="tocBack"><div class="tocContainer"><div class="toclist0"><a class="toclist" href="REFCLA.html">Appendix A  Classes</a>
+</div><div class="toclist0"><a class="toclist" href="REFTAG.html">Appendix B  Elements</a>
+</div><div class="toclist0"><a class="toclist" href="REFENT.html">Appendix C  Macros</a>
+</div><div class="toclist0"><a class="toclist" href="BIB.html">Appendix D  Bibliography</a>
+</div><div class="toclist0"><a class="toclist" href="PARTIND.html">Appendix E  Index</a>
+</div><div class="toclist0"><a class="toclist" href="PREFS.html">Appendix F  Prefatory Notes</a>
+</div><div class="toclist0"><a class="toclist" href="COL.html">Appendix G  Colophon</a>
+</div></div></div></div></div><div id="rh-col"><a id="rh-column"/><div id="rh-col-top"><!--top of right-hand column--></div><div id="rh-col-bottom"><!--bottom of right-hand column--><h2>12  Simple Analytic Mechanisms</h2><p><span id="id2503553"/>This chapter describes a module for associating simple analyses and
+interpretations with text elements.  We use the term
+<em>analysis</em> here to refer to any kind of semantic or
+syntactic interpretation which an encoder wishes to attach to all or
+part of a text. Examples discussed in this chapter include familiar
+linguistic categorizations (such as ‘clause’, ‘morpheme’,
+‘part-of-speech’ etc.) and  characterizations of narrative
+structure (such as ‘theme’, ‘reconciliation’ etc.). The
+mechanisms presented in this chapter offer simpler but less powerful
+than those described in chapter <a class="link_ptr" href="FS.html" title="16">13  Feature Structures</a>.
+	</p><p><span id="id2503592"/>Section <a class="link_ptr" href="AI.html#AILC" title="Linguistic Segment Categories">12.1  Linguistic Segment Categories</a> introduces a module for characterizing
+text segments according to the familiar linguistic categories of
+<em>sentence</em> or <em>s-unit</em>, <em>clause</em>,
+<em>phrase</em>, <em>word</em>, <em>morpheme</em>, and
+<em>character</em>. These elements represent special cases of the
+generic <code>&lt;seg&gt;</code> element described in section <a class="link_ptr" href="SA.html#SASE" title="Blocks, Segments and Anchors">11.3  Blocks, Segments and Anchors</a>.</p><p><span id="id2503637"/>Section <a class="link_ptr" href="AI.html#AIATTS" title="Global Attributes for Simple Analyses">12.2  Global Attributes for Simple Analyses</a> introduces an additional global
+attribute which allows passages of text to be associated with
+specialised elements representing their interpretation. 
+These ‘interpretative’ elements (<code>&lt;span&gt;</code> and
+<code>&lt;interp&gt;</code>) are described in detail in section <a class="link_ptr" href="AI.html#AISP" title="Spans and Interpretations">12.3  Spans and Interpretations</a>.
+They allow the encoder to specify an analysis as a series of names and
+associated values,<a class="notelink" href="#Note102"><sup>102</sup></a> each such pair
+being linked to one or more stretches of text, either directly, in the
+case of spans, or indirectly, in the case of interpretations.</p><p><span id="id2503681"/>Finally section <a class="link_ptr" href="AI.html#AILA" title="Linguistic Annotation">12.4  Linguistic Annotation</a> revisits the topic of linguistic
+analysis, and illustrates how these interpretative mechanisms may be
+used to associate simple linguistic analysis with text segments.</p><div class="p"><span id="id2503693"/>This module makes available the following components:
+<div><hr/><strong>Module</strong> <em>analysis</em>: Simple analytic mechanisms<ul><li>Elements defined: <a class="link_odd" href="ref-s.html">s</a> <a class="link_odd" href="ref-cl.html">cl</a> <a class="link_odd" href="ref-phr.html">phr</a> <a class="link_odd" href="ref-w.html">w</a> <a class="link_odd" href="ref-m.html">m</a> <a class="link_odd" href="ref-c.html">c</a> <a class="link_odd" href="ref-span.html">span</a> <a class="link_odd" href="ref-spanGrp.html">spanGrp</a> <a class="link_odd" href="ref-interp.html">interp</a> <a class="link_odd" href="ref-interpGrp.html">interpGrp</a> </li><li>Classes defined: <a class="link_odd" href="ref-att.global.analytic.html">att.global.analytic</a> </li></ul><hr/></div>
+
+The selection and combination of modules to form a TEI schema is described in
+<a class="link_ptr" href="ST.html#STIN" title="Defining a TEI schema">2.2  Defining a TEI schema</a>.
+</div><div class="p"><span id="id2503727"/>The module is organized as follows:
+
+<div><a href="#DAIGA">« <span class="label">include 114: Global attribute for analysis</span></a> » </div><div><a href="#DAISP">« <span class="label">include 115: Spans</span></a> » </div><div><a href="#DAILC">« <span class="label">include 113: Linguistic Segment Categories</span></a> » </div></div><div class="div2" id="AILC"><h3>12.1  Linguistic Segment Categories</h3><div class="p"><span id="id2503756"/>In this section we introduce specialized <em>linguistic segment
+category</em> elements which may be used to represent the segmentation of
+a text into the traditional linguistic categories of
+<em>sentence</em>, <em>clause</em>, <em>phrase</em>,
+<em>word</em>, <em>morpheme</em>, and
+<em>characters</em>. 
+<ul class="specList"><li><b>&lt;<a href="ref-s.html">s</a>&gt;</b> (s-unit) contains a sentence-like division of a text.</li><li><b>&lt;<a href="ref-cl.html">cl</a>&gt;</b> (clause) represents a grammatical clause.</li><li><b>&lt;<a href="ref-phr.html">phr</a>&gt;</b> (phrase) represents a grammatical phrase.</li><li><b>&lt;<a href="ref-w.html">w</a>&gt;</b> (word) represents a grammatical (not necessarily orthographic) word.<table class="attList"><tr><td class="Attribute">lemma</td><td colspan="2">identifies the word's lemma (dictionary entry form).</td></tr></table></li><li><b>&lt;<a href="ref-m.html">m</a>&gt;</b> (morpheme) represents a grammatical morpheme.<table class="attList"><tr><td class="Attribute">baseForm</td><td colspan="2">identifies the morpheme's base form.</td></tr></table></li><li><b>&lt;<a href="ref-c.html">c</a>&gt;</b> (character) represents a character.</li></ul></div><div class="p"><span id="id2503814"/>As members of the <span class="ident-class">att.segLike</span> class, these
+elements share the following attributes:
+<ul class="specList"><li><b><a href="ref-att.segLike.html">att.segLike</a></b> provides attributes for elements used for arbitrary segmentation. <table class="attList"><tr><td class="Attribute">type</td><td colspan="2">characterizes the type of segment.</td></tr><tr><td class="Attribute">function</td><td colspan="2">characterizes the function of the segment.</td></tr></table></li></ul></div><div class="p"><span id="id2503833"/>The <code>&lt;s&gt;</code> element may be used simply to segment a text
+end-to-end  into a series of non-overlapping segments, referred to here
+and elsewhere as <em>s-units</em>, or <em>sentences</em>.
+<div class="pre"> <span class="element">&lt;p&gt;</span><br/>  <span class="element">&lt;s&gt;</span>Nineteen fifty-four, when I was eighteen years old,
+    is held to be a crucial turning point in the history of
+    the Afro-American — for the U.S.A. as a whole — the
+    year segregation was outlawed by the U.S. Supreme Court.<span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;s&gt;</span>It was also a crucial year for me because on June 18,
+    1954, I began serving a sentence in state prison for
+    possession of marijuana.<span class="element">&lt;/s&gt;</span><br/> <span class="element">&lt;/p&gt;</span></div><a class="notelink" href="#Note103"><sup>103</sup></a>
+The <code>&lt;s&gt;</code> may be thought of as  providing an abbreviated version of
+the tag <span class="tag">&lt;seg type='s-unit'&gt;</span>, with the important additional
+proviso that (unlike <code>&lt;seg&gt;</code> elements) <code>&lt;s&gt;</code> elements may not
+be nested within each other. The <span class="att">type</span> attribute of the
+<code>&lt;s&gt;</code> element corresponds to the <span class="att">subtype</span> attribute on
+the <code>&lt;seg&gt;</code> element, that is, a tag <span class="tag">&lt;s type="xxx"&gt;</span> should
+be thought of as synonymous with a tag <span class="tag">&lt;seg type="s-unit"
+subtype="xxx"&gt;</span>.  Similar considerations apply to the  <code>&lt;cl&gt;</code>
+and <code>&lt;phr&gt;</code> elements , which  can be thought of as short for
+<span class="tag">&lt;seg type="clause"&gt;</span> and <span class="tag">&lt;seg type="phrase"&gt;</span>,
+respectively.
+</div><div class="p"><span id="id2503937"/>The <code>&lt;s&gt;</code> element may be further subdivided into
+<em>clauses</em>, marked with the <code>&lt;cl&gt;</code> element,
+as in the following example:
+<div class="pre"> <span class="element">&lt;p&gt;</span><br/>  <span class="element">&lt;s&gt;</span><br/>   <span class="element">&lt;cl&gt;</span>It was about the beginning of September, 1664,
+      <span class="element">&lt;cl&gt;</span>that I, among the rest of my neighbours,
+        heard in ordinary discourse
+        <span class="element">&lt;cl&gt;</span>that the plague was returned again to Holland; <span class="element">&lt;/cl&gt;</span><br/>    <span class="element">&lt;/cl&gt;</span><br/>   <span class="element">&lt;/cl&gt;</span><br/>   <span class="element">&lt;cl&gt;</span>for it had been very violent there, and particularly at
+      Amsterdam and Rotterdam, in the year 1663, <span class="element">&lt;/cl&gt;</span><br/>   <span class="element">&lt;cl&gt;</span>whither, <span class="element">&lt;cl&gt;</span>they say,<span class="element">&lt;/cl&gt;</span> it was brought,<br/>         <span class="element">&lt;cl&gt;</span>some said<span class="element">&lt;/cl&gt;</span> from Italy, others from the Levant, among some goods<br/>         <span class="element">&lt;cl&gt;</span>which were brought home by their Turkey fleet;<span class="element">&lt;/cl&gt;</span><br/>   <span class="element">&lt;/cl&gt;</span><br/>   <span class="element">&lt;cl&gt;</span>others said it was brought from Candia;
+      others from Cyprus. <span class="element">&lt;/cl&gt;</span><br/>  <span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;s&gt;</span><br/>   <span class="element">&lt;cl&gt;</span>It mattered not <span class="element">&lt;cl&gt;</span>from whence it came;<span class="element">&lt;/cl&gt;</span><br/>   <span class="element">&lt;/cl&gt;</span><br/>   <span class="element">&lt;cl&gt;</span>but all agreed <span class="element">&lt;cl&gt;</span>it was come into Holland again.<span class="element">&lt;/cl&gt;</span><br/>   <span class="element">&lt;/cl&gt;</span><br/>  <span class="element">&lt;/s&gt;</span><br/> <span class="element">&lt;/p&gt;</span></div><a class="notelink" href="#Note104"><sup>104</sup></a></div><p><span id="id2504027"/>Clauses may be further divided into <code>&lt;phr&gt;</code> elements in the same
+way. A text may be segmented directly into clauses, or into
+phrases, with no need to include segmentation at a higher level as well.
+ </p><div class="p"><span id="id2504038"/>For verse texts, the overlapping of metrical and syntactic structure
+requires that special care be given to representing both using an
+element hierarchy. One simple approach is to split the syntactic phrases
+into fragments when they cross verse boundaries, reuniting them 
+with the <span class="att">part</span> attribute:
+<div class="pre"> <span class="element">&lt;div <span class="attribute">type</span>="stanza"&gt;</span><br/>  <span class="element">&lt;l&gt;</span><br/>   <span class="element">&lt;cl <span class="attribute">part</span>="I"&gt;</span>Tweedledum and Tweedledee<span class="element">&lt;/cl&gt;</span><br/>  <span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;l&gt;</span><br/>   <span class="element">&lt;cl <span class="attribute">part</span>="F"&gt;</span>Agreed to have a battle;<span class="element">&lt;/cl&gt;</span><br/>  <span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;l&gt;</span><br/>   <span class="element">&lt;cl <span class="attribute">part</span>="I"&gt;</span>For Tweedledum said <span class="element">&lt;cl <span class="attribute">part</span>="I"&gt;</span>Tweedledee<span class="element">&lt;/cl&gt;</span><br/>   <span class="element">&lt;/cl&gt;</span><br/>  <span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;l&gt;</span><br/>   <span class="element">&lt;cl <span class="attribute">part</span>="F"&gt;</span><br/>    <span class="element">&lt;cl <span class="attribute">part</span>="F"&gt;</span>Had spoiled his nice new rattle.<span class="element">&lt;/cl&gt;</span><br/>   <span class="element">&lt;/cl&gt;</span><br/>  <span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/div&gt;</span><br/> <span class="element">&lt;div <span class="attribute">type</span>="stanza"&gt;</span><br/>  <span class="element">&lt;l&gt;</span><br/>   <span class="element">&lt;cl <span class="attribute">part</span>="I"&gt;</span>Just then flew down a monstrous crow,<span class="element">&lt;/cl&gt;</span><br/>  <span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;l&gt;</span><br/>   <span class="element">&lt;cl <span class="attribute">part</span>="F"&gt;</span>As black as a tar barrel;<span class="element">&lt;/cl&gt;</span><br/>  <span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;l&gt;</span><br/>   <span class="element">&lt;cl <span class="attribute">part</span>="I"&gt;</span>Which frightened both the heroes so,<span class="element">&lt;/cl&gt;</span><br/>  <span class="element">&lt;/l&gt;</span><br/>  <span class="element">&lt;l&gt;</span><br/>   <span class="element">&lt;cl <span class="attribute">part</span>="F"&gt;</span><br/>    <span class="element">&lt;cl&gt;</span>They quite forgot their quarrel.<span class="element">&lt;/cl&gt;</span><br/>   <span class="element">&lt;/cl&gt;</span><br/>  <span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;/div&gt;</span></div><a class="notelink" href="#Note105"><sup>105</sup></a>
+Another approach is to use the <span class="att">next</span> and <span class="att">prev</span>
+attributes defined in the additional module for linking (chapter <a class="link_ptr" href="SA.html" title="14">11  Linking, Segmentation, and Alignment</a>):
+<div class="pre"> <span class="element">&lt;l&gt;</span><br/>  <span class="element">&lt;cl <span class="attribute">next</span>="#c5" <span class="attribute">xml:id</span>="c3" <span class="attribute">part</span>="I"&gt;</span>For Tweedledum said
+   <span class="element">&lt;cl <span class="attribute">next</span>="#c6" <span class="attribute">xml:id</span>="c4" <span class="attribute">part</span>="I"&gt;</span>Tweedledee<span class="element">&lt;/cl&gt;</span><br/>  <span class="element">&lt;/cl&gt;</span><br/> <span class="element">&lt;/l&gt;</span><br/> <span class="element">&lt;l&gt;</span><br/>  <span class="element">&lt;cl <span class="attribute">prev</span>="#c3" <span class="attribute">xml:id</span>="c5" <span class="attribute">part</span>="F"&gt;</span><br/>   <span class="element">&lt;cl <span class="attribute">prev</span>="#c4" <span class="attribute">xml:id</span>="c6" <span class="attribute">part</span>="F"&gt;</span>Had spoiled his nice new rattle.<span class="element">&lt;/cl&gt;</span><br/>  <span class="element">&lt;/cl&gt;</span><br/> <span class="element">&lt;/l&gt;</span></div>
+Other methods are also possible; for discussion, see chapter <a class="link_ptr" href="USE.html#NH" title="31">24.6  Multiple Hierarchies</a>.
+ </div><p><span id="id2504201"/>The <span class="att">type</span> attribute on linguistic segment categories can
+be used to provide additional interpretative information about the
+category. The <span class="att">function</span> attribute on the <code>&lt;cl&gt;</code> and
+<code>&lt;phr&gt;</code> elements can be used to provide additional information
+about the function of the category. Legal values for these
+two attributes are not defined by these Guidelines, but should be
+documented in the <code>&lt;segmentation&gt;</code> element of the
+<code>&lt;encodingDesc&gt;</code> element within the document's header. 
+A general approach to the encoding of linguistic categories assigned to
+parts of a text is discussed in section <a class="link_ptr" href="AI.html#AILA" title="Linguistic Annotation">12.4  Linguistic Annotation</a> below.
+</p><div class="p"><span id="id2504240"/>Using traditional terminology, these attributes provide a convenient
+way of specifying, for example, that the clause from whence it
+came is a relative clause modifying another, or that  the
+phrase by the U.S. Supreme Court is a prepositional
+post-modifier:
+<div class="pre"> <span class="element">&lt;cl&gt;</span>It mattered not
+  <span class="element">&lt;cl <span class="attribute">type</span>="relative" <span class="attribute">function</span>="clause modifier"&gt;</span>from whence it came;<span class="element">&lt;/cl&gt;</span><br/> <span class="element">&lt;/cl&gt;</span></div><div class="pre"> <span class="element">&lt;phr <span class="attribute">type</span>="NP"&gt;</span>the year segregation<span class="element">&lt;/phr&gt;</span><br/> <span class="element">&lt;phr&gt;</span>was outlawed<span class="element">&lt;/phr&gt;</span><br/> <span class="element">&lt;phr <span class="attribute">type</span>="PP" <span class="attribute">function</span>="postmodifier (agent)"&gt;</span>by the U.S. Supreme Court.<span class="element">&lt;/phr&gt;</span></div></div><div class="p"><span id="id2504290"/>Segmentation into clauses and phrases can, of course, be combined.
+Such detailed encodings as the following may require careful
+formatting if they are to be easily readable however.
+<div class="pre"> <span class="element">&lt;p&gt;</span><br/>  <span class="element">&lt;s&gt;</span><br/>   <span class="element">&lt;cl <span class="attribute">type</span>="finite declarative" <span class="attribute">function</span>="independent"&gt;</span><br/>    <span class="element">&lt;phr <span class="attribute">type</span>="NP" <span class="attribute">function</span>="subject"&gt;</span>Nineteen fifty-four,
+      <span class="element">&lt;cl <span class="attribute">type</span>="finite relative declarative" <span class="attribute">function</span>="appositive"&gt;</span>
+	when <span class="element">&lt;phr <span class="attribute">type</span>="NP" <span class="attribute">function</span>="subject"&gt;</span>I<span class="element">&lt;/phr&gt;</span><br/>      <span class="element">&lt;phr <span class="attribute">type</span>="VP" <span class="attribute">function</span>="predicate"&gt;</span>was eighteen years old<span class="element">&lt;/phr&gt;</span><br/>     <span class="element">&lt;/cl&gt;</span><br/>    <span class="element">&lt;/phr&gt;</span>,<br/>   	<span class="element">&lt;phr <span class="attribute">type</span>="VP" <span class="attribute">function</span>="predicate"&gt;</span><br/>     <span class="element">&lt;phr <span class="attribute">type</span>="V" <span class="attribute">function</span>="main verb"&gt;</span>is held<span class="element">&lt;/phr&gt;</span><br/>     <span class="element">&lt;phr <span class="attribute">type</span>="NP" <span class="attribute">function</span>="complement"&gt;</span><br/>      <span class="element">&lt;cl <span class="attribute">type</span>="nonfinite" <span class="attribute">function</span>="predicate nom."&gt;</span><br/>       <span class="element">&lt;phr <span class="attribute">type</span>="V" <span class="attribute">function</span>="copula"&gt;</span>to be<span class="element">&lt;/phr&gt;</span><br/>       <span class="element">&lt;phr <span class="attribute">type</span>="NP" <span class="attribute">function</span>="predicate nom."&gt;</span>a crucial turning point
+	      <span class="element">&lt;phr <span class="attribute">type</span>="PP" <span class="attribute">function</span>="postmodifier"&gt;</span>in
+	      <span class="element">&lt;phr <span class="attribute">type</span>="NP" <span class="attribute">function</span>="prep.obj."&gt;</span>the history
+	      <span class="element">&lt;phr <span class="attribute">type</span>="PP" <span class="attribute">function</span>="postmodifier"&gt;</span>of the Afro-American<span class="element">&lt;/phr&gt;</span><br/>         <span class="element">&lt;/phr&gt;</span><br/>        <span class="element">&lt;/phr&gt;</span><br/>       	      —<br/>       	      <span class="element">&lt;phr <span class="attribute">type</span>="PP" <span class="attribute">function</span>="appositive postmodifier"&gt;</span>for
+	      <span class="element">&lt;phr <span class="attribute">type</span>="NP" <span class="attribute">function</span>="prep.obj."&gt;</span>the U.S.A.
+	      <span class="element">&lt;phr <span class="attribute">type</span>="PP" <span class="attribute">function</span>="postmodifier"&gt;</span>as a whole<span class="element">&lt;/phr&gt;</span><br/>         <span class="element">&lt;/phr&gt;</span><br/>        <span class="element">&lt;/phr&gt;</span><br/>       <span class="element">&lt;/phr&gt;</span><br/>      	      —<br/>      	      <span class="element">&lt;phr <span class="attribute">type</span>="NP" <span class="attribute">function</span>="appositive pred.nom."&gt;</span>the year
+	      <span class="element">&lt;cl <span class="attribute">type</span>="finite relative" <span class="attribute">function</span>="adjectival"&gt;</span><br/>         <span class="element">&lt;phr <span class="attribute">type</span>="NP" <span class="attribute">function</span>="subject"&gt;</span>segregation<span class="element">&lt;/phr&gt;</span><br/>         <span class="element">&lt;phr <span class="attribute">type</span>="VP" <span class="attribute">function</span>="predicate"&gt;</span><br/>          <span class="element">&lt;phr <span class="attribute">type</span>="V" <span class="attribute">function</span>="main verb"&gt;</span>was outlawed<span class="element">&lt;/phr&gt;</span><br/>          <span class="element">&lt;phr <span class="attribute">type</span>="PP" <span class="attribute">function</span>="postmodifier"&gt;</span>by the U.S. Supreme Court<span class="element">&lt;/phr&gt;</span><br/>         <span class="element">&lt;/phr&gt;</span><br/>        <span class="element">&lt;/cl&gt;</span><br/>       <span class="element">&lt;/phr&gt;</span><br/>      <span class="element">&lt;/cl&gt;</span><br/>     <span class="element">&lt;/phr&gt;</span><br/>    <span class="element">&lt;/phr&gt;</span>.<span class="element">&lt;/cl&gt;</span><br/>  <span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;s&gt;</span><br/>   <span class="element">&lt;cl <span class="attribute">type</span>="finite declarative" <span class="attribute">function</span>="independent"&gt;</span><br/>    <span class="element">&lt;phr <span class="attribute">type</span>="NP" <span class="attribute">function</span>="subject"&gt;</span>It<span class="element">&lt;/phr&gt;</span><br/>    <span class="element">&lt;phr <span class="attribute">type</span>="VP" <span class="attribute">function</span>="predicate"&gt;</span><br/>     <span class="element">&lt;phr <span class="attribute">type</span>="V" <span class="attribute">function</span>="main verb"&gt;</span>was<span class="element">&lt;/phr&gt;</span><br/>    	also<br/>    	<span class="element">&lt;phr <span class="attribute">type</span>="NP" <span class="attribute">function</span>="predicate nom."&gt;</span>a crucial year for me<span class="element">&lt;/phr&gt;</span><br/>    <span class="element">&lt;/phr&gt;</span><br/>    <span class="element">&lt;cl <span class="attribute">type</span>="finite declarative" <span class="attribute">function</span>="dependent causative"&gt;</span>because
+      <span class="element">&lt;phr <span class="attribute">type</span>="PP" <span class="attribute">function</span>="sentence adverb"&gt;</span>on June 18, 1954<span class="element">&lt;/phr&gt;</span>,<br/>          <span class="element">&lt;phr <span class="attribute">type</span>="NP" <span class="attribute">function</span>="subject"&gt;</span>I<span class="element">&lt;/phr&gt;</span><br/>     <span class="element">&lt;phr <span class="attribute">type</span>="VP" <span class="attribute">function</span>="predicate"&gt;</span><br/>      <span class="element">&lt;phr <span class="attribute">type</span>="V" <span class="attribute">function</span>="main verb"&gt;</span>began serving<span class="element">&lt;/phr&gt;</span><br/>      <span class="element">&lt;phr <span class="attribute">type</span>="NP" <span class="attribute">function</span>="complement"&gt;</span>a sentence in state prison
+	<span class="element">&lt;phr <span class="attribute">type</span>="PP" <span class="attribute">function</span>="complement"&gt;</span>for possession of marijuana<span class="element">&lt;/phr&gt;</span><br/>      <span class="element">&lt;/phr&gt;</span><br/>     <span class="element">&lt;/phr&gt;</span><br/>    <span class="element">&lt;/cl&gt;</span><br/>   <span class="element">&lt;/cl&gt;</span><br/>  <span class="element">&lt;/s&gt;</span>.<span class="element">&lt;/p&gt;</span></div></div><p><span id="id2504575"/>This style of markup, however, introduces spurious new lines and
+blanks into the text, which could make restoring the text to its
+original layout problematic. If the original layout is important, the
+original line breaks and font shifts should be recorded using
+<code>&lt;lb&gt;</code> elements, the global <span class="att">rend</span> attribute, etc.
+</p><p><span id="id2504591"/>The <code>&lt;w&gt;</code>, <code>&lt;m&gt;</code> and <code>&lt;c&gt;</code> elements are also
+identical in meaning to the <code>&lt;seg&gt;</code> element with a <span class="att">type</span>
+attribute of ‘w’, ‘m’, or ‘c’, and may occur wherever
+<code>&lt;seg&gt;</code> is permitted to occur. However, they have more  restricted
+content models than does <code>&lt;seg&gt;</code>: for example, the <code>&lt;w&gt;</code>
+element can only contain <code>&lt;w&gt;</code>, <code>&lt;m&gt;</code> and <code>&lt;c&gt;</code>
+elements, and parsed character data; the <code>&lt;m&gt;</code> element can only
+contain <code>&lt;c&gt;</code> elements and parsed character data; the <code>&lt;c&gt;</code>
+element can only contain parsed character data, and will often 
+contain  only a single character. Consequently, while <code>&lt;m&gt;</code> et al. can
+be translated directly into typed <code>&lt;seg&gt;</code> elements, the reverse is
+not necessarily the case.
+ </p><div class="p"><span id="id2504668"/>The restriction on the content of the <code>&lt;w&gt;</code> attribute in
+particular requires that a certain care must be exercised when using it,
+especially in relation to the use of other tags that one may think of as
+<em>word level</em>, but which are in fact defined as <em>phrase
+level</em>. Consider the problem of segmenting an occurrence of the
+<code>&lt;mentioned&gt;</code> element as a word.
+<div class="pre"> <span class="element">&lt;mentioned&gt;</span>grandiloquent<span class="element">&lt;/mentioned&gt;</span></div>
+The first of the following two encodings is legitimate; the second is
+not, since the <code>&lt;mentioned&gt;</code> element is not part of the content
+model of the <code>&lt;w&gt;</code> element:
+<div class="pre"> <span class="element">&lt;mentioned&gt;</span><br/>  <span class="element">&lt;w&gt;</span>grandiloquent<span class="element">&lt;/w&gt;</span><br/> <span class="element">&lt;/mentioned&gt;</span></div><div class="pre_eg">&lt;w&gt;&lt;mentioned&gt;grandiloquent&lt;/mentioned&gt;&lt;/w&gt;</div></div><div class="p"><span id="id2504717"/>On the other hand, both of the following encodings <em>are</em>
+legitimate:
+<div class="pre"> <span class="element">&lt;mentioned&gt;</span><br/>  <span class="element">&lt;phr&gt;</span>grandiloquent speech<span class="element">&lt;/phr&gt;</span><br/> <span class="element">&lt;/mentioned&gt;</span></div><div class="pre"> <span class="element">&lt;phr&gt;</span><br/>  <span class="element">&lt;mentioned&gt;</span>grandiloquent speech<span class="element">&lt;/mentioned&gt;</span><br/> <span class="element">&lt;/phr&gt;</span></div>
+The first encoding describes the citing of a phrase. The second
+describes a phrase which consists of something mentioned.
+</div><div class="p"><span id="id2504750"/>The <code>&lt;w&gt;</code> and <code>&lt;m&gt;</code> elements carry additional attributes
+which may be of use in many indexing or analytic applications. The 
+<span class="att">lemma</span> attribute may be used to specify  the
+<em>lemma</em>, that is the head- or base- form of an
+inflected verb or noun, for example:
+<div class="pre"> <span class="element">&lt;s <span class="attribute">xml:lang</span>="la"&gt;</span><br/>  <span class="element">&lt;w <span class="attribute">lemma</span>="timeo"&gt;</span>timeo<span class="element">&lt;/w&gt;</span><br/>  <span class="element">&lt;w <span class="attribute">lemma</span>="danaii"&gt;</span>Danaos<span class="element">&lt;/w&gt;</span><br/>  <span class="element">&lt;w <span class="attribute">lemma</span>="et"&gt;</span>et<span class="element">&lt;/w&gt;</span><br/>  <span class="element">&lt;w <span class="attribute">lemma</span>="donum"&gt;</span>dona<span class="element">&lt;/w&gt;</span><br/>  <span class="element">&lt;w <span class="attribute">lemma</span>="fero"&gt;</span>ferentes<span class="element">&lt;/w&gt;</span><br/> <span class="element">&lt;/s&gt;</span></div>
+Similarly, the <span class="att">baseForm</span> attribute may be specified for the
+<code>&lt;m&gt;</code> element, to indicate the ‘base form’ of
+a transformed morpheme:
+<div class="pre"> <span class="element">&lt;w <span class="attribute">type</span>="adjective"&gt;</span><br/>  <span class="element">&lt;m <span class="attribute">type</span>="prefix" <span class="attribute">baseForm</span>="con"&gt;</span>com<span class="element">&lt;/m&gt;</span><br/>  <span class="element">&lt;m <span class="attribute">type</span>="root"&gt;</span>fort<span class="element">&lt;/m&gt;</span><br/>  <span class="element">&lt;m <span class="attribute">type</span>="suffix"&gt;</span>able<span class="element">&lt;/m&gt;</span><br/> <span class="element">&lt;/w&gt;</span></div></div><div class="p"><span id="id2504848"/>The <code>&lt;w&gt;</code>, <code>&lt;m&gt;</code>, and <code>&lt;c&gt;</code> elements can be used
+together to give a fairly detailed low-level grammatical analysis of
+text. For example, consider the following segmentation of the English
+S-unit I didn't do it.
+<div class="pre"> <span class="element">&lt;w&gt;</span>I<span class="element">&lt;/w&gt;</span><br/> <span class="element">&lt;w&gt;</span><br/>  <span class="element">&lt;w&gt;</span>did<span class="element">&lt;/w&gt;</span><br/>  <span class="element">&lt;m&gt;</span>n't<span class="element">&lt;/m&gt;</span><br/> <span class="element">&lt;/w&gt;</span><br/> <span class="element">&lt;w&gt;</span>do<span class="element">&lt;/w&gt;</span><br/> <span class="element">&lt;w&gt;</span>it<span class="element">&lt;/w&gt;</span><br/> <span class="element">&lt;c&gt;</span>.<span class="element">&lt;/c&gt;</span></div></div><p><span id="id2504898"/>This segmentation, crude as it is, succeeds in representing the idea
+that did occurs as a word inside the word
+didn't. A further advantage of segmenting the text down
+to this level is that it becomes relatively simple to associate each
+such segment with a more detailed formal analysis. 
+This matter is taken up in detail in section <a class="link_ptr" href="AI.html#AILA" title="Linguistic Annotation">12.4  Linguistic Annotation</a>. 
+ </p><div class="p"><span id="id2504919"/>The <code>&lt;s&gt;</code>, <code>&lt;cl&gt;</code>, <code>&lt;phr&gt;</code>, <code>&lt;w&gt;</code>, <code>&lt;m&gt;</code>,
+and <code>&lt;c&gt;</code> elements are formally declared as follows:
+<div class="specgrp"><span id="DAILC"/><b>Specification group 113: Linguistic Segment Categories</b><dl><dt>Element s</dt><dd><pre class="eg">
+s = element s { s.content, s.attributes }
+
+s.content = <a class="link_odd" href="ref-macro.phraseSeq.html">macro.phraseSeq</a>
+
+s.attributes = att.segLike.attributes</pre></dd><dt>Element cl</dt><dd><pre class="eg">
+cl = element cl { cl.content, cl.attributes }
+
+cl.content = <a class="link_odd" href="ref-macro.phraseSeq.html">macro.phraseSeq</a>
+
+cl.attributes = att.segLike.attributes</pre></dd><dt>Element phr</dt><dd><pre class="eg">
+phr = element phr { phr.content, phr.attributes }
+
+phr.content = <a class="link_odd" href="ref-macro.phraseSeq.html">macro.phraseSeq</a>
+
+phr.attributes = att.segLike.attributes</pre></dd><dt>Element w</dt><dd><pre class="eg">
+w = element w { w.content, w.attributes }
+
+w.content =
+   ( text | <a class="link_odd" href="ref-model.gLike.html">model.gLike</a> | <a class="link_odd" href="ref-model.blockLike.html">model.blockLike</a> | <a class="link_odd" href="ref-w.html">w</a> | <a class="link_odd" href="ref-m.html">m</a> | <a class="link_odd" href="ref-c.html">c</a> | <a class="link_odd" href="ref-model.global.html">model.global</a> )*
+
+w.attributes = att.segLike.attributes, attribute lemma { <a class="link_odd" href="ref-data.word.html">data.word</a> }?</pre></dd><dt>Element m</dt><dd><pre class="eg">
+m = element m { m.content, m.attributes }
+
+m.content = ( text | <a class="link_odd" href="ref-model.gLike.html">model.gLike</a> | <a class="link_odd" href="ref-model.blockLike.html">model.blockLike</a> | <a class="link_odd" href="ref-c.html">c</a> | <a class="link_odd" href="ref-model.global.html">model.global</a> )*
+
+m.attributes = att.segLike.attributes, attribute baseForm { <a class="link_odd" href="ref-data.word.html">data.word</a> }?</pre></dd><dt>Element c</dt><dd><pre class="eg">
+c = element c { c.content, c.attributes }
+
+c.content = <a class="link_odd" href="ref-macro.xtext.html">macro.xtext</a>
+
+c.attributes = att.segLike.attributes</pre></dd></dl></div></div></div><div class="div2" id="AIATTS"><h3>12.2  Global Attributes for Simple Analyses</h3><div class="p"><span id="id2505718"/>When the module described by this chapter is selected, an
+additional attribute is defined for all elements:
+<ul class="specList"><li><b><a href="ref-att.global.analytic.html">att.global.analytic</a></b> provides additional global attributes for associating specific analyses or
+interpretations with appropriate portions of a text.<table class="attList"><tr><td class="Attribute">ana</td><td colspan="2">indicates one or more elements containing interpretations of the
+element on which the ana attribute appears.</td></tr></table></li></ul>
+The <span class="att">ana</span> attribute may be specified for any element.
+Its effect is to  associate the element with one or more others
+representing an analysis or interpretation of it. Its target should be
+one of the elements described in the section <a class="link_ptr" href="AI.html#AISP" title="Spans and Interpretations">12.3  Spans and Interpretations</a> below,
+or some other interpretative element such as <code>&lt;note&gt;</code>, on which 
+see section <a class="link_ptr" href="CO.html#CONO" title="Notes, Annotation, and Indexing">4.8  Notes, Annotation, and Indexing</a> or <code>&lt;fs&gt;</code>,
+on which see chapter <a class="link_ptr" href="FS.html" title="16">13  Feature Structures</a>.
+ </div><div class="p"><span id="id2505761"/>The <span class="att">ana</span> attribute is formally declared as follows:
+<div class="specgrp"><span id="DAIGA"/><b>Specification group 114: Global attribute for analysis</b><dl><dt><span class="label">Class</span>: att.global.analytic</dt><dd><pre class="eg">
+att.global.analytic.attributes = <a class="link_odd" href="ref-att.global.analytic.html">att.global.analytic.attribute.ana</a>
+
+att.global.analytic.attribute.ana = attribute ana { list { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a>+ } }?</pre>(Members: <a class="link_odd" href="ref-att.global.html">att.global</a>  )</dd></dl></div></div></div><div class="div2" id="AISP"><h3>12.3  Spans and Interpretations</h3><div class="p"><span id="id2505885"/>The simplest mechanisms for attaching analytic notes in some
+structured vocabulary to particular passages of text are provided by the
+<code>&lt;span&gt;</code> and <code>&lt;interp&gt;</code> elements, and their associated
+grouping elements <code>&lt;spanGrp&gt;</code> and <code>&lt;interpGrp&gt;</code>.
+<ul class="specList"><li><b>&lt;<a href="ref-span.html">span</a>&gt;</b> (span) associates an interpretative annotation directly with a span
+  of text.</li><li><b>&lt;<a href="ref-spanGrp.html">spanGrp</a>&gt;</b> (span group) collects together span tags.</li><li><b>&lt;<a href="ref-interp.html">interp</a>&gt;</b> (interpretation) summarizes a specific interpretative annotation which can be
+linked to a span of text.</li><li><b>&lt;<a href="ref-interpGrp.html">interpGrp</a>&gt;</b> (interpretation group) collects together a set of related interpretations which share
+responsibility or type.</li></ul></div><div class="p"><span id="id2505923"/>These elements are all members of the class <span class="ident-class">att.interpLike</span>, and thus share the following attributes:
+<ul class="specList"><li><b><a href="ref-att.interpLike.html">att.interpLike</a></b> provides attributes for elements which represent a formal analysis or interpretation.<table class="attList"><tr><td class="Attribute">resp</td><td colspan="2">indicates who is responsible for the interpretation.</td></tr><tr><td class="Attribute">type</td><td colspan="2">indicates what kind of phenomenon is being noted in the passage.</td></tr><tr><td class="Attribute">inst</td><td colspan="2">points to instances of the analysis or interpretation represented
+by the current element.</td></tr></table></li></ul></div><div class="p"><span id="id2505942"/>The <span class="att">type</span>  attribute of the
+<code>&lt;span&gt;</code> and <code>&lt;interp&gt;</code> elements may be used to indicate
+that the annotations are of specific types, for example thematic or
+structural. The annotation itself is supplied as the content of the
+<code>&lt;span&gt;</code> or <code>&lt;interp&gt;</code> element. 
+In the case of the <code>&lt;span&gt;</code> element, the span of text being
+annotated is indicated by values of the <span class="att">from</span> and
+<span class="att">to</span> attributes, the value of each being a pointer.  If
+the optional <span class="att">to</span> attribute is omitted, the span consists just
+of the element pointed at by the obligatory <span class="att">from</span> attribute.
+In the case of <code>&lt;interp&gt;</code> (see below), the span is indicated by a
+pointer from a <code>&lt;link&gt;</code> element or some similar mechanism.  The
+<span class="att">resp</span> attribute indicates the annotator responsible for this annotation.
+Here is
+an example of the <code>&lt;span&gt;</code> element.
+<div class="pre"> <span class="element">&lt;p <span class="attribute">xml:id</span>="MaQp1s2p114"&gt;</span><br/>  <span class="element">&lt;s <span class="attribute">xml:id</span>="MaQp1s2p114s1"&gt;</span>There was certainly a definite point at which the
+  thing began.<span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;s <span class="attribute">xml:id</span>="MaQp1s2p114s2"&gt;</span>It was not; then it was suddenly inescapable,
+  and nothing could have frightened it away.<span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;s <span class="attribute">xml:id</span>="MaQp1s2p114s3"&gt;</span>There was a slow integration, during which she,
+  and the little animals, and the moving grasses, and the sun-warmed
+  trees, and the slopes of shivering silvery mealies, and the great
+  dome of blue light overhead, and the stones of earth under her feet,
+  became one, shuddering together in a dissolution of dancing
+  atoms.<span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;s <span class="attribute">xml:id</span>="MaQp1s2p114s4"&gt;</span>She felt the rivers under the ground forcing
+  themselves pain&amp;shy;fully along her veins, swelling them out in an
+  unbearable pressure; her flesh was the earth, and suffered growth
+  like a ferment; and her eyes stared, fixed like the eye of the
+  sun.<span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;s <span class="attribute">xml:id</span>="MaQp1s2p114s5"&gt;</span>Not for one second longer (if the terms for time
+  apply) could she have borne it; but then, with a sudden movement
+  forwards and out, the whole process stopped; and <span class="element">&lt;emph <span class="attribute">rend</span>="italic"&gt;</span>that<span class="element">&lt;/emph&gt;</span> was <span class="element">&lt;soCalled <span class="attribute">rend</span>="dquo"&gt;</span>the
+  moment<span class="element">&lt;/soCalled&gt;</span> which it was impossible to remember<br/>    afterwards.<span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;span <span class="attribute">resp</span>="#DTL" <span class="attribute">from</span>="#MaQp1s2p114s3" <span class="attribute">to</span>="#MaQp1s2p114s5"&gt;</span>the moment<span class="element">&lt;/span&gt;</span><br/>  <span class="element">&lt;s <span class="attribute">xml:id</span>="MaQp1s2p114s6"&gt;</span>For during that space of time (which was
+  timeless) she understood quite finally her smallness, the
+  unimportance of humanity.<span class="element">&lt;/s&gt;</span><br/> <span class="element">&lt;/p&gt;</span></div><a class="notelink" href="#Note106"><sup>106</sup></a></div><div class="p"><span id="id2506117"/>The <code>&lt;span&gt;</code> element may, as in this example, be placed in the
+text near the textual span it is associated with. Alternatively, it  may be placed
+elsewhere in the same or a different document. Where several
+<code>&lt;span&gt;</code> or <code>&lt;interp&gt;</code> elements share the same attributes,
+for example having the same responsibility or type, it may be
+convenient to group them within a <code>&lt;spanGrp&gt;</code> element as follows:
+<div class="pre"> <span class="element">&lt;spanGrp <span class="attribute">resp</span>="#DTL"&gt;</span><br/>  <span class="element">&lt;span <span class="attribute">from</span>="#MaQp1s2p114s3" <span class="attribute">to</span>="#MaQp1s2p114s5"&gt;</span>the moment<span class="element">&lt;/span&gt;</span><br/>&lt;!-- other spans identified by DTL here --&gt;<br/> <span class="element">&lt;/spanGrp&gt;</span></div></div><div class="p"><span id="id2506166"/>Spans may also be used to represent structural divisions within 
+a narrative, particularly when these do not coincide with the
+structure implied by the element structure. Consider the following narrative:
+<blockquote class="display"><p><span id="id2506176"/>Sigmund, the son of Volsung, was a king in Frankish country.
+Sinfiotli was the eldest of his sons, the second was Helgi, the
+third Hamund.
+Borghild, Sigmund's wife, had a brother named —
+But Sinfiotli, her stepson, and — both wooed the same woman
+and Sinfiotli killed him over it.<a class="notelink" href="#Note107"><sup>107</sup></a>
+And when he came home, Borghild asked him to go away,
+but Sigmund offered her weregild, and she was obliged to accept it.
+At the funeral feast Borghild was serving beer.  She took poison, a big
+drinking horn full, and brought it to Sinfiotli.  When Sinfiotli looked
+into the horn, he saw that poison was in it, and said to Sigmund ‘This
+drink is cloudy, old man.’ Sigmund took the horn and drank it off.
+It is said that Sigmund was hardy and that poison did him no harm,
+inside or out.  And all his sons could tolerate poison on their skin.
+Borghild brought another horn to Sinfiotli, and asked him to drink, and
+everything happened as before.  And a third time she brought him a horn,
+and reproachful words as well, if he didn't drink from it.  He spoke
+again to Sigmund as before.  He said ‘Filter it through your mustache,
+son!’ Sinfiotli drank it off and at once fell dead.
+</p><p><span id="id2506213"/>Sigmund carried him a long way in his arms and came to a long,
+narrow fjord, and there was a small boat there and a man in it.  He
+offered to ferry Sigmund over the fjord.  But when Sigmund carried the
+body out to the boat, it was fully laden.  The man said Sigmund should
+go around the fjord inland.  The man pushed the boat out and then
+suddenly vanished.
+</p><p><span id="id2506222"/>King Sigmund lived a long time in Denmark in the kingdom of
+Borghild, after he married her.  Then he went south to Frankish lands,
+to the kingdom he had there.  Then he married Hiordis, the daughter of
+King Eylimi.  Their son was Sigurd.  King Sigmund fell in a battle with
+the sons of Hunding.  And then Hiordis married Alf, the son of King
+Hialprec.  Sigurd grew up there as a boy.
+</p><p><span id="id2506232"/>Sigmund and all his sons were tall and outstanding in their
+strength, their growth, their intelligence, and their accomplishments.
+But Sigurd was the most outstanding of all, and everyone who knows about
+the old days says he was the most outstanding of men and the noblest of
+all the warrior kings.</p></blockquote></div><div class="p"><span id="id2506243"/>A structural analysis of this text, dividing it into narrative units
+in a pattern shared with other texts from the same literature, might
+look like this:
+<div class="pre"> <span class="element">&lt;p <span class="attribute">xml:id</span>="P1"&gt;</span><br/>  <span class="element">&lt;s <span class="attribute">xml:id</span>="S1"&gt;</span>Sigmund ... was a king in Frankish country.<span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;s <span class="attribute">xml:id</span>="S2"&gt;</span>Sinfiotli was the eldest of his sons.<span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;s <span class="attribute">xml:id</span>="S3"&gt;</span>Borghild, Sigmund's wife, had a brother ...<span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;s <span class="attribute">xml:id</span>="S4A"&gt;</span>But Sinfiotli ... wooed the same woman<span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;s <span class="attribute">xml:id</span>="S4B"&gt;</span>and Sinfiotli killed him over it.<span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;s <span class="attribute">xml:id</span>="S5"&gt;</span>And when he came home, ... she was obliged to accept it.<span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;s <span class="attribute">xml:id</span>="S6"&gt;</span>At the funeral feast Borghild was serving beer.<span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;s <span class="attribute">xml:id</span>="S7"&gt;</span>She took poison ... and brought it to Sinfiotli.<span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;s <span class="attribute">xml:id</span>="S17"&gt;</span>Sinfiotli drank it off and at once fell dead.<span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;anchor <span class="attribute">xml:id</span>="EOS17"/&gt;</span><br/> <span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;p <span class="attribute">xml:id</span>="P2"&gt;</span>Sigmund carried him a long way in his arms ... <span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;p <span class="attribute">xml:id</span>="P3"&gt;</span>King Sigmund lived a long time in Denmark ... <span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;p <span class="attribute">xml:id</span>="P4"&gt;</span>Sigmund and all his sons were tall ... <span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;spanGrp <span class="attribute">resp</span>="#TMA" <span class="attribute">type</span>="narrative-structure"&gt;</span><br/>  <span class="element">&lt;span <span class="attribute">from</span>="#S1" <span class="attribute">to</span>="#S3"&gt;</span>introduction<span class="element">&lt;/span&gt;</span><br/>  <span class="element">&lt;span <span class="attribute">from</span>="#S4a"&gt;</span>conflict<span class="element">&lt;/span&gt;</span><br/>  <span class="element">&lt;span <span class="attribute">from</span>="#S4b"&gt;</span>climax<span class="element">&lt;/span&gt;</span><br/>  <span class="element">&lt;span <span class="attribute">from</span>="#S5" <span class="attribute">to</span>="#S17"&gt;</span>revenge<span class="element">&lt;/span&gt;</span><br/>  <span class="element">&lt;span <span class="attribute">from</span>="#EOS17"&gt;</span>reconciliation<span class="element">&lt;/span&gt;</span><br/>  <span class="element">&lt;span <span class="attribute">from</span>="#P2" <span class="attribute">to</span>="#P4"&gt;</span>aftermath<span class="element">&lt;/span&gt;</span><br/> <span class="element">&lt;/spanGrp&gt;</span></div></div><p><span id="id2506402"/>Note the use of an empty <code>&lt;anchor&gt;</code> element to provide a target for
+the ‘reconciliation’ unit which is normally part of
+the narrative pattern but which is not realized in the text shown.
+ </p><p><span id="id2506417"/>The same analysis may be expressed with the <code>&lt;interp&gt;</code> element
+instead of the <code>&lt;span&gt;</code> element; this element provide attributes
+for recording an interpretive category and its value, as well as the
+identity of the interpreter, but does not itself indicate which passage
+of text is being interpreted; the same interpretive structures can thus
+be associated with many passages of the text.  The association between
+text passages and <code>&lt;interp&gt;</code> elements must be made either by
+pointing from the text to the <code>&lt;interp&gt;</code> element with the
+<span class="att">ana</span> attribute defined in section <a class="link_ptr" href="AI.html#AIATTS" title="Global Attributes for Simple Analyses">12.2  Global Attributes for Simple Analyses</a>, or by
+pointing at both text and interpretation from a <code>&lt;link&gt;</code> element,
+as described in chapter <a class="link_ptr" href="SA.html" title="14">11  Linking, Segmentation, and Alignment</a>.
+ </p><div class="p"><span id="id2506470"/>To encode the first example above using <code>&lt;interp&gt;</code>, it is
+necessary to create a text element which contains — or corresponds to
+— the the third, fourth, and fifth orthographic sentences (S-units) in
+the paragraph.  This can be done either with the <span class="att">seg</span> element,
+described in <a class="link_ptr" href="SA.html#SASE" title="Blocks, Segments and Anchors">11.3  Blocks, Segments and Anchors</a>, or the <span class="att">join</span>
+element, described in <a class="link_ptr" href="SA.html#SAAG" title="Aggregation">11.7  Aggregation</a>.  The resulting
+element can then be associated with the <code>&lt;interp&gt;</code> element using the
+<span class="att">ana</span> attribute described in section <a class="link_ptr" href="AI.html#AIATTS" title="Global Attributes for Simple Analyses">12.2  Global Attributes for Simple Analyses</a>.  We illustrate using the <code>&lt;seg&gt;</code> element.
+<div class="pre"> <span class="element">&lt;p <span class="attribute">xml:id</span>="MarQp1s2p114"&gt;</span><br/>  <span class="element">&lt;s <span class="attribute">xml:id</span>="MarQp1s2p114s1"&gt;</span>There was certainly a definite point ... <span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;s <span class="attribute">xml:id</span>="MarQp1s2p114s2"&gt;</span>It was not; then it was suddenly inescapable ... <span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;seg <span class="attribute">xml:id</span>="MarQp1s2p114s3-5" <span class="attribute">ana</span>="#moment"&gt;</span><br/>   <span class="element">&lt;s <span class="attribute">xml:id</span>="MarQp1s2p114s3"&gt;</span>There was a slow integration ... <span class="element">&lt;/s&gt;</span><br/>   <span class="element">&lt;s <span class="attribute">xml:id</span>="MarQp1s2p114s4"&gt;</span>She felt the rivers under the ground ... <span class="element">&lt;/s&gt;</span><br/>   <span class="element">&lt;s <span class="attribute">xml:id</span>="MarQp1s2p114s5"&gt;</span>Not for one second longer ... <span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;/seg&gt;</span><br/>  <span class="element">&lt;s <span class="attribute">xml:id</span>="MarQp1s2p114s6"&gt;</span>For during that space of time ... <span class="element">&lt;/s&gt;</span><br/> <span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;interp <span class="attribute">xml:id</span>="moment" <span class="attribute">resp</span>="#DTL"&gt;</span>the moment<span class="element">&lt;/interp&gt;</span></div></div><div class="p"><span id="id2506601"/>The second example above can be recoded using <code>&lt;interp&gt;</code> and
+<code>&lt;interpGrp&gt;</code> tags in a similar manner. The interpretation
+itself can be expressed in an <code>&lt;interpGrp&gt;</code> element, which would
+replace the <code>&lt;spanGrp&gt;</code> in the example shown above:
+<div class="pre"> <span class="element">&lt;interpGrp <span class="attribute">resp</span>="#TMA" <span class="attribute">type</span>="structuralUnit"&gt;</span><br/>  <span class="element">&lt;interp <span class="attribute">xml:id</span>="INTRO"&gt;</span>introduction<span class="element">&lt;/interp&gt;</span><br/>  <span class="element">&lt;interp <span class="attribute">xml:id</span>="CONFLICT"&gt;</span>conflict<span class="element">&lt;/interp&gt;</span><br/>  <span class="element">&lt;interp <span class="attribute">xml:id</span>="CLIMAX"&gt;</span>climax<span class="element">&lt;/interp&gt;</span><br/>  <span class="element">&lt;interp <span class="attribute">xml:id</span>="REVENGE"&gt;</span>revenge<span class="element">&lt;/interp&gt;</span><br/>  <span class="element">&lt;interp <span class="attribute">xml:id</span>="RECONCIL"&gt;</span>reconciliation<span class="element">&lt;/interp&gt;</span><br/>  <span class="element">&lt;interp <span class="attribute">xml:id</span>="AFTERM"&gt;</span>aftermath<span class="element">&lt;/interp&gt;</span><br/> <span class="element">&lt;/interpGrp&gt;</span></div></div><div class="p"><span id="id2506674"/>Any of these <code>&lt;interp&gt;</code> elements may be linked to the text either
+by means of the <span class="att">ana</span> attribute, or by means of <code>&lt;link&gt;</code>
+elements.  Using the <span class="att">ana</span> attribute (on <code>&lt;seg&gt;</code> elements
+introduced specifically for this purpose), the text would be encoded as
+follows:
+<div class="pre"> <span class="element">&lt;p <span class="attribute">xml:id</span>="PP1"&gt;</span><br/>  <span class="element">&lt;seg <span class="attribute">xml:id</span>="SS1-SS3" <span class="attribute">ana</span>="#INTRO"&gt;</span><br/>   <span class="element">&lt;s <span class="attribute">xml:id</span>="SS1"&gt;</span>Sigmund ... was a king in Frankish country.<span class="element">&lt;/s&gt;</span><br/>   <span class="element">&lt;s <span class="attribute">xml:id</span>="SS2"&gt;</span>Sinfiotli was the eldest of his sons.<span class="element">&lt;/s&gt;</span><br/>   <span class="element">&lt;s <span class="attribute">xml:id</span>="SS3"&gt;</span>Borghild, Sigmund's wife, had a brother ... <span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;/seg&gt;</span><br/>  <span class="element">&lt;s <span class="attribute">xml:id</span>="SS4A" <span class="attribute">ana</span>="#CONFLICT"&gt;</span>But Sinfiotli ... wooed the same woman<span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;s <span class="attribute">xml:id</span>="SS4B" <span class="attribute">ana</span>="#I3"&gt;</span>and Sinfiotli killed him over it.<span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;seg <span class="attribute">xml:id</span>="SS5-SS17" <span class="attribute">ana</span>="#CLIMAX"&gt;</span><br/>   <span class="element">&lt;s <span class="attribute">xml:id</span>="SS5"&gt;</span>And when he came home, ... she was obliged to accept it.<span class="element">&lt;/s&gt;</span><br/>   <span class="element">&lt;s <span class="attribute">xml:id</span>="SS6"&gt;</span>At the funeral feast Borghild was serving beer.<span class="element">&lt;/s&gt;</span><br/>   <span class="element">&lt;s <span class="attribute">xml:id</span>="SS17"&gt;</span>Sinfiotli drank it off and at once fell dead.<span class="element">&lt;/s&gt;</span><br/>  <span class="element">&lt;/seg&gt;</span><br/> <span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;anchor <span class="attribute">xml:id</span>="NIL1" <span class="attribute">ana</span>="#RECONCIL"/&gt;</span><br/> <span class="element">&lt;p <span class="attribute">xml:id</span>="PP2"&gt;</span>Sigmund carried him a long way in his arms ... <span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;p <span class="attribute">xml:id</span>="PP3"&gt;</span>King Sigmund lived a long time in Denmark ... <span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;p <span class="attribute">xml:id</span>="PP4"&gt;</span>Sigmund and all his sons were tall ... <span class="element">&lt;/p&gt;</span><br/> <span class="element">&lt;join <span class="attribute">xml:id</span>="PP2-PP4" <span class="attribute">targets</span>="#PP2 #PP3 #PP4" <span class="attribute">ana</span>="#AFTERM"/&gt;</span></div></div><div class="p"><span id="id2506830"/>The linkage may also be accomplished using a <code>&lt;linkGrp&gt;</code> element,
+whose content is a set of <code>&lt;link&gt;</code> elements which point to each
+interpretive element and its corresponding text unit.  This method does
+not require the use of the <span class="att">ana</span> attribute on the text
+units.
+<div class="pre"> <span class="element">&lt;linkGrp <span class="attribute">targFunc</span>="text interpretation"&gt;</span><br/>  <span class="element">&lt;link <span class="attribute">targets</span>="#INTRO    #SS1-SS3"/&gt;</span><br/>  <span class="element">&lt;link <span class="attribute">targets</span>="#CONFLICT #SS4A"/&gt;</span><br/>  <span class="element">&lt;link <span class="attribute">targets</span>="#CLIMAX   #SS4b"/&gt;</span><br/>  <span class="element">&lt;link <span class="attribute">targets</span>="#REVENGE  #SS5-SS17"/&gt;</span><br/>  <span class="element">&lt;link <span class="attribute">targets</span>="#RECONCIL #NIL1"/&gt;</span><br/>  <span class="element">&lt;link <span class="attribute">targets</span>="#AFTERM   #P2-P4"/&gt;</span><br/> <span class="element">&lt;/linkGrp&gt;</span></div></div><p><span id="id2506884"/>One obvious advantage of using <code>&lt;interp&gt;</code> rather than
+<code>&lt;span&gt;</code> elements for the Sigmund text is that the <code>&lt;interp&gt;</code>
+elements can be reused for marking up other texts in the same document,
+whereas the <code>&lt;span&gt;</code> elements cannot.  Another is that the
+<code>&lt;interp&gt;</code> element can be used to provide interpretations for
+discontinuous text elements (represented by <code>&lt;join&gt;</code> elements).  On
+the other hand, the use of <code>&lt;interp&gt;</code> elements may require the
+creation of special text elements not otherwise needed (e.g. the
+<code>&lt;seg&gt;</code> and the <code>&lt;join&gt;</code> in the revised encoding of the text),
+whereas the the use of <code>&lt;span&gt;</code> elements does not.
+ </p><div class="p"><span id="id2506933"/>The formal declarations for the <code>&lt;span&gt;</code>, <code>&lt;spanGrp&gt;</code>,
+<code>&lt;interp&gt;</code> and <code>&lt;interpGrp&gt;</code> elements are:
+<div class="specgrp"><span id="DAISP"/><b>Specification group 115: Spans</b><dl><dt>Element span</dt><dd><pre class="eg">
+span = element span { span.content, span.attributes }
+
+span.content = <a class="link_odd" href="ref-macro.phraseSeq.html">macro.phraseSeq</a>
+
+span.attributes =
+   att.interpLike.attributes,
+   attribute from { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a> },
+   attribute to { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a> }?</pre></dd><dt>Element spanGrp</dt><dd><pre class="eg">
+spanGrp = element spanGrp { spanGrp.content, spanGrp.attributes }
+
+spanGrp.content = <a class="link_odd" href="ref-span.html">span</a>*
+
+spanGrp.attributes = att.interpLike.attributes</pre></dd><dt>Element interp</dt><dd><pre class="eg">
+interp = element interp { interp.content, interp.attributes }
+
+interp.content = <a class="link_odd" href="ref-macro.phraseSeq.html">macro.phraseSeq</a>
+
+interp.attributes = att.interpLike.attributes</pre></dd><dt>Element interpGrp</dt><dd><pre class="eg">
+interpGrp = element interpGrp { interpGrp.content, interpGrp.attributes }
+
+interpGrp.content = <a class="link_odd" href="ref-interp.html">interp</a>+
+
+interpGrp.attributes = att.interpLike.attributes</pre></dd></dl></div></div></div><div class="div2" id="AILA"><h3>12.4  Linguistic Annotation</h3><p><span id="id2507552"/>By <em>linguistic annotation</em> we mean here any annotation
+determined by an analysis of linguistic features of the text, excluding
+as borderline cases both the formal structural properties of the text
+(e.g. its division into chapters or paragraphs) and descriptive
+information about its context (the circumstances of its production, its
+genre or medium).  The structural properties of any TEI-conformant text
+should be represented using the structural elements discussed elsewhere
+in this chapter and in chapters <a class="link_ptr" href="CO.html" title="6">4  Elements Available in All TEI Documents</a>, <a class="link_ptr" href="DS.html" title="7">5  Default Text Structure</a>, and
+the various chapters of Part III.  The contextual
+properties of a TEI text are fully documented in the TEI Header, which
+is discussed in chapter <a class="link_ptr" href="HD.html" title="5">3  The TEI Header</a>, and in section <a class="link_ptr" href="CC.html#CCAH" title="Contextual Information">20.2  Contextual Information</a>.
+ </p><p><span id="id2507588"/>Other forms of linguistic annotation may be applied at a number of
+levels in a text.  A code (such as a word-class or part-of-speech
+code) may be associated with each word or token, or with groups of such
+tokens, which may be continuous, discontinuous or nested.  A code may
+also be associated with relationships (such as cohesion) perceived as
+existing between distinct parts of a text.  The codes themselves may
+stand for discrete non-decomposable categories, or they may represent
+highly articulated bundles of textual features.  Their function may be
+to place the annotated part of the text somewhere within a narrowly
+linguistic or discoursal domain of analysis, or within a more general
+semantic field, or any combination drawn from these and other domains.
+ </p><p><span id="id2507605"/>The manner by which such annotations are generated and attached to
+the text may be entirely automatic, entirely manual or a mixture.  The
+ease and accuracy with which analysis may be automated may vary with the
+level at which the annotation is attached.  The method employed should
+be documented in the <code>&lt;interpretation&gt;</code> element within the encoding
+description of the TEI Header, as described in section <a class="link_ptr" href="HD.html#HD53" title="The Editorial Practices Declaration">3.3.3  The Editorial Practices Declaration</a>.
+Where different parts of a language corpus have used
+different annotation methods, the <span class="att">decls</span>
+attribute may be used to indicate the fact, as further
+discussed in section <a class="link_ptr" href="CC.html#CCAS" title="Associating Contextual Information with a Text">20.3  Associating Contextual Information with a Text</a>.
+</p><div class="p"><span id="id2507635"/>As one example of such types of analysis, consider the following
+sentence, taken from the Lancaster/IBM Treebank
+Project.<a class="notelink" href="#Note108"><sup>108</sup></a><blockquote class="display"><p>The victim's friends told police that Kruger drove
+into the quarry and never surfaced.</p></blockquote></div><div class="p"><span id="id2507680"/>Our discussion focuses
+on the way that this sentence might be analysed using the Claws system
+developed at the University of Lancaster, but exactly the same
+principles may be applied to a wide variety of other systems.<a class="notelink" href="#Note109"><sup>109</sup></a>
+Output from the system consists of a segmented and tokenized version
+of the text, in which word class codes have been associated with each
+token.  For our example sentence, we might conveniently represent
+these codes using entity references:<a class="notelink" href="#Note110"><sup>110</sup></a><div class="pre"> <span class="element">&lt;s&gt;</span>The&amp;AT; victim&amp;NN1;'s&amp;GEN; friends&amp;NN2; told&amp;VVD; police&amp;NN2;
+that&amp;CST; Krueger&amp;NP1;  drove&amp;VVD; into&amp;II; the&amp;AT;
+quarry&amp;NN1;  and&amp;CC;  never&amp;RR; surfaced&amp;VVD;.&amp;PUN;<span class="element">&lt;/s&gt;</span></div>
+The names used for these entity references have some significance for
+the human reader (<span class="val">AT</span> for <em>article</em>,
+<span class="val">NN1</span> for <em>singular noun</em>, <span class="val">NN2</span> for
+<em>plural noun</em>, etc.), but their representation in the
+output from a system processing the document may be adjusted by
+modifying the entity declarations to suit the convenience of whatever
+analytic software is to be used.  For example, if a parser
+operating on this sentence uses a set of entity declarations in the
+following form, then the word class tags will simply disappear from
+the output.
+<div class="pre_eg">&lt;!ENTITY AT ""&gt;
+&lt;!ENTITY NN1 ""&gt;
+&lt;!ENTITY GEN ""&gt;
+&lt;!-- ... --&gt;</div>
+Alternatively, suppose the entity set in use follows the following
+pattern:
+<div class="pre_eg">&lt;!ENTITY AT  "[definite article]"&gt;
+&lt;!ENTITY NN1 "[singular noun]"&gt;
+&lt;!ENTITY GEN "[genitive suffix]"&gt;
+&lt;!-- ... --&gt;</div>
+Then the sample sentence will be processed as if it began:
+<div class="pre_eg">The[definite article] 
+victim[singular noun]'s[genitive suffix] ...</div></div><p><span id="id2507807"/>It would be more useful if the replacement texts for each entity
+were a code of some significance to a particular analysis program.  If
+the codes are considered to be <em>atomic</em>, then one of the
+mechanisms based on the <code>&lt;interp&gt;</code> element described in section <a class="link_ptr" href="AI.html#AISP" title="Spans and Interpretations">12.3  Spans and Interpretations</a>
+ is sufficient.  If the codes are considered to be
+compositional (for example that <span class="val">NN1</span> and <span class="val">NN2</span>
+have something in common, namely their <em>noun-ness</em>, which
+they do not share with, say, <span class="val">VVD</span>), then this
+compositionality may be most clearly expressed using a mechanism based
+on the <code>&lt;fs&gt;</code> element defined in chapter <a class="link_ptr" href="FS.html" title="16">13  Feature Structures</a>.  </p><div class="p"><span id="id2507857"/>One such replacement for the word-class entity references above
+is a set of empty <code>&lt;ptr&gt;</code> elements bearing <span class="att">target</span>
+attributes as described in section <a class="link_ptr" href="CO.html#COXR" title="Simple Links and Cross References">4.6  Simple Links and Cross References</a>.  The required
+entity definitions would look as follows.
+<div class="pre_eg">&lt;!ENTITY   AT   "&lt;ptr target='AT'/&gt;" &gt;
+&lt;!ENTITY   NN1  "&lt;ptr target='NN1'/&gt;"&gt;
+&lt;!ENTITY   GEN  "&lt;ptr target='GEN'/&gt;"&gt;
+&lt;!-- ... --&gt;</div>
+Then the text would be expanded to read:
+<div class="pre"> <span class="element">&lt;s&gt;</span>The <span class="element">&lt;ptr <span class="attribute">target</span>="#AT"/&gt;</span> victim <span class="element">&lt;ptr <span class="attribute">target</span>="#NN1"/&gt;</span>'s <span class="element">&lt;ptr <span class="attribute">target</span>="#GEN"/&gt;</span><br/> friends <span class="element">&lt;ptr <span class="attribute">target</span>="#NN2"/&gt;</span> told <span class="element">&lt;ptr <span class="attribute">target</span>="#VVD"/&gt;</span> police<br/> <span class="element">&lt;ptr <span class="attribute">target</span>="#NN2"/&gt;</span> that <span class="element">&lt;ptr <span class="attribute">target</span>="#CST"/&gt;</span> Krueger <span class="element">&lt;ptr <span class="attribute">target</span>="#NP1"/&gt;</span><br/> drove <span class="element">&lt;ptr <span class="attribute">target</span>="#VVD"/&gt;</span> into <span class="element">&lt;ptr <span class="attribute">target</span>="#II"/&gt;</span> the <span class="element">&lt;ptr <span class="attribute">target</span>="#AT"/&gt;</span><br/> quarry <span class="element">&lt;ptr <span class="attribute">target</span>="#NN1"/&gt;</span> and <span class="element">&lt;ptr <span class="attribute">target</span>="#CC"/&gt;</span> never <span class="element">&lt;ptr <span class="attribute">target</span>="#RR"/&gt;</span><br/> surfaced <span class="element">&lt;ptr <span class="attribute">target</span>="#VVD"/&gt;</span>.<span class="element">&lt;ptr <span class="attribute">target</span>="#PUN"/&gt;</span><br/> <span class="element">&lt;/s&gt;</span></div></div><div class="p"><span id="id2507962"/>The <code>&lt;ptr&gt;</code> elements are designed to point to elements with
+unique identifiers.  But we have yet to specify what those elements are.
+Suppose we say that they are <code>&lt;interp&gt;</code> elements whose values are the
+same as their identifiers.  That is, we provide an <code>&lt;interpGrp&gt;</code>
+element as follows:
+<div class="pre"> <span class="element">&lt;interpGrp <span class="attribute">type</span>="word classes"&gt;</span><br/>  <span class="element">&lt;interp <span class="attribute">xml:id</span>="at"&gt;</span>article<span class="element">&lt;/interp&gt;</span><br/>  <span class="element">&lt;interp <span class="attribute">xml:id</span>="nn1"&gt;</span>noun sing<span class="element">&lt;/interp&gt;</span><br/>  <span class="element">&lt;interp <span class="attribute">xml:id</span>="gen"&gt;</span>genitive<span class="element">&lt;/interp&gt;</span><br/> <span class="element">&lt;/interpGrp&gt;</span></div></div><p><span id="id2508008"/>Although common practice, this (or any similar) method of relating
+text to interpretation is seriously flawed.  The interpretations are
+related not to text elements, but to points in the text, namely those
+that are occupied by the <code>&lt;ptr&gt;</code> elements.  In order to relate the
+interpretation to the appropriate text units, a uniform convention needs
+to be applied; for example, that an interpretation relates to all the
+text material preceding the <code>&lt;ptr&gt;</code> element that points to it up to
+the immediately preceding <code>&lt;ptr&gt;</code>, or up to the <code>&lt;s&gt;</code> that
+delimits the S-unit containing that <code>&lt;ptr&gt;</code> element, whichever is
+nearer.  While this convention works with texts that are marked up
+solely with <code>&lt;ptr&gt;</code> elements that point to interpretation elements,
+it does not work with texts with additional markup, for example
+<code>&lt;ptr&gt;</code> elements that are used for some other purpose.  In addition,
+the convention fails for any markup in which interpretations are
+intended to be associated with nested text elements.
+ </p><div class="p"><span id="id2508052"/>None of these difficulties arise if the text is fully segmented, using
+the linguistic segment elements described in section <a class="link_ptr" href="AI.html#AILC" title="Linguistic Segment Categories">12.1  Linguistic Segment Categories</a>,
+and the <span class="att">ana</span> attribute to point to the interpretations
+that are associated with each such segment, as follows:
+<div class="pre"> <span class="element">&lt;s <span class="attribute">type</span>="sentence"&gt;</span><br/>  <span class="element">&lt;w <span class="attribute">ana</span>="#at"&gt;</span>The<span class="element">&lt;/w&gt;</span><br/>  <span class="element">&lt;w <span class="attribute">ana</span>="#nn1"&gt;</span>victim<span class="element">&lt;/w&gt;</span><br/>  <span class="element">&lt;m <span class="attribute">ana</span>="#gen"&gt;</span>'s<span class="element">&lt;/m&gt;</span><br/>  <span class="element">&lt;w <span class="attribute">ana</span>="#nn2"&gt;</span>friends<span class="element">&lt;/w&gt;</span><br/>  <span class="element">&lt;w <span class="attribute">ana</span>="#vvd"&gt;</span>told<span class="element">&lt;/w&gt;</span><br/>  <span class="element">&lt;w <span class="attribute">ana</span>="#nn2"&gt;</span>police<span class="element">&lt;/w&gt;</span><br/>  <span class="element">&lt;w <span class="attribute">ana</span>="#cst"&gt;</span>that<span class="element">&lt;/w&gt;</span><br/>  <span class="element">&lt;w <span class="attribute">ana</span>="#np1"&gt;</span>Krueger<span class="element">&lt;/w&gt;</span><br/>  <span class="element">&lt;w <span class="attribute">ana</span>="#vvd"&gt;</span>drove<span class="element">&lt;/w&gt;</span><br/>  <span class="element">&lt;w <span class="attribute">ana</span>="#ii"&gt;</span>into<span class="element">&lt;/w&gt;</span><br/>  <span class="element">&lt;w <span class="attribute">ana</span>="#at"&gt;</span>the<span class="element">&lt;/w&gt;</span><br/>  <span class="element">&lt;w <span class="attribute">ana</span>="#nn1"&gt;</span>quarry<span class="element">&lt;/w&gt;</span><br/>  <span class="element">&lt;w <span class="attribute">ana</span>="#cc"&gt;</span>and<span class="element">&lt;/w&gt;</span><br/>  <span class="element">&lt;w <span class="attribute">ana</span>="#rr"&gt;</span>never<span class="element">&lt;/w&gt;</span><br/>  <span class="element">&lt;w <span class="attribute">ana</span>="#vvd"&gt;</span>surfaced<span class="element">&lt;/w&gt;</span><br/>  <span class="element">&lt;c <span class="attribute">ana</span>="#pun"&gt;</span>.<span class="element">&lt;/c&gt;</span><br/> <span class="element">&lt;/s&gt;</span></div></div><div class="p"><span id="id2508165"/>Analysis into phrase and clause elements can be superimposed on the
+word and morpheme tagging in the preceding illustration. For example,
+Claws provides the following constituent analysis of the sample sentence
+(the word class codes have been deleted):
+<div class="pre_eg">[N [G The victim's G] friends N] [V told [N police N] 
+[Fn that [N Krueger N] [V [V&amp; drove [P into [N the quarry N]P]V&amp;]
+and [V+ never surfaced V+]V]Fn]V]</div></div><div class="p"><span id="id2508180"/>Treating the labels on the brackets as phrase or clause
+interpretations, this analysis of the structure of the example sentence
+can be combined with the word class analysis and represented as follows
+(the symbol <span class="val">V&amp;</span> representing the first part of a coordinate
+phrase, has been replaced by <span class="val">V1</span>, and <span class="val">V+</span>, representing the
+second part, has been replaced by <span class="val">V2</span>).
+<div class="pre"> <span class="element">&lt;s <span class="attribute">type</span>="sentence"&gt;</span><br/>  <span class="element">&lt;phr <span class="attribute">ana</span>="#n"&gt;</span><br/>   <span class="element">&lt;phr <span class="attribute">ana</span>="#g"&gt;</span><br/>    <span class="element">&lt;w <span class="attribute">ana</span>="#at"&gt;</span>The<span class="element">&lt;/w&gt;</span><br/>    <span class="element">&lt;w <span class="attribute">ana</span>="#nn1"&gt;</span>victim<span class="element">&lt;/w&gt;</span><br/>    <span class="element">&lt;m <span class="attribute">ana</span>="#gen"&gt;</span>'s<span class="element">&lt;/m&gt;</span><br/>   <span class="element">&lt;/phr&gt;</span><br/>   <span class="element">&lt;w <span class="attribute">ana</span>="#nn2"&gt;</span>friends<span class="element">&lt;/w&gt;</span><br/>  <span class="element">&lt;/phr&gt;</span><br/>  <span class="element">&lt;phr <span class="attribute">ana</span>="#v"&gt;</span><br/>   <span class="element">&lt;w <span class="attribute">ana</span>="#vvd"&gt;</span>told<span class="element">&lt;/w&gt;</span><br/>   <span class="element">&lt;phr <span class="attribute">ana</span>="#n"&gt;</span><br/>    <span class="element">&lt;w <span class="attribute">ana</span>="#nn2"&gt;</span>police<span class="element">&lt;/w&gt;</span><br/>   <span class="element">&lt;/phr&gt;</span><br/>   <span class="element">&lt;cl <span class="attribute">ana</span>="#fn"&gt;</span><br/>    <span class="element">&lt;w <span class="attribute">ana</span>="#cst"&gt;</span>that<span class="element">&lt;/w&gt;</span><br/>    <span class="element">&lt;phr <span class="attribute">ana</span>="#n"&gt;</span><br/>     <span class="element">&lt;w <span class="attribute">ana</span>="#np1"&gt;</span>Krueger<span class="element">&lt;/w&gt;</span><br/>    <span class="element">&lt;/phr&gt;</span><br/>    <span class="element">&lt;phr <span class="attribute">ana</span>="#v"&gt;</span><br/>     <span class="element">&lt;phr <span class="attribute">ana</span>="#v1"&gt;</span><br/>      <span class="element">&lt;w <span class="attribute">ana</span>="#vvd"&gt;</span>drove<span class="element">&lt;/w&gt;</span><br/>      <span class="element">&lt;phr <span class="attribute">ana</span>="#p"&gt;</span><br/>       <span class="element">&lt;w <span class="attribute">ana</span>="#ii"&gt;</span>into<span class="element">&lt;/w&gt;</span><br/>       <span class="element">&lt;phr <span class="attribute">ana</span>="#n"&gt;</span><br/>        <span class="element">&lt;w <span class="attribute">ana</span>="#at"&gt;</span>the<span class="element">&lt;/w&gt;</span><br/>        <span class="element">&lt;w <span class="attribute">ana</span>="#nn1"&gt;</span>quarry<span class="element">&lt;/w&gt;</span><br/>       <span class="element">&lt;/phr&gt;</span><br/>      <span class="element">&lt;/phr&gt;</span><br/>     <span class="element">&lt;/phr&gt;</span><br/>     <span class="element">&lt;w <span class="attribute">ana</span>="#cc"&gt;</span>and<span class="element">&lt;/w&gt;</span><br/>     <span class="element">&lt;phr <span class="attribute">ana</span>="#v2"&gt;</span><br/>      <span class="element">&lt;w <span class="attribute">ana</span>="#rr"&gt;</span>never<span class="element">&lt;/w&gt;</span><br/>      <span class="element">&lt;w <span class="attribute">ana</span>="#vvd"&gt;</span>surfaced<span class="element">&lt;/w&gt;</span><br/>     <span class="element">&lt;/phr&gt;</span><br/>    <span class="element">&lt;/phr&gt;</span><br/>   <span class="element">&lt;/cl&gt;</span><br/>  <span class="element">&lt;/phr&gt;</span><br/>  <span class="element">&lt;c <span class="attribute">ana</span>="#pun"&gt;</span>.<span class="element">&lt;/c&gt;</span><br/> <span class="element">&lt;/s&gt;</span></div></div><p><span id="id2508361"/>A representation using the <code>&lt;linkGrp&gt;</code> element can be obtained by
+supplying each linguistic segment with its own <span class="att">xml:id</span> attribute,
+removing its <span class="att">ana</span> attribute, and putting each
+segment-interpretation pair into a <code>&lt;link&gt;</code> element inside the
+<code>&lt;linkGrp&gt;</code> element.
+</p><p><span id="id2508386"/>Each linguistic segment so far discussed has been well-behaved with
+respect to the basic document hierarchy, having only a single parent.
+Moreover, the segmentation has been complete, in that each part of the
+text is accounted for by some segment at each level of analysis, without
+discontinuities or overlap.  This state of affairs does not of
+course apply in all types of analysis, and these Guidelines provide a
+number of mechanisms to support the representation of discontinuities or
+multiple analyses.  A brief overview of these facilities is provided in
+chapter <a class="link_ptr" href="USE.html#NH" title="31">24.6  Multiple Hierarchies</a>; also see <a class="link_ptr" href="SA.html" title="14">11  Linking, Segmentation, and Alignment</a>.  These mechanisms
+all depend to a greater or lesser degree on the ability to associate a
+unique identifier with any element in a TEI-conformant text, and then to
+specify that identifier as the target of a pointing element of some kind.
+</p><div class="p"><span id="id2508422"/>The mechanisms proposed in this chapter may also be used to encode
+analyses of an entirely different kind, for example discourse function.
+Here is an application of the span technique to record details of a sales
+transaction in a spoken text.
+<div class="pre"> <span class="element">&lt;u <span class="attribute">xml:id</span>="u1" <span class="attribute">who</span>="#p1"&gt;</span>Can I have ten oranges and a kilo of bananas please?<span class="element">&lt;/u&gt;</span><br/> <span class="element">&lt;u <span class="attribute">xml:id</span>="u2" <span class="attribute">who</span>="#p2"&gt;</span>Yes, anything else?<span class="element">&lt;/u&gt;</span><br/> <span class="element">&lt;u <span class="attribute">xml:id</span>="u3" <span class="attribute">who</span>="#p1"&gt;</span>No thanks.<span class="element">&lt;/u&gt;</span><br/> <span class="element">&lt;u <span class="attribute">xml:id</span>="u4" <span class="attribute">who</span>="#p2"&gt;</span>That'll be dollar forty.<span class="element">&lt;/u&gt;</span><br/> <span class="element">&lt;u <span class="attribute">xml:id</span>="u5" <span class="attribute">who</span>="#p1"&gt;</span>Two dollars<span class="element">&lt;/u&gt;</span><br/> <span class="element">&lt;u <span class="attribute">xml:id</span>="u6" <span class="attribute">who</span>="#p1"&gt;</span>Sixty, eighty, two dollars. Thank you.<span class="element">&lt;/u&gt;</span><br/> <span class="element">&lt;spanGrp <span class="attribute">type</span>="transactions"&gt;</span><br/>  <span class="element">&lt;span <span class="attribute">from</span>="#u1"&gt;</span>sale request<span class="element">&lt;/span&gt;</span><br/>  <span class="element">&lt;span <span class="attribute">from</span>="#u2" <span class="attribute">to</span>="#u3"&gt;</span>sale compliance<span class="element">&lt;/span&gt;</span><br/>  <span class="element">&lt;span <span class="attribute">from</span>="#u4"&gt;</span>sale<span class="element">&lt;/span&gt;</span><br/>  <span class="element">&lt;span <span class="attribute">from</span>="#u5"&gt;</span>purchase<span class="element">&lt;/span&gt;</span><br/>  <span class="element">&lt;span <span class="attribute">from</span>="#u6"&gt;</span>purchase closure<span class="element">&lt;/span&gt;</span><br/> <span class="element">&lt;/spanGrp&gt;</span></div><a class="notelink" href="#Note111"><sup>111</sup></a>
+For further discussion of the <code>&lt;u&gt;</code> (utterance) element and other
+elements recommended for transcriptions of spoken language,
+see chapter <a class="link_ptr" href="TS.html" title="11">8  Transcriptions of Speech</a>.
+</div></div><p class="left"><i> Up: </i><a class="navigation" href="index.html">Contents</a><i> Previous: </i><a class="navigation" href="SA.html">11  Linking, Segmentation, and Alignment</a><i> Next: </i><a class="navigation" href="FS.html">13  Feature Structures</a></p><div class="notes"><div class="noteHeading">Notes</div><div class="note"><a id="Note102">102.</a>Or, as they are widely known,
+<em>attribute-value pairs</em>; this term should not be confused,
+however, with SGML or XML attributes and their values, which are similar in
+concept but distinct in their formal definitions.</div><div class="note"><a id="Note103">103.</a><span id="index-bibl-id2503871"/>Eldridge Cleaver <i>Soul on Ice</i> (first para of first  
+letter from prison)</div><div class="note"><a id="Note104">104.</a><span id="index-bibl-id2504020"/>Defoe, <i>Journal of the Plague Year</i></div><div class="note"><a id="Note105">105.</a><span id="index-bibl-id2504126"/>Lewis Carroll, <i>Through the Looking Glass</i>, ch4</div><div class="note"><a id="Note106">106.</a><span id="index-bibl-id2506108"/>Doris Lessing, <i>Martha Quest</i>, 1952, p52-53</div><div class="note"><a id="Note107">107.</a>The rule marks spaces
+left for the missing name in the manuscript.</div><div class="note"><a id="Note108">108.</a>See <span id="index-bibl-id2507644"/>G. N. Leech and R. G. Garside‘Running a Grammar Factory,’  in
+<i>English Computer Corpora:
+Selected Papers and Research Guide,</i>S. Johansson and A.-B. Stenstr⊘m (ed.) ed.
+(Berlin: de Gruyter; New York: Mouton, 1991),
+pp. 15–32.
+This sentence and its analysis are reproduced by kind permission of the
+University of Lancaster's Unit for Computer Research on the English
+Language.
+ </div><div class="note"><a id="Note109">109.</a>For the word-class tagging method used by Claws see
+<span id="index-bibl-id2507691"/>I. Marshall‘Choice of
+Grammatical Word Class without Global Syntactic Analysis: Tagging
+Words in the LOB Corpus,’  in <i>Computers and the
+Humanities</i> 17 (1983): 139–50.
+For an overview of the system see <span id="index-bibl-id2507709"/>R. G. Garside,
+G. N. Leech, and G. R. Sampson<i>The Computational
+Analysis of English: a Corpus-Based Approach</i> (Oxford: Oxford
+University Press, 1991).</div><div class="note"><a id="Note110">110.</a>We have
+replaced the Claws code <span class="val">$</span> for the
+'s morpheme by <span class="val">GEN</span>, as
+in the tag set used by the British National Corpus, and the code <span class="val">.</span> for the
+final full stop by <span class="val">PUN</span>.</div><div class="note"><a id="Note111">111.</a><span id="index-bibl-id2508526"/>R. Hasan <i>Language, context, and
+text</i>... OUP 1989, p 59</div></div><div class="stdfooter"><hr/><div class="footer"><a class="plain" href="http://www.tei-c.org/Consortium/">TEI Consortium</a> | <a class="plain" href="index.html">TEI P5</a> | <a class="plain" href="http://www.tei-c.org/Consortium/contact.xml">Feedback</a></div><hr/><address> edited by C.M. Sperberg-McQueen and
+	Lou Burnard.
+      Date: 2007<br/>Copyright TEI Consortium 2007<!--
+	  Generated  using an XSLT version 1.0 stylesheet
+	  based on http://www.tei-c.org/Stylesheets/teic/tei.xsl
+	  processed using libxslt
+	  on 2007-03-13T16:03:00Z--></address></div></div></div></div></body></html>

@@ -1,0 +1,95 @@
+namespace rng = "http://relaxng.org/ns/structure/1.0"
+
+# Schema generated 2007-03-13T16:02:29Z..
+# Copyright 2005 TEI Consortium.
+# This is free software; you can redistribute it and/or
+#	    modify it under the terms of the GNU General Public
+#	    License as published by the Free Software Foundation;
+#	    either version 2 of the License, or (at your option) any
+#	    later version.
+# This material is distributed in the hope that it will be
+#	    useful, but WITHOUT ANY WARRANTY; without even the implied
+#	    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+#	    PURPOSE. See the GNU General Public License for more
+#	    details.
+# You should have received a copy of the GNU General Public
+#	    License along with this file; if not, write to the Free
+#	    Software Foundation, Inc., 59 Temple Place, Suite 330,
+#	    Boston, MA 02111-1307, USA.
+# To contact the TEI Consortium use the following addresses.
+#	    For general (non-technical) enquiries: 
+#		  target="mailto:info@tei-c.org"/>info@tei-c.orgFor membership enquiries: membership@tei-c.orgFor technical enquiries, particularly about the
+#		Guidelines, DTDs, schemas, or software available from
+#		the TEI-C: editors@tei-c.orgFor up to date information, consult the TEI web site at http://www.tei-c.org/P5Tables, formulae, and figures
+
+# Definitions from module figures
+
+# Set global predeclared macros
+
+# Set predeclared macros
+
+# 0. predeclared macros
+
+# 1. classes
+
+# 2. elements
+
+cell =
+  ## contains one cell of a table. 
+  element cell { cell.content, cell.attributes }
+cell.content = macro.paraContent
+cell.attributes =
+  att.global.attributes, att.tableDecoration.attributes, empty
+
+figDesc =
+  ## (Description of Figure) contains a brief prose description of the appearance or content
+  ## of a graphic figure, for use when documenting an image without
+  ## displaying it.
+  element figDesc { figDesc.content, figDesc.attributes }
+figDesc.content = macro.paraContent
+figDesc.attributes = att.global.attributes, empty
+
+figure =
+  ## contains a block containing graphics, illustrations, or figures.
+  element figure { figure.content, figure.attributes }
+figure.content =
+  (model.pLike
+   | model.global
+   | figure
+   | figDesc
+   | model.graphicLike
+   | head)*
+figure.attributes = att.global.attributes, empty
+
+formula =
+  ## contains a mathematical or other formula.
+  element formula { formula.content, formula.attributes }
+formula.content = text
+formula.attributes =
+  att.global.attributes,
+  ## supplies the name of a previously defined notation used for the
+  ## content of the
+  ## element.
+  attribute notation { data.code }?,
+  empty
+
+row =
+  ## contains one row of a table. 
+  element row { row.content, row.attributes }
+row.content = ((cell | table), model.global*)+
+row.attributes =
+  att.global.attributes, att.tableDecoration.attributes, empty
+
+table =
+  ## contains text displayed in tabular form, in
+  ## rows and columns.
+  element table { table.content, table.attributes }
+table.content = (head | model.global)*, (row, model.global*)+
+table.attributes =
+  att.global.attributes,
+  ## indicates the number of rows in the table.
+  attribute rows { data.count }?,
+  ## indicates the number of columns in each row of the table.
+  attribute cols { data.count }?,
+  empty
+# 3. macros

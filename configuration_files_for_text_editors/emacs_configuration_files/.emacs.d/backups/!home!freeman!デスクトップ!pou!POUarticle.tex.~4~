@@ -1,0 +1,258 @@
+%*******************************************************************
+%je te mets juste des remarques, pour les erreurs de compilation je
+%verrai ça cet après-midi
+%******************************************************************
+
+
+% book example for classicthesis.sty
+\documentclass[10pt,a4paper,footinclude]{scrartcl} % KOMA-Script book
+\usepackage[utf8x]{inputenc}
+\usepackage[frenchb]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lipsum}
+\usepackage[linedheaders]{
+/usr/share/texmf-texlive/tex/latex/classicthesis/classicthesis} % ,manychapters
+\usepackage[osf]{libertine}
+\usepackage{enumerate}
+%\hypersetup{linktocpage=true,bookmarksnumbered=true,
+%pageanchor=true, hypertexnames=false,naturalnames=true,
+%plainpages=false}
+\begin{document}
+\title{STATUS}
+\subtitle{Association loi 1901}
+\maketitle
+
+%
+%pourquoi sauter autant de lignes entre \maketitle et le reste ? À éviter
+%
+
+\emph{Les soussignés … désirant créer entre eux une association, ont établi les
+statuts suivants :}%pour sauter une ligne, un saut de ligne en
+                      %appuyant sur la touche entrée suffit. les "\\"
+                      %correspondent plus à un saut de ligne forcé,
+                      %dans certains cas particuliers. D'ailleurs avec
+                      %un nouvel environnement (enumerate), il y aura
+                      %forcément un retour à la ligne automatique,
+                      %donc en fait, sauf si tu veux laisser un espace
+                      %visible, le saut de ligne ne sert à rien.
+
+\paragraph{Article 1}  \subparagraph{Constitution et d\'enomination}%même remarque, un
+                                %saut de ligne suffit.
+Il est fondé entre les adhérents aux présents statuts une association régie par
+la loi du 1er juillet 1901 et le décret du 16 août 1901, ayant pour titre et
+logo :
+
+PARIS OUEST URBA%là, le saut de ligne est inutile puisque
+                  %avec \item, il y a nécessairement un nouveau saut
+                  %de ligne qui se fait (automatiquement).
+
+%par exemple : ça, c'est ce que t'as écrit :
+\subparagraph{Objet}
+L’objet de l’association consiste à promouvoir le lien entre les diplômés d’un
+Master en Sciences Humaines et Sociales, mention Géographie et Aménagement de
+l’Université Paris Ouest Nanterre La Défense, par la création d’une base de
+données de ses membres et l’exploitation d’un média de partage.
+
+Particulièrement, le réseau d’anciens ainsi constitué doit permettre de
+faciliter l’insertion professionnelle de tout diplômé  d’un Master en Sciences
+Humaines et Sociales, mention Géographie et Aménagement de l’Université Paris
+Ouest Nanterre La Défense, par la diffusion d’offres d’emploi, le partage de
+contacts professionnels et la promotion des formations dispensées au niveau des
+Masters en Sciences Humaines et Sociales, mention Géographie et Aménagement de
+l’Université Paris Ouest Nanterre La Défense.
+%Et ça, c'est ce que moi j'aurai écrit :
+% \item \textsc{Objet}
+
+% L’objet de l’association consiste à promouvoir le lien entre les diplômés d’un
+% Master en Sciences Humaines et Sociales, mention Géographie et Aménagement de
+% l’Université Paris Ouest Nanterre La Défense, par la création d’une base de
+% données de ses membres et l’exploitation d’un média de partage.
+
+% Particulièrement, le réseau d’anciens ainsi constitué doit permettre de
+% faciliter l’insertion professionnelle de tout diplômé  d’un Master en Sciences
+% Humaines et Sociales, mention Géographie et Aménagement de l’Université Paris
+% Ouest Nanterre La Défense, par la diffusion d’offres d’emploi, le partage de
+% contacts professionnels et la promotion des formations dispensées au niveau des
+% Masters en Sciences Humaines et Sociales, mention Géographie et Aménagement de
+% l’Université Paris Ouest Nanterre La Défense.
+
+
+%pour le reste des "\\", c'est le même type de remarque alors je te laisse voir.
+\subparagraph{Durée}%mais maintenant, une deuxième chose qui me
+                      %saute aux yeux, c'est le \item
+                      %\textsc{Durée}. T'auras les petites majuscules
+                      %avec la commande \paragraph{}. Mais sinon,
+                      %autant éviter. Aussi, personnellement, j'aurai
+                      %préféréé écrire \item[Dur\'ee] Et au passage,
+                      %d'un point de vue typographique, je ne pense
+                      %pas que faire un saut de ligne entre l'item et
+                      %ce que t'écris après soit correct. Donc bref,
+                      %évite les \\ après l'item.
+L’association est créée pour une durée illimitée.
+
+%pour tout ce qui suit, j'aurai les même remarques que précédemment.
+\paragraph{Siège social}
+Le siège de l’association est fixé à Nanterre 92000.
+Il pourra être transféré par décision du Conseil d’Administration.
+
+\paragraph{Moyens d’action}
+Les moyens d’action de l’association sont les suivants :
+  \begin{itemize}
+	\item Utilisation d’un site internet comme support rendant accessibles
+des
+informations sur les membres de l’association tout en leur permettant
+d’interagir sur une plate-forme de partage.
+	\item Organisation de manifestations et toute initiative permettant de
+réaliser l’objet de l’association. \\
+  \end{itemize}
+
+\item \textsc{Composition de l’association}\\
+L’association se compose de :
+  \begin{itemize}	
+  \item \emph{Membres adhérents}\\
+Sont membres adhérents ceux qui sont à jour de leur cotisation annuelle. Ils ont
+le droit de vote à l’Assemblée Générale.
+  \item \emph{Membres d’honneur}\\
+Sont membres d’honneur ceux qui ont rendu des services à l’association de part
+leur action ou leur soutient. Ils sont dispensés de cotisations mais n’ont pas
+le droit de vote à l'Assemblée Générale.\\
+  \end{itemize}
+
+\item \textsc{Admission et adhésion} \\
+Peuvent faire partie de l’association en tant que membre adhérent toute personne
+diplômé e d’un Master en Sciences Humaines et Sociales, mention Géographie et
+Aménagement de l’Université Paris Ouest Nanterre La Défense.\\
+Pour faire partie de l’association, un  membre adhérent doit adhérer aux
+présents statuts et s’acquitter de la cotisation annuelle dont le montant est
+fixé chaque année par l’Assemblée Générale Ordinaire. \\
+L’adhésion d’un membre d’honneur doit être proposée par un membre adhérent au
+minimum dont une personne appartenant au Conseil d’Administration au minimum et
+soumise à la décision du Conseil d’Administration.\\
+Pour faire partie de l’association un membre d’honneur doit adhérer aux présents
+statuts.\\
+Le Conseil d’Administration pourra refuser toute adhésion, avec avis motivé aux
+intéressés.\\
+
+\item \textsc{Perte de la qualité de membre}\\
+La qualité de membre se perd par :
+  \begin{itemize}
+	\item La démission ;
+	\item Le décès ;
+	\item La radiation prononcée par le Conseil d’Administration pour non
+paiement
+de la cotisation ou pour motif grave.\\
+  \end{itemize}
+
+\item \textsc{Conseil d’Administration}\\
+L'association est dirigée par un Conseil d'Administration composé de 9 membres
+au maximum, élus pour 1 année par l'Assemblée Générale.
+Les membres sont rééligibles. Le Conseil d’Administration étant renouvelé chaque
+année.\\
+En cas de vacance de poste, le Conseil d’Administration pourvoit provisoirement
+au remplacement de ses membres. Il est procédé à leur remplacement définitif à
+la plus prochaine Assemblée Générale. Les pouvoirs des membres ainsi élus
+prennent fin à l’époque où devrait normalement expirer le mandat des membres
+remplacés.\\
+Les mineurs de plus de 16 ans sont éligibles au Conseil d’Administration mais
+non au Bureau.\\
+Le Conseil d’Administration se réunit au moins 1 fois par an et toutes les fois
+qu’il est convoqué par le Président ou au moins un quart de ses membres.
+Les décisions sont prises à la majorité des voix des présents. En cas de
+partage, la voix du Président est prépondérante. Le vote par procuration n’est
+pas autorisé.\\
+La présence d’au moins la moitié des membres est nécessaire pour que le Conseil
+d’Administration puisse délibérer valablement.\\
+Le Conseil d'Administration choisit parmi ses membres, au scrutin secret, un
+Bureau composé de :
+  \begin{itemize}
+  \item Un Président ;
+  \item Un Secrétaire ;
+  \item Un Trésorier ;
+  \item Un vice-président chargé de la communication ;
+  \item Un vice-président chargé de l’animation du réseau.\\
+  \end{itemize}
+
+\item \textsc{Assemblée Générale Ordinaire}\\
+L’Assemblée Générale Ordinaire se réunit au moins une fois par an et comprend
+tous les membres de l’association à jour de leur cotisation.\\
+Quinze jours au moins avant la date fixée, les membres de l'association sont
+convoqués à la demande du Président ou du Conseil d'Administration, ou du tiers
+des membres de l'association. L'ordre du jour est indiqué sur les
+convocations.\\
+L’Assemblée Générale, après avoir délibéré, se prononce sur le rapport moral ou
+d’activité et sur les comptes de l’exercice financier. Elle délibère sur les
+orientations à venir.\\
+Elle pourvoit à la nomination ou au renouvellement des membres du Conseil
+d’Administration.\\
+Elle fixe aussi le montant de la cotisation annuelle.\\
+Les décisions de l’Assemblée sont prises à la majorité des membres présents.\\
+
+\item \textsc{Assemblée Générale Extraordinaire}\\
+Si besoin est, ou sur demande du quart des membres, le Président convoque une
+Assemblée Générale Extraordinaire. Les conditions de convocation sont identiques
+à celles de l’Assemblée Générale Ordinaire.\\
+Les délibérations sont prises à la majorité des deux tiers des membres
+présents.\\
+
+\item \textsc{Affiliation}\\
+L’association est affiliée au Collectif National des Jeunes Urbanistes et
+s’engage à se conformer aux statuts et au règlement intérieur de la
+fédération.\\
+
+\item \textsc{Ressources}\\
+Les ressources de l’association comprennent le montant des cotisations, les dons
+des membres, les subventions de toute nature pouvant lui être allouées et toutes
+autres ressources provenant de toutes prestations et moyens légaux.\\
+
+\item \textsc{Rémunération}\\
+Les frais et débours occasionnés pour l’accomplissement du mandat
+d’administrateur sont remboursés au vu des pièces justificatives. Le rapport
+financier présenté à l’Assemblée Générale Ordinaire doit faire mention des
+remboursements de frais de mission, de déplacement ou de représentation payés à
+des membres du Conseil d’Administration.\\
+
+\item \textsc{Conditions de modification statutaires}\\
+Les présents statuts pourront être soumis à modification sur présentation d’un
+projet de modification lié à la convocation d’une Assemblée Générale et faisant
+l’objet d’un vote lors de cette Assemblée générale.\\
+Ces modifications concerneront notamment les changements de dénomination liés à
+la publication
+de la plaquette des Master en Sciences Humaines et Sociales, mention Géographie
+et Aménagement de l’Université Paris Ouest Nanterre La Défense.\\
+
+\item \textsc{Dissolution}\\
+En cas de dissolution prononcée par l’Assemblée Générale Extraordinaire,
+convoquée selon les modalités prévues à l’article 10, un ou plusieurs
+liquidateurs sont nommés par celle-ci et l’actif, s’il y a lieu, est dévolu à
+une association ayant des buts similaires, conformément à l'article 9 de la loi
+du 1er juillet 1901 et au décret du 16 août 1901.\\
+
+\item \textsc{Règlement intérieur}\\
+Un règlement intérieur peut être établi par le Conseil d'Administration qui le
+fait alors approuver par l'Assemblée Générale.\\
+Ce règlement éventuel est destiné à fixer les divers points non prévus par les
+statuts, notamment ceux qui ont trait à l'administration interne de
+l'association.\\
+
+\end{enumerate}
+
+
+Les présents statuts ont été approuvés par :
+
+L’assemblée constitutive du
+L’assemblée Générale Extraordinaire du
+
+Signatures :
+%si tu veux mettre un espace entre "Président" et "autre membre du
+%bureau", alors surtout ne mets pas d'espace, c'est
+%artificiel. Utilise l'environnement flushright ou flushleft (ce qui
+%donneras concrètement \begin{flushright} texte
+%qui est à déplacer à droite\end{flushright}). Y a des exemples ici :
+%http://www.h4.dion.ne.jp/~latexcat/intro/intro8.html. Mais toi c'est
+%une courte phrase, alors  \raggedright, c'est bien. Je te laisse
+%jeter un coup d'oeil ici : http://en.wikibooks.org/wiki/LaTeX/Formatting#Paragraph_Formatting
+
+Président Autre membre du bureau
+
+
+\end{document}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;title&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;title&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;title&gt;</h1></div><div><span id="title"/><table border="1" class="wovenodd"><tr><td class="elementSpec">title</td><td colspan="2" class="wovenodd-col2">contains the full title of a work of any kind.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.hiLike.html">model.hiLike</a> <a class="link_odd" href="ref-model.msItemPart.html">model.msItemPart</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element title
+{
+   att.global.attributes,
+   attribute level { "a" | "m" | "j" | "s" | "u" }?,
+   attribute type { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> }?,
+   <a class="link_odd" href="ref-macro.paraContent.html">macro.paraContent</a>
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>In addition to global attributes<table><tr><td class="attDef">level</td><td colspan="2">indicates the bibliographic level for a title, that is,
+	whether it identifies  an article, book, journal,
+series, or unpublished material.</td></tr><tr><td/><td><span class="label">Status: </span>Required when applicable</td></tr><tr><td><!-- --></td><td valign="top">Legal values are:<table class="valList"><tr><td valign="top"><b>a</b></td><td valign="top">(analytic title (article, poem, or other item published as
+          part of a larger item)
+    ) </td></tr><tr><td valign="top"><b>m</b></td><td valign="top">(monographic title (book, collection, or other item published
+          as a distinct item, including single volumes of multi-volume
+          works)
+    ) </td></tr><tr><td valign="top"><b>j</b></td><td valign="top">(journal title
+    ) </td></tr><tr><td valign="top"><b>s</b></td><td valign="top">(series title
+    ) </td></tr><tr><td valign="top"><b>u</b></td><td valign="top">(title of unpublished material (including theses and
+          dissertations unless published by a commercial press)) </td></tr></table></td></tr><tr><td/><td><p><span id="id2421606"/>If the title appears directly enclosed within an
+<code>&lt;analytic&gt;</code> element, the <span class="att">level</span>, if given, must be
+‘a’; if it appears directly enclosed within a <code>&lt;monogr&gt;</code>
+element, <span class="att">level</span> must be ‘m’, ‘j’, or ‘u’;
+when <code>&lt;title&gt;</code> is directly enclosed by <code>&lt;series&gt;</code>,
+<span class="att">level</span> must be ‘s’. If it appears within a
+	<code>&lt;msItem&gt;</code>, this attribute should not be supplied.</p></td></tr><tr><td class="attDef">type</td><td colspan="2">classifies the title according to some convenient typology.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a></code></td></tr><tr><td><!-- --></td><td valign="top">Sample values include:<table class="valList"><tr><td valign="top"><b>main</b></td><td valign="top">(main title
+    ) </td></tr><tr><td valign="top"><b>sub</b></td><td valign="top">(subtitle, title of part
+    ) </td></tr><tr><td valign="top"><b>alt</b></td><td valign="top">(alternate title, often in another language,
+                           by which the work is also known
+    ) </td></tr><tr><td valign="top"><b>short</b></td><td valign="top">(abbreviated form of title) </td></tr><tr><td valign="top"><b>desc</b></td><td valign="top">(descriptive paraphrase of the work functioning as a title) </td></tr></table></td></tr><tr><td/><td><p><span id="id2421805"/>This attribute is provided for convenience in analysing
+titles and processing them according to their type; where such
+specialized processing is not necessary, there is no need for such
+analysis, and the entire title, including subtitles and any parallel
+titles, may be enclosed within a single <code>&lt;title&gt;</code> element.</p></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;title&gt;</span>La vie mode d'emploi. Romans.<span class="element">&lt;/title&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;title&gt;</span>Synthese: an international journal for epistemology, methodology
+and history of science<span class="element">&lt;/title&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;title&gt;</span>Information Technology and the Research Process: Proceedings
+of a conference held at Cranfield Institute of Technology, UK, 18–21
+July 1989<span class="element">&lt;/title&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;title&gt;</span>Hardy's Tess of the D'Urbervilles: a machine readable edition<span class="element">&lt;/title&gt;</span></div></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="CO.html#COBICOR" title="Authors, Titles, and Editors">4.11.2.2  Authors, Titles, and Editors</a></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="HD.html#HD21" title="The Title Statement">3.2.1  The Title Statement</a></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="HD.html#HD26" title="The Series Statement">3.2.5  The Series Statement</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">core</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

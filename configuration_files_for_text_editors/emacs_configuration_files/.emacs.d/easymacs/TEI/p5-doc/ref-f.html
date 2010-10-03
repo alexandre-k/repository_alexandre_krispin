@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;f&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;f&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;f&gt;</h1></div><div><span id="f"/><table border="1" class="wovenodd"><tr><td class="elementSpec">f</td><td colspan="2" class="wovenodd-col2">(Feature) represents a feature value specification, that
+  is, the association of a name with a value of any of several different types.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element f
+{
+   att.global.attributes,
+   attribute name { <a class="link_odd" href="ref-data.name.html">data.name</a> },
+   attribute fVal { <a class="link_odd" href="ref-data.pointer.html">data.pointer</a> }?,
+   <a class="link_odd" href="ref-model.featureVal.html">model.featureVal</a>*
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>In addition to global attributes<table><tr><td class="attDef">name</td><td colspan="2">provides a name for the feature.</td></tr><tr><td/><td><span class="label">Status: </span><b>Required</b></td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.name.html">data.name</a></code></td></tr><tr><td/><td><span class="label">Values: </span>Any name.</td></tr><tr><td class="attDef">fVal</td><td colspan="2">references any element which can be used to represent the
+  value of a feature.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.pointer.html">data.pointer</a></code></td></tr><tr><td/><td><span class="label">Values: </span>the  identifier of an element representing
+a  feature value</td></tr><tr><td/><td><p><span id="id2512846"/>If this attribute is supplied as well as content, the value referenced is to be unified with  that contained.</p></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;f <span class="attribute">name</span>="gender"&gt;</span><br/>  <span class="element">&lt;symbol <span class="attribute">value</span>="feminine"/&gt;</span><br/> <span class="element">&lt;/f&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p><span id="id2512874"/>If the element is empty then a value must be supplied for the 
+<span class="att">fVal</span> attribute.</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="FS.html#FSBI" title="Elementary Feature Structures and the Binary Feature Value">13.2  Elementary Feature Structures and the Binary
+Feature Value</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">iso-fs</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

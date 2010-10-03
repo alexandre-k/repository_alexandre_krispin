@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;choice&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;choice&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;choice&gt;</h1></div><div><span id="choice"/><table border="1" class="wovenodd"><tr><td class="elementSpec">choice</td><td colspan="2" class="wovenodd-col2">groups a number of alternative encodings for the same point in
+  a text.</td></tr><tr><td valign="top"><span class="label">Attributes: </span></td><td>Global attributes only</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.pPart.edit.html">model.pPart.edit</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element choice { att.global.attributes, ( <a class="link_odd" href="ref-model.choicePart.html">model.choicePart</a> | <a class="link_odd" href="ref-choice.html">choice</a> )* }</pre></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><p><span id="id2401170"/>An American encoding of <i>Gulliver's Travels</i> which
+    retains the British spelling but also provides a version
+    regularized to American spelling might be encoded as follows.</p><div class="pre"> <span class="element">&lt;p&gt;</span>Lastly, That, upon his solemn oath to observe all the above
+   articles, the said man-mountain shall have a daily allowance of
+   meat and drink sufficient for the support of <span class="element">&lt;choice&gt;</span><br/>   <span class="element">&lt;sic&gt;</span>1724<span class="element">&lt;/sic&gt;</span><br/>   <span class="element">&lt;corr&gt;</span>1728<span class="element">&lt;/corr&gt;</span><br/>  <span class="element">&lt;/choice&gt;</span> of our subjects,<br/>    with free access to our royal person, and other marks of our<br/>    <span class="element">&lt;choice&gt;</span><br/>   <span class="element">&lt;orig&gt;</span>favour<span class="element">&lt;/orig&gt;</span><br/>   <span class="element">&lt;reg&gt;</span>favor<span class="element">&lt;/reg&gt;</span><br/>  <span class="element">&lt;/choice&gt;</span>.<span class="element">&lt;/p&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p><span id="id2401214"/>Because the children of a  <code>&lt;choice&gt;</code> element all
+    represent alternative ways of encoding the same sequence, it is
+    natural to think of them as mutually exclusive. However, there may
+    be cases where a full representation of a text requires the
+    alternative encodings to be considered as parallel. </p><p><span id="id2401226"/>Note also that <code>&lt;choice&gt;</code> elements may self-nest.</p><p><span id="id2401233"/>For a specialized version of <code>&lt;choice&gt;</code> for encoding multiple
+    witnesses of a single source, see section <a class="link_ptr" href="TC.html#TCAPLL" title="The Apparatus Entry, Readings, and Witnesses">16.1  The Apparatus Entry, Readings, and Witnesses</a>.</p></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">core</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

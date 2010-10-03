@@ -1,0 +1,2319 @@
+namespace a1 = "http://relaxng.org/ns/compatibility/annotations/1.0"
+namespace rng = "http://relaxng.org/ns/structure/1.0"
+
+# Schema generated 2007-03-13T16:02:28Z..
+# Copyright 2005 TEI Consortium.
+# This is free software; you can redistribute it and/or
+#	    modify it under the terms of the GNU General Public
+#	    License as published by the Free Software Foundation;
+#	    either version 2 of the License, or (at your option) any
+#	    later version.
+# This material is distributed in the hope that it will be
+#	    useful, but WITHOUT ANY WARRANTY; without even the implied
+#	    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+#	    PURPOSE. See the GNU General Public License for more
+#	    details.
+# You should have received a copy of the GNU General Public
+#	    License along with this file; if not, write to the Free
+#	    Software Foundation, Inc., 59 Temple Place, Suite 330,
+#	    Boston, MA 02111-1307, USA.
+# To contact the TEI Consortium use the following addresses.
+#	    For general (non-technical) enquiries: 
+#		  target="mailto:info@tei-c.org"/>info@tei-c.orgFor membership enquiries: membership@tei-c.orgFor technical enquiries, particularly about the
+#		Guidelines, DTDs, schemas, or software available from
+#		the TEI-C: editors@tei-c.orgFor up to date information, consult the TEI web site at http://www.tei-c.org/P5Declarations for datatypes, classes, and macros available to all
+# TEI modules
+
+# Definitions from module tei
+
+# Set global predeclared macros
+TEI |= notAllowed
+ab |= notAllowed
+abbr |= notAllowed
+accMat |= notAllowed
+acquisition |= notAllowed
+activity |= notAllowed
+actor |= notAllowed
+add |= notAllowed
+addName |= notAllowed
+addSpan |= notAllowed
+additional |= notAllowed
+additions |= notAllowed
+addrLine |= notAllowed
+address |= notAllowed
+adminInfo |= notAllowed
+affiliation |= notAllowed
+age |= notAllowed
+alt |= notAllowed
+altGrp |= notAllowed
+altIdent |= notAllowed
+altIdentifier |= notAllowed
+analytic |= notAllowed
+anchor |= notAllowed
+app |= notAllowed
+arc |= notAllowed
+argument |= notAllowed
+att |= notAllowed
+attDef |= notAllowed
+attList |= notAllowed
+attRef |= notAllowed
+author |= notAllowed
+authority |= notAllowed
+availability |= notAllowed
+back |= notAllowed
+bibl |= notAllowed
+biblFull |= notAllowed
+biblItem |= notAllowed
+biblScope |= notAllowed
+biblStruct |= notAllowed
+bicond |= notAllowed
+binary |= notAllowed
+binaryObject |= notAllowed
+binding |= notAllowed
+bindingDesc |= notAllowed
+birth |= notAllowed
+bloc |= notAllowed
+body |= notAllowed
+broadcast |= notAllowed
+byline |= notAllowed
+c |= notAllowed
+cRefPattern |= notAllowed
+caesura |= notAllowed
+camera |= notAllowed
+caption |= notAllowed
+case |= notAllowed
+castGroup |= notAllowed
+castItem |= notAllowed
+castList |= notAllowed
+catDesc |= notAllowed
+catRef |= notAllowed
+catchwords |= notAllowed
+category |= notAllowed
+cb |= notAllowed
+cell |= notAllowed
+certainty |= notAllowed
+change |= notAllowed
+channel |= notAllowed
+char |= notAllowed
+charDesc |= notAllowed
+charName |= notAllowed
+charProp |= notAllowed
+choice |= notAllowed
+cit |= notAllowed
+cl |= notAllowed
+classCode |= notAllowed
+classDecl |= notAllowed
+classSpec |= notAllowed
+classes |= notAllowed
+closer |= notAllowed
+code |= notAllowed
+collation |= notAllowed
+collection |= notAllowed
+colloc |= notAllowed
+colophon |= notAllowed
+cond |= notAllowed
+condition |= notAllowed
+constitution |= notAllowed
+content |= notAllowed
+corr |= notAllowed
+correction |= notAllowed
+country |= notAllowed
+creation |= notAllowed
+custEvent |= notAllowed
+custodialHist |= notAllowed
+damage |= notAllowed
+datatype |= notAllowed
+date |= notAllowed
+dateline |= notAllowed
+death |= notAllowed
+decoDesc |= notAllowed
+decoNote |= notAllowed
+def |= notAllowed
+\default |= notAllowed
+defaultVal |= notAllowed
+del |= notAllowed
+delSpan |= notAllowed
+depth |= notAllowed
+derivation |= notAllowed
+desc |= notAllowed
+dictScrap |= notAllowed
+dicteg |= notAllowed
+dimensions |= notAllowed
+distance |= notAllowed
+distinct |= notAllowed
+distributor |= notAllowed
+district |= notAllowed
+\div |= notAllowed
+div1 |= notAllowed
+div2 |= notAllowed
+div3 |= notAllowed
+div4 |= notAllowed
+div5 |= notAllowed
+div6 |= notAllowed
+div7 |= notAllowed
+divGen |= notAllowed
+docAuthor |= notAllowed
+docDate |= notAllowed
+docEdition |= notAllowed
+docImprint |= notAllowed
+docTitle |= notAllowed
+domain |= notAllowed
+eLeaf |= notAllowed
+eTree |= notAllowed
+edition |= notAllowed
+editionStmt |= notAllowed
+editor |= notAllowed
+editorialDecl |= notAllowed
+education |= notAllowed
+eg |= notAllowed
+egXML |= notAllowed
+elementSpec |= notAllowed
+email |= notAllowed
+emph |= notAllowed
+encodingDesc |= notAllowed
+entry |= notAllowed
+entryFree |= notAllowed
+epigraph |= notAllowed
+epilogue |= notAllowed
+equipment |= notAllowed
+equiv |= notAllowed
+etym |= notAllowed
+event |= notAllowed
+exemplum |= notAllowed
+expan |= notAllowed
+explicit |= notAllowed
+extent |= notAllowed
+f |= notAllowed
+fDecl |= notAllowed
+fDescr |= notAllowed
+fLib |= notAllowed
+factuality |= notAllowed
+faith |= notAllowed
+figDesc |= notAllowed
+figure |= notAllowed
+fileDesc |= notAllowed
+filiation |= notAllowed
+finalRubric |= notAllowed
+firstLang |= notAllowed
+floruit |= notAllowed
+foliation |= notAllowed
+foreign |= notAllowed
+forename |= notAllowed
+forest |= notAllowed
+forestGrp |= notAllowed
+form |= notAllowed
+formula |= notAllowed
+front |= notAllowed
+fs |= notAllowed
+fsConstraints |= notAllowed
+fsDecl |= notAllowed
+fsDescr |= notAllowed
+fsdDecl |= notAllowed
+funder |= notAllowed
+fvLib |= notAllowed
+fw |= notAllowed
+g |= notAllowed
+gap |= notAllowed
+gen |= notAllowed
+genName |= notAllowed
+geog |= notAllowed
+geogName |= notAllowed
+gi |= notAllowed
+gloss |= notAllowed
+glyph |= notAllowed
+glyphName |= notAllowed
+gram |= notAllowed
+gramGrp |= notAllowed
+graph |= notAllowed
+graphic |= notAllowed
+group |= notAllowed
+hand |= notAllowed
+handDesc |= notAllowed
+handList |= notAllowed
+handNote |= notAllowed
+handShift |= notAllowed
+head |= notAllowed
+headItem |= notAllowed
+headLabel |= notAllowed
+height |= notAllowed
+heraldry |= notAllowed
+hi |= notAllowed
+history |= notAllowed
+hom |= notAllowed
+hyph |= notAllowed
+hyphenation |= notAllowed
+iNode |= notAllowed
+iType |= notAllowed
+ident |= notAllowed
+idno |= notAllowed
+if |= notAllowed
+iff |= notAllowed
+imprimatur |= notAllowed
+imprint |= notAllowed
+incipit |= notAllowed
+index |= notAllowed
+institution |= notAllowed
+interaction |= notAllowed
+interp |= notAllowed
+interpGrp |= notAllowed
+interpretation |= notAllowed
+item |= notAllowed
+join |= notAllowed
+joinGrp |= notAllowed
+keywords |= notAllowed
+kinesic |= notAllowed
+l |= notAllowed
+label |= notAllowed
+lacunaEnd |= notAllowed
+lacunaStart |= notAllowed
+lang |= notAllowed
+langKnowledge |= notAllowed
+langKnown |= notAllowed
+langUsage |= notAllowed
+language |= notAllowed
+layout |= notAllowed
+layoutDesc |= notAllowed
+lb |= notAllowed
+lbl |= notAllowed
+leaf |= notAllowed
+lem |= notAllowed
+lg |= notAllowed
+link |= notAllowed
+linkGrp |= notAllowed
+\list |= notAllowed
+listBibl |= notAllowed
+listPerson |= notAllowed
+listRef |= notAllowed
+localName |= notAllowed
+locale |= notAllowed
+locus |= notAllowed
+m |= notAllowed
+macroSpec |= notAllowed
+mapping |= notAllowed
+material |= notAllowed
+measure |= notAllowed
+meeting |= notAllowed
+memberOf |= notAllowed
+mentioned |= notAllowed
+metDecl |= notAllowed
+metSym |= notAllowed
+milestone |= notAllowed
+moduleRef |= notAllowed
+moduleSpec |= notAllowed
+monogr |= notAllowed
+mood |= notAllowed
+move |= notAllowed
+msContents |= notAllowed
+msDescription |= notAllowed
+msIdentifier |= notAllowed
+msItem |= notAllowed
+msItemStruct |= notAllowed
+msName |= notAllowed
+msPart |= notAllowed
+musicNotation |= notAllowed
+name |= notAllowed
+nameLink |= notAllowed
+\namespace |= notAllowed
+nationality |= notAllowed
+node |= notAllowed
+normalization |= notAllowed
+note |= notAllowed
+notesStmt |= notAllowed
+num |= notAllowed
+number |= notAllowed
+numeric |= notAllowed
+oRef |= notAllowed
+oVar |= notAllowed
+objectDesc |= notAllowed
+occupation |= notAllowed
+offset |= notAllowed
+opener |= notAllowed
+orgDivn |= notAllowed
+orgName |= notAllowed
+orgTitle |= notAllowed
+orgType |= notAllowed
+orig |= notAllowed
+origDate |= notAllowed
+origPlace |= notAllowed
+origin |= notAllowed
+orth |= notAllowed
+p |= notAllowed
+pRef |= notAllowed
+pVar |= notAllowed
+particDesc |= notAllowed
+particLinks |= notAllowed
+pause |= notAllowed
+pb |= notAllowed
+per |= notAllowed
+performance |= notAllowed
+persEvent |= notAllowed
+persName |= notAllowed
+persState |= notAllowed
+persTrait |= notAllowed
+person |= notAllowed
+personGrp |= notAllowed
+phr |= notAllowed
+physDesc |= notAllowed
+placeName |= notAllowed
+pos |= notAllowed
+postBox |= notAllowed
+postCode |= notAllowed
+preparedness |= notAllowed
+principal |= notAllowed
+profileDesc |= notAllowed
+projectDesc |= notAllowed
+prologue |= notAllowed
+pron |= notAllowed
+provenance |= notAllowed
+ptr |= notAllowed
+pubPlace |= notAllowed
+publicationStmt |= notAllowed
+publisher |= notAllowed
+purpose |= notAllowed
+q |= notAllowed
+quotation |= notAllowed
+quote |= notAllowed
+rdg |= notAllowed
+rdgGrp |= notAllowed
+re |= notAllowed
+recordHist |= notAllowed
+recording |= notAllowed
+recordingStmt |= notAllowed
+ref |= notAllowed
+refsDecl |= notAllowed
+reg |= notAllowed
+region |= notAllowed
+relation |= notAllowed
+remarks |= notAllowed
+rendition |= notAllowed
+repository |= notAllowed
+residence |= notAllowed
+resp |= notAllowed
+respStmt |= notAllowed
+respons |= notAllowed
+restore |= notAllowed
+revisionDesc |= notAllowed
+rhyme |= notAllowed
+role |= notAllowed
+roleDesc |= notAllowed
+roleName |= notAllowed
+root |= notAllowed
+row |= notAllowed
+rs |= notAllowed
+rubric |= notAllowed
+s |= notAllowed
+salute |= notAllowed
+samplingDecl |= notAllowed
+schemaSpec |= notAllowed
+scriptStmt |= notAllowed
+seal |= notAllowed
+sealDesc |= notAllowed
+secFol |= notAllowed
+seg |= notAllowed
+segmentation |= notAllowed
+sense |= notAllowed
+series |= notAllowed
+seriesStmt |= notAllowed
+set |= notAllowed
+setting |= notAllowed
+settingDesc |= notAllowed
+settlement |= notAllowed
+sex |= notAllowed
+shift |= notAllowed
+sic |= notAllowed
+signatures |= notAllowed
+signed |= notAllowed
+soCalled |= notAllowed
+socecStatus |= notAllowed
+sound |= notAllowed
+source |= notAllowed
+sourceDesc |= notAllowed
+sp |= notAllowed
+space |= notAllowed
+span |= notAllowed
+spanGrp |= notAllowed
+speaker |= notAllowed
+specDesc |= notAllowed
+specGrp |= notAllowed
+specGrpRef |= notAllowed
+specList |= notAllowed
+sponsor |= notAllowed
+stage |= notAllowed
+stamp |= notAllowed
+state |= notAllowed
+stdVals |= notAllowed
+street |= notAllowed
+stress |= notAllowed
+\string |= notAllowed
+stringVal |= notAllowed
+subc |= notAllowed
+summary |= notAllowed
+superEntry |= notAllowed
+supplied |= notAllowed
+support |= notAllowed
+supportDesc |= notAllowed
+surname |= notAllowed
+surrogates |= notAllowed
+syll |= notAllowed
+symbol |= notAllowed
+table |= notAllowed
+tag |= notAllowed
+tagUsage |= notAllowed
+tagsDecl |= notAllowed
+taxonomy |= notAllowed
+tech |= notAllowed
+teiCorpus |= notAllowed
+teiHeader |= notAllowed
+teifsd |= notAllowed
+term |= notAllowed
+\text |= notAllowed
+textClass |= notAllowed
+textDesc |= notAllowed
+textLang |= notAllowed
+then |= notAllowed
+time |= notAllowed
+timeline |= notAllowed
+title |= notAllowed
+titlePage |= notAllowed
+titlePart |= notAllowed
+titleStmt |= notAllowed
+tns |= notAllowed
+tr |= notAllowed
+trailer |= notAllowed
+trans |= notAllowed
+tree |= notAllowed
+triangle |= notAllowed
+u |= notAllowed
+unclear |= notAllowed
+unicodeName |= notAllowed
+usg |= notAllowed
+vAlt |= notAllowed
+vColl |= notAllowed
+vDefault |= notAllowed
+vLabel |= notAllowed
+vMerge |= notAllowed
+vNot |= notAllowed
+vRange |= notAllowed
+val |= notAllowed
+valDesc |= notAllowed
+valItem |= notAllowed
+valList |= notAllowed
+value |= notAllowed
+variantEncoding |= notAllowed
+view |= notAllowed
+vocal |= notAllowed
+w |= notAllowed
+watermark |= notAllowed
+when |= notAllowed
+width |= notAllowed
+wit |= notAllowed
+witDetail |= notAllowed
+witEnd |= notAllowed
+witList |= notAllowed
+witStart |= notAllowed
+witness |= notAllowed
+writing |= notAllowed
+xr |= notAllowed
+mix.drama = notAllowed
+mix.spoken = notAllowed
+mix.dictionaries = notAllowed
+# Set predeclared macros
+
+# 0. predeclared classes
+model.datePart |= notAllowed
+model.datePart_sequence |= notAllowed
+model.datePart_sequenceOptional |= notAllowed
+model.datePart_sequenceOptionalRepeatable |= notAllowed
+model.datePart_sequenceRepeatable |= notAllowed
+att.metrical.attributes |= empty
+att.enjamb.attributes |= empty
+model.divPart.spoken |= notAllowed
+model.divPart.spoken_sequence |= notAllowed
+model.divPart.spoken_sequenceOptional |= notAllowed
+model.divPart.spoken_sequenceOptionalRepeatable |= notAllowed
+model.divPart.spoken_sequenceRepeatable |= notAllowed
+model.ptrLike.form |= notAllowed
+model.ptrLike.form_sequence |= notAllowed
+model.ptrLike.form_sequenceOptional |= notAllowed
+model.ptrLike.form_sequenceOptionalRepeatable |= notAllowed
+model.ptrLike.form_sequenceRepeatable |= notAllowed
+att.ptrLike.form.attributes |= empty
+att.msExcerpt.attributes |= empty
+att.global.linking.attributes |= empty
+att.pointing.attributes |= empty
+att.global.analytic.attributes |= empty
+model.persNamePart |= notAllowed
+model.persNamePart_sequence |= notAllowed
+model.persNamePart_sequenceOptional |= notAllowed
+model.persNamePart_sequenceOptionalRepeatable |= notAllowed
+model.persNamePart_sequenceRepeatable |= notAllowed
+att.personal.attributes |= empty
+model.placeNamePart |= notAllowed
+model.placeNamePart_sequence |= notAllowed
+model.placeNamePart_sequenceOptional |= notAllowed
+model.placeNamePart_sequenceOptionalRepeatable |= notAllowed
+model.placeNamePart_sequenceRepeatable |= notAllowed
+# 0. predeclared macros
+
+# 1. classes
+att.ascribed.attributes = att.ascribed.attribute.who, empty
+att.ascribed.attribute.who =
+  ## indicates the person, or group of
+  ##	people, to whom the element content is ascribed.
+  attribute who {
+    list { data.pointer+ }
+  }?
+att.authorialIntervention.attributes =
+  att.authorialIntervention.attribute.hand,
+  att.authorialIntervention.attribute.status,
+  att.authorialIntervention.attribute.type,
+  empty
+att.authorialIntervention.attribute.hand =
+  ## signifies the hand of the agent which made the addition or
+  ##       performed the deletion.
+  attribute hand { data.pointer }?
+att.authorialIntervention.attribute.status =
+  ## may be used to indicate faulty deletions, e.g. strikeouts
+  ##       which include too much or too little text, or erroneous
+  ##       additions, e.g., an insertion which duplicates some of the text
+  ##       already present.
+  ## Sample values include: 1] duplicate (all of the text indicated as an addition duplicates
+  ##	  some text that is in the original, whether the duplication
+  ##	  is word-for-word or less exact.); 2] duplicate-partial (part of the text indicated as an addition duplicates
+  ##	  some text that is in the original); 3] excessStart (some text at the beginning of the deletion is marked
+  ##           as deleted even though it clearly should not be
+  ##           deleted.); 4] excessEnd (some text at the end of the deletion is marked as
+  ##           deleted even though it clearly should not be
+  ##           deleted.); 5] shortStart (some text at the beginning of the deletion is not
+  ##           marked as deleted even though it clearly should be.); 6] shortEnd (some text at the end of the deletion is not marked as
+  ##           deleted even though it clearly should be.); 7] unremarkable (the deletion is not faulty.)
+  [ a1:defaultValue = "unremarkable" ]
+  attribute status { data.enumerated }?
+att.authorialIntervention.attribute.type =
+  ## classifies the type of addition or deletion using any convenient typology.
+  attribute type { data.enumerated }?
+att.datable.attributes =
+  att.datable.attribute.notBefore,
+  att.datable.attribute.notAfter,
+  att.datable.attribute.from,
+  att.datable.attribute.to,
+  empty
+att.datable.attribute.notBefore =
+  ## specifies the earliest possible date for the event in
+  ##	standard form, e.g. yyyy-mm-dd.
+  attribute notBefore { data.temporal }?
+att.datable.attribute.notAfter =
+  ## specifies the latest possible date for the event in
+  ##	standard form, e.g. yyyy-mm-dd.
+  attribute notAfter { data.temporal }?
+att.datable.attribute.from =
+  ## indicates the starting point of the period in standard form.
+  attribute from { data.temporal }?
+att.datable.attribute.to =
+  ## indicates the ending point of the period in standard form.
+  attribute to { data.temporal }?
+att.datePart.attributes =
+  att.datePart.attribute.value, att.datePart.attribute.dur, empty
+att.datePart.attribute.value =
+  ## supplies the value of a date or time in a standard form.
+  attribute value { data.temporal }?
+att.datePart.attribute.dur =
+  ## (duration) indicates the length of this element in time.
+  attribute dur { xsd:duration }?
+att.declarable.attributes = att.declarable.attribute.default, empty
+att.declarable.attribute.default =
+  ## indicates whether or not this element is selected by default when
+  ## its parent is selected.
+  [ a1:defaultValue = "false" ]
+  attribute default {
+    ## (This element is selected if its parent is selected) 
+    "true" | ## (This element can only be selected explicitly, unless it is the
+      ## only one of its kind, in which case it is selected if its parent is selected.) 
+      "false"
+  }?
+att.declaring.attributes = att.declaring.attribute.decls, empty
+att.declaring.attribute.decls =
+  ## identifies one or more declarable elements within the
+  ## header, which are understood to apply to the element bearing this
+  ## attribute and its content.
+  attribute decls {
+    list { data.pointer+ }
+  }?
+att.divLike.attributes =
+  att.metrical.attributes,
+  att.divLike.attribute.type,
+  att.divLike.attribute.org,
+  att.divLike.attribute.sample,
+  att.divLike.attribute.part,
+  empty
+att.divLike.attribute.type =
+  ## specifies a name conventionally used for this level of
+  ##		subdivision, e.g. act, volume, book,
+  ##		section, canto, etc.
+  attribute type { data.enumerated }?
+att.divLike.attribute.org =
+  ## specifies how the content of the division is organized.
+  [ a1:defaultValue = "uniform" ]
+  attribute org {
+    ## (composite content: i.e. no claim is made about the
+    ##		  sequence in which the immediate contents of this division
+    ##		  are to be processed, or their inter-relationships.) 
+    "composite" | ## (uniform content: i.e. the immediate contents of this
+      ##		  element are regarded as forming a logical unit, to be
+      ##		  processed in sequence.) 
+      "uniform"
+  }?
+att.divLike.attribute.sample =
+  ## indicates whether this division is a sample of the
+  ##		original source and if so, from which part.
+  [ a1:defaultValue = "complete" ]
+  attribute sample {
+    ## (division lacks material present at end in source.) 
+    "initial" | ## (division lacks material at start and end.) 
+      "medial" | ## (division lacks material at start.) 
+      "final" | ## (position of sampled material within original unknown.) 
+      "unknown" | ## (division is not a sample.) 
+      "complete"
+  }?
+att.divLike.attribute.part =
+  ## specifies whether or not the division is fragmented by
+  ##		some other structural element, for example a speech which is
+  ##		divided between two or more verse stanzas.
+  [ a1:defaultValue = "N" ]
+  attribute part {
+    ## (the division is incomplete in some respect) 
+    "Y" | ## (either the division is complete, or no claim is made as to its completeness.) 
+      "N" | ## (the initial part of an incomplete division) 
+      "I" | ## (a medial part of an incomplete division) 
+      "M" | ## (the final part of an incomplete division) 
+      "F"
+  }?
+att.interpLike.attributes =
+  att.interpLike.attribute.resp,
+  att.interpLike.attribute.type,
+  att.interpLike.attribute.inst,
+  empty
+att.interpLike.attribute.resp =
+  ## indicates who is responsible for the interpretation.
+  attribute resp { data.pointer }?
+att.interpLike.attribute.type =
+  ## indicates what kind of phenomenon is being noted in the passage.
+  ## Sample values include: 1] image (identifies an image in the passage.
+  ##    ); 2] character (identifies a character associated with the passage.
+  ##    ); 3] theme (identifies a theme in the passage.
+  ##    ); 4] allusion (identifies an allusion to another text.
+  ##    )
+  attribute type { data.enumerated }?
+att.interpLike.attribute.inst =
+  ## points to instances of the analysis or interpretation represented
+  ## by the current element.
+  attribute inst {
+    list { data.pointer+ }
+  }?
+att.editLike.attributes =
+  att.editLike.attribute.cert,
+  att.editLike.attribute.resp,
+  att.editLike.attribute.evidence,
+  empty
+att.editLike.attribute.cert =
+  ## signifies the degree of certainty associated with the
+  ##	intervention or interpretation.
+  attribute cert { data.enumerated }?
+att.editLike.attribute.resp =
+  ## indicates the agency responsible for the
+  ##	intervention or interpretation, for example an editor or transcriber.
+  attribute resp { data.pointer }?
+att.editLike.attribute.evidence =
+  ## indicates the nature of the evidence supporting the reliability or
+  ##   accuracy of the intervention or interpretation.
+  ## Sample values include: 1] internal (there is internal evidence to support the intervention.); 2] external (there is external evidence to support the intervention.); 3] conjecture (the intervention or interpretation has been made by
+  ##	  the editor, cataloguer, or scholar on the basis of their expertise.)
+  attribute evidence { data.enumerated }?
+att.global.attributes =
+  att.global.linking.attributes,
+  att.global.analytic.attributes,
+  att.global.attribute.xmlspace,
+  att.global.attribute.xmlid,
+  att.global.attribute.n,
+  att.global.attribute.xmllang,
+  att.global.attribute.rend,
+  att.global.attribute.xmlbase,
+  empty
+att.global.attribute.xmlspace =
+  ## signals an intention that white space should be 
+  ##       preserved by applications
+  attribute xml:space {
+    "default" | "preserve"
+  }?
+att.global.attribute.xmlid =
+  ## provides a unique identifier for the element bearing the
+  ##       attribute.
+  attribute xml:id { xsd:ID }?
+att.global.attribute.n =
+  ## gives a number (or other label) for an element, which is
+  ##       not necessarily unique within the document.
+  attribute n {
+    list { data.word+ }
+  }?
+att.global.attribute.xmllang =
+  ## indicates the language of the element content using the
+  ##       codes from RFC
+  ##       3066
+  attribute xml:lang { data.language }?
+att.global.attribute.rend =
+  ## indicates how the element in question was rendered or
+  ##	presented in the source text.
+  attribute rend {
+    list { data.word+ }
+  }?
+att.global.attribute.xmlbase =
+  ## provides a base URI reference with which applications can
+  ##       resolve relative URI references into absolute URI
+  ##       references.
+  attribute xml:base { data.pointer }?
+att.measured.attributes =
+  att.measured.attribute.unit, att.measured.attribute.scope, empty
+att.measured.attribute.unit =
+  ## names the units used for the measurement.
+  ## Suggested values include: 1] cm (centimetres); 2] mm (millimetres); 3] in (inches)
+  attribute unit { data.enumerated }?
+att.measured.attribute.scope =
+  ## specifies the applicability of this measurement, where
+  ##    more than one object is being measured.
+  ## Sample values include: 1] all (measurement applies to all instances.); 2] most (measurement applies to most of the instances inspected.); 3] range (measurement applies to only the specified range of instances.)
+  attribute scope { data.enumerated }?
+att.measurement.attributes =
+  att.measurement.attribute.unit,
+  att.measurement.attribute.quantity,
+  att.measurement.attribute.commodity,
+  empty
+att.measurement.attribute.unit =
+  ## indicates the units used for the measurement, usually
+  ##       using the standard symbol for the desired units.
+  ## Suggested values include: 1] m (metre); 2] kg (kilogram); 3] s (second); 4] Hz (hertz); 5] Pa (pascal); 6] Ω (ohm); 7] L (litre); 8] t (tonne); 9] ha (hectare); 10] Å (ångström); 11] mL (millilitre); 12] cm (centimetre); 13] dB (decibel); 14] kbit (kilobit); 15] Kibit (kibibit); 16] kB (kilobyte); 17] KiB (kibibyte); 18] MB (megabyte); 19] MiB (mebibyte)
+  attribute unit { data.enumerated }?
+att.measurement.attribute.quantity =
+  ## specifies the number of the specified units that
+  ##       comprise the measurement
+  attribute quantity { data.numeric }?
+att.measurement.attribute.commodity =
+  ## indicates the substance that is being measured
+  attribute commodity {
+    list { data.word+ }
+  }?
+att.naming.attributes = att.naming.attribute.key, empty
+att.naming.attribute.key =
+  ## provides a means of locating a full definition for the
+  ##       entity being named such as a database record key or a
+  ##       URI.
+  attribute key { data.key }?
+att.placement.attributes = att.placement.attribute.place, empty
+att.placement.attribute.place =
+  ## Suggested values include: 1] infralinear (below the line); 2] margin-bot (in bottom margin); 3] margin-left (in left margin); 4] margin-right (in right margin); 5] margin-top (in top margin); 6] opposite (on opposite page); 7] overleaf (on the other side of the leaf); 8] supralinear (above the line); 9] verso (on verso of sheet); 10] app (note appears in the apparatus at the foot of the page.); 11] end (note appears at end of chapter or volume.); 12] foot (note appears at foot of page.); 13] inline (note appears as a marked paragraph in the body of the text.); 14] interlinear (note appears between lines of the text; a less precise form of either infralinear or supralinear.); 15] inline (addition is made in a space left in the witness by an earlier scribe.); 16] mixed (one or more of the other values)
+  attribute place { data.enumerated }?
+att.segLike.attributes =
+  att.metrical.attributes,
+  att.segLike.attribute.type,
+  att.segLike.attribute.function,
+  att.segLike.attribute.part,
+  empty
+att.segLike.attribute.type =
+  ## characterizes the type of segment.
+  attribute type { data.enumerated }?
+att.segLike.attribute.function =
+  ## characterizes the function of the segment.
+  attribute function { data.enumerated }?
+att.segLike.attribute.part =
+  ## specifies whether or not the segment is fragmented by some other
+  ## structural element, for example a clause which is divided between two
+  ## or more sentences.
+  [ a1:defaultValue = "N" ]
+  attribute part {
+    ## (the segment is incomplete in some respect) 
+    "Y" | ## (either the segment is complete, or no claim is made as to
+      ## its completeness) 
+      "N" | ## (the initial part of an incomplete segment) 
+      "I" | ## (a medial part of an incomplete segment) 
+      "M" | ## (the final part of an incomplete segment) 
+      "F"
+  }?
+att.spanning.attributes = att.spanning.attribute.spanTo, empty
+att.spanning.attribute.spanTo =
+  ## indicates the end of a span initiated by the element
+  ##	bearing this attribute.
+  attribute spanTo { data.pointer }?
+att.tableDecoration.attributes =
+  att.tableDecoration.attribute.role,
+  att.tableDecoration.attribute.rows,
+  att.tableDecoration.attribute.cols,
+  empty
+att.tableDecoration.attribute.role =
+  ## indicates the kind of information held in this cell or
+  ## in each cell of this row.
+  ## Suggested values include: 1] label (labelling or descriptive information only.); 2] data (data values.)
+  [ a1:defaultValue = "data" ] attribute role { data.enumerated }?
+att.tableDecoration.attribute.rows =
+  ## indicates the number of rows occupied by this cell or row.
+  [ a1:defaultValue = "1" ] attribute rows { data.count }?
+att.tableDecoration.attribute.cols =
+  ## indicates the number of columns occupied by this cell or
+  ##	row.
+  [ a1:defaultValue = "1" ] attribute cols { data.count }?
+att.timed.attributes =
+  att.timed.attribute.start,
+  att.timed.attribute.end,
+  att.timed.attribute.dur,
+  empty
+att.timed.attribute.start =
+  ## indicates the location within a temporal alignment
+  ##       at which this element begins.
+  attribute start { data.pointer }?
+att.timed.attribute.end =
+  ## indicates the location within a temporal alignment at which
+  ##    this element ends.
+  attribute end { data.pointer }?
+att.timed.attribute.dur =
+  ## (duration) indicates the length of this element in time
+  attribute dur { xsd:duration }?
+att.translatable.attributes = att.translatable.attribute.version, empty
+att.translatable.attribute.version =
+  ## specifies the version name or number of the source from
+  ##	which the translated version was derived
+  attribute version { data.word }?
+att.typed.attributes =
+  att.typed.attribute.type, att.typed.attribute.subtype, empty
+att.typed.attribute.type =
+  ## characterizes the element in some sense, using any convenient
+  ##  classification scheme or typology.
+  attribute type { data.word }?
+att.typed.attribute.subtype =
+  ## provides a sub-categorization of the element, if needed
+  attribute subtype { data.word }?
+model.nameLike.agent = name | persName | orgName
+model.nameLike.agent_sequence = name, persName, orgName
+model.nameLike.agent_sequenceOptional = name?, persName?, orgName?
+model.nameLike.agent_sequenceOptionalRepeatable =
+  name*, persName*, orgName*
+model.nameLike.agent_sequenceRepeatable = name+, persName+, orgName+
+model.segLike = seg | s | cl | phr | w | m | c
+model.segLike_sequence = seg, s, cl, phr, w, m, c
+model.segLike_sequenceOptional = seg?, s?, cl?, phr?, w?, m?, c?
+model.segLike_sequenceOptionalRepeatable =
+  seg*, s*, cl*, phr*, w*, m*, c*
+model.segLike_sequenceRepeatable = seg+, s+, cl+, phr+, w+, m+, c+
+model.hiLike =
+  foreign
+  | emph
+  | hi
+  | distinct
+  | mentioned
+  | soCalled
+  | gloss
+  | term
+  | title
+model.hiLike_sequence =
+  foreign, emph, hi, distinct, mentioned, soCalled, gloss, term, title
+model.hiLike_sequenceOptional =
+  foreign?,
+  emph?,
+  hi?,
+  distinct?,
+  mentioned?,
+  soCalled?,
+  gloss?,
+  term?,
+  title?
+model.hiLike_sequenceOptionalRepeatable =
+  foreign*,
+  emph*,
+  hi*,
+  distinct*,
+  mentioned*,
+  soCalled*,
+  gloss*,
+  term*,
+  title*
+model.hiLike_sequenceRepeatable =
+  foreign+,
+  emph+,
+  hi+,
+  distinct+,
+  mentioned+,
+  soCalled+,
+  gloss+,
+  term+,
+  title+
+model.dateLike = date | time
+model.dateLike_sequence = date, time
+model.dateLike_sequenceOptional = date?, time?
+model.dateLike_sequenceOptionalRepeatable = date*, time*
+model.dateLike_sequenceRepeatable = date+, time+
+model.measureLike = num | measure
+model.measureLike_sequence = num, measure
+model.measureLike_sequenceOptional = num?, measure?
+model.measureLike_sequenceOptionalRepeatable = num*, measure*
+model.measureLike_sequenceRepeatable = num+, measure+
+model.graphicLike = graphic | binaryObject | formula | eg | egXML
+model.graphicLike_sequence = graphic, binaryObject, formula, eg, egXML
+model.graphicLike_sequenceOptional =
+  graphic?, binaryObject?, formula?, eg?, egXML?
+model.graphicLike_sequenceOptionalRepeatable =
+  graphic*, binaryObject*, formula*, eg*, egXML*
+model.graphicLike_sequenceRepeatable =
+  graphic+, binaryObject+, formula+, eg+, egXML+
+model.pPart.msdesc =
+  catchwords
+  | dimensions
+  | heraldry
+  | locus
+  | material
+  | origDate
+  | origPlace
+  | secFol
+  | signatures
+  | stamp
+  | watermark
+  | handShift
+model.pPart.msdesc_sequence =
+  catchwords,
+  dimensions,
+  heraldry,
+  locus,
+  material,
+  origDate,
+  origPlace,
+  secFol,
+  signatures,
+  stamp,
+  watermark,
+  handShift
+model.pPart.msdesc_sequenceOptional =
+  catchwords?,
+  dimensions?,
+  heraldry?,
+  locus?,
+  material?,
+  origDate?,
+  origPlace?,
+  secFol?,
+  signatures?,
+  stamp?,
+  watermark?,
+  handShift?
+model.pPart.msdesc_sequenceOptionalRepeatable =
+  catchwords*,
+  dimensions*,
+  heraldry*,
+  locus*,
+  material*,
+  origDate*,
+  origPlace*,
+  secFol*,
+  signatures*,
+  stamp*,
+  watermark*,
+  handShift*
+model.pPart.msdesc_sequenceRepeatable =
+  catchwords+,
+  dimensions+,
+  heraldry+,
+  locus+,
+  material+,
+  origDate+,
+  origPlace+,
+  secFol+,
+  signatures+,
+  stamp+,
+  watermark+,
+  handShift+
+model.pPart.edit =
+  sic
+  | corr
+  | choice
+  | reg
+  | orig
+  | add
+  | del
+  | unclear
+  | abbr
+  | expan
+  | restore
+  | supplied
+  | damage
+  | space
+  | app
+model.pPart.edit_sequence =
+  sic,
+  corr,
+  choice,
+  reg,
+  orig,
+  add,
+  del,
+  unclear,
+  abbr,
+  expan,
+  restore,
+  supplied,
+  damage,
+  space,
+  app
+model.pPart.edit_sequenceOptional =
+  sic?,
+  corr?,
+  choice?,
+  reg?,
+  orig?,
+  add?,
+  del?,
+  unclear?,
+  abbr?,
+  expan?,
+  restore?,
+  supplied?,
+  damage?,
+  space?,
+  app?
+model.pPart.edit_sequenceOptionalRepeatable =
+  sic*,
+  corr*,
+  choice*,
+  reg*,
+  orig*,
+  add*,
+  del*,
+  unclear*,
+  abbr*,
+  expan*,
+  restore*,
+  supplied*,
+  damage*,
+  space*,
+  app*
+model.pPart.edit_sequenceRepeatable =
+  sic+,
+  corr+,
+  choice+,
+  reg+,
+  orig+,
+  add+,
+  del+,
+  unclear+,
+  abbr+,
+  expan+,
+  restore+,
+  supplied+,
+  damage+,
+  space+,
+  app+
+model.ptrLike = ptr | ref
+model.ptrLike_sequence = ptr, ref
+model.ptrLike_sequenceOptional = ptr?, ref?
+model.ptrLike_sequenceOptionalRepeatable = ptr*, ref*
+model.ptrLike_sequenceRepeatable = ptr+, ref+
+model.lPart = caesura | rhyme
+model.lPart_sequence = caesura, rhyme
+model.lPart_sequenceOptional = caesura?, rhyme?
+model.lPart_sequenceOptionalRepeatable = caesura*, rhyme*
+model.lPart_sequenceRepeatable = caesura+, rhyme+
+model.global.meta =
+  index
+  | link
+  | linkGrp
+  | timeline
+  | join
+  | joinGrp
+  | alt
+  | altGrp
+  | span
+  | spanGrp
+  | interp
+  | interpGrp
+  | fs
+  | fLib
+  | fvLib
+  | certainty
+  | respons
+model.global.meta_sequence =
+  index,
+  link,
+  linkGrp,
+  timeline,
+  join,
+  joinGrp,
+  alt,
+  altGrp,
+  span,
+  spanGrp,
+  interp,
+  interpGrp,
+  fs,
+  fLib,
+  fvLib,
+  certainty,
+  respons
+model.global.meta_sequenceOptional =
+  index?,
+  link?,
+  linkGrp?,
+  timeline?,
+  join?,
+  joinGrp?,
+  alt?,
+  altGrp?,
+  span?,
+  spanGrp?,
+  interp?,
+  interpGrp?,
+  fs?,
+  fLib?,
+  fvLib?,
+  certainty?,
+  respons?
+model.global.meta_sequenceOptionalRepeatable =
+  index*,
+  link*,
+  linkGrp*,
+  timeline*,
+  join*,
+  joinGrp*,
+  alt*,
+  altGrp*,
+  span*,
+  spanGrp*,
+  interp*,
+  interpGrp*,
+  fs*,
+  fLib*,
+  fvLib*,
+  certainty*,
+  respons*
+model.global.meta_sequenceRepeatable =
+  index+,
+  link+,
+  linkGrp+,
+  timeline+,
+  join+,
+  joinGrp+,
+  alt+,
+  altGrp+,
+  span+,
+  spanGrp+,
+  interp+,
+  interpGrp+,
+  fs+,
+  fLib+,
+  fvLib+,
+  certainty+,
+  respons+
+model.milestoneLike = milestone | pb | lb | cb | fw
+model.milestoneLike_sequence = milestone, pb, lb, cb, fw
+model.milestoneLike_sequenceOptional = milestone?, pb?, lb?, cb?, fw?
+model.milestoneLike_sequenceOptionalRepeatable =
+  milestone*, pb*, lb*, cb*, fw*
+model.milestoneLike_sequenceRepeatable = milestone+, pb+, lb+, cb+, fw+
+model.gLike = g
+model.gLike_sequence = g
+model.gLike_sequenceOptional = g?
+model.gLike_sequenceOptionalRepeatable = g*
+model.gLike_sequenceRepeatable = g+
+model.oddDecl =
+  moduleSpec | specGrp | elementSpec | classSpec | macroSpec | listRef
+model.oddDecl_sequence =
+  moduleSpec, specGrp, elementSpec, classSpec, macroSpec, listRef
+model.oddDecl_sequenceOptional =
+  moduleSpec?, specGrp?, elementSpec?, classSpec?, macroSpec?, listRef?
+model.oddDecl_sequenceOptionalRepeatable =
+  moduleSpec*, specGrp*, elementSpec*, classSpec*, macroSpec*, listRef*
+model.oddDecl_sequenceRepeatable =
+  moduleSpec+, specGrp+, elementSpec+, classSpec+, macroSpec+, listRef+
+model.oddRef = moduleRef | specGrpRef
+model.oddRef_sequence = moduleRef, specGrpRef
+model.oddRef_sequenceOptional = moduleRef?, specGrpRef?
+model.oddRef_sequenceOptionalRepeatable = moduleRef*, specGrpRef*
+model.oddRef_sequenceRepeatable = moduleRef+, specGrpRef+
+model.oddPhr = att | code | gi | ident | tag | val | specList | specDesc
+model.oddPhr_sequence =
+  att, code, gi, ident, tag, val, specList, specDesc
+model.oddPhr_sequenceOptional =
+  att?, code?, gi?, ident?, tag?, val?, specList?, specDesc?
+model.oddPhr_sequenceOptionalRepeatable =
+  att*, code*, gi*, ident*, tag*, val*, specList*, specDesc*
+model.oddPhr_sequenceRepeatable =
+  att+, code+, gi+, ident+, tag+, val+, specList+, specDesc+
+model.qLike = q | quote | cit
+model.qLike_sequence = q, quote, cit
+model.qLike_sequenceOptional = q?, quote?, cit?
+model.qLike_sequenceOptionalRepeatable = q*, quote*, cit*
+model.qLike_sequenceRepeatable = q+, quote+, cit+
+model.biblLike =
+  bibl | biblItem | biblStruct | biblFull | msDescription | listPerson
+model.biblLike_sequence =
+  bibl, biblItem, biblStruct, biblFull, msDescription, listPerson
+model.biblLike_sequenceOptional =
+  bibl?, biblItem?, biblStruct?, biblFull?, msDescription?, listPerson?
+model.biblLike_sequenceOptionalRepeatable =
+  bibl*, biblItem*, biblStruct*, biblFull*, msDescription*, listPerson*
+model.biblLike_sequenceRepeatable =
+  bibl+, biblItem+, biblStruct+, biblFull+, msDescription+, listPerson+
+model.listLike = \list | listBibl
+model.listLike_sequence = \list, listBibl
+model.listLike_sequenceOptional = \list?, listBibl?
+model.listLike_sequenceOptionalRepeatable = \list*, listBibl*
+model.listLike_sequenceRepeatable = \list+, listBibl+
+model.noteLike = note | witDetail
+model.noteLike_sequence = note, witDetail
+model.noteLike_sequenceOptional = note?, witDetail?
+model.noteLike_sequenceOptionalRepeatable = note*, witDetail*
+model.noteLike_sequenceRepeatable = note+, witDetail+
+model.stageLike = stage | move | view | camera | sound | caption | tech
+model.stageLike_sequence =
+  stage, move, view, camera, sound, caption, tech
+model.stageLike_sequenceOptional =
+  stage?, move?, view?, camera?, sound?, caption?, tech?
+model.stageLike_sequenceOptionalRepeatable =
+  stage*, move*, view*, camera*, sound*, caption*, tech*
+model.stageLike_sequenceRepeatable =
+  stage+, move+, view+, camera+, sound+, caption+, tech+
+model.complexVal = fs | vColl | vNot | vMerge
+model.complexVal_sequence = fs, vColl, vNot, vMerge
+model.complexVal_sequenceOptional = fs?, vColl?, vNot?, vMerge?
+model.complexVal_sequenceOptionalRepeatable =
+  fs*, vColl*, vNot*, vMerge*
+model.complexVal_sequenceRepeatable = fs+, vColl+, vNot+, vMerge+
+model.singleVal =
+  binary | symbol | numeric | \string | vLabel | \default | vAlt
+model.singleVal_sequence =
+  binary, symbol, numeric, \string, vLabel, \default, vAlt
+model.singleVal_sequenceOptional =
+  binary?, symbol?, numeric?, \string?, vLabel?, \default?, vAlt?
+model.singleVal_sequenceOptionalRepeatable =
+  binary*, symbol*, numeric*, \string*, vLabel*, \default*, vAlt*
+model.singleVal_sequenceRepeatable =
+  binary+, symbol+, numeric+, \string+, vLabel+, \default+, vAlt+
+model.entryParts.top =
+  dictScrap
+  | form
+  | gramGrp
+  | def
+  | trans
+  | etym
+  | dicteg
+  | usg
+  | xr
+  | re
+model.entryParts.top_sequence =
+  dictScrap, form, gramGrp, def, trans, etym, dicteg, usg, xr, re
+model.entryParts.top_sequenceOptional =
+  dictScrap?,
+  form?,
+  gramGrp?,
+  def?,
+  trans?,
+  etym?,
+  dicteg?,
+  usg?,
+  xr?,
+  re?
+model.entryParts.top_sequenceOptionalRepeatable =
+  dictScrap*,
+  form*,
+  gramGrp*,
+  def*,
+  trans*,
+  etym*,
+  dicteg*,
+  usg*,
+  xr*,
+  re*
+model.entryParts.top_sequenceRepeatable =
+  dictScrap+,
+  form+,
+  gramGrp+,
+  def+,
+  trans+,
+  etym+,
+  dicteg+,
+  usg+,
+  xr+,
+  re+
+model.global.edit = gap | addSpan | delSpan
+model.global.edit_sequence = gap, addSpan, delSpan
+model.global.edit_sequenceOptional = gap?, addSpan?, delSpan?
+model.global.edit_sequenceOptionalRepeatable = gap*, addSpan*, delSpan*
+model.global.edit_sequenceRepeatable = gap+, addSpan+, delSpan+
+model.divPart =
+  p | l | lg | sp | ab | witList | graph | tree | eTree | schemaSpec
+model.divPart_sequence =
+  p, l, lg, sp, ab, witList, graph, tree, eTree, schemaSpec
+model.divPart_sequenceOptional =
+  p?, l?, lg?, sp?, ab?, witList?, graph?, tree?, eTree?, schemaSpec?
+model.divPart_sequenceOptionalRepeatable =
+  p*, l*, lg*, sp*, ab*, witList*, graph*, tree*, eTree*, schemaSpec*
+model.divPart_sequenceRepeatable =
+  p+, l+, lg+, sp+, ab+, witList+, graph+, tree+, eTree+, schemaSpec+
+model.blockLike = seg
+model.blockLike_sequence = seg
+model.blockLike_sequenceOptional = seg?
+model.blockLike_sequenceOptionalRepeatable = seg*
+model.blockLike_sequenceRepeatable = seg+
+model.pLike = p | ab
+model.pLike_sequence = p, ab
+model.pLike_sequenceOptional = p?, ab?
+model.pLike_sequenceOptionalRepeatable = p*, ab*
+model.pLike_sequenceRepeatable = p+, ab+
+model.persTraitLike =
+  age
+  | faith
+  | langKnowledge
+  | nationality
+  | persTrait
+  | sex
+  | socecStatus
+model.persTraitLike_sequence =
+  age, faith, langKnowledge, nationality, persTrait, sex, socecStatus
+model.persTraitLike_sequenceOptional =
+  age?,
+  faith?,
+  langKnowledge?,
+  nationality?,
+  persTrait?,
+  sex?,
+  socecStatus?
+model.persTraitLike_sequenceOptionalRepeatable =
+  age*,
+  faith*,
+  langKnowledge*,
+  nationality*,
+  persTrait*,
+  sex*,
+  socecStatus*
+model.persTraitLike_sequenceRepeatable =
+  age+,
+  faith+,
+  langKnowledge+,
+  nationality+,
+  persTrait+,
+  sex+,
+  socecStatus+
+model.persStateLike =
+  persName
+  | affiliation
+  | education
+  | floruit
+  | occupation
+  | persState
+  | residence
+model.persStateLike_sequence =
+  persName,
+  affiliation,
+  education,
+  floruit,
+  occupation,
+  persState,
+  residence
+model.persStateLike_sequenceOptional =
+  persName?,
+  affiliation?,
+  education?,
+  floruit?,
+  occupation?,
+  persState?,
+  residence?
+model.persStateLike_sequenceOptionalRepeatable =
+  persName*,
+  affiliation*,
+  education*,
+  floruit*,
+  occupation*,
+  persState*,
+  residence*
+model.persStateLike_sequenceRepeatable =
+  persName+,
+  affiliation+,
+  education+,
+  floruit+,
+  occupation+,
+  persState+,
+  residence+
+model.persEventLike = birth | death | persEvent
+model.persEventLike_sequence = birth, death, persEvent
+model.persEventLike_sequenceOptional = birth?, death?, persEvent?
+model.persEventLike_sequenceOptionalRepeatable =
+  birth*, death*, persEvent*
+model.persEventLike_sequenceRepeatable = birth+, death+, persEvent+
+model.assertLike =
+  model.persTraitLike | model.persStateLike | model.persEventLike
+model.assertLike_sequence =
+  model.persTraitLike, model.persStateLike, model.persEventLike
+model.assertLike_sequenceOptional =
+  model.persTraitLike?, model.persStateLike?, model.persEventLike?
+model.assertLike_sequenceOptionalRepeatable =
+  model.persTraitLike*, model.persStateLike*, model.persEventLike*
+model.assertLike_sequenceRepeatable =
+  model.persTraitLike+, model.persStateLike+, model.persEventLike+
+model.personLike = listPerson | person | personGrp | relation
+model.personLike_sequence = listPerson, person, personGrp, relation
+model.personLike_sequenceOptional =
+  listPerson?, person?, personGrp?, relation?
+model.personLike_sequenceOptionalRepeatable =
+  listPerson*, person*, personGrp*, relation*
+model.personLike_sequenceRepeatable =
+  listPerson+, person+, personGrp+, relation+
+model.personPart = model.assertLike | bibl
+model.personPart_sequence = model.assertLike, bibl
+model.personPart_sequenceOptional = model.assertLike?, bibl?
+model.personPart_sequenceOptionalRepeatable = model.assertLike*, bibl*
+model.personPart_sequenceRepeatable = model.assertLike+, bibl+
+model.publicationStmtPart =
+  distributor
+  | authority
+  | idno
+  | availability
+  | address
+  | date
+  | publisher
+  | pubPlace
+model.publicationStmtPart_sequence =
+  distributor,
+  authority,
+  idno,
+  availability,
+  address,
+  date,
+  publisher,
+  pubPlace
+model.publicationStmtPart_sequenceOptional =
+  distributor?,
+  authority?,
+  idno?,
+  availability?,
+  address?,
+  date?,
+  publisher?,
+  pubPlace?
+model.publicationStmtPart_sequenceOptionalRepeatable =
+  distributor*,
+  authority*,
+  idno*,
+  availability*,
+  address*,
+  date*,
+  publisher*,
+  pubPlace*
+model.publicationStmtPart_sequenceRepeatable =
+  distributor+,
+  authority+,
+  idno+,
+  availability+,
+  address+,
+  date+,
+  publisher+,
+  pubPlace+
+model.glossLike = altIdent | desc | equiv | gloss
+model.glossLike_sequence = altIdent, desc, equiv, gloss
+model.glossLike_sequenceOptional = altIdent?, desc?, equiv?, gloss?
+model.glossLike_sequenceOptionalRepeatable =
+  altIdent*, desc*, equiv*, gloss*
+model.glossLike_sequenceRepeatable = altIdent+, desc+, equiv+, gloss+
+model.quoteLike = quote
+model.quoteLike_sequence = quote
+model.quoteLike_sequenceOptional = quote?
+model.quoteLike_sequenceOptionalRepeatable = quote*
+model.quoteLike_sequenceRepeatable = quote+
+model.respLike = author | editor | respStmt
+model.respLike_sequence = author, editor, respStmt
+model.respLike_sequenceOptional = author?, editor?, respStmt?
+model.respLike_sequenceOptionalRepeatable = author*, editor*, respStmt*
+model.respLike_sequenceRepeatable = author+, editor+, respStmt+
+model.divWrapper.bottom = trailer | closer | signed
+model.divWrapper.bottom_sequence = trailer, closer, signed
+model.divWrapper.bottom_sequenceOptional = trailer?, closer?, signed?
+model.divWrapper.bottom_sequenceOptionalRepeatable =
+  trailer*, closer*, signed*
+model.divWrapper.bottom_sequenceRepeatable = trailer+, closer+, signed+
+model.divWrapper =
+  head
+  | byline
+  | dateline
+  | argument
+  | epigraph
+  | opener
+  | salute
+  | docAuthor
+  | docDate
+model.divWrapper_sequence =
+  head,
+  byline,
+  dateline,
+  argument,
+  epigraph,
+  opener,
+  salute,
+  docAuthor,
+  docDate
+model.divWrapper_sequenceOptional =
+  head?,
+  byline?,
+  dateline?,
+  argument?,
+  epigraph?,
+  opener?,
+  salute?,
+  docAuthor?,
+  docDate?
+model.divWrapper_sequenceOptionalRepeatable =
+  head*,
+  byline*,
+  dateline*,
+  argument*,
+  epigraph*,
+  opener*,
+  salute*,
+  docAuthor*,
+  docDate*
+model.divWrapper_sequenceRepeatable =
+  head+,
+  byline+,
+  dateline+,
+  argument+,
+  epigraph+,
+  opener+,
+  salute+,
+  docAuthor+,
+  docDate+
+model.frontPart.drama =
+  set | prologue | epilogue | performance | castList
+model.frontPart.drama_sequence =
+  set, prologue, epilogue, performance, castList
+model.frontPart.drama_sequenceOptional =
+  set?, prologue?, epilogue?, performance?, castList?
+model.frontPart.drama_sequenceOptionalRepeatable =
+  set*, prologue*, epilogue*, performance*, castList*
+model.frontPart.drama_sequenceRepeatable =
+  set+, prologue+, epilogue+, performance+, castList+
+model.pLike.front =
+  head
+  | byline
+  | argument
+  | epigraph
+  | docTitle
+  | titlePart
+  | docAuthor
+  | docEdition
+  | docImprint
+  | docDate
+model.pLike.front_sequence =
+  head,
+  byline,
+  argument,
+  epigraph,
+  docTitle,
+  titlePart,
+  docAuthor,
+  docEdition,
+  docImprint,
+  docDate
+model.pLike.front_sequenceOptional =
+  head?,
+  byline?,
+  argument?,
+  epigraph?,
+  docTitle?,
+  titlePart?,
+  docAuthor?,
+  docEdition?,
+  docImprint?,
+  docDate?
+model.pLike.front_sequenceOptionalRepeatable =
+  head*,
+  byline*,
+  argument*,
+  epigraph*,
+  docTitle*,
+  titlePart*,
+  docAuthor*,
+  docEdition*,
+  docImprint*,
+  docDate*
+model.pLike.front_sequenceRepeatable =
+  head+,
+  byline+,
+  argument+,
+  epigraph+,
+  docTitle+,
+  titlePart+,
+  docAuthor+,
+  docEdition+,
+  docImprint+,
+  docDate+
+model.titlepagePart =
+  graphic
+  | binaryObject
+  | byline
+  | epigraph
+  | docTitle
+  | titlePart
+  | docAuthor
+  | imprimatur
+  | docEdition
+  | docImprint
+  | docDate
+  | figure
+model.titlepagePart_sequence =
+  graphic,
+  binaryObject,
+  byline,
+  epigraph,
+  docTitle,
+  titlePart,
+  docAuthor,
+  imprimatur,
+  docEdition,
+  docImprint,
+  docDate,
+  figure
+model.titlepagePart_sequenceOptional =
+  graphic?,
+  binaryObject?,
+  byline?,
+  epigraph?,
+  docTitle?,
+  titlePart?,
+  docAuthor?,
+  imprimatur?,
+  docEdition?,
+  docImprint?,
+  docDate?,
+  figure?
+model.titlepagePart_sequenceOptionalRepeatable =
+  graphic*,
+  binaryObject*,
+  byline*,
+  epigraph*,
+  docTitle*,
+  titlePart*,
+  docAuthor*,
+  imprimatur*,
+  docEdition*,
+  docImprint*,
+  docDate*,
+  figure*
+model.titlepagePart_sequenceRepeatable =
+  graphic+,
+  binaryObject+,
+  byline+,
+  epigraph+,
+  docTitle+,
+  titlePart+,
+  docAuthor+,
+  imprimatur+,
+  docEdition+,
+  docImprint+,
+  docDate+,
+  figure+
+model.msItemPart =
+  model.quoteLike
+  | model.respLike
+  | bibl
+  | listBibl
+  | title
+  | colophon
+  | explicit
+  | filiation
+  | finalRubric
+  | incipit
+  | msItem
+  | msItemStruct
+  | rubric
+  | textLang
+  | decoNote
+model.msItemPart_sequence =
+  model.quoteLike,
+  model.respLike,
+  bibl,
+  listBibl,
+  title,
+  colophon,
+  explicit,
+  filiation,
+  finalRubric,
+  incipit,
+  msItem,
+  msItemStruct,
+  rubric,
+  textLang,
+  decoNote
+model.msItemPart_sequenceOptional =
+  model.quoteLike?,
+  model.respLike?,
+  bibl?,
+  listBibl?,
+  title?,
+  colophon?,
+  explicit?,
+  filiation?,
+  finalRubric?,
+  incipit?,
+  msItem?,
+  msItemStruct?,
+  rubric?,
+  textLang?,
+  decoNote?
+model.msItemPart_sequenceOptionalRepeatable =
+  model.quoteLike*,
+  model.respLike*,
+  bibl*,
+  listBibl*,
+  title*,
+  colophon*,
+  explicit*,
+  filiation*,
+  finalRubric*,
+  incipit*,
+  msItem*,
+  msItemStruct*,
+  rubric*,
+  textLang*,
+  decoNote*
+model.msItemPart_sequenceRepeatable =
+  model.quoteLike+,
+  model.respLike+,
+  bibl+,
+  listBibl+,
+  title+,
+  colophon+,
+  explicit+,
+  filiation+,
+  finalRubric+,
+  incipit+,
+  msItem+,
+  msItemStruct+,
+  rubric+,
+  textLang+,
+  decoNote+
+model.choicePart =
+  sic | corr | reg | orig | unclear | abbr | expan | seg
+model.choicePart_sequence =
+  sic, corr, reg, orig, unclear, abbr, expan, seg
+model.choicePart_sequenceOptional =
+  sic?, corr?, reg?, orig?, unclear?, abbr?, expan?, seg?
+model.choicePart_sequenceOptionalRepeatable =
+  sic*, corr*, reg*, orig*, unclear*, abbr*, expan*, seg*
+model.choicePart_sequenceRepeatable =
+  sic+, corr+, reg+, orig+, unclear+, abbr+, expan+, seg+
+model.lLike = l
+model.lLike_sequence = l
+model.lLike_sequenceOptional = l?
+model.lLike_sequenceOptionalRepeatable = l*
+model.lLike_sequenceRepeatable = l+
+model.recordingPart = model.dateLike | equipment | broadcast | respStmt
+model.recordingPart_sequence =
+  model.dateLike, equipment, broadcast, respStmt
+model.recordingPart_sequenceOptional =
+  model.dateLike?, equipment?, broadcast?, respStmt?
+model.recordingPart_sequenceOptionalRepeatable =
+  model.dateLike*, equipment*, broadcast*, respStmt*
+model.recordingPart_sequenceRepeatable =
+  model.dateLike+, equipment+, broadcast+, respStmt+
+model.imprintPart = publisher | biblScope | pubPlace
+model.imprintPart_sequence = publisher, biblScope, pubPlace
+model.imprintPart_sequenceOptional = publisher?, biblScope?, pubPlace?
+model.imprintPart_sequenceOptionalRepeatable =
+  publisher*, biblScope*, pubPlace*
+model.imprintPart_sequenceRepeatable = publisher+, biblScope+, pubPlace+
+model.catDescPart = textDesc
+model.catDescPart_sequence = textDesc
+model.catDescPart_sequenceOptional = textDesc?
+model.catDescPart_sequenceOptionalRepeatable = textDesc*
+model.catDescPart_sequenceRepeatable = textDesc+
+model.settingPart = locale | activity
+model.settingPart_sequence = locale, activity
+model.settingPart_sequenceOptional = locale?, activity?
+model.settingPart_sequenceOptionalRepeatable = locale*, activity*
+model.settingPart_sequenceRepeatable = locale+, activity+
+model.textDescPart_sequence =
+  channel,
+  constitution,
+  derivation,
+  domain,
+  factuality,
+  interaction,
+  preparedness
+model.castItemPart = role | roleDesc | actor
+model.castItemPart_sequence = role, roleDesc, actor
+model.castItemPart_sequenceOptional = role?, roleDesc?, actor?
+model.castItemPart_sequenceOptionalRepeatable = role*, roleDesc*, actor*
+model.castItemPart_sequenceRepeatable = role+, roleDesc+, actor+
+model.physDescPart_sequenceOptional =
+  objectDesc?,
+  handDesc?,
+  musicNotation?,
+  decoDesc?,
+  additions?,
+  bindingDesc?,
+  sealDesc?,
+  accMat?
+model.addressLike = email | address
+model.addressLike_sequence = email, address
+model.addressLike_sequenceOptional = email?, address?
+model.addressLike_sequenceOptionalRepeatable = email*, address*
+model.addressLike_sequenceRepeatable = email+, address+
+model.nameLike = model.nameLike.agent | rs | lang | placeName | geogName
+model.nameLike_sequence =
+  model.nameLike.agent, rs, lang, placeName, geogName
+model.nameLike_sequenceOptional =
+  model.nameLike.agent?, rs?, lang?, placeName?, geogName?
+model.nameLike_sequenceOptionalRepeatable =
+  model.nameLike.agent*, rs*, lang*, placeName*, geogName*
+model.nameLike_sequenceRepeatable =
+  model.nameLike.agent+, rs+, lang+, placeName+, geogName+
+model.global =
+  model.global.meta
+  | model.milestoneLike
+  | model.noteLike
+  | model.global.edit
+  | anchor
+model.global_sequence =
+  model.global.meta,
+  model.milestoneLike,
+  model.noteLike,
+  model.global.edit,
+  anchor
+model.global_sequenceOptional =
+  model.global.meta?,
+  model.milestoneLike?,
+  model.noteLike?,
+  model.global.edit?,
+  anchor?
+model.global_sequenceOptionalRepeatable =
+  model.global.meta*,
+  model.milestoneLike*,
+  model.noteLike*,
+  model.global.edit*,
+  anchor*
+model.global_sequenceRepeatable =
+  model.global.meta+,
+  model.milestoneLike+,
+  model.noteLike+,
+  model.global.edit+,
+  anchor+
+model.featureVal = model.complexVal | model.singleVal
+model.featureVal_sequence = model.complexVal, model.singleVal
+model.featureVal_sequenceOptional = model.complexVal?, model.singleVal?
+model.featureVal_sequenceOptionalRepeatable =
+  model.complexVal*, model.singleVal*
+model.featureVal_sequenceRepeatable =
+  model.complexVal+, model.singleVal+
+model.common =
+  model.oddDecl
+  | model.oddRef
+  | model.qLike
+  | model.biblLike
+  | model.listLike
+  | model.divPart
+  | label
+  | table
+  | figure
+  | eg
+  | egXML
+model.common_sequence =
+  model.oddDecl,
+  model.oddRef,
+  model.qLike,
+  model.biblLike,
+  model.listLike,
+  model.divPart,
+  label,
+  table,
+  figure,
+  eg,
+  egXML
+model.common_sequenceOptional =
+  model.oddDecl?,
+  model.oddRef?,
+  model.qLike?,
+  model.biblLike?,
+  model.listLike?,
+  model.divPart?,
+  label?,
+  table?,
+  figure?,
+  eg?,
+  egXML?
+model.common_sequenceOptionalRepeatable =
+  model.oddDecl*,
+  model.oddRef*,
+  model.qLike*,
+  model.biblLike*,
+  model.listLike*,
+  model.divPart*,
+  label*,
+  table*,
+  figure*,
+  eg*,
+  egXML*
+model.common_sequenceRepeatable =
+  model.oddDecl+,
+  model.oddRef+,
+  model.qLike+,
+  model.biblLike+,
+  model.listLike+,
+  model.divPart+,
+  label+,
+  table+,
+  figure+,
+  eg+,
+  egXML+
+model.biblPart =
+  model.respLike
+  | model.imprintPart
+  | edition
+  | extent
+  | distributor
+  | idno
+  | series
+  | msIdentifier
+model.biblPart_sequence =
+  model.respLike,
+  model.imprintPart,
+  edition,
+  extent,
+  distributor,
+  idno,
+  series,
+  msIdentifier
+model.biblPart_sequenceOptional =
+  model.respLike?,
+  model.imprintPart?,
+  edition?,
+  extent?,
+  distributor?,
+  idno?,
+  series?,
+  msIdentifier?
+model.biblPart_sequenceOptionalRepeatable =
+  model.respLike*,
+  model.imprintPart*,
+  edition*,
+  extent*,
+  distributor*,
+  idno*,
+  series*,
+  msIdentifier*
+model.biblPart_sequenceRepeatable =
+  model.respLike+,
+  model.imprintPart+,
+  edition+,
+  extent+,
+  distributor+,
+  idno+,
+  series+,
+  msIdentifier+
+model.datePart = offset | distance
+model.datePart_sequence = offset, distance
+model.datePart_sequenceOptional = offset?, distance?
+model.datePart_sequenceOptionalRepeatable = offset*, distance*
+model.datePart_sequenceRepeatable = offset+, distance+
+model.frontPart = model.frontPart.drama | divGen | titlePage
+model.frontPart_sequence = model.frontPart.drama, divGen, titlePage
+model.frontPart_sequenceOptional =
+  model.frontPart.drama?, divGen?, titlePage?
+model.frontPart_sequenceOptionalRepeatable =
+  model.frontPart.drama*, divGen*, titlePage*
+model.frontPart_sequenceRepeatable =
+  model.frontPart.drama+, divGen+, titlePage+
+model.addrPart = model.nameLike | addrLine | street | postCode | postBox
+model.addrPart_sequence =
+  model.nameLike, addrLine, street, postCode, postBox
+model.addrPart_sequenceOptional =
+  model.nameLike?, addrLine?, street?, postCode?, postBox?
+model.addrPart_sequenceOptionalRepeatable =
+  model.nameLike*, addrLine*, street*, postCode*, postBox*
+model.addrPart_sequenceRepeatable =
+  model.nameLike+, addrLine+, street+, postCode+, postBox+
+model.pPart.data =
+  model.dateLike
+  | model.measureLike
+  | model.addressLike
+  | model.nameLike
+model.pPart.data_sequence =
+  model.dateLike, model.measureLike, model.addressLike, model.nameLike
+model.pPart.data_sequenceOptional =
+  model.dateLike?,
+  model.measureLike?,
+  model.addressLike?,
+  model.nameLike?
+model.pPart.data_sequenceOptionalRepeatable =
+  model.dateLike*,
+  model.measureLike*,
+  model.addressLike*,
+  model.nameLike*
+model.pPart.data_sequenceRepeatable =
+  model.dateLike+,
+  model.measureLike+,
+  model.addressLike+,
+  model.nameLike+
+model.inter =
+  model.oddDecl
+  | model.oddRef
+  | model.qLike
+  | model.biblLike
+  | model.listLike
+  | model.stageLike
+  | label
+  | \text
+  | castList
+  | model.divPart.spoken
+  | table
+  | figure
+model.inter_sequence =
+  model.oddDecl,
+  model.oddRef,
+  model.qLike,
+  model.biblLike,
+  model.listLike,
+  model.stageLike,
+  label,
+  \text,
+  castList,
+  model.divPart.spoken,
+  table,
+  figure
+model.inter_sequenceOptional =
+  model.oddDecl?,
+  model.oddRef?,
+  model.qLike?,
+  model.biblLike?,
+  model.listLike?,
+  model.stageLike?,
+  label?,
+  \text?,
+  castList?,
+  model.divPart.spoken?,
+  table?,
+  figure?
+model.inter_sequenceOptionalRepeatable =
+  model.oddDecl*,
+  model.oddRef*,
+  model.qLike*,
+  model.biblLike*,
+  model.listLike*,
+  model.stageLike*,
+  label*,
+  \text*,
+  castList*,
+  model.divPart.spoken*,
+  table*,
+  figure*
+model.inter_sequenceRepeatable =
+  model.oddDecl+,
+  model.oddRef+,
+  model.qLike+,
+  model.biblLike+,
+  model.listLike+,
+  model.stageLike+,
+  label+,
+  \text+,
+  castList+,
+  model.divPart.spoken+,
+  table+,
+  figure+
+model.phrase =
+  model.segLike
+  | model.hiLike
+  | model.graphicLike
+  | model.pPart.msdesc
+  | model.pPart.edit
+  | model.ptrLike
+  | model.lPart
+  | model.oddPhr
+  | model.pPart.data
+  | model.ptrLike.form
+model.phrase_sequence =
+  model.segLike,
+  model.hiLike,
+  model.graphicLike,
+  model.pPart.msdesc,
+  model.pPart.edit,
+  model.ptrLike,
+  model.lPart,
+  model.oddPhr,
+  model.pPart.data,
+  model.ptrLike.form
+model.phrase_sequenceOptional =
+  model.segLike?,
+  model.hiLike?,
+  model.graphicLike?,
+  model.pPart.msdesc?,
+  model.pPart.edit?,
+  model.ptrLike?,
+  model.lPart?,
+  model.oddPhr?,
+  model.pPart.data?,
+  model.ptrLike.form?
+model.phrase_sequenceOptionalRepeatable =
+  model.segLike*,
+  model.hiLike*,
+  model.graphicLike*,
+  model.pPart.msdesc*,
+  model.pPart.edit*,
+  model.ptrLike*,
+  model.lPart*,
+  model.oddPhr*,
+  model.pPart.data*,
+  model.ptrLike.form*
+model.phrase_sequenceRepeatable =
+  model.segLike+,
+  model.hiLike+,
+  model.graphicLike+,
+  model.pPart.msdesc+,
+  model.pPart.edit+,
+  model.ptrLike+,
+  model.lPart+,
+  model.oddPhr+,
+  model.pPart.data+,
+  model.ptrLike.form+
+model.divLike = \div
+model.divLike_sequence = \div
+model.divLike_sequenceOptional = \div?
+model.divLike_sequenceOptionalRepeatable = \div*
+model.divLike_sequenceRepeatable = \div+
+model.divGenLike = divGen
+model.divGenLike_sequence = divGen
+model.divGenLike_sequenceOptional = divGen?
+model.divGenLike_sequenceOptionalRepeatable = divGen*
+model.divGenLike_sequenceRepeatable = divGen+
+model.div1Like = div1
+model.div1Like_sequence = div1
+model.div1Like_sequenceOptional = div1?
+model.div1Like_sequenceOptionalRepeatable = div1*
+model.div1Like_sequenceRepeatable = div1+
+model.div2Like = div2
+model.div2Like_sequence = div2
+model.div2Like_sequenceOptional = div2?
+model.div2Like_sequenceOptionalRepeatable = div2*
+model.div2Like_sequenceRepeatable = div2+
+model.div3Like = div3
+model.div3Like_sequence = div3
+model.div3Like_sequenceOptional = div3?
+model.div3Like_sequenceOptionalRepeatable = div3*
+model.div3Like_sequenceRepeatable = div3+
+model.div4Like = div4
+model.div4Like_sequence = div4
+model.div4Like_sequenceOptional = div4?
+model.div4Like_sequenceOptionalRepeatable = div4*
+model.div4Like_sequenceRepeatable = div4+
+model.div5Like = div5
+model.div5Like_sequence = div5
+model.div5Like_sequenceOptional = div5?
+model.div5Like_sequenceOptionalRepeatable = div5*
+model.div5Like_sequenceRepeatable = div5+
+model.div6Like = div6
+model.div6Like_sequence = div6
+model.div6Like_sequenceOptional = div6?
+model.div6Like_sequenceOptionalRepeatable = div6*
+model.div6Like_sequenceRepeatable = div6+
+model.div7Like = div7
+model.div7Like_sequence = div7
+model.div7Like_sequenceOptional = div7?
+model.div7Like_sequenceOptionalRepeatable = div7*
+model.div7Like_sequenceRepeatable = div7+
+model.placeNamePart =
+  bloc
+  | country
+  | region
+  | district
+  | settlement
+  | offset
+  | distance
+  | geog
+model.placeNamePart_sequence =
+  bloc, country, region, district, settlement, offset, distance, geog
+model.placeNamePart_sequenceOptional =
+  bloc?,
+  country?,
+  region?,
+  district?,
+  settlement?,
+  offset?,
+  distance?,
+  geog?
+model.placeNamePart_sequenceOptionalRepeatable =
+  bloc*,
+  country*,
+  region*,
+  district*,
+  settlement*,
+  offset*,
+  distance*,
+  geog*
+model.placeNamePart_sequenceRepeatable =
+  bloc+,
+  country+,
+  region+,
+  district+,
+  settlement+,
+  offset+,
+  distance+,
+  geog+
+# 2. elements
+
+# 3. macros
+data.certainty = "high" | "medium" | "low" | "unknown"
+data.probability = xsd:double { minInclusive = "0" maxInclusive = "1" }
+data.numeric = xsd:double | xsd:decimal
+data.count = xsd:nonNegativeInteger
+data.temporal =
+  xsd:date
+  | xsd:gYear
+  | xsd:gMonth
+  | xsd:gDay
+  | xsd:gYearMonth
+  | xsd:gMonthDay
+  | xsd:time
+  | xsd:dateTime
+  | xsd:token {
+      pattern =
+        "(-?[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T)?([01][0-9]|2[0-3])(:[0-5][0-9])?(Z|[+\-]((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?"
+    }
+data.duration = xsd:duration
+data.truthValue = xsd:boolean
+data.xTruthValue = xsd:boolean | "unknown" | "inapplicable"
+data.language = xsd:language
+data.sex = "0" | "1" | "2" | "9"
+data.namespace = xsd:anyURI
+data.outputMeasurement =
+  xsd:token {
+    pattern =
+      "[\-+]?\d+(\.\d+)?(%|cm|mm|in|pt|pc|px|em|ex|gd|rem|vw|vh|vm)"
+  }
+data.pattern = xsd:token
+data.pointer = xsd:anyURI
+data.code = xsd:anyURI
+data.enumerated = xsd:token
+data.key = xsd:string
+data.word = xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+data.name = xsd:Name
+macro.component |=
+  model.common | mix.drama | mix.spoken | mix.dictionaries
+macro.componentSeq |= (macro.component | model.global)*
+macro.paraContent =
+  (text | model.gLike | model.phrase | model.inter | model.global)*
+macro.phraseSeq = (text | model.gLike | model.phrase | model.global)*
+macro.specialPara =
+  (text
+   | model.gLike
+   | model.phrase
+   | model.inter
+   | model.divPart
+   | model.global)*
+macro.xtext = (text | model.gLike)*
+macro.fileDescPart =
+  titleStmt,
+  editionStmt?,
+  extent?,
+  publicationStmt,
+  seriesStmt?,
+  notesStmt?
+macro.glossSeq = altIdent?, equiv*, gloss*, desc*

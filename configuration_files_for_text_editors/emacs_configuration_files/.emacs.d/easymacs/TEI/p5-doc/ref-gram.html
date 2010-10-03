@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;gram&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;gram&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;gram&gt;</h1></div><div><span id="gram"/><table border="1" class="wovenodd"><tr><td class="elementSpec">gram</td><td colspan="2" class="wovenodd-col2">(grammatical information) within an entry in a dictionary or a terminological data file, contains grammatical
+        information relating to a term, word, or form.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-model.morphLike.html">model.morphLike</a> <a class="link_odd" href="ref-att.lexicographic.html">att.lexicographic</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element gram
+{
+   att.global.attributes,
+   att.lexicographic.attributes,
+   attribute type { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> }?,
+   <a class="link_odd" href="ref-macro.paraContent.html">macro.paraContent</a>
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>  [<a class="classlink" href="ref-att.lexicographic.html">att.lexicographic</a> ] <table><tr><td class="attDef">type</td><td colspan="2">classifies the grammatical information given according to some convenient typology
+                — in the case of terminological information, preferably the dictionary of
+                data element types specified in ISO WD 12 620.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a></code></td></tr><tr><td><!-- --></td><td valign="top">Sample values include:<table class="valList"><tr><td valign="top"><b>pos</b></td><td valign="top">(part of speech (any of the word classes to which a word may be assigned
+                        in a given language, based on form, meaning, or a combination of features,
+                        e.g. noun, verb, adjective, etc.)) </td></tr><tr><td valign="top"><b>gen</b></td><td valign="top">(gender (formal classification by which nouns and pronouns, and often
+                        accompanying modifiers, are grouped and inflected, or changed in form, so as
+                        to control certain syntactic relationships)) </td></tr><tr><td valign="top"><b>num</b></td><td valign="top">(number (e.g. singular, plural, dual, ...)) </td></tr><tr><td valign="top"><b>animate</b></td><td valign="top">(animate or inanimate) </td></tr><tr><td valign="top"><b>proper</b></td><td valign="top">(proper noun or common noun) </td></tr></table></td></tr><tr><td/><td><p><span id="id2459791"/>A much fuller list of values for the <span class="att">type</span> attribute may be generated
+                    from the dictionary of data element types under preparation as ISO TC 37/SC 3/WD
+                    12 620, Computational Aids in Terminology. See ISO 12 620 for fuller details.</p></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;entry&gt;</span><br/>  <span class="element">&lt;form&gt;</span><br/>   <span class="element">&lt;orth&gt;</span>pamplemousse<span class="element">&lt;/orth&gt;</span><br/>  <span class="element">&lt;/form&gt;</span><br/>  <span class="element">&lt;gramGrp&gt;</span><br/>   <span class="element">&lt;gram <span class="attribute">type</span>="pos"&gt;</span>noun<span class="element">&lt;/gram&gt;</span><br/>   <span class="element">&lt;gram <span class="attribute">type</span>="gen"&gt;</span>masculine<span class="element">&lt;/gram&gt;</span><br/>  <span class="element">&lt;/gramGrp&gt;</span><br/> <span class="element">&lt;/entry&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p><span id="id2459839"/>In terminological data, the <code>&lt;gram&gt;</code> element usually refers to the most recently
+            specified <code>&lt;term&gt;</code> or <code>&lt;otherForm&gt;</code> element. In flat term entries, the
+            <span class="att">group</span> and <span class="att">depend</span> attributes may be used to indicate exceptions to
+            this general rule. In dictionaries, the element typically relates to the form or forms
+            with which it is grouped in a <code>&lt;form&gt;</code> or other grouping element.</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="DI.html#DITPGR" title="Grammatical Information">9.3.2  Grammatical Information</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">dictionaries</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

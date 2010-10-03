@@ -1,0 +1,2701 @@
+<?xml version="1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>TEI Absolutely Bare</title>
+        <author>Laurent Romary</author>
+        <editor xml:id="sbauman.emt">Syd Bauman</editor>
+      </titleStmt>
+      <publicationStmt>
+        <availability status="free">
+          <p>This template file is freely available and you are hereby
+            authorised to copy, modify, and redistribute it in any way without
+            further reference or permissions.</p>
+          <p>When making such modifications, you are strongly recommended to
+            change the present text to include an accurate statement of the
+            licencing conditions applicable to your modified text.</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Initially created on <date value="2006-10-12T05:24:41">Thursday 12th
+            October 2006</date> by the form at
+        http://www.tei-c.org.uk/Roma/.</p>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <change date="2006-10-14" who="#sbauman.emt"> Made valid: <list><item>removed empty <hi rend="att">prefix</hi> attribute</item><item>added required <hi rend="att">type</hi> attribute to
+          <gi>classSpec</gi>s</item></list>. <note>Sebastian had also made the above changes.</note> Also
+        removed extraneous <gi>altIdent</gi> elements, improved
+        <gi>sourceDesc</gi>, changed the <hi rend="att">ident</hi> of <gi>schemaSpec</gi>
+        to match the filename, and added this revision description. </change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <front>
+      <divGen type="toc"/>
+    </front>
+    <body>
+      <p>This customization creates a TEI schema with the bare minimum of tags
+        to make a recognizable document. It loads the four key modules, but
+        takes out many elements.</p>
+      <div>
+        <head>Classes defined</head>
+        <div xml:id="att.ascribed">
+          <head>Class att.ascribed</head>
+          <p>provides attributes for elements representing speech or action
+that can be ascribed to a specific individual.</p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>who</code></label><item>indicates the person, or group of
+	people, to whom the element content is ascribed.</item></list></p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="att.authorialIntervention">
+          <head>Class att.authorialIntervention</head>
+          <p>provides attributes describing the nature of an authorial intervention.</p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>hand</code></label><item>signifies the hand of the agent which made the addition or
+      performed the deletion.</item><label><code>status</code></label><item>may be used to indicate faulty deletions, e.g. strikeouts
+      which include too much or too little text, or erroneous
+      additions, e.g., an insertion which duplicates some of the text
+      already present. Sample values include:<list type="gloss"><label>duplicate</label><item>(all of the text indicated as an addition duplicates
+	  some text that is in the original, whether the duplication
+	  is word-for-word or less exact.) </item><label>duplicate-partial</label><item>(part of the text indicated as an addition duplicates
+	  some text that is in the original) </item><label>excessStart</label><item>(some text at the beginning of the deletion is marked
+          as deleted even though it clearly should not be
+          deleted.) </item><label>excessEnd</label><item>(some text at the end of the deletion is marked as
+          deleted even though it clearly should not be
+          deleted.) </item><label>shortStart</label><item>(some text at the beginning of the deletion is not
+          marked as deleted even though it clearly should be.) </item><label>shortEnd</label><item>(some text at the end of the deletion is not marked as
+          deleted even though it clearly should be.) </item><label>unremarkable</label><item>(the deletion is not faulty.) </item></list></item><label><code>type</code></label><item>classifies the type of addition or deletion using any convenient typology.</item></list></p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="att.datable">
+          <head>Class att.datable</head>
+          <p>provides attributes for normalization of elements that contain datable events.</p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>notBefore</code></label><item>specifies the earliest possible date for the event in
+	standard form, e.g. yyyy-mm-dd.</item><label><code>notAfter</code></label><item>specifies the latest possible date for the event in
+	standard form, e.g. yyyy-mm-dd.</item><label><code>from</code></label><item>indicates the starting point of the period in standard form.</item><label><code>to</code></label><item>indicates the ending point of the period in standard form.</item></list></p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="att.datePart">
+          <head>Class att.datePart</head>
+          <p>(attributes for temporal expression) attributes for component elements of temporal expressions involving
+  dates and time</p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>value</code></label><item>supplies the value of a date or time in a standard form.<list type="gloss"><label><hi>Example</hi></label><item><p>Examples of W3C date, time, and date &amp; time formats.</p><eg> &lt;date value="1945-10-24"
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;24 Oct 45&lt;/date&gt;
+ &lt;date value="1996-09-24T07:25Z"&gt;September 24th, 1996 at 3:25 in the morning&lt;/date&gt;
+ &lt;time value="1999-01-04T20:42-05:00"&gt;Jan 4 1999 at 8 pm&lt;/time&gt;
+ &lt;time value="14:12:38"&gt;fourteen twelve and 38 seconds&lt;/time&gt;
+ &lt;date value="1962-10"&gt;October of 1962&lt;/date&gt;
+ &lt;date value="--06-12"&gt;June 12th&lt;/date&gt;
+ &lt;date value="---01"&gt;the first of each month&lt;/date&gt;
+ &lt;date value="--08"&gt;August&lt;/date&gt;
+ &lt;date value="2006"&gt;MMVI&lt;/date&gt;</eg></item></list><list type="gloss"><label><hi>Example</hi></label><item><p>Examples of time formats with reduced precision.</p><eg> &lt;date value="2006-05-18T10:03+09:00"
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;a few minutes after ten in the morning on Thu 18 May&lt;/date&gt;
+ &lt;time value="03:00"&gt;3 A.M.&lt;/time&gt;
+ &lt;time value="12"&gt;around noon&lt;/time&gt;</eg><p>Software intended for use with W3C XML Schema datatypes
+	  may be unable to properly process times expressed with
+	  reduced precision.</p></item></list><list type="gloss"><label><hi>Example</hi></label><item><p>A usage example of <gi>date</gi>.</p><eg>This list
+	begins in the year 1632, more precisely on Trinity Sunday,
+	i.e. the Sunday after Pentecost, in that year the  &lt;date calendar="Julian" value="1632-06-06"
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;27th of May (old
+	style)&lt;/date&gt;.</eg></item></list><list type="gloss"><label><hi>Example</hi></label><item><p>A usage example of <gi>time</gi>.</p><eg>He likes to be
+	punctual. I said  &lt;q
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;time value="12"&gt;around noon&lt;/time&gt;
+ &lt;/q&gt;,
+	and he showed up at 
+ &lt;time value="12:00:00"&gt;12 O'clock&lt;/time&gt;
+	on the dot.</eg></item></list></item><label><code>dur</code></label><item>(duration) indicates the length of this element in time.<list type="gloss"><label><hi>Example</hi></label><item><p>Examples of W3C durations.</p><eg> &lt;distance dur="PT45M"
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;forty-five minutes&lt;/distance&gt;
+ &lt;distance dur="P1DT12H"&gt;a day and a half&lt;/distance&gt;
+ &lt;distance dur="P7D"&gt;a week&lt;/distance&gt;
+ &lt;distance dur="PT0.02S"&gt;20 ms&lt;/distance&gt;</eg></item></list></item></list></p>
+          <p><hi>Note</hi>: In providing a <soCalled>regularized</soCalled> form, no
+	  claim is made that the form in the source text is incorrect; the
+	  regularized form is simply that chosen as the main form for purposes
+	  of unifying variant forms under a single heading.
+	</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="att.declarable">
+          <head>Class att.declarable</head>
+          <p>provides attributes for those elements in the TEI Header which may be independently selected by means of  the specialpurpose decls attribute.</p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>default</code></label><item>indicates whether or not this element is selected by default when
+its parent is selected. Legal values are:<list type="gloss"><label>true</label><item>(This element is selected if its parent is selected) </item><label>false</label><item>(This element can only be selected explicitly, unless it is the
+only one of its kind, in which case it is selected if its parent is selected.) </item></list></item></list></p>
+          <p><hi>Note</hi>: The rules governing the association of declarable elements with
+    individual parts of a TEI text are fully defined in chapter <ptr target="#CCAS"/>. Only one element of a particular type may have a
+    <hi rend="att">default</hi> attribute with a value of <hi rend="val">true</hi>.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: <ref target="#sourceDesc">sourceDesc</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="att.declaring">
+          <head>Class att.declaring</head>
+          <p>provides attributes for elements which may be independently associated with a particular declarable element within the header, thus overriding the inherited default for that element.</p>
+          <p><hi>Attributes: </hi>Global attributes only<list type="gloss"/></p>
+          <p><hi>Class</hi>: </p>
+          <p><hi>Members</hi>: <ref target="#back">back</ref>  <ref target="#body">body</ref>  <ref target="#div">div</ref>  <ref target="#front">front</ref>  <ref target="#text">text</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="att.divLike">
+          <head>Class att.divLike</head>
+          <p>provides a set of attributes common to all elements which behave in the same way as divisions.</p>
+          <p><hi>Class</hi>: att.metrical</p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>type</code></label><item>specifies a name conventionally used for this level of
+		subdivision, e.g. act, volume, book,
+		section, canto, etc.</item></list></p>
+          <p><hi>Class</hi>: att.metrical</p>
+          <p><hi>Members</hi>: <ref target="#div">div</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="att.editLike">
+          <head>Class att.editLike</head>
+          <p>provides attributes describing the nature of a encoded scholarly intervention or interpretation of any kind.</p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>cert</code></label><item>signifies the degree of certainty associated with the
+	intervention or interpretation. Values are:<list type="gloss"><label>high</label><item>(a high degree of certainty is associated
+with the encoded intervention.) </item><label>medium</label><item>(the encoder is reasonably certain of the
+appropriateness of the intervention) </item><label>low</label><item>(the encoded intervention is doubtful or uncertain) </item></list></item><label><code>resp</code></label><item>indicates the agency responsible for the
+	intervention or interpretation, for example an editor or transcriber.</item><label><code>evidence</code></label><item>indicates the nature of the evidence supporting the reliability or
+  accuracy of the intervention or interpretation. Sample values include:<list type="gloss"><label>internal</label><item>(there is internal evidence to support the intervention.) </item><label>external</label><item>(there is external evidence to support the intervention.) </item><label>conjecture</label><item>(the intervention or interpretation has been made by
+	  the editor, cataloguer, or scholar on the basis of their expertise.) </item></list></item></list></p>
+          <p><hi>Note</hi>: The members of this attribute class are typically used to
+    represent any kind of editorial intervention in a text, for
+    example a correction or interpretation, or to date or localize manuscripts etc.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="att.global">
+          <head>Class att.global</head>
+          <p>provides a set of attributes common to all elements in the TEI
+  encoding scheme.</p>
+          <p><hi>Class</hi>: att.global.linking: att.global.analytic</p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>xml:id</code></label><item>provides a unique identifier for the element bearing the
+      attribute.</item><label><code>n</code></label><item>gives a number (or other label) for an element, which is
+      not necessarily unique within the document.</item><label><code>xml:lang</code></label><item>indicates the language of the element content using the
+      codes from RFC
+      3066</item></list></p>
+          <p><hi>Class</hi>: att.global.linking: att.global.analytic</p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="att.interpLike">
+          <head>Class att.interpLike</head>
+          <p>provides attributes for elements which represent a formal analysis or interpretation.</p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>resp</code></label><item>indicates who is responsible for the interpretation.</item><label><code>type</code></label><item>indicates what kind of phenomenon is being noted in the passage. Sample values include:<list type="gloss"><label>image</label><item>(identifies an image in the passage.
+   ) </item><label>character</label><item>(identifies a character associated with the passage.
+   ) </item><label>theme</label><item>(identifies a theme in the passage.
+   ) </item><label>allusion</label><item>(identifies an allusion to another text.
+   ) </item></list></item><label><code>inst</code></label><item>points to instances of the analysis or interpretation represented
+by the current element.</item></list></p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="att.measured">
+          <head>Class att.measured</head>
+          <p>provides attributes which qualify a measurement of some kind.</p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>unit</code></label><item>names the units used for the measurement. Suggested values include:<list type="gloss"><label>cm</label><item>(centimetres) </item><label>mm</label><item>(millimetres) </item><label>in</label><item>(inches) </item></list></item><label><code>scope</code></label><item>specifies the applicability of this measurement, where
+   more than one object is being measured. Sample values include:<list type="gloss"><label>all</label><item>(measurement applies to all instances.) </item><label>most</label><item>(measurement applies to most of the instances inspected.) </item><label>range</label><item>(measurement applies to only the specified range of instances.) </item></list></item></list></p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="att.measurement">
+          <head>Class att.measurement</head>
+          <p>provides attributes to represent a regularized or normalized measurement.</p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>unit</code></label><item>indicates the units used for the measurement, usually
+      using the standard symbol for the desired units. Suggested values include:<list type="gloss"><label>m</label><item>(metre) SI base unit of length</item><label>kg</label><item>(kilogram) SI base unit of mass</item><label>s</label><item>(second) SI base unit of time</item><label>Hz</label><item>(hertz) SI unit of frequency</item><label>Pa</label><item>(pascal) SI unit of pressure or stress</item><label>Ω</label><item>(ohm) SI unit of electric resistance</item><label>L</label><item>(litre) 1 dm³</item><label>t</label><item>(tonne) 10³ kg</item><label>ha</label><item>(hectare) 1 hm²</item><label>Å</label><item>(ångström) 10⁻¹⁰ m</item><label>mL</label><item>(millilitre) </item><label>cm</label><item>(centimetre) </item><label>dB</label><item>(decibel) see remarks, below</item><label>kbit</label><item>(kilobit) 10³ or 1000 bits</item><label>Kibit</label><item>(kibibit) 2¹⁰ or 1024 bits</item><label>kB</label><item>(kilobyte) 10³ or 1000 bytes</item><label>KiB</label><item>(kibibyte) 2¹⁰ or 1024 bytes</item><label>MB</label><item>(megabyte) 10⁶ or 1 000 000 bytes</item><label>MiB</label><item>(mebibyte) 2²⁰ or 1 048 576 bytes</item></list></item><label><code>quantity</code></label><item>specifies the number of the specified units that
+      comprise the measurement</item><label><code>commodity</code></label><item>indicates the substance that is being measured</item></list></p>
+          <p><hi>Note</hi>: This attribute class provides a triplet of attributes that may
+    be used either to regularize the values of the measurement being
+    encoded, or to normalize them with respect to a standard
+    measurement system.
+    <eg n="Example .1">
+&lt;!-- regularization: --&gt; &lt;l
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;So weren't you gonna buy &lt;measure quantity="0.5" unit="gal" commodity="ice cream"&gt;half a gallon&lt;/measure&gt;, baby&lt;/l&gt;
+&lt;!-- normalization: --&gt;
+ &lt;l&gt;So won't you go and buy &lt;measure quantity="1.893" unit="L" commodity="ice cream"&gt;half a gallon&lt;/measure&gt;, baby?&lt;/l&gt;</eg><?tei winita need better examples.?></p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="att.naming">
+          <head>Class att.naming</head>
+          <p>provides attributes common to elements which refer to named persons, places, organizations etc.</p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>key</code></label><item>provides a means of locating a full definition for the
+      entity being named such as a database record key or a
+      URI.</item></list></p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="att.placement">
+          <head>Class att.placement</head>
+          <p>provides attributes for describing where on the source page or
+  object a textual element appears.</p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>place</code></label><item> Suggested values include:<list type="gloss"><label>infralinear</label><item>(below the line) </item><label>margin-bot</label><item>(in bottom margin) </item><label>margin-left</label><item>(in left margin) </item><label>margin-right</label><item>(in right margin) </item><label>margin-top</label><item>(in top margin) </item><label>opposite</label><item>(on opposite page) </item><label>overleaf</label><item>(on the other side of the leaf) </item><label>supralinear</label><item>(above the line) </item><label>verso</label><item>(on verso of sheet) </item><label>app</label><item>(note appears in the apparatus at the foot of the page.) </item><label>end</label><item>(note appears at end of chapter or volume.) </item><label>foot</label><item>(note appears at foot of page.) </item><label>inline</label><item>(note appears as a marked paragraph in the body of the text.) </item><label>interlinear</label><item>(note appears between lines of the text; a less precise form of either infralinear or supralinear.) </item><label>inline</label><item>(addition is made in a space left in the witness by an earlier scribe.) </item><label>mixed</label><item>(one or more of the other values) </item></list></item></list></p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="att.segLike">
+          <head>Class att.segLike</head>
+          <p>provides attributes for elements used for arbitrary segmentation. </p>
+          <p><hi>Class</hi>: att.metrical</p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>type</code></label><item>characterizes the type of segment.</item><label><code>function</code></label><item>characterizes the function of the segment.</item><label><code>part</code></label><item>specifies whether or not the segment is fragmented by some other
+structural element, for example a clause which is divided between two
+or more sentences. Legal values are:<list type="gloss"><label>Y</label><item>(the segment is incomplete in some respect) </item><label>N</label><item>(either the segment is complete, or no claim is made as to
+its completeness) </item><label>I</label><item>(the initial part of an incomplete segment) </item><label>M</label><item>(a medial part of an incomplete segment) </item><label>F</label><item>(the final part of an incomplete segment) </item></list></item></list></p>
+          <p><hi>Class</hi>: att.metrical</p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="att.spanning">
+          <head>Class att.spanning</head>
+          <p>provides attributes for elements which delimit a span of text by pointing mechanisms rather than by enclosing it.</p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>spanTo</code></label><item>indicates the end of a span initiated by the element
+	bearing this attribute.</item></list></p>
+          <p><hi>Note</hi>: The span is defined as running in document order from the start
+    of the content of the pointing element (if any) to the end of the
+    content of the element pointed to by the spanTo attribute (if
+    any). If no value is supplied for the attribute, the assumption is that the span is
+    coextensive with the pointing element.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="att.tableDecoration">
+          <head>Class att.tableDecoration</head>
+          <p>provides attributes used to decorate rows or cells of a table.</p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>role</code></label><item>indicates the kind of information held in this cell or
+in each cell of this row. Suggested values include:<list type="gloss"><label>label</label><item>(labelling or descriptive information only.) </item><label>data</label><item>(data values.) </item></list></item><label><code>rows</code></label><item>indicates the number of rows occupied by this cell or row.</item><label><code>cols</code></label><item>indicates the number of columns occupied by this cell or
+	row.</item></list></p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="att.timed">
+          <head>Class att.timed</head>
+          <p>provides a set of attributes common to those elements which have a duration in time, expressed either absolutely or by reference to an alignment map.</p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>start</code></label><item>indicates the location within a temporal alignment
+      at which this element begins.</item><label><code>end</code></label><item>indicates the location within a temporal alignment at which
+   this element ends.</item><label><code>dur</code></label><item>(duration) indicates the length of this element in time</item></list></p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="att.translatable">
+          <head>Class att.translatable</head>
+          <p>provides attributes used to  indicate the status of a translatable
+portion of an ODD document.</p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>version</code></label><item>specifies the version name or number of the source from
+	which the translated version was derived</item></list></p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="att.typed">
+          <head>Class att.typed</head>
+          <p>provides generic attributes which can be used to classify or subclassify elements in any way. </p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>type</code></label><item>characterizes the element in some sense, using any convenient
+ classification scheme or typology.</item><label><code>subtype</code></label><item>provides a sub-categorization of the element, if needed</item></list></p>
+          <p><hi>Note</hi>: The typology used may be formally defined using
+the  the <gi>classification</gi> element of the <gi>encodingDesc</gi> within
+the associated TEI header, or informally as descriptive prose within
+the <gi>encodingDesc</gi> element.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.addrPart">
+          <head>Class model.addrPart</head>
+          <p>(address part)  elements such as names or postal codes which may appear as a part of a  postal address.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: <ref target="#model.nameLike">model.nameLike</ref>    [<ref target="#model.nameLike.agent">model.nameLike.agent</ref>  ] </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.addressLike">
+          <head>Class model.addressLike</head>
+          <p>groups phrase-level elements used to represent postal or e-mail
+addresses.</p>
+          <p><hi>Class</hi>: <ref target="#model.pPart.data">model.pPart.data</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.pPart.data">model.pPart.data</ref></p>
+          <p><hi>Members</hi>: <ref target="#email">email</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.assertLike">
+          <head>Class model.assertLike</head>
+          <p>the class of elements concerning which assertions are made, for
+example as parts of a biographical element.</p>
+          <p><hi>Class</hi>: <ref target="#model.personPart">model.personPart</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.personPart">model.personPart</ref></p>
+          <p><hi>Members</hi>: <ref target="#model.persEventLike">model.persEventLike</ref>  <ref target="#model.persStateLike">model.persStateLike</ref>  <ref target="#model.persTraitLike">model.persTraitLike</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.biblLike">
+          <head>Class model.biblLike</head>
+          <p>groups elements containing a bibliographic description. </p>
+          <p><hi>Class</hi>: <ref target="#model.inter">model.inter</ref>: <ref target="#model.common">model.common</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.inter">model.inter</ref>: <ref rend="classlink" target="#model.common">model.common</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.biblPart">
+          <head>Class model.biblPart</head>
+          <p>(bibliographic citation
+part) groups elements which can appear within bibliographic
+citation elements.</p>
+          <p><hi>Note</hi>: This class is used in defining the content model of the
+<gi>bibl</gi> and <gi>biblItem</gi> elements.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: <ref target="#model.imprintPart">model.imprintPart</ref>  <ref target="#model.respLike">model.respLike</ref>    [<ref target="#author">author</ref>  ] </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.blockLike">
+          <head>Class model.blockLike</head>
+          <p>groups segmenting elements.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.castItemPart">
+          <head>Class model.castItemPart</head>
+          <p>elements used within an entry in a cast list, such as dramatic role or
+actor's name. </p>
+          <p><hi>Class</hi>: </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.catDescPart">
+          <head>Class model.catDescPart</head>
+          <p>groups elements which may be used inside catDesc
+and appear multiple times</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.choicePart">
+          <head>Class model.choicePart</head>
+          <p>groups those elements (other than choice itself) which can be used  in choice alternation</p>
+          <p><hi>Class</hi>: </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.common">
+          <head>Class model.common</head>
+          <p>groups common chunk- and inter-level elements.</p>
+          <p><hi>Note</hi>: This class defines the set of chunk- and inter-level elements
+available in all bases; it is used in defining the standard models
+<term>chunk.seq</term> and <term>macro.specialPara</term> in the general and
+mixed bases.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: <ref target="#label">label</ref>  <ref target="#model.biblLike">model.biblLike</ref>  <ref target="#model.divPart">model.divPart</ref>    [<ref target="#p">p</ref>  ] <ref target="#model.listLike">model.listLike</ref>    [<ref target="#list">list</ref>  ] <ref target="#model.oddDecl">model.oddDecl</ref>  <ref target="#model.oddRef">model.oddRef</ref>  <ref target="#model.qLike">model.qLike</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.complexVal">
+          <head>Class model.complexVal</head>
+          <p>(complex values) groups elements which express complex feature values in feature
+structures.</p>
+          <p><hi>Class</hi>: <ref target="#model.featureVal">model.featureVal</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.featureVal">model.featureVal</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.dateLike">
+          <head>Class model.dateLike</head>
+          <p>(dates and times) groups elements containing temporal expressions.</p>
+          <p><hi>Class</hi>: <ref target="#model.pPart.data">model.pPart.data</ref>: <ref target="#model.recordingPart">model.recordingPart</ref></p>
+          <p><hi>Note</hi>: This class allows certain content models to permit a temporal expression encoded with either a
+     <gi>date</gi> or a <gi>time</gi> element.</p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.pPart.data">model.pPart.data</ref>: <ref rend="classlink" target="#model.recordingPart">model.recordingPart</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.datePart">
+          <head>Class model.datePart</head>
+          <p>(temporal expression) groups component elements of temporal expressions involving
+  dates and time.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.div1Like">
+          <head>Class model.div1Like</head>
+          <p>groups top-level structural divisions.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.div2Like">
+          <head>Class model.div2Like</head>
+          <p>groups second-level structural divisions.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.div3Like">
+          <head>Class model.div3Like</head>
+          <p>groups third-level structural divisions.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.div4Like">
+          <head>Class model.div4Like</head>
+          <p>groups fourth-level structural divisions.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.div5Like">
+          <head>Class model.div5Like</head>
+          <p>groups fifth-level structural divisions.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.div6Like">
+          <head>Class model.div6Like</head>
+          <p>groups sixth-level structural divisions.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.div7Like">
+          <head>Class model.div7Like</head>
+          <p>groups seventh-level structural divisions.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.divGenLike">
+          <head>Class model.divGenLike</head>
+          <p>groups elements used to represent a structural division which
+  is generated rather than explicitly present in the
+  source.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.divLike">
+          <head>Class model.divLike</head>
+          <p>groups elements used to represent structural divisions recursively.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: <ref target="#div">div</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.divPart">
+          <head>Class model.divPart</head>
+          <p>groups elements which can occur between, but not
+within, paragraphs and other chunks.</p>
+          <p><hi>Class</hi>: <ref target="#model.common">model.common</ref></p>
+          <p><hi>Note</hi>: Note that this element class does not include members of the
+<term>inter</term> class, which can appear either within or between chunks.
+Unlike elements of that class, chunks cannot occur within chunks.
+</p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.common">model.common</ref></p>
+          <p><hi>Members</hi>: <ref target="#p">p</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.divWrapper">
+          <head>Class model.divWrapper</head>
+          <p>(top-of-div elements) groups elements which can occur at the start of any
+division class element.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: <ref target="#head">head</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.divWrapper.bottom">
+          <head>Class model.divWrapper.bottom</head>
+          <p>(Bottom-of-division
+elements) groups elements which can occur at the end of a
+text division; for example, trailer, byline, etc.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.editorialDeclPart">
+          <head>Class model.editorialDeclPart</head>
+          <p>groups elements which may be used inside
+  editorialDecl and appear multiple times</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: header</p>
+        </div>
+        <div xml:id="model.encodingPart">
+          <head>Class model.encodingPart</head>
+          <p>groups elements which may be used inside encodingDesc
+and appear multiple times</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: header</p>
+        </div>
+        <div xml:id="model.entryParts.top">
+          <head>Class model.entryParts.top</head>
+          <p>(dictionary
+high-level elements) groups related parts of a dictionary entry forming a coherent
+subdivision, for example a particular sense, homonym, etc.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.featureVal">
+          <head>Class model.featureVal</head>
+          <p>(feature values) groups all elements which represent feature values in feature structures.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: <ref target="#model.complexVal">model.complexVal</ref>  <ref target="#model.singleVal">model.singleVal</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.frontPart">
+          <head>Class model.frontPart</head>
+          <p>groups elements which appear at the level of divisions within front or
+back matter.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: <ref target="#model.frontPart.drama">model.frontPart.drama</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.frontPart.drama">
+          <head>Class model.frontPart.drama</head>
+          <p>groups elements which appear at the level of divisions within front or
+back matter of performance texts only.</p>
+          <p><hi>Class</hi>: <ref target="#model.frontPart">model.frontPart</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.frontPart">model.frontPart</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.gLike">
+          <head>Class model.gLike</head>
+          <p>groups elements which are interspersed with normal text,
+representing non-Unicode items.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.global">
+          <head>Class model.global</head>
+          <p>(global
+inclusions ) groups empty elements which may appear at any point within a TEI text.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: <ref target="#model.global.edit">model.global.edit</ref>  <ref target="#model.global.meta">model.global.meta</ref>  <ref target="#model.milestoneLike">model.milestoneLike</ref>  <ref target="#model.noteLike">model.noteLike</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.global.edit">
+          <head>Class model.global.edit</head>
+          <p>groups empty elements which perform a specifically editorial function, for
+example by indicating the start of a 
+span of text added, deleted, or missing in a source.</p>
+          <p><hi>Class</hi>: <ref target="#model.global">model.global</ref></p>
+          <p><hi>Note</hi>: Members of this class can appear anywhere within a document,
+between or within components or phrases. </p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.global">model.global</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.global.meta">
+          <head>Class model.global.meta</head>
+          <p>groups empty elements which describe the status of other elements, for
+example by holding groups of links or of abstract interpretations, or
+by providing indications of certainty etc., and which may appear at any
+point in a document.</p>
+          <p><hi>Class</hi>: <ref target="#model.global">model.global</ref></p>
+          <p><hi>Note</hi>: Encoders may find it convenient to localize all
+metadata elements, for example to contain them within the same divison
+as the elements that they relate to; or to locate them all to a
+division of their own. They may however appear at any point in a TEI
+text.</p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.global">model.global</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.glossLike">
+          <head>Class model.glossLike</head>
+          <p>groups elements which provide an alternative name,
+  explanation, or description for any markup construct.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.graphicLike">
+          <head>Class model.graphicLike</head>
+          <p>(images, formulae, examples, etc.) groups elements containing images, formulae, examples, and
+  similar objects</p>
+          <p><hi>Class</hi>: <ref target="#model.phrase">model.phrase</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.phrase">model.phrase</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.headerPart">
+          <head>Class model.headerPart</head>
+          <p>groups elements which may be used inside teiHeader
+and appear multiple times</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: header</p>
+        </div>
+        <div xml:id="model.hiLike">
+          <head>Class model.hiLike</head>
+          <p>groups phrase-level elements related to highlighting. </p>
+          <p><hi>Class</hi>: <ref target="#model.phrase">model.phrase</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.phrase">model.phrase</ref></p>
+          <p><hi>Members</hi>: <ref target="#title">title</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.imprintPart">
+          <head>Class model.imprintPart</head>
+          <p>groups the bibliographic elements which occur inside imprints. </p>
+          <p><hi>Class</hi>: <ref target="#model.biblPart">model.biblPart</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.biblPart">model.biblPart</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.inter">
+          <head>Class model.inter</head>
+          <p>groups
+elements of the intermediate (inter-level) class: these elements can occur
+both within and and between paragraphs or other chunk-level elements.</p>
+          <p><hi>Note</hi>: This element class contains a subset of those elements which
+can appear in the unstructured <soCalled>soup</soCalled> with which
+paragraph and other elements at the lowest level of crystal structures
+are filled:  specifically all the elements which can also occur as
+structural elements in their own right.  In prose, this means the
+elements in this class can appear both within and between paragraphs.
+This class is thus distinct from the purely phrase-level elements which
+can appear only within soup, and not on their own; the latter class, in
+keeping with this metaphor, is called <soCalled>broth</soCalled>; it
+is represented by the class <term>phrase</term>.  Cf. also the
+class <term>chunks</term>.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: <ref target="#label">label</ref>  <ref target="#model.biblLike">model.biblLike</ref>  <ref target="#model.listLike">model.listLike</ref>    [<ref target="#list">list</ref>  ] <ref target="#model.oddDecl">model.oddDecl</ref>  <ref target="#model.oddRef">model.oddRef</ref>  <ref target="#model.qLike">model.qLike</ref>  <ref target="#model.stageLike">model.stageLike</ref>  <ref target="#text">text</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.lLike">
+          <head>Class model.lLike</head>
+          <p>groups elements representing metrical components such as verse lines. </p>
+          <p><hi>Class</hi>: </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.lPart">
+          <head>Class model.lPart</head>
+          <p>groups phrase-level elements which may appear within verse only.</p>
+          <p><hi>Class</hi>: <ref target="#model.phrase">model.phrase</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.phrase">model.phrase</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.listLike">
+          <head>Class model.listLike</head>
+          <p>groups all list-like elements.</p>
+          <p><hi>Class</hi>: <ref target="#model.inter">model.inter</ref>: <ref target="#model.common">model.common</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.inter">model.inter</ref>: <ref rend="classlink" target="#model.common">model.common</ref></p>
+          <p><hi>Members</hi>: <ref target="#list">list</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.measureLike">
+          <head>Class model.measureLike</head>
+          <p>(numbers, amounts, measurements, etc.) groups elements which denote a number, a quantity, a
+  measurement, or similar piece of text that conveys some numerical
+  meaning</p>
+          <p><hi>Class</hi>: <ref target="#model.pPart.data">model.pPart.data</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.pPart.data">model.pPart.data</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.milestoneLike">
+          <head>Class model.milestoneLike</head>
+          <p>(reference system elements) groups milestone-style
+elements used to represent reference systems</p>
+          <p><hi>Class</hi>: <ref target="#model.global">model.global</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.global">model.global</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.msItemPart">
+          <head>Class model.msItemPart</head>
+          <p>The class of elements which can appear within a manuscript item
+description.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: <ref target="#model.quoteLike">model.quoteLike</ref>  <ref target="#model.respLike">model.respLike</ref>    [<ref target="#author">author</ref>  ] <ref target="#title">title</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.nameLike">
+          <head>Class model.nameLike</head>
+          <p>(names of people, places, or organizations, or refering strings) groups those elements which name or refer to a person, place
+  (man-made or geographic), or organization</p>
+          <p><hi>Class</hi>: <ref target="#model.addrPart">model.addrPart</ref>: <ref target="#model.pPart.data">model.pPart.data</ref></p>
+          <p><hi>Note</hi>: A superset of the naming elements that may appear in datelines,
+    addresses, statements of responsibility, etc.</p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.addrPart">model.addrPart</ref>: <ref rend="classlink" target="#model.pPart.data">model.pPart.data</ref></p>
+          <p><hi>Members</hi>: <ref target="#model.nameLike.agent">model.nameLike.agent</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.nameLike.agent">
+          <head>Class model.nameLike.agent</head>
+          <p>groups elements which contain names of individuals
+or corporate bodies.</p>
+          <p><hi>Class</hi>: <ref target="#model.nameLike">model.nameLike</ref></p>
+          <p><hi>Note</hi>: This class is used in the content model of elements which
+    reference names of people or organizations.</p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.nameLike">model.nameLike</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.noteLike">
+          <head>Class model.noteLike</head>
+          <p>groups all note-like elements. </p>
+          <p><hi>Class</hi>: <ref target="#model.global">model.global</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.global">model.global</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.oddDecl">
+          <head>Class model.oddDecl</head>
+          <p>(ODD declarations) groups elements which generate declarations in some markup
+  language in ODD  documents.</p>
+          <p><hi>Class</hi>: <ref target="#model.common">model.common</ref>: <ref target="#model.inter">model.inter</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.common">model.common</ref>: <ref rend="classlink" target="#model.inter">model.inter</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.oddPhr">
+          <head>Class model.oddPhr</head>
+          <p>(ODD phrase level elements) groups ODD documentation elements which appear at the phrase
+  level, such as identifiers, values, tags, examples etc.</p>
+          <p><hi>Class</hi>: <ref target="#model.phrase">model.phrase</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.phrase">model.phrase</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.oddRef">
+          <head>Class model.oddRef</head>
+          <p>(ODD reference class) groups elements which reference declarations in some markup
+  language in ODD documents.</p>
+          <p><hi>Class</hi>: <ref target="#model.common">model.common</ref>: <ref target="#model.inter">model.inter</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.common">model.common</ref>: <ref rend="classlink" target="#model.inter">model.inter</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.pLike">
+          <head>Class model.pLike</head>
+          <p>The class of elements which are paragraphs for the purpose of interchange.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: <ref target="#p">p</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.pLike.front">
+          <head>Class model.pLike.front</head>
+          <p>(Front
+matter chunk elements) groups elements which can occur as direct constituents
+of front matter, when a full title page is not given. </p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: <ref target="#head">head</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.pPart.data">
+          <head>Class model.pPart.data</head>
+          <p>groups phrase-level elements containing names, dates, numbers, measures,
+and similar data. </p>
+          <p><hi>Class</hi>: <ref target="#model.phrase">model.phrase</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.phrase">model.phrase</ref></p>
+          <p><hi>Members</hi>: <ref target="#model.addressLike">model.addressLike</ref>    [<ref target="#email">email</ref>  ] <ref target="#model.dateLike">model.dateLike</ref>  <ref target="#model.measureLike">model.measureLike</ref>  <ref target="#model.nameLike">model.nameLike</ref>    [<ref target="#model.nameLike.agent">model.nameLike.agent</ref>  ] </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.pPart.edit">
+          <head>Class model.pPart.edit</head>
+          <p>groups phrase-level elements for simple editorial correction and
+transcription. </p>
+          <p><hi>Class</hi>: <ref target="#model.phrase">model.phrase</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.phrase">model.phrase</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.pPart.msdesc">
+          <head>Class model.pPart.msdesc</head>
+          <p>(manuscript description) groups elements for describing manuscripts</p>
+          <p><hi>Class</hi>: <ref target="#model.phrase">model.phrase</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.phrase">model.phrase</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.persEventLike">
+          <head>Class model.persEventLike</head>
+          <p>the class of elements describing specific events in a person's
+history, for example birth, marriage, appointment... These are not
+characteristics of an individual, but often cause an individual to
+gain such characteristics, or to enter a new state.</p>
+          <p><hi>Class</hi>: <ref target="#model.assertLike">model.assertLike</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.assertLike">model.assertLike</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.persStateLike">
+          <head>Class model.persStateLike</head>
+          <p>the class of elements describing changeable characteristics of a
+person which have a definite duration, for example occupation,
+residence, name... These characteristics of an individual are
+typically a consequence of their own action or that of others.</p>
+          <p><hi>Class</hi>: <ref target="#model.assertLike">model.assertLike</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.assertLike">model.assertLike</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.persTraitLike">
+          <head>Class model.persTraitLike</head>
+          <p>the class of elements describing generally unchanging physical
+or socially-constructed characteristics of a person, for example
+hair-colour, ethnicity, sex... These characteristics of an individual
+are typically independent of their volition or action.</p>
+          <p><hi>Class</hi>: <ref target="#model.assertLike">model.assertLike</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.assertLike">model.assertLike</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.personLike">
+          <head>Class model.personLike</head>
+          <p>the class of elements used to provide information about people
+and thir relationships.</p>
+          <p><hi>Note</hi>: This class is referenced in the header module, but is not
+    populated unless the namesdates module is loaded.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.personPart">
+          <head>Class model.personPart</head>
+          <p>groups elements  which describe characteristics of the people referenced by a text, or
+participating in a language interaction.</p>
+          <p><hi>Note</hi>: This class is used to define the content model for the
+<gi>person</gi> and  <gi>personGrp</gi> elements.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: <ref target="#model.assertLike">model.assertLike</ref>    [<ref target="#model.persEventLike">model.persEventLike</ref>  <ref target="#model.persStateLike">model.persStateLike</ref>  <ref target="#model.persTraitLike">model.persTraitLike</ref>  ] </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.phrase">
+          <head>Class model.phrase</head>
+          <p>groups those elements which can occur at the level of individual
+words or phrases.</p>
+          <p><hi>Note</hi>: This class of elements can occur only within larger
+elements of the class <term>inter</term> or <term>chunk</term>.
+In prose, this means these elements can occur within paragraphs,
+list items, lines of verse, etc.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: <ref target="#model.graphicLike">model.graphicLike</ref>  <ref target="#model.hiLike">model.hiLike</ref>    [<ref target="#title">title</ref>  ] <ref target="#model.lPart">model.lPart</ref>  <ref target="#model.oddPhr">model.oddPhr</ref>  <ref target="#model.pPart.data">model.pPart.data</ref>    [<ref target="#model.addressLike">model.addressLike</ref>  <ref target="#model.dateLike">model.dateLike</ref>  <ref target="#model.measureLike">model.measureLike</ref>  <ref target="#model.nameLike">model.nameLike</ref>  ] <ref target="#model.pPart.edit">model.pPart.edit</ref>  <ref target="#model.pPart.msdesc">model.pPart.msdesc</ref>  <ref target="#model.ptrLike">model.ptrLike</ref>  <ref target="#model.segLike">model.segLike</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.physDescPart">
+          <head>Class model.physDescPart</head>
+          <p>specialised descriptive elements constituting  the physical
+description of a manuscript or similar written source. </p>
+          <p><hi>Class</hi>: </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.placeNamePart">
+          <head>Class model.placeNamePart</head>
+          <p>(place name
+components) groups those elements which form part of a place
+name.</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.profileDescPart">
+          <head>Class model.profileDescPart</head>
+          <p>groups elements which may be used inside profileDesc
+and appear multiple times</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: header</p>
+        </div>
+        <div xml:id="model.ptrLike">
+          <head>Class model.ptrLike</head>
+          <p>groups elements used for purposes of location and reference</p>
+          <p><hi>Class</hi>: <ref target="#model.phrase">model.phrase</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.phrase">model.phrase</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.publicationStmtPart">
+          <head>Class model.publicationStmtPart</head>
+          <p>(publication statement elements) groups the children of publicationStmt</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.qLike">
+          <head>Class model.qLike</head>
+          <p>groups elements related to highlighting which can appear either
+within or between chunk-level elements. </p>
+          <p><hi>Class</hi>: <ref target="#model.inter">model.inter</ref>: <ref target="#model.common">model.common</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.inter">model.inter</ref>: <ref rend="classlink" target="#model.common">model.common</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.quoteLike">
+          <head>Class model.quoteLike</head>
+          <p>(quote and similar elements) groups elements used to directly contain quotations.</p>
+          <p><hi>Class</hi>: <ref target="#model.msItemPart">model.msItemPart</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.msItemPart">model.msItemPart</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.recordingPart">
+          <head>Class model.recordingPart</head>
+          <p>(dates and date ranges) groups elements used to describe details of an audio or video recording</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: <ref target="#model.dateLike">model.dateLike</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.respLike">
+          <head>Class model.respLike</head>
+          <p>groups elements which are used to indicate intellectual
+  responsibility, for example within a bibliographic element.</p>
+          <p><hi>Class</hi>: <ref target="#model.biblPart">model.biblPart</ref>: <ref target="#model.msItemPart">model.msItemPart</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.biblPart">model.biblPart</ref>: <ref rend="classlink" target="#model.msItemPart">model.msItemPart</ref></p>
+          <p><hi>Members</hi>: <ref target="#author">author</ref>  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.segLike">
+          <head>Class model.segLike</head>
+          <p>groups elements used for arbitrary segmentation. </p>
+          <p><hi>Class</hi>: <ref target="#model.phrase">model.phrase</ref></p>
+          <p><hi>Note</hi>: The principles on which segmentation is carried out, and
+any special codes or attribute values used, should be defined explicitly
+in the <gi>segmentation</gi> element of the <gi>encodingDesc</gi> within
+the associated TEI header.</p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.phrase">model.phrase</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.settingPart">
+          <head>Class model.settingPart</head>
+          <p>elements used to describe the setting of a linguistic interaction. </p>
+          <p><hi>Class</hi>: </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.singleVal">
+          <head>Class model.singleVal</head>
+          <p>(atomic values) group elements used to represent atomic feature values in feature structures.</p>
+          <p><hi>Class</hi>: <ref target="#model.featureVal">model.featureVal</ref></p>
+          <p><hi>Class</hi>: <ref rend="classlink" target="#model.featureVal">model.featureVal</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.sourceDescPart">
+          <head>Class model.sourceDescPart</head>
+          <p>groups elements which may be used inside sourceDesc
+and appear multiple times</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: header</p>
+        </div>
+        <div xml:id="model.stageLike">
+          <head>Class model.stageLike</head>
+          <p>(stage
+directions) groups elements containing specialized
+stage directions defined in the additional tag set for performance
+texts.</p>
+          <p><hi>Class</hi>: model.divPart.stage: <ref target="#model.inter">model.inter</ref></p>
+          <p><hi>Note</hi>: Stage directions are members of class <term>inter</term>:
+that is, they can appear between or within component-level elements.</p>
+          <p><hi>Class</hi>: model.divPart.stage: <ref rend="classlink" target="#model.inter">model.inter</ref></p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.textDescPart">
+          <head>Class model.textDescPart</head>
+          <p>elements used to categorise a text for example in terms of its
+situational parameters. </p>
+          <p><hi>Class</hi>: </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="model.titlepagePart">
+          <head>Class model.titlepagePart</head>
+          <p>(Title
+page elements) groups those elements which can occur as direct constituents
+of a title page (docTitle, docAuth,
+docImprint, epigraph, etc.)</p>
+          <p><hi>Class</hi>:  (none) </p>
+          <p><hi>Members</hi>: </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+      </div>
+      <div>
+        <head>Elements defined</head>
+        <div xml:id="TEI">
+          <head>
+            <gi>TEI</gi>
+          </head>
+          <p>(TEI document) contains a single TEI-conformant document,
+comprising a TEI header and a text, either in isolation or as part of a
+teiCorpus element.</p>
+          <p>Declaration<q rend="eg">
+element TEI
+{
+   att.global.attributes,
+   <ref target="#att.global">att.global.attribute.xmlid</ref>,
+   <ref target="#att.global">att.global.attribute.n</ref>,
+   <ref target="#att.global">att.global.attribute.xmllang</ref>,
+   ( <ref target="#teiHeader">teiHeader</ref>, <ref target="#text">text</ref> )
+}</q></p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>xmlns</code></label><item>The TEI default namespace</item><label><ref target="#att.global.attribute.xmlid">att.global.attribute.xmlid</ref></label><item/><label><ref target="#att.global.attribute.n">att.global.attribute.n</ref></label><item/><label><ref target="#att.global.attribute.xmllang">att.global.attribute.xmllang</ref></label><item/></list></p>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;TEI
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;teiHeader&gt;
+   &lt;fileDesc&gt;
+    &lt;titleStmt&gt;
+     &lt;title&gt;The shortest TEI Document Imaginable&lt;/title&gt;
+    &lt;/titleStmt&gt;
+    &lt;publicationStmt&gt;
+     &lt;p&gt;First published as part of TEI P2.&lt;/p&gt;
+    &lt;/publicationStmt&gt;
+    &lt;sourceDesc&gt;
+     &lt;p&gt;No source: this is an original work.&lt;/p&gt;
+    &lt;/sourceDesc&gt;
+   &lt;/fileDesc&gt;
+  &lt;/teiHeader&gt;
+  &lt;text&gt;
+   &lt;body&gt;
+    &lt;p&gt;This is about the shortest TEI document imaginable.&lt;/p&gt;
+   &lt;/body&gt;
+  &lt;/text&gt;
+ &lt;/TEI&gt;</eg>
+          <p><hi>Note</hi>: This element is required.</p>
+          <p><hi>Module</hi>: textstructure</p>
+        </div>
+        <div xml:id="author">
+          <head>
+            <gi>author</gi>
+          </head>
+          <p>in a bibliographic reference, contains the name of the author(s),
+personal or corporate,
+of a work; the primary statement of responsibility for any
+bibliographic item. </p>
+          <p><hi>Class</hi>: <ref target="#model.respLike">model.respLike</ref></p>
+          <p>Declaration<q rend="eg">
+element author
+{
+   att.global.attributes,
+   <ref target="#att.global">att.global.attribute.xmlid</ref>,
+   <ref target="#att.global">att.global.attribute.n</ref>,
+   <ref target="#att.global">att.global.attribute.xmllang</ref>,
+   <ref target="#macro.phraseSeq">macro.phraseSeq</ref>
+}</q></p>
+          <p><hi>Attributes: </hi>Global attributes only<list type="gloss"><label><ref target="#att.global.attribute.xmlid">att.global.attribute.xmlid</ref></label><item/><label><ref target="#att.global.attribute.n">att.global.attribute.n</ref></label><item/><label><ref target="#att.global.attribute.xmllang">att.global.attribute.xmllang</ref></label><item/></list></p>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;author
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;British Broadcasting Corporation&lt;/author&gt;
+ &lt;author&gt;La Fayette, Marie Madeleine Pioche de la Vergne,
+      comtesse de (1634–1693)&lt;/author&gt;</eg>
+          <p><hi>Note</hi>: Particularly where cataloguing is likely to be based on
+the content of the header, it is advisable to use generally recognized
+authority lists for the exact form of personal names.In the case of a broadcast, use this element for the name of the
+company or network which broadcasts the program.</p>
+          <p><hi>Module</hi>: core</p>
+        </div>
+        <div xml:id="back">
+          <head>
+            <gi>back</gi>
+          </head>
+          <p>(back matter) contains any appendixes, etc. following the main part of a
+text.</p>
+          <p><hi>Class</hi>: <ref target="#att.declaring">att.declaring</ref></p>
+          <p>Declaration<q rend="eg">
+element back
+{
+   att.global.attributes,
+   att.declaring.attributes,
+   <ref target="#att.global">att.global.attribute.xmlid</ref>,
+   <ref target="#att.global">att.global.attribute.n</ref>,
+   <ref target="#att.global">att.global.attribute.xmllang</ref>,
+   (
+      ( <ref target="#model.frontPart">model.frontPart</ref> | <ref target="#model.global">model.global</ref> | <ref target="#model.divWrapper">model.divWrapper</ref> )*,
+      (
+         ( ( <ref target="#model.divLike">model.divLike</ref> ), ( <ref target="#model.global">model.global</ref> | <ref target="#model.frontPart">model.frontPart</ref> )* )+
+       | ( ( <ref target="#model.div1Like">model.div1Like</ref> ), ( <ref target="#model.global">model.global</ref> | <ref target="#model.frontPart">model.frontPart</ref> )* )+
+      )?,
+      <ref target="#model.divWrapper.bottom">model.divWrapper.bottom</ref>*
+   )
+}</q></p>
+          <p><hi>Attributes: </hi>Global attributes and those inherited from  [<ref xmlns:tei="http://www.tei-c.org/ns/1.0" rend="classlink" target="#att.declaring">att.declaring</ref> ] <list type="gloss"><label><ref target="#att.global.attribute.xmlid">att.global.attribute.xmlid</ref></label><item/><label><ref target="#att.global.attribute.n">att.global.attribute.n</ref></label><item/><label><ref target="#att.global.attribute.xmllang">att.global.attribute.xmllang</ref></label><item/></list></p>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;back
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;div1 type="appendix"&gt;
+   &lt;head&gt;The Golden Dream or, the Ingenuous Confession&lt;/head&gt;
+   &lt;p&gt;To shew the Depravity of human Nature
+      &lt;/p&gt;
+  &lt;/div1&gt;
+  &lt;div1 type="epistle"&gt;
+   &lt;head&gt;A letter from the Printer, which he desires 
+        may be inserted&lt;/head&gt;
+   &lt;salute&gt;Sir.&lt;/salute&gt;
+   &lt;p&gt;I have done with your Copy, so you may return 
+          it to the Vatican, if you please
+      &lt;/p&gt;
+  &lt;/div1&gt;
+  &lt;div1 type="advert"&gt;
+   &lt;head&gt;The Books usually read by the Scholars 
+       of Mrs Two-Shoes are these and are sold at Mr 
+       Newbery's at the Bible and Sun in St Paul's
+       Church-yard.&lt;/head&gt;
+   &lt;list&gt;
+    &lt;item n="1"&gt;The Christmas Box, Price 1d.&lt;/item&gt;
+    &lt;item n="2"&gt;The History of Giles Gingerbread, 1d.&lt;/item&gt;
+    &lt;item n="42"&gt;A Curious Collection of Travels, selected 
+          from the Writers of all Nations, 10 Vol, Pr. bound 1l.&lt;/item&gt;
+   &lt;/list&gt;
+  &lt;/div1&gt;
+  &lt;div1 type="advert"&gt;
+   &lt;head&gt;
+    &lt;hi rend="center"&gt;By the KING's Royal Patent,&lt;/hi&gt;
+            Are sold by J. NEWBERY, at the Bible and Sun in 
+            St. Paul's Church-Yard.&lt;/head&gt;
+   &lt;list&gt;
+    &lt;item n="1"&gt;Dr. James's Powders for Fevers, the 
+           Small-Pox, Measles, Colds, &amp;c. 2s. 6d&lt;/item&gt;
+    &lt;item n="2"&gt;Dr. Hooper's Female Pills, 1s.&lt;/item&gt;
+   &lt;/list&gt;
+  &lt;/div1&gt;
+ &lt;/back&gt;</eg>
+          <p><hi>Note</hi>: The content model of back matter is identical to
+that of front matter, reflecting the facts of cultural
+history.</p>
+          <p><hi>Module</hi>: textstructure</p>
+        </div>
+        <div xml:id="body">
+          <head>
+            <gi>body</gi>
+          </head>
+          <p>(text body) contains the whole body of a single unitary text, excluding any front or back matter.</p>
+          <p><hi>Class</hi>: <ref target="#att.declaring">att.declaring</ref></p>
+          <p>Declaration<q rend="eg">
+element body
+{
+   att.global.attributes,
+   att.declaring.attributes,
+   <ref target="#att.global">att.global.attribute.xmlid</ref>,
+   <ref target="#att.global">att.global.attribute.n</ref>,
+   <ref target="#att.global">att.global.attribute.xmllang</ref>,
+   (
+      <ref target="#model.global">model.global</ref>*,
+      ( ( <ref target="#model.divWrapper">model.divWrapper</ref> ), ( <ref target="#model.global">model.global</ref> | <ref target="#model.divWrapper">model.divWrapper</ref> )* )?,
+      ( ( <ref target="#model.divGenLike">model.divGenLike</ref> ), ( <ref target="#model.global">model.global</ref> | <ref target="#model.divGenLike">model.divGenLike</ref> )* )?,
+      (
+         ( ( <ref target="#model.divLike">model.divLike</ref> ), ( <ref target="#model.global">model.global</ref> | <ref target="#model.divGenLike">model.divGenLike</ref> )* )+
+       | ( ( <ref target="#model.div1Like">model.div1Like</ref> ), ( <ref target="#model.global">model.global</ref> | <ref target="#model.divGenLike">model.divGenLike</ref> )* )+
+       | (
+            ( ( <ref target="#macro.component">macro.component</ref> ), <ref target="#model.global">model.global</ref>* )+,
+            (
+               ( ( <ref target="#model.divLike">model.divLike</ref> ), ( <ref target="#model.global">model.global</ref> | <ref target="#model.divGenLike">model.divGenLike</ref> )* )+
+             | ( ( <ref target="#model.div1Like">model.div1Like</ref> ), ( <ref target="#model.global">model.global</ref> | <ref target="#model.divGenLike">model.divGenLike</ref> )* )+
+            )?
+         )
+      ),
+      ( ( <ref target="#model.divWrapper.bottom">model.divWrapper.bottom</ref> ), <ref target="#model.global">model.global</ref>* )*
+   )
+}</q></p>
+          <p><hi>Attributes: </hi>Global attributes and those inherited from  [<ref xmlns:tei="http://www.tei-c.org/ns/1.0" rend="classlink" target="#att.declaring">att.declaring</ref> ] <list type="gloss"><label><ref target="#att.global.attribute.xmlid">att.global.attribute.xmlid</ref></label><item/><label><ref target="#att.global.attribute.n">att.global.attribute.n</ref></label><item/><label><ref target="#att.global.attribute.xmllang">att.global.attribute.xmllang</ref></label><item/></list></p>
+          <p><hi>Module</hi>: textstructure</p>
+        </div>
+        <div xml:id="div">
+          <head>
+            <gi>div</gi>
+          </head>
+          <p>(text division) contains a subdivision of the front, body, or back of a
+text.</p>
+          <p><hi>Class</hi>: <ref target="#att.divLike">att.divLike</ref>: <ref target="#att.declaring">att.declaring</ref>: <ref target="#model.divLike">model.divLike</ref></p>
+          <p>Declaration<q rend="eg">
+element div
+{
+   att.global.attributes,
+   att.divLike.attributes,
+   att.declaring.attributes,
+   <ref target="#att.global">att.global.attribute.xmlid</ref>,
+   <ref target="#att.global">att.global.attribute.n</ref>,
+   <ref target="#att.global">att.global.attribute.xmllang</ref>,
+   <ref target="#att.divLike">att.divLike.attribute.type</ref>,
+   (
+      ( <ref target="#model.divWrapper">model.divWrapper</ref> | <ref target="#model.global">model.global</ref> )*,
+      (
+         (
+            ( ( ( <ref target="#div">div</ref> ), <ref target="#model.global">model.global</ref>* )+ )
+          | (
+               ( <ref target="#macro.component">macro.component</ref>, <ref target="#model.global">model.global</ref>* )+,
+               ( ( <ref target="#div">div</ref> ), <ref target="#model.global">model.global</ref>* )*
+            )
+         ),
+         ( ( <ref target="#model.divWrapper">model.divWrapper</ref> | <ref target="#model.divWrapper.bottom">model.divWrapper.bottom</ref> ), <ref target="#model.global">model.global</ref>* )*
+      )?
+   )
+}</q></p>
+          <p><hi>Attributes: </hi>Global attributes and those inherited from  [<ref xmlns:tei="http://www.tei-c.org/ns/1.0" rend="classlink" target="#att.divLike">att.divLike</ref> <ref xmlns:tei="http://www.tei-c.org/ns/1.0" rend="classlink" target="#att.declaring">att.declaring</ref> ] <list type="gloss"><label><ref target="#att.global.attribute.xmlid">att.global.attribute.xmlid</ref></label><item/><label><ref target="#att.global.attribute.n">att.global.attribute.n</ref></label><item/><label><ref target="#att.global.attribute.xmllang">att.global.attribute.xmllang</ref></label><item/><label><ref target="#att.divLike.attribute.type">att.divLike.attribute.type</ref></label><item/></list></p>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;body
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;div type="part"&gt;
+   &lt;head&gt;Fallacies of Authority&lt;/head&gt;
+   &lt;p&gt;The subject of which is Authority in various shapes, and the
+      object, to repress all exercise of the reasoning faculty.&lt;/p&gt;
+   &lt;div n="1" type="chapter"&gt;
+    &lt;head&gt;The Nature of Authority&lt;/head&gt;
+    &lt;p&gt;With reference to any proposed measures having for their
+        object the greatest happiness of the greatest number....&lt;/p&gt;
+    &lt;div n="1.1" type="section"&gt;
+     &lt;head&gt;Analysis of Authority&lt;/head&gt;
+     &lt;p&gt;What on any given occasion is the legitimate weight or
+          influence to be attached to authority ... &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div n="1.2" type="section"&gt;
+     &lt;head&gt;Appeal to Authority, in What Cases Fallacious.&lt;/head&gt;
+     &lt;p&gt;Reference to authority is open to the charge of fallacy
+          when... &lt;/p&gt;
+    &lt;/div&gt;
+   &lt;/div&gt;
+  &lt;/div&gt;
+ &lt;/body&gt;</eg>
+          <p><hi>Note</hi>: any sequence of low-level structural elements, possibly
+grouped into lower subdivisions.</p>
+          <p><hi>Module</hi>: textstructure</p>
+        </div>
+        <div xml:id="email">
+          <head>
+            <gi>email</gi>
+          </head>
+          <p>contains an e-mail address identifying a location to which
+e-mail messages can be delivered.
+		</p>
+          <p><hi>Class</hi>: <ref target="#model.addressLike">model.addressLike</ref></p>
+          <p>Declaration<q rend="eg">
+element email
+{
+   att.global.attributes,
+   <ref target="#att.global">att.global.attribute.xmlid</ref>,
+   <ref target="#att.global">att.global.attribute.n</ref>,
+   <ref target="#att.global">att.global.attribute.xmllang</ref>,
+   <ref target="#macro.phraseSeq">macro.phraseSeq</ref>
+}</q></p>
+          <p><hi>Attributes: </hi>Global attributes only<list type="gloss"><label><ref target="#att.global.attribute.xmlid">att.global.attribute.xmlid</ref></label><item/><label><ref target="#att.global.attribute.n">att.global.attribute.n</ref></label><item/><label><ref target="#att.global.attribute.xmllang">att.global.attribute.xmllang</ref></label><item/></list></p>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;email
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;editors@tei-c.org&lt;/email&gt;</eg>
+          <p><hi>Note</hi>: The format of a modern Internet email address is defined in
+    <ref target="http://tools.ietf.org/html/rfc2822">RFC 2822</ref></p>
+          <p><hi>Module</hi>: core</p>
+        </div>
+        <div xml:id="fileDesc">
+          <head>
+            <gi>fileDesc</gi>
+          </head>
+          <p>(File Description) contains a full bibliographic description of an electronic
+file.</p>
+          <p>Declaration<q rend="eg">
+element fileDesc
+{
+   att.global.attributes,
+   <ref target="#att.global">att.global.attribute.xmlid</ref>,
+   <ref target="#att.global">att.global.attribute.n</ref>,
+   <ref target="#att.global">att.global.attribute.xmllang</ref>,
+   ( <ref target="#macro.fileDescPart">macro.fileDescPart</ref>, <ref target="#sourceDesc">sourceDesc</ref>+ )
+}</q></p>
+          <p><hi>Attributes: </hi>Global attributes only<list type="gloss"><label><ref target="#att.global.attribute.xmlid">att.global.attribute.xmlid</ref></label><item/><label><ref target="#att.global.attribute.n">att.global.attribute.n</ref></label><item/><label><ref target="#att.global.attribute.xmllang">att.global.attribute.xmllang</ref></label><item/></list></p>
+          <p><hi>Note</hi>: The major source of information for those seeking to create
+a catalogue entry or bibliographic citation for an electronic file. As
+such, it provides a title and statements of responsibility together with
+details of the publication or distribution of the file, of any series to
+which it belongs, and detailed bibliographic notes for matters not
+addressed elswhere in the header. It also contains a full bibliographic
+description for the source or sources from which the electronic text was
+derived.</p>
+          <p><hi>Module</hi>: header</p>
+        </div>
+        <div xml:id="front">
+          <head>
+            <gi>front</gi>
+          </head>
+          <p>(front matter) contains any prefatory matter (headers,
+title page, prefaces, dedications, etc.)
+found  at the start of a document, before the main body.</p>
+          <p><hi>Class</hi>: <ref target="#att.declaring">att.declaring</ref></p>
+          <p>Declaration<q rend="eg">
+element front
+{
+   att.global.attributes,
+   att.declaring.attributes,
+   <ref target="#att.global">att.global.attribute.xmlid</ref>,
+   <ref target="#att.global">att.global.attribute.n</ref>,
+   <ref target="#att.global">att.global.attribute.xmllang</ref>,
+   (
+      ( <ref target="#model.frontPart">model.frontPart</ref> | <ref target="#model.pLike.front">model.pLike.front</ref> | <ref target="#model.global">model.global</ref> )*,
+      (
+         (
+            (
+               ( <ref target="#model.div1Like">model.div1Like</ref> ),
+               ( <ref target="#model.frontPart">model.frontPart</ref> | <ref target="#model.div1Like">model.div1Like</ref> | <ref target="#model.global">model.global</ref> )*
+            )
+          | (
+               ( <ref target="#model.divLike">model.divLike</ref> ),
+               ( <ref target="#model.frontPart">model.frontPart</ref> | <ref target="#model.divLike">model.divLike</ref> | <ref target="#model.global">model.global</ref> )*
+            )
+         )?
+      )
+   )
+}</q></p>
+          <p><hi>Attributes: </hi>Global attributes and those inherited from  [<ref xmlns:tei="http://www.tei-c.org/ns/1.0" rend="classlink" target="#att.declaring">att.declaring</ref> ] <list type="gloss"><label><ref target="#att.global.attribute.xmlid">att.global.attribute.xmlid</ref></label><item/><label><ref target="#att.global.attribute.n">att.global.attribute.n</ref></label><item/><label><ref target="#att.global.attribute.xmllang">att.global.attribute.xmllang</ref></label><item/></list></p>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;front
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;epigraph&gt;
+   &lt;quote&gt;Nam Sibyllam quidem Cumis ego ipse oculis meis
+	  vidi in ampulla pendere, et cum illi pueri dicerent:
+	  &lt;q xml:lang="grc"&gt;Sibylla ti weleis&lt;/q&gt;; respondebat
+   	  illa: &lt;q xml:lang="grc"&gt;apowanein welo.&lt;/q&gt;
+   &lt;/quote&gt;
+  &lt;/epigraph&gt;
+  &lt;div type="dedication"&gt;
+   &lt;p&gt;For Ezra Pound &lt;q xml:lang="it"&gt;il miglior fabbro.&lt;/q&gt;
+   &lt;/p&gt;
+  &lt;/div&gt;
+ &lt;/front&gt;</eg>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;front
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;div type="dedication"&gt;
+   &lt;p&gt;To our three selves&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div type="preface"&gt;
+   &lt;head&gt;Author's Note&lt;/head&gt;
+   &lt;p&gt;All the characters in this book are purely imaginary, and if the
+author has used names that may suggest a reference to living persons
+she has done so inadvertently.
+ ...&lt;/p&gt;
+  &lt;/div&gt;
+ &lt;/front&gt;</eg>
+          <p><hi>Module</hi>: textstructure</p>
+        </div>
+        <div xml:id="head">
+          <head>
+            <gi>head</gi>
+          </head>
+          <p>(heading) contains any type of heading, for example the title of a section,
+or the heading of a list, glossary, manuscript description, etc.</p>
+          <p><hi>Class</hi>: <ref target="#model.divWrapper">model.divWrapper</ref>: <ref target="#model.pLike.front">model.pLike.front</ref></p>
+          <p>Declaration<q rend="eg">
+element head
+{
+   att.global.attributes,
+   <ref target="#att.global">att.global.attribute.xmlid</ref>,
+   <ref target="#att.global">att.global.attribute.n</ref>,
+   <ref target="#att.global">att.global.attribute.xmllang</ref>,
+   attribute type { <ref target="#data.enumerated">data.enumerated</ref> }?,
+   <ref target="#macro.paraContent">macro.paraContent</ref>
+}</q></p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><ref target="#att.global.attribute.xmlid">att.global.attribute.xmlid</ref></label><item/><label><ref target="#att.global.attribute.n">att.global.attribute.n</ref></label><item/><label><ref target="#att.global.attribute.xmllang">att.global.attribute.xmllang</ref></label><item/><attList xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns="http://www.tei-c.org/ns/1.0"><label><code>type</code></label><item>categorizes the heading in any way meaningful 
+         to the encoder. </item></attList></list></p>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <p>The most common use for the <gi>head</gi> element
+is to mark the headings of sections.  In older writings, the
+headings or <term>incipits</term> may be rather longer than
+usual in modern works.	If a section has an explicit ending as
+well as a heading, it should be marked as a <gi>trailer</gi>, as
+in this example:</p>
+          <eg> &lt;div1 n="I" type="book"
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;head&gt;In the name of Christ here begins
+the first book of the ecclesiastical history of Georgius
+Florentinus, known as Gregory, Bishop of Tours.&lt;/head&gt;
+  &lt;list&gt;
+   &lt;head&gt;Chapter-Headings&lt;/head&gt;
+  &lt;/list&gt;
+  &lt;div2 type="section"&gt;
+   &lt;head&gt;In the name of Christ here begins Book I of the
+history.&lt;/head&gt;
+   &lt;p&gt;Proposing as I do ...&lt;/p&gt;
+   &lt;p&gt;From the Passion of our Lord until the death of Saint Martin
+four hundred and twelve years passed.&lt;/p&gt;
+   &lt;trailer&gt;Here ends the first Book, which covers five thousand,
+ five hundred and ninety-six years from the beginning of the
+ world down to the death of Saint Martin.&lt;/trailer&gt;
+  &lt;/div2&gt;
+ &lt;/div1&gt;</eg>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <p>The <gi>head</gi> tag is also used to mark headings
+of other units, such as lists:</p>
+          <eg>With a few exceptions, connectives are equally useful in
+all kinds of discourse:  description, narration, exposition,
+argument.
+ &lt;list type="simple"
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;head&gt;Connectives&lt;/head&gt;
+  &lt;item&gt;above&lt;/item&gt;
+  &lt;item&gt;accordingly&lt;/item&gt;
+  &lt;item&gt;across from&lt;/item&gt;
+  &lt;item&gt;adjacent to&lt;/item&gt;
+  &lt;item&gt;again&lt;/item&gt;
+  &lt;item&gt;
+&lt;!-- ... --&gt;
+  &lt;/item&gt;
+ &lt;/list&gt;</eg>
+          <p><hi>Note</hi>: The <gi>head</gi> element is used for headings at all
+levels; software which treats (e.g.) chapter headings,
+section headings, and list titles differently must determine the
+proper processing of a <gi>head</gi> element based on its
+structural position.  A <gi>head</gi> occurring as the first
+element of a list is the title of that list; one occurring as
+the first element of a <gi>div1</gi> is the title of that
+chapter or section.</p>
+          <p><hi>Module</hi>: core</p>
+        </div>
+        <div xml:id="item">
+          <head>
+            <gi>item</gi>
+          </head>
+          <p>contains one
+component of a list.</p>
+          <p>Declaration<q rend="eg">
+element item
+{
+   att.global.attributes,
+   <ref target="#att.global">att.global.attribute.xmlid</ref>,
+   <ref target="#att.global">att.global.attribute.n</ref>,
+   <ref target="#att.global">att.global.attribute.xmllang</ref>,
+   <ref target="#macro.specialPara">macro.specialPara</ref>
+}</q></p>
+          <p><hi>Attributes: </hi>Global attributes only<list type="gloss"><label><ref target="#att.global.attribute.xmlid">att.global.attribute.xmlid</ref></label><item/><label><ref target="#att.global.attribute.n">att.global.attribute.n</ref></label><item/><label><ref target="#att.global.attribute.xmllang">att.global.attribute.xmllang</ref></label><item/></list></p>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;list type="ordered"
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;head&gt;Here begin the chapter headings of Book IV&lt;/head&gt;
+  &lt;item n="4.1"&gt;The death of Queen Clotild.&lt;/item&gt;
+  &lt;item n="4.2"&gt;How King Lothar wanted to appropriate
+  one third of the Church revenues.&lt;/item&gt;
+  &lt;item n="4.3"&gt;The wives and children of Lothar.&lt;/item&gt;
+  &lt;item n="4.4"&gt;The Counts of the Bretons.&lt;/item&gt;
+  &lt;item n="4.5"&gt;Saint Gall the Bishop.&lt;/item&gt;
+  &lt;item n="4.6"&gt;The priest Cato.&lt;/item&gt;
+  &lt;item&gt; ...&lt;/item&gt;
+ &lt;/list&gt;</eg>
+          <p><hi>Note</hi>: May contain simple prose or a sequence of chunks.Whatever string of characters is used to label a list item in
+the copy text may be used as the value of the global <hi rend="att">n</hi> attribute, but it is not
+required that numbering be recorded explicitly.
+In ordered lists, the <hi rend="att">n</hi> attribute on the
+<gi>item</gi> element is by definition synonymous with the use of the
+<gi>label</gi> element to record the enumerator of the list item.  In
+glossary lists, however, the term being defined should be given with the
+<gi>label</gi> element, not <hi rend="att">n</hi>.</p>
+          <p><hi>Module</hi>: core</p>
+        </div>
+        <div xml:id="label">
+          <head>
+            <gi>label</gi>
+          </head>
+          <p>contains the label associated with an item in a list; in
+glossaries, marks the term being defined.</p>
+          <p><hi>Class</hi>: <ref target="#model.inter">model.inter</ref>: <ref target="#model.common">model.common</ref></p>
+          <p>Declaration<q rend="eg">
+element label
+{
+   att.global.attributes,
+   <ref target="#att.global">att.global.attribute.xmlid</ref>,
+   <ref target="#att.global">att.global.attribute.n</ref>,
+   <ref target="#att.global">att.global.attribute.xmllang</ref>,
+   <ref target="#macro.phraseSeq">macro.phraseSeq</ref>
+}</q></p>
+          <p><hi>Attributes: </hi>Global attributes only<list type="gloss"><label><ref target="#att.global.attribute.xmlid">att.global.attribute.xmlid</ref></label><item/><label><ref target="#att.global.attribute.n">att.global.attribute.n</ref></label><item/><label><ref target="#att.global.attribute.xmllang">att.global.attribute.xmllang</ref></label><item/></list></p>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <p>Labels are most commonly used for the headwords in glossary
+lists; note the use of the global <hi rend="att">xml:lang</hi> attribute to set the
+default language of the glossary list to Middle English, and identify
+the glosses and headings as modern English or Latin:</p>
+          <eg> &lt;list type="gloss" xml:lang="enm"
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;head xml:lang="en"&gt;Vocabulary&lt;/head&gt;
+  &lt;headLabel xml:lang="en"&gt;Middle English&lt;/headLabel&gt;
+  &lt;headItem xml:lang="en"&gt;New English&lt;/headItem&gt;
+  &lt;label&gt;nu&lt;/label&gt;
+  &lt;item xml:lang="en"&gt;now&lt;/item&gt;
+  &lt;label&gt;lhude&lt;/label&gt;
+  &lt;item xml:lang="en"&gt;loudly&lt;/item&gt;
+  &lt;label&gt;bloweth&lt;/label&gt;
+  &lt;item xml:lang="en"&gt;blooms&lt;/item&gt;
+  &lt;label&gt;med&lt;/label&gt;
+  &lt;item xml:lang="en"&gt;meadow&lt;/item&gt;
+  &lt;label&gt;wude&lt;/label&gt;
+  &lt;item xml:lang="en"&gt;wood&lt;/item&gt;
+  &lt;label&gt;awe&lt;/label&gt;
+  &lt;item xml:lang="en"&gt;ewe&lt;/item&gt;
+  &lt;label&gt;lhouth&lt;/label&gt;
+  &lt;item xml:lang="en"&gt;lows&lt;/item&gt;
+  &lt;label&gt;sterteth&lt;/label&gt;
+  &lt;item xml:lang="en"&gt;bounds, frisks
+ (cf. &lt;cit&gt;
+    &lt;ref&gt;Chaucer, K.T.644&lt;/ref&gt;
+    &lt;quote&gt;a courser, 
+ &lt;term&gt;sterting&lt;/term&gt;as the fyr&lt;/quote&gt;
+   &lt;/cit&gt;
+  &lt;/item&gt;
+  &lt;label&gt;verteth&lt;/label&gt;
+  &lt;item xml:lang="la"&gt;pedit&lt;/item&gt;
+  &lt;label&gt;murie&lt;/label&gt;
+  &lt;item xml:lang="en"&gt;merrily&lt;/item&gt;
+  &lt;label&gt;swik&lt;/label&gt;
+  &lt;item xml:lang="en"&gt;cease&lt;/item&gt;
+  &lt;label&gt;naver&lt;/label&gt;
+  &lt;item xml:lang="en"&gt;never&lt;/item&gt;
+ &lt;/list&gt;</eg>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <p>Labels may also be used to record explicitly the numbers or
+letters which mark list items in ordered lists, as in this extract from
+Gibbon's <title>Autobiography</title>. In this usage the <gi>label</gi>
+element is synonymous with the <hi rend="att">n</hi> attribute on the
+<gi>item</gi> element:</p>
+          <eg>I will add two facts, which have seldom occurred in
+the composition of six, or at least of five quartos.
+ &lt;list rend="runon" type="ordered"
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;label&gt;(1)&lt;/label&gt;
+  &lt;item&gt;My first rough manuscript, without any
+intermediate copy, has been sent to the press.&lt;/item&gt;
+  &lt;label&gt;(2) &lt;/label&gt;
+  &lt;item&gt;Not a sheet has been seen by any human
+eyes, excepting those of the author and the printer:
+the faults and the merits are exclusively my own.&lt;/item&gt;
+ &lt;/list&gt;</eg>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <p>Labels may also be used for other structured list items, as
+in this extract from the journal of Edward Gibbon:</p>
+          <eg> &lt;list type="gloss"
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;label&gt;March 1757.&lt;/label&gt;
+  &lt;item&gt;I wrote some critical observations upon Plautus.&lt;/item&gt;
+  &lt;label&gt;March 8th.&lt;/label&gt;
+  &lt;item&gt;I wrote a long dissertation upon some lines of Virgil.&lt;/item&gt;
+  &lt;label&gt;June.&lt;/label&gt;
+  &lt;item&gt;I saw Mademoiselle Curchod —
+      &lt;q xml:lang="la"&gt;Omnia vincit amor, et nos cedamus amori.&lt;/q&gt;
+  &lt;/item&gt;
+  &lt;label&gt;August.&lt;/label&gt;
+  &lt;item&gt;I went to Crassy, and staid two days.&lt;/item&gt;
+ &lt;/list&gt;</eg>
+          <p><hi>Module</hi>: core</p>
+        </div>
+        <div xml:id="list">
+          <head>
+            <gi>list</gi>
+          </head>
+          <p>contains any sequence of items organized as a list.</p>
+          <p><hi>Class</hi>: <ref target="#model.listLike">model.listLike</ref></p>
+          <p>Declaration<q rend="eg">
+element list
+{
+   att.global.attributes,
+   <ref target="#att.global">att.global.attribute.xmlid</ref>,
+   <ref target="#att.global">att.global.attribute.n</ref>,
+   <ref target="#att.global">att.global.attribute.xmllang</ref>,
+   attribute type { <ref target="#data.enumerated">data.enumerated</ref> }?,
+   (
+      ( ( <ref target="#model.divWrapper">model.divWrapper</ref> ) | ( <ref target="#model.global">model.global</ref> ) )*,
+      (
+         ( <ref target="#item">item</ref>, <ref target="#model.global">model.global</ref>* )+
+       | ( ( <ref target="#label">label</ref>, <ref target="#model.global">model.global</ref>*, <ref target="#item">item</ref>, <ref target="#model.global">model.global</ref>* )+ )
+      ),
+      ( ( <ref target="#model.divWrapper.bottom">model.divWrapper.bottom</ref> ), <ref target="#model.global">model.global</ref>* )*
+   )
+}</q></p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><ref target="#att.global.attribute.xmlid">att.global.attribute.xmlid</ref></label><item/><label><ref target="#att.global.attribute.n">att.global.attribute.n</ref></label><item/><label><ref target="#att.global.attribute.xmllang">att.global.attribute.xmllang</ref></label><item/><attList xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns="http://www.tei-c.org/ns/1.0"><label><code>type</code></label><item>describes the form of the list. Suggested values include:<list type="gloss"><label>ordered</label><item>(list items are numbered or lettered.
+    ) </item><label>bulleted</label><item>(list items are marked with a
+bullet or other typographic device.
+    ) </item><label>simple</label><item>(list items are not numbered or bulleted.
+    ) </item><label>gloss</label><item>(each list item glosses some term or
+concept, which is given by a label element preceding
+the list item.) </item></list></item></attList></list></p>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;list type="ordered"
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;item&gt;a butcher&lt;/item&gt;
+  &lt;item&gt;a baker&lt;/item&gt;
+  &lt;item&gt;a candlestick maker, with
+&lt;list type="bullets"&gt;
+    &lt;item&gt;rings on his fingers&lt;/item&gt;
+    &lt;item&gt;bells on his toes&lt;/item&gt;
+   &lt;/list&gt;
+  &lt;/item&gt;
+ &lt;/list&gt;</eg>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <p>The following example treats the short numbered clauses of
+Anglo-Saxon legal codes as lists of items.  The text is from an
+ordinance of King Athelstan (924–939):</p>
+          <eg> &lt;div1 type="section"
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;head&gt;Athelstan's Ordinance&lt;/head&gt;
+  &lt;list type="ordered"&gt;
+   &lt;item n="1"&gt;Concerning thieves.  First, that no thief is to be
+     spared who is caught with the stolen goods, [if he is] over
+     twelve years and [if the value of the goods is] over eightpence.
+    &lt;list type="ordered"&gt;
+     &lt;item n="1.1"&gt;And if anyone does spare one, he is to pay for the
+      thief with his wergild — and the thief is to be no nearer a
+      settlement on that account — or to clear himself by an oath of
+      that amount.&lt;/item&gt;
+     &lt;item n="1.2"&gt;If, however, he [the thief] wishes to defend himself
+      or to escape, he is not to be spared [whether younger or older
+      than twelve].&lt;/item&gt;
+     &lt;item n="1.3"&gt;If a thief is put into prison, he is to be in prison
+      40 days, and he may then be redeemed with 120 shillings; and the
+      kindred are to stand surety for him that he will desist for ever.&lt;/item&gt;
+     &lt;item n="1.4"&gt;And if he steals after that, they are to pay for him
+      with his wergild, or to bring him back there.&lt;/item&gt;
+     &lt;item n="1.5"&gt;And if he steals after that, they are to pay
+      for him with his wergild, whether to the king or to him
+      to whom it rightly belongs; and everyone of those who
+      supported  him is to pay 120 shillings to  the king as a fine.&lt;/item&gt;
+    &lt;/list&gt;
+   &lt;/item&gt;
+   &lt;item n="2"&gt;Concerning lordless men.  And we pronounced about these
+   lordless men, from whom no justice can be obtained, that one
+   should order their kindred to fetch back such a person to justice
+   and to find him a lord in public meeting.
+   &lt;list type="ordered"&gt;
+     &lt;item n="2.1"&gt;And if they then will not, or cannot, produce him on
+      that appointed day, he is then to be a fugitive afterwards, and
+      he who encounters him is to strike him down as a thief.&lt;/item&gt;
+     &lt;item n="2.2"&gt;And he who harbours him after that, is to pay for him
+      with his wergild or to clear himself by an oath of that amount.&lt;/item&gt;
+    &lt;/list&gt;
+   &lt;/item&gt;
+   &lt;item n="3"&gt;Concerning the refusal of justice.  The lord who
+    refuses justice and upholds his guilty man, so that the king is
+    appealed to, is to repay the value of the goods and 120 shillings
+    to the king; and he who appeals to the king before he demands
+    justice as often as he ought, is to pay the same fine as the
+    other would have done, if he had refused him justice.
+    &lt;list type="ordered"&gt;
+     &lt;item n="3.1"&gt;And the lord who is an accessory to a theft by his
+      slave, and it becomes known about him, is to forfeit the slave
+      and be liable to his wergild on the first occasionp if he does it
+      more often, he is to be liable to pay all that he owns.&lt;/item&gt;
+     &lt;item n="3.2"&gt;And likewise any of the king's treasurers or of our
+      reeves, who has been an accessory of thieves who have committed
+      theft, is to liable to the same.&lt;/item&gt;
+    &lt;/list&gt;
+   &lt;/item&gt;
+   &lt;item n="4"&gt;Concerning treachery to a lord.  And we have pronounced
+   concerning treachery to a lord, that he [who is accused] is to
+   forfeit his life if he cannot deny it or is afterwards convicted
+   at the three-fold ordeal.&lt;/item&gt;
+  &lt;/list&gt;
+ &lt;/div1&gt;</eg>
+          <p>Note that nested lists have been used so the tagging mirrors the
+structure indicated by the two-level numbering of the clauses.
+The clauses could have been treated as a one-level list with
+irregular numbering, if desired.</p>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;p
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;These decrees, most blessed Pope Hadrian, we propounded in the
+public council ... and they confirmed them in our hand in your
+stead with the sign of the Holy Cross, and afterwards inscribed
+with a careful pen on the paper of this page, affixing thus the
+sign of the Holy Cross.
+&lt;list type="simple"&gt;
+   &lt;item&gt;I, Eanbald, by the grace of God archbishop of the holy
+church of York, have subscribed to the pious and catholic
+validity of this document with the sign of the Holy Cross.&lt;/item&gt;
+   &lt;item&gt;I, Ælfwold, king of the people across the Humber,
+consenting have subscribed with the sign of the Holy Cross.&lt;/item&gt;
+   &lt;item&gt;I, Tilberht, prelate of the church of Hexham, rejoicing
+have subscribed with the sign of the Holy Cross.&lt;/item&gt;
+   &lt;item&gt;I, Higbald, bishop of the church of Lindisfarne, obeying
+have subscribed with the sign of the Holy Cross.&lt;/item&gt;
+   &lt;item&gt;I, Ethelbert, bishop of Candida Casa, suppliant, have
+subscribed with thef sign of the Holy Cross.&lt;/item&gt;
+   &lt;item&gt;I, Ealdwulf, bishop of the church of Mayo, have subscribed
+with devout will.&lt;/item&gt;
+   &lt;item&gt;I, Æthelwine, bishop, have subscribed through
+delegates.&lt;/item&gt;
+   &lt;item&gt;I, Sicga, patrician, have subscribed with serene mind
+with the sign of the Holy Cross.&lt;/item&gt;
+  &lt;/list&gt;
+ &lt;/p&gt;</eg>
+          <p><hi>Note</hi>: May contain an optional heading followed by a series of
+items, or a series of label and item pairs, the latter being optionally
+preceded by one or two specialized headings.</p>
+          <p><hi>Module</hi>: core</p>
+        </div>
+        <div xml:id="p">
+          <head>
+            <gi>p</gi>
+          </head>
+          <p>(paragraph) marks paragraphs in prose.</p>
+          <p><hi>Class</hi>: <ref target="#model.pLike">model.pLike</ref>: <ref target="#model.divPart">model.divPart</ref></p>
+          <p>Declaration<q rend="eg">
+element p
+{
+   att.global.attributes,
+   <ref target="#att.global">att.global.attribute.xmlid</ref>,
+   <ref target="#att.global">att.global.attribute.n</ref>,
+   <ref target="#att.global">att.global.attribute.xmllang</ref>,
+   <ref target="#macro.paraContent">macro.paraContent</ref>
+}</q></p>
+          <p><hi>Attributes: </hi>Global attributes only<list type="gloss"><label><ref target="#att.global.attribute.xmlid">att.global.attribute.xmlid</ref></label><item/><label><ref target="#att.global.attribute.n">att.global.attribute.n</ref></label><item/><label><ref target="#att.global.attribute.xmllang">att.global.attribute.xmllang</ref></label><item/></list></p>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;p
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;Hallgerd was outside.  
+&lt;q&gt;There is blood on your axe,&lt;/q&gt; she said.  
+ &lt;q&gt;What have you done?&lt;/q&gt;
+ &lt;/p&gt;
+ &lt;p&gt;
+  &lt;q&gt;I have now arranged that you can be
+married a second time,&lt;/q&gt; replied Thjostolf.&lt;/p&gt;
+ &lt;p&gt;
+  &lt;q&gt;Then you must mean that Thorvald is
+dead,&lt;/q&gt; she said.&lt;/p&gt;
+ &lt;p&gt;
+  &lt;q&gt;Yes,&lt;/q&gt; said Thjostolf.  
+    &lt;q&gt;And now you must think up some plan for me.&lt;/q&gt;
+ &lt;/p&gt;</eg>
+          <p><hi>Note</hi>: In some contexts, the paragraph may have a specialized
+meaning, e.g. in the tag set for dictionaries, <gi>p</gi> is used to
+enclose any running text, and thus does not imply text set off as is
+conventionally done in running prose.</p>
+          <p><hi>Module</hi>: core</p>
+        </div>
+        <div xml:id="publicationStmt">
+          <head>
+            <gi>publicationStmt</gi>
+          </head>
+          <p>(publication statement) groups information concerning the publication or distribution
+of an electronic or other text. </p>
+          <p>Declaration<q rend="eg">
+element publicationStmt
+{
+   att.global.attributes,
+   <ref target="#att.global">att.global.attribute.xmlid</ref>,
+   <ref target="#att.global">att.global.attribute.n</ref>,
+   <ref target="#att.global">att.global.attribute.xmllang</ref>,
+   ( <ref target="#model.pLike">model.pLike</ref>+ | <ref target="#model.publicationStmtPart">model.publicationStmtPart</ref>+ )
+}</q></p>
+          <p><hi>Attributes: </hi>Global attributes only<list type="gloss"><label><ref target="#att.global.attribute.xmlid">att.global.attribute.xmlid</ref></label><item/><label><ref target="#att.global.attribute.n">att.global.attribute.n</ref></label><item/><label><ref target="#att.global.attribute.xmllang">att.global.attribute.xmllang</ref></label><item/></list></p>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;publicationStmt
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;publisher&gt;C. Muquardt &lt;/publisher&gt;
+  &lt;pubPlace&gt;Bruxelles &amp; Leipzig&lt;/pubPlace&gt;
+  &lt;date value="1846"/&gt;
+ &lt;/publicationStmt&gt;</eg>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;publicationStmt
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;publisher&gt;Chadwyck Healey&lt;/publisher&gt;
+  &lt;pubPlace&gt;Cambridge&lt;/pubPlace&gt;
+  &lt;availability&gt;
+   &lt;p&gt;Available under licence only&lt;/p&gt;
+  &lt;/availability&gt;
+  &lt;date value="1992"&gt;1992&lt;/date&gt;
+ &lt;/publicationStmt&gt;</eg>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;publicationStmt
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;publisher&gt;Chadwyck Healey&lt;/publisher&gt;
+  &lt;pubPlace&gt;Cambridge&lt;/pubPlace&gt;
+  &lt;availability&gt;
+   &lt;p&gt;Disponible uniquement sur autorisation&lt;/p&gt;
+  &lt;/availability&gt;
+  &lt;date value="1992"&gt;1992&lt;/date&gt;
+ &lt;/publicationStmt&gt;</eg>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;publicationStmt
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;publisher&gt;Chadwyck Healey&lt;/publisher&gt;
+  &lt;pubPlace&gt;Cambridge&lt;/pubPlace&gt;
+  &lt;availability&gt;
+   &lt;p&gt;Available under licence only&lt;/p&gt;
+  &lt;/availability&gt;
+  &lt;date value="1992"&gt;1992&lt;/date&gt;
+ &lt;/publicationStmt&gt;</eg>
+          <p><hi>Note</hi>: Although not enforced by the
+DTD, it is a requirement for TEI conformance that information about
+publication place, address, identifier, availability, and date be
+given in that order, following the name of the publisher, distributor,
+or authority concerned</p>
+          <p><hi>Module</hi>: header</p>
+        </div>
+        <div xml:id="sourceDesc">
+          <head>
+            <gi>sourceDesc</gi>
+          </head>
+          <p>supplies a description of the source text(s) from
+which an electronic text was derived or generated.</p>
+          <p><hi>Class</hi>: <ref target="#att.declarable">att.declarable</ref></p>
+          <p>Declaration<q rend="eg">
+element sourceDesc
+{
+   att.global.attributes,
+   att.declarable.attributes,
+   <ref target="#att.global">att.global.attribute.xmlid</ref>,
+   <ref target="#att.global">att.global.attribute.n</ref>,
+   <ref target="#att.global">att.global.attribute.xmllang</ref>,
+   ( <ref target="#model.pLike">model.pLike</ref>+ | ( <ref target="#model.biblLike">model.biblLike</ref> | <ref target="#model.sourceDescPart">model.sourceDescPart</ref> )+ )
+}</q></p>
+          <p><hi>Attributes: </hi>Global attributes and those inherited from  [<ref xmlns:tei="http://www.tei-c.org/ns/1.0" rend="classlink" target="#att.declarable">att.declarable</ref> ] <list type="gloss"><label><ref target="#att.global.attribute.xmlid">att.global.attribute.xmlid</ref></label><item/><label><ref target="#att.global.attribute.n">att.global.attribute.n</ref></label><item/><label><ref target="#att.global.attribute.xmllang">att.global.attribute.xmllang</ref></label><item/></list></p>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;sourceDesc
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;p&gt;No source: created in machine-readable form.&lt;/p&gt;
+ &lt;/sourceDesc&gt;</eg>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;sourceDesc
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;p&gt;Sans source : créé sous forme électronique.&lt;/p&gt;
+ &lt;/sourceDesc&gt;</eg>
+          <p><hi>Module</hi>: header</p>
+        </div>
+        <div xml:id="teiHeader">
+          <head>
+            <gi>teiHeader</gi>
+          </head>
+          <p>(TEI Header) supplies the descriptive and declarative information making
+	up an electronic title page prefixed to every TEI-conformant
+	text.</p>
+          <p>Declaration<q rend="eg">
+element teiHeader
+{
+   att.global.attributes,
+   <ref target="#att.global">att.global.attribute.xmlid</ref>,
+   <ref target="#att.global">att.global.attribute.n</ref>,
+   <ref target="#att.global">att.global.attribute.xmllang</ref>,
+   attribute type { <ref target="#data.enumerated">data.enumerated</ref> }?,
+   ( <ref target="#fileDesc">fileDesc</ref>, <ref target="#model.headerPart">model.headerPart</ref>* )
+}</q></p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><ref target="#att.global.attribute.xmlid">att.global.attribute.xmlid</ref></label><item/><label><ref target="#att.global.attribute.n">att.global.attribute.n</ref></label><item/><label><ref target="#att.global.attribute.xmllang">att.global.attribute.xmllang</ref></label><item/><attList xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns="http://www.tei-c.org/ns/1.0"><label><code>type</code></label><item>specifies the kind of document to which the header is attached. Sample values include:<list type="gloss"><label>text</label><item>(the header is attached to a single text.) </item><label>corpus</label><item>(the header is attached to a corpus.) </item></list></item></attList></list></p>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;teiHeader
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;fileDesc&gt;
+   &lt;titleStmt&gt;
+    &lt;title&gt;Shakespeare: the first folio (1623) in electronic form&lt;/title&gt;
+    &lt;author&gt;Shakespeare, William (1564–1616)&lt;/author&gt;
+    &lt;respStmt&gt;
+     &lt;resp&gt;Originally prepared by&lt;/resp&gt;
+     &lt;name&gt;Trevor Howard-Hill&lt;/name&gt;
+    &lt;/respStmt&gt;
+    &lt;respStmt&gt;
+     &lt;resp&gt;Revised and edited by&lt;/resp&gt;
+     &lt;name&gt;Christine Avern-Carr&lt;/name&gt;
+    &lt;/respStmt&gt;
+   &lt;/titleStmt&gt;
+   &lt;publicationStmt&gt;
+    &lt;distributor&gt;Oxford Text Archive&lt;/distributor&gt;
+    &lt;address&gt;
+     &lt;addrLine&gt;13 Banbury Road, Oxford OX2 6NN, UK&lt;/addrLine&gt;
+    &lt;/address&gt;
+    &lt;idno type="OTA"&gt;119&lt;/idno&gt;
+    &lt;availability&gt;
+     &lt;p&gt;Freely available on a non-commercial basis.&lt;/p&gt;
+    &lt;/availability&gt;
+    &lt;date value="1968"&gt;1968&lt;/date&gt;
+   &lt;/publicationStmt&gt;
+   &lt;sourceDesc&gt;
+    &lt;bibl&gt;The first folio of Shakespeare, prepared by Charlton Hinman
+		(The Norton Facsimile, 1968)&lt;/bibl&gt;
+   &lt;/sourceDesc&gt;
+  &lt;/fileDesc&gt;
+  &lt;encodingDesc&gt;
+   &lt;projectDesc&gt;
+    &lt;p&gt;Originally prepared for use in the production of a series of
+		old-spelling concordances in 1968, this text was extensively
+		checked and revised for use during the editing of the new Oxford
+		Shakespeare (Wells and Taylor, 1989).&lt;/p&gt;
+   &lt;/projectDesc&gt;
+   &lt;editorialDecl&gt;
+    &lt;correction&gt;
+     &lt;p&gt;Turned letters are silently corrected.&lt;/p&gt;
+    &lt;/correction&gt;
+    &lt;normalization&gt;
+     &lt;p&gt;Original spelling and typography is retained, except 
+		  that long s  and ligatured forms are not encoded.&lt;/p&gt;
+    &lt;/normalization&gt;
+   &lt;/editorialDecl&gt;
+   &lt;refsDecl xml:id="ASLREF"&gt;
+    &lt;cRefPattern
+      matchPattern="(\S+) ([^.]+)\.(.*)"
+      replacementPattern="#xpath(//div1[@n='$1']/div2/[@n='$2']//lb[@n='$3'])"&gt;
+     &lt;p&gt;A reference is created by assembling the following,
+	      in the reverse order as that listed here:
+	      &lt;list&gt;
+       &lt;item&gt;the &lt;att&gt;n&lt;/att&gt; value of the preceding &lt;gi&gt;lb&lt;/gi&gt;
+       &lt;/item&gt;
+       &lt;item&gt;a period&lt;/item&gt;
+       &lt;item&gt;the &lt;att&gt;n&lt;/att&gt; value of the ancestor &lt;gi&gt;div2&lt;/gi&gt;
+       &lt;/item&gt;
+       &lt;item&gt;a space&lt;/item&gt;
+       &lt;item&gt;the &lt;att&gt;n&lt;/att&gt; value of the parent &lt;gi&gt;div1&lt;/gi&gt;
+       &lt;/item&gt;
+      &lt;/list&gt;
+     &lt;/p&gt;
+    &lt;/cRefPattern&gt;
+   &lt;/refsDecl&gt;
+  &lt;/encodingDesc&gt;
+  &lt;revisionDesc&gt;
+   &lt;list&gt;
+    &lt;item&gt;
+     &lt;date value="1989-04-12"&gt;12 Apr 89&lt;/date&gt; Last checked by CAC&lt;/item&gt;
+    &lt;item&gt;
+     &lt;date value="1989-03-01"&gt;1 Mar 89&lt;/date&gt; LB made new file&lt;/item&gt;
+   &lt;/list&gt;
+  &lt;/revisionDesc&gt;
+ &lt;/teiHeader&gt;</eg>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;teiHeader
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;fileDesc&gt;
+   &lt;titleStmt&gt;
+    &lt;title&gt;Shakespeare: the first folio (1623) sous forme électronique&lt;/title&gt;
+    &lt;author&gt;Shakespeare, William (1564–1616)&lt;/author&gt;
+    &lt;respStmt&gt;
+     &lt;resp&gt;Préparé par&lt;/resp&gt;
+     &lt;name&gt;Trevor Howard-Hill&lt;/name&gt;
+    &lt;/respStmt&gt;
+    &lt;respStmt&gt;
+     &lt;resp&gt;Révisé et édité par&lt;/resp&gt;
+     &lt;name&gt;Christine Avern-Carr&lt;/name&gt;
+    &lt;/respStmt&gt;
+   &lt;/titleStmt&gt;
+   &lt;publicationStmt&gt;
+    &lt;distributor&gt;Oxford Text Archive&lt;/distributor&gt;
+    &lt;address&gt;
+     &lt;addrLine&gt;13 Banbury Road, Oxford OX2 6NN, UK&lt;/addrLine&gt;
+    &lt;/address&gt;
+    &lt;idno type="OTA"&gt;119&lt;/idno&gt;
+    &lt;availability&gt;
+     &lt;p&gt;Disponible gratuitement à des fins non commerciales.&lt;/p&gt;
+    &lt;/availability&gt;
+    &lt;date value="1968"&gt;1968&lt;/date&gt;
+   &lt;/publicationStmt&gt;
+   &lt;sourceDesc&gt;
+    &lt;bibl&gt;The first folio of Shakespeare, préparé par Charlton Hinman
+		(The Norton Facsimile, 1968)&lt;/bibl&gt;
+   &lt;/sourceDesc&gt;
+  &lt;/fileDesc&gt;
+  &lt;encodingDesc&gt;
+   &lt;projectDesc&gt;
+    &lt;p&gt;Préparé pour la production d'une collection de concordances old-spelling en 1968, ce texte a été profondément relu et révisé pour l'édition du new Oxford
+		Shakespeare (Wells and Taylor, 1989).&lt;/p&gt;
+   &lt;/projectDesc&gt;
+   &lt;editorialDecl&gt;
+    &lt;correction&gt;
+     &lt;p&gt;Les caractères bloqués sont corrigés sans commentaire.&lt;/p&gt;
+    &lt;/correction&gt;
+    &lt;normalization&gt;
+     &lt;p&gt;L'orthographe et la typographie originales sont conservées, à l'exception des s longs et des ligatures qui ne sont pas encodées.&lt;/p&gt;
+    &lt;/normalization&gt;
+   &lt;/editorialDecl&gt;
+   &lt;refsDecl xml:id="ASLREF-FR"&gt;
+    &lt;cRefPattern
+      matchPattern="(\S+) ([^.]+)\.(.*)"
+      replacementPattern="#xpath(//div1[@n='$1']/div2/[@n='$2']//lb[@n='$3'])"&gt;
+     &lt;p&gt;Une référence est créée en assemblant les éléments suivants dans l'ordre inverse de la liste suivante :
+	      &lt;list&gt;
+       &lt;item&gt;la valeur de l'attribut &lt;att&gt;n&lt;/att&gt; de l'élément &lt;gi&gt;lb&lt;/gi&gt;précédent.&lt;/item&gt;
+       &lt;item&gt;un point&lt;/item&gt;
+       &lt;item&gt;la valeur de l'attribut &lt;att&gt;n&lt;/att&gt; de l'élément &lt;gi&gt;div2&lt;/gi&gt; ancêtre.&lt;/item&gt;
+       &lt;item&gt;un espace&lt;/item&gt;
+       &lt;item&gt;la valeur de l'attribut &lt;att&gt;n&lt;/att&gt; de l'élément &lt;gi&gt;div1&lt;/gi&gt; parent.&lt;/item&gt;
+      &lt;/list&gt;
+     &lt;/p&gt;
+    &lt;/cRefPattern&gt;
+   &lt;/refsDecl&gt;
+  &lt;/encodingDesc&gt;
+  &lt;revisionDesc&gt;
+   &lt;list&gt;
+    &lt;item&gt;
+     &lt;date value="1989-04-12"&gt;12 avril 1989&lt;/date&gt; Dernière vérification par CAC&lt;/item&gt;
+    &lt;item&gt;
+     &lt;date value="1989-03-01"&gt;1er mars 1989&lt;/date&gt; Nouveau fichier par LB&lt;/item&gt;
+   &lt;/list&gt;
+  &lt;/revisionDesc&gt;
+ &lt;/teiHeader&gt;</eg>
+          <p><hi>Note</hi>: One of the few elements unconditionally required in any
+TEI document.</p>
+          <p><hi>Module</hi>: header</p>
+        </div>
+        <div xml:id="text">
+          <head>
+            <gi>text</gi>
+          </head>
+          <p>contains a single text of any kind, whether unitary or
+composite, for example a poem or drama, a collection of essays, a novel,
+a dictionary, or a corpus sample.</p>
+          <p><hi>Class</hi>: <ref target="#model.inter">model.inter</ref>: <ref target="#att.declaring">att.declaring</ref></p>
+          <p>Declaration<q rend="eg">
+element text
+{
+   att.global.attributes,
+   att.declaring.attributes,
+   <ref target="#att.global">att.global.attribute.xmlid</ref>,
+   <ref target="#att.global">att.global.attribute.n</ref>,
+   <ref target="#att.global">att.global.attribute.xmllang</ref>,
+   (
+      <ref target="#model.global">model.global</ref>*,
+      ( <ref target="#front">front</ref>, <ref target="#model.global">model.global</ref>* )?,
+      ( <ref target="#body">body</ref> ),
+      <ref target="#model.global">model.global</ref>*,
+      ( <ref target="#back">back</ref>, <ref target="#model.global">model.global</ref>* )?
+   )
+}</q></p>
+          <p><hi>Attributes: </hi>Global attributes and those inherited from  [<ref xmlns:tei="http://www.tei-c.org/ns/1.0" rend="classlink" target="#att.declaring">att.declaring</ref> ] <list type="gloss"><label><ref target="#att.global.attribute.xmlid">att.global.attribute.xmlid</ref></label><item/><label><ref target="#att.global.attribute.n">att.global.attribute.n</ref></label><item/><label><ref target="#att.global.attribute.xmllang">att.global.attribute.xmllang</ref></label><item/></list></p>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;text
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;front&gt;
+   &lt;docTitle&gt;
+    &lt;titlePart&gt;Autumn Haze&lt;/titlePart&gt;
+   &lt;/docTitle&gt;
+  &lt;/front&gt;
+  &lt;body&gt;
+   &lt;l&gt;Is it a dragonfly or a maple leaf&lt;/l&gt;
+   &lt;l&gt;That settles softly down upon the water?&lt;/l&gt;
+  &lt;/body&gt;
+ &lt;/text&gt;</eg>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <p>The body of a text may be replaced by a group of nested texts, as
+in the following schematic:</p>
+          <eg> &lt;text
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;front/&gt;
+  &lt;group&gt;
+   &lt;text&gt;
+    &lt;front/&gt;
+    &lt;body/&gt;
+    &lt;back/&gt;
+   &lt;/text&gt;
+   &lt;text/&gt;
+  &lt;/group&gt;
+ &lt;/text&gt;</eg>
+          <p><hi>Note</hi>: This element may also be used to represent embedded
+  texts, as when one narrative is contained by another.</p>
+          <p><hi>Module</hi>: textstructure</p>
+        </div>
+        <div xml:id="title">
+          <head>
+            <gi>title</gi>
+          </head>
+          <p>contains the full title of a work of any kind.</p>
+          <p><hi>Class</hi>: <ref target="#model.hiLike">model.hiLike</ref>: <ref target="#model.msItemPart">model.msItemPart</ref></p>
+          <p>Declaration<q rend="eg">
+element title
+{
+   att.global.attributes,
+   attribute type { <ref target="#data.enumerated">data.enumerated</ref> }?,
+   <ref target="#att.global">att.global.attribute.xmlid</ref>,
+   <ref target="#att.global">att.global.attribute.n</ref>,
+   <ref target="#att.global">att.global.attribute.xmllang</ref>,
+   <ref target="#macro.paraContent">macro.paraContent</ref>
+}</q></p>
+          <p><hi>Attributes: </hi>In addition to global attributes<list type="gloss"><label><code>type</code></label><item>classifies the title according to some convenient typology. Sample values include:<list type="gloss"><label>main</label><item>(main title
+    ) </item><label>sub</label><item>(subtitle, title of part
+    ) </item><label>alt</label><item>(alternate title, often in another language,
+                           by which the work is also known
+    ) </item><label>short</label><item>(abbreviated form of title) </item><label>desc</label><item>(descriptive paraphrase of the work functioning as a title) </item></list></item><label><ref target="#att.global.attribute.xmlid">att.global.attribute.xmlid</ref></label><item/><label><ref target="#att.global.attribute.n">att.global.attribute.n</ref></label><item/><label><ref target="#att.global.attribute.xmllang">att.global.attribute.xmllang</ref></label><item/></list></p>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;title
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;La vie mode d'emploi. Romans.&lt;/title&gt;</eg>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;title
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;Synthese: an international journal for epistemology, methodology
+and history of science&lt;/title&gt;</eg>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;title
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;Information Technology and the Research Process: Proceedings
+of a conference held at Cranfield Institute of Technology, UK, 18–21
+July 1989&lt;/title&gt;</eg>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;title
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;Hardy's Tess of the D'Urbervilles: a machine readable edition&lt;/title&gt;</eg>
+          <p><hi>Module</hi>: core</p>
+        </div>
+        <div xml:id="titleStmt">
+          <head>
+            <gi>titleStmt</gi>
+          </head>
+          <p>(title statement) groups information about the title of a work and those
+responsible for its intellectual content.</p>
+          <p>Declaration<q rend="eg">
+element titleStmt
+{
+   att.global.attributes,
+   <ref target="#att.global">att.global.attribute.xmlid</ref>,
+   <ref target="#att.global">att.global.attribute.n</ref>,
+   <ref target="#att.global">att.global.attribute.xmllang</ref>,
+   ( <ref target="#title">title</ref>+, <ref target="#author">author</ref>* )
+}</q></p>
+          <p><hi>Attributes: </hi>Global attributes only<list type="gloss"><label><ref target="#att.global.attribute.xmlid">att.global.attribute.xmlid</ref></label><item/><label><ref target="#att.global.attribute.n">att.global.attribute.n</ref></label><item/><label><ref target="#att.global.attribute.xmllang">att.global.attribute.xmllang</ref></label><item/></list></p>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;titleStmt
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;title&gt;Capgrave's Life of St. John Norbert:  a machine-readable
+      transcription&lt;/title&gt;
+  &lt;respStmt&gt;
+   &lt;resp&gt;compiled by&lt;/resp&gt;
+   &lt;name&gt;P.J. Lucas&lt;/name&gt;
+  &lt;/respStmt&gt;
+ &lt;/titleStmt&gt;</eg>
+          <p>
+            <hi>Example</hi>
+          </p>
+          <eg> &lt;titleStmt
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;title&gt;Capgrave's Life of St. John Norbert : transcription électronique&lt;/title&gt;
+  &lt;respStmt&gt;
+   &lt;resp&gt;compilée par&lt;/resp&gt;
+   &lt;name&gt;P.J. Lucas&lt;/name&gt;
+  &lt;/respStmt&gt;
+ &lt;/titleStmt&gt;</eg>
+          <p><hi>Module</hi>: header</p>
+        </div>
+      </div>
+      <div>
+        <head>Macros defined</head>
+        <div xml:id="data.certainty">
+          <head>Macro data.certainty</head>
+          <p>defines the range of attribute values expressing a degree of certainty</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+data.certainty = "high" | "medium" | "low" | "unknown"</q>
+          </p>
+          <p><hi>Note</hi>: Certainty may be expressed either by one of the predefined
+    symbolic values high, medium, low, or by means of a numeric value,
+    as defined by the data.probability macro.</p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="data.code">
+          <head>Macro data.code</head>
+          <p>defines the range of attribute values expressing a coded value
+by means of  a pointer to some other element which contains a
+definition for it.</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+data.code = xsd:anyURI</q>
+          </p>
+          <p><hi>Note</hi>: It will usually be the case that the item pointed to is to be
+    found somewhere else in the current TEI document, typically in the
+    header, but this is not mandatory.</p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="data.count">
+          <head>Macro data.count</head>
+          <p>defines the range of attribute values used for a non-negative
+integer value used as a count</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+data.count = xsd:nonNegativeInteger</q>
+          </p>
+          <p><hi>Note</hi>: Only positive integer values are permitted</p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="data.duration">
+          <head>Macro data.duration</head>
+          <p>defines the range of attribute values available for
+representation of a duration in time</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+data.duration = xsd:duration</q>
+          </p>
+          <p><hi>Note</hi>: A duration is expressed as a seqence of digit-letter pairs, preceded by the
+    letter P; the letter gives the unit and may be Y (year), M
+    (month), D (day), H (hour) M (minute) or S (second). If a duration
+    includes both hours, minutes or seconds, and days, hour or
+    minutes, the character T must be used to separate the "time" part
+    of the duration from the "day" part. This scheme is defined in ISO
+     8601.</p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="data.enumerated">
+          <head>Macro data.enumerated</head>
+          <p>defines the range of attribute values expressed as a single
+word or token taken from a list of documented possibilities</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+data.enumerated = token</q>
+          </p>
+          <p><hi>Note</hi>: Typically, the list of documented possibilities will be
+    provided (or exemplified) by a value list in the associated
+    element specification. If the value contains whitespace, it must
+    be normalised: neither leading or trailing sequences of whitespace
+    characters nor internal sequences of more than one whitespace character are allowed.
+ </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="data.key">
+          <head>Macro data.key</head>
+          <p>defines the range of attribute values expressing a coded value
+by means of an arbitrary identifier, typically taken from a set of
+externally-defined possibilities</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+data.key = string</q>
+          </p>
+          <p><hi>Note</hi>: Information about the set of possible values for an attribute using this datatype
+    may (but need not) be documented in the document
+    header. Externally defined
+    constraints, for example that values should be legal keys in an
+    external database system, cannot usually be enforced by a TEI
+    system. Similarly, because the key is externally defined, no constraint
+    other than a requirement that it consist of Unicode characters is
+    possible. </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="data.language">
+          <head>Macro data.language</head>
+          <p>defines the range of attribute values used to identify a
+particular combination of human language and writing system</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+data.language = xsd:language</q>
+          </p>
+          <p><hi>Note</hi>: The values for this attribute are language
+    <soCalled>tags</soCalled> as defined in <ref target="http://www.ietf.org/rfc/rfc3066.txt">RFC 3066</ref> or its
+    successor. Examples include
+    <list type="gloss"><label><hi rend="val">sn</hi></label><item>Shona</item><label><hi rend="val">zh-TW</hi></label><item>Taiwanese</item><label><hi rend="val">en-SL</hi></label><item>English as spoken in Sierra Leone</item><label><hi rend="val">pl</hi></label><item>Polish</item><label><hi rend="val">es-MX</hi></label><item>Spanish as spoken in Mexico</item></list></p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="data.name">
+          <head>Macro data.name</head>
+          <p>defines the range of attribute values expressed as an XML name
+or identifier</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+data.name = xsd:Name</q>
+          </p>
+          <p><hi>Note</hi>: Attributes using this datatype must contain a single word which
+    follows the rules defining a legal XML name: for example they  cannot
+    include whitespace or begin with digits.  </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="data.namespace">
+          <head>Macro data.namespace</head>
+          <p>(an XML namespace) defines the range of attribute values used to indicate XML namespaces as defined by the W3C 
+  Namespaces in XML technical recommendation</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+data.namespace = xsd:anyURI</q>
+          </p>
+          <p><hi>Note</hi>: The range of syntactically valid values is defined by <ref target="http://www.ietf.org/rfc/rfc2396.txt">RFC 2396
+    <title>Uniform Resource Identifier (URI)
+    Reference</title></ref></p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="data.numeric">
+          <head>Macro data.numeric</head>
+          <p>defines the range of attribute values used for numeric values</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+data.numeric = xsd:double | xsd:decimal</q>
+          </p>
+          <p><hi>Note</hi>: Any numeric value that can be represented as a decimal number.In addition, the range of values that can be represented in an
+    IEEE double precision (i.e., 64-bit) floating point number may be
+    represented using scientific notation. Roughly that range is
+    ±10⁻³²³ to
+    ±10³⁰⁸.To represent a number expressed in scientific notation,
+    <soCalled>exponential notation</soCalled> is used in the attribute
+    value. The significand (sometimes called the mantissa) is written
+    as a decimal number, followed by the letter
+    <mentioned>E</mentioned>, followed by an integer exponent.  The multiplication sign and the base itself
+    (<mentioned>10</mentioned>) are implied. Either the significand or
+    the exponent (or both) may be a negative number, in which case it
+    should be preceded by a minus sign. There should be no whitespace
+    separating the significand from the <mentioned>E</mentioned> from
+    the exponent. E.g., 3×10⁸ can be expressed as
+    <hi rend="val">3E8</hi>.Other examples of scientific notation include:
+    <list><item><hi rend="val">10E10</hi> (the speed of light in centimetres per second)</item><item><hi rend="val">9.12E-31</hi> (the mass of an electron in Kg)</item><item><hi rend="val">4E11</hi> (estimated number of stars in our galaxy)</item><item><hi rend="val">-1.76E11</hi> (electron charge to mass quotient in coulombs per Kg)</item></list>Either <mentioned>e</mentioned> or <mentioned>E</mentioned> may
+    be used to separate the significand from the exponent, however
+    these Guidelines recommend <mentioned>E</mentioned> be used both
+    for consistency with other standards bodies and to avoid confusion
+    with the mathematical constant <code>e</code>.</p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="data.outputMeasurement">
+          <head>Macro data.outputMeasurement</head>
+          <p>(HTML dimension) defines a range of values for use in specifying the size of an
+  object that is intended for display on the web</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+data.outputMeasurement =
+   token
+   {
+      pattern = "[\-+]?\d+(\.\d+)?(%|cm|mm|in|pt|pc|px|em|ex|gd|rem|vw|vh|vm)"
+   }</q>
+          </p>
+          <p><hi>Note</hi>:  These values map directly onto the values used by XSLFO and
+    CSS. For definitions of the units see those specifications; at the
+    time of this writing the most complete list is in the <ref target="http://www.w3.org/TR/2005/WD-css3-values-20050726/#numbers0">CSS3
+    working draft</ref>.</p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="data.pattern">
+          <head>Macro data.pattern</head>
+          <p>defines a range of attribute values expressed as a regular expression</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+data.pattern = token</q>
+          </p>
+          <p><hi>Note</hi>: <cit><quote>A regular expression, often called a
+    <term>pattern</term>, is an expression that describes a set of
+    strings. They are usually used to give a concise description of a
+    set, without having to list all elements. For example, the set
+    containing the three strings <mentioned>Handel</mentioned>,
+    <mentioned>Händel</mentioned>, and <mentioned>Haendel</mentioned>
+    can be described by the pattern <code>H(ä|ae?)ndel</code> (or
+    alternatively, it is said that the pattern
+    <code>H(ä|ae?)ndel</code><term>matches</term> each of the three
+    strings)</quote><ref target="http://en.wikipedia.org/wiki/Regular_expression#Basic_concepts">wikipedia</ref></cit></p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="data.pointer">
+          <head>Macro data.pointer</head>
+          <p>defines the range of attribute values used to provide a single pointer to any other
+resource, either within the current document or elsewhere</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+data.pointer = xsd:anyURI</q>
+          </p>
+          <p><hi>Note</hi>: The range of syntactically valid values is defined by  <ref target="http://www.ietf.org/rfc/rfc2396.txt">RFC 2396 <title>Uniform Resource Identifier (URI) Reference</title></ref></p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="data.probability">
+          <head>Macro data.probability</head>
+          <p>defines the range of attribute values expressing a probability</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+data.probability = xsd:double { minInclusive = "0" maxInclusive = "1" }</q>
+          </p>
+          <p><hi>Note</hi>: Probability is  expressed  as a real  number between 0 and 1; 0 
+representing <mentioned>certainly false</mentioned> and 1
+    representing <mentioned>certainly true</mentioned>.</p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="data.sex">
+          <head>Macro data.sex</head>
+          <p>defines the range of attribute values used to identify human or
+animal sex</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+data.sex = "0" | "1" | "2" | "9"</q>
+          </p>
+          <p><hi>Note</hi>: The values are taken from
+    ISO 5218:1977 <title>Representation of Human Sexes</title>; 0
+    indicates unknown; 1 indicates male; 2 indicates female; and 9
+    indicates not applicable.</p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="data.temporal">
+          <head>Macro data.temporal</head>
+          <p>defines the range of attribute values expressing a temporal
+    expression such as a date, a time, or a combination of them</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+data.temporal =
+   xsd:date
+ | xsd:gYear
+ | xsd:gMonth
+ | xsd:gDay
+ | xsd:gYearMonth
+ | xsd:gMonthDay
+ | xsd:time
+ | xsd:dateTime
+ | token
+   {
+      pattern = "(-?[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T)?([01][0-9]|2[0-3])(:[0-5][0-9])?(Z|[+\-]((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?"
+   }</q>
+          </p>
+          <p><hi>Note</hi>: A normalized form of temporal expression conforming to the W3C
+    <title>XML Schema Part 2: Datatypes Second Edition</title>, except
+    that times may be expressed with reduced precision (i.e., to the
+    minute or the hour). Software intended for use with W3C XML Schema
+    datatypes may be unable to properly process times expressed with
+    reduced precision.If it is likely that the value used is to be compared with
+    another, then a time zone indicator should always be included, and
+    only the dateTime representation should be used.</p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="data.truthValue">
+          <head>Macro data.truthValue</head>
+          <p>defines the range of attribute values used to express a truth
+value</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+data.truthValue = xsd:boolean</q>
+          </p>
+          <p><hi>Note</hi>: This datatype applies only for cases where uncertainty is
+    inappropriate; if the attribute concerned may have a value other
+    than true or false, e.g. "unknown", or "inapplicable", it should
+    have the extended version of this datatype: data.xTruthValue </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="data.word">
+          <head>Macro data.word</head>
+          <p>defines the range of attribute values expressed as a single
+  word or token</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+data.word = token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }</q>
+          </p>
+          <p><hi>Note</hi>: Attributes using this datatype must contain a single
+    <soCalled>word</soCalled> which contains only letters, digits,
+    punctuation characters, or symbols: thus it cannot include
+    whitespace.</p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="data.xTruthValue">
+          <head>Macro data.xTruthValue</head>
+          <p>defines the range of attribute values used to express a truth
+value which may be unknown</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+data.xTruthValue = xsd:boolean | "unknown" | "inapplicable"</q>
+          </p>
+          <p><hi>Note</hi>: In cases where where uncertainty is
+    inappropriate, use the datatype data.TruthValue </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="macro.component">
+          <head>Macro macro.component</head>
+          <p>(component for mixed or general base) defines the set of component-level elements for use with the mixed
+or general base; these are elements which can appear directly within
+text bodies or text divisions.
+ </p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+macro.component = <ref target="#model.common">model.common</ref>, <ref target="http://tei.oucs.ox.ac.uk/Query/tag.xq?name=mix.drama&amp;documentationLanguage=en">mix.drama</ref>, <ref target="http://tei.oucs.ox.ac.uk/Query/tag.xq?name=mix.spoken&amp;documentationLanguage=en">mix.spoken</ref>, <ref target="http://tei.oucs.ox.ac.uk/Query/tag.xq?name=mix.dictionaries&amp;documentationLanguage=en">mix.dictionaries</ref></q>
+          </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="macro.componentSeq">
+          <head>Macro macro.componentSeq</head>
+          <p>(component-sequence) defines a sequence of component-level elements (such as paragraphs
+or lists) which can occur directly within text divisions and in similar
+positions.</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+macro.componentSeq = ( ( <ref target="#macro.component">macro.component</ref> ) | ( <ref target="#model.global">model.global</ref> ) )*</q>
+          </p>
+          <p><hi>Note</hi>: This macro is used in each base tag set to
+define the content of <gi>div</gi> and similar elements.</p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="macro.fileDescPart">
+          <head>Macro macro.fileDescPart</head>
+          <p>(file description elements) groups elements which occur inside fileDesc and biblFull</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+macro.fileDescPart = <ref target="#titleStmt">titleStmt</ref>, <ref target="#publicationStmt">publicationStmt</ref></q>
+          </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="macro.glossSeq">
+          <head>Macro macro.glossSeq</head>
+          <p>(glossing sequence) defines a sequence of descriptive or identifying elements
+which characterize a markup object.</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+macro.glossSeq = </q>
+          </p>
+          <p><hi>Note</hi>: This macro defines  a standard content model for all occasions
+    where some markup object is being explained or glossed.</p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="macro.paraContent">
+          <head>Macro macro.paraContent</head>
+          <p>(paragraph content) defines the content of paragraphs and similar elements.</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+macro.paraContent =
+   ( text | <ref target="#model.gLike">model.gLike</ref> | <ref target="#model.phrase">model.phrase</ref> | <ref target="#model.inter">model.inter</ref> | <ref target="#model.global">model.global</ref> )*</q>
+          </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="macro.phraseSeq">
+          <head>Macro macro.phraseSeq</head>
+          <p>(phrase sequence) defines a sequence of character data and phrase-level elements.</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+macro.phraseSeq = ( text | <ref target="#model.gLike">model.gLike</ref> | <ref target="#model.phrase">model.phrase</ref> | <ref target="#model.global">model.global</ref> )*</q>
+          </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="macro.specialPara">
+          <head>Macro macro.specialPara</head>
+          <p>('special' paragraph content) defines the content model of elements such as notes or list items,
+which either contain a series of component-level elements or else have
+the same structure as a paragraph, containing a series of phrase-level
+and inter-level elements.</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+macro.specialPara =
+   (
+      text
+    | <ref target="#model.gLike">model.gLike</ref>
+    | <ref target="#model.phrase">model.phrase</ref>
+    | <ref target="#model.inter">model.inter</ref>
+    | <ref target="#model.divPart">model.divPart</ref>
+    | <ref target="#model.global">model.global</ref>
+   )*</q>
+          </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+        <div xml:id="macro.xtext">
+          <head>Macro macro.xtext</head>
+          <p>(extended text) defines a sequence of character data and gaiji elements.</p>
+          <p>
+            <hi>Declaration</hi>
+            <q rend="eg">
+macro.xtext = ( text | <ref target="#model.gLike">model.gLike</ref> )*</q>
+          </p>
+          <p><hi>Module</hi>: tei</p>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

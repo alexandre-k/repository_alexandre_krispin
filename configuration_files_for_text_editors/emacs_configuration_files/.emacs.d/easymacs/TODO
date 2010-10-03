@@ -1,0 +1,43 @@
+
+* Wish-list
+
+** Longlines
+It would be nice to turn on longlines-mode, but it would need at a
+minimum to support the indentation of text in AucTeX and nxml-mode.
+
+** Previewing pdf files in acroread
+Include pdfopen/pdfclose for Windows, and xpdfopen for X.
+http://www.ctan.org/tex-archive/support/xpdfopen/xpdfopen.pdf
+
+** eshell: can we keep point out of prompt?
+set eshell-prompt-face to intangible?
+
+** C-f5 should skip up over blank lines to the nearest text
+
+** Make a function for buffer-stack-show-position:
+that shows a single line at the bottom of the screen with the current
+buffer highlighted in the middle
+
+** Line-mode editing à la Vim's "V"
+** Write a function to break a paragraph into sentences.  Obey fill-prefix
+
+** Write a visible, anonymous bookmark package
+anon-bkmk.el -- some notes
+
+** Nice way to change font-size
+Probably needs to wait until xft-backend is in use
+
+** Web page -- Hints for using easymacs-grep
+-R for recursive: give directory as argument
+-i for case-insensitive
+
+** Web page on using Easymacs with TEI docs
+e.g. how to associate a file with a schema
+
+
+
+* Nice to have:
+
+** xslt-process: broken?
+** docbook stuff
+

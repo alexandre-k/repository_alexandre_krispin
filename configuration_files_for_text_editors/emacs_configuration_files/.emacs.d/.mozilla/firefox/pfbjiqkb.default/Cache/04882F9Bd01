@@ -1,0 +1,666 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Forum Ubuntu-fr.org / Éditer le fichier /etc/sudoers</title>
+<link rel="stylesheet" type="text/css" href="http://www-static.ubuntu-fr.org/style/Ubuntu.css" />
+<script type="text/javascript" src="http://www-static.ubuntu-fr.org/style/imports/common.js"></script>
+<script type="text/javascript">
+var site_name='ubuntu';
+var menu_hidden=0;
+</script>
+<script type="text/javascript" src="http://www-static.ubuntu-fr.org/style/imports/menu.js"></script> 
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://forum.ubuntu-fr.org/extern.php?action=new&amp;type=rss" />
+
+<script type="text/javascript">
+<!--
+function process_form(the_form)
+{
+	var element_names = new Object()
+	element_names["req_message"] = "Message"
+
+	if (document.all || document.getElementById)
+	{
+		for (i = 0; i < the_form.length; ++i)
+		{
+			var elem = the_form.elements[i]
+			if (elem.name && elem.name.substring(0, 4) == "req_")
+			{
+				if (elem.type && (elem.type=="text" || elem.type=="textarea" || elem.type=="password" || elem.type=="file") && elem.value=='')
+				{
+					alert("\"" + element_names[elem.name] + "\" doit etre rempli")
+					elem.focus()
+					return false
+				}
+			}
+		}
+	}
+
+	return true
+}
+// -->
+</script>
+
+
+
+</head>
+<body>
+<!-- 219840-5 -->
+
+<div id="top">
+   <h1><a href="http://www.ubuntu-fr.org" title="Accueil">ubuntu-fr</a></h1>
+   <p><span>Communauté francophone des utilisateurs d'Ubuntu</span></p>
+   <form action="http://www.ubuntu-fr.org/search/index.php" method="get" id="search_top" onsubmit="var expire = new Date();expire.setTime(expire.getTime()+(5*60*1000));document.cookie ='ubfr_forum_keywords='+document.getElementById('q').value+';expires='+expire.toGMTString();">
+      <fieldset>
+         <input name="q" id="q" value="Recherche rapide..." onfocus="if(this.value == 'Recherche rapide...'){this.value='';}" title="Saisissez les mots-clés à rechercher" type="text" />
+	<script type="text/javascript"><!--
+	function readCookie(name) {
+		var nameEQ = name + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0;i < ca.length;i++) {
+			var c = ca[i];
+			while (c.charAt(0)==' ') c = c.substring(1,c.length);
+			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+		}
+		return null;
+	}
+	var kwds = readCookie('ubfr_forum_keywords');
+	if(kwds)
+		document.getElementById('q').value=kwds;
+	--></script>
+         <select name="in" id="in" title="Dans le..">
+            <option value="wiki">Documentation</option>
+            <option selected="selected" value="oneforum">Ce forum</option>
+            <option value="forum" >Tous les forums</option>
+            <option value="planet">Planet</option>
+         </select>
+         <input type="hidden" value="5" name="forum" />
+         <input value="ok" type="submit" />
+       </fieldset>
+    </form>
+</div>
+<div id="navbar">
+   <ul>
+      <li><a href="http://www.ubuntu-fr.org" id="navbar_www">Accueil</a></li>
+      <li><a href="http://doc.ubuntu-fr.org" id="navbar_doc">Documentation</a></li>
+      <li id="active"><a href="http://forum.ubuntu-fr.org" id="navbar_forum">Forum</a></li>
+      <li><a href="http://planet.ubuntu-fr.org" id="navbar_planet">Planet</a></li>
+   </ul>
+   <p>Vous êtes ici : <a href="http://www.ubuntu-fr.org" title="Retour à l'accueil">Accueil</a> » <a href="http://forum.ubuntu-fr.org" title="Forum ubuntu-fr">Forum</a>&#160;&raquo;&#160;<a href="viewforum.php?id=5">Général</a>&#160;&raquo;&#160;Éditer le fichie...</p>
+</div>
+
+<div id="punwrap">
+<div id="punviewtopic" class="pun">
+
+<div id="brdheader" class="block">
+	<div class="box">
+		<div id="brdtitle" class="inbox">
+		</div>
+		<div id="brdmenu" class="inbox">
+			<ul>
+				<li id="navextra1"><h2>Navigation</h2></li>
+				<li id="navindex"><a href="index.php">Liste des forums</a></li>
+				<li id="navuserlist"><a href="userlist.php">Liste des utilisateurs</a></li>
+				<li id="navrules"><a href="misc.php?action=rules">R&egrave;gles</a></li>
+				<li id="navsearch"><a href="search.php">Recherche</a></li>
+				<li id="navprofile"><a href="profile.php?id=83792">Profil</a></li>
+				<li id="navlogout"><a href="login.php?action=out&amp;id=83792&amp;csrf_token=fa01995adc809b19f9c7bdfbeefda6d21099defe">D&eacute;connexion</a></li>
+			</ul>
+		</div>
+		
+			<dl id="searchlinks" style="font-size:1em;" class="conl">
+				<dt><strong>Liens de recherche</strong></dt>
+				<dd><a href="search.php?action=show_24h">Messages r&eacute;cents</a></dd>
+				<dd><a href="search.php?action=show_unanswered">Sujets sans r&eacute;ponse</a></dd>
+				<dd><a href="search.php?action=show_subscriptions">Sujets suivis</a></dd>
+				<dd><a href="search.php?action=show_user&amp;user_id=83792">Mes messages</a></dd>
+			</dl>
+
+		<div id="brdwelcome" class="inbox"><p id="hidemenu"><a href="javascript:switchMenuVisible()" title="Masquer le menu - AccessKey Z" accesskey="z"><span>Masquer le menu</span></a></p>
+			<ul class="conl">
+				<li>Connect&eacute; en tant que <strong>mondai</strong></li>
+				<li>Derni&egrave;re visite: Aujourd'hui à 20:20</li>
+			</ul>
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+
+<div id="announce" class="block">
+	<h2><span>Annonce</span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div><p>
+Les Ubuntu-partys sont l'occasion pour beaucoup d'entre vous d'acquérir les goodies Ubuntu-fr faits par nos petites mains avec amour.<br />
+Pour tous les autres, fini le désespoir de les manquer <img src="img/smilies/wink.png" alt="wink" height="15" width="15" /> Il est désormais possible de vous procurer l'objet de votre choix grâce à la <a href="http://enventelibre.org/">boutique en ligne</a>, commune à <a href="http://www.framasoft.net/">Framasoft</a> et <a href="http://ubuntu-fr.org">Ubuntu-fr</a>. Vous pourrez déjà y trouver mugs, t-shirts et, bien sûr, les Framakey Ubuntu-fr Remix.
+</p></div>
+		</div>
+	</div>
+</div>
+
+<div class="linkst">
+	<div class="inbox">
+		<ul><li><a href="index.php">Liste des forums</a></li><li>&nbsp;&raquo;&nbsp;<a href="viewforum.php?id=5">Général</a></li><li>&nbsp;&raquo;&nbsp;Éditer le fichier /etc/sudoers</li></ul>
+		<p style="margin-top:1em;" class="pagelink conl"><strong>1</strong></p>
+		<p class="postlink conr"><a href="post.php?tid=219840">Poster une r&eacute;ponse</a></p>
+		<div class="clearer"></div>
+	</div>
+</div>
+
+<div id="p1776241" class="blockpost rowodd firstpost">
+	<h2><span><span class="conr">#1&nbsp;</span><a href="viewtopic.php?pid=1776241#p1776241">Le 17/05/2008, à 00:22</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=47387">oliver2004</a></strong></dt>
+										<dd class="postavatar"><img src="img/avatars/47387.jpg" width="50" height="60" alt="" /></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3>Éditer le fichier /etc/sudoers</h3>
+				<div class="postmsg">
+					<p>Bonjour, il me faut pouvoir executer la commande shutdown sans avoir à rentrer un mot de passe et pour cela il faut éditer le fichier /etc/sudoers<br />Ce fichier n'est pas éditable via les éditeurs car cela aurait pour conséquence un disfonctionnement du système. La commande est donc:<br /></p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 4.5em"><pre>sudo visudo</pre></div></div></div><p>pour pouvoir éditer en console. J'ai bien le fichier en console mais impossible de l'éditer comme je voudrais, nottament à la fin du fichier. la console ne me permet pas de rajouter de caractères à la fin du fichier...<br />Quelqu'un a-t-il déjà édité ce fichier?<br />Merci d'avance <img src="img/smilies/smile.png" width="15" height="15" alt="smile" /></p>
+				</div>
+				<div class="postsignature"><hr />Je suis sur Kubuntu 9.10, installation Desktop i386, sur HP550, installation nickel chrome, sans souci... !!!<br />Vive Linux!!</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p><strong>En ligne</strong></p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=1776241">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=219840&amp;qid=1776241">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p1776259" class="blockpost roweven">
+	<h2><span><span class="conr">#2&nbsp;</span><a href="viewtopic.php?pid=1776259#p1776259">Le 17/05/2008, à 00:27</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=66115">#hehedotcom\'isback</a></strong></dt>
+										<dd class="postavatar"><img src="img/avatars/66115.jpg" width="51" height="60" alt="" /></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: Éditer le fichier /etc/sudoers</h3>
+				<div class="postmsg">
+					<p>bonsoir, <br /><br />moi, mike n'utilise pas de code pour utiliser sudo sur toutes les commandes<br /></p><blockquote><div class="incqbox"><p># Uncomment to allow members of group sudo to not need a password<br /># %sudo ALL=NOPASSWD: ALL<br /><br /># Host alias specification<br /><br /># User alias specification<br /><br /># Cmnd alias specification<br /><br /># User privilege specification<br />root&nbsp; &nbsp; ALL=(ALL) ALL<br /><br /># Members of the admin group may gain root privileges<br />%admin ALL=(ALL) ALL<br />mike ALL=NOPASSWD: ALL</p></div></blockquote><p>ctrl+X pour quitter et sauvegarder.<br />Attention à ce que tu vas entrer, tu devrais tester avant <img src="img/smilies/wink.png" width="15" height="15" alt="wink" /> <br />j'ai bloqué mon poste, impossible de modifier quoi que ce soit, simplement parce que j'avais oublié les ':'...<br />test sur un autre USER si tu as des doutes, sinon tu vas devoir chrooter ton système pour le récuperer <img src="img/smilies/wink.png" width="15" height="15" alt="wink" /></p>
+				</div>
+				<div class="postsignature"><hr />| <a href="http://www.tiny.cc/jAufO">Le hold up Planétaire(pdf)</a> | <a href="http://www.passeralinux.fr/windows/">Pourquoi pas Windows?</a> | <a href="http://www.framabook.org/ubuntu.html">Simple comme Ubuntu(pdf)</a>|| [<a href="http://cassinus.free.fr/smilies/SMS.gif">http://cassinus.free.fr/smilies/SMS.gif</a>]</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p>Hors ligne</p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=1776259">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=219840&amp;qid=1776259">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p1776331" class="blockpost rowodd">
+	<h2><span><span class="conr">#3&nbsp;</span><a href="viewtopic.php?pid=1776331#p1776331">Le 17/05/2008, à 01:31</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=47387">oliver2004</a></strong></dt>
+										<dd class="postavatar"><img src="img/avatars/47387.jpg" width="50" height="60" alt="" /></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: Éditer le fichier /etc/sudoers</h3>
+				<div class="postmsg">
+					<p>Bonjour mike, j'abandonne, ça fait deux heure que j'essaye d'éditer ce fichier... tant pis... <img src="img/smilies/sad.png" width="15" height="15" alt="sad" /></p>
+				</div>
+				<div class="postsignature"><hr />Je suis sur Kubuntu 9.10, installation Desktop i386, sur HP550, installation nickel chrome, sans souci... !!!<br />Vive Linux!!</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p><strong>En ligne</strong></p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=1776331">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=219840&amp;qid=1776331">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p1776338" class="blockpost roweven">
+	<h2><span><span class="conr">#4&nbsp;</span><a href="viewtopic.php?pid=1776338#p1776338">Le 17/05/2008, à 01:35</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong>qdef</strong></dt>
+										<dd class="postavatar"></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: Éditer le fichier /etc/sudoers</h3>
+				<div class="postmsg">
+					<blockquote><div class="incqbox"><h4>oliver2004 a &eacute;crit:</h4><p>Bonjour mike, j'abandonne, ça fait deux heure que j'essaye d'éditer ce fichier... tant pis... <img src="img/smilies/sad.png" width="15" height="15" alt="sad" /></p></div></blockquote><p>Quel est le souci rencontré?<br />avec <br /></p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 4.5em"><pre>sudo visudo</pre></div></div></div><p>tu effectues les modifications souhaitées, tu sauvegardes et&nbsp; ??</p>
+				</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=1776338">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=219840&amp;qid=1776338">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p1776342" class="blockpost rowodd">
+	<h2><span><span class="conr">#5&nbsp;</span><a href="viewtopic.php?pid=1776342#p1776342">Le 17/05/2008, à 01:37</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong>qdef</strong></dt>
+										<dd class="postavatar"></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: Éditer le fichier /etc/sudoers</h3>
+				<div class="postmsg">
+					<blockquote><div class="incqbox"><h4>qdef a &eacute;crit:</h4><blockquote><div class="incqbox"><h4>oliver2004 a &eacute;crit:</h4><p>Bonjour mike, j'abandonne, ça fait deux heure que j'essaye d'éditer ce fichier... tant pis... <img src="img/smilies/sad.png" width="15" height="15" alt="sad" /></p></div></blockquote><p>Quel est le souci rencontré?<br />avec <br /></p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 4.5em"><pre>sudo visudo</pre></div></div></div><p>tu effectues les modifications souhaitées, tu sauvegardes et&nbsp; ??</p></div></blockquote><p>Il faut aussi que les Users déclarés soient également inclus dans le groupe &quot;admin&quot;.</p>
+				</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=1776342">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=219840&amp;qid=1776342">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p1800113" class="blockpost roweven">
+	<h2><span><span class="conr">#6&nbsp;</span><a href="viewtopic.php?pid=1800113#p1800113">Le 25/05/2008, à 19:56</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=7967">Sorbus</a></strong></dt>
+										<dd class="postavatar"><img src="img/avatars/7967.jpg" width="35" height="48" alt="" /></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: Éditer le fichier /etc/sudoers</h3>
+				<div class="postmsg">
+					<p>@oliver2004<br /><br />Ta remarque m'intéresse à double titre.<br />Si tu es encore attentif à ce fil de discussion, des compléments m'intéressent :<br />--&gt; pourquoi voulais-tu &quot;pouvoir executer la commande shutdown sans avoir à rentrer un mot de passe&quot; ? (était-ce pour suivre <a href="http://doc.ubuntu-fr.org/tutoriel/sauvegarder_home_avec_rsync#eme_etape_permettre_le_lancement_du_shutdown_sans_mot_de_passe">ces indications</a> de la doc Ubuntu ?)<br />--&gt; j'ai moi aussi remarqué aujourd'hui un dysfonctionnement inhabituel de &quot;sudo visudo&quot; (je n'avais pas essayé d'éditer ce fichier /etc/sudoers depuis le passage à Hardy... je suppose donc que c'est lié à Hardy)... Quels problèmes avais-tu rencontrés ?<br />Perso, impossible de modifier ou d'ajouter quelque chose... les touches du clavier n'opèrent pas normalement... Ctrl+x ne sauvegarde et ne ferme pas.<br /><br />Etrange.</p>
+				</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p>Hors ligne</p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=1800113">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=219840&amp;qid=1800113">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p1800469" class="blockpost rowodd">
+	<h2><span><span class="conr">#7&nbsp;</span><a href="viewtopic.php?pid=1800469#p1800469">Le 25/05/2008, à 21:45</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=7967">Sorbus</a></strong></dt>
+										<dd class="postavatar"><img src="img/avatars/7967.jpg" width="35" height="48" alt="" /></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: Éditer le fichier /etc/sudoers</h3>
+				<div class="postmsg">
+					<p>Notre problème pourrait avoir un rapport avec <a href="https://bugs.launchpad.net/ubuntu/+source/sudo/+bug/207369">ce bug</a>.<br /><br />[<strong>Edit 30 mai :</strong> il y a deux méthodes bien meilleures que celle indiquée à la suite de l'avertissement ci-dessous :<br />- maîtriser l'utilisation de l'éditeur de texte <strong>vi</strong> (car ainsi fonctionne visudo depuis le passage à Hardy)<br />ou bien :<br />- utiliser les indications du message 13 de ce fil de discussion pour utiliser <strong>gedit</strong> ou <strong>nano</strong> de façon sécurisée]<br /><br />[<strong>Avertissement :</strong> la méthode indiquée ci-dessous avec nano semble être la seule permettant de contourner le bug. Mais prenez vos précautions : avec cette méthode, aucune vérification syntaxique n'est faite avant l'enregistrement du fichier. Si vous faites la moindre erreur syntaxique, vous risquez de vous retrouver avec un fichier corrompu. Ne l'utilisez que si vous savez parfaitement ce que vous faites lorsque vous modifierez /etc/sudoers - Si vous ne maitrisez pas, ne modifiez pas /etc/sudoers]<br /><br />En attendant qu'il soit fixé, on peut modifier /etc/sudoers<br />en faisant dans un terminal :<br /></p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 4.5em"><pre>sudo nano /etc/sudoers</pre></div></div></div><p>ce qui permet de modifier/ajouter ce qu'on souhaite.<br /><br />pour fermer et enregistrer :<br />Ctrl+x<br />puis<br />o<br />(+enter)<br /><br />(j'avais essayé aussi &quot;sudo gedit /etc/sudoers&quot;, mais l'enregistrement des modifications est alors impossible).</p>
+					<p class="postedit"><em>Derni&egrave;re modification par Sorbus (Le 30/05/2008, à 23:11)</em></p>
+				</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p>Hors ligne</p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=1800469">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=219840&amp;qid=1800469">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p1809051" class="blockpost roweven">
+	<h2><span><span class="conr">#8&nbsp;</span><a href="viewtopic.php?pid=1809051#p1809051">Le 28/05/2008, à 23:30</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=20381">Yannick_LM</a></strong></dt>
+										<dd class="postavatar"></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: Éditer le fichier /etc/sudoers</h3>
+				<div class="postmsg">
+					<p>Bon, comme son nom l'indique, sudo visudo utilise vi.<br />Pour utiliser un autre éditeur : <br /><br />export EDITOR=&quot;/chemin/vers/editeur&quot; ; sudo visudo<br /><br />Je rappelle à toutes fins utiles que si vous éditez /etc/sudoers directement, aucune vérification syntaxique n'est faite avant d'enregistrer le fichier, donc, si vous vous retrouvez avec un fichier corrompu, vous viendrez pas vous plaindre ...</p>
+				</div>
+				<div class="postsignature"><hr /><a href="./viewtopic.php?id=132970">Trucs et astuces pour Vim</a><br />Ma <a href="http://sd-5791.dedibox.fr">web page</a>&nbsp; avec des trucs dessus ...</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p>Hors ligne</p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=1809051">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=219840&amp;qid=1809051">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p1809439" class="blockpost rowodd">
+	<h2><span><span class="conr">#9&nbsp;</span><a href="viewtopic.php?pid=1809439#p1809439">Le 29/05/2008, à 07:06</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=7967">Sorbus</a></strong></dt>
+										<dd class="postavatar"><img src="img/avatars/7967.jpg" width="35" height="48" alt="" /></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: Éditer le fichier /etc/sudoers</h3>
+				<div class="postmsg">
+					<p>Merci Yannick pour cette judicieuse précision.<br />L'indication précise des chemins à utiliser pour les autres éditeurs est donnée <a href="http://doc.ubuntu-fr.org/sudo#configuration">ici</a>. J'édite mon précédent message pour indiquer directement la bonne méthode avec l'éditeur nano.<br /><br />Ceci dit, puisque tu connais bien les questions autour de sudo, que penses-tu <a href="https://bugs.launchpad.net/ubuntu/+source/sudo/+bug/207369">du bug actuel sous Hardy</a>. Perso, je suis concerné sur mon portable comme sur mon fixe. Est-ce général ? Est-ce que sont touchées seulement certaines configurations ? sudo visudo fonctionne-t-il correctement chez toi ?<br /><br />[Edit : hélas, je viens d'essayer, du fait du bug en question, il est impossible de travailler correctement sur /etc/sudoers en utilisant :<br />EDITOR=&quot;/bin/nano&quot; sudo visudo<br />ou<br />EDITOR=&quot;/usr/bin/gedit&quot; sudo visudo<br /><br />Il devient impossible de modifier quoi que ce soit dès qu'on utilise visudo, d'une façon ou d'une autre. La seule façon de modifier /etc/sudoers est l'usage direct de nano... Du coup bien sûr en sachant ce que l'on fait, puisqu'il n'y a pas alors de vérification syntaxique.<br /><br />Ce bug visudo est quand même problématique.]</p>
+					<p class="postedit"><em>Derni&egrave;re modification par Sorbus (Le 29/05/2008, à 07:22)</em></p>
+				</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p>Hors ligne</p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=1809439">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=219840&amp;qid=1809439">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p1809520" class="blockpost roweven">
+	<h2><span><span class="conr">#10&nbsp;</span><a href="viewtopic.php?pid=1809520#p1809520">Le 29/05/2008, à 08:17</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=20381">Yannick_LM</a></strong></dt>
+										<dd class="postavatar"></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: Éditer le fichier /etc/sudoers</h3>
+				<div class="postmsg">
+					<p>Bon, en fait, si j'ai tout compris :<br />Le fait que visudo utilise nano était vu comme un bug chez Debian, et il a été corrigé, visudo utilise donc vi depuis hardy.<br />En revanche, le fait que visudo utilise vi est vu comme un bug chez Ubuntu<br /><br />Tirez-en les conclusions que vous voulez <img src="img/smilies/smile.png" width="15" height="15" alt="smile" /><br /><br />En revanche, j'ai jamais eu aucun problème avec :<br />EDITOR=&quot;/bin/nano&quot; sudo visudo<br /><br />Mais je n'ai pas testé ça sous Hardy.</p>
+					<p class="postedit"><em>Derni&egrave;re modification par Yannick_LM (Le 29/05/2008, à 08:20)</em></p>
+				</div>
+				<div class="postsignature"><hr /><a href="./viewtopic.php?id=132970">Trucs et astuces pour Vim</a><br />Ma <a href="http://sd-5791.dedibox.fr">web page</a>&nbsp; avec des trucs dessus ...</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p>Hors ligne</p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=1809520">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=219840&amp;qid=1809520">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p1809547" class="blockpost rowodd">
+	<h2><span><span class="conr">#11&nbsp;</span><a href="viewtopic.php?pid=1809547#p1809547">Le 29/05/2008, à 08:45</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=9221">iuchiban</a></strong></dt>
+										<dd class="postavatar"><img src="img/avatars/9221.gif" width="50" height="45" alt="" /></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: Éditer le fichier /etc/sudoers</h3>
+				<div class="postmsg">
+					<p>Bah sinon, il suffit d'apprende à utiliser vi :<br /><br />Echap i -&gt; insérer du texte<br />Echap :wq -&gt; sauvegarder et quitter.<br /><br /><a href="http://www.linux-kheops.com/doc/vi/memovif.zip">http://www.linux-kheops.com/doc/vi/memovif.zip</a><br /><br />très bon aide mémoire <img src="img/smilies/wink.png" width="15" height="15" alt="wink" /></p>
+				</div>
+				<div class="postsignature"><hr />C'est depuis que Chuck Norris a laissé la vie sauve à un manchot que l'on dit que Linux est libre.<br /><br />Chuck Norris n'a pas besoin d'éditer son premier message pour ajouter [Résolu]. Chuck Norris est toujours [Résolu], quoi qu'il arrive.</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p>Hors ligne</p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=1809547">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=219840&amp;qid=1809547">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p1814352" class="blockpost roweven">
+	<h2><span><span class="conr">#12&nbsp;</span><a href="viewtopic.php?pid=1814352#p1814352">Le 30/05/2008, à 21:29</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=7967">Sorbus</a></strong></dt>
+										<dd class="postavatar"><img src="img/avatars/7967.jpg" width="35" height="48" alt="" /></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: Éditer le fichier /etc/sudoers</h3>
+				<div class="postmsg">
+					<p>Merci les amis.<br /><br />@Yannick<br /></p><blockquote><div class="incqbox"><p>Bon, en fait, si j'ai tout compris :<br />Le fait que visudo utilise nano était vu comme un bug chez Debian, et il a été corrigé, visudo utilise donc vi depuis hardy.</p></div></blockquote><p>Je ne suis pas doué en anglais, et je n'ai pas trop pigé les messages du lien que j'ai indiqué sur ce &quot;bug&quot;. Tu tires la conclusion ci-dessus de cette lecture ?<br /><br />Pour ma part, en effet, je n'ai jamais utilisé vi. Si ce n'est que ça, on va apprendre. A première vue, ça surprend quelque peu... et ça semble un peu plus complexe que des éditeurs comme gedit ou nano.<br /><br />Avec nano ou gedit, on insère directement le texte... et on efface directement ce qu'on veut avec la touche del... les flèches du clavier permettent de se déplacer dans le texte... vi a sans doute ses avantages... peut-être plus de sécurité, en obligeant l'utilisateur à réfléchir à deux fois à ce qu'il fait... Mais une commande pour insérer du texte... une autre je suppose pour effacer le texte... etc. C'est un peu plus compliqué.<br /></p><blockquote><div class="incqbox"><p>En revanche, le fait que visudo utilise vi est vu comme un bug chez Ubuntu. Tirez-en les conclusions que vous voulez</p></div></blockquote><p>Je ne sais pas quelle conclusion il faut en tirer. Il semblerait donc que jusqu'à Gutsy, visudo utilisait nano... Et que depuis Hardy, il utilise vi. Comme ces deux éditeurs ne s'utilisent pas de la même façon... c'est un peu déroutant pour les habitués qui ne sont pas prévenus du changement... Là est sans doute le bug.<br /><br />Pour le corriger, il suffirait que ceci soit signalé de façon visible et explicite dans la documentation ubuntu francophone au sujet de &quot;sudo&quot;<br /><br />Je pensais que <br /></p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 4.5em"><pre>EDITOR=&quot;/bin/nano&quot; sudo visudo</pre></div></div></div><p>ou</p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 4.5em"><pre>EDITOR=&quot;/usr/bin/gedit&quot; sudo visudo</pre></div></div></div><p>permettraient de travailler sur le fichier /etc/sudoers avec le fonctionnement habituel de nano ou gedit. Mais non : ça ouvre bien le fichier dans le terminal, mais ça fonctionne comme vi. Echap + i pour éditer du texte, etc.</p>
+					<p class="postedit"><em>Derni&egrave;re modification par Sorbus (Le 30/05/2008, à 21:31)</em></p>
+				</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p>Hors ligne</p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=1814352">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=219840&amp;qid=1814352">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p1814598" class="blockpost rowodd">
+	<h2><span><span class="conr">#13&nbsp;</span><a href="viewtopic.php?pid=1814598#p1814598">Le 30/05/2008, à 22:56</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=7967">Sorbus</a></strong></dt>
+										<dd class="postavatar"><img src="img/avatars/7967.jpg" width="35" height="48" alt="" /></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: Éditer le fichier /etc/sudoers</h3>
+				<div class="postmsg">
+					<p>thank you <a href="http://bapoumba.wordpress.com/2008/05/07/edit-etcsudoers-with-gedit-in-ubuntu-hardy-heron/">bapoumba</a> <img src="img/smilies/wink.png" width="15" height="15" alt="wink" /><br /><br />J'essaye de traduire ce message de <em>bapoumba</em> :<br /><strong><br />Editer /etc/sudoers avec gedit dans Ubuntu Hardy Heron</strong><br />7 mai 2008 — bapouma<br /><br />Je suis tombé sur un fil de l'UF p_quarles (...) Merci p_quarles&nbsp; <img src="img/smilies/smile.png" width="15" height="15" alt="smile" /><br /><br />Le classique :<br /></p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 4.5em"><pre>export EDITOR=gedit &amp;&amp; sudo visudo</pre></div></div></div><p>ouvrira/etc/sudoers avec visudo, qui désormais ne se comporte pas comme nano.<br />Je ne suis pas fan de vi, acceptez s'il vous plait mes excuses. Je suis fan de nano <img src="img/smilies/smile.png" width="15" height="15" alt="smile" /> Mais je comprends que quelques utilisateurs se trouvent plus à l'aise avec gedit ou d'autre GUI éditeurs de textes.<br /><br /><strong>La façon de faire est maintenant :</strong><br /></p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 4.5em"><pre>export EDITOR=gedit &amp;&amp; sudo -E visudo</pre></div></div></div><p><strong>où l'option-E préserve les variables d'environnement de l'utilisateur.</strong><br /><br />Références :<br /><a href="https://bugs.launchpad.net/ubuntu/+source/sudo/+bug/207369">Launchpad Bug Report</a><br /><br />____________________________________________________________________<br /><br />Edit... Petit complément nano :<br /><strong>Pour utiliser nano</strong>, et retrouver le fonctionnement de visudo que nous avions jusqu'à Gutsy :<br /></p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 4.5em"><pre>export EDITOR=nano &amp;&amp; sudo -E visudo</pre></div></div></div><p>_____________________________________________________________________<br /><br />Edit bis... Petit complément vi :<br />&quot;sudo visudo&quot; étant plus facile à mémoriser que les commandes permettant d'utiliser gedit ou nano, il va bien falloir s'habituer à <strong>vi</strong>. Je vois que pour l'essentiel, on peut se débrouiller avec :<br /><br /><strong>Echap</strong> -&gt; permet de se déplacer dans le texte en utilisant les flèches du clavier<br /><strong>Echap i</strong> -&gt; mode &quot;insérer du texte&quot; (permet aussi l'insertion de lignes avec la touche &quot;Entrée&quot;... Mais attention, les touches &quot;flèches&quot; insèrent du texte et ne fonctionnent plus comme touches de déplacement.)<br />Pour sortir du mode &quot;insérer du texte&quot; : Echap<br />... ce qui permet d'utiliser à nouveau les flèches.<br /><strong>Echap x</strong> -&gt; mode &quot;effacer du texte&quot; (efface le caractère sur lequel le curseur est situé)<br />les flèches droite et gauche permettent de se déplacer sur la ligne.<br />Pour sortir du mode &quot;effacer du texte&quot; : Echap<br />(pour effacer une ligne : ???)<br /><strong>Echap :wq Entrée</strong> : pour sauvegarder et quitter.<br />(il faut taper chacune des touches l'une après l'autre sans maintenir la précédent appuyée). Pour sauvegarder et quitter, il faut donc bien taper successivement les cinq touches &quot;Echap&quot;, &quot;:&quot;, &quot;w&quot;, &quot;q&quot;, &quot;Entrée&quot;<br /><br />Enfin, très utile si on n'est pas satisfait des modifications effectuées, la succession de touches :<br />:q! Entrée<br />permet de quitter sans enregistrer les modifications.<br /><br /><em><br />C'est un résumé pour les lecteurs de ce fil. S'il y a quelques erreurs, les habitués de vi me corrigeront. Mais j'ai testé ce que je viens d'écrire. Pour plus d'info sur vi, voir le lien donné par iuchiban (message 11 de ce fil)</em></p>
+					<p class="postedit"><em>Derni&egrave;re modification par Sorbus (Le 31/05/2008, à 11:27)</em></p>
+				</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p>Hors ligne</p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=1814598">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=219840&amp;qid=1814598">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p1815634" class="blockpost roweven">
+	<h2><span><span class="conr">#14&nbsp;</span><a href="viewtopic.php?pid=1815634#p1815634">Le 31/05/2008, à 12:27</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=20381">Yannick_LM</a></strong></dt>
+										<dd class="postavatar"></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: Éditer le fichier /etc/sudoers</h3>
+				<div class="postmsg">
+					<p>Plop, juste pour remercier Sorbus, qui a enfin apporté les clarifications nécessaires.<br />Et puis, récursivement, à bapoumba et à p_quarles <img src="img/smilies/wink.png" width="15" height="15" alt="wink" /><br /><br /></p><blockquote><div class="incqbox"><p>Il semblerait donc que jusqu'à Gutsy, visudo utilisait nano... Et que depuis Hardy, il utilise vi. Comme ces deux éditeurs ne s'utilisent pas de la même façon... c'est un peu déroutant pour les habitués qui ne sont pas prévenus du changement... Là est sans doute le bug.</p></div></blockquote><p>Yep. <br /><br />(Mais, notez que l'intitulé du bug chez Debian est : «visudo n'utilise pas vi par défaut», alors que chez Ubuntu, c'est : «visudo n'utilise plus nano», alors que le vrai bug concerne sudo, visudo et leur gestion des variables d'environnement de l'utilisateur <img src="img/smilies/wink.png" width="15" height="15" alt="wink" /></p>
+				</div>
+				<div class="postsignature"><hr /><a href="./viewtopic.php?id=132970">Trucs et astuces pour Vim</a><br />Ma <a href="http://sd-5791.dedibox.fr">web page</a>&nbsp; avec des trucs dessus ...</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p>Hors ligne</p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=1815634">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=219840&amp;qid=1815634">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div class="postlinksb">
+	<div class="inbox">
+		<p class="postlink conr"><a href="post.php?tid=219840">Poster une r&eacute;ponse</a></p>
+		<p class="pagelink conl" style="margin-bottom:1em;float:none;" ><strong>1</strong></p>
+		<ul><li><a href="index.php">Liste des forums</a></li><li>&nbsp;&raquo;&nbsp;<a href="viewforum.php?id=5">Général</a></li><li>&nbsp;&raquo;&nbsp;Éditer le fichier /etc/sudoers</li></ul>
+		<p class="subscribelink clearb"><a href="misc.php?subscribe=219840">S'abonner &agrave; ce sujet</a></p>
+		<p class="postlink conr" style="margin-top:-20px;"><a href="#" style="">Haut de page&nbsp;↑</a></p>
+	</div>
+</div>
+
+<div class="blockform">
+	<h2><span>Message rapide</span></h2>
+	<div class="box">
+		<form id="post" method="post" action="post.php?tid=219840" onsubmit="this.submit.disabled=true;if(process_form(this)){return true;}else{this.submit.disabled=false;return false;}">
+			<div class="inform">
+				<fieldset>
+					<legend>Veuillez &eacute;crire votre message et l'envoyer</legend>
+					<div class="infldset txtarea">
+						<input type="hidden" name="form_sent" value="1" />
+						<input type="hidden" name="form_user" value="mondai" />
+												<script type="text/javascript">
+						<!--
+							function insert_text(open, close)
+							{
+								msgfield = (document.all) ? document.all.req_message : document.forms['post']['req_message'];
+
+								// IE support
+								if (document.selection && document.selection.createRange)
+								{
+									msgfield.focus();
+									sel = document.selection.createRange();
+									sel.text = open + sel.text + close;
+									msgfield.focus();
+								}
+
+								// Moz support
+								else if (msgfield.selectionStart || msgfield.selectionStart == '0')
+								{
+									var startPos = msgfield.selectionStart;
+									var endPos = msgfield.selectionEnd;
+
+									msgfield.value = msgfield.value.substring(0, startPos) + open + msgfield.value.substring(startPos, endPos) + close + msgfield.value.substring(endPos, msgfield.value.length);
+									msgfield.selectionStart = msgfield.selectionEnd = endPos + open.length + close.length;
+									msgfield.focus();
+								}
+
+								// Fallback support for other browsers
+								else
+								{
+									msgfield.value += open + close;
+									msgfield.focus();
+								}
+
+								return;
+							}
+						-->
+						</script>
+						<div style="padding-top: 4px">
+							<input type="button" value=" B " name="B" onclick="insert_text('[b]','[/b]')" /> 
+							<input type="button" value=" I " name="I" onclick="insert_text('[i]','[/i]')" />
+							<input type="button" value=" U " name="U" onclick="insert_text('[u]','[/u]')" />
+							<input type="button" value="http://" name="Url" onclick="insert_text('[url]','[/url]')" />
+							<input type="button" value="Img" name="Img" onclick="insert_text('[img]','[/img]')" />
+							<input type="button" value="Code" name="Code" onclick="insert_text('[code]','[/code]')" />
+							<input type="button" value="Quote" name="Quote" onclick="insert_text('[quote]','[/quote]')" />
+							<input type="button" value="Youtube" name="Youtube" onclick="insert_text('[youtube]','[/youtube]')" />
+							<input type="button" value="Apt" name="Apt" onclick="insert_text('[apt]','[/apt]')" />
+							<input type="button" value="Doc" name="Doc" onclick="insert_text('[doc]','[/doc]')" />
+						</div>
+						<div style="padding-top: 4px">
+							<a href="javascript:insert_text(':)', '');"><img src="img/smilies/smile.png" width="15" height="15" alt=":)" /></a>
+							<a href="javascript:insert_text(':|', '');"><img src="img/smilies/neutral.png" width="15" height="15" alt=":|" /></a>
+							<a href="javascript:insert_text(':(', '');"><img src="img/smilies/sad.png" width="15" height="15" alt=":(" /></a>
+							<a href="javascript:insert_text(':D', '');"><img src="img/smilies/big_smile.png" width="15" height="15" alt=":D" /></a>
+							<a href="javascript:insert_text(':o', '');"><img src="img/smilies/yikes.png" width="15" height="15" alt=":o" /></a>
+							<a href="javascript:insert_text(';)', '');"><img src="img/smilies/wink.png" width="15" height="15" alt=";)" /></a>
+							<a href="javascript:insert_text(':/', '');"><img src="img/smilies/hmm.png" width="15" height="15" alt=":/" /></a>
+							<a href="javascript:insert_text(':P', '');"><img src="img/smilies/tongue.png" width="15" height="15" alt=":P" /></a>
+							<a href="javascript:insert_text(':lol:', '');"><img src="img/smilies/lol.png" width="15" height="15" alt=":lol:" /></a>
+							<a href="javascript:insert_text(':mad:', '');"><img src="img/smilies/mad.png" width="15" height="15" alt=":mad:" /></a>
+							<a href="javascript:insert_text(':rolleyes:', '');"><img src="img/smilies/roll.png" width="15" height="15" alt=":rolleyes:" /></a>
+							<a href="javascript:insert_text(':cool:', '');"><img src="img/smilies/cool.png" width="15" height="15" alt=":cool:" /></a>
+						</div>
+						<label><textarea name="req_message" rows="7" cols="75" tabindex="1"></textarea></label>
+						<ul class="bblinks">
+							<li><a href="help.php#bbcode" onclick="window.open(this.href); return false;">BBCode</a>: actif</li>
+							<li><a href="help.php#img" onclick="window.open(this.href); return false;">Balise [img]</a>: actif</li>
+							<li><a href="help.php#smilies" onclick="window.open(this.href); return false;">Smileys</a>: actif</li>
+						</ul>
+					</div>
+				</fieldset>
+			</div>
+			<p><input type="submit" name="submit" tabindex="2" value="Poster" accesskey="s" /></p>
+		</form>
+	</div>
+</div>
+
+<div id="brdfooter" class="block">
+	<h2><span>Pied de page du Forum</span></h2>
+	<div class="box">
+		<div class="inbox">
+
+			<div class="conl">
+				<form id="qjump" method="get" action="viewforum.php">
+					<div><label>Aller &agrave;
+					<br /><select name="id" onchange="window.location=('viewforum.php?id='+this.options[this.selectedIndex].value)">
+						<optgroup label="Débuter avec Ubuntu">
+							<option value="9">Questions et informations avant l'installation</option>
+							<option value="10">Installation d'Ubuntu</option>
+							<option value="22">LiveCD/LiveUSB</option>
+							<option value="61">Wubi : installation dans Windows</option>
+						</optgroup>
+						<optgroup label="Configuration matérielle">
+							<option value="27">Affichage et cartes graphiques</option>
+							<option value="16">Accès internet et réseaux</option>
+							<option value="79">Imprimantes et scanners</option>
+							<option value="6">Autres types de matériel</option>
+							<option value="82">WiFi</option>
+						</optgroup>
+						<optgroup label="Utilisation générale">
+							<option value="25">Installation de logiciels et changements de version</option>
+							<option value="13">Bureautique et logiciels pour l'internet et le réseau</option>
+							<option value="17">Lecture et configuration multimédia</option>
+							<option value="81">Création graphique, musicale et vidéo</option>
+							<option value="40">Logiciels éducatifs</option>
+							<option value="15">Jeux</option>
+							<option value="18">Autres logiciels et problèmes généraux</option>
+							<option value="5" selected="selected">Général</option>
+							<option value="24">Sur 64 bits</option>
+							<option value="20">Sur Mac</option>
+						</optgroup>
+						<optgroup label="Environnements et accessibilité">
+							<option value="65">Accessibilité</option>
+							<option value="37">GNOME</option>
+							<option value="66">KDE</option>
+							<option value="38">XFCE</option>
+							<option value="41">Autres environnements et personnalisations</option>
+							<option value="78">Console et terminal</option>
+							<option value="39">KDE3.5</option>
+						</optgroup>
+						<optgroup label="Utilisations avancées">
+							<option value="51">Ubuntu en entreprise</option>
+							<option value="28">Serveurs</option>
+							<option value="63">Virtualisation et émulation</option>
+							<option value="23">Trucs, astuces et scripts utiles</option>
+							<option value="35">Développement et programmation</option>
+							<option value="53">Version instable : Maverick Meerkat 10.10</option>
+							<option value="4">Archive</option>
+						</optgroup>
+						<optgroup label="Activités autour du libre">
+							<option value="29">Événements</option>
+							<option value="69">Vos développements libres</option>
+							<option value="71">Vos sites sur le libre</option>
+							<option value="73">Revendeurs libres</option>
+							<option value="49">Lettre hebdomadaire Ubuntu</option>
+							<option value="50">Tee shirts</option>
+							<option value="52">Archives presse</option>
+						</optgroup>
+						<optgroup label="Divers">
+							<option value="42">Actualités autour du logiciel libre</option>
+							<option value="21">À propos du site - Contribution(s)</option>
+							<option value="7">Café Ubuntu</option>
+							<option value="43">Être ou ne pas être... ?</option>
+							<option value="8">L'éphémère</option>
+					</optgroup>
+					</select>
+					<input type="submit" value=" Aller " accesskey="g" />
+					</label></div>
+				</form>
+			</div>
+			<p class="conr">Propulsé par <a href="http://fluxbb.org/">FluxBB</a><br />
+Style adapté par <a href="http://www.ogcreation.fr">Ogcreation.fr</a>.</p>
+<!-- dongo.ubuntu-eu.org -->
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</body>
+</html>

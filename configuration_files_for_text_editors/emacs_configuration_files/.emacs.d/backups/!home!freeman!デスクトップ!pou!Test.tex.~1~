@@ -1,0 +1,73 @@
+%!TEX TS-program = XeLaTeX
+% version 0.2.1
+\documentclass{book}
+\usepackage{xunicode}%
+\usepackage[no-math]{fontspec}
+\usepackage{polyglossia}%
+\usepackage{xltxtra}
+%
+%\setdefaultlanguage{nihongo}
+\setdefaultlanguage{japanese}
+\setotherlanguage{english}
+\setotherlanguage{french}
+\setotherlanguage{german}
+%
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont{Charis SIL}%
+\setsansfont{IPA明朝}%
+%\setmonofont{Monospace}
+%
+\makeatletter
+\def\tbcaption{\def\@captype{table}\caption{キャプションの例}}
+\def\fgcaption{\def\@captype{figure}\caption{キャプションの例}}
+\makeatother
+\def\sf{\selectlanguage{french}}
+\def\se{\selectlanguage{english}}%
+%\def\sj{\selectlanguage{nihongo}}
+\def\sj{\selectlanguage{japanese}}
+\def\sg{\selectlanguage{german}}
+\setlength{\voffset}{-43mm}
+\setlength{\hoffset}{-13mm}
+\setlength{\textwidth}{16cm}
+\setlength{\textheight}{27cm}
+\begin{document}
+
+\sj
+\chapter{PolyGlossia}
+japanese/nihongo パッケージは日本語による見出し語と日付を出力するためのマクロを定義しています。
+\se
+\section{In ``\texttt{English}''}
+(The value of language code is \the\language) \par\hfil\verb:\today: ：\today\hfil
+
+\fgcaption
+\tbcaption
+
+\sf
+%\section{En ``\texttt{fran\c{c}ais}''}
+\section{En ``\texttt{fran&#65533;ais}''}
+(La valeur de code de langue est \the\language) \par\hfil\verb:\today: ：\today\hfil
+
+\fgcaption
+\tbcaption
+
+\sj
+\section{『\texttt{日本語}』で}
+(language コードの値は \the\language) \par\hfil\verb:\today: ：\today\hfil
+
+\fgcaption
+\tbcaption
+
+\begin{itemize}
+ \item \verb:\和暦: は日付の表示をデフォルトの西暦「\today」から和暦「\和暦\today」に変更し、\verb:\西暦: はこれを元の表示「\西暦\today」に戻します。\par\smallskip\hfil\verb:\和暦\today: ：\和暦\today\hfil
+ \item \verb:\和名暦: は日付の表示をデフォルトの和暦「\和暦\today」から、月などの名に和名を採用した暦「\和名暦\today」に変更し、\verb:\数字暦: はこれを元の表示「\数字暦\today」に戻します。
+ \item \verb:\出雲月: は神無月を神在月に、また \verb:\大和月: はその逆にします。
+\end{itemize}
+
+\sg
+\section{In ``\texttt{Deutsch}''}
+(Der Wert der Sprache Code ist \the\language) \par\hfil\verb:\today: ：\today\hfil
+
+\fgcaption
+\tbcaption
+
+\end{document}

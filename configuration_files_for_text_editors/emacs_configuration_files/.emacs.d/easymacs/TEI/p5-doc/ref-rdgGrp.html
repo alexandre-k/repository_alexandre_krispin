@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;rdgGrp&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;rdgGrp&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;rdgGrp&gt;</h1></div><div><span id="rdgGrp"/><table border="1" class="wovenodd"><tr><td class="elementSpec">rdgGrp</td><td colspan="2" class="wovenodd-col2">(reading group) within a textual variation,
+groups two or more readings perceived to have a genetic
+relationship or other affinity.</td></tr><tr><td valign="top"><span class="label">Attributes: </span></td><td>  [<a class="classlink" href="ref-att.textCritical.html">att.textCritical</a> ] </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Class</span></td><td colspan="2" class="wovenodd-col2"><a class="link_odd" href="ref-att.textCritical.html">att.textCritical</a> </td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element rdgGrp
+{
+   att.global.attributes,
+   att.textCritical.attributes,
+   ( ( ( <a class="link_odd" href="ref-rdgGrp.html">rdgGrp</a>, <a class="link_odd" href="ref-wit.html">wit</a>? ) | ( ( <a class="link_odd" href="ref-lem.html">lem</a>, <a class="link_odd" href="ref-wit.html">wit</a>? )?, ( <a class="link_odd" href="ref-model.rdgLike.html">model.rdgLike</a>, <a class="link_odd" href="ref-wit.html">wit</a>? ) )* )+ )
+}</pre></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;app&gt;</span><br/>  <span class="element">&lt;lem <span class="attribute">wit</span>="#El #Ra2"&gt;</span>though<span class="element">&lt;/lem&gt;</span><br/>  <span class="element">&lt;rdgGrp <span class="attribute">type</span>="orthographic"&gt;</span><br/>   <span class="element">&lt;rdg <span class="attribute">wit</span>="#Hg"&gt;</span>thogh<span class="element">&lt;/rdg&gt;</span><br/>   <span class="element">&lt;rdg <span class="attribute">wit</span>="#La"&gt;</span>thouhe<span class="element">&lt;/rdg&gt;</span><br/>  <span class="element">&lt;/rdgGrp&gt;</span><br/> <span class="element">&lt;/app&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p class="dataDesc"><span id="id2527339"/>May
+contain readings and nested reading groups.</p><p><span id="id2527345"/>Note that only one <code>&lt;lem&gt;</code> element may appear within
+a single apparatus entry, whether it appears outside a <code>&lt;rdgGrp&gt;</code>
+element or within it.</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="TC.html#TCAPLL" title="The Apparatus Entry, Readings, and Witnesses">16.1  The Apparatus Entry, Readings, and Witnesses</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">textcrit</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

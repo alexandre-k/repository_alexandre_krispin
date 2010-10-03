@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--THIS IS A GENERATED FILE. DO NOT EDIT (7) --><head><title>&lt;purpose&gt;</title><link href="guidelines.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/><meta name="DC.Title" content="&lt;purpose&gt;"/><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">
+	    function startUp() {
+	  } 
+
+	function openpopup(location){ 
+	var newwin =
+        window.open(location,"OUCSPopup","status=no,menu=no,toolbar=no,width=350,height=400,resizable=yes,scrollbars=yes")
+          }
+	</script></head><body id="TOP" onload="startUp()"><div id="hdr"><h2 class="subtitle">TEI P5: Guidelines for Electronic Text Encoding and Interchange</h2><h1 class="maintitle">&lt;purpose&gt;</h1></div><div><span id="purpose"/><table border="1" class="wovenodd"><tr><td class="elementSpec">purpose</td><td colspan="2" class="wovenodd-col2">characterizes a single purpose or communicative function of the
+text.</td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Declaration</span></td><td colspan="2" class="wovenodd-col2"><pre class="eg">
+element purpose
+{
+   att.global.attributes,
+   attribute type { <a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a> }?,
+   attribute degree { "high" | "medium" | "low" | "unknown" }?,
+   <a class="link_odd" href="ref-macro.phraseSeq.html">macro.phraseSeq</a>
+}</pre></td></tr><tr><td valign="top" class="wovenodd-col1"><span class="label">Attributes</span></td><td class="wovenodd-col2"><table class="attList"><tr><td>In addition to global attributes<table><tr><td class="attDef">type</td><td colspan="2">specifies a particular kind of purpose.
+   </td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.enumerated.html">data.enumerated</a></code></td></tr><tr><td><!-- --></td><td valign="top">Suggested values include:<table class="valList"><tr><td valign="top"><b>persuade</b></td><td valign="top">(didactic, advertising, propaganda, etc.
+  ) </td></tr><tr><td valign="top"><b>express</b></td><td valign="top">(self expression, confessional, etc.
+  ) </td></tr><tr><td valign="top"><b>inform</b></td><td valign="top">(convey information, educate, etc.
+  ) </td></tr><tr><td valign="top"><b>entertain</b></td><td valign="top">(amuse, entertain, etc.
+   ) </td></tr></table></td></tr><tr><td class="attDef">degree</td><td colspan="2">specifies the extent to which this purpose predominates.</td></tr><tr><td/><td><span class="label">Status: </span>Optional</td></tr><tr><td/><td colspan="2" valign="top"><span class="label">Datatype</span><code class="eg">
+<a class="link_odd" href="ref-data.certainty.html">data.certainty</a></code></td></tr><tr><td><!-- --></td><td valign="top">Legal values are:<table class="valList"><tr><td valign="top"><b>high</b></td><td valign="top">(this purpose is predominant
+  ) </td></tr><tr><td valign="top"><b>medium</b></td><td valign="top">(this purpose is intermediate
+  ) </td></tr><tr><td valign="top"><b>low</b></td><td valign="top">(this purpose is weak
+  ) </td></tr><tr><td valign="top"><b>unknown</b></td><td valign="top">(extent unknown
+   ) </td></tr></table></td></tr></table></td></tr></table></td></tr><tr><td valign="top"><span class="label">Example</span></td><td colspan="2" class="wovenodd-col2"><div class="pre"> <span class="element">&lt;purpose <span class="attribute">type</span>="persuade" <span class="attribute">degree</span>="high"/&gt;</span><br/> <span class="element">&lt;purpose <span class="attribute">type</span>="entertain" <span class="attribute">degree</span>="low"/&gt;</span></div></td></tr><tr><td valign="top"><span class="label">Note</span></td><td colspan="2" class="wovenodd-col2"><!-- --><p class="dataDesc"><span id="id2557727"/>Usually empty, unless some further clarification of the type
+attribute is needed, in which case it may contain running prose</p></td></tr><tr><td><!--pointer--></td><td colspan="2" class="wovenodd-col2"><a class="link_ptr" href="CC.html#CCAHTD" title="The Text Description">20.2.1  The Text Description</a></td></tr><tr><td valign="top"><span class="label">Module</span></td><td colspan="2" class="wovenodd-col2">corpus</td></tr></table></div><div style="margin: 20pt; font-weight: bold;"><a href="$">TEI Guidelines</a></div></body></html>

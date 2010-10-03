@@ -1,0 +1,72 @@
+%*******************************************************
+% Here is a template of cv with classicthesis
+%*******************************************************
+\documentclass[10pt,a4paper]{scrartcl}
+\usepackage[utf8x]{inputenc} %for uf8
+\usepackage[T1]{fontenc} %for french accents
+\usepackage[LabelsAligned]{currvita} % nice cv style
+\usepackage{url} \usepackage[nochapters]{classicthesis}
+\usepackage[frenchb]{babel} %babel package for languages, replace
+                            %frenchb by your language (german, etc)
+%****begin of settings*******%
+\renewcommand*{\cvheadingfont}{\LARGE\color{Maroon}}
+\renewcommand*{\cvlistheadingfont}{\large}
+\renewcommand*{\cvlabelfont}{\qquad}
+%*****end of settings********%
+
+\begin{document}
+\pagestyle{empty}
+\begin{cv}{\spacedallcaps{Curriculum Vit\ae}}
+
+%******************************************************
+  \begin{cvlist}{\spacedlowsmallcaps{Personal Informations
+        }}
+\item Name and First name
+\item Street name\\ %your address
+    Zip code and town
+  \item \no t\'el : your telephone number
+  \item birth date \\
+    Put here what you are currently : student, professor, etc
+  \end{cvlist}
+%*******************************************************
+  \begin{cvlist}{\spacedlowsmallcaps{Formation}}
+
+  \item[2009-2010] Master degree in the field of XYZ\\
+    (University name \textemdash\ the location of your University)
+
+  \item[2008-2009] Other formation, degree, and field\\
+    (University name \textemdash\ Location)
+
+  \item[years] etc
+
+  \item[Languages] \textbf{English :} fluent\\
+    \textbf{Japanese :} fluent\\
+    \textbf{French :} fluent\\
+
+  \item[Skills] Put your skills here.
+
+  \end{cvlist}
+%********************************************************
+  \begin{cvlist}{\spacedlowsmallcaps{Experiences}}
+
+  \item[avril 2010] job 1 title
+
+    Enterprise - Town
+
+  \item[from date - to date] job 2 title
+
+    Enterprise - Town
+
+  \end{cvlist}
+%**********************************************************
+  \begin{cvlist}{\spacedlowsmallcaps{Interests}}
+
+  \item[Sports] put name of sports here
+
+  \item[Leisure activities] writing templates, farting, smoking some
+    weed, snorting, etc
+
+  \end{cvlist}
+
+\end{cv}
+\end{document}
