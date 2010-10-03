@@ -1,0 +1,91 @@
+%Time-stamp: <2010-09-28 17:19:40 (freeman)>
+%***********************************************
+%Template for a letter with the class isodoc
+% Created 2010-09-21 Tue 22:02
+%***********************************************
+
+%**********************************************
+%The preamble
+%*********************************************
+\documentclass{isodoc}
+%\usepackage{logostyle}
+\usepackage{xltxtra}
+\linespread{1.05}
+\setmainfont[Numbers=OldStyle,Ligatures=Historic]{TeX Gyre Pagella}
+% If you are japanese, replace the font by IPA明朝
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage[frenchb]{babel}%change for the language you use if you are
+                           %not french, and get a try to polyglossia
+\usepackage{hyperref}
+\hypersetup{
+   colorlinks=true, linktocpage=true,breaklinks=true,
+   urlcolor=spot, linkcolor=blue, citecolor=green,
+   pdftitle={Letter},%the title
+    pdfauthor={}%author
+}
+\tolerance=1000
+\usepackage{pdfpages}
+\definecolor{headcolor}{gray}{0.5}
+\definecolor{spot}{rgb}{0.6,0,0}
+
+%*********************************************************
+%The general setup for the letter
+%********************************************************
+\setupdocument{%about this section, see isodoc, p. 3 to 7
+language = french
+,
+company = Alexandre Krispin
+,
+who = Alexandre Krispin
+,
+street = {Chambre 217\\41 rue Guynemer}
+,
+city = St-Denis
+,
+zip = 93200
+,
+to = {Company name\\ Street\\ zip code\\ City}
+,
+return
+,
+header
+,
+date = today
+,
+opening = {Madame, Monsieur,}
+,
+subject = {}
+,
+closing = {Je me tiens à votre entière disposition pour plus
+d'information, je vous prie d'agréer, Madame, Monsieur, l'expression
+de mes salutations les plus  distinguées}
+,
+signature = Alexandre Krispin
+,
+footer
+,
+phone = 0628766934
+,
+email = k.m.alexandre@gmail.com
+,
+website = \url{http://alexkrispin.wordpress.com/}
+
+,
+foldleft
+,
+}
+%*****************************************************************
+% Your text for your letter
+%****************************************************************
+\begin{document}
+ \letter{
+<++>
+}
+\end{document}
+

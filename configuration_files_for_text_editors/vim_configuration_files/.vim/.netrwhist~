@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/freeman'
+let g:netrw_dirhist_2='/home/freeman/デスクトップ'
+let g:netrw_dirhist_3='/home/freeman'
+let g:netrw_dirhist_4='/home/freeman/Paris 8'
+let g:netrw_dirhist_5='/home/freeman/Paris 8/Licence 2'
+let g:netrw_dirhist_6='/home/freeman/Paris 8/Licence 2/Construction européenne'

@@ -1,0 +1,573 @@
+# CV ClassicThesis
+snippet cv_ct
+	% cv example for classicthesis.sty
+	\documentclass[10pt,a4paper]{scrartcl}
+	\usepackage{xltxtra}
+	\usepackage{xcolor}
+	%For japanese input
+	\newfontfamily\ja[Scale=0.8]{IPA明朝}
+	\usepackage[LabelsAligned]{currvita} % nice cv style
+	\usepackage{url} \usepackage[nochapters]{classicthesis}
+	\usepackage[frenchb]{babel} %babel package for languages, replace
+				    %frenchb by your language (german, etc)
+	%****begin of settings*******%
+	\renewcommand*{\cvheadingfont}{\LARGE\color{Maroon}}
+	\renewcommand*{\cvlistheadingfont}{\large}
+	\renewcommand*{\cvlabelfont}{\qquad}
+	%*****end of settings********%
+	\begin{document}
+	\pagestyle{empty}
+	%*****************************************************
+	\begin{cv}{\spacedallcaps{Curriculum Vit\ae}}
+	  \begin{cvlist}{\spacedlowsmallcaps{Informations
+		personnelles}}\label{PersDat}
+
+		\item Alexandre Krispin
+
+		\item 12 avenue Laumière \\
+		    75019 Paris
+
+		\item \no tél : 06 28 76 69 34
+
+		\item Né le 25 août 1986 \\
+		Étudiant à Paris 8
+	  \end{cvlist}
+	%****************************************************
+	  \begin{cvlist}{\spacedlowsmallcaps{Formation}}\label{formation}
+
+		  \item[2009-2010] Licence 2\ieme~année en Science politique\\
+		    (Université Paris 8 \textemdash~Saint-Denis)
+
+		  \item[2007-2009] Master de Japonais, spécialité civilisation japonaise\\
+		    (INALCO \textemdash~Paris)
+
+		  \item[2006-2007] Licence LLCE spécialité Japonais\\
+		    (INALCO \textemdash~Paris)
+
+		  \item[2005-2006] DULCO de Japonais\\
+		    (INALCO \textemdash~Paris)
+
+		  \item[2004] Baccalauréat scientifique\\
+		    spécialité Physique-chimie
+
+		  \item[Langues] \textbf{Anglais :} lu, écrit, parlé\\
+		    \textbf{Japonais :} lu, écrit, parlé\\
+		    \textbf{Allemand :} scolaire\\
+
+		  \item[Informatique] Maîtrise de Microsoft Office, \LaTeXe, Vim, Emacs, Gnuplot,
+		    Illustrator, systèmes Unix (GNU/Linux, Mac OSX, FreeBSD)
+
+	  \end{cvlist}
+	%*****************************************************
+	  \begin{cvlist}{\spacedlowsmallcaps{Expériences
+		professionnelles}}\label{experiences}
+
+	  \item[avril 2010] Magasinier à l'IHEJ
+
+	    Collège-de-France - Paris
+
+	  \item[juillet-août 2005] Magasinier à Gedimat
+
+	    Thonon-les-bains
+
+	  \end{cvlist}
+	%*****************************************************
+	  \begin{cvlist}{\spacedlowsmallcaps{Centres
+		d'intérêts}}\label{interets}
+
+	  \item[Sports] j\=ud\=o, j\=ujits\=u, boxe
+
+	  \item[Loisirs] musique, lecture
+
+	  \end{cvlist}
+
+	\end{cv}
+	%****************************************************
+	\end{document}
+# CV ModernCV
+snippet cv_mc
+	\documentclass[11pt,a4paper]{moderncv}
+	% moderncv themes
+	\moderncvtheme[green]{casual} 
+	% \moderncvtheme[blue]{classic} % idem
+	\usepackage{xltxtra}
+
+	% HEADINGS
+	%\usepackage{sectsty} 
+	\usepackage[normalem]{ulem} 
+	\sectionfont{\rmfamily\mdseries\upshape\Large}
+	\subsectionfont{\rmfamily\bfseries\upshape\normalsize} 
+	%\subsubsectionfont{\rmfamily\mdseries\upshape\normalsize}
+	% FONTS
+	%\setromanfont [Ligatures={Common}, BoldFont={Gentium Basic Bold},
+	%ItalicFont={Gentium Basic Italic}]{Gentium Basic}
+	%\setmonofont[Scale=0.8]{Monaco}
+	%\setmainfont[Numbers=OldStyle,Ligatures=Historic]{TeX Gyre Pagella}
+	%For japanese input
+	\newfontfamily\jap[Scale=0.8]{IPA明朝}
+
+	\usepackage{xcolor} %character encoding
+
+	\usepackage[frenchb]{babel}
+	% adjust the page margins
+	\usepackage[scale=0.8]{geometry}
+	% \setlength{\hintscolumnwidth}{3cm} % if you want to change the width of the column with the dates
+	% \AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}} % only for the
+	% classic theme, if you want to change the width of your name
+	% placeholder (to leave more space for your address details
+	% \AtBeginDocument{\recomputelengths} % required when changes are made
+	% to page layout lengths
+	%********************************
+	% personal data
+	\firstname{Alexandre} \familyname{Krispin}
+	% title{Resumé title
+	%   (optional)} % optional, remove the line if not wanted
+	\address{41 rue Guynemer}{93200 St
+	  Denis} % optional, remove the line if not wanted
+	\mobile{0628766934} % optional, remove the line if not wanted
+	% \phone{phone (optional)} % optional, remove the line if not wanted
+	% \fax{fax (optional)} % optional, remove the line if not wanted
+	\email{k.m.alexandre@gmail.com} % optional, remove the line if not wanted
+	\homepage{http://alexkrispin.wordpress.com/} % optional, remove the line if not wanted
+	\extrainfo{\begin{center}
+	\scriptsize Dernière mise à jour : \today\ -- Compilé avec \fontspec{Times New
+	Roman}\XeLaTeX\end{center}} % optional, remove the line if not wanted
+	% \photo{photo.png} % '64pt' is the height the picture must be resized
+	% to and 'picture' is the name of the picture file; optional, remove the
+	% line if not wanted
+	% \quote{} % optional, remove the line if not wanted
+
+	% to show numerical labels in the bibliography; only useful if you
+	% make citations in your resume
+	\makeatletter
+	\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+	\makeatother
+
+	% bibliography with mutiple entries \usepackage{multibib}
+	% \newcites{book,misc}{{Books},{Others}}
+
+	% \nopagenumbers{} % uncomment to suppress automatic page numbering for
+	% CVs longer than one page
+	% ----------------------------------------------------------------------------------
+	% content
+	% ----------------------------------------------------------------------------------
+	\begin{document}
+	\maketitle
+	${1:look from here if you any modification should be made}
+	\section{Formation}
+	\cventry{2009--2010}{Licence}{Université Paris 8}{St
+	  Denis}{\textit{2\ieme\ année}}{Science
+	  politique} % arguments 3 to 6 can be left empty
+	\cventry{2007--2009}{Master de
+	  Japonais}{INALCO}{Paris}{\textit{5\ieme\ année}}{Spécialité
+	  civilisation japonaise} \cventry{2004}{Baccalauréat
+	  Scientifique}{Lyçée La
+	  Versoie}{Thonon-les-Bains}{\textit{Terminal}}{spécialité
+	  Physique-chimie}
+	%*****************************************************
+	\section{Mémoire de Master}
+	\cvline{Titre}{\emph{La notion de \emph{ren} {\jap 仁}
+	    à la fin de l'époque d'Edo et ses enjeux socio-politiques}}
+	\cvline{Superviseur}{Fran\c cois Macé} \cvline{description}{\small
+	  J'étudie dans une première partie des concepts
+	  confucéens. Dans une deuxième partie, j'étudie à partir de
+	  ces mêmes concepts les causes d'une rébellion organisée lors
+	  d'une famine de 1835-37. Puis je montre les solutions envisagées
+	  par les penseurs de l'époque pour lutter contre les famines et les
+	  désordres socio-économiques.}
+	%****************************************************
+	\section{Expériences professionnelles}
+	\cventry{avril 2010}{Magasinier à
+	  l'IHEJ}{Collège-de-France}{Paris}{}{} \cventry{juillet--août
+	  2005}{Magasinier}{Gedimat}{Thonon-les-Bains}{}{}
+	%***************************************************
+	\section{Langues}
+	\cvlanguage{Anglais}{lu, écrit, parlé}{} \cvlanguage{Japonais}{lu,
+	  écrit, parlé}{}
+	%***************************************************
+	\section{Informatique}
+	\cvcomputer{Bureautique}{\LaTeXe, OpenOffice.org, Microsoft Office,
+	  Gnumeric}{Systèmes d'exploitation}{GNU/Linux, FreeBSD, Mac OSX,
+	  Microsoft Windows}
+	  \cvcomputer{Graphisme}{Gnuplot, Illustrator}{}{}
+	  \cvcomputer{éditeurs de
+	  texte}{Vim, Emacs}{}{}
+	%**************************************************
+	\section{Centres d'intérêts}
+	\cvline{Sports}{\small j\=ud\=o, j\=ujits\=u, boxe}
+	\cvline{Loisirs}{\small musique, lecture}
+	%*************************************************
+	% \section{Extra 1}
+	% \cvlistitem{Item 1} \cvlistitem{Item 2} \cvlistitem[+]{Item
+	%   3} % optional other symbol
+
+	% \renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+	% Publications from a BibTeX file without
+	% multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% for BibTeX numerical labels
+	% \nocite{*} \bibliographystyle{plain}
+	% \bibliography{publications} % 'publications' is the name of a BibTeX file
+
+	% Publications from a BibTeX file using the multibib package
+	% \section{Publications}
+	% \nocitebook{book1,book2} \bibliographystylebook{plain}
+	% \bibliographybook{publications} % 'publications' is the name of a BibTeX file
+	% \nocitemisc{misc1,misc2,misc3} \bibliographystylemisc{plain}
+	% \bibliographymisc{publications} % 'publications' is the name of a BibTeX file
+	\end{document}
+	\endinput
+# article
+snippet article
+	% Time-stamp: <2010-09-28 17:17:08 (freeman)>
+	%*************************************************************
+	% Template for an article. To be compiled with xelatex
+	% based on classicthesis
+	%*************************************************************
+	\documentclass[10pt,a4paper]{scrartcl} % KOMA-Script article
+	\usepackage{xltxtra} %some packages for xelatex
+	\usepackage[frenchb
+	%arabic
+	%english
+	]{babel} %for french. If you write in english, then you might want to
+		 %get a try to polyglossia
+
+	%**********************************************
+	% Fonts
+	%**********************************************
+	%\setmainfont[Numbers=OldStyle,Ligatures=Historic]{TeX Gyre Pagella}
+
+	%If you want other fonts, try the following
+	%\setmainfont{Charis SIL}
+	%\setmainfont{URW Palladio L}
+	%\setmainfont{Linux Libertine O}
+	%\setmainfont{Gentium Book Basic}
+
+	%For japanese input :
+	\newfontfamily\ja[Scale=0.8]{IPA明朝}
+
+
+	%*********************************************
+	% Defining a beautiful color, named spot
+	%*********************************************
+	\usepackage{color} %If you want to use it within your text, use the
+			    %command \textcolor{spot}{your text}
+	\definecolor{spot}{rgb}{0.6,0,0}
+	\definecolor{boxframe}{rgb}{0.6,0,0}
+	\definecolor{boxfill}{rgb}{1,.95,.95}
+
+	%*********************************************
+	% Hyperrefence setup
+	%**********************************************
+	\usepackage{hyperref}
+	\hypersetup{%
+	    colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+	    % uncomment the following line if you want to have black links (e.g., for printing)
+	    %colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,% 
+	    breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
+	    plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+	    hypertexnames=true, pdfhighlight=/O,%hyperfootnotes=true,%nesting=true,%frenchlinks,%
+	    urlcolor=blue, linkcolor=blue, citecolor=green, %pagecolor=RoyalBlue,%
+	    %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+	    pdftitle={${1:The title of the pdf}},%the title
+	    pdfauthor={${2:The author of the pdf}},%your name
+	    pdfsubject={${3:The subject of the pdf}},%
+	    pdfkeywords={${4:Some keywords if any}},%
+	    pdfcreator={XeLaTeX},%
+	    pdfproducer={A happy XeLaTeX user}%
+	}
+
+	%**********************************************
+	%some useful packages
+	%*********************************************
+	\usepackage{enumitem} %if you want to customize lists
+	\usepackage{array} %texdoc array
+	\usepackage{natbib} % an extension to allow author-year citations
+			    % along wih numerical citations. For more
+			    % informations, texdoc natbib
+	\usepackage{eukdate} %to redefine the default layout of the date format
+	\usepackage{textcomp} %some special characters
+	\usepackage{url} %for url
+	\usepackage{longtable} %for long tables
+	\usepackage{textcomp} %additional characters
+	\usepackage{amsmath} %for maths
+	\usepackage{graphicx} %to include graphics
+	\usepackage{wrapfig} %to get nice wrap of figures
+	\usepackage[nochapters]{classicthesis}
+	\usepackage[nochapters]{classicthesis-ldpkg}
+
+	%***********************************************
+	%Opening
+	%**********************************************
+	\title{\rmfamily\normalfont\spacedallcaps{
+	${5:The title of your article}
+	}}
+	\subtitle{\rmfamily\normalfont\spacedallcaps{
+	${6:Put here your subtitle if any}
+	}}
+	\author{\spacedlowsmallcaps{
+	${7:author name and first name}
+	  }}
+
+	\begin{document}
+
+	\maketitle
+
+	\begin{abstract}
+
+	\noident
+	${8:The abstract of your article goes here}
+	\end{abstract}
+
+	\tableofcontents
+
+	\section{${9:the title of your first section}}
+	\label{sec:${10:$9}}
+	${11:Here goes the main text}
+	% section $10 (end)
+
+	\end{document}	
+# letter
+snippet letter
+	\documentclass{isodoc}
+	\usepackage{xltxtra}
+	\linespread{1.05}
+	\setmainfont[Numbers=OldStyle,Ligatures=Historic]{TeX Gyre Pagella}
+	\usepackage{fixltx2e}
+	\usepackage{graphicx}
+	\usepackage{url}
+	\usepackage{float}
+	\usepackage{wrapfig}
+	\usepackage{soul}
+	\usepackage{textcomp}
+	\usepackage[frenchb]{babel}
+	\usepackage{hyperref}
+	\hypersetup{
+	   colorlinks=true, linktocpage=true,breaklinks=true,
+	   urlcolor=spot, linkcolor=blue, citecolor=green,
+	   pdftitle={Lettre},%the title
+	    pdfauthor={Alexandre Krispin}
+	}
+	\tolerance=1000
+	\usepackage{pdfpages}
+	\definecolor{headcolor}{gray}{0.5}
+	\definecolor{spot}{rgb}{0.6,0,0}
+	\definecolor{headingcolor}{rgb}{0.6,0,0}
+
+	\setupdocument{%about this section, see isodoc, p. 3 to 7
+	language = french
+	,
+	company = Alexandre Krispin
+	,
+	who = Alexandre Krispin
+	,
+	street = {41 rue Guynemer}
+	,
+	city = St-Denis
+	,
+	zip = 93200
+	,
+	to = {
+	${1:Company name}\\
+	${2:Adress of the company}\\
+	${3:Zip code and city}\\
+	}
+	,
+	return
+	,
+	header
+	,
+	date = today
+	,
+	opening = {Madame, Monsieur}
+	,
+	subject = {${4:subject of the letter}}
+	,
+	closing = {Je me tiens à votre entière disposition pour plus
+	dinformation, je vous prie d'agréer, Madame, Monsieur, l'expression
+	de mes salutations les plus  distinguées}
+	,
+	signature = Alexandre Krispin
+	,
+	footer
+	,
+	phone = 0628766934
+	,
+	email = k.m.alexandre@gmail.com
+	,
+	website = \url{http://alexkrispin.wordpress.com/}
+	,
+	fill
+	,
+	}
+
+	\begin{document}
+	 \letter{
+	${5:HERE GOES THE CONTENT OF THE LETTER}
+	}
+	\end{document}	
+
+	\begin{${1:env}}
+		${2}
+	\end{$1}
+# Tabular
+snippet tab
+	\begin{${1:tabular}}{${2:c}}
+	${3}
+	\end{$1}
+# Align(ed)
+snippet ali
+	\begin{align${1:ed}}
+		${2}
+	\end{align$1}
+# Gather(ed)
+snippet gat
+	\begin{gather${1:ed}}
+		${2}
+	\end{gather$1}
+# Equation
+snippet eq
+	\begin{equation}
+		${1}
+	\end{equation}
+# Unnumbered Equation
+snippet \
+	\\[
+		${1}
+	\\]
+# Enumerate
+snippet enum
+	\begin{enumerate}
+		\item ${1}
+	\end{enumerate}
+# Itemize
+snippet item
+	\begin{itemize}
+		\item ${1}
+	\end{itemize}
+# Description
+snippet desc
+	\begin{description}
+		\item[${1}] ${2}
+	\end{description}
+# Matrix
+snippet mat
+	\begin{${1:p/b/v/V/B/small}matrix}
+		${2}
+	\end{$1matrix}
+# Cases
+snippet cas
+	\begin{cases}
+		${1:equation}, &\text{ if }${2:case}\\
+		${3}
+	\end{cases}
+# Split
+snippet spl
+	\begin{split}
+		${1}
+	\end{split}
+# Part
+snippet part
+	\part{${1:part name}} % (fold)
+	\label{prt:${2:$1}}
+	${3}
+	% part $2 (end)
+# Chapter
+snippet cha
+	\chapter{${1:chapter name}} % (fold)
+	\label{cha:${2:$1}}
+	${3}
+	% chapter $2 (end)
+# Section
+snippet sec
+	\section{${1:section name}} % (fold)
+	\label{sec:${2:$1}}
+	${3}
+	% section $2 (end)
+# Sub Section
+snippet sub
+	\subsection{${1:subsection name}} % (fold)
+	\label{sub:${2:$1}}
+	${3}
+	% subsection $2 (end)
+# Sub Sub Section
+snippet subs
+	\subsubsection{${1:subsubsection name}} % (fold)
+	\label{ssub:${2:$1}}
+	${3}
+	% subsubsection $2 (end)
+# Paragraph
+snippet par
+	\paragraph{${1:paragraph name}} % (fold)
+	\label{par:${2:$1}}
+	${3}
+	% paragraph $2 (end)
+# Sub Paragraph
+snippet subp
+	\subparagraph{${1:subparagraph name}} % (fold)
+	\label{subp:${2:$1}}
+	${3}
+	% subparagraph $2 (end)
+# minipage
+snippet minipage
+	\begin{minipage}[${1:htbp}]{${2:1.0}${3:\linewidth}}
+	${4:the content of you minipage}
+	\end{minipage}
+# Env figure
+snippet fig
+	\begin{figure}[htbp]
+	\centering
+	${3:and here goes the figure}
+	\caption{${1:caption}}
+	\label{${2:the label}}
+	\end{figure}# Env table
+snippet tab
+	\begin{table}[htbp]
+	\centering
+	\begin{tabular}{${3:format}}
+	    $4
+	\end{tabular}
+	\caption{${1:caption}}
+	\label{${2:write the label}}
+	\end{table}
+#Usepackage
+snippet use
+	\usepackage[$2]{$1}
+	${3:tab to continue}
+# graphics
+snippet graph
+	\includegraphics[width=${1:\linewidth}]{${2:file}}
+	${3:tab to continue}
+# Footnotes
+snippet foot
+	\footnote{${1:Write here your footnote}} ${2:and continue the main text}
+# Item
+snippet itd
+	\item[${1:description}] ${2:item}
+#Figure
+snippet figure
+	${1:Figure}~\ref{${2:fig:}}${3}
+#Table
+snippet table
+	${1:Table}~\ref{${2:tab:}}${3}
+#Listing
+snippet listing
+	${1:Listing}~\ref{${2:list}}${3}
+# Section
+snippet section
+	${1:Section}~\ref{${2:sec:}}${3}
+# Page
+snippet page
+	${1:page}~\pageref{${2}}${3}
+# url
+snippet url
+	\url{${1:enter your url, "http" or "ftp"}}$2
+#----------------------------------------
+# Begin snippets for brackets
+snippet (
+	(${1:text}) ${2:your text}
+snippet {
+	{${1:text}} ${2:your text}
+snippet [
+	[${1:your text}] ${2:and the rest}
+#End snippets for brackets
+#-----------------------------------------
