@@ -1,5 +1,0 @@
-set nocompatible
-"source $VIMRUNTIME/vimrc_core.vim
-source <sfile>:p:h/vimrc_core.vim
-behave xterm
-

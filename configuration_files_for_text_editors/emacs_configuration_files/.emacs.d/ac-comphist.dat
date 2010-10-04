@@ -1,8 +1,0 @@
-((("color-theme-andreas" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("autoload" .
-   [1 0 0 0 0 0 0 0])
-  ("auto-complete" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("auto-complete-mode" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])))
