@@ -1,9 +1,0 @@
-Makefile
-w3-cfg.el
-w3-auto.el
-custom-load.el
-auto-autoloads.el
-*.elc
-config.log
-config.cache
-config.status
