@@ -1,0 +1,20 @@
+Here are the directories where my configuration for emacs and vim are located.
+Both are really good text editor, but according to me Vim has really amazing
+features that emacs don't have.
+
+If you plan to use LaTeX like the average users seems to do, then use emacs.
+AucTeX has a preview mode, that some users like. But if you prefer to get a
+really good autocompletion, use Vim.
+
+Also, if you don't want to bother with shortcuts like Ctrl+x ctrl+s, ctrl+x
+ctrl+c for example, then use Vim. It use simple keys to do all the stuff you
+will need to typeset files in LaTeX.
+
+Vim could be quit weird at the beginning, but it is matter of habit. For this
+reason, if you would like to improve your efficiency, I would recommend to use
+GVim, and learn to like its shortcuts.
+
+I will describe on my blog some basic features, so if you are interested, look
+here :
+http://alexkrispin.wordpress.com/
+
