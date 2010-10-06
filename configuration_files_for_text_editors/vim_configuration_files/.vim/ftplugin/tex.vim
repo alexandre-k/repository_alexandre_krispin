@@ -1,55 +1,86 @@
-" Enables vim-latex bindings if we are using latex
- :autocmd BufRead *.tex        "":source ~/.vim/vimrc.latex
-
+"--------------------------------------------------------------------------
+"																General settings
+"--------------------------------------------------------------------------
 let g:autoclose = 1
 let g:Tex_SmartKeyQuote = 0
-" IMPORTANT: grep will sometimes skip displaying the file name if you
-" search in a singe file. This will confuse Latex-Suite. Set your grep
-" program to alway generate a file-name.
-"--------------------------------------------------------------------------------------------------------"
-autocmd Filetype tex,latex :set grepprg=grep\ -nH\ $*
-autocmd Filetype tex,latex :set dictionary=/usr/share/vim/vimfiles/ftplugin/latex-suite/dictionaries/dictionary,/home/linux/.vim/spell
-
-"--------------------------------------------------------------------------------------------------------"
-"Fixing LaTeX-Suite's jump to error feature.
-"--------------------------------------------------------
-let g:Tex_CompileRule_dvi = 'latex -interaction=nonstopmode -file-line-error-style $*'
 
 setlocal efm+=%E%f:%l:\ %m
+
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_CompileRule_pdf='/usr/local/texlive/2010/bin/i386-linux/xelatex $*'
 
 let g:Tex_ViewRule_dvi = 'xdvi'
 let g:Tex_ViewRule_ps  = 'gv'
 let g:Tex_ViewRule_pdf = 'evince'
 
-"-----------------------------------------------------------------------------------
-"															
-"fixing of é letter :
 
+"---------------------------------
+"Enhanced Vim formatting of LaTeX files
+"---------------------------------
+map \gq ?^$\\|^\s*\(\\begin\\|\\end\\|\\label\\|\\documentclass\\|\\usepackage\\|\\paragraph\\item\)?1<CR>gq//+1<CR>
+omap lp ?^$\\|^\s*\(\\begin\\|\\end\\|\\label\)?1<CR>//-1<CR>.<CR>
+
+" To format LaTeX files,
+setlocal comments+=:%,:\\begin{,:\\end{,:\\title{,:\\author{,:\\subtitle{,:\\part{,:\\chapter{,:\\section{,:\\subsection{,:\\subsubsection{,:\\paragraph,:\\subparagraph{,:\\usepackage{,:\\documenclass{,:\\usepackage[,:\\item[,:\\item
+"-------
+"using tex.vim in ~/.vim/indent/tex.vim
+"let g:tex_indent_items = 1
+
+"---------------------
+"Dictionaries
+autocmd Filetype tex,latex :set dictionary=~/.vim/ftplugin/latex-suite/dictionaries/dictionary,/home/linux/.vim/spell
+
+"--------------------------------------------
+"Fixing LaTeX-Suite's jump to error feature
+"--------------------------------------------
+let g:Tex_CompileRule_dvi = 'latex -interaction=nonstopmode -file-line-error-style $*'
+
+"----------------------------------------------------------------------
+"			Abbreviations
+"----------------------------------------------------------------------
+ab ds dans
+ab bcp beaucoup
+ab letat l'État
+ab socio sociologie
+ab éco économie
+ab math mathématique
+ab xelatex \XeLaTeX
+ab latex \LaTeX
+ab ak Alexandre Krispin
+
+
+"---------------------------------------------------------------------------
+"														MAPPING
+"---------------------------------------------------------------------------
+
+let Tex_PromptedEnvironments  = ""
+"imap <silent> <buffer> g:Tex_PromptedEnvironments <S-F5>
+"--------------------------------
+"Change the mapleader from \ to ,
+let mapleader=";"
+
+"--------------------------------
+"fixing of é letter :
 imap <buffer> <leader>it <Plug>Tex_InsertItemOnThisLine
 imap <C-b> <Plug>Tex_MathBF
 imap <C-c> <Plug>Tex_MathCal
 imap <C-l> <Plug>Tex_LeftRight
 
-"----------------------------------------------------------------------
-"Another shortcut for placeholders. The default one is ctrl+j, really annoying.
-"Pressing tab is easier
+"---------------------------------------
+"Another shortcut for placeholders.
+"The default one is ctrl+j, really 
+"annoying. Pressing shift+tab is easier
 imap <S-tab> <Plug>IMAP_JumpForward
-"----------------------------------------------------------------------
+
+"---------------------------------------
 "useful imaps
+imap <buffer> ,ja {\ja 
+"the above imap is intended to work with 
+"my setup for japanese in my templates compiled
+"with XeLaTeX. For more details, look at my
+"blog : http://alexkrispin.wordpress.com/
 imap <buffer> ... \ldots
-"With XeLaTeX, these imaps are no longer required since you compile with
-"unicode. In case you use pdfLaTeX to compile, enable the following :
-"imap <buffer> « \og
-"imap <buffer> » \fg
-"imap <buffer> € \EUR
-"imap <buffer>~ $\sim\ 
 
-"imap <buffer> " \textquotedblleft 
-"imap <buffer> ¢ \textquotedblright\ 
-
-"--------------------------------
-"Change the mapleader from \ to ,
-let mapleader=";"
 "---------------------------------
 "autoclose brackets
 "Actually you can get a similar
@@ -57,27 +88,38 @@ let mapleader=";"
 "and then press the tab key. In case
 "you prefer snippets, comment the 
 "following 3 lines
-"--------------------------------
 imap <buffer> { {}
 imap <buffer> ( ()
 imap <buffer> [ []
 
-"vmap <silent>:<C-u>call ExecMap('`', 'v')<CR> <Esc>,
-"vnoremap <silent> , :<C-u>call ExecMap('`', 'v')<CR>
-"vmap , <ESC><v>`
-vmap <buffer> <silent> , `
-"--------------------------------
-"emphasize
-"--------------------------------
-"imap <buffer> ;em \emph{<++>} <++>
-"--------------------------------
-" bold
-"--------------------------------
-"imap <buffer> `bf \textbf{<++>} <++>
+"---------------------------------------
+"With XeLaTeX, these imaps are no longer
+"required since you compile with
+"unicode. In case you use pdfLaTeX to 
+"compile, enable the following :
+"imap <buffer> « \og
+"imap <buffer> » \fg
+"imap <buffer> € \EUR
+"imap <buffer>~ $\sim\ 
+"imap <buffer> " \textquotedblleft 
+"imap <buffer> ¢ \textquotedblright\ 
 
-"------------------------------------------------------------------------------
-""http://linuxwisdom.blogspot.com/search/label/vi
-"------------------------------------------------------------------------------
+"--------------------------------------
+"If you have a french keyboard, this setting
+"will let you easily put, let say `bf.
+"Instead of inserting `bf in normal mode
+"you will just have to insert ,bf (therefore,
+"no need of the Alt Gr key)
+vmap <buffer> <silent> , `
+
+
+"-----------------------------------------------------------------------------
+"										MiSCELLANOUS
+"-----------------------------------------------------------------------------
+
+"-----------------------------------------------------
+" From http://linuxwisdom.blogspot.com/search/label/vi
+"-----------------------------------------------------
 " Set the warning messages to ignore.
 let g:Tex_IgnoredWarnings =
 \"Underfull\n".
@@ -93,9 +135,9 @@ let g:Tex_IgnoreLevel = 8
 
 
 
-"---------------------------------------------------
+"----------------------------------
 "Special indentation for \footnotes
-"--------------------------------------------------
+"----------------------------------
 " Vim indent file
 " mpg-customized
 "

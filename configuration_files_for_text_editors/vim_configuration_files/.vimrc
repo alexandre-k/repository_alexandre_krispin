@@ -22,17 +22,13 @@ filetype indent on
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 
-let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_CompileRule_pdf='/usr/local/texlive/2010/bin/i386-linux/xelatex $*'
-"let g:Tex_ViewRule_pdf='/usr/bin/open -a /Applications/Preview.app'
-
 "To jump from a section to another one
 map <silent> ]s :/\\\(sub\)\{,2}section\s*{<CR> :noh<CR>
 map <silent> [s :?\\\(sub\)\{,2}section\s*{<CR> :noh<CR>
 
 
 "------------------------------------------------------------------------
-"				General settings
+"				GENERAL SETTINGS
 "------------------------------------------------------------------------
 let b:loaded_tex_autoclose = 1
 let g:autoclose = 1
@@ -50,6 +46,9 @@ set hlsearch        " When there is a previous search pattern, highlight all
 set incsearch       " While typing a search command, show immediately where the
                     " so far typed pattern matches.
 set ignorecase      " Ignore case in search patterns.
+set smartcase       " Override the 'ignorecase' option if
+set wrapscan                          " end of search has been achieved!
+set magic		"regexp version magic
 set cursorline   	"highlight current line
 set cursorcolumn 	"highlight current column
 set wildmenu
@@ -75,11 +74,23 @@ set list		" Vim can highlight whitespaces for you in a convenient way:
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
 set laststatus=2	"status bar
 set statusline=%n:\ %f%m%r%h%w\ [%Y,%{&fileencoding},%{&fileformat}]\ [%l-%L,%v][%p%%]\ [%{strftime(\"%l:%M:%S\ \%p,\ %a\ %b\ %d,\ %Y\")}]
+set ruler
+set rulerformat=%25(%n%m%r:\ %Y\ [%l,%v]\ %p%%%)
+" toujours afficher le mode courant
+set showcmd		 "show the command being typed
+
+"-----------------------------------------
+" change cursor colour depending upon mode
+if exists('&t_SI')
+    let &t_SI = "\<Esc>]12;lightgoldenrod\x7"
+    let &t_EI = "\<Esc>]12;grey80\x7"
+endif
+
 
 "--------------------------------
 " Backups
 "--------------------------------
-set backup
+set nobackup
 set backupcopy=auto
 set backupskip=/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*,*test*,*temp*,*tmp*,*tst*,*~,*bak
 
@@ -110,9 +121,9 @@ set guifont=Inconsolata\ 12 " very nice, but leaves terrible artefacts with nati
 
 
 
-"-----------------------------------------------------------------------------
-"				formatting
-"-----------------------------------------------------------------------------
+"------------------
+"formatting
+"------------------
 set formatoptions=tcroqn " see help
 "set formatoptions=c,q,r,t " This is a sequence of letters which describes how
                     " automatic formatting is to be done.
@@ -126,7 +137,7 @@ set formatoptions=tcroqn " see help
                     "           after hitting <Enter> in Insert mode. 
                     " t         Auto-wrap text using textwidth (does not apply
                     "           to comments)
-"-----------------------------------------------------------------
+"---------------
 set smartindent      " turn on smart indenting
 set autoindent    " always set autoindenting on
 set copyindent    " copy the previous indentation on autoindenting
@@ -135,25 +146,282 @@ set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set smarttab      " insert tabs on the start of a line according to
                   "    shiftwidth, not tabstop
 
+"setlocal indentkeys+=},=\\item,=\\bibitem,=\\else,=\\fi,=\\or,=\\]
 
-"-----------------------------------------------------------------
+"--------------------------
 " indentation automatique (à la Emacs)
-vnoremap <C-F>   =$
+vnoremap <C-J>   =$
 vnoremap <tab>   =
 nnoremap <tab>   =$
 nnoremap <C-tab> mzvip=`z
-"------------------------------------------------------------------
-setlocal indentkeys+=},=\\item,=\\bibitem,=\\else,=\\fi,=\\or,=\\]
-"------------------------------------------------------------------
-" shortcut for formatting paragraph
-map	<C-J>	gqap
-imap	<C-J>	<C-O>gqap
-vmap	<C-J>	gq
+
+"let g:tex_indent_items = 1
+
+"----------------------------
+"TAB BAR
+"----------------------------
+" set up tab labels with tab number, buffer name, number of windows
+function! GuiTabLabel()
+    let label = ''
+    let bufnrlist = tabpagebuflist(v:lnum)
+ 
+    " Add '+' if one of the buffers in the tab page is modified
+    for bufnr in bufnrlist
+    if getbufvar(bufnr, "&modified")
+        let label = '+'
+        break
+    endif
+    endfor
+ 
+    " Append the tab number
+    let label .= tabpagenr().': '
+ 
+    " Append the buffer name
+    let name = bufname(bufnrlist[tabpagewinnr(v:lnum) - 1])
+    if name == ''
+        " give a name to no-name documents
+        if &buftype=='quickfix'
+            let name = '[Quickfix List]'
+        else
+            let name = '[Not yet saved]'
+        endif
+    else
+        " get only the file name
+        let name = fnamemodify(name,":t")
+    endif
+    let label .= name
+ 
+    " Append the number of windows in the tab page
+    let wincount = tabpagewinnr(v:lnum, '$')
+    return label . '  [' . wincount . ']'
+endfunction
+ 
+" set up tab tooltips with every buffer name
+function! GuiTabToolTip()
+    let tip = ''
+    let bufnrlist = tabpagebuflist(v:lnum)
+ 
+    for bufnr in bufnrlist
+        " separate buffer entries
+        if tip!=''
+            let tip .= ' | '
+        endif
+ 
+        " Add name of buffer
+        let name=bufname(bufnr)
+        if name == ''
+            " give a name to no name documents
+            if getbufvar(bufnr,'&buftype')=='quickfix'
+                let name = '[Quickfix List]'
+            else
+                let name = '[Not yet saved]'
+            endif
+        endif
+        let tip.=name
+ 
+        " add modified/modifiable flags
+        if getbufvar(bufnr, "&modified")
+            let tip .= ' [+]'
+        endif
+        if getbufvar(bufnr, "&modifiable")==0
+            let tip .= ' [-]'
+        endif
+    endfor
+ 
+    return tip
+endfunction
+ 
+set guitablabel=%!GuiTabLabel()
+set guitabtooltip=%!GuiTabToolTip()
+
+"--------------
+"spelling...
+"--------------
+"to enable spell checking by default, uncomment the following line,
+"set spell
+" automatic spell checking in your language for .txt et .tex. Replace "fr" it by your default
+" language, "en" if english :
+
+"augroup filetypedetect
+  "au BufNewFile,BufRead *.txt setlocal spell spelllang=fr
+  "au BufNewFile,BufRead *.tex setlocal spell spelllang=fr
+"augroup END
+ 
+ "------------------------------------
+" painless spell checking
+" for French, you'll need
+" wget http://ftp.vim.org/pub/vim/runtime/spell/fr.utf-8.sug
+" wget http://ftp.vim.org/pub/vim/runtime/spell/fr.utf-8.spl
+" which you may move into ~/.vim/spell
+"-------------------------------------
+function s:spell_fr()
+    if !exists("s:spell_check") || s:spell_check == 0
+        echo "Spell checking activated (french)"
+        let s:spell_check = 1
+        setlocal spell spelllang=fr
+    else
+        echo "Spell checking canceled"
+        let s:spell_check = 0
+        setlocal spell spelllang=
+    endif
+endfunction
+" for English
+function s:spell_en()
+    if !exists("s:spell_check") || s:spell_check == 0
+        echo "Spell checking activated (english)"
+        let s:spell_check = 1
+        setlocal spell spelllang=en
+    else
+        echo "Spell checking canceled"
+        let s:spell_check = 0
+        setlocal spell spelllang=
+    endif
+endfunction
+ 
+" mapping français
+noremap  <F12>  :call <SID>spell_fr()<CR>
+inoremap <F12>  :call <SID>spell_fr()<CR>
+vnoremap <F12>  :call <SID>spell_fr()<CR>
+" mapping English
+noremap  <A-F12> :call <SID>spell_en()<CR>
+inoremap <A-F12> :call <SID>spell_en()<CR>
+vnoremap <A-F12> :call <SID>spell_en()<CR>
 
 
+"------------------------------------------------------------------------
+"				MAPPING
+"------------------------------------------------------------------------
+
+
+"----------------------------
+"Saving
+"---------------------------
+map <F2> :w<CR>
+imap <F2> <ESC>:w<CR>
+
+"------------------------------
+" Terminal
+"------------------------------
+map <S-F2> :!gnome-terminal &<CR><CR>
+imap <S-F2> <ESC>:!gnome-terminal &<CR><CR>
+
+"-------------------------------
+" Graphical file manager
+"--------------------------------
+map <A-F2> :!nautilus & <CR><CR>
+map <A-F2> <ESC>:!nautilus &<CR><CR>
+
+"----------------------------
+"Exit
+"----------------------------
+"exit
+map <F3> :q<CR>
+imap <F3> <ESC>:q<CR>
+"exit all
+map <S-F3> :qall<CR>
+imap <S-F3> <ESC>:qall<CR>
+"force Exit
+map <A-F3> :qall!<CR>
+imap <A-F3> <ESC>:qall!<CR>
+
+"----------------------------
+"Mapping to activate file explorer 
+"of the specified directory
+"----------------------------
+"To display NERDTree
+nnoremap <silent> <A-F4> :NERDTree /home/freeman/<CR>
+" To display VimExplorer
+nmap <silent> <F4> :VE %:p:h<CR>
+
+"----------------------------
+"Mapping to explorer of recent file,
+"Most recently used files
+"----------------------------
+map <F8> :Mru<CR>
+imap <F8> <ESC>:Mru<CR>
+
+"-------------
+"SelectBuf
+"-------------
+nmap <unique> <silent> <F10> <Plug>SelectBuf
+noremap <silent> <Plug>SelBufHelpKey <A-F10>
+"-----------------------------
+"Compiling and viewing its .tex file
+"with XeLaTeX and evince (set in tex.vim)
+"-----------------------------
+"Compile and start viewer
+map <F11> ;ll ;lv<CR>
+imap <F11> <ESC>;ll ;lv<CR>
+"Compile only
+map <A-F11> ;ll<CR>
+imap <A-F11> ;ll<CR>
+
+"---------------------------------
+"Ctrl+Insert to copy into clipboard 
+"Shift+Insert to paste from clipboard
+"Shift+Delete to cut into clipboard
+"Ctrl+a to select all
+"----------------------------
+nmap <S-Insert> "+gP
+imap <S-Insert> <ESC><S-Insert>i
+vmap <C-Insert> "+y 
+map <C-a> ggVG
+map <S-Delete> "+x
+
+
+"----------------------------
+"Mapping to desactivate highligting
+"of search results
+"----------------------------
+nnoremap <silent> <C-N> :noh<CR>
+
+"--------------------------------
+" firefox like shorcuts
+"--------------------------------
+map <C-t>     :tabnew<cr>
+map <C-left>  :tabnext<cr>
+map <C-right> :tabprevious<cr>
+map <C-o> :e
+
+"--------------------------------
+" Quickly edit/reload the vimrc file
+"-------------------------------
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+"--------------------------------
+" Use Q for formatting the current paragraph (or selection)
+"--------------------------------
+vmap Q gq
+nmap Q gqap
+
+"--------------------------------
+"If you like long lines with line wrapping enabled
+"--------------------------------
+nnoremap j gj
+nnoremap k gk
+
+"--------------------------------
+"Tired of clearing highlighted searches ?
+"--------------------------------
+nmap <silent> ,/ :nohlsearch<CR>
+
+"--------------------------------
+"For qwerty keyboards : instead of 
+"pressing "shift"+";", you will just
+"have to press ;, and say w to save.
+"-------------------------------
+"nnoremap ; :
+
+"--------------------------------
+"when you forgot to sudo before editing a file that requires root privileges
+"(typically /etc/hosts). This lets you use w!! to do that after you opened the
+"file already
+"--------------------------------
+cmap w!! w !sudo tee % >/dev/null
 
 "------------------------------------------------------------------
-"			Others
+"			MiSCELLANOUS
 "------------------------------------------------------------------
 
 "--------------------------------------------------------
@@ -186,147 +454,8 @@ function! OpenFoldOnRestore()
         unlet b:doopenfold
     endif
 endfunction
-"-----------------------------------------------------------
 
-
-
-"----------------------------------------------------------------------
-"			Abbreviations
-"----------------------------------------------------------------------
-ab ds dans
-ab bcp beaucoup
-ab letat l'État
-ab socio sociologie
-ab éco économie
-ab math mathématique
-ab btcqb baise tout ce qui bouge
-
-
-"------------------------------------------------------------------------
-"				mapping
-"------------------------------------------------------------------------
-
-"---------------------------------
-"Ctrl+Insert to copy into clipboard 
-"Shift+Insert to paste from clipboard
-"Shift+Delete to cut into clipboard
-"Ctrl+a to select all
-"----------------------------
-nmap <S-Insert> "+gP
-imap <S-Insert> <ESC><S-Insert>i
-vmap <C-Insert> "+y 
-map <C-a> ggVG
-map <S-Delete> "+x
-
-
-"----------------------------
-"Mapping to desactivate highligting
-"of search results
-"----------------------------
-nnoremap <silent> <C-N> :noh<CR>
-
-"----------------------------
-"Mapping to explorer of recent file,
-"Most recently used files
-"----------------------------
-nnoremap <silent> <F5> :Mru<CR>
-"----------------------------
-"Mapping to activate file explorer 
-"of the specified directory
-"----------------------------
-nnoremap <silent> <F4> :NERDTree /home/freeman/<CR>
-
-"-----------------------------
-"If you want to write in a non western
-"language, you will have to disable
-"the autocompletion popup.
-"-----------------------------
-"In normal mode, F8 enable it
-nmap <F8> :AcpEnable<CR>
-"And F9 disable it
-nmap <F9> :AcpDisable<CR>
-
-"----------------------------
-"Saving
-"---------------------------
-map <F2> :w<CR>
-imap <F2> <ESC>:w<CR>
-
-"----------------------------
-"Exit
-"----------------------------
-"exit
-map <F3> :q<CR>
-imap <F3> <ESC>:q<CR>
-"exit all
-map <S-F3> :qall<CR>
-imap <S-F3> <ESC>:qall<CR>
-"force Exit
-map <A-F3> :qall!<CR>
-imap <A-F3> <ESC>:qall!<CR>
-
-
-
-"------------------------------
-" Terminal
-"------------------------------
-map <S-F2> :!gnome-terminal &<CR><CR>
-imap <S-F2> <ESC>:!gnome-terminal &<CR><CR>
-
-"-------------------------------
-" Graphical file manager
-"--------------------------------
-map <F2>t :!nautilus & <CR><CR>
-map <F2>t <ESC>:!nautilus &<CR><CR>
-
-
-"--------------------------------
-" firefox like shorcuts
-"--------------------------------
-map <C-t>     :tabnew<cr>
-map <C-left>  :tabnext<cr>
-map <C-right> :tabprevious<cr>
-map <C-o> :e
-
-"--------------------------------
-" Quickly edit/reload the vimrc file
-"-------------------------------
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
-
-
-"--------------------------------
-"For qwerty keyboards : instead of 
-"pressing "shif"+";", you will just
-"have to press ;, and say w to save.
-"-------------------------------
-nnoremap ; :
-
-"--------------------------------
-" Use Q for formatting the current paragraph (or selection)
-"--------------------------------
-vmap Q gq
-nmap Q gqap
-
-"--------------------------------
-"If you like long lines with line wrapping enabled
-"--------------------------------
-nnoremap j gj
-nnoremap k gk
-
-"--------------------------------
-"Tired of clearing highlighted searches ?
-"--------------------------------
-nmap <silent> ,/ :nohlsearch<CR>
-
-"--------------------------------
-"when you forgot to sudo before editing a file that requires root privileges
-"(typically /etc/hosts). This lets you use w!! to do that after you opened the
-"file already
-"--------------------------------
-cmap w!! w !sudo tee % >/dev/null
-
-"---------------------------------------------------------------------------
+"-------------------------
 " 日本語入力に関する設定:
 "
 if has('multi_byte_ime') || has('xim')
@@ -342,5 +471,45 @@ if has('multi_byte_ime') || has('xim')
   " 挿入モードでのIME状態を記憶させない場合、次行のコメントを解除
   "inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
 endif
+
+" テキスト挿入中の自動折り返しを日本語に対応させる
+"set formatoptions+=mM
+" 日本語整形スクリプト(by. 西岡拓洋さん)用の設定
+"let format_join_spaces = 2  " 行連結時のスペースの付け方
+let format_allow_over_tw = 1    " ぶら下り可能幅
+
+"set fepctrl     " 日本語入力を可能にする
+
+
+" メッセージを日本語にする (Windowsでは自動的に判断・設定されている)
+if !(has('win32') || has('mac')) && has('multi_lang')
+  if !exists('$LANG') || $LANG.'X' ==# 'X'
+    if !exists('$LC_CTYPE') || $LC_CTYPE.'X' ==# 'X'
+      language ctype ja_JP.eucJP
+    endif
+    if !exists('$LC_MESSAGES') || $LC_MESSAGES.'X' ==# 'X'
+      language messages ja_JP.eucJP
+    endif
+  endif
+endif
+"
+" MacOS Xメニューの日本語化 (メニュー表示前に行なう必要がある)
+"if has('mac')
+"  set langmenu=japanese
+"endif
+"
+" 日本語入力用のkeymapの設定例 (コメントアウト)
+"if has('keymap')
+"  " ローマ字仮名のkeymap
+"  "silent! set keymap=japanese
+set iminsert=0 imsearch=0 " 入力時の初期状態 = IME OFF
+"endif
+"
+set whichwrap+=h,l,<,>,[,]
+" テキスト挿入中の自動折り返しを日本語に対応させる
+set formatoptions+=mM
+" 日本語整形スクリプト(by. 西岡拓洋さん)用の設定
+"let format_join_spaces = 2  " 行連結時のスペースの付け方
+let format_allow_over_tw = 1    " ぶら下り可能幅
 
 

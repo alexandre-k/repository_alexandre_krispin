@@ -1,0 +1,144 @@
+README for bash-support.vim (Version 3.2) / August 08 2010
+
+  *  INSTALLATION
+  *  RELEASE NOTES 
+  *  FILES
+  *  ADDITIONAL TIPS
+
+Bash Support implements a bash-IDE for Vim/gVim. It is written to considerably
+speed up writing code in a consistent style.  This is done by inserting
+complete statements, comments, idioms, and code snippets.  Syntax checking,
+running a script, starting a debugger  can be done with a keystroke.  There are
+many additional hints and options which can improve speed and comfort when
+writing shell scripts. 
+ 
+=======================================================================================
+  INSTALLATION
+=======================================================================================
+
+The subdirectories in the zip archive  bash-support.zip  mirror the directory
+structure which is needed below the local installation directory $HOME/.vim/ .
+
+(1) Copy the zip archive  bash-support.zip to $HOME/.vim and run
+
+      unzip bash-support.zip
+
+    If you have already an older version of bash-support and you have modified
+    the template files you may want to save your templates first and suppress
+    overwriting them with
+
+      unzip bash-support.zip  -x *Templates *.template
+
+(2) Loading of plugin files must be enabled. If not use
+      :filetype plugin on
+    This is the minimal content of the file '$HOME/.vimrc'. Create one if there
+    is none. 
+
+(3) Set at least some personal details into bash-support/templates/Templates by
+    overriding the defaults.  Here the minimal personalization (my settings as
+    an example, of course):
+
+      |AUTHOR|    = Dr. Fritz Mehner 
+      |AUTHORREF| = fgm
+      |EMAIL|     = mehner@fh-swf.de
+      |COMPANY|   = FH Südwestfalen, Iserlohn
+      |COPYRIGHT| = Copyright (c) |YEAR|, |AUTHOR|
+
+    Please read the documentation to fully understand the template system.
+
+(4) Consider additional settings in the file '$HOME/.vimrc'.
+    The files customization.vimrc and customization.gvimrc are replacements or
+    extensions for your .vimrc and .gvimrc ( _vimrc and _gvimrc under Windows).
+    You may want to use parts of them. The files are documented. 
+
+There are a lot of features and options which can be used and influenced:
+
+  *  use of template files and tags
+  *  using and managing personal code snippets
+  *  bash dictionary for keyword completion
+  *  removing the root menu
+  *  using additional plugins
+
+Restart gVim/Vim generate the help tags 
+
+  :helptags ~/.vim/doc
+
+and look at the bashsupport help with
+
+  :help bashsupport 
+
+             +-----------------------------------------------+
+             | +-------------------------------------------+ |
+             | |    ** Please read the documentation **    | |
+             | |    Actions differ for different modes!    | |
+             | +-------------------------------------------+ |
+             +-----------------------------------------------+
+
+=======================================================================================
+  RELEASE NOTES FOR VERSION 3.2
+=======================================================================================
+- New hotkey and menu entry for [[ =~ ]]
+- New for Bash 4.1: shopt 'compat40', variables '$BASHOPTS', '$BASH_XTRACEFD'.
+- Bugfixes: local installation looks like a system-wide installation in seldom cases.
+- Bugfixes: typo in 4 menu entries.
+
+=======================================================================================
+  OLDER RELEASE NOTES : see file 'ChangeLog'
+=======================================================================================
+
+=======================================================================================
+  FILES
+=======================================================================================
+
+README.bashsupport                  This file.
+
+ftplugin/sh.vim                     A filetype plugin. Defines hotkeys and more.
+
+plugin/bash-support.vim             The bash plugin for Vim/gVim.
+bash-support/scripts/wrapper.sh     A wrapper script for the use of an xterm.
+
+doc/bashsupport.txt                 The help file for the local online help. 
+
+bash-support/codesnippets/*         Some code snippets as a starting point.
+
+bash-support/templates/*            bash template files (see bashsupport.txt).
+
+bash-support/wordlists/*            Additional word lists (dictionaries).
+
+-----------------------   -------------------------------------------------------------
+-----------------------   The following files and extensions are for convenience only.
+                          bash-support.vim will work without them.
+                          -------------------------------------------------------------
+
+bash-support/rc/customization.bashrc  Additional settings I use in .bashrc: 
+                                      set the prompt P2, P3, P4 (for debugging).
+
+bash-support/rc/customization.vimrc   Additional settings I use in .vimrc: incremental 
+                                      search, tabstop, hot keys, font, use of dictionaries, 
+                                      ...  The file is commented. Append it to your .vimrc
+                                      if you like.
+
+bash-support/rc/customization.gvimrc  Additional settings I use in .gvimrc: hot keys, 
+                                      mouse settings, ...  The file is commented. 
+                                      Append it to your .gvimrc if you like.
+
+bash-support/doc/*                    Hotkey reference card (PDF), changelog. 
+
+
+=======================================================================================
+  ADDITIONAL TIPS
+=======================================================================================
+
+(1) gvim. Toggle 'insert mode' <--> 'normal mode' with the right mouse button
+    (see mapping in file customization.gvimrc).
+
+(2) gvim. Use tear off menus and
+
+(3) try 'Focus under mouse' as window behavior (No mouse click when the mouse
+    pointer is back from the menu entry).
+
+(4) Use Emulate3Buttons "on" (X11) even for a 3-button mouse. Pressing left and
+    right button simultaneously without moving your fingers is faster then
+    moving a finger to the middle button (often a wheel).
+
+=======================================================================================
