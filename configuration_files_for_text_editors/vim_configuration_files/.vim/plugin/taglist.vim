@@ -474,9 +474,9 @@ let s:tlist_def_sql_settings = 'sql;c:cursor;F:field;P:package;r:record;' .
 let s:tlist_def_tcl_settings = 'tcl;c:class;f:method;m:method;p:procedure'
 
 " tex language
-"let s:tlist_def_tex_settings = 'tex;s:section;c:chapter;l:label;r:ref'
-" tex language
-"let s:tlist_def_latex_settings = 'latex;s:section;c:chapter;l:label;r:ref'
+"let s:tlist_tex_settings = 'tex;s:section;c:chapter;l:label;r:ref'
+let s:tlist_tex_settings   = 'latex;s:sections;g:graphics;l:labels'
+let s:tlist_make_settings  = 'make;m:makros;t:targets'
 
 " vera language
 let s:tlist_def_vera_settings = 'vera;c:class;d:macro;e:enumerator;' .

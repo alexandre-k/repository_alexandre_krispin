@@ -6,4 +6,4 @@ set lines=150
 set guioptions-=T 	" don't show the toolbar
 "set guioptions-=m 	" don't show the menu
 set guioptions-=r 	" don't need right scrollbar
-set guioptions-=L 	" don't show left scrollbarz^
+set guioptions-=L 	" don't show left scrollbars

@@ -120,7 +120,6 @@ set guifont=Inconsolata\ 12 " very nice, but leaves terrible artefacts with nati
 "endif
 
 
-
 "------------------
 "formatting
 "------------------
@@ -145,15 +144,15 @@ set shiftwidth=4  " number of spaces to use for autoindenting
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set smarttab      " insert tabs on the start of a line according to
                   "    shiftwidth, not tabstop
-
+set comments+=:%,:\\begin{,:\\end{,:\\title{,:\\author{,:\\subtitle{,:\\part{,:\\chapter{,:\\section{,:\\subsection{,:\\subsubsection{,:\\paragraph,:\\subparagraph{,:\\usepackage{,:\\documenclass{,:\\usepackage[,:\\item[,:\\item
 "setlocal indentkeys+=},=\\item,=\\bibitem,=\\else,=\\fi,=\\or,=\\]
 
 "--------------------------
 " indentation automatique (à la Emacs)
-vnoremap <C-J>   =$
-vnoremap <tab>   =
-nnoremap <tab>   =$
-nnoremap <C-tab> mzvip=`z
+"vnoremap <C-J>   =$
+"vnoremap <tab>   =
+"nnoremap <tab>   =$
+"nnoremap <C-tab> mzvip=`z
 
 "let g:tex_indent_items = 1
 
@@ -239,14 +238,14 @@ set guitabtooltip=%!GuiTabToolTip()
 "--------------
 "to enable spell checking by default, uncomment the following line,
 "set spell
-" automatic spell checking in your language for .txt et .tex. Replace "fr" it by your default
+" automatic spell checking in your language for .txt et .tex. Replace "fr" by your default
 " language, "en" if english :
 
 "augroup filetypedetect
   "au BufNewFile,BufRead *.txt setlocal spell spelllang=fr
   "au BufNewFile,BufRead *.tex setlocal spell spelllang=fr
 "augroup END
- 
+
  "------------------------------------
 " painless spell checking
 " for French, you'll need
@@ -277,16 +276,18 @@ function s:spell_en()
         setlocal spell spelllang=
     endif
 endfunction
- 
-" mapping français
-noremap  <F12>  :call <SID>spell_fr()<CR>
-inoremap <F12>  :call <SID>spell_fr()<CR>
-vnoremap <F12>  :call <SID>spell_fr()<CR>
-" mapping English
-noremap  <A-F12> :call <SID>spell_en()<CR>
-inoremap <A-F12> :call <SID>spell_en()<CR>
-vnoremap <A-F12> :call <SID>spell_en()<CR>
 
+"See mapping for spell checking in the relevant section, l. 361
+
+"--------Another trick for spell checking is the following line :
+"uncomment if you want to use it, type ",C" if you want to enable it,
+"and replace aspell by any other dictionary you use (ispell, hunspell)
+"map ,C :w<CR>:!aspell -c %<CR>:e %<CR>"
+
+"---------------------------
+"For tags, but doesn't work
+let tlist_tex_settings   = 'latex;s:sections;g:graphics;l:labels'
+let tlist_make_settings  = 'make;m:makros;t:targets'
 
 "------------------------------------------------------------------------
 "				MAPPING
@@ -345,6 +346,7 @@ imap <F8> <ESC>:Mru<CR>
 "-------------
 nmap <unique> <silent> <F10> <Plug>SelectBuf
 noremap <silent> <Plug>SelBufHelpKey <A-F10>
+
 "-----------------------------
 "Compiling and viewing its .tex file
 "with XeLaTeX and evince (set in tex.vim)
@@ -355,6 +357,16 @@ imap <F11> <ESC>;ll ;lv<CR>
 "Compile only
 map <A-F11> ;ll<CR>
 imap <A-F11> ;ll<CR>
+
+"--------------------------
+"To enable spell checking for french :
+noremap  <F12>  :call <SID>spell_fr()<CR>
+inoremap <F12>  :call <SID>spell_fr()<CR>
+vnoremap <F12>  :call <SID>spell_fr()<CR>
+" and for english :
+noremap  <A-F12> :call <SID>spell_en()<CR>
+inoremap <A-F12> :call <SID>spell_en()<CR>
+vnoremap <A-F12> :call <SID>spell_en()<CR>
 
 "---------------------------------
 "Ctrl+Insert to copy into clipboard 
@@ -402,9 +414,32 @@ nnoremap j gj
 nnoremap k gk
 
 "--------------------------------
+" unmap arrows/pgdn/pgup so you learn to use hjkl
+map <Left> \
+map <Right> \
+map <Up> \
+map <Down> \
+map <PageUp> \
+map <PageDown> \
+ 
+imap <Left> <nop>
+imap <Right> <nop>
+imap <Up> <nop>
+imap <Down> <nop>
+imap <PageUp> <nop>
+imap <PageDown> <nop>
+"--------------------------------
 "Tired of clearing highlighted searches ?
 "--------------------------------
 nmap <silent> ,/ :nohlsearch<CR>
+
+"--------------------------------
+"Will search the word in firefox where
+"the cursor is when typing g in visual mode
+"big thanks to http://la.firme.perso.esil.univmed.fr/website/article.php3?id_article=70 
+vmap f :<C-U>!firefox "http://www.google.fr/search?hl=fr&q=<cword>&btnG=Recherche+Google&meta=" &gt;& /dev/null<CR><CR>
+"A similar behaviour but for Wikipedia
+vmap w :<C-U>!firefox "http://en.wikipedia.org/wiki/<cword>" >& /dev/null<CR><CR>
 
 "--------------------------------
 "For qwerty keyboards : instead of 
@@ -472,44 +507,10 @@ if has('multi_byte_ime') || has('xim')
   "inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
 endif
 
-" テキスト挿入中の自動折り返しを日本語に対応させる
-"set formatoptions+=mM
-" 日本語整形スクリプト(by. 西岡拓洋さん)用の設定
-"let format_join_spaces = 2  " 行連結時のスペースの付け方
-let format_allow_over_tw = 1    " ぶら下り可能幅
-
-"set fepctrl     " 日本語入力を可能にする
-
-
-" メッセージを日本語にする (Windowsでは自動的に判断・設定されている)
-if !(has('win32') || has('mac')) && has('multi_lang')
-  if !exists('$LANG') || $LANG.'X' ==# 'X'
-    if !exists('$LC_CTYPE') || $LC_CTYPE.'X' ==# 'X'
-      language ctype ja_JP.eucJP
-    endif
-    if !exists('$LC_MESSAGES') || $LC_MESSAGES.'X' ==# 'X'
-      language messages ja_JP.eucJP
-    endif
-  endif
-endif
-"
-" MacOS Xメニューの日本語化 (メニュー表示前に行なう必要がある)
-"if has('mac')
-"  set langmenu=japanese
-"endif
-"
 " 日本語入力用のkeymapの設定例 (コメントアウト)
 "if has('keymap')
 "  " ローマ字仮名のkeymap
 "  "silent! set keymap=japanese
 set iminsert=0 imsearch=0 " 入力時の初期状態 = IME OFF
 "endif
-"
-set whichwrap+=h,l,<,>,[,]
-" テキスト挿入中の自動折り返しを日本語に対応させる
-set formatoptions+=mM
-" 日本語整形スクリプト(by. 西岡拓洋さん)用の設定
-"let format_join_spaces = 2  " 行連結時のスペースの付け方
-let format_allow_over_tw = 1    " ぶら下り可能幅
-
 
