@@ -30,24 +30,24 @@ autocmd Filetype tex,latex :set dictionary=~/.vim/ftplugin/latex-suite/dictionar
 "----------------------------------------------------------------------
 "			Abbreviations
 "----------------------------------------------------------------------
-ab ds dans
-ab bcp beaucoup
-ab qqn quelqu'un
-ab qqc quelque chose
-ab pol politique
-ab leurope l'Europe
-ab tv télévision
-ab ceca CECA
-ab ue Union Européenne
-ab ce Commission Européenne
-ab AL Amérique Latine
-ab letat l'État
-ab socio sociologie
-ab éco économie
-ab math mathématique
-ab xelatex \XeLaTeX
-ab latex \LaTeX
-ab ak Alexandre Krispin
+iab ds dans
+iab bcp beaucoup
+iab qqn quelqu'un
+iab qqc quelque chose
+iab pol politique
+iab leurope l'Europe
+iab tv télévision
+iab ceca CECA
+iab ue Union Européenne
+iab CE Commission Européenne
+iab AL Amérique Latine
+iab letat l'État
+iab socio sociologie
+iab éco économie
+iab math mathématique
+iab xelatex \XeLaTeX
+iab latex \LaTeX
+iab ak Alexandre Krispin
 
 
 "---------------------------------------------------------------------------
