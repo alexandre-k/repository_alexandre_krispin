@@ -55,10 +55,6 @@ iab ak Alexandre Krispin
 "---------------------------------------------------------------------------
 
 "--------------------------------
-"Change the mapleader from \ to ,
-let mapleader=";"
-
-"--------------------------------
 "fixing of é letter :
 imap <buffer> <leader>it <Plug>Tex_InsertItemOnThisLine
 imap <C-b> <Plug>Tex_MathBF

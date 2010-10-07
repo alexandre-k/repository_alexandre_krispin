@@ -1,0 +1,75 @@
+% cv example for classicthesis.sty
+\documentclass[10pt,a4paper]{scrartcl}
+\usepackage[LabelsAligned]{currvita} % nice cv style
+\usepackage{url} \usepackage[nochapters]{classicthesis}
+\usepackage[frenchb]{babel}
+\renewcommand*{\cvheadingfont}{\LARGE\color{Maroon}}
+\renewcommand*{\cvlistheadingfont}{\large}
+\renewcommand*{\cvlabelfont}{\qquad}
+\usepackage{graphicx}
+\begin{document}
+\pagestyle{empty}
+\begin{cv}{\spacedallcaps{Curriculum Vit\ae}}
+  % \pdfbookmark[1]{Pers\"onliche Daten}{PersDat}
+  \begin{cvlist}{\spacedlowsmallcaps{Informations
+        personnelles}}\label{PersDat}
+\item Alexandre Krispin
+\item 12 avenue Laumi\`ere \\
+    75019 Paris
+  \item \no t\'el : 06 28 76 69 34
+  \item N\'e le 25 ao\^ut 1986 \\
+    \'Etudiant \`a Paris 8
+  \end{cvlist}
+
+  % \pdfbookmark[1]{Irgendwas}{irgendwas}
+  \begin{cvlist}{\spacedlowsmallcaps{Formation}}\label{formation}
+
+  \item[2009-2010] Licence 2\ieme~ann\'ee en Science politique\\
+    (Université Paris 8 \textemdash~Saint-Denis)
+
+  \item[2007-2009] Master de Japonais, sp\'ecialit\'e civilisation japonaise\\
+    (INALCO \textemdash~Paris)
+
+  \item[2006-2007] Licence LLCE sp\'ecialit\'e Japonais\\
+    (INALCO \textemdash~Paris)
+
+  \item[2005-2006] DULCO de Japonais\\
+    (INALCO \textemdash~Paris)
+
+  \item[2004] Baccalaur\'eat scientifique\\
+    sp\'ecialit\'e Physique-chimie
+
+  \item[Langues] \textbf{Anglais :} lu, \'ecrit, parl\'e\\
+    \textbf{Japonais :} lu, \'ecrit, parl\'e\\
+    \textbf{Allemand :} scolaire\\
+
+  \item[Informatique] Ma\^itrise de Microsoft Office, \LaTeXe, Vim, Emacs, Gnuplot,
+    Illustrator, syst\`emes Unix (GNU/Linux, Mac OSX, FreeBSD)
+
+  \end{cvlist}
+
+  \begin{cvlist}{\spacedlowsmallcaps{Exp\'eriences
+        professionnelles}}\label{experiences}
+
+  \item[avril 2010] Magasinier \`a l'IHEJ
+
+    Coll\`ege-de-France - Paris
+
+  \item[juillet-ao\^ut 2005] Magasinier \`a Gedimat
+
+    Thonon-les-bains
+
+  \end{cvlist}
+
+  \begin{cvlist}{\spacedlowsmallcaps{Centres
+        d'int\'er\^ets}}\label{interets}
+
+  \item[Sports] j\^ud\^o, j\^ujits\^u, boxe
+
+  \item[Loisirs] musique, lecture
+
+  \end{cvlist}
+
+\end{cv}
+\end{document}
+

@@ -330,7 +330,9 @@ imap <A-F3> <ESC>:qall!<CR>
 "of the specified directory
 "----------------------------
 "To display NERDTree
-nnoremap <silent> <A-F4> :NERDTree /home/freeman/<CR>
+map <silent> <S-F4> :NERDTree /home/freeman/<CR>
+nmap <silent> <S-F4> :NERDTree /home/freeman/<CR>
+
 " To display VimExplorer
 nmap <silent> <F4> :VE %:p:h<CR>
 
@@ -422,16 +424,25 @@ map <Down> \
 map <PageUp> \
 map <PageDown> \
  
-imap <Left> <nop>
-imap <Right> <nop>
-imap <Up> <nop>
-imap <Down> <nop>
-imap <PageUp> <nop>
-imap <PageDown> <nop>
+nmap <Left> <nop>
+nmap <Right> <nop>
+nmap <Up> <nop>
+nmap <Down> <nop>
+nmap <PageUp> <nop>
+nmap <PageDown> <nop>
+
 "--------------------------------
-"Tired of clearing highlighted searches ?
-"--------------------------------
-nmap <silent> ,/ :nohlsearch<CR>
+"Change the mapleader from \ to ,
+let mapleader=";"
+
+"-------------------------------
+"Insert a character at the end of lines
+imap <silent><S-F1> <Esc>v`^me<Esc>gi<C-o>:call Ender()<CR>
+function Ender()
+  let endchar = nr2char(getchar())
+  execute "normal \<End>a".endchar
+  normal `e
+endfunction
 
 "--------------------------------
 "Will search the word in firefox where
