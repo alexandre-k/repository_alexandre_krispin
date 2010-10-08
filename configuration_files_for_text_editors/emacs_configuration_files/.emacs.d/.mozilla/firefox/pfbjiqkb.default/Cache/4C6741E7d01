@@ -1,0 +1,1412 @@
+/* Global Styles
+----------------------------------------------------------------------*/
+html, body {height: 100%; color: #5e5e5e;}
+#doc3 {min-height: 100%; height: auto !important; height: 100%; margin: 0 0 -262px; background: transparent url(http://a.fsdn.com/sf/images/develop/header-back.png) repeat-x 0 5px !important;}
+body.short-head #doc3 {background: transparent url(http://a.fsdn.com/sf/images/develop/header-back-proj.png) repeat-x 0 5px !important; }
+#doc4-b {width:74.923em; margin: 0 auto 13px; clear: both; height: 240px;}
+#ie6only #doc4-b {width:73.05em;}
+.footer-push {height: 262px;}
+
+.clear {display: block; clear: both;}
+
+.standard-margin {margin-bottom: 11px;}
+small {font-size: 77%}
+p {line-height: 160%; margin-bottom: 1em;}
+.actions { float: right;}
+.actions li {margin: 0 5px !important;}
+.searchin {left: 50em !important}
+
+/* Links
+----------------------------------------------------------------------*/
+a {color: #0092e8; text-decoration:none;}
+a:hover {text-decoration:underline;}
+a strong {font-weight: bold;}
+.link-more {padding-right:17px;background:url(http://a.fsdn.com/sf/images/develop/icons/small-arrow.png) no-repeat 100% .2em;}
+
+/* Rulers
+----------------------------------------------------------------------*/
+.hr {overflow:hidden;zoom:1;height:0;font-size:0;margin:15px 0;border-top:1px solid #ccc;}
+    .hr hr {display:none;}
+.hr-dotted {border:none 0;height:1px;background:transparent url(http://a.fsdn.com/sf/images/develop/grey-dots.gif) repeat-x 0 0;}
+
+/* Icons
+----------------------------------------------------------------------*/
+.icon {display: inline-block; padding: 4px 0 5px 29px; background-repeat: no-repeat; background-position: 0 0;}
+.icon.arrow-icon {background-image: url(http://a.fsdn.com/sf/images/develop/icons/small-arrow.png); padding-left: 17px; background-position: 0 50%;}
+.icon.post-icon, .icon.forum {background-image: url(http://a.fsdn.com/sf/images/develop/icons/post.png);}
+.icon.bug-icon, .icon.ticket, .icon.bug, .icon.tracker {background-image: url(http://a.fsdn.com/sf/images/develop/icons/bug.png);}
+.icon.check-icon, .icon.code {background-image: url(http://a.fsdn.com/sf/images/develop/icons/check.png);}
+.icon.news-icon, .icon.news {background-image: url(http://a.fsdn.com/sf/images/develop/icons/news.png);}
+.icon.project-icon, .icon.project {background-image: url(http://a.fsdn.com/sf/images/develop/icons/project.png);}
+.icon.files-icon, .icon.file, .icon.files {background-image: url(http://a.fsdn.com/sf/images/develop/icons/files.png);}
+.icon.share-icon, .icon.share {background-image: url(http://a.fsdn.com/sf/images/develop/icons/add.png);}
+.icon.subscribe-icon, .icon.subscribe {background-image: url(http://a.fsdn.com/sf/images/develop/icons/subscribe.png);}
+.icon.donate-icon, .icon.donate {background-image: url(http://a.fsdn.com/sf/images/develop/icons/donate.png);}
+
+.icon.download-icon {background-image: url(http://a.fsdn.com/sf/images/develop/icons/download.png);}
+.icon.download-icon-2 {background-image: url(http://a.fsdn.com/sf/images/develop/icons/download-2.png); padding-left: 24px; padding-top: 2px; color: #46b907;}
+
+.icon-sm {display: inline-block; padding: 4px 0 5px 19px; text-indent: -7000em; background-repeat: no-repeat; background-position: 0 4px;}
+.icon-sm.rss {background-image: url(http://a.fsdn.com/sf/images/develop/icons/rss.png);}
+.icon-sm.notes-sm {background-image: url(http://a.fsdn.com/sf/images/develop/icons/notes.png);}
+.icon-sm.monitor {background-image: url(http://a.fsdn.com/sf/images/develop/icons/monitor.png); padding-right: 4px;}
+
+    /* os-icon */
+    .icon.os-icon {}
+    .icon.os-icon.vista-icon {background-image: url(http://a.fsdn.com/sf/images/develop/icons/vista.png);}
+
+/* Buttons
+----------------------------------------------------------------------*/
+.button {display: block; margin: 0; padding: 0 17px 0 0; float: left; clear: none; background: transparent url(http://a.fsdn.com/sf/images/develop/buttons/default.png) no-repeat 100% -26px; position: relative;text-decoration:none !important;}
+.button span {display: block; margin: 0; padding: 3px 6px 7px 9px; float: left; clear: none; background: transparent url(http://a.fsdn.com/sf/images/develop/buttons/default.png) no-repeat 0 -26px; position: relative; cursor: pointer;}
+.button span button {background: none; border: none; cursor: pointer; margin: 0; padding: 0; color: #0092e8;}
+
+.button-more {padding: 0 20px 0 0;background: transparent url(http://a.fsdn.com/sf/images/develop/buttons/more.png) no-repeat 100% -26px;}
+.button-more span {background: transparent url(http://a.fsdn.com/sf/images/develop/buttons/more.png) no-repeat 0 -26px;}
+
+.button-dload {padding: 0 37px 0 0;background: transparent url(http://a.fsdn.com/sf/images/develop/buttons/dload.png) no-repeat 100% -50px;}
+.button-dload span {height:30px;padding:10px 7px 10px 11px;background: transparent url(http://a.fsdn.com/sf/images/develop/buttons/dload.png) no-repeat 0 -50px;color:#92ff30;}
+    .button-dload span strong {font-weight:bold;color:#fff;font-size:108%;display:block;line-height:1;}
+
+.button:hover {background-position:100% 0;}
+.button:hover span {background-position:0 0;}
+
+/* sfBox
+----------------------------------------------------------------------*/
+.sfBox {background: #fff url(http://a.fsdn.com/sf/images/develop/boxes/grey-bar.gif) repeat-x 0 0; border: 1px solid #d2d2d2; border-width: 0 1px 1px 1px; padding: 16px 11px 13px 14px; margin-bottom: 15px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; -moz-border-radius-bottomleft: 5px; -moz-border-radius-bottomright: 5px; -webkit-border-bottom-left-radius: 5px; -webkit-border-bottom-right-radius: 5px;}
+
+.sfBox-notop {width: 60%; background: #FFF; border: 1px solid #d2d2d2; border-width: 1p 1px 1px 1px; padding: 11px 20px 13px 14px; margin-bottom: 15px; margin-top:15px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; -moz-border-radius-bottomleft: 5px; -moz-border-radius-bottomright: 5px; -webkit-border-bottom-left-radius: 5px; -webkit-border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px; border-top-right-radius: 5px; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; -webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px;
+    }
+
+    /* Blue */
+    .sfBox.sfBox-blue {background-image: url(http://a.fsdn.com/sf/images/develop/boxes/blue-bar.gif); border: 1px solid #9ed6f6;border-width:0 1px 1px;}
+    .feed.sfBox-blue .header { background:#E8F5FD; border-bottom:1px solid #CEEAFB; margin:-10px -11px 10px -14px; padding:10px 15px; }
+    #bd .feed.sfBox-blue .header h2 {color: #5e5e5e;}
+    .feed .subscribe {text-indent: -7000em}
+
+        /* Hot */
+        .sfBox.b-hot {background-image: url(http://a.fsdn.com/sf/images/develop/boxes/whatshot-bar.gif); background-position: right top; border-width:0 1px 1px;}
+    .sfBox.b-hot .downloading .yui-gc {background:#E8F5FD; border-bottom:1px solid #CEEAFB; margin:-10px -11px 10px -14px; padding:10px 15px 5px;}
+    .sfBox.b-hot .toolbar {clear: both; background:#E8F5FD; border-top: 1px solid #CEEAFB; border-bottom:1px solid #CEEAFB; margin: 10px -11px 10px -14px; padding:10px 15px 5px;}
+
+
+/* Headers
+----------------------------------------------------------------------*/
+.header {position: relative;}
+.header strong {font-weight: bold;}
+
+    /* head-main */
+    #hd .header.head-main h1, #bd h1 {font-size: 167% !important; color: #3e3e3e; margin-bottom: 6px; line-height: 1.3em;}
+    #bd h1, h1 a {color: #5E5E5E}
+
+    /* head-sub */
+    #hd .header.head-sub h3 {font-size: 138.5%; color: #006ca8; font-weight: bold; margin-bottom: 4px;}
+
+    /* sub_header */
+    .sub_header{color:#696969; padding:0px 14px 5px 5px; margin:0 -11px 10px -14px; background: transparent url(http://a.fsdn.com/sf/images/develop/header-back.png) repeat-x 0 -60px !important; border-bottom:1px solid #CEEAFB;}
+
+    /* dotted-header-1 */
+    #bd .titlebar,  #bd h2 {font-size: 116%; font-weight: bold; color: #5E5E5E; clear: both;}
+    #bd h3 {font-weight: 108%; font-weight: bold; color: #5E5E5E; margin: 0 0 7px;}
+    #bd .titlebar, .header.dotted-header-1 h1, .header.dotted-header-1 h2, .header.dotted-header-1 h3 {background: transparent url(http://a.fsdn.com/sf/images/develop/grey-dots.gif) repeat-x 0 100%; padding-bottom: 5px; margin: 5px 0 15px; border: none; padding-left: 0;}
+    .sfBox .header.dotted-header-1 h3 {font-size: 108%; margin: 0 0 6px; font-weight: bold; color: #0171b0; }
+.header .actions {margin-right: 40px; z-index: 2000;}
+
+/* Lists
+----------------------------------------------------------------------*/
+
+    /* arrow-list */
+    .arrow-list {padding-top: 7px; margin-bottom: 9px;}
+    .arrow-list li {background: transparent url(http://a.fsdn.com/sf/images/develop/icons/small-arrow.png) no-repeat 0 50%; padding-left: 17px; margin-bottom: 5px;}
+
+    /* .item-list */
+    .blog-twitter-container .item-list { overflow: auto; height: 135px;  }
+    .item-list p {line-height: 140%; font-size: 93%;}
+    .blog-twitter-container .item-list a {font-weight: bold;}
+    .blog-twitter-container .item-list small a {font-weight: normal}
+    .item-list .item-img {float: left; display: inline; margin: 0 10px 0 0; padding: 3px; border: 1px solid #c4c4c4;}
+    .screenshot {margin: 0 0 10px 10px}
+    .screenshot img { padding: 3px; border: 1px solid #c4c4c4; margin: 0 !important}
+    .item-list .item {margin-bottom: 10px;}
+        .item-list .item P SMALL {font-size:77%;line-height:1.6;text-transform:uppercase;}
+
+    /* tab-nav */
+    .tab-nav {margin: 0 0 5px -8px;}
+    .tab-nav li {float: left; clear: none; height: 25px; padding: 4px 8px 0;}
+    .tab-nav li.selected {background: transparent url(http://a.fsdn.com/sf/images/develop/nav/tab-right.gif) no-repeat 100% 0; padding: 0 5px 0 0; position: relative;}
+    .tab-nav li.selected span {font-weight: bold; display: block; padding: 4px 4px 3px 8px; text-align: center; background: transparent url(http://a.fsdn.com/sf/images/develop/nav/tab-left.gif) no-repeat 0 0;}
+    .tab-nav li.selected em.arrow {position: absolute; bottom: -5px; left: 50%; margin-left: -6px; width: 12px; height: 9px; overflow: hidden; background-image: url(http://a.fsdn.com/sf/images/develop/nav/tab-arrow.gif);}
+
+    #menu_account_index_index {margin-left: 10px;}
+    #menu_account_index_index:not(.selected) {background: none;}
+    #menu_consume_summary {background: none;}
+
+    .nav {margin: 0 0 25px -8px !important}
+    .nav li.tier {float: left; clear: none; margin: 0 !important; padding: 4px 8px 0 !important;}
+    .selected li a {padding: .5em .7em}
+        .selected {
+                background-position: 0 -1726px;
+            padding:0 0 0 8px;
+            margin: 3px 0 0;
+            }
+        .selected span {
+        background-position: 0 -1726px;
+            display:block;
+            }
+        .selected a {padding: 0;}
+
+
+    #ieonly .nav {position: relative; z-index: 10000;}
+
+/* Header section
+----------------------------------------------------------------------*/
+#hd {display: block; margin: 0 0 15px; padding: 8px 0 0;}
+body.short-head #hd {background: none; height: 84px;}
+
+    /* yui-b */
+    #hd .yui-b {position: relative; width: 74.923em; height: 95px; margin: 0 auto; text-align: left;}
+    #ie6only #hd .yui-b {width: 73.05em;}
+
+    /* logo */
+    #logo {display: block; margin: 0 0 3px; padding: 10px 0 2px 213px; height: 23px; overflow: hidden; clear: none; background: transparent url(http://a.fsdn.com/sf/images/develop/logo.png) no-repeat 0 0; color: #7f7f7f; text-transform: uppercase; font-size: 77%; position: relative;}
+
+    /* metaNav */
+    #metaNav {font-size:93%; display: block; margin: 3px 0 0; padding: 0; color: #d2d2d2; font-weight: normal; float: right; clear: none; white-space: nowrap; overflow: hidden;}
+    #metaNav strong { margin-right: 1em; color: #5e5e5e}
+    #metaNav a { font-weight: bold; padding:0 5px; }
+    #metaNav strong a {background: none; font-weight: normal}
+
+.arwd {background: transparent url(http://a.fsdn.com/sf/images/develop/icons/small-arrow.png) no-repeat; padding: 20px}
+.arwu {background: transparent url(http://a.fsdn.com/sf/images/develop/icons/small-darr.gif) no-repeat; padding: 20px}
+
+    /* Header Navigation */
+    #nav {display: block; margin: 0 0 0 -10px; padding: 0; width: 100%; height: 49px; clear: both; font-size: 116%;}
+    #nav li {float: left; clear: none; background: transparent url(http://a.fsdn.com/sf/images/develop/nav/nav-split.gif) no-repeat 100% 14px;}
+    #nav li.last {background-image: none;}
+    #nav li a {display: block; margin: 0; padding: 15px 10px 14px; color: #0092e8; position: relative; font-weight: normal;}
+    #nav li a:hover {text-decoration: none; padding-bottom: 8px; border-bottom: 2px solid #0092e8;}
+
+    /* search form */
+    #hd .search {float: right; width: 314px}
+    #hd .sfBox.search {float: none; display: block; margin: 0 0 2px; padding: 9px 0 0 9px; width: 390px; height: 44px; background: transparent url(http://a.fsdn.com/sf/images/develop/forms/search-header.png); border-width: 0;}
+    #hd .search input.text {font-size: 108%; display: block; margin: 0; padding: 9px 0 0 35px; border-width: 0; width: 200px; border-right: 1px solid #ccc; height: 26px; float: left; clear: none; background-image: url(http://a.fsdn.com/sf/images/develop/forms/search-header-input.png);}
+    #hd #additional-h .search input.text {width: 268px}
+        #hd .search input.hint {color:#7e7e7e;}
+    #hd .search button {color: #fff; display: block; margin: 0 0 0 7px; padding: 0 0 4px; border-width: 0; font-weight: bold; width: 71px; height: 36px; float: left; clear: none; background: transparent url(http://a.fsdn.com/sf/images/develop/buttons/search-green.png) no-repeat 0 0; cursor: pointer;}
+    #ie6only #hd .search button {background-image: url(http://a.fsdn.com/sf/images/develop/buttons/search-green-ie6.png);}
+    #hd .sfPickOS {margin: 0 0 0 8px; font-size:93%;}
+
+    /* additional-h */
+    #hd .yui-b #additional-h .yui-u {width:55.5713%; padding-top: 16px;}
+    #hd .yui-b #additional-h .yui-u.first {width:42.6286%; padding-top: 13px;}
+
+        /* text */
+        #additional-h .dotted-link {display: block; margin: 0 0 0 5px; padding: 5px 0 0 0; float: left; clear: none; color: #006ca8; border-bottom: 1px dotted #006ca8;text-decoration:none; font-size: 93%; font-weight: bold;}
+
+/* Body */
+#bd {display: block; padding: 0;}
+
+#nav li, .b-hornav .selected a, .b-hornav .selected span, .b-hornav .selected span span, #subnav li a, #subnav .inner:hover, #subnav .inner.hover, .flyout, .flyout li, .flyout.single, .flyout .frame, .flyout.single .frame, .selected, .selected .arrow, .selected span  {background: url(http://a.fsdn.com/sf/images/develop/nav/nav-sprite.png) no-repeat 170px -1842px; text-decoration:none;}
+
+/* Sidebar */
+.sidebar {margin-top: -10px;}
+
+    /* subnav */
+    #sidebar .subnav h3 {font-size:116%;font-weight:bold;color:#525252;margin:0 0 .5em;}
+
+    #sidebar #subnav li {display: block; background: transparent url(http://a.fsdn.com/sf/images/develop/grey-dots.gif) repeat-x 0 100%;margin:-1px 0 0;zoom: 1;}
+    #sidebar #subnav li a {display: block; margin: 0; padding: 4px 1px 4px 8px; background: transparent url(http://a.fsdn.com/sf/images/develop/nav/nav-arrow.png) no-repeat 100% 6px;zoom:1;height:17px;text-decoration:none;}
+    #sidebar #subnav li:hover a, #sidebar #subnav li.hover a {color: #5E5E5E;}
+
+        /* flyout */
+        #sidebar #subnav .inner:hover, #sidebar #subnav .inner.hover {background: transparent url(http://a.fsdn.com/sf/images/develop/nav/flyout-item-top.gif) no-repeat 0 0;position:relative;}
+        #sidebar #subnav .inner:hover a, #sidebar #subnav .inner.hover a {background: transparent url(http://a.fsdn.com/sf/images/develop/nav/flyout-item-bottom.gif) no-repeat 0 100%;}
+        #sidebar #subnav li .flyout {display: none; position: absolute; top: 0; left: 12.5em; background: #fff url(http://a.fsdn.com/sf/images/develop/nav/flyout-top.gif) no-repeat 0 0; width: 435px; z-index: 1; zoom: 1; margin-bottom: 10px;}
+        #sidebar #subnav li .flyout.single {width: 230px; background: #fff url(http://a.fsdn.com/sf/images/develop/nav/flyout-top-single.gif) no-repeat 0 0;}
+        #sidebar #subnav li .flyout .frame {background: transparent url(http://a.fsdn.com/sf/images/develop/nav/flyout-bottom.gif) no-repeat 100% 100%; padding: 10px; overflow: hidden; margin-bottom: -10px;}
+            #ie6only #sidebar #subnav li .flyout .frame {margin-bottom: 0; height: 100%; position: relative; top: 10px;}
+        #sidebar #subnav li .flyout.single .frame {background: transparent url(http://a.fsdn.com/sf/images/develop/nav/flyout-bottom-single.gif) no-repeat 100% 100%;}
+        #sidebar #subnav li:hover .flyout, #sidebar #subnav li.hover .flyout {display: block;}
+        #sidebar #subnav li .flyout .related {display: none;}
+        #sidebar #subnav li .flyout li {background-image: none;}
+        #sidebar #subnav li .flyout li:hover {font-weight: bold;}
+        #sidebar #subnav li .flyout li a, #sidebar #subnav li:hover .flyout li a, #sidebar #subnav li.hover .flyout li a {padding: 0; background-image: none;}
+        #sidebar #subnav li .flyout div.first {border-right: 1px dotted #b5b5b5;}
+        #sidebar #subnav li .inner {display: block; padding: 0; margin: 0;}
+
+        #sidebar #subnav li .flyout li {background:url(http://a.fsdn.com/sf/images/develop/nav/flyout-bull.gif) no-repeat 7px 55%;padding:0 0 0 20px;margin:.25em 0;font-weight:normal !important;}
+        #sidebar #subnav li .flyout li A {color:#0092e8;}
+        #sidebar #subnav li .flyout li A:hover {font-weight:normal;text-decoration:underline;}
+        #sidebar #subnav li .flyout li STRONG,  #sidebar #subnav li .flyout li STRONG A {font-weight:bold !important}
+
+
+/* Tables
+----------------------------------------------------------------------*/
+
+.facet-list-title {font-weight: bold; margin-bottom: 0.2em;}
+.facet-list-title:hover {text-decoration: underline; cursor: pointer;}
+.facet-list {margin-left: 1em;}
+.facet-list.parent {margin-bottom: 0.5em;}
+.facet {position: relative;margin-bottom: 0.3em;}
+.facet a {margin-right: 2em;}
+.facet.active {margin-left: -1.2em; padding: 0.3em 1.2em; margin-bottom: 2px; background: #0092E8; color: #fff;border-radius: 6px;-moz-border-radius: 6px;-webkit-border-radius: 6px;}
+.facet.active a {color: #fff;}
+.facet-count {font-size: 85%; color: #aaa;}
+.facet-count {position: absolute; right: 0.4em;}
+.facet-remove {position: absolute; right: 0.65em;}
+.showmore {color: #5e5e5e;}
+.showmore:hover {text-decoration: underline; cursor: pointer;}
+#searchtable {margin: 0; border-collapse:separate;}
+#searchtable td, #searchtable th {padding: 10px 0; text-align: center; background-image: none;}
+th {font-weight: bold; border: 1px solid #ccc; background: #eee; background-image: none;}
+#searchtable tr th a {color: #5e5e5e;}
+td, th {padding: 10px 5px; font-size: 93%}
+#searchtable th.select {background-color: #ddd;}
+#searchtable td.select {font-weight: bold;}
+table {margin: 1em 0; width: 100%}
+.sfBox .help {text-align: right}
+caption {display: none}
+#searchtable .recommended, #searchtable .downloads {padding-left: 1em;}
+#searchtable td.description small {color: #aaa; font-weight: normal;}
+#searchtable .description {font-size: 100%; max-width: 500px; overflow: hidden; vertical-align: top; text-align: left; padding-right: 1em;}
+.sfBox .pageselect div {width:48.5%; height: 1.7em; line-height: 1.7em; vertical-align: middle;}
+.sfBox .pageselect .pagebox {background-color: #fff; padding: 0.3em 0.7em; border: 1px solid #9ed6f6;}
+.sfBox .pageselect strong.pagebox {background-color: #eee; border-color: #ccc;}
+#searchtable td.stats div {margin-bottom: 0.3em;}
+#searchtable .downloadnow {display: block;height: 1.5em;line-height: 1.5em;color: #fff;border-radius: 8px;-moz-border-radius: 8px;-webkit-border-radius: 8px;background-color: #3BB001;padding: 0.3em 0 0.3em 1em;border: 1px solid #226301;}
+#searchtable .downloadnow span {font-weight: bold;}
+#searchtable .downloadnow .arrow {float: right; margin-right: 1em;}
+#searchtable .dotted td {border-bottom: 1px dotted #ddd;}
+#searchtable .stats {width: 180px; font-size: 100%; overflow:hidden; vertical-align: top; text-align: left;}
+#searchtable h2 {margin: 0; padding: 0;}
+#searchtable form input {font-size: 100% !important;}
+#searchtable form input.query {width: 23em}
+#searchtable .screenshot {float: right}
+#searchtable .download {padding-left: 20px !important;}
+
+ul.hide { display: block; }
+ul.hide li { display: none; }
+ul.hide li.show { display: block; }
+
+/* Filters */
+.cnew:hover { text-decoration: underline; }
+.cnew { color: #03c !important; }
+
+table#searchtable tr#filter0_1 th { background: #444; }
+table#searchtable tr th.gfilters, table#searchtable tr th.gfiltersl { color: #fff; border: none; padding: 5px}
+table#searchtable tr#filter0_2 th { color: #fff; background: #444; border: none; }
+thead tr#filter0_2 th a {display: inline;}
+table#searchtable tr th.gfilters { text-align: left; }
+table#searchtable tr th.gfilters input { font-size: 93%; }
+table#searchtable tr th.gfiltersl { padding: .2em 1em; text-align: left; }
+table#searchtable tr th.gfiltersl input { width: 11em; }
+table#searchtable th.cfilters, table#searchtable th.myfilters { background: #444 !important; border-top: 1px solid #333 !important;}
+.myfilters small, .cfilters small, .gfilters small { color: #56626d !important; font-weight: bold; }
+table#searchtable th.myfilters { font-size: 85%; color: #fff; text-align: left; font-weight: normal; border: none; }
+table#searchtable th.cfilters { font-size: 85%; color: #fff; text-align: right; font-weight: normal; border: none; }
+table#searchtable th.cfilters label { font-weight: normal; }
+table#searchtable th.myfilters a, table#searchtable th.cfilters a { font-size: 85%; color: #fff; }
+table#searchtable tr th.filteroptions { text-align: right; }
+table#searchtable tr th.filteroptions label input { margin: .3em; }
+table#searchtable tr th.filteroptionsl { text-align: left; }
+table#searchtable tr th.filteroptionsl, table#searchtable tr th.filteroptions { background: #333; color: #fff; border: none; }
+
+/* search form */
+#inner_search {width: 400px; margin-left: auto; margin-right: auto;}
+#inner_search .search {float: none; display: block; margin: 0 0 2px; padding: 9px 0 0 9px; height: 44px; background: transparent url(http://a.fsdn.com/sf/images/develop/forms/search-header.png) 1px 0; border-width: 0;}
+#inner_search .search input.text {font-size: 108%; padding: 9px 0 0 35px; border-width: 0; width: 270px; border-right: 1px solid #ccc; height: 26px; float: left; background-image: url(http://a.fsdn.com/sf/images/develop/forms/search-header-input.png);}
+#inner_search #additional-h .search input.text {width: 268px}
+#inner_search .search input.hint {color:#7e7e7e;}
+#inner_search .search button {color: #fff; display: block; margin: 0 0 0 7px; padding: 0 0 4px; border-width: 0; font-weight: bold; width: 71px; height: 36px; float: left; clear: none; background: transparent url(http://a.fsdn.com/sf/images/develop/buttons/search-green.png) no-repeat 0 0; cursor: pointer;}
+#ie6only #inner_search .search button {background-image: url(http://a.fsdn.com/sf/images/develop/buttons/search-green-ie6.png);}
+
+
+/* General results
+----------------------------------------------------------------------*/
+h4 {font-weight: bold;}
+span.meta {margin-left: 0 !important;}
+.meta {font-size: 85%; color: #a5a5a5; margin: 0;}
+div.sfBox.feed ul li {background:url(http://a.fsdn.com/sf/images/develop/homepage/hot-dots-hor.gif) repeat-x 0 0; padding:10px 0; overflow:hidden; zoom:1}
+div.sfBox.feed ul li:first-child {background: none}
+
+/* Footer section
+----------------------------------------------------------------------*/
+#ft {border-top: 1px solid #ceeafb; height: 261px; text-align: left; background: #fff url(http://a.fsdn.com/sf/images/develop/footer-back.gif) repeat-x 0 48px;}
+
+    /* columns */
+    #ft div.cols {margin-bottom: 30px;}
+    #ft div.cols div.col {float: left; display: inline; width: 20%;}
+        #ieonly #ft div.cols div.col {width: 19.95%}
+    #ft .yui-b {width: 74.923em; margin: 0 auto;}
+        #ie6only #ft .yui-b {width: 73.05em;}
+
+    /* info */
+    #ft .sinfo {height: 34px; padding-top: 13px; margin-bottom: 20px; font-size: 108%;}
+        #ft .sinfo strong, #ft .sinfo a, #ft .sinfo span {display: block; float: left; clear: none;}
+        #ft .sinfo strong {color: #43c401; font-weight: bold; padding-top: 4px;}
+        #ft .sinfo a {color: #626161;}
+        #ft .sinfo a.arrow-icon {color: #0092e8;}
+        #ft .sinfo span.vert-devider {margin: 0 8px 0 7px; width: 1px; height: 24px; background-image: url(http://a.fsdn.com/sf/images/develop/dots-vert.gif);}
+
+    /* list */
+    #ft .col ul {padding: 6px 0 0 13px; border-left: 1px solid #b1ddf8;}
+    #ft .col li {position: relative;}
+    #ft .col h4 {display: block; margin: 0 0 0 14px; padding: 0; font-size: 116%; color: #0092e8; font-weight: bold;}
+    #ft .col li a {display: block; margin: 0 0 3px; padding: 0 0 0 17px; font-weight: normal; background: transparent url(http://a.fsdn.com/sf/images/develop/icons/small-arrow.png) no-repeat 0 2px;}
+
+    /* copyright */
+    #ft .copyright {display: block; margin: 0 auto; padding: 0; width: 570px; text-align: center; font-size: 85%;}
+    #ft .copyright span {float: left; clear: none; padding: 4px 0 0 3px;}
+    #ft .copyright .logo {display: block; margin: 0; padding: 22px 0 0; width: 128px; height: 0; overflow: hidden; float: left; clear: none; background: transparent url(http://a.fsdn.com/sf/images/develop/logo-foot.png) no-repeat 0 0;}
+
+
+/* Clearfix  (http: //www.positioniseverything.net/easyclearing.html)
+----------------------------------------------------------------------*/
+.clearfix:after,
+.sfBox:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.clearfix,.sfBox {display: inline-block; /* IE/Mac */}
+/* Hides from IE-mac \*/
+    * html .clearfix,
+    * html .sfBox {height: 1%;}
+    .clearfix,.sfBox {display: block;}
+/* End hide from IE-mac */
+
+
+
+/* b-photo-frame */
+.b-photo-frame,
+.b-photo-frame SPAN{display:block; background:url(http://a.fsdn.com/sf/images/develop/photo-frame.png) no-repeat 100% 0; padding:5px 0 0}
+.b-photo-frame SPAN{background-position:0 100%; padding:0 0 0 5px}
+.b-photo-frame SPAN SPAN{background-position:100% 100%; padding:0 5px 5px 0; }
+
+
+/* Home page styles
+----------------------------------------------------------------------*/
+#project-of-month .icon.download-icon-2 {margin: 13px 0 20px;}
+
+/* Support deal, copied from consume.*/
+.ph-title
+{
+    color: #525252 !important;
+    font-size: 167% !important;
+    font-weight: bold;
+    display: inline;
+    margin: 0 !important;
+}
+
+.project_support_header { padding-top: 1em; color: #7f7f7f;}
+
+h2.project_support_header {color:#bf0705 !important; padding-bottom: .5em; padding-top: 0;}
+
+h3.project_support_header {padding-top: 0;}
+
+/* ads
+----------------------------------------------------------------------*/
+.ads {margin-bottom: 15px}
+.downloadAds .yui-g {margin: 1em auto; width: 800px}
+.downloadAds .yui-g .ads {width: 300px; margin-left: auto; margin-right: auto;}
+.thanks {text-align: center; color: #aaa;}
+.immersion {margin: 0 auto; width: 700px;}
+#bd .downloading h1, .downloading h1 {font-size: 146.5% !important; font-weight: bold;}
+.downloading h1 a {color: #0092E8}
+.deck {margin-top: 10px;}
+.deck .yui-u.first {text-align: left;}
+.deck .yui-u {text-align: right;}
+#fad19 p { float: left; margin: 0 2% 0 0; width: 30%; min-height: 6em; }
+#fad19 p:last-child {margin: 0; width: 29%;}
+#fad19 p {border: 1px solid #ccc; padding: 1%; background: #fff url("http://a.fsdn.com/sf/images/phoneix/grad_dark_50.png") repeat-x center bottom; height: 100%; color: #222;}
+#fad19 { display: block; text-align: left; margin-bottom: 2em; }
+#fad19 img {display: block;}
+#fad19 p small a.desc  {color: #222 !important; text-decoration: none}
+
+
+/* Modules -> Contributors
+-----------------------------------*/
+div.sfBox.contributors ul {
+    margin-bottom: 1em;
+}
+div.sfBox.contributors ul li {
+    float: left;
+    display: inline;
+    width: 18%;
+    margin-right: 2%;
+    overflow: hidden;
+}
+
+/* Modules -> Related
+-----------------------------------*/
+div.sfBox.related ul li {
+    float: left;
+    display: inline;
+    width: 18%;
+    margin-right: 2%;
+    overflow: hidden;
+}
+
+/* Module -> Tree View
+-----------------------------------*/
+div.sfBox.treeView table {
+    margin: 0;
+}
+div.sfBox.treeView td {
+    border-bottom: 1px dotted #939798;
+    padding: 5px;
+    font-size: 85%;
+}
+div.sfBox.treeView tr.header td {
+    font-weight: bold;
+}
+div.sfBox.treeView tr.level1.latest td {
+    background-color: #E0F2E4;
+}
+div.sfBox.treeView tr.level1 td {
+    background-color: #DAEBF5;
+}
+div.sfBox.treeView tr.level2 td {
+    background-color: #EEF6F9;
+}
+div.sfBox.treeView tr.level2 td.tree {
+    padding-left: 25px;
+}
+div.sfBox.treeView tr.level3 td.tree {
+    padding-left: 50px;
+}
+div.sfBox.treeView tr.level4 td.tree {
+    padding-left: 75px;
+}
+div.sfBox.treeView a.icon.folder {
+    color: #000;
+    background: url(http://a.fsdn.com/sf/images/develop/icon_plus.gif) no-repeat 0 3px;
+    padding-left: 12px;
+}
+div.sfBox.treeView .open a.icon.folder {
+    background: url(http://a.fsdn.com/sf/images/develop/icon_minus.gif) no-repeat 0 3px;
+}
+div.sfBox.treeView a.icon.folder:hover {
+    text-decoration: none;
+}
+div.sfBox.treeView .hidden {
+    display: none;
+}
+/* Modules -> Carousel
+-----------------------------------*/
+div.sfBox.carousel a.prev,
+div.sfBox.carousel a.next {
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    width: 70px;
+    height: 75px;
+    margin-top: -37px;
+    background: url(http://a.fsdn.com/sf/images/develop/iconPrevious.png) no-repeat;
+    text-indent: -5000px;
+    overflow: hidden;
+    z-index: 3;
+}
+div.sfBox.carousel a.next {
+    left: auto;
+    right: -10px;
+    background: url(http://a.fsdn.com/sf/images/develop/iconNext.png) no-repeat;
+}
+div.sfBox.carousel a.prev:focus,
+div.sfBox.carousel a.next:focus {
+    outline: none;
+}
+div.sfBox.carousel div.wrapper {
+    position: relative;
+    zoom: 1;
+    padding: 0 55px;
+    margin: 0 -1.5em;
+}
+div.sfBox.carousel div.content ul li {
+    float: left;
+    display: inline;
+    width: 50%;
+}
+div.sfBox.carousel div.content ul li div {
+    padding: 0 10px 0 110px;
+}
+div.sfBox.carousel div.content ul.noCol li div,
+div.sfBox.carousel div.content ul li.noCol div {
+    padding-left: 0;
+}
+div.sfBox.carousel div.content ul li div.col {
+    float: left;
+    display: inline;
+    margin-left: -110px;
+    padding: 0;
+}
+/* Project
+------------------------------ */
+
+#nav-project { height: 30px; width: 100%; background-color: #fff; }
+.b-hornav { margin: 0; background-color: #fff; }
+.b-hornav li { float: left; background-position: 0 -1790px; margin: 0  0 0 !important; height: 30px; }
+.b-hornav li.first { background: none; margin: 0; }
+.b-hornav li a, .subset li a { display: block; padding: 3px 8px 0; }
+.b-hornav > li > a, .subset > ul > li > a { border-left: 1px solid #D2D2D2; }
+.b-hornav > li > a:hover { text-decoration: none; }
+.b-hornav > li.last > a { border-right: 1px solid #D2D2D2; }
+.b-hornav > li.selected > a { border: none; }
+.b-hornav > li.selected + li > a { border: none; }
+.b-hornav .selected { background: none; padding: 0 !important; }
+.b-hornav .selected span { background-position: 0 -2011px !important; padding: 0; }
+.b-hornav .selected span span { background-position: 50% -1942px !important; display: block; padding: 3px 4px 10px 8px; }
+.b-hornav .selected > a { background-position:100% -2074px !important; padding: 0 3px 0 0; display: block; height: 27px; color: #5e5e5e; }
+.b-hornav .selected ul li a { background: none; }
+
+/* User
+------------------------------ */
+
+.b-user { }
+
+.b-user__side
+{
+    float: right;
+    margin: 0 0 .5em .5em;
+}
+
+.b-user__side .button-customize
+{
+    margin: 0 0 0 1em;
+    float: right;
+}
+
+/* Project
+------------------------------ */
+
+.b-proj { }
+
+.b-proj__side
+{
+    float: right;
+    margin: 0 0 .5em .5em;
+}
+
+.b-proj__side .button-donate
+{
+    margin: 0 0 0 1em;
+    float: right;
+}
+
+.b-proj__side .button-watch
+{
+    margin: 0 0 0 1em;
+    float: right;
+}
+
+.b-proj__side .button-share {
+    float:right;
+    margin:0 0 0 1em;
+}
+
+.b-proj__side .button-monitor {
+    float:right;
+    margin:0 0 0 1em;
+}
+
+.b-proj__side .button-customize
+{
+    margin: 0 0 0 1em;
+    float: right;
+}
+
+.b-proj__side .awards
+{
+    float: right;
+    padding: 1px 0 0;
+}
+
+span.award-bar {
+    float:right;
+    margin:5px 5px 0;
+}
+
+.b-proj__side .awards A { margin: 0 0 0 .5em; }
+
+.b-proj__header
+{
+    overflow: hidden;
+    zoom: 1;
+    margin: 0 0 .5em;
+}
+
+.b-proj__header .ph-ico { vertical-align: middle; }
+
+.b-proj__header .ph-title
+{
+    color: #525252 !important;
+    font-size: 167% !important;
+    font-weight: bold;
+    display: inline;
+    margin: 0 !important;
+}
+
+.b-proj__header .ph-developer
+{
+    display: inline;
+    font-size: 123.1%;
+    color: #999;
+}
+
+.b-proj__picrel
+{
+    float: left;
+    margin: 0 1.5em .5em 0;
+}
+
+.b-proj__picrel .pp-pic { margin: 0 0 .5em; }
+
+.b-proj__descr
+{
+    overflow: hidden;
+    zoom: 1;
+}
+
+.b-proj__descr P { line-height: normal; }
+
+.b-proj__descr .pd-txt
+{
+    color: #777;
+    margin: 0 0 .75em;
+    font-size: 93%;
+    line-height: 140%;
+}
+
+.b-proj__descr .pd-highlight
+{
+    background-color: #E8F5FD;
+}
+
+.b-proj__descr .pd-dload
+{
+    overflow: hidden;
+    zoom: 1;
+    margin: 0 0 .5em;
+}
+
+.b-proj__descr .pd-dload span { font-size: 93%; }
+.b-proj__descr .pd-dload span strong { font-size: 116%; }
+.b-proj__descr .pd-dload b {
+    font-weight: normal;
+    position: absolute;
+    left: 180px;
+    background: transparent url(http://a.fsdn.com/sf/images/develop/buttons/dload.png) no-repeat -5px -25px;
+    padding: 0 4px;
+}
+
+.b-proj__descr .pd-dload em {
+    display: block;
+    float: left;
+    font-style: normal;
+    margin: 0 10px 0 0;
+    max-width: 195px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+
+.b-proj__descr .pd-dload SMALL
+{
+    float: left;
+    padding: 17px 1em 0;
+    font-size: 85%;
+    color: #b2b2b2;
+    font-weight: bold;
+}
+
+.b-proj__descr .pd-dload .button-more { margin: 10px 0 0; }
+.b-proj__descr .pd-awards
+{
+        background: url(http://a.fsdn.com/sf/images/develop/icons/awards.png) no-repeat 0 .25em;
+        padding: .1em 0 0 34px;
+        margin: 0 0 .25em;
+        font-size: 93%;
+    height: 16px;
+}
+
+.b-proj__descr .pd-www
+{
+    background: url(http://a.fsdn.com/sf/images/develop/icons/www.png) no-repeat 0 .25em;
+    padding: .3em 0 0 34px;
+    margin: 0 0 .25em;
+    font-size: 93%;
+    height: 16px;
+}
+
+.b-proj__descr .pd-tags
+{
+    background: url(http://a.fsdn.com/sf/images/develop/icons/tags.png) no-repeat 0 .25em;
+    padding: .3em 0 0 34px;
+    margin: 0 0 .25em;
+    font-size: 93%;
+    height: 16px;
+}
+
+.b-proj__descr .pd-share { margin: 1em 0 0; }
+
+
+/* Form Elements
+----------------------------------------------------------------------*/
+#feedFilter {display: inline}
+input.text,
+input.password {
+    border: 1px solid #ccc;
+    padding: 2px 6px;
+    width: 276px;
+    /*background: #fff url(http://a.fsdn.com/sf/images/develop/bgInput.gif) no-repeat;*/
+    font-size: 93%;
+}
+.yui-b input.text,
+.yui-b input.password {
+    width: 240px;
+}
+#yui-main .yui-b input.text,
+#yui-main .yui-b input.password {
+    width: 276px;
+}
+textarea {
+    border: 1px solid #ccc;
+    width: 408px;
+    height: 75px;
+    padding: 2px 6px;
+    font-size: 93%;
+}
+
+/* Form -> Layout
+-----------------------------------*/
+form fieldset {
+    border: none;
+}
+form h3,
+form h4 {
+    margin-bottom: 1em;
+    padding-bottom: .5em;
+    border-bottom: 1px dotted #878787;
+}
+.req {
+    color: #ff3500;
+}
+p.error {
+    font-size: 93%;
+    font-weight: bold;
+}
+form span.error {
+    display: block;
+    color: #ff3500;
+}
+form div.item.error label {
+    color: #ff3500;
+}
+form div.error input.text,
+form div.error input.password,
+form div.error textarea {
+    padding: 0 5px;
+    border: 2px solid #ff3500;
+}
+form div.item {
+    margin-bottom: 10px;
+}
+form div.item .help {
+    font-size: 77%;
+}
+form div.item label {
+    color: #666;
+    font-size: 93%;
+    font-weight: normal;
+}
+form div.field {
+    _height: 1%; /*IE FIX*/
+}
+
+/* From adam.css - commented out for now because I don't think it is needed
+form div {
+    margin: 0 0 1em 0;
+}
+form div label {
+    font-weight: bold;
+}
+form div div.iefix {
+    margin: 0;
+}
+form div div.iefix label {
+    font-weight: normal;
+}*/
+
+/* Form -> Layout -> Cols
+-----------------------------------*/
+form fieldset.cols div.item {
+    float: left;
+    display: inline;
+    width: 50%;
+    *width: 49.9%;
+}
+form fieldset.cols div.item input.text {
+    width: 276px;
+}
+form fieldset.cols div.item select {
+    width: 290px;
+}
+
+/* Form -> Layout -> Horizontal
+-----------------------------------*/
+form.horizontal fieldset {
+    border: none;
+    padding: 7px 0;
+}
+form.horizontal input.text,
+form.horizontal input.password {
+    width: 150px;
+}
+form.horizontal div {
+    float: left;
+    display: inline;
+    padding: 0;
+    margin: 0 5px 5px 0;
+}
+* html form.horizontal div {
+    height: 2em; /* IE needs this */
+}
+form.horizontal div label {
+    float: none;
+    display: inline;
+    margin-left: 0px;
+}
+form.horizontal div div.nolabel {
+    padding-top: 12px;
+    margin: 0;
+}
+
+/* Lists
+----------------------------------------------------------------------*/
+ol,
+ul.bullets {
+    margin: .5em 0 1em;
+}
+ol li {
+    list-style: decimal;
+list-style-position:inside;
+}
+ol li .project-popular {display: inline}
+.project-popular .trove_cats {font-size: 85%; color: #7e7e7e; padding-right: 4.5em}
+#bd .clean li {margin: 0; padding: .3em .3em .3em 0;}
+ul.bullets li {
+    list-style: square;
+    padding-left: 10px;
+}
+ul.listCol li {
+    padding-left: 60px;
+}
+ul.listCol li div.col {
+    float: left;
+    display: inline;
+    margin-left: -60px;
+}
+ul.listCol.medium li,
+ul.listCol li.medium {
+    padding-left: 110px;
+}
+ul.listCol.medium li div.col,
+ul.listCol li.medium div.col {
+    margin-left: -110px;
+}
+ul.listCol.large li,
+ul.listCol li.large {
+    padding-left: 160px;
+}
+ul.listCol.large li div.col,
+ul.listCol li.large div.col {
+    margin-left: -160px;
+}
+
+/* Global Items -> Breadcrumbs
+-----------------------------------*/
+div#breadcrumbs {
+    zoom: 1;
+    position: relative;
+    font-size: 85%;
+    padding: 0 0 1.2em 0;
+}
+div#breadcrumbs .selected {font-weight: normal; color: #5e5e5e;}
+
+/* Global Items -> Pagination
+-----------------------------------*/
+div.pagination {
+    margin: .5em 1em;
+}
+div.pagination p {
+    margin: 0;
+    font-weight: bold;
+}
+div.pagination ul {
+    float: right;
+}
+div.pagination ul li {
+    display: inline;
+}
+
+
+/* Global Items -> Expandable
+-----------------------------------*/
+div.expandable,
+div.expandable .handle {
+    color: #0067a7;
+}
+div.expandable .handle {
+    text-decoration: none;
+    padding-left: 20px;
+    background: url(http://a.fsdn.com/sf/images/develop/icon_minus.gif) no-repeat 0 .3em;
+}
+div.expandable .handle:hover {
+    color: #404040;
+    text-decoration: none;
+}
+div.expandable div.content {
+    padding: 10px 20px;
+}
+div.expandable.hide .handle {
+    background-image: url(http://a.fsdn.com/sf/images/develop/icon_plus.gif);
+    background-position: 0 .3em;
+}
+div.expandable.hide div.content {
+    display: none;
+}
+
+/* Global Items -> Misc
+-----------------------------------*/
+p.filterHelp {
+    float: right;
+    display: inline;
+}
+p.mirrorImage {
+    font-size: 85%;
+    font-weight: bold;
+}
+
+
+/* JS Styles
+----------------------------------------------------------------------*/
+
+/* JS -> UI widget overlay
+-----------------------------------*/
+.ui-widget-overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background: #FFF;
+
+    opacity: 0.8;
+
+    filter: alpha(opacity=80);
+
+}
+
+/* JS -> UI Dialog
+-----------------------------------*/
+.ui-widget-content {
+    background: #fff url(http://a.fsdn.com/sf/images/develop/boxes/grey-bar.gif) repeat-x 0 0;
+    border: 1px solid #d2d2d2;
+    border-width: 0 1px 1px 1px;
+    padding: 16px 11px 13px 14px;
+    margin-bottom: 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+}
+.ui-widget-content {
+    background-image: url(http://a.fsdn.com/sf/images/develop/boxes/blue-bar.gif);
+    border: 1px solid #9ed6f6;
+    border-width:0 1px 1px;
+}
+.ui-widget-header {
+    background: #E8F5FD;
+    border-bottom: 1px solid #CEEAFB;
+    margin: -10px -11px 0 -14px;
+    padding: 10px 15px;
+}
+.ui-widget-header h2 {
+    color: #5e5e5e;
+}
+.ui-dialog-title {
+    font-size: 116%;
+    font-weight: bold;
+    color: #5e5e5e;
+    text-align: left;
+}
+
+
+/* JS -> UI Dialog.moreScreenshotsDialog
+-----------------------------------*/
+.ui-dialog.moreScreenshotsDialog div.contentContainer {
+    position: relative;
+}
+.ui-dialog.moreScreenshotsDialog .wrapper {
+    position: relative;
+}
+.ui-dialog.moreScreenshotsDialog .ui-dialog-content {
+    padding: 0;
+}
+.ui-dialog.moreScreenshotsDialog div.images a.prev,
+.ui-dialog.moreScreenshotsDialog div.images a.next {
+    position: absolute;
+    top: 50%;
+    margin-top: -37px;
+    height: 75px;
+    width: 70px;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+.ui-dialog.moreScreenshotsDialog div.images a.prev {
+    left: -35px;
+    background: url(http://a.fsdn.com/sf/images/develop/iconPrevious.png);
+}
+.ui-dialog.moreScreenshotsDialog div.images a.next {
+    right: -35px;
+    background: url(http://a.fsdn.com/sf/images/develop/iconNext.png);
+}
+.ui-dialog.moreScreenshotsDialog div.content {
+    text-align: center;
+    margin: 0 60px;
+
+
+}
+.ui-dialog.moreScreenshotsDialog div.thumbsContainer {
+    position: relative;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+.ui-dialog.moreScreenshotsDialog div.thumbs {
+    margin-top: 1em;
+    border-top: 1px solid #c4c4c4;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+}
+.ui-dialog.moreScreenshotsDialog div.thumbs a.prev,
+.ui-dialog.moreScreenshotsDialog div.thumbs a.next {
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    height: 24px;
+    width: 23px;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+.ui-dialog.moreScreenshotsDialog div.thumbs a.prev {
+    background: url(http://a.fsdn.com/sf/images/develop/iconPreviousSmall.png);
+    margin-left: 1em;
+    left: 0;
+
+}
+.ui-dialog.moreScreenshotsDialog div.thumbs a.next {
+    right: 0;
+    background: url(http://a.fsdn.com/sf/images/develop/iconNextSmall.png);
+    margin-right: 1em;
+}
+.ui-dialog.moreScreenshotsDialog div.thumbs {
+    clear: both;
+    margin: auto;
+}
+.ui-dialog.moreScreenshotsDialog div.thumbs li {
+    margin: 0 2px;
+    float: left;
+}
+
+.ui-dialog label {
+    display:inline-block;
+    font-size:93%;
+    font-weight:bold;
+    line-height:normal;
+    padding-top:3px;
+    vertical-align:top;
+    width:10em;
+}
+
+
+/* JS -> UI Dialog.keywordSearchDialog
+-----------------------------------*/
+.ui-dialog.keywordSearchDialog {
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 0;
+    border-top: 1px solid #CCC;
+    background-image: none;
+    font-weight: bold;
+    font-size: 93%;
+}
+.ui-dialog.keywordSearchDialog .ui-dialog-titlebar {
+    display: none;
+}
+.ui-dialog.keywordSearchDialog .ui-dialog-content {
+    padding: 0 8px 5px 8px;
+}
+.ui-dialog.keywordSearchDialog h3 {
+    color: #33B150;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 1px dotted #9c9c9c;
+    margin-bottom: 9px;
+    padding-bottom: 3px;
+}
+.ui-dialog.keywordSearchDialog .allResults {
+    float: right;
+    margin-bottom: .5em;
+    font-size: 93%;
+}
+
+/* JS -> UI Dialog.toolTip
+-----------------------------------*/
+div.tooltipContent {
+    display: none;
+}
+.ui-dialog.toolTip {
+    border: none;
+    background: transparent;
+    padding-top: 11px;
+
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-bottomright: 0;
+}
+.ui-dialog.toolTip .arrow {
+    width: 21px;
+    height: 12px;
+    position: absolute;
+    top: 0;
+    left: 25px;
+    background: transparent url(http://a.fsdn.com/sf/images/develop/tooltipArrow.png) no-repeat;
+}
+.ui-dialog.toolTip .ui-dialog-content {
+    padding: 12px;
+    background: #e1f6e7;
+
+    -moz-border-radius-topleft: 8px;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border: 1px solid #b8b8b8;
+}
+
+/* JS -> UI Dialog.noTitle
+-----------------------------------*/
+.ui-dialog.noTitle .ui-dialog-titlebar{
+    padding: 0;
+}
+
+/* JS -> UI Dialog .chooseMirror
+-----------------------------------*/
+.ui-dialog .chooseMirror .mirrorsContainer{
+    height: 400px;
+    overflow-y: scroll;
+    overflow-x: none;
+}
+
+
+/* JS -> UI Dialog .donateContainer
+-----------------------------------*/
+.ui-dialog .donateContainer .icon.inline {
+    margin-right: 1em;
+}
+.ui-dialog .donateContainer table {
+    border: solid #a5a9ac;
+    border-width: 1px 0;
+    width: auto;
+}
+.ui-dialog .donateContainer table th {
+    background: #eef6f9;
+    border-bottom: 1px dotted #939798;
+}
+.ui-dialog .donateContainer table th,
+.ui-dialog .donateContainer table td {
+    padding: 11px 16px 11px 0;
+}
+.ui-dialog .donateContainer table th.first,
+.ui-dialog .donateContainer table td.first {
+    padding-left: 16px;
+}
+
+
+/* JS -> Slider
+-----------------------------------*/
+.ui-slider {
+    position: relative;
+    height: 1px;
+    background: #c7cbcd;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #e5e7ea;
+    margin-bottom: 10px;
+}
+.ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 16px;
+    height: 16px;
+    background: #ccc;
+    cursor: default;
+}
+.ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    background: #F6A828;
+}
+.ui-slider-value {
+    border: 0;
+    margin: 1em 0 0 0;
+    text-align: center;
+    color: #404040;
+}
+
+.ui-slider-horizontal {
+    margin: 5px 0;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    margin-left: -8px;
+    width: 13px;
+    height: 23px;
+    top: -10px;
+    background: url(http://a.fsdn.com/sf/images/develop/slider.gif) no-repeat;
+}
+.ui-slider-horizontal .ui-slider-range {
+    height: 23px;
+    background: url(http://a.fsdn.com/sf/images/develop/sliderRangeBackground.gif) repeat-x;
+    top: -3px;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+    left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+    right: 0;
+}
+
+/* JS -> StyledSelect
+-----------------------------------*/
+.StyledSelect {
+    position: relative;
+    cursor: pointer;
+}
+.StyledSelect .label {
+    border: 1px solid #333;
+    width: 100%;
+}
+.StyledSelect .label.hover {
+    background: #ccc;
+}
+.StyledSelect .icon {
+    padding: 0 2px;
+}
+.StyledSelect .ulContainer {
+    border: 1px solid #333;
+    border-top: none;
+    position: absolute;
+    background: white;
+    width: 100%;
+}
+.StyledSelect .ulContainer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.StyledSelect .ulContainer ul li {
+    padding: 0 2px;
+}
+.StyledSelect .ulContainer ul li.selected {
+    background: #ccf;
+}
+.StyledSelect .ulContainer ul li.hover {
+    background: #ccc;
+}
+/* Tabs */
+.ui-tabs-nav li a {padding: 5px 10px;}
+.ui-tabs-nav li.ui-tabs-selected a {padding: 5px 10px; border-bottom: 1px solid #fff;}
+
+/* messages */
+#bd .error, #bd .warning, #bd .info, #bd .message {border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; font-weight: normal; padding: 10px; margin: 10px 0; clear: both;}
+#bd .message {background:#DFD; border:1px solid #BFB;}
+#bd .warning {background: #FDFEB8; border: 1px solid #fb0;}
+#bd .error {background:#FDD; border:1px solid #FBB;}
+#bd .info {background: #def; border: 1px solid #9cf; }
+
+.sfBox li.item {
+    margin-bottom: 0.5em;
+}
+
+/* forums */
+.forum-buttonbar
+{
+    float: right;
+    margin: 0 0 .5em .5em;
+}
+
+.forum-buttonbar .button-forum1
+{
+    margin: 0 0 0 1em;
+    float: right;
+}
+
+.forum-buttonbar .button-forum2
+{
+    margin: 0 0 0 1em;
+    float: right;
+}
+
+#ie7only .forum-buttonbar .button-forum1 {margin-top: -15px}
+
+ol#forum-topic {
+    margin-left:150px;
+}
+
+ol#forum-topic .message-box {
+    margin-bottom:50px;
+}
+
+ol#forum-topic .message-author{
+    margin-left:-165px;
+    position:absolute;
+    text-align:center;
+    width:165px;
+}
+
+
+ol#forum-topic .message-delete{
+    margin-left:-130px;
+    margin-top: 45px;
+    position:absolute;
+    z-index:1000;
+}
+
+ol#forum-topic .message-content{
+
+}
+
+ol#forum-topic .message-content .message-date{
+    background:transparent url(http://a.fsdn.com/sf/images//develop/grey-dots.gif) repeat-x scroll 0 100%;
+    text-align:right;
+    margin-bottom:5px;
+    padding-bottom:5px;
+}
+
+a.forums-subscribe {
+    float:right;
+    margin: -3px 0 0;
+}
+
+#ie7only .forums-subscribe {width: 1px}
+
+.author-name {background: #ddd; padding: 5px 13px; color: #555;margin-right:2px;}
+
+.forum-heading {border:none;font-size: 116%}
+.forum-saving {display:none; background: url("http://a.fsdn.com/sf/images/develop/indicator.gif") no-repeat; height: 30px; padding:0 0 0 30px;}
+.forum-edit-link {float:right;margin-right:10px;}
+.forum-table-header {text-align: center; padding: 0}
+.forum-table-checkboxes {text-align: center; padding: 0}
+.forum-save-button {float:right;}
+.email_body {font-family:monospace;font-size: 100%;}
+
+tr.filterwarning th {font-weight: bold; padding: 5px 30px !important; background: #FDFEB8  url(http://a.fsdn.com/sf/images/sfx/icon_warning.gif) no-repeat 0.5em 0.2em; !important; border: 1px solid #fb0 !important;}

@@ -1,0 +1,827 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content="HTML Tidy, see www.w3.org" />
+<title>FreeBSD as a Guest OS</title>
+<meta name="GENERATOR" content="Modular DocBook HTML Stylesheet Version 1.79" />
+<link rel="HOME" title="FreeBSD Handbook" href="index.html" />
+<link rel="UP" title="Virtualization" href="virtualization.html" />
+<link rel="PREVIOUS" title="Virtualization" href="virtualization.html" />
+<link rel="NEXT" title="FreeBSD as a Host OS" href="virtualization-host.html" />
+<link rel="STYLESHEET" type="text/css" href="docbook.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body class="SECT1" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#840084"
+alink="#0000FF">
+<div class="NAVHEADER">
+<table summary="Header navigation table" width="100%" border="0" cellpadding="0"
+cellspacing="0">
+<tr>
+<th colspan="3" align="center">FreeBSD Handbook</th>
+</tr>
+
+<tr>
+<td width="10%" align="left" valign="bottom"><a href="virtualization.html"
+accesskey="P">Prev</a></td>
+<td width="80%" align="center" valign="bottom">Chapter 22 Virtualization</td>
+<td width="10%" align="right" valign="bottom"><a href="virtualization-host.html"
+accesskey="N">Next</a></td>
+</tr>
+</table>
+
+<hr align="LEFT" width="100%" />
+</div>
+
+<div class="SECT1">
+<h1 class="SECT1"><a id="VIRTUALIZATION-GUEST" name="VIRTUALIZATION-GUEST">22.2 FreeBSD
+as a Guest OS</a></h1>
+
+<div class="SECT2">
+<h2 class="SECT2"><a id="VIRTUALIZATION-GUEST-PARALLELS"
+name="VIRTUALIZATION-GUEST-PARALLELS">22.2.1 Parallels on MacOS</a></h2>
+
+<p><b class="APPLICATION">Parallels Desktop</b> for <span
+class="TRADEMARK">Mac</span>&reg; is a commercial software product available for <span
+class="TRADEMARK">Intel</span>&reg; based <span class="TRADEMARK">Apple</span>&reg; <span
+class="TRADEMARK">Mac</span> computers running <span
+class="TRADEMARK">Mac&nbsp;OS</span>&reg; 10.4.6 or higher. FreeBSD is a fully supported
+guest operating system. Once <b class="APPLICATION">Parallels</b> has been installed on
+<span class="TRADEMARK">Mac&nbsp;OS</span> X, the user must configure a virtual machine
+and then install the desired guest operating system.</p>
+
+<div class="SECT3">
+<h3 class="SECT3"><a id="VIRTUALIZATION-GUEST-PARALLELS-INSTALL"
+name="VIRTUALIZATION-GUEST-PARALLELS-INSTALL">22.2.1.1 Installing FreeBSD on
+Parallels/<span class="TRADEMARK">Mac&nbsp;OS</span>&reg; X</a></h3>
+
+<p>The first step in installing FreeBSD on <span class="TRADEMARK">Mac&nbsp;OS</span>
+X/<b class="APPLICATION">Parallels</b> is to create a new virtual machine for installing
+FreeBSD. Select <span class="GUIMENUITEM">FreeBSD</span> as the <span
+class="GUIMENU">Guest OS Type</span> when prompted:</p>
+
+<p><img src="virtualization/parallels-freebsd1.png" /></p>
+
+<p>And choose a reasonable amount of disk and memory depending on your plans for this
+virtual FreeBSD instance. 4GB of disk space and 512MB of RAM work well for most uses of
+FreeBSD under <b class="APPLICATION">Parallels</b>:</p>
+
+<p><img src="virtualization/parallels-freebsd2.png" /></p>
+
+<p><img src="virtualization/parallels-freebsd3.png" /></p>
+
+<p><img src="virtualization/parallels-freebsd4.png" /></p>
+
+<p><img src="virtualization/parallels-freebsd5.png" /></p>
+
+<p>Select the type of networking and a network interface:</p>
+
+<p><img src="virtualization/parallels-freebsd6.png" /></p>
+
+<p><img src="virtualization/parallels-freebsd7.png" /></p>
+
+<p>Save and finish the configuration:</p>
+
+<p><img src="virtualization/parallels-freebsd8.png" /></p>
+
+<p><img src="virtualization/parallels-freebsd9.png" /></p>
+
+<p>After your FreeBSD virtual machine has been created, you will need to install FreeBSD
+on it. This is best done with an official FreeBSD CDROM or with an ISO image downloaded
+from an official FTP site. When you have the appropriate ISO image on your local <span
+class="TRADEMARK">Mac</span> filesystem or a CDROM in your <span
+class="TRADEMARK">Mac</span>'s CD drive, click on the disc icon in the bottom right
+corner of your FreeBSD <b class="APPLICATION">Parallels</b> window. This will bring up a
+window that allows you to associate the CDROM drive in your virtual machine with an ISO
+file on disk or with your real CDROM drive.</p>
+
+<p><img src="virtualization/parallels-freebsd11.png" /></p>
+
+<p>Once you have made this association with your CDROM source, reboot your FreeBSD
+virtual machine as normal by clicking the reboot icon. <b
+class="APPLICATION">Parallels</b> will reboot with a special BIOS that first checks if
+you have a CDROM just as a normal BIOS would do.</p>
+
+<p><img src="virtualization/parallels-freebsd10.png" /></p>
+
+<p>In this case it will find the FreeBSD installation media and begin a normal <b
+class="APPLICATION">sysinstall</b> based installation as described in <a
+href="install.html">Chapter 2</a>. You may install, but do not attempt to configure X11
+at this time.</p>
+
+<p><img src="virtualization/parallels-freebsd12.png" /></p>
+
+<p>When you have finished the installation, reboot into your newly installed FreeBSD
+virtual machine.</p>
+
+<p><img src="virtualization/parallels-freebsd13.png" /></p>
+</div>
+
+<div class="SECT3">
+<h3 class="SECT3"><a id="VIRTUALIZATION-GUEST-PARALLELS-CONFIGURE"
+name="VIRTUALIZATION-GUEST-PARALLELS-CONFIGURE">22.2.1.2 Configuring FreeBSD on <span
+class="TRADEMARK">Mac&nbsp;OS</span> X/Parallels</a></h3>
+
+<p>After FreeBSD has been successfully installed on <span
+class="TRADEMARK">Mac&nbsp;OS</span> X with <b class="APPLICATION">Parallels</b>, there
+are a number of configuration steps that can be taken to optimize the system for
+virtualized operation.</p>
+
+<div class="PROCEDURE">
+<ol type="1">
+<li class="STEP">
+<p><b>Set boot loader variables</b></p>
+
+<p>The most important step is to reduce the <code class="OPTION">kern.hz</code> tunable
+to reduce the CPU utilization of FreeBSD under the <b class="APPLICATION">Parallels</b>
+environment. This is accomplished by adding the following line to <tt
+class="FILENAME">/boot/loader.conf</tt>:</p>
+
+<pre class="PROGRAMLISTING">
+kern.hz=100
+</pre>
+
+<p>Without this setting, an idle FreeBSD <b class="APPLICATION">Parallels</b> guest OS
+will use roughly 15% of the CPU of a single processor <span
+class="TRADEMARK">iMac</span>&reg;. After this change the usage will be closer to a mere
+5%.</p>
+</li>
+
+<li class="STEP">
+<p><b>Create a new kernel configuration file</b></p>
+
+<p>You can remove all of the SCSI, FireWire, and USB device drivers. <b
+class="APPLICATION">Parallels</b> provides a virtual network adapter used by the <a
+href="http://www.FreeBSD.org/cgi/man.cgi?query=ed&amp;sektion=4"><span
+class="CITEREFENTRY"><span class="REFENTRYTITLE">ed</span>(4)</span></a> driver, so all
+other network devices except for <a
+href="http://www.FreeBSD.org/cgi/man.cgi?query=ed&amp;sektion=4"><span
+class="CITEREFENTRY"><span class="REFENTRYTITLE">ed</span>(4)</span></a> and <a
+href="http://www.FreeBSD.org/cgi/man.cgi?query=miibus&amp;sektion=4"><span
+class="CITEREFENTRY"><span class="REFENTRYTITLE">miibus</span>(4)</span></a> can be
+removed from the kernel.</p>
+</li>
+
+<li class="STEP">
+<p><b>Setup networking</b></p>
+
+<p>The most basic networking setup involves simply using DHCP to connect your virtual
+machine to the same local area network as your host <span class="TRADEMARK">Mac</span>.
+This can be accomplished by adding <tt class="LITERAL">ifconfig_ed0="DHCP"</tt> to <tt
+class="FILENAME">/etc/rc.conf</tt>. More advanced networking setups are described in <a
+href="advanced-networking.html">Chapter 31</a>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div class="SECT2">
+<h2 class="SECT2"><a id="VIRTUALIZATION-GUEST-XEN" name="VIRTUALIZATION-GUEST-XEN">22.2.2
+FreeBSD with <span class="TRADEMARK">Xen</span>&#8482; on Linux</a></h2>
+
+<i class="AUTHORGROUP"><span class="CONTRIB">Contributed by</span> Fukang Chen
+(Loader).</i> 
+
+<p>The <b class="APPLICATION"><span class="TRADEMARK">Xen</span>&#8482;</b> hypervisor is
+an open source paravirtualization product which is now supported by the commercial
+XenSource company. Guest operating systems are known as domU domains, and the host
+operating system is known as dom0. The first step in running a virtual FreeBSD instance
+under Linux is to install <b class="APPLICATION"><span class="TRADEMARK">Xen</span></b>
+for Linux dom0. The host operating system will be a Slackware Linux distribution.</p>
+
+<div class="SECT3">
+<h3 class="SECT3"><a id="XEN-SLACKWARE-DOM0" name="XEN-SLACKWARE-DOM0">22.2.2.1 Setup
+<span class="TRADEMARK">Xen</span> 3 on Linux dom0</a></h3>
+
+<div class="PROCEDURE">
+<ol type="1">
+<li class="STEP">
+<p><b>Download <span class="TRADEMARK">Xen</span> 3.0 from XenSource</b></p>
+
+<p>Download <a
+href="http://bits.xensource.com/oss-xen/release/3.0.4-1/src.tgz/xen-3.0.4_1-src.tgz"
+target="_top">xen-3.0.4_1-src.tgz</a> from <a href="http://www.xensource.com/"
+target="_top">http://www.xensource.com/</a>.</p>
+</li>
+
+<li class="STEP">
+<p><b>Unpack the tarball</b></p>
+
+<pre class="SCREEN">
+<samp class="PROMPT">#</samp> <kbd class="USERINPUT">cd xen-3.0.4_1-src</kbd>
+<samp class="PROMPT">#</samp> <kbd
+class="USERINPUT">KERNELS="linux-2.6-xen0 linux-2.6-xenU" make world</kbd>
+<samp class="PROMPT">#</samp> <kbd class="USERINPUT">make install</kbd>
+</pre>
+
+<div class="NOTE">
+<blockquote class="NOTE">
+<p><b>Note:</b> To re-compile the kernel for dom0:</p>
+
+<pre class="SCREEN">
+<samp class="PROMPT">#</samp> <kbd
+class="USERINPUT">cd xen-3.0.4_1-src/linux-2.6.16.33-xen0</kbd>
+<samp class="PROMPT">#</samp> <kbd class="USERINPUT">make menuconfig</kbd>
+<samp class="PROMPT">#</samp> <kbd class="USERINPUT">make</kbd>
+<samp class="PROMPT">#</samp> <kbd class="USERINPUT">make install</kbd>
+</pre>
+
+<p>Older version of <b class="APPLICATION"><span class="TRADEMARK">Xen</span></b> may
+need to specify <tt class="COMMAND">make ARCH=xen menuconfig</tt></p>
+</blockquote>
+</div>
+</li>
+
+<li class="STEP">
+<p><b>Add a menu entry into Grub menu.lst</b></p>
+
+<p>Edit <tt class="FILENAME">/boot/grub/menu.lst</tt> and add the following lines:</p>
+
+<pre class="PROGRAMLISTING">
+title Xen-3.0.4
+root (hd0,0)
+kernel /boot/xen-3.0.4-1.gz dom0_mem=262144
+module /boot/vmlinuz-2.6.16.33-xen0 root=/dev/hda1 ro
+</pre>
+</li>
+
+<li class="STEP">
+<p><b>Reboot your computer into <span class="TRADEMARK">Xen</span></b></p>
+
+<p>First, edit <tt class="FILENAME">/etc/xen/xend-config.sxp</tt>, and add the following
+line:</p>
+
+<pre class="PROGRAMLISTING">
+(network-script 'network-bridge netdev=eth0')
+</pre>
+
+<p>Then, we can launch <b class="APPLICATION"><span class="TRADEMARK">Xen</span></b>:</p>
+
+<pre class="SCREEN">
+<samp class="PROMPT">#</samp> <kbd class="USERINPUT">/etc/init.d/xend start</kbd>
+<samp class="PROMPT">#</samp> <kbd class="USERINPUT">/etc/init.d/xendomains start</kbd>
+</pre>
+
+<p>Our dom0 is running:</p>
+
+<pre class="SCREEN">
+<samp class="PROMPT">#</samp> <kbd class="USERINPUT">xm list</kbd>
+Name                                      ID   Mem VCPUs      State   Time(s)
+Domain-0                                   0   256     1     r-----  54452.9
+</pre>
+</li>
+</ol>
+</div>
+</div>
+
+<div class="SECT3">
+<h3 class="SECT3"><a id="AEN28726" name="AEN28726">22.2.2.2 FreeBSD 7-CURRENT
+domU</a></h3>
+
+<p>Download the FreeBSD domU kernel for <b class="APPLICATION"><span
+class="TRADEMARK">Xen</span> 3.0</b> and disk image from <a
+href="http://www.fsmware.com/" target="_top">http://www.fsmware.com/</a></p>
+
+<ul>
+<li>
+<p><a href="http://www.fsmware.com/xenofreebsd/7.0/download/kernel-current"
+target="_top">kernel-current</a></p>
+</li>
+
+<li>
+<p><a href="http://www.fsmware.com/xenofreebsd/7.0/download/mdroot-7.0.bz2"
+target="_top">mdroot-7.0.bz2</a></p>
+</li>
+
+<li>
+<p><a href="http://www.fsmware.com/xenofreebsd/7.0/download/config/xmexample1.bsd"
+target="_top">xmexample1.bsd</a></p>
+</li>
+</ul>
+
+<p>Put the configuration file <tt class="FILENAME">xmexample1.bsd</tt> into <tt
+class="FILENAME">/etc/xen/</tt> and modify the related entries about where the kernel and
+the disk image are stored. It should look like the following:</p>
+
+<pre class="PROGRAMLISTING">
+kernel = "/opt/kernel-current"
+memory = 256
+name = "freebsd"
+vif = [ '' ]
+disk = [ 'file:/opt/mdroot-7.0,hda1,w' ]
+#on_crash    = 'preserve'
+extra = "boot_verbose"
+extra += ",boot_single"
+extra += ",kern.hz=100"
+extra += ",vfs.root.mountfrom=ufs:/dev/xbd769a"
+</pre>
+
+<p>The <tt class="FILENAME">mdroot-7.0.bz2</tt> file should be uncompressed.</p>
+
+<p>Next, the __xen_guest section in <tt class="FILENAME">kernel-current</tt> needs to be
+altered to add the VIRT_BASE that <b class="APPLICATION"><span
+class="TRADEMARK">Xen</span> 3.0.3</b> requires:</p>
+
+<pre class="SCREEN">
+<samp class="PROMPT">#</samp> <kbd
+class="USERINPUT">objcopy kernel-current -R __xen_guest</kbd>
+<samp class="PROMPT">#</samp> <kbd
+class="USERINPUT">perl -e 'print "LOADER=generic,GUEST_OS=freebsd,GUEST_VER=7.0,XEN_VER=xen-3.0,BSD_SYMTAB,VIRT_BASE=0xC0000000\x00"' &gt; tmp</kbd>
+<samp class="PROMPT">#</samp> <kbd
+class="USERINPUT">objcopy kernel-current --add-section __xen_guest=tmp</kbd>
+</pre>
+
+<pre class="SCREEN">
+<samp class="PROMPT">#</samp> <kbd
+class="USERINPUT">objdump -j __xen_guest -s kernel-current</kbd>
+
+kernel-current:     file format elf32-i386
+
+Contents of section __xen_guest:
+ 0000 4c4f4144 45523d67 656e6572 69632c47  LOADER=generic,G
+ 0010 55455354 5f4f533d 66726565 6273642c  UEST_OS=freebsd,
+ 0020 47554553 545f5645 523d372e 302c5845  GUEST_VER=7.0,XE
+ 0030 4e5f5645 523d7865 6e2d332e 302c4253  N_VER=xen-3.0,BS
+ 0040 445f5359 4d544142 2c564952 545f4241  D_SYMTAB,VIRT_BA
+ 0050 53453d30 78433030 30303030 3000      SE=0xC0000000.
+</pre>
+
+<p>We are, now, ready to create and launch our domU:</p>
+
+<pre class="SCREEN">
+<samp class="PROMPT">#</samp> <kbd
+class="USERINPUT">xm create /etc/xen/xmexample1.bsd -c</kbd>
+Using config file "/etc/xen/xmexample1.bsd".
+Started domain freebsd
+WARNING: loader(8) metadata is missing!
+Copyright (c) 1992-2006 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+The Regents of the University of California. All rights reserved.
+FreeBSD 7.0-CURRENT #113: Wed Jan  4 06:25:43 UTC 2006
+    kmacy@freebsd7.gateway.2wire.net:/usr/home/kmacy/p4/freebsd7_xen3/src/sys/i386-xen/compile/XENCONF
+WARNING: DIAGNOSTIC option enabled, expect reduced performance.
+Xen reported: 1796.927 MHz processor.
+Timecounter "ixen" frequency 1796927000 Hz quality 0
+CPU: Intel(R) Pentium(R) 4 CPU 1.80GHz (1796.93-MHz 686-class CPU)
+  Origin = "GenuineIntel"  Id = 0xf29  Stepping = 9
+  Features=0xbfebfbff&lt;FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,
+  DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE&gt;
+  Features2=0x4400&lt;CNTX-ID,&lt;b14&gt;&gt;
+real memory  = 265244672 (252 MB)
+avail memory = 255963136 (244 MB)
+xc0: &lt;Xen Console&gt; on motherboard
+cpu0 on motherboard
+Timecounters tick every 10.000 msec
+[XEN] Initialising virtual ethernet driver.
+xn0: Ethernet address: 00:16:3e:6b:de:3a
+[XEN] 
+Trying to mount root from ufs:/dev/xbd769a
+WARNING: / was not properly dismounted
+Loading configuration files.
+No suitable dump device was found.
+Entropy harvesting: interrupts ethernet point_to_point kickstart.
+Starting file system checks:
+/dev/xbd769a: 18859 files, 140370 used, 113473 free (10769 frags, 12838 blocks, 4.2% fragmentation)
+Setting hostname: demo.freebsd.org.
+lo0: flags=8049&lt;UP,LOOPBACK,RUNNING,MULTICAST&gt; mtu 16384
+      inet6 ::1 prefixlen 128 
+      inet6 fe80::1%lo0 prefixlen 64 scopeid 0x2 
+      inet 127.0.0.1 netmask 0xff000000 
+Additional routing options:.
+Mounting NFS file systems:.
+Starting syslogd.
+/etc/rc: WARNING: Dump device does not exist.  Savecore not run.
+ELF ldconfig path: /lib /usr/lib /usr/lib/compat /usr/X11R6/lib /usr/local/lib
+a.out ldconfig path: /usr/lib/aout /usr/lib/compat/aout /usr/X11R6/lib/aout
+Starting usbd.
+usb: Kernel module not available: No such file or directory
+Starting local daemons:.
+Updating motd.
+Starting sshd.
+Initial i386 initialization:.
+Additional ABI support: linux.
+Starting cron.
+Local package initialization:.
+Additional TCP options:.
+Starting background file system checks in 60 seconds.
+
+Sun Apr  1 02:11:43 UTC 2007
+
+FreeBSD/i386 (demo.freebsd.org) (xc0)
+
+login:
+</pre>
+
+<p>The domU should run the FreeBSD&nbsp;7.0-CURRENT kernel:</p>
+
+<pre class="SCREEN">
+<samp class="PROMPT">#</samp> <kbd class="USERINPUT">uname -a</kbd>
+FreeBSD demo.freebsd.org 7.0-CURRENT FreeBSD 7.0-CURRENT #113: Wed Jan  4 06:25:43 UTC 2006     
+kmacy@freebsd7.gateway.2wire.net:/usr/home/kmacy/p4/freebsd7_xen3/src/sys/i386-xen/compile/XENCONF  i386
+</pre>
+
+<p>The network can now be configured on the domU. The FreeBSD domU will use a specific
+interface called <tt class="DEVICENAME">xn0</tt>:</p>
+
+<pre class="SCREEN">
+<samp class="PROMPT">#</samp> <kbd
+class="USERINPUT">ifconfig xn0 10.10.10.200 netmask 255.0.0.0</kbd>
+<samp class="PROMPT">#</samp> <kbd class="USERINPUT">ifconfig</kbd>
+xn0: flags=843&lt;UP,BROADCAST,RUNNING,SIMPLEX&gt; mtu 1500
+    inet 10.10.10.200 netmask 0xff000000 broadcast 10.255.255.255
+    ether 00:16:3e:6b:de:3a
+lo0: flags=8049&lt;UP,LOOPBACK,RUNNING,MULTICAST&gt; mtu 16384
+      inet6 ::1 prefixlen 128 
+      inet6 fe80::1%lo0 prefixlen 64 scopeid 0x2 
+      inet 127.0.0.1 netmask 0xff000000
+</pre>
+
+<p>On dom0 Slackware, some <b class="APPLICATION"><span class="TRADEMARK">Xen</span></b>
+dependant network interfaces should show up:</p>
+
+<pre class="SCREEN">
+<samp class="PROMPT">#</samp> <kbd class="USERINPUT">ifconfig</kbd>
+eth0      Link encap:Ethernet  HWaddr 00:07:E9:A0:02:C2  
+          inet addr:10.10.10.130  Bcast:0.0.0.0  Mask:255.0.0.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:815 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1400 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:204857 (200.0 KiB)  TX bytes:129915 (126.8 KiB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:99 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:99 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:9744 (9.5 KiB)  TX bytes:9744 (9.5 KiB)
+
+peth0     Link encap:Ethernet  HWaddr FE:FF:FF:FF:FF:FF  
+          UP BROADCAST RUNNING NOARP  MTU:1500  Metric:1
+          RX packets:1853349 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:952923 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:2432115831 (2.2 GiB)  TX bytes:86528526 (82.5 MiB)
+          Base address:0xc000 Memory:ef020000-ef040000 
+
+vif0.1    Link encap:Ethernet  HWaddr FE:FF:FF:FF:FF:FF  
+          UP BROADCAST RUNNING NOARP  MTU:1500  Metric:1
+          RX packets:1400 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:815 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:129915 (126.8 KiB)  TX bytes:204857 (200.0 KiB)
+
+vif1.0    Link encap:Ethernet  HWaddr FE:FF:FF:FF:FF:FF  
+          UP BROADCAST RUNNING NOARP  MTU:1500  Metric:1
+          RX packets:3 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:2 errors:0 dropped:157 overruns:0 carrier:0
+          collisions:0 txqueuelen:1 
+          RX bytes:140 (140.0 b)  TX bytes:158 (158.0 b)
+
+xenbr1    Link encap:Ethernet  HWaddr FE:FF:FF:FF:FF:FF  
+          UP BROADCAST RUNNING NOARP  MTU:1500  Metric:1
+          RX packets:4 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:112 (112.0 b)  TX bytes:0 (0.0 b)
+</pre>
+
+<pre class="SCREEN">
+<samp class="PROMPT">#</samp> <kbd class="USERINPUT">brctl show</kbd>
+bridge name     bridge id           STP enabled         interfaces
+xenbr1          8000.feffffffffff   no                  vif0.1
+                                                        peth0
+                                                        vif1.0
+</pre>
+</div>
+</div>
+
+<div class="SECT2">
+<h2 class="SECT2"><a id="VIRTUALIZATION-GUEST-VIRTUALPC"
+name="VIRTUALIZATION-GUEST-VIRTUALPC">22.2.3 Virtual PC on <span
+class="TRADEMARK">Windows</span>&reg;</a></h2>
+
+<p><b class="APPLICATION">Virtual PC</b> for <span class="TRADEMARK">Windows</span>&reg;
+is a <span class="TRADEMARK">Microsoft</span>&reg; software product available for free
+download. See <a href="http://www.microsoft.com/windows/downloads/virtualpc/sysreq.mspx"
+target="_top">system requirements</a>. Once <b class="APPLICATION">Virtual PC</b> has
+been installed on <span class="TRADEMARK">Microsoft</span>&nbsp;<span
+class="TRADEMARK">Windows</span>, the user must configure a virtual machine and then
+install the desired guest operating system.</p>
+
+<div class="SECT3">
+<h3 class="SECT3"><a id="VIRTUALIZATION-GUEST-VIRTUALPC-INSTALL"
+name="VIRTUALIZATION-GUEST-VIRTUALPC-INSTALL">22.2.3.1 Installing FreeBSD on Virtual
+PC/<span class="TRADEMARK">Microsoft</span>&reg;&nbsp;<span
+class="TRADEMARK">Windows</span></a></h3>
+
+<p>The first step in installing FreeBSD on <span
+class="TRADEMARK">Microsoft</span>&nbsp;<span class="TRADEMARK">Windows</span> /<b
+class="APPLICATION">Virtual PC</b> is to create a new virtual machine for installing
+FreeBSD. Select <span class="GUIMENUITEM">Create a virtual machine</span> when
+prompted:</p>
+
+<p><img src="virtualization/virtualpc-freebsd1.png" /></p>
+
+<p><img src="virtualization/virtualpc-freebsd2.png" /></p>
+
+<p>And select <span class="GUIMENUITEM">Other</span> as the <span
+class="GUIMENUITEM">Operating system</span> when prompted:</p>
+
+<p><img src="virtualization/virtualpc-freebsd3.png" /></p>
+
+<p>Then, choose a reasonable amount of disk and memory depending on your plans for this
+virtual FreeBSD instance. 4GB of disk space and 512MB of RAM work well for most uses of
+FreeBSD under <b class="APPLICATION">Virtual PC</b>:</p>
+
+<p><img src="virtualization/virtualpc-freebsd4.png" /></p>
+
+<p><img src="virtualization/virtualpc-freebsd5.png" /></p>
+
+<p>Save and finish the configuration:</p>
+
+<p><img src="virtualization/virtualpc-freebsd6.png" /></p>
+
+<p>Select your FreeBSD virtual machine and click <span class="GUIMENU">Settings</span>,
+then set the type of networking and a network interface:</p>
+
+<p><img src="virtualization/virtualpc-freebsd7.png" /></p>
+
+<p><img src="virtualization/virtualpc-freebsd8.png" /></p>
+
+<p>After your FreeBSD virtual machine has been created, you will need to install FreeBSD
+on it. This is best done with an official FreeBSD CDROM or with an ISO image downloaded
+from an official FTP site. When you have the appropriate ISO image on your local <span
+class="TRADEMARK">Windows</span> filesystem or a CDROM in your CD drive, double click on
+your FreeBSD virtual machine to boot. Then, click <span class="GUIMENU">CD</span> and
+choose <span class="GUIMENU">Capture ISO Image...</span> on <b
+class="APPLICATION">Virtual PC</b> window. This will bring up a window that allows you to
+associate the CDROM drive in your virtual machine with an ISO file on disk or with your
+real CDROM drive.</p>
+
+<p><img src="virtualization/virtualpc-freebsd9.png" /></p>
+
+<p><img src="virtualization/virtualpc-freebsd10.png" /></p>
+
+<p>Once you have made this association with your CDROM source, reboot your FreeBSD
+virtual machine as normal by clicking the <span class="GUIMENU">Action</span> and <span
+class="GUIMENU">Reset</span>. <b class="APPLICATION">Virtual PC</b> will reboot with a
+special BIOS that first checks if you have a CDROM just as a normal BIOS would do.</p>
+
+<p><img src="virtualization/virtualpc-freebsd11.png" /></p>
+
+<p>In this case it will find the FreeBSD installation media and begin a normal <b
+class="APPLICATION">sysinstall</b> based installation as described in <a
+href="install.html">Chapter 2</a>. You may install, but do not attempt to configure X11
+at this time.</p>
+
+<p><img src="virtualization/virtualpc-freebsd12.png" /></p>
+
+<p>When you have finished the installation, remember to eject CDROM or release ISO image.
+Finally, reboot into your newly installed FreeBSD virtual machine.</p>
+
+<p><img src="virtualization/virtualpc-freebsd13.png" /></p>
+</div>
+
+<div class="SECT3">
+<h3 class="SECT3"><a id="VIRTUALIZATION-GUEST-VIRTUALPC-CONFIGURE"
+name="VIRTUALIZATION-GUEST-VIRTUALPC-CONFIGURE">22.2.3.2 Configuring FreeBSD on <span
+class="TRADEMARK">Microsoft</span>&nbsp;<span class="TRADEMARK">Windows</span>/Virtual
+PC</a></h3>
+
+<p>After FreeBSD has been successfully installed on <span
+class="TRADEMARK">Microsoft</span>&nbsp;<span class="TRADEMARK">Windows</span> with <b
+class="APPLICATION">Virtual PC</b>, there are a number of configuration steps that can be
+taken to optimize the system for virtualized operation.</p>
+
+<div class="PROCEDURE">
+<ol type="1">
+<li class="STEP">
+<p><b>Set boot loader variables</b></p>
+
+<p>The most important step is to reduce the <code class="OPTION">kern.hz</code> tunable
+to reduce the CPU utilization of FreeBSD under the <b class="APPLICATION">Virtual PC</b>
+environment. This is accomplished by adding the following line to <tt
+class="FILENAME">/boot/loader.conf</tt>:</p>
+
+<pre class="PROGRAMLISTING">
+kern.hz=100
+</pre>
+
+<p>Without this setting, an idle FreeBSD <b class="APPLICATION">Virtual PC</b> guest OS
+will use roughly 40% of the CPU of a single processor computer. After this change the
+usage will be closer to a mere 3%.</p>
+</li>
+
+<li class="STEP">
+<p><b>Create a new kernel configuration file</b></p>
+
+<p>You can remove all of the SCSI, FireWire, and USB device drivers. <b
+class="APPLICATION">Virtual PC</b> provides a virtual network adapter used by the <a
+href="http://www.FreeBSD.org/cgi/man.cgi?query=de&amp;sektion=4"><span
+class="CITEREFENTRY"><span class="REFENTRYTITLE">de</span>(4)</span></a> driver, so all
+other network devices except for <a
+href="http://www.FreeBSD.org/cgi/man.cgi?query=de&amp;sektion=4"><span
+class="CITEREFENTRY"><span class="REFENTRYTITLE">de</span>(4)</span></a> and <a
+href="http://www.FreeBSD.org/cgi/man.cgi?query=miibus&amp;sektion=4"><span
+class="CITEREFENTRY"><span class="REFENTRYTITLE">miibus</span>(4)</span></a> can be
+removed from the kernel.</p>
+</li>
+
+<li class="STEP">
+<p><b>Setup networking</b></p>
+
+<p>The most basic networking setup involves simply using DHCP to connect your virtual
+machine to the same local area network as your host <span
+class="TRADEMARK">Microsoft</span>&nbsp;<span class="TRADEMARK">Windows</span>. This can
+be accomplished by adding <tt class="LITERAL">ifconfig_de0="DHCP"</tt> to <tt
+class="FILENAME">/etc/rc.conf</tt>. More advanced networking setups are described in <a
+href="advanced-networking.html">Chapter 31</a>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div class="SECT2">
+<h2 class="SECT2"><a id="VIRTUALIZATION-GUEST-VMWARE"
+name="VIRTUALIZATION-GUEST-VMWARE">22.2.4 VMware on MacOS</a></h2>
+
+<p><b class="APPLICATION">VMware Fusion</b> for <span class="TRADEMARK">Mac</span> is a
+commercial software product available for <span class="TRADEMARK">Intel</span> based
+<span class="TRADEMARK">Apple</span> <span class="TRADEMARK">Mac</span> computers running
+<span class="TRADEMARK">Mac&nbsp;OS</span> 10.4.9 or higher. FreeBSD is a fully supported
+guest operating system. Once <b class="APPLICATION">VMware Fusion</b> has been installed
+on <span class="TRADEMARK">Mac&nbsp;OS</span> X, the user must configure a virtual
+machine and then install the desired guest operating system.</p>
+
+<div class="SECT3">
+<h3 class="SECT3"><a id="VIRTUALIZATION-GUEST-VMWARE-INSTALL"
+name="VIRTUALIZATION-GUEST-VMWARE-INSTALL">22.2.4.1 Installing FreeBSD on VMware/<span
+class="TRADEMARK">Mac&nbsp;OS</span> X</a></h3>
+
+<p>The first step is to start VMware Fusion, the Virtual Machine Library will load. Click
+"New" to create the VM:</p>
+
+<p><img src="virtualization/vmware-freebsd01.png" /></p>
+
+<p>This will load the New Virtual Machine Assistant to help you create the VM, click
+Continue to proceed:</p>
+
+<p><img src="virtualization/vmware-freebsd02.png" /></p>
+
+<p>Select <span class="GUIMENUITEM">Other</span> as the <span
+class="GUIMENUITEM">Operating System</span> and <span class="GUIMENUITEM">FreeBSD</span>
+or <span class="GUIMENUITEM">FreeBSD 64-bit</span>, depending on if you want 64-bit
+support, as the <span class="GUIMENU">Version</span> when prompted:</p>
+
+<p><img src="virtualization/vmware-freebsd03.png" /></p>
+
+<p>Choose the Name of the VM Image and the Directory where you would like it saved:</p>
+
+<p><img src="virtualization/vmware-freebsd04.png" /></p>
+
+<p>Choose the size of the Virtual Hard Disk for the VM:</p>
+
+<p><img src="virtualization/vmware-freebsd05.png" /></p>
+
+<p>Choose the method you would like to install the VM, either from an ISO image or from a
+CD:</p>
+
+<p><img src="virtualization/vmware-freebsd06.png" /></p>
+
+<p>Once you click Finish, the VM will boot:</p>
+
+<p><img src="virtualization/vmware-freebsd07.png" /></p>
+
+<p>Install FreeBSD like you normally would, or by following the directions in <a
+href="install.html">Chapter 2</a>:</p>
+
+<p><img src="virtualization/vmware-freebsd08.png" /></p>
+
+<p>Once the install is complete you can modify the settings of the VM, such as Memory
+Usage:</p>
+
+<div class="NOTE">
+<blockquote class="NOTE">
+<p><b>Note:</b> The System Hardware settings of the VM cannot be modified while the VM is
+running.</p>
+</blockquote>
+</div>
+
+<p><img src="virtualization/vmware-freebsd09.png" /></p>
+
+<p>The number of CPUs the VM will have access to:</p>
+
+<p><img src="virtualization/vmware-freebsd10.png" /></p>
+
+<p>The status of the CD-Rom Device. Normally you can disconnect the CD-Rom/ISO from the
+VM if you will not be needing it anymore.</p>
+
+<p><img src="virtualization/vmware-freebsd11.png" /></p>
+
+<p>The last thing to change is how the VM will connect to the Network. If you want to
+allow connections to the VM from other machines besides the Host, make sure you choose
+the <span class="GUIMENUITEM">Connect directly to the physical network (Bridged)</span>.
+Otherwise <span class="GUIMENUITEM">Share the host's internet connection (NAT)</span> is
+preferred so that the VM can have access to the Internet, but the network cannot access
+the VM.</p>
+
+<p><img src="virtualization/vmware-freebsd12.png" /></p>
+
+<p>After you have finished modifying the settings, boot the newly installed FreeBSD
+virtual machine.</p>
+</div>
+
+<div class="SECT3">
+<h3 class="SECT3"><a id="VIRTUALIZATION-GUEST-VMWARE-CONFIGURE"
+name="VIRTUALIZATION-GUEST-VMWARE-CONFIGURE">22.2.4.2 Configuring FreeBSD on <span
+class="TRADEMARK">Mac&nbsp;OS</span> X/VMware</a></h3>
+
+<p>After FreeBSD has been successfully installed on <span
+class="TRADEMARK">Mac&nbsp;OS</span> X with <b class="APPLICATION">VMware</b>, there are
+a number of configuration steps that can be taken to optimize the system for virtualized
+operation.</p>
+
+<div class="PROCEDURE">
+<ol type="1">
+<li class="STEP">
+<p><b>Set boot loader variables</b></p>
+
+<p>The most important step is to reduce the <code class="OPTION">kern.hz</code> tunable
+to reduce the CPU utilization of FreeBSD under the <b class="APPLICATION">VMware</b>
+environment. This is accomplished by adding the following line to <tt
+class="FILENAME">/boot/loader.conf</tt>:</p>
+
+<pre class="PROGRAMLISTING">
+kern.hz=100
+</pre>
+
+<p>Without this setting, an idle FreeBSD <b class="APPLICATION">VMware</b> guest OS will
+use roughly 15% of the CPU of a single processor <span class="TRADEMARK">iMac</span>.
+After this change the usage will be closer to a mere 5%.</p>
+</li>
+
+<li class="STEP">
+<p><b>Create a new kernel configuration file</b></p>
+
+<p>You can remove all of the FireWire, and USB device drivers. <b
+class="APPLICATION">VMware</b> provides a virtual network adapter used by the <a
+href="http://www.FreeBSD.org/cgi/man.cgi?query=em&amp;sektion=4"><span
+class="CITEREFENTRY"><span class="REFENTRYTITLE">em</span>(4)</span></a> driver, so all
+other network devices except for <a
+href="http://www.FreeBSD.org/cgi/man.cgi?query=em&amp;sektion=4"><span
+class="CITEREFENTRY"><span class="REFENTRYTITLE">em</span>(4)</span></a> can be removed
+from the kernel.</p>
+</li>
+
+<li class="STEP">
+<p><b>Setup networking</b></p>
+
+<p>The most basic networking setup involves simply using DHCP to connect your virtual
+machine to the same local area network as your host <span class="TRADEMARK">Mac</span>.
+This can be accomplished by adding <tt class="LITERAL">ifconfig_em0="DHCP"</tt> to <tt
+class="FILENAME">/etc/rc.conf</tt>. More advanced networking setups are described in <a
+href="advanced-networking.html">Chapter 31</a>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+<div class="NAVFOOTER">
+<hr align="LEFT" width="100%" />
+<table summary="Footer navigation table" width="100%" border="0" cellpadding="0"
+cellspacing="0">
+<tr>
+<td width="33%" align="left" valign="top"><a href="virtualization.html"
+accesskey="P">Prev</a></td>
+<td width="34%" align="center" valign="top"><a href="index.html"
+accesskey="H">Home</a></td>
+<td width="33%" align="right" valign="top"><a href="virtualization-host.html"
+accesskey="N">Next</a></td>
+</tr>
+
+<tr>
+<td width="33%" align="left" valign="top">Virtualization</td>
+<td width="34%" align="center" valign="top"><a href="virtualization.html"
+accesskey="U">Up</a></td>
+<td width="33%" align="right" valign="top">FreeBSD as a Host OS</td>
+</tr>
+</table>
+</div>
+
+<p align="center"><small>This, and other documents, can be downloaded from <a
+href="ftp://ftp.FreeBSD.org/pub/FreeBSD/doc/">ftp://ftp.FreeBSD.org/pub/FreeBSD/doc/</a>.</small></p>
+
+<p align="center"><small>For questions about FreeBSD, read the <a
+href="http://www.FreeBSD.org/docs.html">documentation</a> before contacting &#60;<a
+href="mailto:questions@FreeBSD.org">questions@FreeBSD.org</a>&#62;.<br />
+For questions about this documentation, e-mail &#60;<a
+href="mailto:doc@FreeBSD.org">doc@FreeBSD.org</a>&#62;.</small></p>
+</body>
+</html>
+

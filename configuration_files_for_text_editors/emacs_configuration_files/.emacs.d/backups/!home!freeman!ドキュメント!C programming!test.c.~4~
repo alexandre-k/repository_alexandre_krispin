@@ -1,0 +1,12 @@
+#include<stdio.h>
+
+int main(void)
+{
+  printf("Programming is fun.\n");
+  if(x<10)
+    {
+      printf("Too low, try again.\n");
+      scanf(%d", &x")
+    }
+  return 0;
+}

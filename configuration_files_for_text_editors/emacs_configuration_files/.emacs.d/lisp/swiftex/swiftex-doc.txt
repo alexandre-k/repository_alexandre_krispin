@@ -1,0 +1,548 @@
+			   swiftex.el documentation
+
+I mean to turn this into .info documentation in the future, but for now, it is
+a plain text file in outline mode.
+
+
+* introduction
+
+This file defines major modes swifTeX and docTeX.
+
+swifTeX mode is for editing buffers containing normal LaTeX files, and
+provides an alternative to the LaTeX modes in the standard Emacs
+distribution and the AUC TeX package.
+
+docTeX mode is for editing buffers containing self-documenting LaTeX code
+that uses the package "doc.sty", including the document class "ltxdoc".
+For these buffers, docTeX mode is significantly more useful than the
+alternatives provided by standard Emacs and AUC TeX.
+
+These modes are derived from the LaTeX mode in "tex-mode.el" (distributed with
+GNU Emacs) using the autoloaded function `define-derived-mode' in "derived.el"
+(also part of the standard distribution).  FIX: untested-by-me option to derive
+from AUC-TeX's latex-mode.
+
+The principal additions allow convenient, precise control over filling and
+outlining.  There are also a few improvements to help save typing.  In
+docTeX mode, functions are provided to help manage LaTeX file versions,
+dates, and CheckSums.  These major modes are fully documented and
+well-tested.
+
+* installation
+
+Swiftex.el should work with GNU Emacs version 20.x.  If it doesn't, tell me
+about it!  I don't have the resources to ensure it works on other versions of
+Emacs.  There used to be a byte-compilation problem on versions through 19.28.
+I no longer include information on it because I don't think it works on 19.x
+any more anyway.
+
+Put swiftex.el where your Emacs can find it, that is, somewhere in the
+directories in `load-path'.  Byte-compile it with `M-x byte-compile-file'.
+
+You will then probably want to make some additions to your Emacs startup code
+(i.e., your .emacs file):
+
+(1) You should either load "swiftex.el" immediately or cause it to be loaded as
+    necessary.  Otherwise you will have to load it manually before using it. To
+    load it immediately:
+
+      (require 'swiftex)
+
+    To load it whenever `doctex-mode' or `swiftex-mode' is called:
+
+      (autoload 'doctex-mode "swiftex" "Major mode for LaTeX doc documents.")
+      (autoload 'swiftex-mode "swiftex" "Major mode for LaTeX documents.")
+
+(2) There are two ways to have Emacs use swifTeX mode or docTeX mode
+    automatically when you work on certain documents.
+
+    (A) On a per-file basis with Emacs file variables.  FIX: link to emacs.info
+        node.
+
+	Example: at the end of your file, put:
+
+	% Local Variables:
+	% mode: doctex
+	% End: 
+
+    (B) By file extension by setting the Emacs variable `auto-mode-alist'.  You
+        may set this variable any way you like, but a particularly convenient
+        way is to use the function `stx-merge-list' defined in "swiftex.el".
+        Here is an example using `stx-merge-list'.  Each entry is independent
+        and can be omitted according to your preferences.
+
+	  ;; These will only replace entries in `auto-mode-alist' with identical
+	  ;; first parts; watch out for ending up with two entries that match the
+	  ;; same file names, such as "\\.tex$" and "\\.tex\\'".
+	  (stx-merge-list auto-mode-alist '(
+			   ("\\.bbl\\'" .  swiftex-mode) ("\\.aux\\'" .  swiftex-mode)
+			   ("\\.tex\\'" .  swiftex-mode) ("\\.ins\\'" .  swiftex-mode)
+			   ("\\.ltx\\'" .  swiftex-mode) ("\\.bbl\\'" .  swiftex-mode)
+			   ("\\.cls\\'" .  doctex-mode)  ("\\.sty\\'" .  doctex-mode)
+			   ("\\.dtx\\'" .  doctex-mode)  ("\\.fdd\\'" .  doctex-mode)
+			   ("\\.sto\\'" .  doctex-mode)  ("\\.clo\\'" .  doctex-mode)
+			   ("\\.cfg\\'" .  doctex-mode)
+			   ))
+
+        You can't use `stx-merge-list' until it is defined, so you may just
+        want to copy the definition into your .emacs file before you set
+        `auto-mode-alist':
+
+	  (defun stx-merge-list (old new &optional warn)
+	    "Modify a list OLD to include all NEW's elements not in OLD.
+	  Compare elements with `equal'.  New elements are added at the end of
+	  OLD.  NEW and OLD can be both lists or both alists.  Returns OLD.
+
+	  For alists, add NEW's keys to end of OLD if OLD does not have them.
+	  If OLD does have a matching key, change its value to NEW's value for
+	  that key.  The key is the car of each element, the value is the cdr.
+
+	  Optional WARN non-nil means print a message whenever the value of one
+	  of OLD's keys is being replaced."
+	    (let ((p (listp (car old))))
+	      ;; check by checking first element that args are either both lists or both
+	      ;; alists
+	      (if (not (eq p (listp (car new))))
+		  (error "Args to `merge-list' must be both lists or both alists!")
+		(if p
+		    ;; `old' and `new' are alists
+		    (while new
+		      (let* ((new-cons (car new))
+			     (old-cons (assoc (car new-cons) old)))
+			(if old-cons
+			    (progn
+			      (if warn
+				  (message "merge-list: changing value of key %s from %s to %s"
+					   (car old-cons) (cdr old-cons) (cdr new-cons)))
+			      (setcdr old-cons (cdr new-cons)))
+			  (nconc old (list new-cons)))
+			(setq new (cdr new))))
+		  ;; `old' and `new' are regular lists
+		  (while new
+		    (let ((x (car new)))
+		      (or (member x old)
+			  (nconc old (list x)))
+		      (setq new (cdr new)))))
+		old)))
+
+(3) You may want to modify some key bindings.  By convention, a major mode does
+    not bind `C-c <letter>' by default, since these are reserved for users.
+    But you are a user, so bind away.  Here are the bindings I like to use:
+
+      (eval-after-load "swiftex" '(swiftex-startup))
+      (defun swiftex-startup ()
+	"Onetime customization to be executed after loading \"swiftex.el\"."
+	(define-key swiftex-mode-map     "\C-cm"    'stx-emphasize)
+	(define-key swiftex-mode-map     "\C-ce"    'stx-close-block-from-inside)
+	(define-key swiftex-mode-map     "\C-cB"    'stx-insert-block)
+	(define-key swiftex-mode-map     "\C-cb"    'stx-begin-block)
+	;; These next three are the way I like to use braces, but this is best
+	;; left as a personal choice.
+	(define-key swiftex-mode-map     "\M-{"     'self-insert-command)
+	(define-key swiftex-mode-map     "\M-}"     'self-insert-command)
+	(define-key swiftex-mode-map     "{"        'tex-insert-braces))
+
+* use with AUC-TeX
+
+Having swiftex and auctex both loaded causes problems for me, though you might
+want to try setting some variable (I forget which) in swiftex that will derive
+from auctex.
+
+I do the following to run AUC-TeX and swiftex in different Emacs processes.  I
+put the following into my .emacs:
+
+    ;; Code in dotemacs will do the right thing with these variables.
+    (defvar dte-have-swiftex-flag t
+      "*Non-nil means swiftex.el available on system.")
+
+    (defvar dte-have-auctex-flag t
+      "*Non-nil means AUC-TeX available on system.")
+
+    ;; `dte-use-swiftex-flag' is not defined non-nil in this file.  It might be
+    ;; defined on the command line, however.
+    (defvar dte-use-swiftex-flag nil
+      "Non-nil means Emacs should use swiftex.")
+
+    (defun dte-load-swiftex ()
+      "Load \"swiftex\"."
+      (require 'swiftex)
+      (merge-list auto-mode-alist '(
+				    ("\\.cls\\'" . doctex-mode)
+				    ("\\.sty\\'" . doctex-mode)
+				    ("\\.sto\\'" . doctex-mode)
+				    ("\\.clo\\'" . doctex-mode)
+				    ("\\.cfg\\'" . doctex-mode)
+				    ("\\.dtx\\'" . doctex-mode)
+				    ("\\.fdd\\'" . doctex-mode)
+				    ("\\.hlx\\'" . swiftex-mode)
+				    ("\\.bbl\\'" . swiftex-mode)
+				    ("\\.tex\\'" . swiftex-mode)
+				    ("\\.ltx\\'" . swiftex-mode)
+				    ("\\.ins\\'" . swiftex-mode)
+				    ("\\.aux\\'" . swiftex-mode)
+				    ("\\.cfq\\'" . swiftex-mode)
+				    ("\\.stq\\'" . swiftex-mode)
+				    ("\\.clq\\'" . swiftex-mode)
+				    ("\\.soq\\'" . swiftex-mode)
+				    ("\\.coq\\'" . swiftex-mode)
+				    ("\\.tmpl\\'" . swiftex-mode)
+				    ("\\.notes\\'" . swiftex-mode)
+				    ) t))
+
+    (unless (boundp 'dte-no-server-flag)
+      (gnuserv-start))
+
+    (if dte-have-swiftex-flag
+	(if dte-have-auctex-flag
+	    (if dte-use-swiftex-flag
+		;; have both, use swiftex
+		(dte-load-swiftex)
+	      ;; have both, don't use swiftex
+	      (require 'tex-site))
+	  ;; have swiftex not auctex
+	  (dte-load-swiftex))
+      (when dte-have-auctex-flag
+	;; have auctex not swiftex
+	(require 'tex-site)))
+
+
+Then I run my Emacs processes that use swiftex with a shell wrapper.  Pared down:
+
+    #!/bin/sh
+
+    # Run emacs with special arguments.
+
+    # $1 is a flag.
+
+    # If this is called from a fvwm menu item, then we don't have
+    # .bashrc-interactive in the environment.  We want to load .bash-dirs whether
+    # we do or not, since some of the values depend on the setting of
+    # SHELL_FOR_EMACS.
+    SHELL_FOR_EMACS=true
+    if [ -e ~/.bash-dirs ]; then
+	set -a
+	source ~/.bash-dirs
+	set +a
+    fi
+    unset SHELL_FOR_EMACS
+
+    # We remove . from PATH if it's there.
+    export PATH=$(echo $PATH | sed -e 's/^.://' -e 's/:.:/:/')
+
+    #debug=true
+
+    function runemacs () {
+	dinit=
+	if [ $debug ]; then
+	    dinit=--debug-init
+	    echo emacs-wrap args:
+	    echo $dinit
+	    let i=1
+	    for x; do
+		echo $i: $x
+		let i+=1
+	    done
+	fi
+	exec emacs $dinit "$@"
+    }
+
+    # Quoting is a nightmare:
+
+    # eval runemacs -q $profile_A  '"$@"';;
+
+    # to get the quotes within profile_A to be understood, we need the eval, and it
+    # won't work (God knows why) if you write $(eval echo $profile_A) or
+    # $(echo $profile_A).  But if you eval the "$@" (which needs the double quotes
+    # or it will expand as one word) you will screw up any quotes given on the
+    # command line, so you need to protect it from the eval with the single quotes.
+
+    # you can leave out the no-desktop flag if you like, it doesn't matter.  i
+    # didn't include the code that looks at it above.
+
+    case "$1" in
+	 [Ss]wiftex)
+	    shift
+    #	cd somewhere if you like, esp. if you use the desktop features
+	    eval runemacs \
+		-q \
+		'--title="Emacs with swiftex"' \
+		--eval "'(progn 
+			   (setq dte-no-server-flag  t
+				 dte-no-desktop-flag t
+				 dte-use-swiftex-flag t)
+			   (load \"~/.emacs\"))'" \
+		'"$@"';;
+
+	 *)	shift
+	    eval runemacs \
+		-q \
+		--eval "'(progn 
+			    (setq dte-no-desktop-flag t
+				  dte-no-server-flag  t) 
+			    (load \"~/.emacs\"))'" \
+		'"$@"';;
+    esac
+
+
+
+* user documentation
+
+The user functions are described below.  Next to each one is the initial
+key binding, or a suggested one in parentheses, or both.  A major mode
+should by convention not bind `C-c <letter>'; where this is my preferred
+binding, I have put the binding in the comments in the installation
+section above, and left the function unbound, or in one case bound to a
+similar key (these are given in parentheses below).
+
+**  SWIFTEX MODE
+
+swifTeX mode provides all the functionality of the standard LaTeX mode,
+plus the following extensions.  In the case of tab and C-c C-u, the
+standard functions have been replaced by improved ones that act similarly.
+
+***   swiftex-mode
+
+Select swifTeX major mode.  See the installation section for useful ways to
+have swifTeX mode come up automatically.
+
+***   stx-tab:  TAB
+
+If you have tabs in a LaTeX buffer, you will be in for some surprises when
+you use a verbatim environment, so we define a tabbing command that only
+inserts spaces.  I can't imagine that the savings of file-size is at all
+significant using tabs instead of spaces.  If you decide to reinstate
+normal tabbing for swifTeX mode, I strongly recommend you keep the new
+space-tabbing for docTeX mode because every macrocode environment is a
+verbatim environment.
+
+***   comment-region:  C-c ;
+
+Make the region into a comment.  Prefix arg means add
+that many %'s, default 1.
+
+***   stx-next-braces:  M-TAB and C-c TAB
+
+Move point out of the current set of braces and just into the next.
+
+***   stx-up-block:  C-c C-]
+
+Move point out of the current \begin{}-\end{} environment.
+
+***  stx-begin-block:  (C-c b)
+
+Insert \begin{*} and leave point where the * is.
+
+***   OTHERS
+
+ stx-insert-block:  (C-c B)
+
+Alias for standard `tex-latex-block'.  Create a matching pair of
+\begin{}-\end{} lines and leave point on a blank line between them.
+
+ stx-close-block-from-inside:  (C-c e)
+
+Let * be the point.
+Initial buffer contents:
+
+  \begin{text*}
+
+Final buffer contents:
+
+  \begin{text}
+  *
+  \end{text}
+
+ stx-close-block:  C-c C-e
+
+Close the last unclosed \begin{}.  Duplicate any legal prefix to the
+\begin{}.
+
+ stx-goto-prev-unended-begin:   C-c C-u
+ stx-goto-first-unended-begin:  C-c C-u
+
+Move point to the previous or first unended \begin{} above.
+
+ stx-goto-next-unbegun-end:  C-c C-n
+ stx-goto-last-unbegun-end:  C-c M-n
+
+Move point to the next or last unbegun \end{} below.
+
+ stx-verify-blocks:  (C-c v)
+
+Move point to a mismatched \\begin .. \\end block.
+
+ stx-emphasize:  (C-c m)
+
+Insert \emph{*} and leave point at *.
+
+ stx-emphasize-word:  C-c C-m
+
+Surround word at point with "\emph{" and "}".
+
+ dtx-insert-change:              C-c C-d g -
+ add-change-log-entry:           C-c C-d l -
+ dtx-get-fileinfo:               C-c C-d v -
+ dtx-update-minor-version:       C-c C-d u -
+ dtx-update-major-version:       C-c C-d U -
+ dtx-update-documentation-date:  C-c C-d D -
+ dtx-update-checksum:            C-c C-d s -
+
+All the docTeX mode commands that make sense to use in a swifTeX buffer are
+available on the same keys as in docTeX mode.  See below for what these
+functions do.
+
+**  DOCTEX MODE
+
+docTeX mode is intended to behave as you would want swifTeX mode to behave
+in doc.sty buffers.  The argument to \CheckSum is automatically updated
+every time you save the buffer.
+
+***   doctex-mode
+
+Select docTeX major mode.  See the installation section for useful ways to
+have docTeX mode come up automatically.
+
+ dtx-update-minor-version:       C-c C-d u
+ dtx-update-major-version:       C-c C-d U
+ dtx-update-documentation-date:  C-c C-d d
+ dtx-update-checksum:            C-c C-d s
+
+A <version> is any number of integers separated by dots with an optional
+prefix "v" and an optional suffix of a lowercase letter.  When the version
+is updated, a "v" will always be added.
+
+The major and minor version strings will be the last two elements of the
+<version>, counting the possible suffix as a separate element if it exists.
+
+Updates are done by looking for the first line that defines \fileversion in
+the buffer (with \def or \newcommand) as a <version>. If no such line
+exists, then the line with \ProvidesPackage or \ProvidesClass is updated.
+
+When the major or minor version is updated, the date is updated.  Once
+again, this is either the line defining \filedate, or the right part of the
+\ProvidesPackage (or Class) optional argument.
+
+The documentation date is similarly found on the line defining \docdate.
+
+The checksum is automatically updated whenever any of the above are
+updated, and it can be updated on its own with `dtx-update-checksum'.
+
+When the `minor-version' is a letter, the minor-version is treated a little
+differently.
+
+When the `minor-version' is a letter, doctex treats it as an indication
+consistent with the idea of a trivial revision that does not affect
+function (e.g., correcting typos in the documentation).
+
+If the minor version is a letter, updating minor-version increments the
+letter; updating major-version increments the number before it and sets the
+minor-version to null.  This is fine and good.
+
+After a major update, however, there will be no letter at all, so the next
+minor update will increment the final number (i.e. the number the last
+major update incremented), and the next major update will increment the
+number BEFORE that.  Examples:
+
+  VER        UPDATE-TYPE     NEW-VER
+======================================
+ 1.3a        minor            1.3b
+ 1.3b        major            1.4
+ 1.4         minor            1.5
+ 1.5         major            2
+ 2           major            3
+ 3           minor            3<prompt user>
+
+If your minor version is a letter, you should think of minor updates as
+incrementing the trivial revision and major updates as incrementing the
+minor version.  If you want to increment the major version and your minor
+version is currently a letter, you need to do a major update TWICE:
+
+   1.3a -> 1.4 -> 2.0
+
+In case you're wondering, if we DIDN'T do things this way, then there would
+be inconsistent behavior between the case where you do an update having
+already executed one previously in the same buffer in the same session of
+Emacs, and the case where you are performing the first update of the
+editing session on the buffer.  Really I should build in a separate concept
+and update command for "trivial revision", but for the moment this is how
+things work, so I'm documenting it.
+
+***   dtx-get-fileinfo:  C-c C-d v
+
+Display current file version, date, and documentation date in the
+minibuffer.
+
+***   OTHERS
+
+ dtx-begin-FOO
+ dtx-insert-FOO
+
+  FOO           begin        insert
+=======================================
+macrocode:    C-c C-d c    C-c C-d C
+macro:        C-c C-d m    C-c C-d M
+environment:  C-c C-d e    C-c C-d E
+bibfunction:  C-c C-d f    C-c C-d F
+
+The `insert' commands (on uppercase keys) begin and end the relevant
+environment, and leave point in between\; `begin' commands (on lowercase
+keys) just begin the environment.  All prompt for the name of the thing in
+question.
+
+ dtx-interrupt-macrocode:  C-c C-d i
+
+Interrupt a macrocode environment to add some commentary.
+
+  add-change-log-entry:  C-c C-d l
+
+Make a ChangeLog entry.
+
+  dtx-insert-change:  C-c C-d g
+
+Insert a LaTeX changes entry, prompting for the description of the change.
+
+
+**  SYMBOL NAMES
+
+The prefixes `stx' or `dtx' begin all new symbol names, the latter being
+for symbols unique to docTeX mode.
+
+There are some exceptions that begin with `swiftex', `doctex', or `rx'.
+The actual mode functions, the mode maps, and variables holding the prefix
+keys are:
+  `swiftex-mode'            `doctex-mode'
+  `swiftex-mode-map'        `doctex-mode-map'
+  `swiftex-dtx-mode-map'    `doctex-dtx-mode-map'
+  `swiftex-dtx-prefix-key'  `doctex-dtx-prefix-key'.
+
+A group of constants have names beginning with `rx', short for "regexp".
+
+* history
+
+These major modes are the result of my own hacking over the years, adding
+to the standard LaTeX major mode.
+
+Once I got used to my developments, switching to AUC TeX seemed like too
+much of a pain in the neck.  Perhaps someone will add this functionality to
+AUC TeX's one day.  I don't expect many people besides me will want to use
+swifTeX mode except in its extension of docTeX mode.  Do let me know if you
+like swifTeX mode.
+
+DocTeX mode began its life on 14 November 1994 when David Carlisle of the
+LaTeX 3 team gave me some Emacs lisp code written by fellow LaTeX 3 team
+members Johanes Brahms and Frank Mittelbach.  That file contained functions
+for handling version control, inserting changes, and inserting the basic
+doc.sty environments.  I used these functions to build a new major mode in
+parallel with swifTeX mode.
+
+The original authors have given me permission to incorporate their code in
+mine, but they do not otherwise endorse or support swiftex.el.  I, Matt
+Swift <swift@alum.mit.edu>, am the sole maintainer.
+
+* future
+
+* Emacs File Variables
+
+Local Variables:
+mode: outline
+End: 

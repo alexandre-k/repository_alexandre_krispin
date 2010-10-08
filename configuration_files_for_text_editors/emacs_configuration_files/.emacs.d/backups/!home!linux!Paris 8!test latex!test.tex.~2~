@@ -1,0 +1,19 @@
+% Time-stamp: <2010-06-11 18:47:47 (linux)>
+
+\documentclass{article}
+ 
+\usepackage[T1]{fontenc}
+\usepackage[pstcol,pst-node,pst-plot,pst-text]{pstricks}
+\usepackage[latin1]{inputenc}
+\usepackage{amsfonts} 
+\usepackage[frenchb]{babel}
+%test testtest
+\begin{document}
+\'Equilibre sur le march\'e du travail
+\begin{pspicture}(6,6)
+\psline[linecolor=red](3,0)(3,5)
+\psline[linestyle=dashed](0,2)(4,2)(4,0)
+\psline[linestyle=dashed](0,3)(3,3)
+\end{pspicture}
+
+\end{document}

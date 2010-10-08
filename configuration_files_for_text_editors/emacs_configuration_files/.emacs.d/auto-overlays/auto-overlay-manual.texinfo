@@ -1,0 +1,144 @@
+
+\input texinfo @c -*-texinfo-*-
+
+@comment Documentation for the Emacs auto-overlays package
+
+@c %**start of header
+@setfilename auto-overlay-manual.info
+@settitle Emacs Auto-Overlays Manual
+@c %**end of header
+
+
+@copying
+This manual describes the Emacs Auto-Overlays package, version 0.10
+@c --version--
+
+Copyright @copyright{} 2007, 2008 Toby Cubitt
+
+@quotation
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.2 or
+any later version published by the Free Software Foundation; with no
+Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A
+copy of the license is included in the section entitled "GNU Free
+Documentation License".
+@end quotation
+@end copying
+
+
+@titlepage
+@title Emacs Auto-Overlays Manual
+@subtitle Version 0.10
+@c --version--
+@author Toby Cubitt
+
+@c Start copyright page
+@page
+@vskip 0pt plus 1filll
+@insertcopying
+@end titlepage
+
+
+@ifnottex
+@node Top
+@top Emacs Auto-Overlays Manual
+
+@insertcopying
+
+An Emacs overlay demarcates a region of text in a buffer, often giving
+it a different face or changing other properties for that region. There
+are many circumstance in which it might be useful to create, update, and
+delete overlays automatically when text matches some criterion,
+specified for example by regular expressions. This is what the
+auto-overlays package addresses. It is intended as an Elisp library,
+providing functions to be used by other Elisp packages, so does not
+itself define any new interactive commands or minor modes.
+
+
+@menu
+* Overview::
+* Auto-Overlay Functions::
+* Worked Example::
+* Extending the Auto-Overlays Package::
+* To-Do::
+* Function Index::
+* Variable Index::
+* Concept Index::
+* Copying this Manual::
+
+@detailmenu
+ --- The Detailed Node Listing ---
+
+Emacs Auto-Overlays Manual
+
+* Overview::
+* Auto-Overlay Functions::
+* Worked Example::
+* Extending the Auto-Overlays Package::
+* To-Do::
+
+Auto-Overlay Functions
+
+* Defining Regexps::
+* Starting and Stopping Auto-Overlays::
+* Searching for Overlays::
+
+Extending the Auto-Overlays Package
+
+* Auto-Overlays in Depth::
+* Integrating New Overlay Classes::
+* Functions for Writing New Overlay Classes::
+* Auto-Overlay Hooks::
+* Auto-Overlay Modification Pseudo-Hooks::
+
+Functions for Writing New Overlay Classes
+
+* Functions for Modifying Overlays::
+* Functions for Querying Overlays::
+
+Copying this Manual
+
+* GNU Free Documentation License::
+
+@end detailmenu
+@end menu
+
+@end ifnottex
+
+
+@contents
+
+
+@include auto-overlays.texinfo
+
+
+@node Function Index
+@appendix Function Index
+@printindex fn
+
+@node Variable Index
+@appendix Variable Index
+@printindex vr
+
+@node Concept Index
+@appendix Concept Index
+@printindex cp
+
+
+@node Copying this Manual
+@appendix Copying this Manual
+
+@menu
+* GNU Free Documentation License::
+@end menu
+
+@include fdl.texi
+
+
+@bye
+
+
+@c  Local Variables:
+@c  mode: texinfo
+@c  mode: predictive
+@c  End:

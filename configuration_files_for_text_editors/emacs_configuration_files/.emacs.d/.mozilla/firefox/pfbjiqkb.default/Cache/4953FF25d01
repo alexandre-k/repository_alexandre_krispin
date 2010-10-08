@@ -1,0 +1,503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Forum Ubuntu-fr.org / Gestion des droits - Chmod et Chown ne fonctionnent pas ? [RESOLU]</title>
+<link rel="stylesheet" type="text/css" href="http://www-static.ubuntu-fr.org/style/Ubuntu.css" />
+<script type="text/javascript" src="http://www-static.ubuntu-fr.org/style/imports/common.js"></script>
+<script type="text/javascript">
+var site_name='ubuntu';
+var menu_hidden=0;
+</script>
+<script type="text/javascript" src="http://www-static.ubuntu-fr.org/style/imports/menu.js"></script> 
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://forum.ubuntu-fr.org/extern.php?action=new&amp;type=rss" />
+
+<script type="text/javascript">
+<!--
+function process_form(the_form)
+{
+	var element_names = new Object()
+	element_names["req_message"] = "Message"
+
+	if (document.all || document.getElementById)
+	{
+		for (i = 0; i < the_form.length; ++i)
+		{
+			var elem = the_form.elements[i]
+			if (elem.name && elem.name.substring(0, 4) == "req_")
+			{
+				if (elem.type && (elem.type=="text" || elem.type=="textarea" || elem.type=="password" || elem.type=="file") && elem.value=='')
+				{
+					alert("\"" + element_names[elem.name] + "\" doit etre rempli")
+					elem.focus()
+					return false
+				}
+			}
+		}
+	}
+
+	return true
+}
+// -->
+</script>
+
+
+
+</head>
+<body>
+<!-- 379111-18 -->
+
+<div id="top">
+   <h1><a href="http://www.ubuntu-fr.org" title="Accueil">ubuntu-fr</a></h1>
+   <p><span>Communauté francophone des utilisateurs d'Ubuntu</span></p>
+   <form action="http://www.ubuntu-fr.org/search/index.php" method="get" id="search_top" onsubmit="var expire = new Date();expire.setTime(expire.getTime()+(5*60*1000));document.cookie ='ubfr_forum_keywords='+document.getElementById('q').value+';expires='+expire.toGMTString();">
+      <fieldset>
+         <input name="q" id="q" value="Recherche rapide..." onfocus="if(this.value == 'Recherche rapide...'){this.value='';}" title="Saisissez les mots-clés à rechercher" type="text" />
+	<script type="text/javascript"><!--
+	function readCookie(name) {
+		var nameEQ = name + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0;i < ca.length;i++) {
+			var c = ca[i];
+			while (c.charAt(0)==' ') c = c.substring(1,c.length);
+			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+		}
+		return null;
+	}
+	var kwds = readCookie('ubfr_forum_keywords');
+	if(kwds)
+		document.getElementById('q').value=kwds;
+	--></script>
+         <select name="in" id="in" title="Dans le..">
+            <option value="wiki">Documentation</option>
+            <option selected="selected" value="oneforum">Ce forum</option>
+            <option value="forum" >Tous les forums</option>
+            <option value="planet">Planet</option>
+         </select>
+         <input type="hidden" value="18" name="forum" />
+         <input value="ok" type="submit" />
+       </fieldset>
+    </form>
+</div>
+<div id="navbar">
+   <ul>
+      <li><a href="http://www.ubuntu-fr.org" id="navbar_www">Accueil</a></li>
+      <li><a href="http://doc.ubuntu-fr.org" id="navbar_doc">Documentation</a></li>
+      <li id="active"><a href="http://forum.ubuntu-fr.org" id="navbar_forum">Forum</a></li>
+      <li><a href="http://planet.ubuntu-fr.org" id="navbar_planet">Planet</a></li>
+   </ul>
+   <p>Vous êtes ici : <a href="http://www.ubuntu-fr.org" title="Retour à l'accueil">Accueil</a> » <a href="http://forum.ubuntu-fr.org" title="Forum ubuntu-fr">Forum</a>&#160;&raquo;&#160;<a href="viewforum.php?id=18">Autres logiciels...</a>&#160;&raquo;&#160;Gestion des droi...</p>
+</div>
+
+<div id="punwrap">
+<div id="punviewtopic" class="pun">
+
+<div id="brdheader" class="block">
+	<div class="box">
+		<div id="brdtitle" class="inbox">
+		</div>
+		<div id="brdmenu" class="inbox">
+			<ul>
+				<li id="navextra1"><h2>Navigation</h2></li>
+				<li id="navindex"><a href="index.php">Liste des forums</a></li>
+				<li id="navuserlist"><a href="userlist.php">Liste des utilisateurs</a></li>
+				<li id="navrules"><a href="misc.php?action=rules">R&egrave;gles</a></li>
+				<li id="navsearch"><a href="search.php">Recherche</a></li>
+				<li id="navprofile"><a href="profile.php?id=83792">Profil</a></li>
+				<li id="navlogout"><a href="login.php?action=out&amp;id=83792&amp;csrf_token=fa01995adc809b19f9c7bdfbeefda6d21099defe">D&eacute;connexion</a></li>
+			</ul>
+		</div>
+		
+			<dl id="searchlinks" style="font-size:1em;" class="conl">
+				<dt><strong>Liens de recherche</strong></dt>
+				<dd><a href="search.php?action=show_24h">Messages r&eacute;cents</a></dd>
+				<dd><a href="search.php?action=show_unanswered">Sujets sans r&eacute;ponse</a></dd>
+				<dd><a href="search.php?action=show_subscriptions">Sujets suivis</a></dd>
+				<dd><a href="search.php?action=show_user&amp;user_id=83792">Mes messages</a></dd>
+			</dl>
+
+		<div id="brdwelcome" class="inbox"><p id="hidemenu"><a href="javascript:switchMenuVisible()" title="Masquer le menu - AccessKey Z" accesskey="z"><span>Masquer le menu</span></a></p>
+			<ul class="conl">
+				<li>Connect&eacute; en tant que <strong>mondai</strong></li>
+				<li>Derni&egrave;re visite: Aujourd'hui à 20:20</li>
+			</ul>
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+
+<div id="announce" class="block">
+	<h2><span>Annonce</span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div><p>
+Les Ubuntu-partys sont l'occasion pour beaucoup d'entre vous d'acquérir les goodies Ubuntu-fr faits par nos petites mains avec amour.<br />
+Pour tous les autres, fini le désespoir de les manquer <img src="img/smilies/wink.png" alt="wink" height="15" width="15" /> Il est désormais possible de vous procurer l'objet de votre choix grâce à la <a href="http://enventelibre.org/">boutique en ligne</a>, commune à <a href="http://www.framasoft.net/">Framasoft</a> et <a href="http://ubuntu-fr.org">Ubuntu-fr</a>. Vous pourrez déjà y trouver mugs, t-shirts et, bien sûr, les Framakey Ubuntu-fr Remix.
+</p></div>
+		</div>
+	</div>
+</div>
+
+<div class="linkst">
+	<div class="inbox">
+		<ul><li><a href="index.php">Liste des forums</a></li><li>&nbsp;&raquo;&nbsp;<a href="viewforum.php?id=18">Autres logiciels et problèmes généraux</a></li><li>&nbsp;&raquo;&nbsp;Gestion des droits - Chmod et Chown ne fonctionnent pas ? [RESOLU]</li></ul>
+		<p style="margin-top:1em;" class="pagelink conl"><strong>1</strong></p>
+		<p class="postlink conr"><a href="post.php?tid=379111">Poster une r&eacute;ponse</a></p>
+		<div class="clearer"></div>
+	</div>
+</div>
+
+<div id="p3279265" class="blockpost rowodd firstpost">
+	<h2><span><span class="conr">#1&nbsp;</span><a href="viewtopic.php?pid=3279265#p3279265">Le 14/02/2010, à 16:16</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=28610">ngmsky</a></strong></dt>
+										<dd class="postavatar"></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3>Gestion des droits - Chmod et Chown ne fonctionnent pas ? [RESOLU]</h3>
+				<div class="postmsg">
+					<p>Bonjour les amis.<br />J'ai un probleme d'attribution de droits sur un dossier.<br />Avant d'aller loin, je vous resume le but de mes manipulations :<br /><br />Voici la repartition de mon disque sata 500Go<br /><br />- sda1: 40Go ntfs win7-64b<br />- sda2: 40Go ntfs monté sur /media/virtual (contient les machines virtuelles)<br />- sda3: 400Go Fat32 monté sur /media/Centre<br />le dossier Centre contient un dossier &quot;partage&quot; destiné au partage entre les VM et la machine physique.<br /><br />- sda6 : 15Go en ext3 : ubuntu 9.04-64b<br /><br /> Mon but est de permettre aux machines virtuelles win et linux d'utiliser le dossier &quot;partage&quot; pour les échange.<br />Je veux donc que ce dossier &quot;partage&quot; soit accéssible en rwx (lecture, ecriture et exécution).<br />Les machines virtuelles (VM) win y accedent sans probleme mais les VM ubuntu ne peuvent même pas afficher ce qu'il y'a dans ce dossier, même en faisant un montage avec -o umask=000 et en faisant chown ....<br /><br />A partir de la machine physique, quand j'ai vérifié les droits d'accès a ce dossier j'ai vu que le dossier &quot;partage&quot; etait en 700.<br />J'ai tenté plusieurs fois de l'attribuer 777, il accepte mais quand je revérifie, il est toujours a 700.<br /><br />J'ai aussi essayé de changer le propriotaire (chown) et le groupe (avec chmod). Avant il était à root:root et maintenant il est à ambre:root. &quot;ambre&quot; étant le nom du compte de l'utilisateur pricipal (avec lequel j'ai installé le systeme).<br /><br />Quand je veux changer de groupe, il refuse complement en me disant operation non permise.<br />Je me demande donc quel est le role d'un propriotaire, s'il autorisé à modifier le groupe d'apartenance de son dossier ???<br /><br />Voici un petit récapitulatif des manipuations.<br /><br />Vérification des droits actuels du dossier<br /></p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 6em"><pre>ambre@ub64host:/media/Centre$ ls -l | grep part
+drwx------ 16 ambre root   16384 2010-02-13 16:48 partage</pre></div></div></div><p>J'éssaie de changer de groupe du dossier pour que root me laisse tranquil, mais sans succès.<br /></p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 9em"><pre>ambre@ub64host:/media/Centre$ sudo chown ambre:ambre partage/
+[sudo] password for ambre: 
+chown: changement de propriétaire pour `partage/': Opération non permise
+ambre@ub64host:/media/Centre$</pre></div></div></div><p>Attribution de tout les droits à tout le monde. Le systeme accepte Ok<br /></p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 6em"><pre>ambre@ub64host:/media/Centre$ sudo chmod -R 777 partage/
+ambre@ub64host:/media/Centre$</pre></div></div></div><p>Vérification - Oups, Rien n'est changer !<br /></p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 7.5em"><pre>ambre@ub64host:/media/Centre$ ls -l | grep part
+drwx------ 16 ambre root   16384 2010-02-13 16:48 partage
+ambre@ub64host:/media/Centre$</pre></div></div></div><p>Comme c'est currieux ! chmod 777 (ou a+rwx) s'est bien passé et voila que le dossier est toujours en 700<br /><br />Merci à vous de me donner quelques demarches à suivre pour pouvoir changer ces droits.<br /><br />A très bientôt !</p>
+					<p class="postedit"><em>Derni&egrave;re modification par ngmsky (Le 15/02/2010, à 00:37)</em></p>
+				</div>
+				<div class="postsignature"><hr />Asus P5V-VM DH + intel Core2Duo 1,86Ghz (6300) + 2Go DDR2 - 533Mhz (1,9 ns) + DD 500Go sata2 / Ubuntu 9.04<br />- Tu es un être unique car Dieu ne fait pas de photocopie :-) <br />- Tu es un être rare. Or tout cequi est rare a de la valeur ! :cool:<br />- Alors réjouis-toi de ceque tu es, et restes comme tu es :-)</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p>Hors ligne</p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=3279265">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=379111&amp;qid=3279265">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p3279272" class="blockpost roweven">
+	<h2><span><span class="conr">#2&nbsp;</span><a href="viewtopic.php?pid=3279272#p3279272">Le 14/02/2010, à 16:21</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=28096">U-topic</a></strong></dt>
+										<dd class="postavatar"><img src="img/avatars/28096.jpg" width="60" height="60" alt="" /></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: Gestion des droits - Chmod et Chown ne fonctionnent pas ? [RESOLU]</h3>
+				<div class="postmsg">
+					<p>Le fat32 ne gère pas les permissions il me semble <a href="http://doc.ubuntu-fr.org/droits#les_permissions">(non en fait j'en suis sûr !)</a><br />Quels sont les droits du dossier /media/Centre avant montage ? <img src="img/smilies/smile.png" width="15" height="15" alt="smile" /></p>
+					<p class="postedit"><em>Derni&egrave;re modification par U-topic (Le 14/02/2010, à 16:28)</em></p>
+				</div>
+				<div class="postsignature"><hr />Linux user <a href="http://counter.li.org/cgi-bin/certificate.cgi/455104">#455104</a><br />Ubuntu user<a href="http://ubuntucounter.geekosophical.net%20title=&quot;The%20Ubuntu%20Counter%20Project%20-%20user%20number%20#%2017617">#17617</a><br /><a href="http://www.digistan.org/hague-declaration:fr">Déclaration de La Haye</a></div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p>Hors ligne</p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=3279272">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=379111&amp;qid=3279272">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p3279457" class="blockpost rowodd">
+	<h2><span><span class="conr">#3&nbsp;</span><a href="viewtopic.php?pid=3279457#p3279457">Le 14/02/2010, à 18:04</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=28610">ngmsky</a></strong></dt>
+										<dd class="postavatar"></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: Gestion des droits - Chmod et Chown ne fonctionnent pas ? [RESOLU]</h3>
+				<div class="postmsg">
+					<p>Merci pour ta reponse.<br />Oui le fat32 ne gere pas les droits.<br />Mais la technologie linux permet de lui faire prendre conscience des droits (lors qu'il est monté sur un systeme linux) : une sorte de droits virtuels ou meta-droits. EN fin, c'est juste ce que je pense, ça reste à vérifier. Mais n'empeche que, actuellement les fichier qui sont dans cette partition fat32 on des droits ! (700 pour &quot;partage&quot;, par exemple). Une atre preuve concrete c'est que les VM ubuntu n'ont pas le droit de lire le dossier &quot;partage&quot; tandis que les VM win y accedent sans problemes. Ça dependant donc du systeme d'exploitation, je crois ! Visiblement win s'en fout des droits sur fat32.<br /><br />Pour ta question : <br />voici les reponses : <br /><br />Actuellement, /dev/sda3 est monté sur /media/Centre et voici les droits de Centre :<br /><br /></p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 7.5em"><pre>ambre@ub64host:/media$ ls -l | grep Cen
+drwx------ 48 ambre root 32768 1970-01-01 01:00 Centre
+ambre@ub64host:/media$</pre></div></div></div><p>Et currieusement, quand je refais la même manip après avoir démonté &quot;Centre&quot;, voici&nbsp; le résultat<br /><br /></p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 7.5em"><pre> 
+ambre@ub64host:/media$ ls -l | grep Cen
+ambre@ub64host:/media$</pre></div></div></div><p>En faite , j'ai contaté que &quot;Centre&quot; à dispparut carement de /media.<br />Il est donc créer dynamiquement à chaque montage de /sda3.<br /><br />Autre chose :<br />sda3 n'est pas présent dans fstab mais seulement dans mtab voici les deux fichiers :<br /><br /><br />/etc/fstab (sda3 absent)<br /></p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 19.5em"><pre> 
+ambre@ub64host:/media$ cat /etc/fstab 
+# &lt;file system&gt; &lt;mount point&gt;   &lt;type&gt;  &lt;options&gt;       &lt;dump&gt;  &lt;pass&gt;
+proc            /proc           proc    defaults        0       0
+# / was on /dev/sda6 during installation
+UUID=187070ea-442c-4b77-83e5-12688e6f4744 /               ext3    relatime,errors=remount-ro 0       1
+# swap was on /dev/sda7 during installation
+UUID=108fe6fd-c13d-4a96-b35d-18c5d15cec39 none            swap    sw              0       0
+/dev/scd0       /media/cdrom0   udf,iso9660 user,noauto,exec,utf8 0       0
+/dev/fd0        /media/floppy0  auto    rw,user,noauto,exec,utf8 0       0
+ambre@ub64host:/media$</pre></div></div></div><p>.<br />.<br />Puis /etc/mtab ( j'ai juste mis cequi nous interesse ici)<br /></p><div class="codebox"><div class="incqbox"><h4>Code:</h4><div class="scrollbox" style="height: 7.5em"><pre> 
+ambre@ub64host:/media$ cat /etc/mtab | grep sda3
+/dev/sda3 /media/Centre vfat rw,nosuid,nodev,uhelper=hal,shortname=mixed,uid=1000,utf8,umask=077,flush 0 0</pre></div></div></div><p>Pour info, &quot;Centre&quot; c'est le texte que j'ai mis comme étiquette de la partition sda3 depuis gparted.<br />Je crois donc que mtab utilise cette étiqueete pour créer un point de montage temporaraire de sda3.<br />De plus, sda3 n'est pas monté automatiquement. IL se monte seulement lorsque je clique sur le disque qui apparait soi sur le bureau soit dans poste de travail. <br />Et puis une fenetre me demande le mot de passe. Pour éviter d'avoir cette fenettre à chaque fois que je monterai sda3, j'avais coché la case &quot;mémorisé le mot de passe&quot;.<br /><br />En attendant ta rpopostion, je vais éssayé de modifier les parametres qui sont dans mtab en les passant à default. Et je vous dirai ce que ça donne.<br />Mais une autre idée serais toujours bonne à croquer <img src="img/smilies/big_smile.png" width="15" height="15" alt="big_smile" /></p>
+					<p class="postedit"><em>Derni&egrave;re modification par ngmsky (Le 14/02/2010, à 18:10)</em></p>
+				</div>
+				<div class="postsignature"><hr />Asus P5V-VM DH + intel Core2Duo 1,86Ghz (6300) + 2Go DDR2 - 533Mhz (1,9 ns) + DD 500Go sata2 / Ubuntu 9.04<br />- Tu es un être unique car Dieu ne fait pas de photocopie :-) <br />- Tu es un être rare. Or tout cequi est rare a de la valeur ! :cool:<br />- Alors réjouis-toi de ceque tu es, et restes comme tu es :-)</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p>Hors ligne</p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=3279457">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=379111&amp;qid=3279457">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p3279778" class="blockpost roweven">
+	<h2><span><span class="conr">#4&nbsp;</span><a href="viewtopic.php?pid=3279778#p3279778">Le 14/02/2010, à 20:43</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=28610">ngmsky</a></strong></dt>
+										<dd class="postavatar"></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: Gestion des droits - Chmod et Chown ne fonctionnent pas ? [RESOLU]</h3>
+				<div class="postmsg">
+					<p>Bon je vous donne les resultats de ce que j'ai fait :<br /><br />- J'ai démonté sda3,<br />- j'ai crée le répertoire Centre dans /media<br />par défaut il etait comme ça : drwxr-xr-x root:root Centre (donc 755)<br />- j'ai c'est droits et son appartenance pour obtenir ceci :<br />drwxrwxrwx&nbsp; 2 ambre ambre&nbsp; 4096 2010-02-14 18:16 Centre (777) : ok<br />- j'ai ajouté la ligne suivante dans /etc/fstab:<br />/dev/sda3&nbsp; &nbsp; /media/Centre vfat&nbsp; &nbsp; &nbsp; &nbsp; defaults,utf8,umask=0&nbsp; &nbsp; 0&nbsp; &nbsp; 0<br /><br />Mais quand je monte sda3 (en faisant sudo mount -a ou sudo mount -Centre) j'ai ceci :<br />drwxr-xr-x 48 root&nbsp; root 32768 1970-01-01 01:00 Centre<br /><br />Ce qui veut dire que ambre n'est plus propriotaire et ambre ne peut pas modifié Centre alors qu'avant de monté ce repertoire apartenait pleinement à ambre et avait pour permissions 777.<br /><br />J'ai éssayé plein d'autre modifications de fstab et autes bricoles mais sans succes.<br /><br />Alors je fais recours à vous.<br /><br />Merci d'avance</p>
+				</div>
+				<div class="postsignature"><hr />Asus P5V-VM DH + intel Core2Duo 1,86Ghz (6300) + 2Go DDR2 - 533Mhz (1,9 ns) + DD 500Go sata2 / Ubuntu 9.04<br />- Tu es un être unique car Dieu ne fait pas de photocopie :-) <br />- Tu es un être rare. Or tout cequi est rare a de la valeur ! :cool:<br />- Alors réjouis-toi de ceque tu es, et restes comme tu es :-)</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p>Hors ligne</p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=3279778">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=379111&amp;qid=3279778">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p3280152" class="blockpost rowodd">
+	<h2><span><span class="conr">#5&nbsp;</span><a href="viewtopic.php?pid=3280152#p3280152">Le 15/02/2010, à 00:36</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=28610">ngmsky</a></strong></dt>
+										<dd class="postavatar"></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: Gestion des droits - Chmod et Chown ne fonctionnent pas ? [RESOLU]</h3>
+				<div class="postmsg">
+					<p>reBonsoir !<br />ALors c'est juste pour vous dire que le probleme est résolu.<br />En faite,&nbsp; l'instruction (la ligne de comande) ajouté dans fstab avait bien réglé le probleme, mais il me fallait simplement redémarrer pour que les changement soient prises en compte.<br />Maintenant j'ai ceci :<br /><br />Quand sda3 n'est pas monté : drwxrwxrwx ambre mbre&nbsp; Centre<br />Quand il est monté, il devient : drwxrwxrwx 48 root&nbsp; root&nbsp; Centre<br />Malgré que c'est root:root, j'ai maintenant l'accès complet même depuis les VM ubuntu car ici les permissions sont bien à 777.<br /><br />Merci beaucoup à u-topic car c'est grace à ta question que j'ai pu découvrir bcp de choses jusquà en arriver là.<br />Merci aussi pour les autres, puissent même rien l'intension d'aider compte !<br /><br />Bonne continuation pour tous. Et merci à ce forum-ubuntu aussi car , il nous facilite la vie.</p>
+				</div>
+				<div class="postsignature"><hr />Asus P5V-VM DH + intel Core2Duo 1,86Ghz (6300) + 2Go DDR2 - 533Mhz (1,9 ns) + DD 500Go sata2 / Ubuntu 9.04<br />- Tu es un être unique car Dieu ne fait pas de photocopie :-) <br />- Tu es un être rare. Or tout cequi est rare a de la valeur ! :cool:<br />- Alors réjouis-toi de ceque tu es, et restes comme tu es :-)</div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p>Hors ligne</p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=3280152">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=379111&amp;qid=3280152">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div id="p3280329" class="blockpost roweven">
+	<h2><span><span class="conr">#6&nbsp;</span><a href="viewtopic.php?pid=3280329#p3280329">Le 15/02/2010, à 05:48</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postleft">
+				<dl>
+					<dt><strong><a href="profile.php?id=73">AlexandreP</a></strong></dt>
+										<dd class="postavatar"><img src="img/avatars/73.png" width="60" height="60" alt="" /></dd>
+				</dl>
+			</div>
+			<div class="postright">
+				<h3> Re: Gestion des droits - Chmod et Chown ne fonctionnent pas ? [RESOLU]</h3>
+				<div class="postmsg">
+					<p>Effectivement : une modification apportée dans le fichier <em>/etc/<strong>fstab</strong></em> n'est pas appliquée immédiatement. Le système de fichiers en question doit être démonté, puis remonté suite à la modification pour qu'elle soit prise en compte.</p>
+					<p class="postedit"><em>Derni&egrave;re modification par AlexandreP (Le 15/02/2010, à 05:48)</em></p>
+				</div>
+				<div class="postsignature"><hr /><span style="color: Grey"><em>«La capacité d'apprendre est un don; La faculté d'apprendre est un talent; La volonté d'apprendre est un choix.»</em> -Frank Herbert</span></div>
+			</div>
+			<div class="clearer"></div>
+			<div class="postfootleft"><p><strong>En ligne</strong></p></div>
+			<div class="postfootright"><ul><li class="postreport"><a href="misc.php?report=3280329">Signaler</a> | </li><li class="postquote"><a href="post.php?tid=379111&amp;qid=3280329">Citer</a></li></ul></div>
+		</div>
+	</div>
+</div>
+
+<div class="postlinksb">
+	<div class="inbox">
+		<p class="postlink conr"><a href="post.php?tid=379111">Poster une r&eacute;ponse</a></p>
+		<p class="pagelink conl" style="margin-bottom:1em;float:none;" ><strong>1</strong></p>
+		<ul><li><a href="index.php">Liste des forums</a></li><li>&nbsp;&raquo;&nbsp;<a href="viewforum.php?id=18">Autres logiciels et problèmes généraux</a></li><li>&nbsp;&raquo;&nbsp;Gestion des droits - Chmod et Chown ne fonctionnent pas ? [RESOLU]</li></ul>
+		<p class="subscribelink clearb"><a href="misc.php?subscribe=379111">S'abonner &agrave; ce sujet</a></p>
+		<p class="postlink conr" style="margin-top:-20px;"><a href="#" style="">Haut de page&nbsp;↑</a></p>
+	</div>
+</div>
+
+<div class="blockform">
+	<h2><span>Message rapide</span></h2>
+	<div class="box">
+		<form id="post" method="post" action="post.php?tid=379111" onsubmit="this.submit.disabled=true;if(process_form(this)){return true;}else{this.submit.disabled=false;return false;}">
+			<div class="inform">
+				<fieldset>
+					<legend>Veuillez &eacute;crire votre message et l'envoyer</legend>
+					<div class="infldset txtarea">
+						<input type="hidden" name="form_sent" value="1" />
+						<input type="hidden" name="form_user" value="mondai" />
+												<script type="text/javascript">
+						<!--
+							function insert_text(open, close)
+							{
+								msgfield = (document.all) ? document.all.req_message : document.forms['post']['req_message'];
+
+								// IE support
+								if (document.selection && document.selection.createRange)
+								{
+									msgfield.focus();
+									sel = document.selection.createRange();
+									sel.text = open + sel.text + close;
+									msgfield.focus();
+								}
+
+								// Moz support
+								else if (msgfield.selectionStart || msgfield.selectionStart == '0')
+								{
+									var startPos = msgfield.selectionStart;
+									var endPos = msgfield.selectionEnd;
+
+									msgfield.value = msgfield.value.substring(0, startPos) + open + msgfield.value.substring(startPos, endPos) + close + msgfield.value.substring(endPos, msgfield.value.length);
+									msgfield.selectionStart = msgfield.selectionEnd = endPos + open.length + close.length;
+									msgfield.focus();
+								}
+
+								// Fallback support for other browsers
+								else
+								{
+									msgfield.value += open + close;
+									msgfield.focus();
+								}
+
+								return;
+							}
+						-->
+						</script>
+						<div style="padding-top: 4px">
+							<input type="button" value=" B " name="B" onclick="insert_text('[b]','[/b]')" /> 
+							<input type="button" value=" I " name="I" onclick="insert_text('[i]','[/i]')" />
+							<input type="button" value=" U " name="U" onclick="insert_text('[u]','[/u]')" />
+							<input type="button" value="http://" name="Url" onclick="insert_text('[url]','[/url]')" />
+							<input type="button" value="Img" name="Img" onclick="insert_text('[img]','[/img]')" />
+							<input type="button" value="Code" name="Code" onclick="insert_text('[code]','[/code]')" />
+							<input type="button" value="Quote" name="Quote" onclick="insert_text('[quote]','[/quote]')" />
+							<input type="button" value="Youtube" name="Youtube" onclick="insert_text('[youtube]','[/youtube]')" />
+							<input type="button" value="Apt" name="Apt" onclick="insert_text('[apt]','[/apt]')" />
+							<input type="button" value="Doc" name="Doc" onclick="insert_text('[doc]','[/doc]')" />
+						</div>
+						<div style="padding-top: 4px">
+							<a href="javascript:insert_text(':)', '');"><img src="img/smilies/smile.png" width="15" height="15" alt=":)" /></a>
+							<a href="javascript:insert_text(':|', '');"><img src="img/smilies/neutral.png" width="15" height="15" alt=":|" /></a>
+							<a href="javascript:insert_text(':(', '');"><img src="img/smilies/sad.png" width="15" height="15" alt=":(" /></a>
+							<a href="javascript:insert_text(':D', '');"><img src="img/smilies/big_smile.png" width="15" height="15" alt=":D" /></a>
+							<a href="javascript:insert_text(':o', '');"><img src="img/smilies/yikes.png" width="15" height="15" alt=":o" /></a>
+							<a href="javascript:insert_text(';)', '');"><img src="img/smilies/wink.png" width="15" height="15" alt=";)" /></a>
+							<a href="javascript:insert_text(':/', '');"><img src="img/smilies/hmm.png" width="15" height="15" alt=":/" /></a>
+							<a href="javascript:insert_text(':P', '');"><img src="img/smilies/tongue.png" width="15" height="15" alt=":P" /></a>
+							<a href="javascript:insert_text(':lol:', '');"><img src="img/smilies/lol.png" width="15" height="15" alt=":lol:" /></a>
+							<a href="javascript:insert_text(':mad:', '');"><img src="img/smilies/mad.png" width="15" height="15" alt=":mad:" /></a>
+							<a href="javascript:insert_text(':rolleyes:', '');"><img src="img/smilies/roll.png" width="15" height="15" alt=":rolleyes:" /></a>
+							<a href="javascript:insert_text(':cool:', '');"><img src="img/smilies/cool.png" width="15" height="15" alt=":cool:" /></a>
+						</div>
+						<label><textarea name="req_message" rows="7" cols="75" tabindex="1"></textarea></label>
+						<ul class="bblinks">
+							<li><a href="help.php#bbcode" onclick="window.open(this.href); return false;">BBCode</a>: actif</li>
+							<li><a href="help.php#img" onclick="window.open(this.href); return false;">Balise [img]</a>: actif</li>
+							<li><a href="help.php#smilies" onclick="window.open(this.href); return false;">Smileys</a>: actif</li>
+						</ul>
+					</div>
+				</fieldset>
+			</div>
+			<p><input type="submit" name="submit" tabindex="2" value="Poster" accesskey="s" /></p>
+		</form>
+	</div>
+</div>
+
+<div id="brdfooter" class="block">
+	<h2><span>Pied de page du Forum</span></h2>
+	<div class="box">
+		<div class="inbox">
+
+			<div class="conl">
+				<form id="qjump" method="get" action="viewforum.php">
+					<div><label>Aller &agrave;
+					<br /><select name="id" onchange="window.location=('viewforum.php?id='+this.options[this.selectedIndex].value)">
+						<optgroup label="Débuter avec Ubuntu">
+							<option value="9">Questions et informations avant l'installation</option>
+							<option value="10">Installation d'Ubuntu</option>
+							<option value="22">LiveCD/LiveUSB</option>
+							<option value="61">Wubi : installation dans Windows</option>
+						</optgroup>
+						<optgroup label="Configuration matérielle">
+							<option value="27">Affichage et cartes graphiques</option>
+							<option value="16">Accès internet et réseaux</option>
+							<option value="79">Imprimantes et scanners</option>
+							<option value="6">Autres types de matériel</option>
+							<option value="82">WiFi</option>
+						</optgroup>
+						<optgroup label="Utilisation générale">
+							<option value="25">Installation de logiciels et changements de version</option>
+							<option value="13">Bureautique et logiciels pour l'internet et le réseau</option>
+							<option value="17">Lecture et configuration multimédia</option>
+							<option value="81">Création graphique, musicale et vidéo</option>
+							<option value="40">Logiciels éducatifs</option>
+							<option value="15">Jeux</option>
+							<option value="18" selected="selected">Autres logiciels et problèmes généraux</option>
+							<option value="5">Général</option>
+							<option value="24">Sur 64 bits</option>
+							<option value="20">Sur Mac</option>
+						</optgroup>
+						<optgroup label="Environnements et accessibilité">
+							<option value="65">Accessibilité</option>
+							<option value="37">GNOME</option>
+							<option value="66">KDE</option>
+							<option value="38">XFCE</option>
+							<option value="41">Autres environnements et personnalisations</option>
+							<option value="78">Console et terminal</option>
+							<option value="39">KDE3.5</option>
+						</optgroup>
+						<optgroup label="Utilisations avancées">
+							<option value="51">Ubuntu en entreprise</option>
+							<option value="28">Serveurs</option>
+							<option value="63">Virtualisation et émulation</option>
+							<option value="23">Trucs, astuces et scripts utiles</option>
+							<option value="35">Développement et programmation</option>
+							<option value="53">Version instable : Maverick Meerkat 10.10</option>
+							<option value="4">Archive</option>
+						</optgroup>
+						<optgroup label="Activités autour du libre">
+							<option value="29">Événements</option>
+							<option value="69">Vos développements libres</option>
+							<option value="71">Vos sites sur le libre</option>
+							<option value="73">Revendeurs libres</option>
+							<option value="49">Lettre hebdomadaire Ubuntu</option>
+							<option value="50">Tee shirts</option>
+							<option value="52">Archives presse</option>
+						</optgroup>
+						<optgroup label="Divers">
+							<option value="42">Actualités autour du logiciel libre</option>
+							<option value="21">À propos du site - Contribution(s)</option>
+							<option value="7">Café Ubuntu</option>
+							<option value="43">Être ou ne pas être... ?</option>
+							<option value="8">L'éphémère</option>
+					</optgroup>
+					</select>
+					<input type="submit" value=" Aller " accesskey="g" />
+					</label></div>
+				</form>
+			</div>
+			<p class="conr">Propulsé par <a href="http://fluxbb.org/">FluxBB</a><br />
+Style adapté par <a href="http://www.ogcreation.fr">Ogcreation.fr</a>.</p>
+<!-- dongo.ubuntu-eu.org -->
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</body>
+</html>

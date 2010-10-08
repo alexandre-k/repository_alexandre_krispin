@@ -1,0 +1,595 @@
+\documentclass{ltxdockit}
+
+\usepackage{amsmath}
+\usepackage{mathspec}
+\usepackage{xltxtra,eukdate}
+
+\renewcommand\contentsname{table of contents}
+\addtokomafont{sectionentry}{\rmfamily\mdseries\scshape\lowercase}
+\addtokomafont{section}{\rmfamily\mdseries\scshape\color{spot}\lowercase}
+\addtokomafont{subsection}{\rmfamily\mdseries\itshape\color{spot}}
+\makeatletter
+            \def\@seccntformat#1{\protect\makebox[0pt][r]{\csname the#1\endcsname\hspace{\marglistsep}}}
+\makeatother
+\hypersetup{linkcolor=black,urlcolor=black}
+
+\definecolor{spot}{rgb}{0.6,0,0}
+\definecolor{boxframe}{rgb}{0.6,0,0}
+\definecolor{boxfill}{rgb}{1,.95,.95}
+
+\lstnewenvironment{example}[1][]
+  {\lstset{%
+     aboveskip=1.5\lstenvsep,
+     xleftmargin=3pt,
+     xrightmargin=3pt,
+     frame=single,
+     backgroundcolor=\color{boxfill},
+     rulecolor=\color{boxframe},
+     framesep=2.5pt,
+     framerule=0.5pt,
+     style=latex,#1}}
+  {}
+
+\setmainfont[Numbers=OldStyle]{Sabon LT Std}
+\setallsansfonts[Numbers={OldStyle,Proportional},Scale=MatchLowercase]{Candara}
+\setallmonofonts[Numbers=OldStyle,Scale=MatchLowercase]{Consolas}
+\setmathsfont(Digits,Latin)[Scale=MatchLowercase]{Bembo MT}
+\setmathsfont(Greek)[Scale=MatchLowercase]{STIXGeneral}
+\setmathrm{Sabon LT Std}
+\exchangeforms{phi}
+\setminwhitespace[750]
+
+\newfontfamily\MathematicalPi{Mathematical Pi LT Std}
+\newcommand\MP[1]{{\MathematicalPi #1}}
+
+\makeatletter
+        \setlogokern{eT}{-0.074em}
+        \setlogokern{Xe}{-0.063em}
+        \setlogokern{eL}{-0.068em}
+        \setlogokern{La}{-0.305em}
+        \setlogokern{aT}{-0.07313em}
+        \setlogokern{X2}{0.101em}
+        \setlogodrop{0.131em}
+        \setLaTeXa{%
+          \ifdim\fontdimen\@ne\font=\z@\else
+            \addfontfeature{FakeSlant=\the\fontdimen\@ne\font}%
+          \fi
+          \if b\expandafter\@car\f@series\@nil
+            \check@mathfonts\fontsize\sf@size\z@
+            \math@fontsfalse\selectfont A%
+          \else
+            \scshape a%
+          \fi}
+        \setLaTeXee{\mbox{$\epsilon$}}
+        \seteverylogo{%
+         \if b\expandafter\@car\f@series\@nil%
+           \setlogokern{Te}{-0.075em}%
+           \setlogokern{eX}{-0.068em}%
+         \else
+           \setlogokern{Te}{-0.084em}%
+           \setlogokern{eX}{-0.063em}%
+         \fi}
+        \newcommand\tablerowa[3]{$\csname #1#3\endcsname$ & \cmd{#1#3} & $\csname #2#3\endcsname$ & \MakeLowercase{\cmd{#2#3}}}
+        \newcommand\tablerowb[1]{$\csname #1\endcsname$ & $\csname var#1\endcsname$ & \cmd{var#1}}
+        \def\topbottomrule{\noalign{\ifnum0=`}\fi
+          \@aboverulesep=\aboverulesep
+          \global\@belowrulesep=\belowrulesep
+          \global\@thisruleclass=\@ne
+          \@ifnextchar[{\@BTrule}{\@BTrule[\heavyrulewidth]}}
+        \renewcommand{\topfraction}{.75}
+        \renewcommand{\bottomfraction}{.75}
+        \renewcommand{\textfraction}{.25}
+        \renewcommand{\floatpagefraction}{.75}
+        \setcounter{topnumber}{9}
+        \setcounter{bottomnumber}{9}
+        \setcounter{totalnumber}{20}
+        \setcounter{dbltopnumber}{9}
+        \def\fps@figure{htb!}
+        \g@addto@macro\table{\collecttable}
+        \newlength\captionwidth
+        \newlength\mincaptionwidth
+        \setlength\mincaptionwidth{50mm}
+        \long\def\collecttable#1\caption#2{%
+          \toks@{#1}%
+          \sbox\z@{\ignorespaces\the\toks@\unskip}%
+          \setlength\captionwidth{\wd\z@}%
+          \ifdim\captionwidth <\mincaptionwidth
+            \captionwidth\mincaptionwidth
+          \fi
+          \caption{#2}%
+          \centerline{\box\z@}}
+        \def\formatcaption#1:#2\@nil{{\spotcolor\scshape\MakeLowercase{#1}}\hspace{1em}#2}
+        \long\def\@makecaption#1#2{%
+          \vskip\abovecaptionskip
+          \sbox\@tempboxa{\formatcaption#1:#2\@nil}%
+          \ifdim\wd\@tempboxa >\captionwidth
+            \centerline{\parbox[t]{\captionwidth}{\formatcaption#1:#2\@nil}}%
+          \else
+            \global\@minipagefalse
+            \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
+          \fi
+          \vskip\belowcaptionskip}
+          \newenvironment{advanced}
+            {\begin{minipage}[t]{\textwidth}\begin{description}\item[\rmfamily\mdseries\scshape\footnotesize\spotcolor advanced]\itshape\footnotesize}
+            {\end{description}\end{minipage}}
+\makeatother
+
+\usepackage{eukdate}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{shortvrb}
+\MakeShortVerb{|}
+
+\newcommand\permitbreak{\linebreak[0]}
+\newrobustcmd*{\sprm}[1]{%
+  \mbox{%
+    {\verbatimfont(}%
+     \prm{#1}%
+    {\verbatimfont)}}}
+
+\hypersetup{
+  pdftitle={The mathspec package},
+  pdfsubject={Font selection for mathematics with XeLaTeX},
+  pdfauthor={Andrew Gilbert Moschou}}
+
+\title{The \textsf{\spotcolor mathspec} package\\[0.25em]\mdseries\itshape\normalsize Font selection for mathematics with \XeLaTeX\\[1ex]\mdseries\upshape version 0.2}
+\author{Andrew Gilbert Moschou\\\texttt{andmos@gmail.com}}
+\makeatletter\let\@today\today\def\today{\scshape\MakeLowercase{\@today}}\makeatother
+
+\hyphenation{in-com-pa-ti-ble Hoef-ler ma-the-ma-tics des-pite}
+
+\frenchspacing
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\section{Preamble}
+
+This document describes the \sty{mathspec} package, a package that provides an interface to select ordinary text fonts for typesetting mathematics with \XeLaTeX. It relies on \sty{fontspec} to work and familiarity with \sty{fontspec} is advised. I thank Will Robertson for his useful advice and suggestions!
+
+The package is developmental and later versions might to be incompatible with this version. This version is incompatible with earlier versions. The package requires at least version 0.9995 of \XeTeX.
+
+Should you be using this package? If you are using another \LaTeX\ package for some mathematics font, then you should not (unless you know what you are doing). If you want to use Asana Math or Cambria Math (or the final release version of the \acr{STIX} fonts) then you should be using |unicode-math|.
+
+Some paragraphs in this document are marked \textsc{\spotcolor advanced}. Such paragraphs may be safely ignored by basic users.
+
+\section{Introduction}
+
+Since Jonathan Kew released \XeTeX, an extension to \TeX\ that permits the inclusion of system wide Unicode fonts and modern font technologies in \TeX\ documents, users have been able to easily typeset documents using readily available fonts such as Hoefler Text and Times New Roman (This document is typeset using Sabon \acr{LT} Std). Will Robertson’s \XeLaTeX\ package \sty{fontspec} provides an automatic font selection process for such fonts. Still, mathematics typesetting has not benefited from this development to the same extent as text typesetting, which is not surprising given the font requirements that are demanded.
+
+Will Robertson has in development a package \sty{unicode-math} that is used to typeset mathematics using some font that has an OpenType mathematics table. Currently, the only two that are available are Cambria Math, a new design, by Microsoft and Asana Math, ultimately based on Hermann Zapf’s Palatino, by Apostolos Syropoulos. It is expected that the \acr{STIX} fonts, based on Times, may also be used.
+
+Thus, it is evident that a book designer is confronted with such narrow variety in mathematics typefaces, even considering already established \LaTeX\ fonts such as \acr{AMS} Euler (and Computer Modern, of course!) that are dedicated to providing mathematics typefaces; and the book designer is challenged to find a suitable pair of matching typefaces for mathematics and body text.
+
+This package provides mathematics alphabets in any of the same typefaces that are available to \XeTeX, using \sty{fontspec} as a back end. Other mathematics symbols such as arrows and operators, whose designs are largely independent of an alphabetic typeface, can be taken from collections like MnSymbol or Computer Modern and are not covered by the scope of this package.
+
+\section{Implementation}
+
+\begin{ltxsyntax}
+
+\cmditem{usepackage}\oprm{\sty{mathspec} and \sty{fontspec} options}|{mathspec}|
+
+\noindent To use the package, put \cmd{usepackage}|{mathspec}| in the preamble of the document. It is not necessary to put \cmd{usepackage}|{fontspec}| because \sty{mathspec} will ensure that \sty{fontspec} is loaded anyway. To load \sty{fontspec} with some options, parse them through \sty{mathspec}, for example, \cmd{usepackage}|[quiet]|\permitbreak|{mathspec}| is equivalent to \cmd{usepackage}\permitbreak|[quiet]|\permitbreak|{fontspec}|\cmd{usepackage}|{mathspec}|.
+
+Actually, \sty{mathspec} ordinarily loads \sty{fontspec} with the \opt{no-math} option. To cancel this, explicitly use the \opt{math} option: e.g.\ \cmd{usepackage}|[math]{mathspec}|.
+
+\end{ltxsyntax}
+
+\section{Setting fonts}
+
+\subsection{Letters and Digits}
+
+\begin{ltxsyntax}
+
+\cmditem{setmathsfont}(sets)[shapes, font features]{font name}
+\cmditem{setmathfont}(sets)[shapes, font features]{font name}
+
+This single command is used to entirely describe the desired font for some use. For each character set (Digits, Latin, Greek), there is a (possibly shared) \cmd{setmathsfont} command. The command can be used only in the preamble. Then, there can be only one typeface for each character set in a single document.
+
+For basic use, \sprm{sets} is mandatory. \oprm{shapes, font features} is optional and may be omitted.
+
+\begin{marglist}
+
+\item[\prm{sets}]
+A comma separated value list of any of the following: \opt{Digits}, \opt{Latin}, \opt{Greek}.
+
+\begin{advanced}
+\prm{sets} may also take the value \opt{Special}. \sprm{sets} is actually optional and if it is omitted, then |(Special)| is asumed. For basic use, it is safe to ignore \opt{Special}, so \sprm{sets} would effectively be a mandatory argument.
+
+If the value of \prm{sets} is \opt{Special}, then {\spotcolor\cmd{eu@ScopeSet@Special}\oprm{font features}\mprm{font name}} is executed, but this command is provided by \sty{mathspec} to gobble its arguments (that is, it does nothing). The command {\spotcolor\cmd{eu@ScopeSet@Special}} maybe predefined before \sty{mathspec} is loaded (or redefined after \sty{mathspec} is loaded) to cause the command to do something else. This effectively means that
+{\spotcolor\cmd{setmathsfont}\sprm{sets}\oprm{font features}\mprm{font name}}
+is a \sty{mathspec} command, but
+{\spotcolor\cmd{setmathsfont}\oprm{font features}\mprm{font name}}
+is an external command which another package might use.
+\end{advanced}
+
+\item[\prm{shapes}]
+A comma separated value list of keys and their values. The permitted keys and their values are:
+
+\begin{optionlist}
+
+\optitem[]{Uppercase}{\opt{Regular}, \opt{Italic}, \opt{Plain}}
+
+\optitem[]{Lowercase}{\opt{Regular}, \opt{Italic}, \opt{Plain}}
+
+\optitem[]{Arabic}{\opt{Regular}, \opt{Italic}, \opt{Plain}}
+
+\end{optionlist}
+To set the symbols in an upright font, choose \opt{Regular}. To set the symbols in an italic font, choose \opt{Italic}. Choose \opt{Plain} to indicate that no font is assignment is to be performed by \sty{mathspec}, so that the symbols will remain with their default font (usually Computer Modern). If a value’s key is omitted, its default value, which depends on the \prm{set}, as shown in table~\ref{tab:defaultshapes} is chosen.
+
+The default values are very good and you would be wise not to change the shapes for the \opt{Latin} and \opt{Digit} sets. The \opt{Greek} shapes may be changed, if needed, to adhere to some particular style, for example all \opt{Italic} or all \opt{Regular}.
+
+\begin{table}\centering
+\begin{tabular}{@{}ccc@{}}\topbottomrule
+Set & Key & Default value \\\midrule
+\opt{Digits} & \opt{Arabic}    & \opt{Regular}\\
+\opt{Latin}  & \opt{Uppercase} & \opt{Italic}\\
+\opt{Latin}  & \opt{Lowercase} & \opt{Italic}\\
+\opt{Greek}  & \opt{Uppercase} & \opt{Regular}\\
+\opt{Greek}  & \opt{Lowercase} & \opt{Italic}\\\bottomrule
+\end{tabular}
+\caption{The default shapes for the symbol sets.}\label{tab:defaultshapes}
+\end{table}
+
+\item[\smash{\begin{tabular}[t]{@{}r@{}}\prm{font features}\\\prm{font name}\end{tabular}}]
+\prm{font features} and \prm{font name} follow directly from \sty{fontspec} to select the font and its features. See \sty{fontspec}’s documentation for details.
+
+\end{marglist}
+
+Note that if \prm{sets} contains multiple sets, the command is iterated over each set. Each of these iterations share the same \prm{shapes and font features} and \prm{font name}. If you require that the different sets have individual options and font names, they must be specified in separate commands. However, if a value’s key is omitted, the individual default values are still applied.
+
+These same command options follow through to the other commands of this package.
+
+\end{ltxsyntax}
+
+\subsection{Symbols}
+
+There is currently no way to set the font for general mathematical symbols such as:
+\begin{center}
+\MP =, \MP ×, \MP ↦, \MP ∂, \MP ∅, \MP ∈, \MP ∫, \MP ⊂
+\end{center}
+You can try the package \sty{MnSymbol}, which has greater (and more uniform) coverage, with the package option \opt{MnSymbol}, e.g.\ \cmd{usepackage}|[MnSymbol]|\permitbreak|{mathspec}|. Note that \sty{MnSymbol} is a third party package by Achim Blumensath, which can only be used if additionally installed.
+
+\subsection{Examples}
+
+\begin{example}
+\setmathsfont(Digits,Latin,Greek)
+    [Numbers={Lining,Proportional}]{Minion Pro}
+\end{example}
+is equivalent to:
+\begin{example}
+\setmathsfont(Digits)[Numbers={Lining,Proportional}]{Minion Pro}
+\setmathsfont(Latin)[Numbers={Lining,Proportional}]{Minion Pro}
+\setmathsfont(Greek)[Numbers={Lining,Proportional}]{Minion Pro}
+\end{example}
+and indicates that all digits, Latin and Greek characters are to be set in Minion Pro with lining, proportional digits, with digits and uppercase Greek in regular and Latin and lowercase Greek in italic, which are the default shapes.
+
+\bigskip
+
+\begin{example}
+\setmathsfont(Digits,Greek)
+    [Uppercase=Plain,Lowercase=Regular,Scale=MatchLowercase]
+    {GFS Porson}
+\end{example}
+is equivalent to:
+\begin{example}
+\setmathsfont(Digits)
+    [Uppercase=Plain,Lowercase=Regular,Scale=MatchLowercase]{GFS Porson}
+\setmathsfont(Greek)
+    [Uppercase=Plain,Lowercase=Regular,Scale=MatchLowercase]{GFS Porson}
+\end{example}
+and indicates that all digits and lowercase Greek charaters are to be set in GFS Porson, scaled so that its x-height matches the main font’s, in regular. Uppercase Greek characters remain unchanged (probably from Computer Modern).
+
+\subsection{Declaring alphabets}
+
+The mathematics alphabets like \cmd{mathrm} and \cmd{mathcal} can be set using these commands.
+
+\begin{ltxsyntax}
+
+\cmditem{setmathrm}[font features]{font name}
+
+This command defines \cmd{mathrm}, \cmd{mathit}, \cmd{mathbf} and the font for operators like $\sin$ and $\log$.
+
+\cmditem{setmathsf}[font features]{font name}
+
+This command defines \cmd{mathsf}.
+
+\cmditem{setmathtt}[font features]{font name}
+
+This command defines \cmd{mathtt}.
+
+\cmditem{setmathcal}[font features]{font name}
+
+This command defines \cmd{mathcal}.
+
+\cmditem{setmathbb}[font features]{font name}
+
+This command defines \cmd{mathbb}.
+
+\cmditem{setmathfrak}[font features]{font name}
+
+This command defines \cmd{mathfrak}.
+
+\end{ltxsyntax}
+
+\subsection{Shorthands}
+
+These commands are useful to save typing the same information multiple times, if the same font is used for different purposes.
+
+\begin{ltxsyntax}
+
+\cmditem{setallmainfonts}(sets)[shapes, font features]{font name}
+
+This command is equivalent to:
+
+\cmd{setmainfont}\oprm{font features}\mprm{font name}\\
+\cmd{setmathsfont}\sprm{sets}\oprm{shapes, font features}\mprm{font name}\\
+\cmd{setmathrm}\oprm{font features}\mprm{font name}
+
+If \sprm{sets} is omitted, then |(Digits,Latin,Greek)| is assumed.
+
+\cmditem{setprimaryfont}[shapes, font features]{font name}
+
+This command is equivalent to:
+
+\cmd{setallmainfonts}|(Digits,Latin)|\oprm{shapes, font features}\mprm{font name}
+
+\cmditem{setallsansfonts}[font features]{font name}
+
+This command is equivalent to:
+
+\cmd{setsansfont}\oprm{font features}\mprm{font name}\\
+\cmd{setmathsf}\oprm{font features}\mprm{font name}
+
+\cmditem{setallmonofonts}[font features]{font name}
+
+This command is equivalent to:
+
+\cmd{setmonofont}\oprm{font features}\mprm{font name}\\
+\cmd{setmathtt}\oprm{font features}\mprm{font name}
+
+\end{ltxsyntax}
+
+\subsection{A further example}
+
+This document is typeset with the following:
+
+\begin{example}
+\setmainfont[Numbers=OldStyle]{Sabon LT Std}
+\setallsansfonts[Numbers={OldStyle,Proportional},Scale=MatchLowercase]{Candara}
+\setallmonofonts[Numbers=OldStyle,Scale=MatchLowercase]{Consolas}
+\setmathsfont(Digits,Latin)[Scale=MatchLowercase]{Bembo MT}
+\setmathsfont(Greek)[Scale=MatchLowercase]{STIXGeneral}
+\setmathrm{Sabon LT Std}
+\exchangeforms{phi}
+\setminwhitespace[750]
+\end{example}
+
+The main text font is Sabon \acr{LT} Std with old style figures. The sans serif font is Candara with old style, proportional figures and the monospaced font is Consolas with old style figures, both scaled to match Sabon \acr{LT} Std in x-height.
+
+The mathematics font for digits and Latin symbols is Bembo \acr{MT} and for Greek symbols STIXGeneral, both scaled to match Sabon \acr{LT} Std in x-height.
+
+The |\mathrm|, |\mathit| and |\mathbf| alphabets are set in Sabon \acr{LT} Std.
+
+Finally, the normal and variant forms of Greek lowercase phi are exchanged, see section~\ref{sec:greek} Greek symbols, and the minimum white space on each side of a spaced character is $750\,\mathrm{mmu}$, see section~\ref{sec:glyphbounds} Glyph bounds.
+
+\section{Greek symbols}\label{sec:greek}
+
+For reference, the Greek alphabet and variant letter forms are given in table~\ref{tab:greek}. Despite its name, \cmd{varsigma}~$\varsigma$ is not a variant form of \cmd{sigma}~$\sigma$, it is the final form. Digamma~$\Digamma\digamma$ is an obsolete letter of the alphabet, originally placed between epsilon~$\Epsilon\epsilon$ and zeta~$\Zeta\zeta$.
+
+\begin{table}
+\begin{tabular}{@{}c@{}}\topbottomrule
+\begin{tabular}{@{}clcl@{}}
+\multicolumn{2}{@{}c}{Uppercase} & \multicolumn{2}{c@{}}{Lowercase}\\\midrule
+\tablerowa Aa{lpha}\\\tablerowa Bb{eta}\\\tablerowa Gg{amma}\\\tablerowa Dd{elta}\\
+\tablerowa Ee{psilon}\\\tablerowa Zz{eta}\\\tablerowa Ee{ta}\\\tablerowa Tt{heta}\\
+\tablerowa Ii{ota}\\\tablerowa Kk{appa}\\\tablerowa Ll{ambda}\\\tablerowa Mm{u}\\
+\tablerowa Nn{u}
+\end{tabular}
+\hspace{1em}
+\begin{tabular}{@{}rlrl@{}}
+\multicolumn{2}{@{}c}{Uppercase} & \multicolumn{2}{c@{}}{Lowercase}\\\midrule
+\tablerowa Xx{i}\\\tablerowa Oo{micron}\\\tablerowa Pp{i}\\\tablerowa Rr{ho}\\
+\multirow{2}*{$\Sigma$} & \multirow{2}*{\cmd{Sigma}} & $\varsigma$ & \cmd{varsigma}\\
+&& $\sigma$ & \cmd{sigma}\\\tablerowa Tt{au}\\\tablerowa Uu{psilon}\\\tablerowa Pp{hi}\\
+\tablerowa Cc{hi}\\\tablerowa Pp{si}\\\tablerowa Oo{mega}\\\tablerowa Dd{igamma}
+\end{tabular}\\\topbottomrule
+\begin{tabular}{@{}ccl@{}}
+Normal form & \multicolumn{2}{c@{}}{Variant form}\\\midrule
+\tablerowb{beta}\\\tablerowb{epsilon}\\\tablerowb{theta}\\\tablerowb{kappa}
+\end{tabular}
+\hspace{1em}
+\begin{tabular}{@{}ccl@{}}
+Normal form & \multicolumn{2}{c@{}}{Variant form} \\\midrule
+\tablerowb{pi}\\\tablerowb{rho}\\\tablerowb{phi}\\\tablerowb{Theta}
+\end{tabular}\\\bottomrule
+\end{tabular}
+\caption{The Greek alphabet and variant letter forms with control sequences.\label{tab:greek}}
+\end{table}
+
+\begin{ltxsyntax}
+
+\item
+\begin{marglist}\item
+\begin{advanced}
+Initially, \sty{mathspec} defines control sequences for the Greek characters that are absent in Computer Modern, because they are similar in form to Latin characters, from {\addfontfeature{FakeSlant=\the\fontdimen1\font}\scshape ascii}, thus control sequences like {\spotcolor\cmd{Alpha}} and {\spotcolor\cmd{omicron}} are defined. Any variant forms that are absent become equivalent to the normal forms. The meanings of these control sequences are preserved by other control sequences of the same names prefixed with |eu@cm@| (e.g.\ {\spotcolor\cmd{eu@cm@alpha}}), which may be recalled after the Greek mathematics font is changed.
+\end{advanced}
+\end{marglist}
+
+%{\itshape\footnotesize\csitem{\smash{\begin{tabular}[t]{@{}r@{}}|eu@cm@alpha|\\\cmd{eu@cm@beta}\\\color{black}\rmfamily etc.\end{tabular}}}
+%\acr{\spotcolor ADVANCED}\quad Initially, \sty{mathspec} defines control sequences for the Greek characters that are absent in Computer Modern, because they are similar in form to Latin characters, from {\addfontfeature{FakeSlant=\the\fontdimen1\font}\scshape ascii}, thus control sequences like \cmd{Alpha} and \cmd{omicron} are defined. Any variant forms that are absent become equivalent to the normal forms. The meanings of these control sequences are preserved by other control sequences of the same names prefixed with |eu@cm@| (e.g.\ \cmd{eu@cm@alpha}), which may be recalled after the Greek mathematics font is changed.}
+
+\cmditem{exchangeforms}{list}
+
+\begin{marglist}
+
+\item[\prm{list}] A comma separated value list of any of the names for the Greek symbols which have variant forms: |beta|, |epsilon|, |theta|, |kappa|, |pi|, |rho|, |phi|, |Theta|.
+
+\end{marglist}
+
+Some authors might prefer the normal and variant forms of a symbol to be exchanged. For example, I prefer \cmd{phi} to print the orthotic phi ‘$\phi$’ and \cmd{varphi} the cursive phi ‘$\varphi$’, contrary to many text fonts. To exchange the forms of any symbol, include its name in the list.
+
+\cmditem{normalisevarforms}[list]
+\cmditem{normalizevarforms}[list]
+
+\begin{marglist}
+
+\item[\prm{list}] As above, a comma separated value list of any of the names for the Greek symbols which have variant forms: |beta|, |epsilon|, |theta|, |kappa|, |pi|, |rho|, |phi|, |Theta|.
+
+If \oprm{list} is omitted, then |[beta,epsilon,theta,kappa,pi,rho,phi,Theta]|, that is every such symbol, is assumed.
+
+\end{marglist}
+
+Since not all fonts contain all variant forms, there might be the odd variant letter that remains in Computer Modern while other Greek letters have changed font. For these characters, the command \cmd{normalisevarforms} (or \cmd{normalizevarforms}) will cause the listed symbols that are absent from the font to be equivalent to their corresponding normal forms. If a symbol is listed which is included in the font, then it is ignored.
+
+Note that this command only adjusts the characters that are absent in the font. Of course, this might mean that, for example, |\vartheta| and |\theta| would print the same glyph, which would be dubious if they are to be used in the same document, with different meanings.
+
+\end{ltxsyntax}
+
+\makeatletter
+It should be noted that \cmd{epsilon} prints the lunate epsilon~‘$\eu@cm@epsilon$’ and \cmd{varpepsilon} prints the usual (double loop) epsilon~‘$\eu@cm@varepsilon$’ in Plain \TeX\ and \LaTeX. This is in contrast to Unicode text fonts, which contain the lunate style epsilon separately from the Greek alphabet among variant letter forms and symbols (where Unicode assigns ‘Greek Lunate Epsilon Symbol’). The definition of \cmd{LaTeXe}, which prints ‘\LaTeXe’ uses \cmd{varepsilon} and care should be taken to ensure that \cmd{LaTeXe} still uses the usual epsilon either by using one of the methods that were presented in this section or by redefining \cmd{LaTeXe} (possibly using my \sty{metalogo} package), because {\setLaTeXee{\mbox{$\varepsilon$}}‘\LaTeXe’} is not as good as {\setLaTeXee{\mbox{$\epsilon$}}‘\LaTeXe’}.
+\makeatother
+
+\section{Glyph bounds}\label{sec:glyphbounds}
+
+In using this package to set text fonts for mathematics, there are issues with glyph bounds (similar to italic correction), as illustrated in the equations:
+\begin{example}
+\begin{align}
+ f(x) &= \sum_{n = -\infty}^\infty c_{n}e^{jnx}            \\
+c_{n} &= \frac{1}{2π}\int_{-π}^{π}f(x)e^{-jnx}\,\mathrm dx
+\end{align}
+\end{example}
+\begin{align}
+f(x) &= \sum_{n = -\infty}^\infty c_{n}e^{jnx}\label{eq:1}\\
+c_{n} &= \frac 1{2π}\int_{-π}^{π}f(x)e^{-jnx}\,\mathrm dx\label{eq:2}
+\end{align}
+where the function $f$ is to close the the parenthesis $($ and the exponent $jnx$ is too close to its base $e$ that there is in fact a collision. The reason is that the font has metrics that are suitable for use in text, but not for mathematics.
+
+Comparing the alphabets typeset in Computer Modern italic, in table~\ref{tab:cm}, it is shown that many characters have greater space around them in the mathematics version, which does not exist in the text version.
+
+\begin{table}
+\begin{tabular}{@{}rl@{}}\topbottomrule
+Text & \usefont{OT1}{cmr}{m}{it}abcdefghijklmnopqrstuvwxyz\\
+Mathematics & $\mathnormal{abcdefghijklmnopqrstuvwxyz}$\\\bottomrule
+\end{tabular}
+\caption{Computer Modern Italic in text and mathematics.\label{tab:cm}}
+\end{table}
+
+\begin{ltxsyntax}
+
+\item["]\prm{character}
+
+It is necessary to indicate exactly where additional space needs to be inserted. By putting |"| before a character, the character will be typeset with additional space inserted on both sides of it.
+
+\cmditem{"}\prm{string}{\spotcolor|"|}
+
+For multiple adjacent characters, each need not have a |"| in front of it, but it the characters may be surrounded by \cmd{"} before and |"| after. That is, for example |\"abcde"| is equivalent to |"a"b"c"d"e|.
+
+Note that \prm{character} must be one of the symbols that are listed in table~\ref{tab:symbols}. \prm{string} must one or more such characters adjacent to each other. So |\"xyz"| and |\sin"x| is okay, but |\"\sin x"| is not because \cmd{sin} is not a valid character. Also note that with Greek symbols, they can only be used if typed literally, not via control sequences, so |\cos"θ| is okay but |\cos"\theta| is not. Use of control sequences for Greek symbols is still perfectly acceptable because the spacings are built into the defintions of each (for example \cmd{alpha} is defined to expand to |{"α}| automatically).
+
+\begin{table}
+\begin{tabular}{@{}c@{}}\topbottomrule
+$\"0123456789"$\\
+$\"ABCDEFGHIJKLMNOPQRSTUVWXYZ"$\\
+$\"abcdefghijklmnopqrstuvwxyz"$\\
+$\"ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩϜ"$\\
+$\"αβγδεζηθικλμνξοπρςστυφχψωϝ"$\\
+$\"ϐϑϕϖϰϱϵϴ"$\\\bottomrule
+\end{tabular}
+\caption{All valid characters for use with \texttt" and \texttt{\textbackslash"}…\texttt".\label{tab:symbols}}
+\end{table}
+Use of |"| and |\"| in mathematics mode does not interfere with their use in text mode for quotation marks and umlauts or diæreses: ‘"’ co\"operates, even with {\addfontfeature{Mapping=tex-text}``|Mapping=tex-text|"}.
+
+\cmditem{setminwhitespace}\oprm{number}
+
+Use this command to change the minimum allowed white space around such a spaced character. The unit of \prm{number} is millimu ($\mathrm{mmu}$), that is $\frac 1{1000}\,\mathrm{mu}$. Recall $18\,\mathrm{mu} = 1\,\mathrm{em}$.
+
+The default \prm{number} is |500| which corresponds to $500\,\mathrm{mmu} = \frac{500}{1000}\,\mathrm{mu} = 0.5\,\mathrm{mu} = \frac 1{36}\,\mathrm{em}$.
+
+Note that this value corresponds to the inserted spaces on both sides for each spaced character. If two adjacent characters are spaced, then the total minimum white space between the two characters is twice this value. The effect is shown in table~\ref{tab:stix}.
+
+\begin{table}
+\begin{tabular}{@{}rl@{}}\topbottomrule
+Text & \fontspec{Bembo MT}\itshape abcdefghijklmnopqrstuvwxyz\\
+Mathematics & $\"abcdefghijklmnopqrstuvwxyz"$\\\bottomrule
+\end{tabular}
+\caption{Bembo \acr{MT} in text and spaced mathematics.\label{tab:stix}}
+\end{table}
+
+\end{ltxsyntax}
+
+Now, the spacing in equations~(\ref{eq:1}, \ref{eq:2}) are improved by:
+\begin{example}
+\begin{align}
+"f\left("x\right) &= \sum_{"n = -\infty}^\infty"c_{"n}"e^{\"jnx"} \\
+"c_{"n} &= \frac{1}{2"π}\int_{-"π}^"π"f\left("x\right)"e^{-\"jnx"}\,\mathrm d"x
+\end{align}
+\end{example}
+
+\begin{align}
+"f\left("x\right) &= \sum_{"n = -\infty}^\infty "c_{"n}"e^{\"jnx"}\\
+"c_{"n} &= \frac 1{2"π}\int_{-"π}^{"π}"f\left("x\right)"e^{-\"jnx"}\,\mathrm d"x
+\end{align}
+
+Also note that the spacing is improved by replacing |(x)| with |\left(x\right)| (which you should be doing anyway).
+
+\section{Compatability}
+
+If \sty{amsmath} is required, it must be loaded earlier than \sty{mathspec}.
+
+\pagebreak
+\section{The package}
+
+The package style file is printed in this section.
+
+\begingroup
+  \footnotesize\ttfamily
+  \setbox0\hbox{0}
+  \global\dimen0\wd0
+\endgroup
+
+\lstset{
+  language=[LaTeX]TeX,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle={},
+  commentstyle=\spotcolor\itshape,
+  numbers=left,
+  numberstyle=\footnotesize,
+  keepspaces=true,
+  basewidth=\dimen0,
+  columns=fullflexible,}
+
+\lstinputlisting{mathspec.sty}
+
+\noindent Exactly 1000 lines! How about that?
+
+\pagebreak
+
+\section{License}
+
+\setlength\parindent{0pt}
+\parskip 1em plus 1pt minus 1pt
+
+© Andrew Gilbert Moschou 2009
+
+This work may be distributed and/or modified under the
+conditions of the \LaTeX\ Project Public License, either version 1.3\textit c
+of this license or (at your option) any later version.
+The latest version of this license is in:
+\parskip 0pt plus 1pt
+\begin{center}\ttfamily
+http://www.latex-project.org/lppl.txt
+\end{center}
+and version 1.3\textit c or later is part of all recent distributions of \LaTeX.
+
+\parskip 1em plus 1pt minus 1pt
+
+This work has the \acr{LPPL} maintenance status ‘maintained’.
+
+The Current Maintainer of this work is Andrew Gilbert Moschou.
+
+This work consists of the files \sty{mathspec.sty} and \sty{mathspec.tex}.
+
+\end{document}
+

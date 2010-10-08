@@ -1,0 +1,24 @@
+The purpose of this post is to explain my setup for GNU/Emacs that I use to write files compiled with XeLaTeX. Some people use Kile, some others use TeXmaker, a few others gedit and its plugin, and so on. Some others use Emacs or (G)Vim, two famous text editor. Choosing one those might depend on your habit.
+
+Interestingly, if you are European or American, then you might be willing to choose a so-called "easy" to use TeX editor like TeXworks or Kile. Whereas if you are African, you might try Emacs. This doesn't mean that European or American are not civilized or less clever than African, but that bad habit are unfortunately difficult to change. If you want to get a try to emacs, then follow the following steps.
+<ol>
+	<li>If you plan to use Emacs, since I had problem with Ubuntu 10.04, don't install it from you package manager, but from the official website. The download link is the following :
+
+<a href="http://ftp.gnu.org/gnu/emacs/">choose emacs-23.2.tar.bz2</a>
+
+If you are not familiar with Unix command, then save your emacs version in you home (/home/username/). To install it, you will have to use the terminal (press alt+F2 and enter gnome-terminal in the prompt). Then, enter the following commands :
+<blockquote>cd ~
+tar xjvf emacs-23.2.tar.bz2
+cd emacs-23.2
+./configure
+make
+sudo make install</blockquote>
+The installation will take some time to process.
+</li>
+
+<li>After the installation is complete, install yasnippet, in the
+  following link :
+
+</li>
+
+</ol>

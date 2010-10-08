@@ -1,0 +1,46 @@
+
+Obtaining
+---------
+
+The current version of the auto-overlays package can be obtained from:
+
+  http://www.dr-qubit.org/emacs.php
+
+Developed and maintained by Toby Cubitt (toby-predictive@dr-qubit.org).
+
+
+
+
+Installing
+----------
+
+To install the package, extract the files using
+
+  tar -xvzf auto-overlays.tar.gz
+
+This will unpack the files into a new directory called
+auto-overlays/. Now byte-compile all the Lisp files and create the
+required dictionaries by running
+
+  make
+
+in the auto-overlays/ directory. If necessary, you can specify explicitly
+where your Emacs resides with
+
+  make EMACS=/path/to/emacs
+
+Alternatively, if you cannot use the "make" utility, you can byte-compile
+the Lisp files manually from within Emacs using `byte-compile-file' or
+one of the other Emacs byte-compilation commands (see The Compilation
+Functions, GNU Emacs Lisp Reference Manual). Personally, I like to use
+`dired' when byte-compiling multiple files from within Emacs. (See
+Operating on Files, GNU Emacs manual.)
+
+Now copy the package files to a directory in your Emacs `load-path'
+(you can view the current `load-path' from within Emacs using
+"C-h v load-path").
+
+The auto-overlays package is an Elisp library for use in other
+packages. It doesn't provide any interactive commands or other user-level
+features. See the included Auto Overlays Manual for details on how to use
+it.

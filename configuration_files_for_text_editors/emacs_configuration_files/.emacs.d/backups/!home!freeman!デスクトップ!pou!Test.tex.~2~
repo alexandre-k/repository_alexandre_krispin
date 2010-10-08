@@ -1,0 +1,49 @@
+\documentclass[12pt,a4paper]{book}
+\usepackage[margin=0cm]{geometry}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lipsum}
+\usepackage{graphics}
+\usepackage{xcolor}
+\usepackage{pstricks-add}
+\usepackage{multido}
+
+\begin{document}
+
+\begin{pspicture}(0,0)(21,29.7)
+
+\psframe[linewidth=1pt,linecolor=gray!30](2,3)(18,26.7)
+\psframe[linestyle=none,fillstyle=solid,fillcolor=gray!30](-1,0)
+(10.5,23.5)
+\pspolygon[linestyle=none,fillstyle=solid,fillcolor=red](-1,21)(2,22)
+(-1,23)
+\psline[linewidth=1pt](2,22)(12,22)(12,21.8)(23,21.8)
+\psline[linewidth=1pt](-1,6)(4,6)(4,5.8)(8.5,5.8)(8.5,0)
+\pscircle[linestyle=none,fillstyle=solid,fillcolor=red](8.5,5.8){0.5}
+\rput[lb]{90}(12,8){\resizebox{10cm}{1cm}{\textcolor{gray!30}
+{esprit}}}
+\rput[lb]{90}(11.5,18)
+{\pspolygon[linestyle=none,fillstyle=solid,fillcolor=gray!30](0,0)
+(0.5,0.25)(0,0.5)}
+\rput[lb]{0}(11,6){\resizebox{5cm}{0.5cm}{esp\textcolor{gray!30}
+{rit}}}
+\rput[lb]{0}(16,6.2)
+{\pspolygon[linestyle=none,fillstyle=solid,fillcolor=red](0,0)
+(0.5,0.25)(0,0.5)}
+\psframe[linestyle=none,fillstyle=solid,fillcolor=white](11,4)(17,2)
+\rput[lt](11.5,4){\begin{minipage}[t]{5cm}\flushleft 18, rue de
+l'Usine - OP gare de la ville\\
+18, rue de l'Usine - OP gare de la ville\end{minipage}}
+
+% coubres du haut : trouver une équation meilleure peut-être.
+\psset{plotpoints=1000}
+\multido{\r=0+0.17,\R=0+0.6}{18}{%
+\pstFPadd{\AddA}{-1}{-\R}
+\pstFPadd{\AddB}{28}{\r}
+\rput[lt](\AddA,\AddB){\psplot[linewidth=0.75pt]{-80}{800}{x 0.3 x 120
+div x 2 div cos mul mul}}
+}
+
+\end{pspicture}
+\end{document} 

@@ -1,0 +1,2224 @@
+\documentclass[
+twoside,openright,titlepage,fleqn,numbers=noenddot,headinclude,%1headlines,%
+11pt,a4paper,BCOR5mm,footinclude,cleardoublepage=empty,abstractoff % <--- obsolete, remove (todo)
+]{scrreprt}
+% ********************************************************************
+% Development Stuff
+% ********************************************************************
+\listfiles
+% \usepackage[l2tabu, orthodox, abort]{nag} \usepackage[warning,
+% all]{onlyamsmath}
+% ********************************************************************
+% Re-usable information
+% ********************************************************************
+\newcommand{\myTitle}{La construction de l'Europe\xspace}
+\newcommand{\myDegree}{Licence 2\ieme ann\'ee\xspace}
+\newcommand{\myName}{Alexandre Krispin\xspace}
+\newcommand{\myProf}{God\xspace}
+% \newcommand{\myOtherProf}{Put name here\xspace}
+% \newcommand{\mySupervisor}{Put name here\xspace}
+\newcommand{\myFaculty}{Science Politique\xspace}
+\newcommand{\myDepartment}{Sciences humaines\xspace}
+\newcommand{\myUni}{\protect{Paris 8}\xspace}
+\newcommand{\myLocation}{Paname\xspace} \newcommand{\myTime}{April
+  2010\xspace}
+% \newcommand{\myVersion}{\xspace}
+\usepackage{classicthesis-ldpkg} % [backref]
+% ******************************************************* Options for
+% classicthesis.sty: tocaligned eulerchapternumbers drafting
+% linedheaders listsseparated subfig nochapters beramono eulermath
+% parts minionpro pdfspacing listings dottedtoc minionprospacing
+% manychapters
+\usepackage[T1]{fontenc} \usepackage[frenchb]{babel}
+\usepackage{lipsum}
+\usepackage[eulerchapternumbers,drafting,listings,listsseparated,%pdfspacing,%
+subfig,beramono,parts]{classicthesis}
+% ******************************************************* Some font
+% experiments *******************************************************
+% \usepackage[osf]{libertine} \usepackage{hfoldsty}
+% \usepackage[light,condensed,math]{iwona}
+% \renewcommand{\sfdefault}{iwona}
+% \usepackage{lmodern} % <-- no osf support :-(
+% \usepackage[urw-garamond]{mathdesign} %<-- no osf support :-(
+% ******************************************************* Fine-tuning
+% for the text area
+% *******************************************************
+\linespread{1.05} % a bit more for Palatino
+\areaset[5mm]{312pt}{761pt} % 686 (factor 2.2) + 33 head + 42 head \the\footskip
+\setlength{\marginparwidth}{7em}%
+\setlength{\marginparsep}{2em}%
+
+% ******************************************************* hack to use
+% citations in float environments will be fixed with caption package
+% version 3.2 *******************************************************
+% \usepackage{makerobust} \makeatletter
+% \MakeRobustCommand\caption@xref \makeatother
+% *******************************************************
+% \usepackage[section,below]{placeins} <--- not everybody wants this
+% \usepackage[all]{hypcap} <--- does not work with MiKTeX 2.6
+% ********************************************************************
+% Language/strings for backrefs (change here, thanks, Lorenzo)
+% *******************************************************
+% \renewcommand{\backrefnotcitedstring}{\relax}%(Not cited.)
+% \renewcommand{\backrefcitedsinglestring}[1]{(Citato a pagina~#1.)}
+% \renewcommand{\backrefcitedmultistring}[1]{(Citato alle pagine~#1.)}
+% \renewcommand{\backreftwosep}{ e~} \renewcommand{\backreflastsep}{
+%   e~}
+% ********************************************************************
+% Setup and Finetuning
+% *******************************************************
+\newlength{\abcd} % for ab..z string length calculation
+\newcommand{\myfloatalign}{\centering} % how all the floats will be aligned
+\setlength{\extrarowheight}{3pt} % increase table row height
+% ********************************************************************
+% Captions look and feel
+% *******************************************************
+\captionsetup{format=hang,font=small}
+% ********************************************************************
+% Listings setup
+% ********************************************************************
+\lstset{emph={trueIndex,root},emphstyle=\color{BlueViolet}}%\underbar} % for special keywords
+% ********************************************************************
+\lstset{language=[LaTeX]Tex,%C++,
+  keywordstyle=\color{RoyalBlue},%\bfseries,
+  basicstyle=\small\ttfamily,
+  % identifierstyle=\color{NavyBlue},
+  commentstyle=\color{Green}\ttfamily, stringstyle=\rmfamily,
+  numbers=none,%left,%
+  numberstyle=\scriptsize,%\tiny
+  stepnumber=5, numbersep=8pt, showstringspaces=false,
+  breaklines=true, frameround=ftff, frame=single,
+  belowcaptionskip=.75\baselineskip, numberbychapter=false
+  % frame=L
+}
+% ********************************************************************
+% Where to look for graphics
+% *******************************************************
+\graphicspath{{gfx/}{misc/}} % considered harmful according to l2tabu
+% ********************************************************************
+% Hyperreferences
+% *******************************************************
+\hypersetup{%
+  colorlinks=true, linktocpage=true, pdfstartpage=3,
+  pdfstartview=FitV,%
+  % uncomment the following line if you want to have black links
+  % (e.g., for printing)
+  % colorlinks=false, linktocpage=false, pdfborder={0 0 0},
+  % pdfstartpage=3, pdfstartview=FitV,%
+  breaklinks=true, pdfpagemode=UseNone, pageanchor=true,
+  pdfpagemode=UseOutlines,%
+  plainpages=false, bookmarksnumbered, bookmarksopen=true,
+  bookmarksopenlevel=1,%
+  hypertexnames=true,
+  pdfhighlight=/O,%hyperfootnotes=true,%nesting=true,%frenchlinks,%
+  urlcolor=webbrown, linkcolor=RoyalBlue,
+  citecolor=webgreen, %pagecolor=RoyalBlue,%
+  % urlcolor=Black, linkcolor=Black,
+  % citecolor=Black, %pagecolor=Black,%
+  pdftitle={\myTitle},%
+  pdfauthor={\textcopyright\ \myName, \myUni, \myFaculty},%
+  pdfsubject={},%
+  pdfkeywords={},%
+  pdfcreator={pdfLaTeX},%
+  pdfproducer={LaTeX with hyperref and classicthesis}%
+}
+
+\usepackage{enumitem} \usepackage[square,numbers]{natbib}
+\usepackage{array} \usepackage{natbib} \usepackage{amsmath}
+\usepackage{color} \usepackage{amsfonts} \usepackage{amssymb}
+\usepackage{url} \usepackage[utf8]{inputenc}
+% \usepackage{graphicx} \usepackage{multirow}
+\usepackage{hyperref}
+\begin{document}
+\frenchspacing \raggedbottom
+% \selectlanguage{french} % american ngerman
+% \renewcommand*{\bibname}{new name} \setbibpreamble{}
+\pagenumbering{roman} \pagestyle{plain}
+% ******************************************************* Titlepage
+% *******************************************************
+\begin{titlepage}
+  % if you want the titlepage to be centered, uncomment and fine-tune
+  % the line below (KOMA classes environment)
+  \begin{addmargin}[-1cm]{-3cm}
+    \begin{center}
+      \large
+
+      \hfill
+
+      \vfill
+
+        \begingroup
+        \color{Maroon}\spacedallcaps{\myTitle} \\ \bigskip
+        \endgroup
+
+        \spacedlowsmallcaps{\myName}
+
+        \vfill
+
+        \includegraphics[width=6cm]{TFZsuperellipse_bw} \\ \medskip
+
+        \myDegree \\ \medskip
+        \myDepartment \\
+        \myFaculty \\
+        \myUni \\ \bigskip
+
+        \myTime
+
+        \vfill
+
+      \end{center}
+    \end{addmargin}
+  \end{titlepage}
+
+  % ******************************************************* Table of
+  % Contents *******************************************************
+  % \phantomsection
+  \refstepcounter{dummy}
+  \pdfbookmark[1]{\contentsname}{tableofcontents}
+
+  \setcounter{tocdepth}{2} % <-- 2 includes up to subsections in the ToC
+  \setcounter{secnumdepth}{3} % <-- 3 numbers up to subsubsections
+  \manualmark
+  \markboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}
+  \tableofcontents
+  \automark[section]{chapter}
+  \renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+  \renewcommand{\sectionmark}[1]{\markright{\thesection\enspace\spacedlowsmallcaps{#1}}}
+  % ******************************************************* List of
+  % Figures and of the Tables
+  % *******************************************************
+  \clearpage
+  % ********************************************************************
+  % Frontmatter
+  % *******************************************************
+  % \include{FrontBackmatter/DirtyTitlepage}
+  % \include{FrontBackmatter/Titlepage}
+  % \include{FrontBackmatter/Titleback}
+  % \cleardoublepage\include{FrontBackmatter/Dedication}
+  % \cleardoublepage\include{FrontBackmatter/Abstract}
+  % \cleardoublepage\include{FrontBackmatter/Publication}
+  % \cleardoublepage\include{FrontBackmatter/Acknowledgments}
+  \pagestyle{scrheadings}
+  % \cleardoublepage\include{FrontBackmatter/Contents}
+  % ********************************************************************
+  % Mainmatter *******************************************************
+  \pagenumbering{arabic}
+  % use \cleardoublepage here to avoid problems with pdfbookmark
+
+  \part{La \og construction\fg europ\'eenne en question}
+
+  \chapter{La \og construction\fg europ\'eenne}
+
+  \section{Construire une origine}
+
+  \subsection{La notion de \og p\`{e}re fondateur\fg}
+
+\paragraph{}
+\textcolor{red}{La notion de père fondateur est utilisée pour les
+  figures héroïques.} On la retrouve dans des précurseurs de la
+république américaine.  Déterminer le nombre de pères fondateurs,
+pourquoi et à partir de quels critères ils sont considérés comme tels
+?
+\paragraph{}
+Selon Wikipedia, il faudrait être considéré comme père fondateur pour
+en être un. \textcolor{red}{Le premier à bénéficier de ce traitement
+  honorifique : Robert Schumann.} En 1960, on lui décerne le titre de
+père fondateur de l'Europe.
+\paragraph{}
+Le cas de \textcolor{red}{Robert Schumann} : il est juriste de
+formation, s'installe en tant que juriste à Messe (?), il prend la
+nationalité française en 1936, monte en politique très rapidement, et
+\textcolor{red}{sera arrêté après avoir voté les pleins pouvoirs à
+  Pétain pour activité de résistance, et déporté vers l'Est, d'où il
+  s'évadera pour rejoindre la zone libre.  Il négociera des grands
+  traités de l'après-guerre.}
+\paragraph{}
+Il est surtout connu pour avoir réussi à s'échapper et rejoindre la
+zone libre pour rejoindre la résistance. \textcolor{red}{Il est connu
+  aussi pour la déclaration Schumann le 9 mai 1950.}
+\textcolor{red}{Le but de la Communauté Européenne du Charbon et de
+  l'Acier, est de mettre en commun des ressources, et permet d'éviter
+  que l'industrie lourde ne soit remise en main par les Allemands et
+  empêcherait d'éviter un nouveau conflit.}
+\paragraph{}
+La CECA est ouverte à la participation d'autres pays, et non seulement
+la France et l'Allemagne, et est dirigée par une haute assemblée, la
+Haute Autorité, présidée par Jean Monnet.
+\paragraph{}
+Schumann est un politicien. Il a eu un rôle social classique.
+
+\paragraph{Le cas de Jean Monnet :} Il est le fils d'un négociant de
+Cognac, il \textcolor{red}{va être envoyé rapidement à l'étranger pour
+  négocier des accords de partenariats commerciaux}. Ayant été habitué
+à une vie active, il va coordonner l'effort de guerre durant la
+seconde guerre mondiale, et comprendra très rapidement la nature
+mondiale du conflit et la nécessité de l'intervention
+américaine. \textcolor{red}{Il sera après chargé de relancer
+  l'économie} ; sa formation de financier sur le terrain l'aidera
+beaucoup.
+\paragraph{}
+\textcolor{red}{Il sera le premier président de la CECA.}
+\paragraph{}
+Que font les 2 pères fondateurs, Robert Schumann et Jean Monnet, à
+l'Histoire ?
+
+\subsection{Que font les \og P\`{e}re fondateur\fg}
+
+\paragraph{}
+La première chose, c'est que \textcolor{red}{l'Histoire est toujours
+  écrite de façon partiale, partielle, et la notion de \underline{père
+    fondateur} tend à \underline{rationnaliser} le récit historique.}
+On ne peut pas parler de \textcolor{red}{construction européenne} sans
+parler des 2 \textcolor{red}{pères fondateurs} ; c'est possible, mais
+ça ne se fait pas.
+\paragraph{}
+S'il y a des pères fondateurs, c'est qu'ils ont fondé qqchose, et
+qqchose qui a perduré.  \textcolor{red}{Cet essai de rationalisation
+  de l'Histoire se retrouve dans la volonté individuelle rationnelle,
+  comme si toute l'histoire de la construction européenne était le
+  fait de qq volontés individuelles}. \textcolor{green}{Les histoires
+  nationales ne sont pas construites de façon rationnelles, et lorsque
+  l'on passe à l'histoire de la construction européenne, c'est ce que
+  l'on oublie.}
+
+\subsection{Le constructivisme}
+
+\paragraph{}
+Les gens qui écrivent des brochures pour le grand public, etc :
+donnent une construction européenne naturelle, à partir de volontés
+individuelles, avec des buts établis.
+\paragraph{}
+Le constructivisme n'est pas à la mode depuis longtemps, il s'oppose à
+l'école du réalisme, voire du rationalisme. \textcolor{red}{Le
+  réalisme c'est considérer qu'il y a des institutions qui existent
+  par nature. L'Europe existe naturellement, il s'agit de retrouver la
+  vraie notion de démocratie, d'Europe}. C'est ce que l'on entend
+parfois à la TV. \textcolor{red}{On sait qu'en fait il n'y a pas de
+  société par nature.}
+\paragraph{}
+\textcolor{red}{L'essentialisme est une thèse très difficile à
+  défendre aujourd'hui. Le constructivisme s'oppose à
+  l'essentialisme. Le constructivisme s'oppose à ce que les
+  institutions soient figées, et que l'on puisse avoir une définition,
+  par exemple de la démocratie}. Dans cette école du constructivisme,
+on trouve l'ouvrage de Peter Berger et Thomas Luckemann, \emph{The
+  Social construction of reality}, 1966. La construction sociale de la
+réalité est la mise en forme du constructivisme. \textcolor{red}{Ce
+  qui nous semble une réalité intangible, est en fait une
+  construction, et crée l'impression qu'elle est naturelle.}
+\paragraph{}
+\textcolor{red}{Il existe des institutions qui laissent à penser
+  qu'elles sont naturelles : la monnaie par exemple.} Cette catégorie
+est concensuelle, et \textcolor{red}{il y a croyance selon laquelle la
+  monnaie est indépassable. Or les échanges de services dépassent
+  l'usage de la monnaie par exemple.} Dans sa version forte, le
+constructivisme critique l'idée qu'il y a des croyances très fortes,
+par exemple que le processus de construction européenne a été décidé
+par Robert Schumann et Jean Monnet.
+\paragraph{}
+La science qui nous enseigne l'histoire de l'Europe et ce qu'elle doit
+être, on la retrouve dans l'idée du constructivisme, la science est
+construite, de même que les expériences. à ce propos, les travaux de
+Bruno Latour sont intéressants.
+\paragraph{}
+Il s'agit de déconstruire ce terme de construction européenne. Il ne
+s'agit pas de déconstruire l'Europe ou l'Union Européenne, mais de
+déconstruire la façon dont on raconte l'histoire de l'Europe. Les
+pères fondateurs font partis de l'histoire de l'Union Européenne, et
+sont en général associés aux grands événements qui ont marqué
+l'Histoire, événements que l'on se plaît à rappeller par des
+commémorations, etc.
+\paragraph{}
+\textcolor{red}{L'Histoire officielle est branchée sur le 8 mai
+  1945. Les pères fondateurs font l'apparition pour une autre date :
+  l'anniversaire de la déclaration Schumann et de la CECA, le 9
+  mai}. Pourquoi crée-t-on de grandes dates dans l'Histoire de la
+construction européenne ?
+\paragraph{}
+Georges Duby avec son ouvrage \emph{Le Dimanche de Bourvines (?)}, est
+l'un des premiers qui a utilisé l'\og histoire bataille\fg, il
+critique l'histoire officielle. Duby voit comment les grandes dates
+dans l'histoire sont construits par moments, déconstruits selon ce qui
+arrange l'historien.
+
+\subsection{Quelle valeur est accord\'ee au fait historique}
+
+\paragraph{}
+\textcolor{red}{Si tout fait historique est un événenement choisi, il
+  y a une histoire variable, variant selon les buts que l'on souhaite
+  atteindre.} Moses Finley a écrit à ce propos \emph{Mythe, mémoire,
+  histoire des usages du passé}. Finley revient sur la Grèce Antique,
+la guerre de Troie, mais personne ne sait où a eu lieu la guerre de
+Troie. La guerre de Troie a eu lieu, mais on n'est pas sûr de savoir
+où elle a eu lieu ni comment, mais cet événement a été considéré comme
+événement fondateur.
+\paragraph{}
+Moses Finley dit que l'on travaille toujours en tant qu'historien sur
+des épaves, des faits historiques avec des protagonistes morts. Et
+Finley nous dit qu'il est placé là devant un grand problème. L'étude
+du passé et des traces historiques de certains événements ne doit pas
+avoir de conséquences perceptibles sur le futur ; elle peut permettre
+de soulever des débats, mais l'étude du passé ne propose pas de
+solution au futur. Ce n'est pas parce que l'on a accès aux archives
+que l'on a accès à la vérité.
+\paragraph{}
+Dans sa façon de réinterroger la façon de faire l'histoire, Finley
+souligne que l'on ne fait pas parler les morts, et qu'il y a un
+problème : déforme-t-on les événements ?
+\paragraph{}
+L'histoire est-elle une succession de faits historiques qui seraient
+reliés les uns aux autres que l'historien aurait à raconter, à
+retracer ?
+
+\subsection{Les usages sociaux des \og r\'ealisations\fg des p\`eres
+  fondateurs}
+
+\paragraph{}
+Faire une histoire des pères fondateurs, les usages sociaux des pères
+fondateurs, servent à gratifier d'un capital symbolique au groupe
+social qui se revendique être les successeurs des pères
+fondateurs. Pour Jean Monnet, le groupe social autoproclamé en ce
+sens, ce sont les modernisateurs. Les modernisateurs vont se légitimer
+par le souvenir de Jean Monnet. La perpétuation des groupes sociaux
+ont intérêt à ce que cette figure du père fondateur demeure.
+\paragraph{}
+L'idée de père fondateur, alors qu'elle est très critiquée,
+
+\section{\`a compl\'eter}
+\textsc{Foret} François, Légitimer l'Europe, Presses de Science Po,
+2008.
+
+\subsection{Un temps \og z\'ero\fg de l'Europe}
+
+\paragraph{}
+\textcolor{red}{Le temps zéro de la construction européenne est posé
+  comme un temps post seconde guerre mondiale.} \textcolor{green}{Tous
+  les projets d'avant étaient donc des tentatives avortées ne
+  permettant pas de comprendre la construction européenne}. Qu'est-ce
+que cette idée de \textcolor{red}{temps zéro} ? \textcolor{red}{C'est
+  dire qu'il y a un tout, une entreprise rationnelle depuis zéro, et
+  qui déroule son histoire en continu, de traités en traités, jusqu'à
+  nos jours}. Le \textcolor{red}{problème de ce temps zéro}, c'est
+qu'il y a une \textcolor{red}{contradiction : comment faire pour qu'il
+  y ait une homogénéité ?} Il est évident que la première guerre
+mondiale et la seconde guerre mondiale sont des épisodes difficiles à
+raconter dans le cadre d'une construction.
+\paragraph{}
+\textcolor{red}{Ce temps zéro de l'histoire est rendu plus facile à
+  raconter avec une série de traités plutôt qu'avec une série de
+  défaites ou de génocides. Le projet nazi est le projet d'une Europe
+  ; une Europe raciste, totalitaire, mais un projet de type
+  européen}. Un des débats des historiens, c'est cette difficulté de
+temps zéro, qu'ils ont contourné le mot origine par le mot
+genèse. Étudier la genèse, c'est-à-dire la structuration de la
+société, l'évolution, et apporte en cela une idée de
+dynamique. L'origine est en effet relativement passif, figé.
+\paragraph{}
+\textcolor{red}{L'autre problème de l'imposition d'un temps zéro,
+  c'est qu'elle apporte l'idée que l'histoire de la construction
+  européenne est synonyme de progrès}. Malheureusement, cette histoire
+se déroule comme une histoire de progrès, tout comme en biologie va en
+se spécialisant ; les sociétés vont en se spécialisant, en s'adaptant
+au mieux aux événements de l'histoire, que l'on ne peut faire démarrer
+avant la seconde guerre mondiale.
+\paragraph{}
+En ce qui concerne cette idée de progrès, le débat a déjà eu lieu,
+notamment durant l'entre deux guerres. Les réseaux d'amitié et
+intellectuel vont se mettre en place. C'est durant l'entre deux
+guerres que l'identité européenne ne peut se définir par sa capacité à
+imposer au monde une domination (intellectuelle, militaire,
+etc). Cette philosophie ne marche plus car elle se base sur l'idée de
+progrès. Or, il y a une résurgence très forte pour voir l'histoire de
+la construction européenne comme étant un progrès, avec les garanties
+des droits aux citoyens, etc. Paul Valéry, etc, durant l'entre deux
+guerres critiqueront cette idée.
+\paragraph{}
+Fixer un temps zéro induit une idée de progrès, et ce concept de
+progrès n'est plus opérant pour raconter et comprendre l'histoire de
+l'entité de l'Europe. Si le progrès ne marche pas, le déclin non
+plus. Certains voyaient le déclin de l'Europe comme un cycle, avec
+l'idée que l'Europe allait pérécliter, et que l'on renaîtrait ensuite
+de nos cendres pour devenir plus fort encore.
+\paragraph{}
+\textcolor{red}{Le concept de temps zéro, de philosophie de
+  l'histoire, sont des concepts éminemment occidentaux}. Et on sait
+depuis les traumatismes des guerres
+mondiales. \textcolor{red}{L'histoire de l'Europe, en tant qu'espace
+  de progrès, s'est trouvé décrédibilisé par ces conflits
+  mondiaux. S'il n'y a pas de temps zéro autre qu'arbitraire, si on le
+  retrouve dans les manuels scolaires, c'est pour mieux représenter
+  une entité politique}. Le problème ici est que la notion de
+philosophie de l'histoire en tant que telle emporte avec elle un
+retour vers l'arrière, une étude rétrospective pour essayer de faire
+comprendre la tendance des sociétés. La philosophie de l'histoire
+renvoit toujours à un passé qui va expliquer le futur, comme s'il y
+avait une essence pour caractériser le politique, et comme si
+l'évolution des sociétés ne pouvaient s'échapper de ce qu'elles sont
+destinées à devenir.
+\paragraph{}
+\textcolor{red}{Le temps zéro peut être la Grèce Antique, Rome, la
+  pensée humaniste, etc. Selon Rémi \textsc{Brague}, il n'y aurait pas
+  de philosophie de l'histoire valable, mais il faudrait allait voir
+  dans la Rome.} Selon lui l'Europe a eu une étymologie purement
+géographique, et le premier sens du mot Europe était celui de
+direction. Ce n'est pas une valeur particulière, mais une direction
+géographique, ce qui est par exemple le sens que lui donne Erodote. Le
+sens contemporain arrivant lorsque l'on passe d'un espace géographique
+à un sentiment européen. Selon lui, la voie romaine permet de
+retrouver des traits caractéristiques donnés depuis longtemps, et qui
+sont ce sentiment d'appartenance très développé dans l'impérialisme
+romain. On donnait au nouveau citoyen de l'Empire autant de droit que
+ceux de Rome. \textcolor{red}{Le problème de \textsc{Brague}, c'est
+  que la signification de l'Europe d'hier et d'aujourd'hui le conduit
+  à avoir une vision essentialiste des choses.}
+\paragraph{}
+D'une part il y a l'idée que la philosophie de l'histoire est en
+mouvement ; déjà c'est un problème puisque même les sciences dures
+sont des disciplines socialement construites. Et \textcolor{red}{un
+  élément de la falsification européenne est que l'on fait appelle à
+  la construction de la nation ; la construction de l'Europe suivrait
+  des schémas dans la continuité de la construction des nations}. On
+ne serait pas européen sans le vouloir, \textcolor{red}{il y a donc
+  une recherche à faire pour savoir ce qu'est être Européen. Il y
+  aurait identité à recouvrir.} Tout ceci, la fixation d'un temps zéro
+de l'histoire, est éminemment problématique. \textcolor{red}{Que
+  doit-on plébisciter ? Des vertus humanistes ? Des vertus chrétiennes
+  ?}, etc.
+\paragraph{}
+Ce n'est pas le seul sentiment d'appartenance qui fait que l'on est
+européen. De la même façon que dans une nation on parle d'intégration
+pour celui qui ne se plie pas aux coutumes, on parle d'intégration
+pour l'Europe. Les peuples sans écriture seraient des peuples sans
+histoire (voir à ce propos \textsc{Wolf} Eric, \emph{People without
+  history}), qui ne participaient pas à l'écriture nationale et à
+l'histoire de l'humanité en général : le sentiment d'appartenance ne
+pourrait exister que lorsque l'écriture existe.
+\paragraph{}
+Le temps zéro reflète tous les biais de l'histoire occidentale, celle
+qui évite les conflits, celle qui impose une philosophie de l'histoire
+qui regarde en arrière pour voir les identités politiques.
+
+\section{Repr\'esenter la \og construction europ\'eenne\fg : Mise en
+  mus\'ee}
+
+\paragraph{}
+\textcolor{red}{Le musée est un espace intéressant car c'est un lieu
+  d'exposition publique.} Il s'agissait à l'origine de sortir les
+collections du Roi pour les exposer en public, faire connaître des
+artistes. Le musée fait sortir du domaine du privé un ensemble de
+collections, le patrimoine. Le Louvre a eu pour mission d'exposer en
+publique les collections privées du Roi.
+\paragraph{}
+\textcolor{red}{Le musée en tant qu'institution, prend sa naissance en
+  même temps que celle de l'État-nation}. Le Louvre est l'archétype du
+musée national par excellence. C'est \textcolor{red}{un lieu puissant
+  de formation des idéologies}, comme par exemple pour les groupes
+scolaires qui les visitent. \textcolor{red}{Le musée en tant
+  qu'institution est un lieu de domination ultime sur les corps} qui
+les contraint à les faire passer par telle ou telle porte pour les
+faire visiter ; et qui dit domination sur les corps dit aussi
+domination sur les esprits.
+\paragraph{}
+Des gens interviennent comme commissaires d'exposition, et déterminent
+le contenu d'exposition. Des historiens travaillent dans les musées,
+en particulier les historiens de l'art. Il y a aussi des sténographes
+; les sténographes sont des architectes, des décorateurs d'intérieur,
+capables de mettre en image le travail des historiens, et il dit aussi
+ce qui est possible de faire ou non : enjeux de pouvoirs dans
+l'institution avec les historiens. Dans les musées, il n'y a pas une
+seule voix. On n'expose pas les objets qui ne font pas vendre, qui ne
+provoquent pas de sentiments particuliers.
+\paragraph{}
+Le musée de l'Europe de Bruxelles est une association qui existe
+depuis une vingtaine d'années, et préfigure un parcours
+permanent. C'est l'une des premières mise en tentative de mise en
+musée de l'histoire de la construction européenne. Est-il possible de
+représenter l'histoire de l'Europe de la même façon dont on représente
+l'histoire nationale ? L'hypothèse faite est qu'il y a déjà de
+multiples exemples montrant que le schéma de l'histoire de la
+construction de l'Europe est similaire à celle de l'histoire d'une
+nation. Est-ce qu'il existe un moyen de représenter des identités
+politiques qui ne passe pas par ces recettes déjà éprouvées par
+l'identité nationale ?
+\paragraph{}
+Que fait-on avec les histoires de autochtones quand l'histoire pose
+problème du fait de l'écriture qui n'existe pas, etc ? Façon très
+occidentale de raconter l'histoire pour imposer légitimement une
+domination occidentale sur le monde.
+\paragraph{}
+Dans le National Museum of Australia (Camberra) des historiens
+voulaient raconter l'histoire d'enfants volés pour peupler les
+campagnes désertes. Le musée a été vu comme un lieu de conflits
+ouverts. Les historiens ont voulu imposer l'idée d'un musée comme un
+lieu ouvert, une \emph{contact zone}, une zone pas toujours de
+contacts et d'échanges entre acteurs de même poids. Le musée est une
+zone d'échanges et de contacts. L'apport de l'historiographie, sur ce
+qu'est le musée peut changer la donne, car en Europe il reste ce qui
+sert à raconter l'histoire officielle de la nation.
+
+\subsection{La production d'une histoire supra-\'etatique}
+
+\paragraph{}
+\textcolor{red}{Il faut s'interroger sur le rôle, sur le sens, que
+  l'on a voulu donner avec le musée de l'Europe, qui a été vu comme
+  une réalité vivante, un lieu de mémoire, dont le but est de montrer
+  aux Européens qu'ils partagent une \underline{histoire commune} :
+  c'est un lieu de \underline{fabrication} d'une
+  \underline{appartenance}}. L'initiative est représentée comme une
+initiative privée et civile. Le musée est représenté comme quelque
+chose de nouveau par sa forme, par le fait que c'est une iniative
+privée provenant de la société civile.
+\paragraph{}
+Dans le musée de l'Europe, on y retrouve des entrepreneurs culturels,
+qui vont mettre leurs savoir-faire au profit d'une entreprise sans but
+lucratif ; on y trouve des historiens, des intellectuels publiques
+(des gens qui ne sont pas universitaires, mais qui interviennent
+publiquement sur un sujet), des veuves qui n'ont pas de lien direct
+avec les institutions européennes elles-mêmes. \textcolor{red}{Dire
+  que l'Europe a été mise en œuvre par la société civile, ne signifie
+  pas que tout le monde en fait parti, mais donne l'idée que ce musée
+  n'est pas le résultat d'une discussion entre membres du
+  gouvernement, mais l'idée d'une entité publique}. On y retrouve des
+anciens ministres, d'anciens membres du parlement européen, de la
+commission européenne. On a la fabrication d'une image sage d'une
+société civile des personnes qui ont un intérêt dans ce musée, et des
+financements qui peuvent venir des institutions européennes, etc. Il
+est souvent rappelé que ce musée n'a pas eu la bienveillance du
+Parlement européen. On fabrique l'idée d'un musée qui se dégage des
+institutions européennes, etc, mais se cache derrière une société
+civile différente.
+\paragraph{}
+\textcolor{red}{Il y a une volonté de production d'une histoire
+  supra-étatique, une pédagogie des origines}. Imposition des recettes
+les plus classiques de la mémoire collective dans les musées. Dès le
+début de cette structure, on peut se demander si le but de créer
+qqchose qui ne soit pas un musée d'une histoire nationale ne va pas se
+répéter.
+
+\subsection{La repr\'esentation t\'el\'eologique}
+
+\paragraph{}
+\textcolor{red}{La représentation téléologique consiste à raconter
+  l'histoire en partant de la fin pour aller jusqu'au début.}
+\textcolor{red}{Le problème de tout musée, c'est que l'on rentre dans
+  un musée pour avoir une démonstration, et non des contradictions,
+  tendant à réduire les questions que l'on se pose.} On est dans une
+\textcolor{red}{vision très narrative de la construction européenne},
+et faire jaillir un sentiment d'appartenance, sans oubli, sans
+contradiction, et tendant à montrer que la
+\textcolor{red}{construction européenne se fait après la seconde
+  guerre mondiale.}
+\paragraph{}
+\textcolor{red}{Pourquoi après la seconde guerre mondiale ? Car il est
+  facile de forger une sensibilité commune à partir d'un rejet}, du
+\og \underline{plus jamais ça}\fg. Les muséographes évitent cependant
+de stigmatiser le camp vaincu (l'Allemagne), et les pertes ne sont pas
+marquées par les atrocités allemandes. C'est une sorte de thématique
+du deuil, et ce par quoi la construction européenne se fait.
+\paragraph{}
+On identifie plus les vainqueurs des vaincus, mais on a toujours une
+représentation téléologique. Dans le cas australien où la culture
+orale est privilégiée pour les aborigènes, le temps zéro n'est pas le
+même que celuis imposé par les occidentaux. Dans les musées, la voix
+des dominants est exposée, et non celle des dominés. On a des objets
+symbolique de la narration du temps zéro.
+
+\subsection{La parole du t\'emoin, la parole ordonn\'ee ?}
+
+\paragraph{}
+On a un intérêt aujourd'hui pour la micro-histoire, la tradition
+orale, etc. La parole du témoin permet de revenir à l'origine de ce
+qu'est l'histoire. La parole du témoin a une légitimité supplémentaire
+parce qu'il a vu. Dans beaucoup de musées, il y a un processus
+multimédia avec des cabines avec des témoins qui racontent ce qu'ils
+ont vu. On fait intervenir des témoins pour demander en quoi la
+personne se sent européen, ou en quoi la construction européenne a
+changé quelque chose. En regardant de plus près qui sont ces témoins
+là qui sont présentés, on apprend qu'ils ont un rapport, des intérêts
+dans la construction européenne (ce sont par exemple des
+fonctionnaires européens, etc).
+
+\section{Les politiques m\'emorielles en Europe}
+
+\paragraph{}
+Eric Besson a décidé que le débat sur l'identité nationale était un
+grand succès, et de là il a décider de le rebatiser débat sur
+l'identité européenne. Cette notion de politique mémorielle est très
+présente dans tous les pays européens. Le clivage qui existe est dans
+l'évènement qui fait date dans cette mémoire collective. Un point
+commun que l'on retrouve dans toutes les politiques mémorielles, c'est
+qu'elles sont toutes utilisées dans un cadre national : on mobilise
+l'histoire pour des intérêts nationaux ; on mobilise l'image des pères
+fondateurs pour des intérêts nationaux.
+\paragraph{}
+Ces mémoires collectives auxquelles on se réfère sont en général liées
+à un calendrier électoral, etc. Il est très rare en politique publique
+de voir un parti politique, un gouvernement, mobiliser un
+questionnaire ou autre sans intérêt. \textcolor{red}{Le niveau local,
+  la mémoire locale, est concurrente de la mémoire nationale,
+  européenne.}
+\paragraph{}
+Cette mémoire d'Europe est tordue par une appropriation par des
+politiques nationales, et se retrouve reprise à un niveau plus local
+qui a pour but de favoriser des échanges transfrontaliers. L'usage de
+la mémoire n'est pas seulement nationale mais aussi locale pour
+renforcer des sentiments d'appartenance régionaux.
+\paragraph{}
+\textcolor{red}{Sur la construction de la mémoire d'Europe qui
+  prendrait pour événement central la fin de l'expérience nazi fait un
+  clivage entre les uns de l'Europe de l'Ouest, pour qui l'Europe
+  c'est l'anti-génocide, l'espace retrouvé après l'expérience de la
+  seconde guerre mondiale (tous les mémoriaux en France sont
+  essentiellement sur la Shoah, les déportations, etc), et l'Europe
+  centrale et de l'Est.} Or le problème qui se pose est un accord à
+minima, et ne fait pas forcément date pour les pays d'Europe centrale,
+d'Europe de l'Est. L\textcolor{red}{a chute du communisme et de la
+  dictature soviétique est l'événement qui fait consensus en Europe
+  centrale et Europe de l'Est. Pour ces pays, la shoah est un
+  événement important, mais il y a eu aussi le totalitarisme.} Dans la
+pensée communiste, il y a idée de libération associée à la résistance,
+là où en Europe de l'Ouest cela n'est pas associé à la liberté,
+l'anti-totalitarisme.
+\paragraph{}
+Forger une politique mémorielle en Europe, c'est se confronter à une
+tradition de pensée différente. Du côté de l'Europe occidentale, le
+mouvement communiste s'est fabriqué une identité comme un parti de
+résistance. C'est une chose que l'on ne retrouve pas en Europe de
+l'Est où l'expérience soviétique est vécue comme traumatisante.
+\paragraph{}
+On ne sait plus très bien quel événement fait sens, il y a schisme des
+mémoires, il y a problème dans la représentation symbolique,
+etc. \textsc{Rousso} a étudié la façon dont on représentait les
+affiches de la commémoration du 9 mai ; on représente des choses
+naïves, plutôt que des affiches qui font explicitement appel à une
+mémoire dont les référents ne font pas l'unanimité.
+\paragraph{}
+Il y a dans les politiques de la mémoire européenne un grand absent :
+il y a une ère géographique absente de toutes les politiques
+mémorielles, l'espace de la méditérannée comme un espace de
+mémoire. C'est le membre fantôme dira Pierre \textsc{Nora} ; pour lui
+les lieux de mémoires de l'Europe éliminent l'espace de la
+méditérranée.
+
+\part{Architecture institutionnelle : structures et fonctionnement}
+
+\chapter{Introduction}
+
+\section{Les origines de l'\'Etat europ\'een}
+
+\paragraph{}
+L'union institutionnelle des 27 États membres : Union
+Européenne. Lorsque l'on parle de l'Europe, on n'est jamais sûr de
+savoir si l'on parle du Conseil de l'Europe ou des 27 pays. La
+structure essentielle qui nous intéresse ici c'est celle de l'union
+européenne et de sa construction progressive.
+\paragraph{}
+La construction européenne en tant que telle commence par la
+construction des États ; ce qui peut sembler paradoxal, car la
+permanence des État-nations devrait contrecarrer l'existence d'une
+supra-nation. Mais la structure même de l'État, telle qu'elle est
+définie au XVI\ieme~siècle, va permettre de parler de structure
+politique de l'Union Européenne. Ce paradoxe, dans le sens où les buts
+des États-nations ne sont pas forcément les mêmes que ceux de l'Union
+Européenne, ou encore parce que les États-nations ont freiné
+l'Europe. Cependant c'est en étudiant cela que l'on peut saisir la
+diversité de la structure politique de l'Union Européenne. Autrement
+dit il est difficile de parle de construction européenne si on n'en
+revient pas à une étude sérieuse de ce qu'est la notion d'État.
+
+\subsection{Les origines de l'\'Etat europ\'een}
+
+\paragraph{}
+L'idée est de restituer le processus de la construction étatique
+\textcolor{red}{au XVI\ieme~siècle}. \textcolor{red}{Les 2 formes
+  politiques qui avaient cours dans le passé était la cité} ; la
+structure politique de la cité n'est pas celle de l'État, de même que
+celle de l'empire ; \textcolor{red}{également il y avait la chrétienté
+  qui était en perte d'influence.}
+\paragraph{}
+\textcolor{red}{Jean Godin dira qu'il y a une volonté politique car
+  volonté humaine de créer un État, et non pas une volonté
+  divine}. Cette pensée sécularisée de Godin est commune avec celle de
+Machiavel et de Hobbes. Ces 3 penseurs sont les penseurs de la
+modernité politique. \textcolor{red}{Principe de souveraineté et
+  s'exprimant de façon sécularisée avec Machiavel. Le concept de
+  souveraineté, idée que le pouvoir religieux, spirituel, ne doit
+  prétendre à aucune autorité supérieure au pouvoir temporelle, c'est
+  Hobbes qui va enfoncer le clou.}
+\paragraph{}
+Les origines de l'État telles qu'elles ont été définies au
+XVI\ieme~siècle ont pour conséquence d'imposer un État territorial
+unitaire.
+
+\subsection{L'\'Etat territotial unitaire}
+
+\paragraph{}
+\textcolor{red}{Cet État est territorial, ancré sur un territoire
+  géographique, et unitaire. L'État s'est construit sur une
+  centralisation}. L'État de type européen est
+\textcolor{red}{centralisé à travers la prise du pouvoir militaire au
+  détriment des pouvoirs locaux} : imposition d'un pouvoir central
+contre les pouvoirs privés, locaux. Il y a eu réduction à néant des
+revendications locales. Cet État centralisé va émerger face à de
+grandes puissances qui avaient existé, l'Empire, notamment le saint
+empire germanique, et l'Église, notamment l'empire développé par
+l'église catholique. \textcolor{red}{La fabrication d'État moderne va
+  fragmenter, morceler les empires.}
+\paragraph{}
+On a donc la construction d'un État territorial qui va combattre les 2
+puissances que sont le pape et l'empereur. Cet État centralisé,
+unitaire, contrecart des projets plus vastes, celui de la
+chrétienté. \textcolor{red}{Cet État centralisé va se fonder autour
+  d'un caractère nouveau, un État comme personne morale et
+  institutionnalisée.}
+
+\subsection{\'Etat comme personne morale et institutionnalis\'ee.}
+
+\paragraph{}
+À mesure que se fonde le nouveau système politique, se forment les
+nouvelles structures qui vont permettre l'État. L'État
+s'institutionnalise, et prend des formes qui lui permettent de
+subsister. \textcolor{red}{L'État sera symbolisé par le
+  roi}. \textcolor{red}{L'État est institutionnalisé et impersonnel,
+  autrement dit il survit à la personne à qui le pouvoir est donné.}
+
+\subsection{\'Etat territorial}
+
+\paragraph{}
+Un État moderne est moderne non pas parce qu'il garantie les droits de
+l'homme, mais est l'incarnation de la souveraineté voulue par les
+humains. Cet État est territorial, c'est-à-dire qu'il est enfermé
+derrière des frontières, avec des traités pour garantir les
+frontières. La naissance de l'état territoriale est la naissance d'une
+pensée, du droit internationale, le \emph{jus gentium}, que l'on
+retrouve par exemple chez Grotius. Ces traités sont par exemple ceux
+de Westphalie, etc.
+
+\subsection{Composante r\'epublicaine}
+
+\paragraph{}
+\textcolor{red}{On adjoint en général à l'idée d'État moderne une
+  composante républicaine}. Cette théorie de l'État associée à la
+république, \textcolor{red}{c'est l'idée de la \emph{res
+    publica}}. L'État dans sa conception même inclut l'idée qu'il y a
+une chose privée et publique. La \emph{resp ublica}, la chose privée,
+implique que l'État ne peut pas tout s'approprier. Dans un État
+totalitaire, la chose privée n'existe plus. Participation politique au
+gouvernement. Un État républicain est républicain dans le sens où il y
+a liberté de participer à la politique. Un État républicain est un
+État où il y a de la \emph{res publica} et de la \emph{res privata}.
+
+\section{Les origines d'un droit international/europ\'een}
+
+\paragraph{}
+Il faut regarder chez Hobbes pour trouver une politique qui influence
+certains théoriciens des relations internationales contemporaines. On
+peut retrouver dans la pensée hobbsienne les origines d'un droit
+européen. On aliène tout au Léviathan, pour avoir une liberté. Hobbes
+ne se contente pas d'envisager, d'étudier la formation des États, mais
+il entrevoit l'idée qu'il y a un autre état de nature qui naît entre
+États constitués qui en ont fini avec leur état de nature
+interne. Pour hobbes, il y a des désordres internes, auxquels on met
+fin par le Léviathan, mais il y a ensuite un désordre
+international. Le désordre interne des États est cependant plus
+préjudiciable pour lui que le désordre externe des États. Hobbes
+préfère de l'ordre intérieur, car pour lui, plus il y a d'État
+désordonnés, plus il y a de conflits. Cette théorie des relations
+internationales consistant à garantir son ordre intérieur et à pouvoir
+amener du désordre sur la scène internationale, c'est la pensée de
+Hobbes.
+\paragraph{}
+Bobbio a essayé d'expliquer les relations internationales avec la
+pensée de Hobbes, expliquant pourquoi les États préfèrent le désordre
+sur la scène internationale, privilégiant l'intérieur d'une nation.
+\paragraph{}
+\textcolor{red}{Pour Grotius, il s'agit également de préserver les
+  frontières de son voisin, ce qui va permettre de distinguer le droit
+  interne, et le droit international. Le droit des gens est le droit
+  fondé sur le respect des traités, et cette idée de droit
+  international, de droit des gens, limite l'usage de la
+  violence}. Pour Grotius, les pactes doivent être respectés, seule la
+guerre juste peut être menée.
+
+\section{Les pens\'ees constitutionnalistes}
+
+\paragraph{}
+\textcolor{red}{Une fois que l'on sait que l'État vit en relation
+  permanente avec d'autres États, avec des conventions qui doivent
+  être respectées, il faut ensuite asseoir par une norme des organes,
+  des structures de fonctionnement. La \underline{pensée
+    constitutionnaliste} va permettre l'organisation d'une société ou
+  d'un ensemble de sociétés, et va pouvoir décrire le mode de
+  fonctionnement des organes gouvernementaux} ; mais cela n'implique
+pas l'imposition d'un pouvoir démocratique.
+\paragraph{}
+Dans sa version plus précise, celle qui va se développer en
+particulier en Angleterre, \textcolor{red}{la pensée
+  constitutionnaliste va tenter de limiter le pouvoir arbitraire et
+  absolu, et en particulier, le premier ennemi est l'État lui-même,
+  l'État absolu, tyrannique}. Si on suit bien la chronologie des
+événements, on fonde l'État, le droit international, on fonde un
+conseil constitutionnel qui vient définir la structure de
+l'État. Cette pensée constitutionnaliste se développe en Angleterre et
+aux États-Unis avec l'idée de limiter le pouvoir d'un centre qui
+dirigerait la périphérie de manière tyrannique. La pensée
+constitutionnaliste nous apprend donc que l'État peut être
+tyrannique. Les pensées constitutionnalistes se méfient aussi de
+l'idée selon laquelle l'État serait le progrès. Il y a aussi des
+normes à respecter. \textcolor{red}{C'est une pensée libérale, contre
+  le fait que l'État puisse s'immiscer dans nos vies, elle se méfie de
+  l'État centralisé}, et tente de préserver des pans sociaux des
+pouvoirs de l'État.
+\paragraph{}
+La pensée constitutionnaliste n'est pas d'emblée libérale, dans le
+sens où ceux qui en sont à l'origine n'ont pas participé à la
+libération de la servitude. En 1787-88 (?), il y aura un débat avec
+Jefferson à propos du risque de dépossession des États de leurs
+pouvoirs. \textcolor{red}{La pensée constitutionnaliste se méfiera de
+  toute instance institutionnalisée, et pour ces penseurs l'État est
+  un moindre mal, mais doit être encadré, permettant les droits et
+  libertés naturels.}
+\paragraph{}
+Dans la pensée politique sur l'Union Européenne, la pensée
+constitutionnaliste a tous ses mots à dire.
+
+\section{La naissance de la pens\'ee f\'ed\'eraliste}
+
+\paragraph{}
+Si on trouve des traces de la naissance de la pensée fédéraliste dans
+l'Antiquité romaine, la pensée fédéraliste se trouve à son apogée dans
+la constitution américaine. La naissance de la pensée fédéraliste est
+l'un des grands modèles d'association d'États. On n'a pas d'autres
+modèles d'organisations politiques que celle de l'État. Au début des
+États-Unis, on a des États fédérés pas encore fédérés, qui décident de
+s'associer sans perdre leur souveraineté, sans créer du droit
+international, mais qui vont passer à un État fédéral, vont transférer
+du pouvoir à un État-nation qui se définit comme étant les États-Unis
+d'Amérique. À partir du moment où l'on mobilise la pensée fédéraliste,
+on mobilise la notion d'État. De là l'expression de la fédération de
+l'État-nation qui est idiote. En effet, c'est un non-sens puisque la
+fédération crée un État.
+\paragraph{}
+\textcolor{red}{La pensée fédéraliste, on la retrouve chez les pères
+  fondateurs américains}. Ces 2 grands penseurs sont, l'un, anglais :
+John Locke, dans un ouvrage \emph{Second Traité du Gouvernement
+  civile} (1688). Et l'autre chez Montesquieu. Façon de distribuer le
+pouvoir comme étant verticale : permet de faire la
+\textcolor{red}{différence entre un État unitaire, avec uniquement une
+  organisation verticale, et un État fédéral, puisque les États
+  participent à la législation au niveau fédéral. Le but est de
+  limiter la puissance d'un centre, d'un seul}. En général, les
+ensembles nationaux s'étendant sur des territoires vastes choisissent
+un modèle fédéral.
+\paragraph{}
+\textcolor{red}{Historiquement, la naissance de la pensée fédéraliste
+  est vue comme une façon de limiter l'arbitraire et l'autoritarisme
+  du centre}, et chez John Locke en particulier il est même vu comme
+étant un droit naturel, au même type que le droit de propriété. John
+Locke nous dit qu'au rang des droits naturels, il existe le droit
+fédéraliste, c'est à dire le droit de s'associer avec son voisin.
+
+\chapter{Les institutions europ\'eennes \`a proprement parler}
+
+\paragraph{}
+Il n'y a pas d'équivalent d'institution politique de l'Union
+Européenne dans les États-nations. Il s'agit d'un fonctionnement
+complexe où il est difficile de savoir ce qui est nouveau et
+conflictuel (conflictuel puisque les nouveaux traités rendent
+obsolètes les précédents). Les 4 institutions que l'on verra sont le
+Parlement européen (qui représente la voix des peuples), le Conseil
+des ministres de l'Union Européenne (appelé aussi Conseil tout court),
+le Conseil européen (une nouveauté depuis le traité de lisbonne, et
+n'était pas reconnu comme étant un Conseil européen auparavant ; il a
+acquis maintenant un statut d'institution européenne), la Commission
+européenne. Il ne faut pas confondre le Conseil des ministres de l'UE
+(des ministres se rassemblent) et le Conseil européen (les
+chefs-d'État se rassemblent), ainsi que le Conseil de l'Europe (un
+ensemble d'institutions y adhérent visant à protéger des droits
+conformément à la convention européenne des droits de l'homme, et
+n'est pas une institution européenne).
+
+\section{D\'efinitions}
+
+\paragraph{L'int\'egration europ\'eenne}
+Qu'est-ce que \textcolor{red}{l'intégration européenne} ?
+\textcolor{red}{Un processus par lequel les États membres vont mettre
+  en commun un certain nombre de leurs activités (production de
+  charbon, contrôle de la concurrence, etc) et vont pour se faire
+  créer des institutions supra-nationales pour assurer la régulation
+  de ces activités}. L'intégration européenne a créé un ordre
+juridique spécifique que ces institutions font respecter
+elles-mêmes. Ces juridictions sont indépendantes de celles des
+États-nations. Le droit créé est garanti par ces institutions
+supra-nationales et indépendantes. \textcolor{red}{La Cour de justice
+  de l'UE est une cour de justice, une instance, à laquelle tout
+  justiciable peut s'adresser s'il estime que sa législation nationale
+  est contraire au droit européen. Il y a transfert de souveraineté
+  que l'État-nation ne gère plus. Le droit communautaire européen
+  s'impose aux législations nationales}. Voir à ce propos la pyramide
+de Kelsen.
+\paragraph{}
+\textcolor{red}{La Constitution européenne n'existe pas, le traité de
+  lisbonne ne fait pas office de Constitution}. Il y a eu un projet de
+Constitution, mais n'a pas été accepté car il faisait référence dans
+son préambule à des héritages chrétiens qui ne faisaient pas
+l'unanimité. On ne peut pas saisir de la Cour de justice pour se
+prévaloir d'une Constitution. \textcolor{red}{Le traité de Maastricht
+  a véritablement institutionnalisé l'intégration européenne}. Le
+\textcolor{red}{principe de subsidiarité, c'est que si un État membre
+  ne remplit pas certaines obligations vis-à-vis d'un activité, une
+  institution européenne peut remédier à certains manquements.}
+\paragraph{}
+D'autre part \textcolor{red}{dans l'intégration européenne, il y a un
+  embryon d'organisations fédérales}, car avec la création
+d'\textcolor{red}{institutions supra-nationanales}, il y a des
+\textcolor{red}{instances de représentations}, des élections au
+Parlement, et il y a un \textcolor{red}{droit communautaire européen
+  qui s'impose au droit national}. Les relations entre États ne sont
+pas de type droit interne ; il s'agit d'une confédération, les États
+peuvent signer par exemple des accords internationaux, contrairement
+par exemple aux États des USA.
+
+\paragraph{La coop\'eration intergouvernementale / L'intergouvernementalisme}
+\textcolor{red}{La coopération intergouvernementale consiste à mettre
+  l'État lui-même au centre des négociations et non les institutions
+  européennes}. L'histoire de la construction européenne a sans cesse
+navigué entre les institutions européennes et les États. Il n'y a pas
+encore de diplomatie européenne. Il n'y a pas de solidarité dans les
+affaires étrangères au niveau
+européen. \textcolor{red}{L'intergouvernementalisme, c'est cette
+  discussion entre gouvernements, et qui a amené à la création de
+  cette construction européenne}. Le traité de lisbonne et l'héritier
+de cet intergouvernementalisme.
+\paragraph{}
+Ces 2 notions ne sont pas opposées dans le but suivi. Les institutions
+européennes ne sont pas sorties toutes seule sans qu'il y ait de
+l'intergouvernementalisme. Il y a processus qui combine ces 2
+processus. La construction européenne est née de
+l'intergouvernementalisme, avec des États qui ont décidé de se passer
+de leurs prérogatives. Les premières institutions européennes sont
+nées d'un concensus entre les gouvernements. \textcolor{red}{Le
+  Conseil européen est la résurgence des rencontres au sommet entre
+  chefs-d'État.}
+
+\section{Rep\`eres chronologiques}
+
+\subsection{1947 -1954 : Les premi\`eres r\'ealisations d'une Europe
+  \`a g\'eom\'etrie variable}
+
+\paragraph{}
+\textcolor{red}{Il faut replacer la construction européenne dans
+  l'effort d'impulsion des organisations internationales après la
+  guerre. Après 1945, il y a un foisonnement d'idées pour créer des
+  organisations internationales, qui ont pour but du côté européen
+  d'assurer la paix, mais aussi de limiter l'expansion du bloc
+  soviétique}. En 1947, il y a eu une consolidation du glacis
+soviétique, et la date du foisonnement intellectuel autour de la
+création d'institutions internationales. Des chefs d'États se
+réuniront régulièrement pour cela. Il y a eu la création de l'OECE
+(Organisation européenne de ?). Avec l'après-guerre, il y a des
+réseaux qui se créent autour du mouvement européen, mouvement de
+droite, qui s'est fondé en 1948 à la suite du congrès de La Haye,
+d'abord présidé par Churchill. Du côté de gauche, il y a l'Union
+européenne des Fédéralistes. Les mouvements européens ont eu donc pour
+impulsion entre autres de refluer l'expansion du bloc
+soviétique. \textcolor{red}{Le plan Marshall est significatif pour
+  financer la reconstruction européenne, mais aussi toutes les
+  institutions qui voyaient le jour.}
+\paragraph{}
+\textcolor{red}{Le plan Marshall}, organisé sous la présidence de
+Truman, en 1947, \textcolor{red}{a été la mise en œuvre de la doctrine
+  Truman, et qui dit qu'\og il faut soutenir les peuples libres qui
+  résistent à des tentatives d'asservissement, quelles soient le fait
+  de minorités armées ou de pressions étrangères\fg.}
+\paragraph{}
+Un autre comité assez puissant qui vient interférer et rend encore
+plus visibles les tentations américaines, c'est l'American Comitee for
+United Europe, et finance le mouvement européen. Le comité américain a
+financé ces mouvements pro-européens. Freynet (?) lui même reçoit des
+subsides américains, et la RFA reçoit aussi l'aide du plan Marshall,
+d'institutions américaines, et même de la CIA. La prégnance américaine
+mal vécue ; un ensemble d'institutions qui vont cristalliser les pays
+européens. Il y a aussi une alliance propre au bloc communiste qui va
+être créée avec le Traité de Varsovie.
+\paragraph{}
+\textcolor{red}{La CECA a été vu comme étant une Europe commerciale
+  non pas pour assurer la paix mais dans le but de faciliter les
+  échanges commerciaux. La CECA entre en vigueur en 1952 avec ses 6
+  membres fondateurs}. Schumann, s'il était pour interdire la
+militarisation de l'Allemagne, était favorable à son intégration dans
+la CECA. Au fur et à mesure de la construction européenne, elle s'est
+vue un peu siphonée. La CECA aura une existence légale jusqu'en 2002.
+\paragraph{}
+Echec de la CED, Communauté Européenne de Défense qui, dès 1950,
+résulte de débats autour du réarmement de l'Allemagne. Il y a
+opposition très forte au réarmement de l'Allemagne, \emph{a fortiori}
+dans l'OTAN. On propose la création d'une CED, placée sous une
+politique commune, mais se pose évidemment la question de savoir si
+l'Allemagne peut participer. On veut bien l'admettre pour gérer le
+charbon et l'acier, mais pose problème pour le reste. La France est
+plutôt favorable à une politique commune, à une armée européenne. Dans
+certains milieux, Jean Monnet notamment, a beaucoup insisté à ce qu'il
+y ait une armée européenne sous le commandement de l'OTAN. C'était vu
+comme un paliatif à la participation de l'Allemagne. Tandis que Jean
+Monnet était plutôt favorable à cette création de la CED, l'Italie
+adopte le texte, etc, mais au moment où le texte est passé à
+l'Assemblée en France, il y a de fortes coalitions contre cela, ce qui
+fait que l'Assemblée nationale rejettera la ratification de la CED, le
+parti gaulliste et le parti communiste s'associant pour cela. Les
+CEDistes étant vu comme ceux qui sont contre l'influence américaine
+par les anti-CEDistes. C'est l'échec d'un projet pourtant impulsé par
+Jean Monnet.
+\paragraph{}
+Avec l'échec de la CED, est rejeté un traité qui permettait de créer
+une Europe confédérale ou fédérale. En rejettant la CED, il y a donc
+le rejet de la forme fédérale ou confédérale de l'Europe. Jean Monnet
+démissionera de l'Assemblée de la CECA. C'est l'Union de l'Europe
+occidentale qui viendra sauver le projet de la CED en 1954.
+
+\subsection{1954-1972 : D\'ebuts de la CEE (Communaut\'e \'Economique
+  Europ\'eenne), et du Trait\'e de Rome}
+
+\paragraph{}
+Avec la mort de Staline en 1953, il y a une déstalinisation à partir
+de 1954, avec une détente relative et provisoire sur le plan
+internationale. 1956 : mise au pas de Bellgrade et la junte soviétique
+qui dépossède le président en place. Il y a une période de
+décolonisation qui sera l'enjeu de la politique internationale et fera
+passer au second plan les négociations intergouvernementales. Il y a
+décolonisation largement entamée en Afrique, et en Asie également. Les
+opinions publiques nationales étaient tournées vers la décolonisation,
+plutôt que vers des enjeux européens, les négociateurs ont de fait les
+mains plus libres.
+\paragraph{}
+L'opinion publique française était plus préoccupée par l'Algérie que
+par le traité de Rome. La construction européenne se fera sentir
+autour d'enjeux économiques et énergétiques : nationalisation du Canal
+de Suez, avec les Européens dépendants de conflits ponctuels. Il y a
+achêvement de débats autour du ravitaillement de pétrole et du
+renouvellement de l'énergie. Il y aura notamment la création de
+l'Euratom en 1957.
+\paragraph{}
+\textcolor{red}{Au-delà d'une analyse sectorielle, le problème de la
+  France et de la Belgique est de parvenir à instituer un ensemble
+  commercial, et on sent bien que la reconstruction économique passe
+  par l'abaissement des barrières douanières}. Parrallèlement à
+l'activité sectorielle privilégiée au niveau de l'énergie, il y a
+\textcolor{red}{mise en place d'une union douanière en matière
+  industrielle et agricole}. \textcolor{red}{La CEE ici, instituée par
+  le traité de Rome marque la fin de la barrière douanière entre les
+  États membres, mis en place en juillet
+  1959}. \textcolor{green}{Liberté de s'implanter ici ou là pour les
+  entreprises, et flexibilité pour la
+  main-d'œuvre}. \textcolor{red}{Le traité de Rome mettra donc en
+  place l'abaissement des barrières douanières entre les 6 États
+  membres, selon le principe du libéralisme corrigé}. Qu'est-ce que le
+libéralisme corrigé ? C'est le libre-marché avec le rôle de l'État
+réduit au minimum, mais teinté de keynésiannisme ; on va réglementer
+la concurrence à minima, en refusant par exemple le dumping (vendre de
+la marchandise à perte afin de tuer la concurrence). Il y a
+proposition en matière de droit commercial qui dépasse les
+législations nationales. Les cartels et les monopoles sont également
+strictement intégrés.
+\paragraph{}
+\textcolor{red}{À travers le libéralisme corrigé et le traité de Rome,
+  l'idée est de prévoir, pour l'ensemble des 6 membres fondateurs,
+  l'amélioration des conditions de vie pour les 6 États membres}. Il y
+aura une \textcolor{red}{commission créée, qui disposera du pouvoir
+  d'iniative} (d'un projet de loi). \textcolor{red}{Cette commission
+  est créée par le traité de Rome dans la CEE, et a le pouvoir de
+  l'iniative des lois}, est important, puisqu'\textcolor{red}{il
+  veille aussi à l'application des conseils}, présidés à tour de rôle
+par les États membres. La CEE se superpose à la CECA. Or la CECA a
+déjà une Assemblée parlementaire. De fait, le Parlement européen (qui
+s'appelle à l'époque \og Assemblée européenne\fg) sera une assemblée
+commune à la CECA et à la CEE. C'est surtout la France, l'Allemagne et
+l'Italie qui faisaient les décisions puisqu'ils possédaient chacun 36
+sièges.
+\paragraph{}
+La Cour de justice des communautés européennes deviendra la Cour de
+justice européenne. \textcolor{red}{Le grand problème du Traité de
+  Rome}, et notamment pour la France et la Belgique : comment faire
+avec les pays amis ? On ajoute du protectionnisme à l'extérieur de la
+CEE. \textcolor{red}{Là où la France avait des privilèges commerciaux
+  avec ses pays coloniaux, elle les perd}. C'est un problème pour la
+France et la Belgique. \textcolor{red}{Lors des négociations pour le
+  traité de Rome, il y a eu de fait opposition au protectionnisme à ce
+  niveau là}. C'est alors la \textcolor{red}{création du Fonds
+  Européen de Développement (FED)} qui a été instauré pour régler la
+perte des rapports commerciaux entre la France et la Belgique avec
+leurs anciens pays coloniaux, pour imposer une politique européenne de
+développement. Cette FED est à l'origine de la PED, la politique
+européene de développement, avec imposition de barrières douanière (?
+vérifier) et pertes des relations privilégiées.
+\paragraph{}
+Dernier point, c'est la discussion autour des capitales : quelle
+capitale pour ces institutions qui se superposent ? Jean Monnet prône
+une capitale unique. Or le Luxembourg ne tient pas à accueillir une
+floppée d'autres fonctionnaires internationaux. Strasbourg se défend
+pour ne pas recevoir. Il y aura pratiquement l'ensemble des
+institutions du traité de Rome qui seront finalement implantées à
+Bruxelles.
+\paragraph{}
+Le Traité de Rome est probablement la plus belle réussite de ce que
+voyait arriver Jean Monnet, une Europe des petits pas, qui pense
+qu'avant un quelconque projet, il faut d'abord penser à l'intégration
+de la politique économique européenne. Le premier problème du Traité
+de Rome sera de répondre à l'intérêt des Anglais de venir dans cet
+espace. La volonté anglaise, c'était de créer une zone d'échanges
+beaucoup plus large, notamment avec les pays de l'OECE. Or avec un tel
+marché économique, la CEE se retrouverait dissoute. Il y a donc
+volonté d'une relative indépendance par rapport à une zone plus vaste
+; également l'OTAN est vue comme un danger, et de Gaulle s'opposera à
+tout interventionnisme américain. La CEE est hostile à un marché
+commun également pour rester avec des relations commerciales
+privilégiées avec leurs colonies.
+\paragraph{}
+De Gaulle abusera jusqu'en 1969 de son pouvoir de véto, et va
+régulièrement utiliser la politique de la chaise vide ; comme c'est la
+règle de l'unanimité, il y aura blocage. De Gaulle n'était pas du tout
+favorable à un véritable projet fédéraliste. S'il entendait accepter,
+c'était à la condition expresse que les États-Unis ne s'imiscent pas
+dans le jeux européen.
+
+\chapter{De 1973 \`a nos jours : vers un \'elargissement chaotique}
+
+\paragraph{}
+\textcolor{red}{Dans cette période, la construction européenne s'est
+  faite sur la résolution de problèmes économiques ; également, dans
+  cette période, se succèdent des traités qui se \og sur-rajoutent\fg,
+  qui s'accumulent}. \textcolor{red}{Les problèmes économiques} et en
+particulier de la crise pétrolière des années 70, \textcolor{red}{vont
+  être des moteurs de la construction européenne, qui aura pour but de
+  limiter au maximum la spéculation sur les monnaies européennes.} Il
+y aura d'autre part des \textcolor{red}{ajouts successifs de
+  traités}. L'un des points caractéristiques de ces sur-ajouts, sont
+les \textcolor{red}{règles de vote des décisions au sein du Conseil
+  des ministres européens. La règle de la majorité qualifiée par
+  exemple va changer.}
+\paragraph{}
+Le problème qui semble être récurent est : comment gérer une
+communauté européenne qui se fait avec 27 pays. (ou 26
+?). \textcolor{red}{De 1973 à nos jours, il y aura ce que l'on appelle
+  la décénie des chocs.}
+
+\section{De 1973 \`a 1995 : \og la d\'ecennie des chocs\fg}
+
+\subsection{Fin des accords de Bretton Woods}
+
+\paragraph{}
+\textcolor{red}{Dans cette décénie des chocs, on voit une stagnations
+  dans le renouveau des institutions européennes}. C'est la
+\textcolor{red}{fin des accords de Bretton Woods}. Cette fin de
+période est aussi la \textcolor{red}{fin des Trentes glorieuses}, avec
+un \textcolor{red}{ralentissement de la croissance économique}. Il y
+aura même une croissance négative pour certains pays. Des chocs
+s'expriment du point de vue monétaire et énergétique. Bretton Woods
+était le système de parité entre l'or et le dollar, qui devait
+permettre d'assurer une parité entre les monnaies concernées et un
+certain poids d'or.
+\paragraph{}
+L'avantage de Bretton Woods pour les États-Unis est qu'ils sont
+eux-mêmes le référent de la parité entre la monnaie et le dollar, et
+également, ils deviennent les détenteurs de la planche à billets,
+augmenter leur richesse intérieur en émettant des billets. Néanmoins,
+et parce que les actifs européens veulent récupérer leurs actifs en
+or, les Américains prennent peur et décident de sortir des accords de
+Bretton Woods.
+\paragraph{}
+\textcolor{red}{En 1971, le dollar américain n'est plus la monnaie des
+  échanges commerciaux internationaux, et les Américains refusent
+  d'assurer la convertibilité de leur monnaie en or (pour ne pas voir
+  tout le stock d'or s'échapper). Il y aura ainsi une crise en Europe,
+  puisque les États-Unis rappatrient également des capitaux pour
+  récupérer des dollars.}
+\paragraph{}
+En 1973, les États-Unis procèdent même à une dévaluation du dollar, ce
+qui favorise les exportations. La dévaluation du dollar provoque une
+instabilité de l'économie internationale, et les gouvernements ont
+ainsi du mal à maintenir une stabilité sociale dans leur pays. C'est
+la fin également des grandes entreprises industrielles qui avaient
+porté les Trentes Glorieuses. L'un des traits caractéristiques de
+cette période, c'est qu'il n'y aura pas de protectionnisme
+contrairement à ce qui s'était passé dans les années 30. Il y aura par
+contre une volonté de garder des relations préférentielles avec les
+anciennes colonies.
+\paragraph{}
+\textcolor{red}{Cette décennie noire qui commence en 1973, n'a pas
+  aboutit à un réflexe protectionniste et à un abaissement des droits
+  de douane dans la zone européenne, et a contribué à continuer à
+  faire baisser ces droits de douane}. \textcolor{red}{La barrière
+  extérieure à l'Europe non plus n'a pas été renforcée}. C'est ce que
+l'on appelle le \textcolor{red}{Tarif Extérieur Commun (TEC)}. Malgré
+la crise, qui est essentiellement une crise économique, les plus gros
+obstacles à la circulation des marchandises vont être des obstacles
+techniques et non tarifaires : obstacles juridiques avec des normes
+d'hygiène, sanitaire, etc.
+
+\subsection{La Solidarit\'e mon\'etaire : abandon d'une monnaie de
+  r\'ef\'erence}
+
+\paragraph{}
+\textcolor{red}{Les Européens s'associent et empruntent la voie de la
+  solidarité monnétaire, et s'organise autour de l'abandon d'une
+  monnaie de référence}. La fin des accords de Bretton Woods, l'une
+des solutions proposées \textcolor{red}{contre la spéculation} est
+\textcolor{red}{le Serpent monétaire européen}. C'est l'ancêtre de
+l'euro, créé par un britannique, Roy Jonkins en 1977 (?
+vérifier). \textcolor{red}{Le Serpent monétaire européen est une
+  procédure économique qui va tenter de créer une communauté autour de
+  mêmes intérêts économiques}. \textcolor{green}{Il s'agit d'éviter
+  les mouvements spéculatifs autour des taux de change et de la
+  dévaluation des monnaies européennes}.
+\paragraph{}
+Le Serpent monétaire européen, c'est l'idée que des accords bilatéraux
+entre partenaires européens vont permettre de limiter l'oscillation,
+la fluctuation des devises des monnaies les unes par rapport aux
+autres. Autrement dit, c'est un message clair adressé au
+spéculateurs. L'idée est de faire fluctuer l'ensemble, en évitant les
+fluctuations excessives à cause de la spéculation. L'ensemble des
+fluctuations seront faites de concert, ne pouvant plus s'éloigner de
+plus de 2.25\%~les unes des autres.
+\paragraph{}
+Derrière le Serpent monétaire européen, l'idée intéressante est celle
+de la solidarité. La stabilité se fait par la monnaie, mais lorsque
+certaines échéances électorales se font sentir, certains pays comme la
+France ou l'Italie ne participent que par bribes.
+
+\subsection{Syst\`eme mon\'etaire europ\'een}
+
+\paragraph{}
+\textcolor{red}{Le 2\ieme~système} trouvé est le
+\textcolor{red}{Système monétaire européen}. \textcolor{red}{Avec ce
+  système, un panier moyen des fluctuations des monnaies européennes
+  gommera les fluctuations extrêmes}. L'idée est que
+\textcolor{red}{les bons et mauvais élèves se compensent}. Ce pivot de
+référence qu'est \textcolor{red}{ce panier moyen des fluctuations est
+  appelé l'ECU} (European Curency Unit, Unité de Compte
+Européen). l'ECU est la valeur moyenne calculée à partir de la valeur
+moyenne de toutes les fluctuations des monnaies européennes. C'est un
+outil de référence très utilisé.
+\paragraph{}
+Ce système monétaire européen tente de proposer plus de flexibilité,
+puisqu'une fluctuation est permise autour d'un taux moyen}. C'est ce
+que l'on appelle des \textcolor{red}{taux flottants}. La faiblesse
+éventuelle d'une monnaie est compensée par les autres monnaies, le but
+étant d'éviter le \og passager clandestin\fg, c'est-à-dire celui qui
+utilise l'avantage d'appartenir à la communauté européenne.
+
+\subsection{La stagnation institutionnelle}
+
+\paragraph{}
+La stagnation sur les institutions, l'entrée de pays dans la
+communauté. \textcolor{red}{L'entrée du Royaume-Uni en 1973 dans la
+  communauté européenne n'a pas arrangé les choses. Les Anglais
+  avaient demandé des dérogations en matière de politique agricole
+  commune}. \textcolor{green}{2 concessions faites : il demandait à ne
+  pas être obligé de se fournir dans l'espace européen.} Cette
+exception sera accordée aux Britanniques. L'entrée du Royaume-Uni en
+Europe contribuera ainsi à remettre en cause des concensus dans la
+communauté européenne. Thatcher obtiendra aussi la
+\textcolor{green}{permission de ne pas donner autant d'argent que les
+  autres au budget communautaire contribuant à la politique agricole
+  commune.}
+\paragraph{}
+\textcolor{red}{L'entrée du Royaume-Uni dans la communauté européenne
+  pose donc des problèmes pour les institutions européennes. Tous les
+  débats sur le fédéralisme sont réellement enterrés par rapport aux
+  considérations économiques}. Par les nombreuses
+\textcolor{red}{dérogations au Royaume-Uni}, la
+\textcolor{red}{Politique Agricole Commune (PAC) sera remise en
+  cause}. La stagnation des institutions implique le fait que d'autres
+auront peu d'intérêt pour les politiques économiques communes :
+certains diront qu'ils refusent telle ou telle chose. L'équilibre au
+sein de l'Europe est donc remis en cause avec l'entrée du Royaume-Uni
+et des dérogations qui lui sont accordées. Il y a donc des voix
+divergentes qui se font sentir.
+\paragraph{}
+\textcolor{red}{Les politique nationales étaient très fortement en
+  conflits les unes avec les autres. Il n'est pas facile de se mettre
+  d'accord sur le plan européen}, ou de se faire rencontrer des
+ministres pour discuter de politiques publiques lorsqu'elles sont
+radicalement opposées. Autre point de désaccord sur la méthode
+communautaire : on a 2 écoles qui s'opposent : ceux qui pensent qu'il
+faut d'abord créer un système de change européen, et ceux qui pensent
+qu'il faut d'abord parvenir à une harmonisation nationale avant de
+proposer un mécanisme commun de régularisation des monnaies.
+
+\section{De 1983 \`a 1992 : ann\'ees de relance}
+
+\paragraph{}
+\textcolor{red}{La relance sera celle de la vie institutionnelle par
+  l'économie et la gestion économique des politiques publiques. Ce ne
+  sera donc pas sur le fédéralisme ou autre chose du genre, mais sur
+  ce qui a trait à l'économie.}  Il y aura une \textcolor{red}{double
+  relance, d'abord l'acte unique en 1986, puis le traité de Maastricht
+  en 1992}. La double relance se fait dans le \textcolor{red}{contexte
+  d'un rejet général des politiques kéneysiennes et une avancée très
+  fortes des politiques libérales}. Le marché commun sera mis en
+avant. Cette révolution anti-kéneysienne va de paire avec l'idée que
+l'Europe sera nécessairement une zone à plusieurs vitesses où certains
+pays participeront à certaines institutions et cetains autres non. La
+chute du bloc de l'Est posera d'ailleurs la question de l'unification
+au-delà des zones antérieures envisagées.
+\paragraph{}
+\textcolor{red}{L'acte unique européen en 1986 est un traité qui
+  amende plusieurs dispositions du traité de Rome. Juridiquement, il
+  n'y a donc pas d'annulation du traité précédent, le traité de Rome
+  reste le socle commun à partir duquel d'autres traités
+  s'empilent}. Or \textcolor{red}{en 1986 on voit avec les premiers
+  élargissements que les décisions dans le Conseil des ministres de
+  l'Union Européenne ne pourront plus être prises à l'unanimité}. Il y
+a l'idée que puisque certains sont plus ou moins à la traîne, il
+s'agit d'un espace hétérogène. \textcolor{red}{L'acte unique européen
+  mettra en place de manière officielle un marché unique afin de
+  laisser circuler les capitaux, les services, les
+  marchandises}. L'acte unique européen a pour but de faire une
+déclaration d'intention, mais suivie de faits. C'est l'acte unique
+européen qui tend à faire baisser véritablement les frontières, et
+enclenche des politiques publiques, par exemple en matière de
+transport aérien.
+\paragraph{}
+Le terme d'\textcolor{red}{harmonisation des législations nationales
+  révèle un aspect positif. Pour tout ce qui concerne le marché
+  commun, les questions sont traitées à la majorité qualifiée pour que
+  les décisions s'appliquent à tous, alors qu'avant c'était à
+  l'unanimité}. Mais \textcolor{red}{pour la question de
+  l'élargissement, la règle de l'unanimité est encore requise}. Le
+\textcolor{red}{traité de Maastricht prévoit les cas où c'est la
+  majorité qualifiée qui est requise, et les cas où c'est l'unanimité
+  qui est requise.}
+\paragraph{}
+\textcolor{red}{L'accord de Schengen en 1985} signé entre 5 pays
+(Allemagne, Bénéluxe, France, Belgique, Luxembourg, Pays-Bas). Puis en
+1990 : convention de Schengen. C'est véritablement \textcolor{red}{la
+  marque que les entraves à la libre circulation des capitaux,
+  marchandises, etc, sont uniquement techniques}. \textcolor{red}{Cet
+  espace sans frontières créé est appelé l'espace Schengen, et c'est
+  la matérialisation en acte de principes du traité de Rome.}
+\paragraph{}
+Il y a des degrés de participation très divers selon les
+pays. L'intégration dans la communauté européenne est donc inégale et
+différentielle.
+\paragraph{}
+Avec le traité de Maastricht, il y a l'idée qu'il faut définir des
+piliers avec des compétences gérées différemment selon les
+cas. \textcolor{red}{C'est avec le traité de Maastricht que l'on parle
+  d'Union Européenne au lieu de la Communauté économique
+  européenne}. \textcolor{red}{ Maastricht va définir des piliers sur
+  lesquels les institutions et leur fonctionnement vont reposer}. Des
+zones de compétence et de fonctionnement seront ainsi définies.
+\begin{description}
+\item[Le 1\ier\ pilier] celui de la communauté européenne : concerne
+  les \textcolor{red}{politiques publiques intégrées, se décidant à un
+    niveau supra-national.}
+\item[Le 2\ieme\ pilier] \textcolor{red}{politique étrangère et de
+    sécurité européenne.}
+\item[Le 3\ieme\ pilier] \textcolor{red}{la coopération judiciaire et
+    policière en matière pénale.}
+\end{description}
+Le traité de Maastricht proposera donc des champs de
+compétences. \textcolor{red}{Dans les 2\ieme~et 3\ieme~pilier, les
+  États-nations, enclins à préserver leurs compétences, leur
+  puissance, c'est la règle de l'unanimité qui prévaut. On ne peut
+  donc pas imposer des décisions à des pays qui ne le souhaitent pas,
+  tandis que pour le 1\ier~pilier c'est possible.} En matière de
+coopération judicière et pénale, il est encore difficile de toucher à
+quelque chose, les États préfèrent garder leur puissance.
+\paragraph{}
+\textcolor{red}{La majorité qualifiée n'est pas seulement numérique,
+  mais aussi il faut une majorité qui représente la population. Il
+  faut que l'ensemble de la population représentée par ces États
+  représente également une majorité de la population européenne ; ceci
+  permet d'éviter la coalition de petits États en terme de
+  population}. Cette majorité qualifiée a été redéfinie ; elle était
+avant de 55\%, puis elle est passée à 62\%~de la population.
+\paragraph{}
+Cette double règle dans les prises de décisions dans les piliers sont
+un compromis trouvé entre une forme, celle du
+\textcolor{red}{1\ier~pilier dont le fonctionnement est de type
+  fédéral}, et celle du \textcolor{red}{2\ieme~et 3\ieme~pilier, qui
+  est un fonctionnement inter-gouvernemental} (dans lequel c'est la
+règle de l'unanimité qui prévaut).
+\paragraph{}
+Il y a la \textcolor{red}{consécration d'un principe nouveau, celui de
+  la subsidiarité}. Ces principes continuent de gouverner le
+fonctionnement de l'Union Européenne aujourd'hui. Ce principe de
+subsidiarité a pour objectif de faire en sorte que \textcolor{red}{si
+  un État ne remplit pas sa tâche dans un domaine déterminé
+  (transport, formation professionnelle, etc), alors ce sont les
+  institutions européennes elles-mêmes qui peuvent se charger de gérer
+  ce domaine}. L'objectif étant que les décisions prises au niveau
+européen soient les plus proches de celles du peuple européen
+(théoriquement).
+\paragraph{}
+\textcolor{red}{Les \underline{critères de convergences} font leur
+  apparition avec le traité de Maastricht. Ce sont des critères de
+  stabilité économique que l'on applique au candidat à l'entrée dans
+  l'Union Européenne}. Les critères de convergence sont la
+\textcolor{red}{stabilité des prix} (il faut que le taux de
+l'inflation ne s'éloigne pas de 1.0 point (vérifier) la moyenne du
+taux d'inflation des 3 meilleurs pays), les \textcolor{red}{déficits
+  publiques} (autorisation d'un déficit à condition qu'il ne soit pas
+supérieur à 3\%~du PIB par an), la \textcolor{red}{dette publique}
+(représentant tous les emprunts par tous les établissement publiques
+et qui ne doit pas être supérieure à 60\%~du PIB), les
+\textcolor{red}{taux de change} (interdiction au gouvernement de
+dévaluer sa monnaie ; interdiction de \og jouer perso\fg),
+\textcolor{red}{taux d'intérêt} (on prend les meilleurs, et les taux
+d'intérêt à long terme montre la stabilité d'un pays) . Ces critères
+sont appliqués pour des raisons strictement politiques envers des pays
+dont on n'a pas envie qu'ils intègrent l'Union Européenne, puisque les
+adhérents à l'Union Européenne ne respectent pas toutes les conditions
+eux-mêmes.
+
+\section{Fonctionnement institutionnel}
+
+\paragraph{}
+Il s'agit de découvrir le fonctionnement normal des institutions,
+comment on fait pour faire passer une loi au Parlement, comment on
+vote, etc.
+
+\subsection{Le Triangle institutionnel / le Triangle décisionnel}
+
+\paragraph{}
+Dans les traités qui suivent Maastricht, on a, dans la suite, le
+\textcolor{red}{traité de Lisbonne} entré en vigueur en 2009, qui
+\textcolor{red}{va apporter un certain nombre d'adaptations à
+  l'arrivée de nouveaux membres.} Il y aura entre autres la Croatie,
+la Turquie, et l'Ukraine qui entreront probablement dans l'Europe.
+\paragraph{}
+\textcolor{red}{Le traité de Lisbonne}, qui est ce traité
+d'acceptation un peu difficile, \textcolor{red}{est un traité issu de
+  discussions sur le projet de Constitution européenne. Il y avait
+  avant tout un tas de problèmes avec l'ordonnencement juridique
+  interne des pays}. Le contenu du traité de Lisbonne se superpose aux
+traités précédents. La plus grosse innovation, c'est la création
+d'instances de représentations permanentes plus stables au niveau de
+l'exécutif européen.
+\paragraph{}
+On a également une haute représentante aux affaires étrangères, qui
+est également un poste \og stable\fg, qui n'est pas soumis au Conseil
+des ministres européen.
+\paragraph{}
+Il y a également institution supplémentaire créée. \textcolor{red}{Le
+  Parlement, la Commission, et le Conseil de l'Union sont le
+  \textcolor{green}{Triangle institutionnel}. Et ce Triangle institutionnel
+est renforcé par le Conseil Européen (Il est en charge de l'exécutif
+et d'une partie du législatif). \textcolor{red}{Il a cependant une
+  illégitimité car d'autres pays ont procédé à une autre ratification
+  pour contrer le référendum nécessaire à l'adoption du traité de
+  Lisbonne}. On retire le caractère constitutionnel qui posaient
+problème au gens plus attachés à l'État-nation. Le projet de Lisbonne
+est une réécriture en des termes plus consensuels pour en faire un
+traité se supperposant au Traité de Rome et à tous les autres. C'est
+un traité parmi d'autres mais est le plus récent.
+\paragraph{}
+Le mot constitution a disparu du texte, ainsi que l'hymne, la
+devise. On a retiré tout ce qui tenait à coeur les gens comme Giscard
+qui étaient sensibles au symboles de l'Union (comme l'hymne).
+\paragraph{}
+En marge des institutions européennes, il y a \textcolor{red}{le
+  Conseil de l'Europe, qui a été créé par la réunion de 47 États
+  membres, qui se sont unis autour d'un certain nombre de valeurs et
+  de droits, que l'on appelle la convention européenne des droits de
+  l'homme}. Ce texte énonce un certain nombre de droits et de devoirs,
+même si cela ne relève pas de l'Union européenne. Elle relève d'une
+juridiction spécifique. Le Conseil de l'Europe a une existence
+autonome juridiquement, même si les personnels politiques ont souvent
+navigué entre les institutions européennes et le Conseil de
+l'Europe. Or \textcolor{red}{ce Conseil de l'Europe dont le but est
+  essentiellement de protéger des droits culturels, ne fait pas parti
+  du traité de lisbonne et des droits défendus par les institutions
+  européennes}. \textcolor{red}{Il y a une Cour de justice de l'Union
+  Européenne qui n'est pas la juridiction compétente pour faire
+  respecter la constitution européenne des droits de l'homme.}
+\paragraph{}
+Le Royaume-Uni, la République Tchèque et la Pologne ont manifesté des
+réticences à propos d'une charte des droits de l'homme. C'est le signe
+que le traité de Lisbonne, qui vient préciser le fonctionnement d'une
+Europe à 27, c'est le problème de savoir ce que l'on fait des droits
+et devoirs européens, des hymnes, etc. C'est quelque chose qui a été
+négocié et qui a posé des difficultés. La république tchèque et la
+pologne sont réticents à une construction européene qui les
+dépossèderaient à une charte des droits de l'homme qui les
+dépossèderaient de leurs droits par exemple.
+
+\subsubsection{Conseil des ministres de l'Union européenne}
+
+La première évidence dans la \textcolor{red}{composition du Conseil de
+  l'UE}, c'est qu'elle \textcolor{red}{n'est pas fixe, il n'y a pas de
+  gens élus pour un mandat. Ils sont délégués par leur gouvenement
+  respectifs en fonction des thèmes discutés}. Comme ils sont là
+normalement pour la durée du mandat de leur gouvernement. La
+composition est donc très fluctuantes et dépendantes des résultats des
+éléctions législatives nationales.
+\paragraph{}
+\textcolor{red}{La nature même du Conseil de l'UE est fluctuante,
+  éminemment politique, dépendante des élections législatives des
+  pays}. Il y a plus des libéraux en général puisqu'ils sont pris
+parmi les majorités des gouvernements nationaux.
+\paragraph{}
+\textcolor{red}{ECOFIN est le nom que l'on donne à la réunion des
+  ministres des finances}. En général, si on regarde les majorités
+représentées, ce sont les mêmes que ceux des majorités
+gouvernementales. En général, on ne donne pas le pouvoir de
+l'arbitrage financier (budget européen, etc) à un membre de la
+coalition de l'opposition.
+\paragraph{}
+\textcolor{red}{Ce Conseil de l'UE est une institution décisionnelle
+  principale car elle est dotée de pouvoirs extraordinaires :}
+\begin{itemize}
+\item un \textcolor{red}{pouvoir exécutif} d'une part (on discute de
+  politiques publiques à l'échelle européenne), un pouvoir qu'elle
+  partage avec la Commission européenne.
+\item et surtout, d'autre part, elle a \textcolor{red}{une partie du
+    pouvoir législatif} qui s'exprime de 2 façons : d'une part elle
+  peut être \textcolor{red}{partagée avec le Parlement européen, c'est
+    ce que l'on appelle la co-décision}, et peut s'exprimer également
+  par un \textcolor{red}{pouvoir exclusif sur certains domaines} (ce
+  n'est pas le parlement qui décide, mais seulement le Conseil des
+  ministres qui échappe au contrôle du parlement)
+\end{itemize}
+\textcolor{red}{Se mettre d'accord sur de textes, cela se fait par des
+  réunions, qui ne relève plus de la majorité, du consensus. Avec 27
+  pays, cela n'est plus possible. Le traité de lisbonne introduit des
+  règles de majorité qualifiée}. Si ce n'est plus la règle de
+l'unanimité qui prime, on garde tout de même à l'esprit le fait que
+quelques grands pays mobilisent le sort d'un vote, seulement parce
+qu'ils sont les plus peuplés. \textcolor{red}{On impose donc à cette
+  majorité qualifiée 2 critères} :
+\begin{enumerate}
+\item \textcolor{red}{la majorité double} (le fait que le vote
+  recquiert un majorité qui représente le poids pondéré, mais que le
+  nombre d'états votants soient majoritaires)
+\item \textcolor{red}{il faut aussi qu'en nombre d'états il y ait une
+    majorité}.
+  \paragraph{}
+  Le pouvoir ici est également un pouvoir législatif. De la même façon
+  que le gouvernement dispose d'une partie du pouvoir législatif en
+  France. De la même façon au niveau européen, on retrouve cela. Si il
+  y a un amendement au niveau parlementaire, cet amendement doit être
+  voté en terme identique par ?. \textcolor{red}{Lors de la première
+    lecture, le Parlement européen ne peut pas refuser un texte. La
+    commission européenne initie un texte de loi. C'est la commission
+    qui impulse le mouvement législatif, le Parlement ne le peut
+    pas. Puis le Conseil des ministres vont arrêter une position
+    commune à la majorité qualifiée, et proposent un texte de loi au
+    Parlement européen. Si il ne convient pas aux parlementaires, ils
+    doivent multiplier les amendements}. Le conseil de l'union
+  européene va statuer aussi sur les amendements du texte. Si il ne
+  veut pas des amendements, alors il peut proposer un autre texte. Il
+  y a tout un jeu législatif savant. Il y a tout un personnel
+  politique qui est responsable politique entre représentants du
+  Parlement européen et du Conseil de l'UE.
+  \paragraph{}
+  Ce personnel politique qui agit en sous-main pour éviter que le vote
+  d'un texte dure dans le temps. C'est la Commission de représentants
+  permanents, que l'on appelle COREPER. Ceux-là sont la cheville
+  ouvrière du processus décisionnel : il sont familiers du rouage
+  institutionnel, leurs noms ne circulent pas dans la presse, et c'est
+  ceux qui vont négocier avec le parlemenent européen pour proposer un
+  texte qui convienne à tout le monde.
+  \paragraph{}
+  Le nom de cette procédure de codécision a changé, il s'appelle
+  maintenant \og la procédure législative ordinaire\fg. Ordinaire
+  voulant dire que le pouvoir exécutif sur certains domaine relève de
+  l'exception à la règle.
+  \paragraph{}
+  Quel est du point de vue de la légitimité du pouvoir parlementaire,
+  le point sur lequel le gouvernement ne peut pas légiférer tout seul
+  ? Les impôts. La première raison juridico-légale, qui a fait que les
+  États-Unis ont refusé la tutelle de l'Angleterre. Si on paie des
+  impôts et que l'on accepte de les payer, c'est aussi parce que j'ai
+  une représentation au Parlement. Dans le cas de l'Europe, c'est la
+  même chose, mais fait avec subtilité. Quel pourcentage du PIB on
+  prend des pays membres, et pour la question qu'est-ce qu'on fait de
+  cet argent, le Parlement européen n'est pas forcément
+  légitime. \textcolor{red}{Le pourcentage et la détermination de
+    l'assiette de l'impôt se fait avec le Parlement européen. Par
+    contre les décisions quant à la décision de ce qu'on fait de
+    l'impôt relève de l'ECOFIN, et ne passe pas par le Parlement
+    européen.}
+  \paragraph{}
+  Le Conseil de l'union européenne est associé de près au Conseil
+  européen car sa structure s'y addosse de fait, presque
+  hiérarchiquement.
+
+  \subsubsection{Le Conseil européen}
+
+  \textcolor{red}{Le Conseil européen est une institution européenne,
+    ce qui est la grande nouveauté du traité de Lisbonne. Cette chose
+    déjà qui se réunissait très souvent et qui affichait des
+    politiques générales sur lesquelles les représentants se mettaient
+    d'accord devient une institution}. \textcolor{red}{Les décisions
+    qui sont prises par cette institution relève donc de la
+    juridiction.}
+  \paragraph{}
+  \textcolor{red}{Institutionaliser} ce qui relève de réunions
+  régulières, \textcolor{red}{c'est faire tomber l'ensemble de ces
+    décisions dans le domaine de ce que l'on peut contester} ; c'est
+  cela \og institutionnaliser\fg. Le Conseil européen, puisqu'il est
+  devenu une institution, se réunit maintenant 4 fois par an au lieu
+  de 2, et juste après des présidences tournantes.
+  \paragraph{}
+  \textcolor{red}{La présidence et la figure d'un président de l'Union
+    européenne} fait parti des préoccupations. Avec le traité de
+  lisbonne a été créée, assurée par H. Von Rompuy. Il est cette
+  nouvelle figure sur le plan international, représentant de manière
+  stable l'Union européenne. \textcolor{red}{Il est censé représenter
+    une position européenne}. Le haut représentant aux affaires
+  étrangères (Catherine Ashton) relève du Conseil de l'Union
+  européenne. Ces facilitateurs sont là pour éviter les disputes,
+  faciliter les consensus. Rompuy est le président stable qui
+  coordonne les activités du Conseil européen, \textcolor{red}{il
+    facilite un rôle appaisant} ; il a un mandat renouvelable une
+  fois, et évidemment c'est un mandat qui n'est pas cumulable avec un
+  mandat présidentiel. Le rôle de Rompuy n'est pas de représenter les
+  intérêts de la Belgique, mais de représenter \textcolor{red}{une
+    figure neutre pour l'Union Européenne.}
+  \paragraph{}
+  Comment fait on pour faire coïncider cette fonction de président
+  avec la présidence tournante au Conseil des ministres de l'Union
+  européenne. Le Conseil de l'Union européenne change de direction.
+  \paragraph{}
+  Les présidences tournantes sont programmées. \textcolor{red}{La
+    création du président du Conseil européen n'a pas supprimé la
+    présidence du Conseil des ministres de l'Union européenne. Nous
+    pouvons penser qu'il y a une sorte de cohabitation}. Dans les
+  faits, cette cohabitation est très atténuée par le fait que les
+  majorités représentées sont ?.
+  \paragraph{}
+  \textcolor{red}{Le Conseil européen, en général, à la différence du
+    Conseil des ministres de l'UE se saisit des questions importantes
+    sur le plan international. On enverra plutôt les chefs-d'état et
+    de gouvernement au charbon plutôt que les ministres}. En matière
+  de politique agricole commune, on repasse la patate chaude au
+  Conseil européen, et c'est à ce niveau que s'élaborent les
+  consensus.
+  \paragraph{}
+  \textcolor{red}{C'est également le Conseil européen qui se saisit
+    des questions d'actualité, que ce soit les politiques de sécurité
+    commune, de rapprochement diplomatique, les graves problèmes
+    financiers européens} (notamment la crise grecque).
+
+  \subsubsection{Le Parlement européen}
+
+\paragraph{}
+\textcolor{red}{Le Parlement européen est la voix des
+  peuples}. Pourquoi ? Pour 2 raisons principales :
+\begin{itemize}
+\item \textcolor{red}{Pour une raison juridico-philosophique, qui
+    tient au principe du cosmopolitisme. On a un Parlement qui tire sa
+    légitimité du suffrage universel direct, depuis 1979. Autrement
+    dit, il n'y a pas d'échelon intermédiaire entre la représentation
+    au parlement européen et le citoyen de l'État membre}. De fait, le
+  Parlement est l'anti-chambre du cosmopolitisme. Mais cette
+  représentation et ses modalités diffèrent cependant d'un pays à
+  l'autre. Certes, c'est un embryon de citoyenneté,
+  \textcolor{red}{mais les modes de scrutin ne sont pas uniformes,
+    cela fait que la représentation n'est pas parfaite.}
+\item Pour une raison de structuration politique. La structuration se
+  fait par partis politiques, par groupements politiques. Il y a un
+  regroupement selon de grandes familles politiques européennes. Au
+  niveau européen, la structuration des partis politiques n'est pas
+  une structuration nationale.
+\end{itemize}
+C'est le seul organe qui fonctionne de cette façon. Les grandes
+familles politiques européennes sont parfois assez hétéroclites. Il y
+a une sorte de jeu qui consiste pour les partis politiques à faire des
+coalitions pour conserver leur influence, ce qui conduit à une
+certaine hétéroclicité. Le PPE comprend par exemple les libéraux et
+les conservateurs, mais il y a évidemment d'autres critères. Un petit
+parti de droite conservatrice a peu d'intérêts à rejoindre une
+coalition car elle sera moins bien représentée.
+\paragraph{}
+Dans ces grandes coalitions politiques européennes, la majorité est le
+PPE, avec 288 sièges sur 785 sièges en tout. L'autre alliance de
+centre droit est l'Alliance Démocrate et des Libéraux pour L'Europe,
+possède une trentaine de siège. L'Union pour l'Europe des Nations est
+un parti plutôt souverainiste, et possède une quarantaine de
+sièges. Du côté gauche, pour l'instant minoritaire, on a le groupe
+socialiste, dans lequel il y a le Parti Socialiste Européen,
+regroupant la sociale démocratie européenne en gros, possèdant 215
+sièges. Et on a un peu plus à gauche, le Parti de la Gauche Européenne
+avec une quarantaine de sièges.
+\paragraph{}
+\textcolor{red}{Le Parlement européen, qui est l'organe le plus
+  légitime, est néanmoins dépossédé de son pouvoir législatif par le
+  Conseil des ministres de l'UE. Son pouvoir est un pouvoir de
+  co-décision}. Son activité est strictement encadrée, mais peut-être
+trop. \textcolor{red}{ Il a également un pouvoir consultatif, que l'on
+  appelle \og l'avis conforme\fg, en matière notamment des accords
+  internationaux. Les traités négociés par la Commission doivent être
+  soumis à l'avis conforme du Parlement.} En général, les majorités
+concordent, et donc on n'a pas une sorte de cohabitation malheureuse
+entre d'un côté le Parlement européen et d'un autre côté la Comission.
+\paragraph{}
+\textcolor{red}{Un pouvoir important du Parlement, est celui de
+  renverser la Commission européenne, à l'aide d'une motion de
+  censure. Dans ce cas là, c'est la majorité des deux tiers qui est
+  requise.}
+\paragraph{}
+La question principale sur le Parlement européen, c'est ce déficit
+démocratique dont il serait le signe. Le déficit démocratique devient
+un mythe, qui sert à déstabiliser et freiner l'Union européenne,
+servant les euro-sceptiques, les souverainistes. On a généralement
+l'impression que la législation européenne est faite loin du peuple,
+et que c'est un processus opaque échappant aux citoyens, et qu'il
+s'agit d'une fonction élitiste qui coûte cher. La fonction publique
+européenne est en réalité composée de largement moins de
+fonctionnaires qu'aux États-Unis. Quant à l'argument de l'opacité,
+elle fonctionne de la même manière que celle de l'élite nationale.
+
+\subsubsection{Commission europ\'eenne}
+
+\paragraph{Mission g\'en\'erale d'initiative}
+\textcolor{red}{Au sein de la commission européenne ne sont pas
+  uniquement représentés des intérêts nationaux, mais est censé
+  délivré un système collégial.} La commission européenne n'est pas un
+lieu où vont s'échapper les différents États membres. Cette commission
+est entourée d'une machinerie administrative très importante. La
+fonction publique européenne est à peu près 40 000
+fonctionnaires. Cette fonction publique est essentiellement associée
+aux travaux de la Commission européenne. \textcolor{red}{Le travail de
+  la commission ne se réduit pas à la négociation entre les 27
+  commissaires, mais entretient tout un rouage administratif
+  important. La Commission agit indépendamment des gouvernement des
+  États membres. Théoriquement elle agit non pas sur l'injonction d'un
+  autre pays, mais de manière collégiale, indépendante. Elle est
+  chargée d'une mission générale d'initiative.}
+\paragraph{}
+Cette mission générale d'initiative exprime le fait que le rôle
+principal de la commission européenne est qu'\textcolor{red}{elle
+  initie sur l'agenda politique européen les textes de lois qui
+  pourront être débatus ou refusés}. Le droit d'initiative est la
+capacité détenue par la Commission européenne d'initier un texte de
+loi, une politique européenne. Si la comission ne veut pas saisir un
+sujet, le Parlement ne peut pas le saisir. Théoriquement, la
+commission européenne ne se soumet pas à l'injonction d'un des pays
+membres qui compose l'UE. Un thème n'émergera donc pas parce qu'un
+pays aura forcé un thème.
+\paragraph{}
+Dans la version officielle, on ne trouvera donc pas l'idée que tel ou
+tel projet émane de tel ou tel pays, ou commissaire. La commission
+européenne masque des injonctions pour faire des débats
+communs. \textcolor{red}{Cette Commission est composée de 27
+  commissaires européens nommés par les gouvernements de tutelle}. Le
+mandat de la commission actuelle va jusqu'en 2014. Il y a également un
+souci de représentation équitable, les équilibres politiques sont
+relativement de \og centre mou\fg, on a rarement une commission
+européenne majoritairement très à droite ou très à gauche, le but
+étant d'obtenir un consensus. Les commissaires européens ne sont pas
+en général des personnes qui ont des places tranchés dans leur parti
+politique respectif.
+\paragraph{}
+La Commission européenne a un pouvoir de censure qui permet de ne pas
+porter sur la place publique certains sujets. \textcolor{red}{Elle
+  dispose d'un droit d'initiative exclusif, le Parlement européen ne
+  peut pas s'auto-saisir d'un projet de loi}. Ces propositions
+lorsqu'elles sont faites sont toujours élaborées dans le sens des
+intérêts européens et non pas d'un groupement de pays. Il y a beaucoup
+à faire pour décrypter le langage de la Commission européenne.
+\paragraph{}
+Ça veut dire que concrètement, c'est par l'activité de la Commission
+européenne le principe de subsidiarité, qui fait qu'un certain pans de
+l'activité des politiques publiques nationales relève de la
+Commission. On voit très clairement les sujets qui tombent dans les
+politiques publiques européennes et celles qui ne tombent pas
+dedans. C'est elle qui rend visible ce principe.
+
+\paragraph{Application du droit communautaire europ\'een}
+
+\textcolor{red}{La Commission a un rôle de gardienne des
+  traités. Entendu ici au sens large, elle est garante du droit
+  communautaire européen. Elle partage ce rôle avec un autre organe,
+  la Cour de justice qui est la juridiction compétente pour recevoir
+  tous les recours}. La Commission européenne et la Cour de justice de
+l'UE ont pour but de faire respecter la pyramide des normes, à savoir
+la primauté du droit communautaire européen sur la législation
+nationale. La Commission européenne va pointer du doigt les dérives de
+certains États. Lorsqu'un État subventionne une entreprise nationale,
+la Commission est là pour lui taper sur les doigts, montrant le
+mauvais comportement d'un pays, ou un problème dans la mise en ordre
+de la législation nationale.
+
+\textcolor{red}{Le problème est que l'on n'a pas de Constitution
+  européenne. On ne peut pas faire un appel devant la commission, la
+  Cour de justice est le seul organe de juridiction compétent pour
+  faire un recours}. La Commission européenne va forcer les pays
+réticents à appliquer la réglementation européenne. Dans la pratique,
+la Cour de justice va condamner les États membres à payer des
+sanctions lorsqu'elle ne respecte pas les décisions sur le plan
+européen. C'est la Commission européenne qui fait une enquête pour ce
+genre de sanctions.
+
+Lorsqu'il y a une infraction, c'est la Commission qui joue le rôle de
+juge d'instruction, et pourra envoyer une lettre à un gouvernement
+pour ordonner la mise à niveau de la législation nationale avec la
+législation européenne.
+
+\paragraph{Repr\'esentation de l'UE sur la sc\`ene internationale}
+
+La commission européenne a un rôle de \og porte-parole\fg, pour des
+partenariats commerciaux avec des pays extérieurs à l'UE. Cela permet
+à l'UE non pas de s'exprimer avec les intérêts particuliers des
+États-membres, mais de s'exprimer avec l'intérêt général de l'UE.
+
+Les modalités de fonctionnement peuvent paraître exhorbitantes. On a
+l'impression que la Commission européenne est l'organe qui a le plus
+de pouvoir. Mais en réalité elle ne possède pas de pouvoir législatif
+contrairement au Conseil des ministres.
+
+Une autre conséquence qui rejoint le droit d'initiative exclusif, la
+contre-partie nécessaire, est la responsabilité de la Commission
+européenne devant le Parlement européen. Cette responsabilité a été
+mise en jeu en 1999, lorsque la Commission européenne a subit des
+attaques concernant la gestion de fonds publiques, et notamment des
+accusations de corruption. C'était une pratique tellement généralisée
+que toute la Commission en entier a démissionné, c'était la Commission
+Santer (1994-1999), remplacée par la commission Prodi (?), et le vote
+n'a pas eu lieu devant le Parlement (pour éviter l'humiliation du
+vote). Quant à Édith Cresson qui avait dit que les Japonais sont tous
+des fourmis et les Anglais sont tous des P.D., a été traduite devant
+une juridiction, condamnée par la Cour de justice européenne, mais
+dispensée de peine.
+
+\subsection{Au-del\`a du triangle d\'ecisionnel ou institutionnel,
+  existe-t-il une place pour la \og soci\'et\'e civile europ\'eenne\fg
+  ?}
+
+\subsubsection{La \og soci\'et\'e civile europ\'eenne\fg existe-t-elle
+  ?}
+
+\paragraph{}
+Poser la question d'une place pour une société civile, c'est postuler
+qu'une société civile européenne existe. La question se pose à partir
+du moment où il y a intégration européenne que la légitimité des
+instances se pose. Au nom de quoi un parlement ou une commission sont
+capables de réguler et d'apporter des contraintes juridiques
+supplémentaires si elles ne sont pas légitimes ?
+\paragraph{}
+Le rouages des institutions européennes paraissent bien souvent
+lointaines, avec des arcanes des textes juridiques qui paraissent
+souvent obscurs (et qui le sont vraiment pour les textes
+juridiques). Les pouvoirs du Parlement semblent amoindris, même si son
+rôle est constamment réévalué chaque année. Il y a un manque de
+contre-poids de la commission européenne en particulier.
+\paragraph{}
+Le rouage des institutions et ce qui les entoure, au-delà des
+personnages visibles, tout ce système décisionnel n'est pas très
+familier. Ceci car les nations n'organisent pas les institutions, les
+concours, etc. On a l'impression qu'il y a donc des modalités
+obscures, etc. Cela contribue à avoir un État avec un personnel qui
+n'est pas connu. Le fait qu'il existe des hauts représentants
+permanents.
+\paragraph{}
+Existe également, et gravite autour de la Commission européenne, des
+groupes d'intérêts, qui sont vus comme des groupes obscurs visant à
+favoriser l'intérêt partisan au dépens de l'intérêt
+collectif. L'existence de ces groupes de pressions sont vus dans
+l'interprétation française comme étant anti-démocratique, alors que
+pour d'autres c'est normal (pour les Belges par exemple) ; en France,
+on n'aime pas parler de lobbying.
+\paragraph{}
+Qu'est-ce que cette société civile européenne serait par définition ?
+Marsile de Padoue disait que l'origine du pouvoir ne doit pas venir du
+Pape mais de la société civile. La société civile est groupement
+d'acteurs politiques qui s'organisen de façon indépendante des
+structures étatiques. On peut avoir un débat publique, s'organiser
+politiquement, indépendamment des structuresde l'État. Depuis les
+années 90, les débats sur l'émergence d'une société civile se sont
+reportés sur le plan européen.
+\paragraph{}
+La société civile n'est pas plus structurée que \emph{les} société
+civiles ; il existe plus certainement \emph{des} société civiles
+européennes, au pluriel, qui bien souvent ont un étiquetage un peu
+hâtif. Par société civile européenne on entendait un rassemblement
+d'entrepreneurs culturels, qui avaient eu une fonction comme ancien
+commissaire, etc. Or on n'attend pas d'une société civile cela. On
+attend que ces société civiles euroépennes se structurent un peu plus
+comme le sont les sociétés. Bien souvent les sociétés civiles
+européennes elles sont citées dans les médias, mais sont plus un
+processus de légitimation de réalisations concrètes cuturelles.
+\paragraph{}
+Les sociétés civiles européennes sont très différentes en fonction des
+arènes politiques dans lesquelles elles interviennent et en fonction
+des modalités qu'elles utilisent.
+
+\subsubsection{Q}
+
+\paragraph{}
+Quels sont les dispositifs qui nous permettent d'exprimer des
+doléances au niveau européen ? Le premier est le \textcolor{red}{droit
+  de pétition devant Parlement européen, qui n'est pas du tout lié à
+  un droit d'initiative pour faire des lois}. Ce droit de pétition
+devant le Parlement européen a pour seul rôle de porter une
+revendication spécifique qui peut rester lettre morte. Le droit de
+pétition est souvent mis de côté car son efficacité est relativement
+faible, et ne peut avoir d'efficacité toute seule. En effet, les
+conditions de recevabilité sont assez larges, mais l'efficacité est
+très limitée.
+\paragraph{}
+Ce droit de pétition est issu d'une longue tradition, s'apparentant au
+droit de remontrance. Il n'y a pas de pouvoir contraignant pour le
+Parlement de prendre des décisions avec une pétition. Ces pétitions
+sont en général de plus de 1000 par an.
+\paragraph{}
+Un autre moyen beaucoup plus efficace pour la société civile, c'est le
+recours devant les juridictions européennes. La société civile, pour
+cela, n'a pas besoin de structures fortes.
+\paragraph{}
+3\ieme~recours possible : \textcolor{red}{le médiateur européen}, dont
+le rôle est de faciliter le dialogue. Il y a un médiateur européen
+comme il y a un médiateur de la république en France. Le siège du
+médiateur est à Strasbourg, et est habilité à recevoir les plaintes
+des individus, des institutions européennes, etc. L'avantage du
+médiateur européen est qu'il est habitué à recevoir des plaintes des
+individus membres de l'UE, mais aussi des citoyens de pays tiers
+habitant dans l'UE.
+\paragraph{}
+Il y a émergence d'un droit cosmopolitique. C'est un outil pour faire
+émerger autre chose, avec des cercles politiques différents.
+\paragraph{}
+Le rôle des lobbies (des groupes de pression ou groupes d'intérêt)
+\paragraph{}
+Existe de façon relativement institutionnalisé un forum des sociétés
+civiles et il existe un forum national de la société civile
+européenne, qui se réunit en fonction des réunions des chefs d'États
+de l'UE. Les lobbies est groupes de pressions et ceux que l'on
+regroupe sous le terme de société civile peuvent revendiquer des
+thèmes universalistes. Il faut un enjeu universalisable pour être
+considéré comme membre permanent de la société civile. Ce sont en
+général des gens qui ont les moyens des se mobiliser. Ce forum
+permanent des sociétés civiles est restranscrit dans les médias de
+façon très concurrente. Ce forum permanent a été impulsé par le
+mouvement européen, et comprend une énumération de société.
+\paragraph{}
+Est-ce qu'il y a une société civile européenne qui se distingue de la
+société civile nationale, et quelles sont ces figures ?
+
+\section{La construction de l'Islam comme \og Autre\fg de l'Europe}
+
+\subsection{Un enjeu historiographique}
+
+\paragraph{}
+La construction de l'Islam comme un autre de l'Europe, c'est-à-dire la
+fabrication des catégories pour construire un \og eux\fg~et un \og
+nous\fg~sert, en amont, des enjeux politiques, des enjeux d'écriture
+de l'Histoire.
+\paragraph{}
+Dans les années 60, un débat a eu lieu aux États-Unis, un historien
+spécialiste de la période médiévale s'était intéressé à une catégorie
+stigmatisée de la chrétienté médiévale. L'islam ne faisait pas partie
+des sujets prisés des historiens avant. On étudiait la figure de
+l'hérétique, du fou, de l'athée, mais la figure de l'islam, du
+sarazin, n'était pas étudiée, comme si elle était absente de la
+période médiévale. Le nom de cet historien spécialiste est Daniel
+\textsc{Norman}, qui a écrit \emph{Islam and the West}. Cet ouvrage a
+marqué toute une génération d'historiens, car il a fait surgir une
+figure nouvelle, et mettre en avant un champ de recherche nouveau.
+\paragraph{}
+Le problème de \textsc{Norman}, c'st qu'il construit son étude à
+partir de toute une série de stéréotypes que l'on peut trouver dans la
+littérature médiévale, et essaiera de retrouver des préjugés
+permanents. Il proposera alors l'image d'un Occident qui façonne
+l'image d'un Orient de façon homogène, unanime et univoque. Son objet
+d'étude est le regard européen sur l'islam. Il déduit à partir de là
+qu'il y a la façonnation d'une Europe homogène face à un monde
+oriental. Son objet d'étude est le regard européen sur l'islam, et en
+particulier ses représentations dans le sens éthymologique.
+\paragraph{}
+La critique faite à Norman est qu'il propose l'image d'une Europe
+univoque. Et s'il est intéressant de regarder les permanences de ces
+stéréotypes, c'est qu'il y a une Europe univoque et un monde oriental
+également univoque. Ce n'est pas suffisant de dire que dans telle
+historiographie nationale on trouve telle chose, pour en déduire des
+caractères communs. Ce n'est pas suffisant de dire qu'il y a des
+caractères communs dans les discours politiques, car cela renvoit à
+une image d'idées qui ne bougent jamais. C'est bien d'avoir déterminé
+les stéréotypes auxquels les représetantations de l'islam répond, mais
+ce n'est pas suffisant car on a l'impression que le discours est
+toujours le même, par les mêmes personnes, avec les mêmes buts. Or, ce
+n'est pas suffisant, il faut faire une archéologie de ces
+représentations (voir Foucault) pour toute figure de l'altérité.
+\paragraph{}
+Si l'Occident mobilise des stéréotypes, elle les mobilise pour des
+raisons différentes. Julian Tolan disait que si l'on fait comme
+Norman, on se construit des images très univoques de l'Occident et de
+l'Orient.
+\paragraph{}
+Dans l'archéologie de ces représentations, l'idée est de déconstruire
+la vision de l'Orient et de l'Occident, sans s'appuyer sur ces
+stéréotypes pour en construire une autre. Pour stéréotyper l'islam, il
+y a une image d'un musulman militairement conquérant, fort et
+dangereux. Ce ne sont pas tant des hérésies ou des idolâteries, qu'une
+religion dangereuse à cause d'une volonté de conquête
+militaire. L'enjeu consistant à définir le musulman comme étant
+dangereux, c'est les Croisades : si l'on voulait unifier le monde
+latin soumis à des divisions internes très rudes (montée du
+catholicisme, \og anti-papes\fg, etc), il fallait mobiliser contre les
+gens autour d'un enjeu militaire. Le plus petit dénominateur commun
+était de combattre ceux qui sont un danger militairement et
+spirituellement (au niveau de la religion).
+\paragraph{}
+Il y a des lieux communs de la représentations de l'islam, il y a
+toutefois des exceptions. L'enjeu en tous les cas était d'ordonner le
+monde chrétien, en excluant une catégorie de personnes. Ce qui va à
+l'encontre de l'idée de démocratie, consistant à unifier également
+ceux qui sont exclus.
+\paragraph{}
+Si l'on fait un bond dans l'Histoire, les historiens regarden si l'on
+retrouve des caractères communs chez les penseurs des Lumières. Là,
+cependant ça ne suffit plus de s'arrêter aux caractères permanents
+trouvés, et il faut faire une archéologie des représentations. Il faut
+spécifier le contexte historique et pourquoi il y a telle pensée en
+fonction du contexte. Par exemple quand Montesquieu, dans ses
+\emph{Lettres persanes}, critiquait l'islam, il n'avait pas en tête
+les Croisades, mais une critique de la monarchie absolue.
+\paragraph{}
+Il ne faut pas juste repérer les critères constants, mais étudier les
+représentations, dans un contexte historique différent, avec des
+enjeux différents. Sinon, on reconstruit soi-même une vision
+constante. Pour éviter ce caractère essentialiste, il faut étudier les
+contextes, les enjeux, etc. Il y a une nécessité de déconstruction
+préalable.
+\paragraph{}
+Un autre ouvrage intéressant, écrit par Eduard \textsc{Saïd},
+\emph{L'Orientalisme}. \emph{L'Orientalisme}, c'est aussi l'exemple
+type d'ouvrages d'un intellectuel engagé. C'est une figure marquante
+de l'historiographie et des études littéraires comparées en
+Occident. Souvent, ceux qui ont étudié le monde arabe et l'islam
+étaient souvent des littéraires, car les gens ne venant pas d'Europe
+ne répondent pas nécessairement aux critères de catégorisation du
+monde universitaire occidentale.
+\paragraph{}
+Les études post-coloniales, c'est la question de savoir comment
+restent perceptibles les caractéristiques, les phénomènes de
+catégorisation de l'autre, héritées de l'entreprise
+coloniale. L'orientalisme, c'est le discours que l'Occident se fait de
+l'Orient. Culturellement et idéologiquement, l'orientalisme est en
+fait une vision des Occidentaux.
+
+\subsection{Un exemple d'enjeu contemporain : le port du voile (le
+  nijab)}
+
+\paragraph{}
+Le contexte : il s'agit de montrer comment à partir d'un projet de
+recherche en Europe sur le port du voile, on retrouve un certain
+nombre de préjugés. Cette étude s'est déroulée sur 3 ans, dans 7 pays
+européens. La Commission européenne a financé cette enquête, pour
+comprendre d'où viennent les différences dans les législations par
+rapport aux pays qui n'interdisent pas le port du voile, tandis que
+dans d'autres États, comme en France, le port du voile est banni. La
+Commission veut donc savoir les causes des disparités des grandes
+disparités. L'enjeu était donc de chercher les causes des disparités,
+et aussi d'avoir des recommandations pour rendre plus homogènes les
+législations pour favoriser une plus grande égalité des citoyens pour
+le port du voile.
+\paragraph{}
+Les 7 équipes étaient composées de gens totalement différents. Les
+Anglais ont composé leurs recherches d'universitaires qui étaient tous
+des sociologues des religions. Les Danoises avaient composé leur
+équipes avec des spécialistes sur les études sur le genre, l'équipe
+autrichienne, de spécialistes sur l'immigration, l'équipe française,
+de gens qui travaillaient sur l'Europe, le genre, les constructions
+des catégories, la sociologie.
+\paragraph{}
+L'intérêt de ce projet de recherche était le fait qu'elle devait
+donner des recommandations pour répondre à un besoin d'homogénéité,
+plus que d'explications. Toute la recherche a été traversée par des
+conflits assez violents entre ceux et celles qui n'entrevoyaient le
+port du voile qu'à travers des conflits migratoires. Certains
+pensaient que la politique migratoire impliquait le port du voile, et
+donc il fallait vérifier si la législation était favorable au port du
+voile à l'origine.
+\paragraph{}
+Cette enquête a marqué dans le plan scientifique en montrant que
+celles qui se voilent n'étaient pas forcément que des
+étrangères. Considérer que le port du voile va de paire avec une étude
+sur le plan migratoire, c'est considérer qu'on importe quelque chose
+qui n'est pas des valeurs du pays d'acceuil, et qu'une fille portant
+le voile serait suspecté de ne pas être européenne. Le problème était
+donc également dans le statut accordé aux femmes dans l'espace
+national. Le port du voile ne dépend-t-il pas finalement seulement des
+femmes et de leur volonté ?
+\paragraph{}
+Les permances entre religion musulmane et conquête des territoires
+pénètre jusqu'à la raison de telle ou telle législation.
+\paragraph{}
+Comment envisage-t-on le problème des droits de l'homme dans le pays
+concerné ? Les législations qui interdisent le port du voile le
+font-elles au nom du droit de l'homme, en raison de la laïcité ? Le
+problème des droits de l'homme renvoit aussi à un certain nombre de
+préjugés sur le monde musulman, qui serait imperméable à l'égalité
+homme-femme. Stigmatisation avec ce genre de discours : Nous
+respectons les droits de l'homme, eux ne le respectent pas. Pas loin
+du discours colonial : nous allons leur apporter la civilisation à
+eux, ces barbares.
+\paragraph{}
+Ne s'occuper du port du voile sous l'angle du religieux ou de
+l'immigration, c'est traiter l'islam que sous la forme de la croyance,
+en incluant des frontières que certains veulent un peu plus
+étanches. Dans \emph{Le clash des civilisations}, Samuel
+\textsc{Huntington} parlait de frontières qui devaient rester fermer
+pour éviter les conflits.
+\paragraph{}
+Au final on ne sait toujours pas quelles sont les identités et valeurs
+européennes. Le discours sur l'identité européenne a par contre
+toujous fonctionné dans l'unification contre un autre. Il y a un
+prisme, un shéma de fonctionnement, toujours le même, mais mobilisé à
+des périodes différentes. C'est le shéma de celui qui ne se reconnaît
+qu'à travers les différences avec l'autre en révélant le côté positif
+constrasté avec le côté négatif de l'autre. L'identité européenne se
+fait par différenciation.
+
+\subsection{Les dispositifs institutionnels}
+
+Comment se construit l'autre par un processus institutionnel ?
+L'expression \og dialogue interculturel\fg~est une expression vide et
+déconvenue. Le processus de Barcelone vise créer des institutions dont
+le but est de favoriser une meilleure compréhension entre les deux
+rives de la méditérannée. On appelé aussi le processus de Barcelone le
+partenariat euro-méditérannéen. C'est un terme typiquement dépourvu de
+contenu, typiquement bureaucratique dont l'objectif est d'assurer une
+stabilité économique et une zone de libre-échange entre les pays
+méditérannéens (appelés les Pays Tiers Méditérannéens, PTM), notamment
+en assouplissant les critères imposant aux pays européens de commercer
+entre eux. Il y a un assouplissement pour les PTM.
+\paragraph{}
+Dans ce partenariat euro-méditérannéen, ce qui a prévalu, c'est la
+prédominance du dialogue sécuritaire. Dans les déclarations de
+politiques publiques des uns et des autres, le dialogue a été entendu
+sous une forme sécuritaire, avec un amalgme entre immigration,
+islamisme, terrorisme, et criminalité. Le partenariat
+euro-méditérannéen devrait favoriser l'insertion des migrants, etc.
+\paragraph{}
+Les influences nationales redoublent. Le processus de Barcelone s'est
+redoublé de la craétion pour une union pour la méditérannéene après
+l'élection de Nicolas Sarkozy.
+
+Le trait constant , c'est que s'il y a du dialogue ou du partenariat,
+c'est qu'il y a du partenariat entre l'Europe et ce qui n'est pas de
+l'Europe. Le sous-entendu majeur est qu'il y aurait une zone
+régionale, qui ne se fait que sous la forme d'une intégration
+régionale. Jamais il y a l'idée d'un élargissement de l'Europe vers
+son bassin méditérannéen.
+\paragraph{}
+La seule justification à un problème dans l'intégration de l'Europe de
+ces pays, c'est postuler que la mer est une frontière naturelle dans
+l'intégration européenne. Ce qui n'est pas logique puisque La Manche
+devrait alors aussi être considérée comme une limite séparant
+l'Angleterre du reste de l'Europe.
+
+% \begin{thebibliography}{}
+
+%   Martin Bemal, \emph{Black Athena, the Afro-Asiatic Roots of
+%     Classical Civilisation}, London : Fre Association Book, 1987.
+
+%   Samir Amin, Modernité, religion et démocratie - critique de
+%   l'eurocentrisme, critique du culturalisme, Lyon, éd. Porangan,
+%   2008.
+
+% \end{thebibliography}
+\end{document}

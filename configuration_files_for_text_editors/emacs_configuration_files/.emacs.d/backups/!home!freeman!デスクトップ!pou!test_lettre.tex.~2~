@@ -1,0 +1,58 @@
+% Created 2010-09-21 Tue 22:02
+\documentclass{isodoc}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{t1enc}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usepackage{pdfpages}
+
+\providecommand{\alert}[1]{\textbf{#1}}
+
+\title{}
+\author{Jambunathan K}
+%\date{21 September 2010}
+
+\begin{document}
+
+\letter
+[
+date =
+    20100921
+,
+to =
+      Orgmode Mailing List \\
+  GNU Mailing List \\
+  World Wide Web \\
+  Internet - 111111
+,
+opening =
+    Friends
+,
+subject =
+    Composing letters using isodoc
+,
+closing =
+    Thanks
+,
+enclosures =
+    org-latex-generic.el
+    org-scrlttr2.el
+    org-isodoc.el
+    org-letter-utils.el
+,
+]
+ {
+   I would like to share with you a little utility that helps me
+   compose formal letters within Org mode. Would you like to try it?
+}
+
+\end{document}

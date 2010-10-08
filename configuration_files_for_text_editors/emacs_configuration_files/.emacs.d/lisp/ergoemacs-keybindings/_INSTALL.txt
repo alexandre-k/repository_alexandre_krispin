@@ -1,0 +1,68 @@
+-*- coding: utf-8 -*-
+
+INSTALLATION INSTRUCTIONS
+
+------------------------------
+1. Unzip the folder.
+
+If you downloaded a file named “ergoemacs-keybindings_v123.zip”, unzip it.
+Now you should have a folder named “ergoemacs-keybindings_v123”.
+
+------------------------------
+2. Place the folder somewhere in your home directory. For examples:
+
+On Windows:
+C:\Users\mary\.emacs.d\ergoemacs-keybindings_v123
+
+On Mac OS X or Linux:
+/Users/mary/.emacs.d/ergoemacs-keybindings_v123
+
+------------------------------
+3. Specify your keyboard layout.
+
+Place one of the following line in your emacs init file (~/.emacs):
+
+(setenv "ERGOEMACS_KEYBOARD_LAYOUT" "us") ; US layout
+
+(setenv "ERGOEMACS_KEYBOARD_LAYOUT" "dv") ; US Dvorak layout
+
+(setenv "ERGOEMACS_KEYBOARD_LAYOUT" "gb") ; UK layout
+
+(setenv "ERGOEMACS_KEYBOARD_LAYOUT" "gb-dv") ; UK Dvorak layout
+
+(setenv "ERGOEMACS_KEYBOARD_LAYOUT" "sp") ; Spanish (Spain) (aka “Spanish (International sort)”)
+
+(setenv "ERGOEMACS_KEYBOARD_LAYOUT" "it") ; Italian layout
+
+(setenv "ERGOEMACS_KEYBOARD_LAYOUT" "colemak") ; Colemak layout
+
+------------------------------
+4. Make Emacs load the file, and turn on the mode.
+
+Place the following lines in your emacs init file. Make sure that the path points to your file is correct. You do not need to have the file path end in “.el”.
+
+;; load ErgoEmacs keybinding
+(load "~/.emacs.d/ergoemacs-keybindings/ergoemacs-mode")
+
+;; turn on minor mode ergoemacs-mode
+(ergoemacs-mode 1)
+
+These lines should be placed below your keyboard layout in step 3.
+
+------------------------------
+5. Restart emacs.
+
+Now, your will be using the new keybinding. The shortcut for emacs's “M-x” is now “Alt+a”.
+
+To turn off the mode, type “Alt+a” then “ergoemacs-mode”. After that, your keybinding is the same as GNU Emacs's default keybinding.
+
+The command “ergoemacs-mode” toggles the minor mode.
+
+--------------------------------------------------
+Byte Compile Elisp Files (Optional)
+
+If you like, you can byte-compile the elisp files. To byte compile them, call the command byte-compile-file, then the elisp file name. Once you do that, emacs will create a file with “.elc” ending, and will automatically load byte compiled file if there is one.
+
+Byte compiled files makes loading and running programs about 5 or more times faster, but for small elisp files, the speed increase is probably not noticeable.
+
+You do not need to change any lines in the emacs initialization given above.

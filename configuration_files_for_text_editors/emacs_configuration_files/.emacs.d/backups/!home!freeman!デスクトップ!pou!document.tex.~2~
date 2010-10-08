@@ -1,0 +1,18 @@
+\documentclass[foldmarks=off,fromalign=right,backaddress=false,fromemail=false,fromurl=false,fromlogo=false,fromphone=true]{scrlttr2}
+\usepackage[utf8]{inputenc}
+\usepackage[frenchb]{babel}
+\title{}
+\author{Alexandre Krispin}
+\date{\today}
+\setkomavar{fromname}{Alexandre Krispin}
+\setkomavar{fromaddress}{ABC}
+\setkomavar{fromphone}{0123456789}
+\setkomavar{signature}{}
+\setkomavar{subject}{}
+\begin{document}
+	\begin{letter}{Recipient}
+		\opening{Dear ...,}
+		
+		\closing{Best regards,}
+	\end{letter}
+\end{document}

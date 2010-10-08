@@ -1,0 +1,1171 @@
+"--------------------------------------------------------------------------------------------------------"
+"				LATEX RELATED STUFF					"
+"--------------------------------------------------------------------------------------------------------"
+
+" --- Enable automatic filetype detection ---
+"--------------------------------------------------------------------------------------------------------"
+:filetype on
+filetype plugin on
+
+" Enables vim-latex bindings if we are using latex
+ :autocmd BufRead *.tex        "":source ~/.vim/vimrc.latex
+
+""To get ride of those motherfucking "<++>"
+"--------------------------------------------------------------------------------------------------------"
+let g:Imap_UsePlaceHolders = 0
+
+" IMPORTANT: grep will sometimes skip displaying the file name if you
+" search in a singe file. This will confuse Latex-Suite. Set your grep
+" program to alway generate a file-name.
+"--------------------------------------------------------------------------------------------------------"
+autocmd Filetype tex,latex :set grepprg=grep\ -nH\ $*
+autocmd Filetype tex,latex :set dictionary=/usr/share/vim/vimfiles/ftplugin/latex-suite/dictionaries/dictionary
+
+"Completion related"
+"--------------------------------------------------------------------------------------------------------"
+" to cycle with ctrl-N trough all labels
+set iskeyword+=:
+
+"--------------------------------------------------------------------------------------------------------"
+"				EDITING RELATED STUFF					"
+"--------------------------------------------------------------------------------------------------------"
+
+set textwidth=80
+
+" switch on syntax highlight
+"--------------------------------------------------------------------------------------------------------"
+syntax on
+
+" allow backspacing over everything in insert mode
+"--------------------------------------------------------------------------------------------------------"
+set backspace=indent,eol,start
+
+" number of undos
+"--------------------------------------------------------------------------------------------------------"
+set undolevels=200
+
+" Sets how many lines of history VIM has to remember
+"--------------------------------------------------------------------------------------------------------"
+set history=300"
+
+" make F11 "copy into clipboard"
+":map <F11> "*y
+ 
+" make F12 "paste from clipboard"
+":map <F12> "*p
+
+""FORMATTING
+"--------------------------------------------------------------------------------------------------------"
+
+set formatoptions=tcroqn " see help
+"set formatoptions=c,q,r,t " This is a sequence of letters which describes how
+                    " automatic formatting is to be done.
+                    "
+                    " letter    meaning when present in 'formatoptions'
+                    " ------    ---------------------------------------
+                    " c         Auto-wrap comments using textwidth, inserting
+                    "           the current comment leader automatically.
+                    " q         Allow formatting of comments with "gq".
+                    " r         Automatically insert the current comment leader
+                    "           after hitting <Enter> in Insert mode. 
+                    " t         Auto-wrap text using textwidth (does not apply
+                    "           to comments)
+" Real tab chars.
+set noexpandtab
+
+set smarttab
+
+"This enables automatic indentation as you type.
+filetype indent on
+set autoindent	      " Copy indent from previous line
+set smartindent      " turn on smart indenting
+
+" indentation automatique (à la Emacs)
+vnoremap <C-F>   =$
+vnoremap <tab>   =
+nnoremap <tab>   =$
+nnoremap <C-tab> mzvip=`z
+
+setlocal indentkeys+=},=\\item,=\\bibitem,=\\else,=\\fi,=\\or,=\\]
+                    
+" shortcut for formatting paragraph
+map	<C-J>	gqap
+imap	<C-J>	<C-O>gqap
+vmap	<C-J>	gq
+
+" Some people prefer to use extrernal formatting utilities
+" such as "fmt" or "par":
+"nmap	<C-J>	!}fmt<CR>
+"vmap	<C-J>	!fmt<CR>
+
+" write four spaces instead of tab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4   " make the four spaces feel like a tab
+
+set expandtab
+
+" wrap at word
+"--------------------------------------------------------------------------------------------------------"
+set lbr
+
+" This function nicely wraps a selection within quotes, curly braces, square
+" brackets, angle brackets, tags and more.
+"--------------------------------------------------------------------------------------------------------"
+" This function nicely wraps a selection within quotes, curly braces, square
+" brackets, angle brackets, tags and more.
+function s:RD_wrapper (str) range
+	let l:allowed_strs = {
+				\ '"' : ['"', '"'],
+				\ "'" : ["'", "'"],
+				\ '{' : ['{', '}'],
+				\ '(' : ['(', ')'],
+				\ '[' : ['[', ']'],
+				\ '`' : ['`', '`'],
+				\ '<' : ['<', '>'],
+				\ 't' : ['', '']
+				\ }
+
+	if has_key(l:allowed_strs, a:str) != 1
+		echohl ErrorMsg
+		echo 'Unknown wrapper: "' . a:str . '".'
+		echohl None
+
+		return 0
+	endif
+
+	" Wrap the selection with a tag.
+	if a:str == 't'
+		let l:tname = inputdialog('Tag name: ')
+		if strlen(l:tname) < 1
+			return 0
+		endif
+		let l:allowed_strs[a:str][0] = '<' . l:tname . '>'
+		let l:allowed_strs[a:str][1] = '</' . l:tname . '>'
+	endif
+
+	let l:prefix = l:allowed_strs[a:str][0]
+	let l:suffix = l:allowed_strs[a:str][1]
+	let l:lenp = strlen(l:prefix)
+
+	let l:old_x = @x
+	let l:old_reg = @"
+
+	let @x = l:prefix
+	normal `<"xP
+	let l:line1 = line('.')
+
+	normal `>
+	let l:line2 = line('.')
+
+	if l:line1 == l:line2
+		exe 'normal ' . lenp . 'l'
+	endif
+
+	let @x = l:suffix
+	normal "xp
+
+	" If we are wrapping the selection with a tag, lets put the cursor exactly
+	" where the user can just press 'i' to start writing the attributes.
+	if a:str == 't'
+		normal h%h%
+	endif
+
+	let @x = l:old_x
+	let @" = l:old_reg
+
+	return 1
+endfunction
+
+" If on Vim will wrap long lines at a character in 'breakat' rather
+"than at the last character that fits on the screen.
+"--------------------------------------------------------------------------------------------------------"
+set linebreak
+
+"--------------------------------------------------------------------------------------------------------"
+"				CONVENIENCE							"
+"--------------------------------------------------------------------------------------------------------"
+
+set complete+=k         " enable dictionary completion
+set clipboard+=unnamed  " yank and copy to X clipboard
+
+" make tab in v mode keep highlighting
+"--------------------------------------------------------------------------------------------------------"
+vmap <tab> >gv
+vmap <s-tab> <gv
+
+" met en surbrillance les espaces et les tabs en trop
+"--------------------------------------------------------------------------------------------------------"
+highlight RedundantSpaces ctermbg=red guibg=red
+match RedundantSpaces /\s\+$\| \+\ze\t\|\t/
+
+" Permet de se repérer dans les parenthèses & Co.
+"--------------------------------------------------------------------------------------------------------"
+set showmatch
+set matchpairs+=<:> " Make < and > match as well
+
+" For all text files set 'textwidth' to 80 characters.
+"--------------------------------------------------------------------------------------------------------"
+  autocmd FileType text setlocal textwidth=80
+
+ " searching
+"--------------------------------------------------------------------------------------------------------"
+set hlsearch        " When there is a previous search pattern, highlight all
+                    " its matches.
+""set incsearch       " While typing a search command, show immediately where the
+                    " so far typed pattern matches.
+set ignorecase      " Ignore case in search patterns.
+" ignorer la casse des caractères dans les recherches de chaînes
+set ignorecase
+ 
+" mais ne pas l'ignorer s'il y a explicitement des majuscules
+set scs
+ 
+" regexp version magic
+set magic
+
+""set smartcase       " Override the 'ignorecase' option if
+set wrapscan                          " recherche en rond!
+
+" résultats dynamiques au cours de la recherche (amène le curseur sur le
+" résultat pour le motif actuellement recherché)
+set sm
+
+"fullscreen
+"--------------------------------------------------------------------------------------------------------"
+if has("gui_running")
+        " tente de maximiser la fenêtre GVim (problème avec Gnome et Metacity
+        " non solvable par la configuration de Vim seule)
+        set lines=99999 columns=99999
+ 
+        " police par défaut
+        if has("win32")
+                set guifont=Fixedsys:h9:cANSI
+                "set guifont=Courier:h10:cANSI
+        else
+                "set guifont=Deja\ Vu\ Sans\ Mono\ 12
+                " you'll need ttf-droid:
+                set guifont=Droid\ Sans\ Mono\ 14
+                " réglages de l'interface
+                set guioptions+=ace
+                set guioptions-=mT
+        endif
+endif
+
+""or fullscreen
+  :set go-=m go-=T go-=l go-=L go-=r go-=R go-=b go-=F
+  :set lines=99999999 columns=99999999
+"redondant ?"
+let s:fullscreen_toggle = 1
+
+" This adds the new Fullscreen command.work in progress
+command Fullscreen call <SID>RD_Fullscreen()
+
+" This function toggles the 'fullscreen' mode. I sometimes need this, so I can
+" just view my files, without all the 'clutter': line numbers, folding,
+" command line, status line, etc.
+""let s:fullscreen_toggle = 0
+function s:RD_Fullscreen ()
+	if s:fullscreen_toggle == 0
+		set cmdheight=1
+		set nonumber
+		set laststatus=0
+		set foldcolumn=0
+		let s:fullscreen_toggle = 1
+	else
+		set cmdheight=2
+		set number
+		set laststatus=2
+		set foldcolumn=4
+		let s:fullscreen_toggle = 0
+	endif
+endfunction
+
+ "" Curseur à l'ancienne position
+"--------------------------------------------------------------------------------------------------------"
+
+ " Go back where I left off
+    autocmd BufReadPost * call RestoreCursorPos()
+    autocmd BufWinEnter * call OpenFoldOnRestore()
+
+" Restore my cursor position
+function! RestoreCursorPos()
+    if expand("<afile>:p:h") !=? $TEMP
+        if line("'\"") > 1 && line("'\"") <= line("$")
+            let line_num = line("'\"")
+            let b:doopenfold = 1
+            if (foldlevel(line_num) > foldlevel(line_num - 1))
+                let line_num = line_num - 1
+                let b:doopenfold = 2
+            endif
+            execute line_num
+        endif
+    endif
+endfunction
+
+" Open the fold if restoring cursor position
+function! OpenFoldOnRestore()
+    if exists("b:doopenfold")
+        execute "normal zv"
+        if(b:doopenfold > 1)
+            execute "+".1
+        endif
+        unlet b:doopenfold
+    endif
+endfunction
+
+"}}}
+
+" custom status line
+"--------------------------------------------------------------------------------------------------------"
+"hi User1 ctermfg=red   ctermbg=white
+"hi User2 ctermfg=green ctermbg=white
+"hi User3 ctermfg=blue  ctermbg=white
+"set statusline=%1*[%02n]%*\ %2*%F%*\ %(\%M%R%H)%)%=%3*Pos=<%l,%c%V>%*
+
+"Personnalisation de la ligne de status (redondant avec ce qui précède?)
+"--------------------------------------------------------------------------------------------------------"
+set statusline=%F%m%r%h%w\ [TYPE=%Y]\ [Line=%04l]\ [Col=%04v]\ [%p%%]
+set laststatus=2
+
+" show me where i am
+"--------------------------------------------------------------------------------------------------------"
+set cursorline
+
+" This function strips the tag under the cursor.
+"--------------------------------------------------------------------------------------------------------"
+function s:RD_unwrap_tag()
+	let l:line1 = line('.')
+	let l:col1 = col('.')
+
+	" If the cursor is positioned on the '<', move to the right
+    if strpart (getline('.'), l:col1-1, 1) == '<'
+        normal l
+		let l:col1 = col('.')
+    endif
+
+	" We have to check if we are inside a tag definition
+
+	" Move to the next >
+	let [l:line2, l:col2] = searchpos(">", 'W')
+
+	if (l:line2 == 0 && l:col2 == 0)
+		return 0
+	endif
+
+	" If we found a singleton tag '/>' or a malformed <> tag, then we don't do anything
+	let l:tmp = strpart(getline(l:line2), l:col2-2, 2)
+    if (l:tmp == '/>' || l:tmp == '<>')
+		let l:tmp = cursor(l:line1, l:col1)
+        return 0
+    endif
+
+	" Move to the previous <
+	let [l:line0, l:col0] = searchpos("<", 'bW')
+
+    if (l:line0 == 0 && l:col0 == 0)
+        return 0
+    endif
+
+	" If the < was found after current cursor position, then we are not inside
+	if (l:line0 > l:line1 || (l:line0 == l:line1 && l:col0 > l:col1))
+		" Put the cursor back
+		let l:tmp = cursor(l:line1, l:col1)
+		return 0
+	endif
+
+	" If the cursor is positioned on the '</' (end of tag), move to the start
+	" of the tag.
+    if strpart (getline(l:line0), l:col0-1, 2) == '</'
+        normal l%h
+	else
+		" Check if the cursor is positioned on the tag name (not on attributes).
+		let [l:lineS, l:colS] = searchpos('$\|\s\|>', 'nW')
+		let l:colS -= 1
+		if (l:lineS != l:line1 || l:colS < l:col1 || (l:lineS == l:line2 && l:colS > l:col2) || l:lineS > l:line2)
+			let l:tmp = cursor(l:line1, l:col1)
+			return 0
+		endif
+    endif
+
+	" Update the position
+	let l:cline = line('.')
+	let l:ccol = col('.')
+
+	let l:old_reg = @"
+
+	" Delete the closing tag
+	normal l%da<
+	" Remove the line if it's empty
+	silent! s/^\s\+\n//e
+
+	" Go back and the delete the start tag
+	let l:tmp = cursor(l:cline, l:ccol)
+	normal lda<
+	silent! s/^\s\+\n//e
+
+	let @" = l:old_reg
+
+	return 1
+endfunction
+
+
+" Superbe menu de complétion \o/
+"--------------------------------------------------------------------------------------------------------"
+set wildmenu
+set wildignore=*.o,*~,*.cmo,*.cmi,*.a,*.cmx,*.cmxa,*.lo,*.log,*.aux,*.dvi,*.aut,*.aux,*.bbl,*.blg,*.dvi,*.fff,*.out,*.pdf,*.ps,*.toc,*.ttt
+
+"Autorisation de remonter ou descendre d'une ligne avec les flèches
+"gauche ou droite
+"--------------------------------------------------------------------------------------------------------"
+set whichwrap=b,s,<,>,[,]
+
+" Enable the ruler with the format:
+" " {buffer number}{modified/readonly flag}: {file type} [current line,
+" current column] {position percentage in file}
+"--------------------------------------------------------------------------------------------------------"
+set ruler
+set rulerformat=%25(%n%m%r:\ %Y\ [%l,%v]\ %p%%%)
+
+" spelling...
+"--------------------------------------------------------------------------------------------------------"
+set spell
+" automatique pour les fichiers .txt et .tex
+augroup filetypedetect
+  au BufNewFile,BufRead *.txt setlocal spell spelllang=fr
+  au BufNewFile,BufRead *.tex setlocal spell spelllang=fr
+augroup END
+ 
+" painless spell checking
+" for French, you'll need
+" wget http://ftp.vim.org/pub/vim/runtime/spell/fr.utf-8.sug
+" wget http://ftp.vim.org/pub/vim/runtime/spell/fr.utf-8.spl
+" which you may move into ~/.vim/spell
+function s:spell_fr()
+    if !exists("s:spell_check") || s:spell_check == 0
+        echo "Correction orthographique activée (français)"
+        let s:spell_check = 1
+        setlocal spell spelllang=fr
+    else
+        echo "Correction orthographique désactivée"
+        let s:spell_check = 0
+        setlocal spell spelllang=
+    endif
+endfunction
+" for English
+function s:spell_en()
+    if !exists("s:spell_check") || s:spell_check == 0
+        echo "Correction orthographique activée (anglais)"
+        let s:spell_check = 1
+        setlocal spell spelllang=en
+    else
+        echo "Correction orthographique désactivée"
+        let s:spell_check = 0
+        setlocal spell spelllang=
+    endif
+endfunction
+ 
+" mapping français
+noremap  <F10>        :call <SID>spell_fr()<CR>
+inoremap <F10>   <C-o>:call <SID>spell_fr()<CR>
+vnoremap <F10>   <C-o>:call <SID>spell_fr()<CR>
+" mapping English
+noremap  <S-F10>      :call <SID>spell_en()<CR>
+inoremap <S-F10> <C-o>:call <SID>spell_en()<CR>
+vnoremap <S-F10> <C-o>:call <SID>spell_en()<CR>
+
+" utile ou redondant ? correction orthographique work in progress
+""map <silent> <F7> "<Esc>:silent setlocal spell! spelllang=fr<CR>"
+""map <silent> <F8> "<Esc>:silent setlocal spell! spelllang=en<CR>"
+
+""en cas de besoin, pour rajoutter des spellfiles
+"set spellfile=~/.spellfile.add
+
+" line numbering
+"--------------------------------------------------------------------------------------------------------"
+set number
+
+" nice colours and fonts
+"--------------------------------------------------------------------------------------------------------"
+colorscheme habilight
+colors habilight
+set guifont=DejaVu\ Sans\ Mono\ 8
+
+" manual folding --- Work in progress
+"--------------------------------------------------------------------------------------------------------"
+set foldenable 
+" Fold column width
+set foldcolumn=4
+
+" Make folding indent sensitive
+set foldmethod=indent 
+"Ou bien ça ? work in progress critère par défaut pour replier les blocs : marqueurs explicites {{{ … }}}
+""set foldmethod=marker
+
+set foldminlines=2
+
+" Folds with a higher level will be automatically closed.
+set foldlevel=4
+
+" Don't auto-open folds
+""set foldopen=
+
+"work in progress, see help"
+"set foldmethod=marker
+"set commentstring=\ #\ %s
+
+" Do not place the cursor at the start of the line when using Page up/down.
+"--------------------------------------------------------------------------------------------------------"
+set nostartofline
+
+" Allow specified keys that move the cursor left/right to move to the previous/next line when the cursor is on the first/last character in the line.
+" b (backspace), s (space) and the arrows.
+"--------------------------------------------------------------------------------------------------------"
+set whichwrap=b,s,<,>
+
+" GUI Options:
+"f has("gui_running")
+"	" GUI cursor: no blinking
+"	set guicursor+=a:blinkon0
+"
+"	" no toolbar
+"	set guioptions-=T
+"	" no autoselect 
+"	set guioptions-=a
+"
+"	" Use console messages instead of GUI dialogs
+"	set guioptions+=c
+"endif
+
+" Enable the ruler with the format:
+" {buffer number}{modified/readonly flag}: {file type} [current line,
+"current column] {position percentage in file}
+"--------------------------------------------------------------------------------------------------------"
+set ruler
+set rulerformat=%25(%n%m%r:\ %Y\ [%l,%v]\ %p%%%)
+
+" Status line format:
+" {buffer number}: {file name, relative path to the current working directory}{modified flag}{readonly flag}
+" {help flag}{preview flag} [file type, encoding, format] [current
+" line-total lines, current column][position percentage in file]
+"--------------------------------------------------------------------------------------------------------"
+set statusline=%n:\ %f%m%r%h%w\ [%Y,%{&fileencoding},%{&fileformat}]\ [%l-%L,%v][%p%%]
+
+
+
+"--------------------------------------------------------------------------------------------------------"
+"				MISC								"
+"--------------------------------------------------------------------------------------------------------"
+
+" geef bepaalde files minder voorkeur bij filename completion
+"--------------------------------------------------------------------------------------------------------"
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.out,.toc
+
+" use tab for auto-expansion in menus
+set wc=<TAB>
+
+" remember last 2000 typed commands
+set hi=2000
+
+" toujours afficher le mode courant
+set showmode
+ 
+" affichage dynamique des commandes
+set showcmd
+ 
+" a - terse messages (like [+] instead of [Modified]
+" o - don't show both reading and writing messages if both occur at once
+" t - truncate file names
+" T - truncate messages rather than prompting to press enter
+" W - don't show [w] when writing
+" I - no intro message when starting vim fileless
+set shortmess=aotTWI
+
+" onglets, fritzophrenic mood
+" http://groups.google.com/group/vim_use/browse_thread/thread/9bbfb7f6ec651438
+set showtabline=2
+ 
+" les nouvelles fenêtres sont crées sous l'actuelle
+set splitbelow
+
+" Speed up macro
+"--------------------------------------------------------------------------------------------------------"
+set lazyredraw
+
+""use vim defaults
+"--------------------------------------------------------------------------------------------------------"
+set nocompatible
+
+" mouse settings
+"--------------------------------------------------------------------------------------------------------"
+set mousemodel=popup
+set mouse=a                     " mouse support in all modes
+set mousehide                   " hide the mouse when typing text
+
+" Allow changing the buffer without saving.
+"--------------------------------------------------------------------------------------------------------"
+set hidden
+
+" Set to auto read when a file is changed from the outside
+"--------------------------------------------------------------------------------------------------------"
+set autoread
+
+" For multi-byte character support (CJK support, for example):
+"--------------------------------------------------------------------------------------------------------"
+set fileencodings=ucs-bom,utf-8,cp936,big5,euc-jp,euc-kr,gb18030,latin1
+""Redondant ?
+set enc=utf-8
+" UCS Transformation Format 8 bits : léger et universel
+set encoding=utf-8
+" Support all three, in this order
+" set fileformats=unix,dos,mac
+
+" visual bell?
+"--------------------------------------------------------------------------------------------------------"
+set novisualbell
+set t_vb=
+
+"Saving"
+"--------------------------------------------------------------------------------------------------------"
+" Sauvegarde rapide du fichier actuel
+map <F2> :w<CR>
+imap <F2> <ESC>:w<CR>
+
+" Backups
+"--------------------------------------------------------------------------------------------------------"
+set backup
+set backupcopy=auto
+set backupskip=/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*,*test*,*temp*,*tmp*,*tst*,*~,*bak
+
+
+" Terminal
+"--------------------------------------------------------------------------------------------------------"
+map <S-F2> :!xterm &<CR><CR>
+imap <S-F2> <ESC>:!xterm &<CR><CR>
+
+" Gestionnaire de fichiers graphique
+"--------------------------------------------------------------------------------------------------------"
+map <F2>t :!pcmanfm & <CR><CR>
+map <F2>t <ESC>:!pcmanfm &<CR><CR>
+
+""""""""""""""""""""""""""""""
+" => bufExplorer plugin "work in progress"
+" """"""""""""""""""""""""""""""
+ let g:bufExplorerDefaultHelp=0
+ let g:bufExplorerShowRelativePath=1
+"
+"
+" """"""""""""""""""""""""""""""
+" " => Minibuffer plugin "work in progress"
+" """"""""""""""""""""""""""""""
+ let g:miniBufExplModSelTarget = 1
+ let g:miniBufExplorerMoreThanOne = 2
+ let g:miniBufExplModSelTarget = 0
+ let g:miniBufExplUseSingleClick = 1
+ let g:miniBufExplMapWindowNavVim = 1
+ let g:miniBufExplVSplit = 25
+ let g:miniBufExplSplitBelow=1
+
+
+ let g:bufExplorerSortBy = "name"
+
+" control-left & right arrows switch between tabs
+map <c-Left> :tabp<CR>
+map <c-Right> :tabn<CR>
+
+ 
+" forcer la fermeture d'un tampon
+map  <F4> :bd!<cr>
+imap <F4> <C-O>:bd!<cr>
+cmap <F4> <c-c>:bd!<cr>
+
+if has("gui_running")
+   " Maj-[flèche] pour sélectionner un bloc
+    map  <S-Up>    vk
+    vmap <S-Up>    k
+    map  <S-Down>  vj
+    vmap <S-Down>  j
+    map  <S-Right> v
+    vmap <S-Right> l
+    map  <S-Left>  v
+    vmap <S-Left>  h
+endif
+
+" OmniCompletion
+ 
+" pour plus d'infos sur les autocmd,
+" http://vim.dindinx.net/traduit/html/autocmd.txt.php
+if has("autocmd")
+  augroup augroup_omni
+    au!
+    " display menu even if there is only one match
+    " (so you can accept or reject it)
+    :set completeopt+=menuone
+ 
+    " http://vim.wikia.com/wiki/VimTip1228
+    inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
+    inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
+    inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
+    inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+    inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
+    inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+ 
+    " binding
+    setlocal                        omnifunc=syntaxcomplete#Complete
+    autocmd FileType ada        set omnifunc=adacomplete#Complete
+    autocmd FileType python     set omnifunc=pythoncomplete#Complete
+    autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+    autocmd FileType html       set omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType css        set omnifunc=csscomplete#CompleteCSS
+    autocmd FileType xml        set omnifunc=xmlcomplete#CompleteTags
+    autocmd FileType php        set omnifunc=phpcomplete#CompletePHP
+    autocmd FileType c          set omnifunc=ccomplete#Complete
+ 
+    " un peu plus complet pour Ruby et affiliés : http://vim-ruby.rubyforge.org
+    autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+    autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+    autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+    autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+  augroup END
+endif
+
+"" Racourcis à la firefox
+"--------------------------------------------------------------------------------------------------------"
+map <C-t>     :tabnew<cr>
+map <C-left>  :tabnext<cr>
+map <C-right> :tabprevious<cr>
+map <C-o> :e
+
+" --- Window Manager ---
+" Key Mappings
+:map <c-w><c-t> :WMToggle<cr>
+:map <c-w><c-f> :FirstExplorerWindow<cr>
+:map <c-w><c-b> :BottomExplorerWindow<cr>
+
+"  configure calendar
+"--------------------------------------------------------------------------------------------------------"
+let g:calendar_monday = 1
+
+"set dir=~/.tmp                        " répertoire des fichiers temporaires
+set ff=unix                           " suppression des ^M
+set title                             " modifier le titre du terminal
+
+" Diff option: ignore whitespace
+"--------------------------------------------------------------------------------------------------------"
+set diffopt+=iwhite
+
+" Automatically update $Date: ... $ when the file is saved.
+"--------------------------------------------------------------------------------------------------------"
+autocmd FileWritePre,BufWritePre * call <SID>RD_FileWritePre()
+
+
+"-----------------------------------------------------------------------
+" terminal setup
+"-----------------------------------------------------------------------
+
+" Extra terminal things
+if (&term =~ "xterm") && (&termencoding == "")
+    set termencoding=utf-8
+endif
+
+if &term =~ "xterm"
+    " use xterm titles
+    if has('title')
+        set title
+    endif
+
+    " change cursor colour depending upon mode
+    if exists('&t_SI')
+        let &t_SI = "\<Esc>]12;lightgoldenrod\x7"
+        let &t_EI = "\<Esc>]12;grey80\x7"
+    endif
+endif
+
+"--------------------------------------------------------------------------------------------------------"
+				" FUNCTIONS
+"--------------------------------------------------------------------------------------------------------"
+"
+ " Output ISO date.
+"--------------------------------------------------------------------------------------------------------"
+ function s:RD_isodate ()
+ return strftime("%Y-%m-%d %H:%M:%S %z")
+ endfunction
+"
+ " Function to insert the current date
+"--------------------------------------------------------------------------------------------------------"
+    function! InsertCurrentDate()
+        let curr_date=strftime('%Y-%m-%d', localtime())
+            silent! exec 'normal! gi' .  curr_date . "\<ESC>l"
+              endfunction
+
+" This function makes the selection commented, based on &filetype.
+" This is something simple, sufficient for my needs.
+"--------------------------------------------------------------------------------------------------------"
+function s:RD_comment (mode) range
+	let l:known_types = {
+				\ 'vim' : [1, '"'],
+				\ 'sh' : [1, '#'],
+				\ 'php' : [2, '/*', '*/'],
+				\ 'css' : [2, '/*', '*/'],
+				\ 'javascript' : [2, '/*', '*/'],
+				\ 'html' : [2, '<!--', '-->'],
+				\ 'xhtml' : [2, '<!--', '-->'],
+				\ 'xml' : [2, '<!--', '-->']
+				\ }
+
+	if has_key(l:known_types, &filetype) != 1
+		echohl ErrorMsg
+		echo 'Unknown file type.'
+		echohl None
+
+		return 0
+	endif
+
+	if (a:mode != 'v' && a:mode != 'n')
+		echohl ErrorMsg
+		echo 'Unknown mode.'
+		echohl None
+
+		return 0
+	endif
+
+	let l:old_x = @x
+	let l:old_reg = @"
+
+	let l:ctype = l:known_types[&filetype][0]
+	let l:cprefix = l:known_types[&filetype][1]
+	let l:lenp = strlen(l:cprefix)
+
+	if l:ctype == 2
+		let l:csuffix = l:known_types[&filetype][2]
+	endif
+
+	if l:ctype == 1
+		if a:mode == 'v'
+			exe "'<,'>s~^~" . l:cprefix . "~e"
+		else
+			exe "s~^~" . l:cprefix . "~e"
+		endif
+	elseif l:ctype == 2
+		if a:mode == 'v'
+			normal `<
+		else
+			normal ^
+		endif
+
+		let @x = l:cprefix
+		normal "xP
+		let l:line1 = line('.')
+
+		if a:mode == 'v'
+			normal `>
+		else
+			normal $
+		endif
+
+		let l:line2 = line('.')
+
+		if (l:line1 == l:line2 && a:mode == 'v')
+			exe 'normal ' . l:lenp . 'l'
+		endif
+
+		let @x = l:csuffix
+		normal "xp
+	endif
+
+	let @x = l:old_x
+	let @" = l:old_reg
+
+	return 1
+endfunction
+
+" This function uncomments the text within the selection.
+"--------------------------------------------------------------------------------------------------------"
+function s:RD_uncomment (mode) range
+	let l:known_types = {
+				\ 'vim' : {
+					\ '1l' : '"'
+					\ },
+				\ 'sh' : {
+					\ '1l' : '#'
+					\ },
+				\ 'php' : {
+					\ '1l' : '//\|#',
+					\ 'multi' : ['/\*', '\*/']
+					\ },
+				\ 'css' : {
+					\ 'multi' : ['/\*', '\*/']
+					\ },
+				\ 'javascript' : {
+					\ '1l' : '//',
+					\ 'multi' : ['/\*', '\*/']
+					\ },
+				\ 'html' : {
+					\ 'multi' : ['<!--', '-->']
+					\ },
+				\ 'xhtml' : {
+					\ 'multi' : ['<!--', '-->']
+					\ },
+				\ 'xml' : {
+					\ 'multi' : ['<!--', '-->']
+					\ }
+				\ }
+
+	if has_key(l:known_types, &filetype) != 1
+		echohl ErrorMsg
+		echo 'Unknown file type.'
+		echohl None
+
+		return 0
+	endif
+
+	if (a:mode != 'v' && a:mode != 'n')
+		echohl ErrorMsg
+		echo 'Unknown mode.'
+		echohl None
+
+		return 0
+	endif
+
+	let l:ctype = l:known_types[&filetype]
+
+	if has_key(l:ctype, '1l') == 1
+		if a:mode == 'v'
+			exe "'<,'>s~^\\(\\s*\\)" . l:ctype['1l'] . "~\\1~e"
+		else
+			exe "s~^\\(\\s*\\)" . l:ctype['1l'] . "~\\1~e"
+		endif
+	endif
+
+	if has_key(l:ctype, 'multi') == 1
+		if a:mode == 'v'
+			exe "'<s~" . l:ctype['multi'][0] . "~~e"
+			exe "'>s~" . l:ctype['multi'][1] . "~~e"
+		else
+			exe "s~" . l:ctype['multi'][0] . "~~e"
+			exe "s~" . l:ctype['multi'][1] . "~~e"
+		endif
+	endif
+
+	return 1
+endfunction
+
+" auto-complete avec <tab>
+"--------------------------------------------------------------------------------------------------------"
+function! TabAlign()
+    " Cette fonction, lorsqu'aucun mot n'est tapé, cherche à recopier le dernier caractère de la ligne d'avant
+    " Idéal pour aligner des backslash avant des retour à la ligne
+    let col  = col('.')
+    let lnum = line('.')
+    " recherche de la première ligne ayant une longueur supérieure à la ligne courante
+    while lnum > 1 " chercher la ligne 
+        let lnum = lnum - 1
+        let ln = strpart(getline(lnum), col-1)
+        let ms = matchstr(ln, '[^ ]*  *[^ ]')
+        if ms != ""
+            break
+        endif
+    endwhile
+ 
+    if lnum == 1
+        return "\<Tab>"
+    else
+        " Copie dans le registre z du dernier caractère de la ligne de longueur supérieure trouvée
+        let @z = substitute(strpart(ms, 0, strlen(ms)-1), '.', ' ', 'g')
+        " Si au dernier caractère de la ligne :
+        if col > strlen(getline('.'))
+            " Copie du registre z après le caractère courant (CTRL-O échappe du mode insertion pour une instruction)
+            return "\<C-O>\"zp"
+        else
+            " Copie du registre z avant le caractère courant (idem)
+            return "\<C-O>\"zP"
+        endif
+    endif
+endfunction
+ 
+function! CleverTab()
+    let c = strpart(getline('.'), col('.')-2, 1)
+    " Si aucun mot n'a été partiellement saisi
+    if c == ' ' || c == '\t' || c == ''
+        " Utiliser la fonction précédente
+        return TabAlign()
+    else
+        " Complétion automatique
+        return "\<C-P>"
+    endif
+endfunction
+ 
+inoremap <Tab> <C-R>=CleverTab()<CR>
+inoremap <S-Tab> <C-R>=TabAlign()<CR>
+
+" set up tab labels with tab number, buffer name, number of windows
+function! GuiTabLabel()
+    let label = ''
+    let bufnrlist = tabpagebuflist(v:lnum)
+ 
+    " Add '+' if one of the buffers in the tab page is modified
+    for bufnr in bufnrlist
+    if getbufvar(bufnr, "&modified")
+        let label = '+'
+        break
+    endif
+    endfor
+ 
+    " Append the tab number
+    let label .= tabpagenr().': '
+ 
+    " Append the buffer name
+    let name = bufname(bufnrlist[tabpagewinnr(v:lnum) - 1])
+    if name == ''
+        " give a name to no-name documents
+        if &buftype=='quickfix'
+            let name = '[Quickfix List]'
+        else
+            let name = '[Non enregistré]'
+        endif
+    else
+        " get only the file name
+        let name = fnamemodify(name,":t")
+    endif
+    let label .= name
+ 
+    " Append the number of windows in the tab page
+    let wincount = tabpagewinnr(v:lnum, '$')
+    return label . '  [' . wincount . ']'
+endfunction
+ 
+" set up tab tooltips with every buffer name
+function! GuiTabToolTip()
+    let tip = ''
+    let bufnrlist = tabpagebuflist(v:lnum)
+ 
+    for bufnr in bufnrlist
+        " separate buffer entries
+        if tip!=''
+            let tip .= ' | '
+        endif
+ 
+        " Add name of buffer
+        let name=bufname(bufnr)
+        if name == ''
+            " give a name to no name documents
+            if getbufvar(bufnr,'&buftype')=='quickfix'
+                let name = '[Quickfix List]'
+            else
+                let name = '[Non enregistré]'
+            endif
+        endif
+        let tip.=name
+ 
+        " add modified/modifiable flags
+        if getbufvar(bufnr, "&modified")
+            let tip .= ' [+]'
+        endif
+        if getbufvar(bufnr, "&modifiable")==0
+            let tip .= ' [-]'
+        endif
+    endfor
+ 
+    return tip
+endfunction
+ 
+set guitablabel=%!GuiTabLabel()
+set guitabtooltip=%!GuiTabToolTip()
+ 
+" Statusline, menu, onglets }}}
+ 
+" {{{ Gestion du fenêtrage
+ 
+" tabs everywhere!
+" you'll need to edit gvim.desktop:
+" http://vim.wikia.com/wiki/Launch_files_in_new_tabs_under_Unix 
+tab all
+ 
+if has("gui_running")
+    " le focus suit la souris
+    set mousef
+    " le bouton droit affiche une popup
+    set mousemodel=popup_setpos
+endif
+ 
+"Toggle Menu and Toolbar
+set guioptions-=m
+set guioptions-=T
+map <silent> <F2> :if &guioptions =~# 'T' <Bar>
+\set guioptions-=T <Bar>
+\set guioptions-=m <bar>
+\else <Bar>
+\set guioptions+=T <Bar>
+\set guioptions+=m <Bar>
+\endif<CR>
+
+" {{{ Sessions
+ 
+" http://vim.wikia.com/wiki/VimTip450
+" Ces fonctions permettent de récupérer un état particulier de Vim.
+"
+" Si on souhaite pouvoir réouvrir tout un ensemble de fichiers, avec leurs
+" réglages propres, la répartition en onglets et fenêtres, etc. il suffit de
+" faire :SetSession "truc bidule" avant de quitter Vim (:qa).
+" > attention aux guillemets autour du nom ! <
+" Au prochain lancement, une liste permettra de réouvrir "truc bidule", ou
+" toute autre session enregistrée par ailleurs, ou continuer avec un Vim
+" vierge.
+"
+" Il faut créer un répertoire ~/.vim/sessions/ accessible en +rw
+"
+" cette version est légèrement modifiée :
+" - full-text, même avec la GUI
+" - en français
+" - une commande de chargement à la volée (LastSession)
+" - support du plugin Vim-taglist (à désactiver si vous n'utilisez pas)
+ 
+au VimLeave * call VimLeave()
+au VimEnter * call VimEnter()
+let g:PathToSessions = $HOME . "/.vim/sessions/"
+ 
+function! VimEnter() 
+    if argc() == 0 " si aucun nom de fichier donné, on peut proposer d'ouvrir une session
+        let result       = "Sessions disponibles :"
+        let sessionfiles = glob(g:PathToSessions . "*.vim")
+        while stridx(sessionfiles, "\n") >= 0
+            let index        = stridx(sessionfiles, "\n")
+            let sessionfile  = strpart(sessionfiles, 0, index)
+            let result       = result . "\n " . fnamemodify(sessionfile, ":t:r")
+            let sessionfiles = strpart(sessionfiles, index + 1)
+        endwhile
+        let result      = result . "\n " . fnamemodify(sessionfiles, ":t:r")
+        let result      = result . "\n" . "\n" . "Donnez un nom de session (ou aucun pour démarrer avec un nouveau buffer vide) : "
+        let sessionname = input(result)
+        if sessionname != ""
+            exe "source " . g:PathToSessions . sessionname . ".vim"
+            exec "TlistSessionLoad " . g:PathToSessions . sessionname . ".vim.tags"
+        endif
+    endif
+endfunction
+ 
+function! VimLeave()
+    exe "mksession! " . g:PathToSessions . "LastSession.vim"
+ 
+    if exists("g:SessionFileName") == 1
+        if g:SessionFileName != ""
+            exe "mksession! " . g:SessionFileName
+            exec "TlistSessionSave " . g:SessionFileName . ".tags"
+        endif
+    else
+        exec "TlistSessionSave " . g:PathToSessions . "LastSession.vim.tags"
+    endif
+endfunction
+ 
+" création d'une nouvelle session avec :SetSession "[nom]"
+command! -nargs=1 SetSession   :let g:SessionFileName = g:PathToSessions . <args> . ".vim"
+" suppression des sessions enregistrées avec :UnsetSession "[nom]"
+" pour en supprimer une définitivement, il faut le faire à la main dans le
+" dossier des sessions
+command! -nargs=0 UnsetSession :let g:SessionFileName = ""
+" ouverture à la volée d'une session dont on connaît le nom
+command! -nargs=1 OpenSession  :exe "source" . g:PathToSessions . <args> . ".vim"
+" ces commandes peuvent être mappées…
+ 
+" Sessions }}}
+
