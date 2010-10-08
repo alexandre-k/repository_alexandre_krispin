@@ -1,0 +1,131 @@
+"------------------------------------------------------------------------
+"				GENERAL SETTINGS
+"------------------------------------------------------------------------
+filetype plugin on "This makes vim invoke Latex-Suite when you open a tex file
+filetype indent on "This enables automatic indentation as you type
+let b:loaded_tex_autoclose = 1
+let g:autoclose = 1
+set backspace=indent,eol,start "allow backspacing over everything in insert mode
+set textwidth=80
+set title                " change the terminal's title
+syntax on		"switch on syntax highlight
+set undolevels=1000	"number of undos
+set history=1000"	"sets how many lines of history VIM has to remember
+set complete+=k         " enable dictionary completion
+set clipboard+=unnamed  " yank and copy to X clipboard
+set showmatch		"show pairs of brackets
+set hlsearch        " When there is a previous search pattern, highlight all
+                    " its matches.
+set incsearch       " While typing a search command, show immediately where the
+                    " so far typed pattern matches.
+set ignorecase      " Ignore case in search patterns.
+set smartcase       " Override the 'ignorecase' option if
+set wrapscan                          " end of search has been achieved!
+set magic		"regexp version magic
+set cursorline   	"highlight current line
+set cursorcolumn 	"highlight current column
+set wildmenu
+set wildignore=*.o,*~,*.cmo,*.cmi,*.a,*.cmx,*.cmxa,*.lo,*.log,*.aux,*.dvi,*.aut,*.aux,*.bbl,*.blg,*.dvi,*.fff,*.out,*.pdf,*.ps,*.toc,*.ttt
+set number		"to show line number
+"set nocompatible	"seems that setting Vim not to be compatible with Vi disables the setting bellow, whichwrap.
+"Therefore I disable it
+set whichwrap=b,s,<,>,[,]	" Allow specified keys that move the cursor left/right
+			" to move to the previous/next line when the cursor is on the first/last character
+			" in the line. b (backspace), s (space) and the arrows.  set nostartofline
+			" Do not place the cursor at the start of the line when using Page up/down.
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.out,.toc "for file names completion
+set hi=2000		" remember last 2000 typed commands
+set autoread	" Set to auto read when a file is changed from the outside
+set enc=utf-8
+set hidden	" It hides buffers instead of closing them. This means that you
+		" can have unwritten changes to a file and open a new file using :e, without being
+		" forced to write or undo your changes first. Also, undo buffers and marks are
+		" preserved while the buffer is open.
+set visualbell           " don't beep
+set noerrorbells         " don't beep
+set list		" Vim can highlight whitespaces for you in a convenient way:	
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+set laststatus=2	"status bar
+set statusline=%n:\ %f%m%r%h%w\ [%Y,%{&fileencoding},%{&fileformat}]\ [%l-%L,%v][%p%%]\ [%{strftime(\"%l:%M:%S\ \%p,\ %a\ %b\ %d,\ %Y\")}]
+set ruler
+set rulerformat=%25(%n%m%r:\ %Y\ [%l,%v]\ %p%%%)
+" toujours afficher le mode courant
+set showcmd		 "show the command being typed
+
+"-----------------------------------------
+" change cursor colour depending upon mode
+if exists('&t_SI')
+    let &t_SI = "\<Esc>]12;lightgoldenrod\x7"
+    let &t_EI = "\<Esc>]12;grey80\x7"
+endif
+
+
+"--------------------------------
+" Backups
+"--------------------------------
+set nobackup
+set backupcopy=auto
+set backupskip=/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*,*test*,*temp*,*tmp*,*tst*,*~,*bak
+
+
+"-----------------------------------
+"nice colors and fonts
+"-----------------------------------
+colorscheme herald
+colors herald
+"set guifont=DejaVu\ Sans\ Mono\ 10
+set guifont=Inconsolata\ 12 " very nice, but leaves terrible artefacts with national (mostly russian) characters
+"set guifont=Terminus\ 10 " wonderful, yet smallish, and sucks at larger sizes
+"----------------------------------
+" GUI Options
+"----------------------------------
+"if has("gui_running")
+"	" GUI cursor: no blinking
+	set guicursor+=a:blinkon0
+"
+"	" no toolbar
+"	set guioptions-=T
+"	" no autoselect 
+"	set guioptions-=a
+"
+"	" Use console messages instead of GUI dialogs
+"	set guioptions+=c
+"endif
+
+
+"------------------
+"formatting
+"------------------
+set formatoptions=tcroqn " see help
+"set formatoptions=c,q,r,t " This is a sequence of letters which describes how
+                    " automatic formatting is to be done.
+                    "
+                    " letter    meaning when present in 'formatoptions'
+                    " ------    ---------------------------------------
+                    " c         Auto-wrap comments using textwidth, inserting
+                    "           the current comment leader automatically.
+                    " q         Allow formatting of comments with "gq".
+                    " r         Automatically insert the current comment leader
+                    "           after hitting <Enter> in Insert mode. 
+                    " t         Auto-wrap text using textwidth (does not apply
+                    "           to comments)
+"---------------
+set smartindent      " turn on smart indenting
+set autoindent    " always set autoindenting on
+set copyindent    " copy the previous indentation on autoindenting
+set shiftwidth=4  " number of spaces to use for autoindenting
+set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
+set smarttab      " insert tabs on the start of a line according to
+                  "    shiftwidth, not tabstop
+set comments+=:%,:\\begin{,:\\end{,:\\title{,:\\author{,:\\subtitle{,:\\part{,:\\chapter{,:\\section{,:\\subsection{,:\\subsubsection{,:\\paragraph,:\\subparagraph{,:\\usepackage{,:\\documenclass{,:\\usepackage[,:\\item[,:\\item
+"setlocal indentkeys+=},=\\item,=\\bibitem,=\\else,=\\fi,=\\or,=\\]
+
+"--------------------------
+" indentation automatique (à la Emacs)
+"vnoremap <C-J>   =$
+"vnoremap <tab>   =
+"nnoremap <tab>   =$
+"nnoremap <C-tab> mzvip=`z
+
+"let g:tex_indent_items = 1
+

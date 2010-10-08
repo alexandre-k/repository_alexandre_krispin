@@ -1,0 +1,189 @@
+"----------------------------
+"TAB BAR
+"----------------------------
+" set up tab labels with tab number, buffer name, number of windows
+function! GuiTabLabel()
+    let label = ''
+    let bufnrlist = tabpagebuflist(v:lnum)
+ 
+    " Add '+' if one of the buffers in the tab page is modified
+    for bufnr in bufnrlist
+    if getbufvar(bufnr, "&modified")
+        let label = '+'
+        break
+    endif
+    endfor
+ 
+    " Append the tab number
+    let label .= tabpagenr().': '
+ 
+    " Append the buffer name
+    let name = bufname(bufnrlist[tabpagewinnr(v:lnum) - 1])
+    if name == ''
+        " give a name to no-name documents
+        if &buftype=='quickfix'
+            let name = '[Quickfix List]'
+        else
+            let name = '[Not yet saved]'
+        endif
+    else
+        " get only the file name
+        let name = fnamemodify(name,":t")
+    endif
+    let label .= name
+ 
+    " Append the number of windows in the tab page
+    let wincount = tabpagewinnr(v:lnum, '$')
+    return label . '  [' . wincount . ']'
+endfunction
+ 
+" set up tab tooltips with every buffer name
+function! GuiTabToolTip()
+    let tip = ''
+    let bufnrlist = tabpagebuflist(v:lnum)
+ 
+    for bufnr in bufnrlist
+        " separate buffer entries
+        if tip!=''
+            let tip .= ' | '
+        endif
+ 
+        " Add name of buffer
+        let name=bufname(bufnr)
+        if name == ''
+            " give a name to no name documents
+            if getbufvar(bufnr,'&buftype')=='quickfix'
+                let name = '[Quickfix List]'
+            else
+                let name = '[Not yet saved]'
+            endif
+        endif
+        let tip.=name
+ 
+        " add modified/modifiable flags
+        if getbufvar(bufnr, "&modified")
+            let tip .= ' [+]'
+        endif
+        if getbufvar(bufnr, "&modifiable")==0
+            let tip .= ' [-]'
+        endif
+    endfor
+ 
+    return tip
+endfunction
+ 
+set guitablabel=%!GuiTabLabel()
+set guitabtooltip=%!GuiTabToolTip()
+
+"--------------
+"spelling...
+"--------------
+"to enable spell checking by default, uncomment the following line,
+"set spell
+" automatic spell checking in your language for .txt et .tex. Replace "fr" by your default
+" language, "en" if english :
+
+"augroup filetypedetect
+  "au BufNewFile,BufRead *.txt setlocal spell spelllang=fr
+  "au BufNewFile,BufRead *.tex setlocal spell spelllang=fr
+"augroup END
+
+ "------------------------------------
+" painless spell checking
+" for French, you'll need
+" wget http://ftp.vim.org/pub/vim/runtime/spell/fr.utf-8.sug
+" wget http://ftp.vim.org/pub/vim/runtime/spell/fr.utf-8.spl
+" which you may move into ~/.vim/spell
+"-------------------------------------
+function s:spell_fr()
+    if !exists("s:spell_check") || s:spell_check == 0
+        echo "Spell checking activated (french)"
+        let s:spell_check = 1
+        setlocal spell spelllang=fr
+    else
+        echo "Spell checking canceled"
+        let s:spell_check = 0
+        setlocal spell spelllang=
+    endif
+endfunction
+" for English
+function s:spell_en()
+    if !exists("s:spell_check") || s:spell_check == 0
+        echo "Spell checking activated (english)"
+        let s:spell_check = 1
+        setlocal spell spelllang=en
+    else
+        echo "Spell checking canceled"
+        let s:spell_check = 0
+        setlocal spell spelllang=
+    endif
+endfunction
+
+"See mapping for spell checking in the relevant section, l. 361
+
+"--------Another trick for spell checking is the following line :
+"uncomment if you want to use it, type ",C" if you want to enable it,
+"and replace aspell by any other dictionary you use (ispell, hunspell)
+"map ,C :w<CR>:!aspell -c %<CR>:e %<CR>"
+
+"---------------------------
+"For tags, but doesn't work
+let tlist_tex_settings   = 'latex;s:sections;g:graphics;l:labels'
+let tlist_make_settings  = 'make;m:makros;t:targets'
+
+"--------------------------------------------------------
+" Go back where I left off
+"--------------------------------------------------------
+    autocmd BufReadPost * call RestoreCursorPos()
+    autocmd BufWinEnter * call OpenFoldOnRestore()
+
+" Restore my cursor position
+function! RestoreCursorPos()
+    if expand("<afile>:p:h") !=? $TEMP
+        if line("'\"") > 1 && line("'\"") <= line("$")
+            let line_num = line("'\"")
+            let b:doopenfold = 1
+            if (foldlevel(line_num) > foldlevel(line_num - 1))
+                let line_num = line_num - 1
+                let b:doopenfold = 2
+            endif
+            execute line_num
+        endif
+    endif
+endfunction
+
+" Open the fold if restoring cursor position
+function! OpenFoldOnRestore()
+    if exists("b:doopenfold")
+        execute "normal zv"
+        if(b:doopenfold > 1)
+            execute "+".1
+        endif
+        unlet b:doopenfold
+    endif
+endfunction
+
+"-------------------------
+" 日本語入力に関する設定:
+"
+if has('multi_byte_ime') || has('xim')
+  " IME ON時のカーソルの色を設定(設定例:紫)
+  highlight CursorIM guibg=Purple guifg=NONE
+  " 挿入モード・検索モードでのデフォルトのIME状態設定
+  set iminsert=0 imsearch=0
+  if has('xim') && has('GUI_GTK')
+    " XIMの入力開始キーを設定:
+    " 下記の s-space はShift+Spaceの意味でkinput2+canna用設定
+    "set imactivatekey=s-space
+  endif
+  " 挿入モードでのIME状態を記憶させない場合、次行のコメントを解除
+  "inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
+endif
+
+" 日本語入力用のkeymapの設定例 (コメントアウト)
+"if has('keymap')
+"  " ローマ字仮名のkeymap
+"  "silent! set keymap=japanese
+set iminsert=0 imsearch=0 " 入力時の初期状態 = IME OFF
+"endif
+

@@ -1,0 +1,219 @@
+"------------------------------------------------------------------------
+"				MAPPING
+"------------------------------------------------------------------------
+
+
+"----------------------------
+"Saving
+"---------------------------
+map <F2> :w<CR>
+imap <F2> <ESC>:w<CR>
+
+"------------------------------
+" Terminal
+"------------------------------
+map <S-F2> :!gnome-terminal &<CR><CR>
+imap <S-F2> <ESC>:!gnome-terminal &<CR><CR>
+
+"-------------------------------
+" Graphical file manager
+"--------------------------------
+map <A-F2> :!nautilus & <CR><CR>
+map <A-F2> <ESC>:!nautilus &<CR><CR>
+
+"----------------------------
+"Exit
+"----------------------------
+"exit
+map <F3> :q<CR>
+imap <F3> <ESC>:q<CR>
+"exit all
+map <S-F3> :qall<CR>
+imap <S-F3> <ESC>:qall<CR>
+"force Exit
+map <A-F3> :qall!<CR>
+imap <A-F3> <ESC>:qall!<CR>
+
+"----------------------------
+"Mapping to activate file explorer 
+"of the specified directory
+"----------------------------
+"To display NERDTree
+map <silent> <S-F4> :NERDTree /home/freeman/<CR>
+nmap <silent> <S-F4> :NERDTree /home/freeman/<CR>
+
+" To display VimExplorer
+nmap <silent> <F4> :VE %:p:h<CR>
+
+"----------------------------
+"Mapping to explorer of recent file,
+"Most recently used files
+"----------------------------
+map <F8> :Mru<CR>
+imap <F8> <ESC>:Mru<CR>
+
+"-------------
+"SelectBuf
+"-------------
+nmap <unique> <silent> <F10> <Plug>SelectBuf
+noremap <silent> <Plug>SelBufHelpKey <A-F10>
+
+"-----------------------------
+"Compiling and viewing its .tex file
+"with XeLaTeX and evince (set in tex.vim)
+"-----------------------------
+"Compile and start viewer
+map <F11> ;ll ;lv<CR>
+imap <F11> <ESC>;ll ;lv<CR>
+"Compile only
+map <A-F11> ;ll<CR>
+imap <A-F11> ;ll<CR>
+
+"--------------------------
+"To enable spell checking for french :
+noremap  <F12>  :call <SID>spell_fr()<CR>
+inoremap <F12>  :call <SID>spell_fr()<CR>
+vnoremap <F12>  :call <SID>spell_fr()<CR>
+" and for english :
+noremap  <A-F12> :call <SID>spell_en()<CR>
+inoremap <A-F12> :call <SID>spell_en()<CR>
+vnoremap <A-F12> :call <SID>spell_en()<CR>
+
+"---------------------------------
+"Ctrl+Insert to copy into clipboard 
+"Shift+Insert to paste from clipboard
+"Shift+Delete to cut into clipboard
+"Ctrl+a to select all
+"----------------------------
+nmap <S-Insert> "+gP
+imap <S-Insert> <ESC><S-Insert>i
+vmap <C-Insert> "+y 
+map <C-a> ggVG
+map <S-Delete> "+x
+
+"------------------------------
+"mapping to automatically add an
+"abbreviation
+"fun AddAbbr()
+    "normal byw
+    "let val = input("Par quoi abreger " . @@ . " ? ")
+    "exec "ia" @@ val
+    "silent call SaveAbbr(@@, val)
+"endfun
+
+"fun SaveAbbr(abbr, val)
+    "redir >>~/.vim/abbr.vim
+    "echo "iab" a:abbr a:val "\n"
+    "redir END
+"endfun
+
+"imap <F5> <C-O>:call AddAbbr()<CR>
+"nmap <F5> :call AddAbbr()<CR>
+
+"fun AddAbbr()
+    "normal byw
+    "let abb = (getchar('\<LeftMouse>\''\<RightMouse>')
+    "let val = input("Par quoi abreger " abb " ? ")
+    "exec "ia" abb val
+    "silent call SaveAbbr(abb, val)
+"endfun
+
+"fun SaveAbbr(abbr, val)
+    "redir >>~/.vim/abbr.vim
+    "echo "iab" a:abbr a:val "\n"
+    "redir END
+"endfun
+
+"map <S-F8> <C-O>:call AddAbbr()<CR>
+"vmap <S-F8> <ESC>:call AddAbbr()<CR>
+
+"nmap <S-F8> :call AddAbbr()<CR>
+
+"-------------------------
+"Mapping to escape without Esc key
+"or the traditional ctrl+[, quite
+"painful to type with french keyboards
+:inoremap <S-CR> <Esc>
+
+"----------------------------
+"Mapping to desactivate highligting
+"of search results
+"----------------------------
+nnoremap <silent> <C-N> :noh<CR>
+
+"--------------------------------
+" firefox like shorcuts
+"--------------------------------
+map <C-t>     :tabnew<cr>
+map <C-left>  :tabnext<cr>
+map <C-right> :tabprevious<cr>
+map <C-o> :e
+
+"--------------------------------
+" Quickly edit/reload the vimrc file
+"-------------------------------
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+"--------------------------------
+" Use Q for formatting the current paragraph (or selection)
+"--------------------------------
+vmap Q gq
+nmap Q gqap
+
+"--------------------------------
+"If you like long lines with line wrapping enabled
+"--------------------------------
+nnoremap j gj
+nnoremap k gk
+
+"--------------------------------
+" unmap arrows/pgdn/pgup so you learn to use hjkl
+map <Left> \
+map <Right> \
+map <Up> \
+map <Down> \
+map <PageUp> \
+map <PageDown> \
+ 
+nmap <Left> <nop>
+nmap <Right> <nop>
+nmap <Up> <nop>
+nmap <Down> <nop>
+nmap <PageUp> <nop>
+nmap <PageDown> <nop>
+
+"--------------------------------
+"Change the mapleader from \ to ,
+let mapleader=";"
+
+"-------------------------------
+"Insert a character at the end of lines
+imap <silent><S-F1> <Esc>v`^me<Esc>gi<C-o>:call Ender()<CR>
+function Ender()
+  let endchar = nr2char(getchar())
+  execute "normal \<End>a".endchar
+  normal `e
+endfunction
+
+"--------------------------------
+"Will search the word in firefox where
+"the cursor is when typing g in visual mode
+"big thanks to http://la.firme.perso.esil.univmed.fr/website/article.php3?id_article=70 
+vmap f :<C-U>!firefox "http://www.google.fr/search?hl=fr&q=<cword>&btnG=Recherche+Google&meta=" &gt;& /dev/null<CR><CR>
+"A similar behaviour but for Wikipedia
+vmap w :<C-U>!firefox "http://en.wikipedia.org/wiki/<cword>" >& /dev/null<CR><CR>
+
+"--------------------------------
+"For qwerty keyboards : instead of 
+"pressing "shift"+";", you will just
+"have to press ;, and say w to save.
+"-------------------------------
+"nnoremap ; :
+
+"--------------------------------
+"when you forgot to sudo before editing a file that requires root privileges
+"(typically /etc/hosts). This lets you use w!! to do that after you opened the
+"file already
+"--------------------------------
+cmap w!! w !sudo tee % >/dev/null

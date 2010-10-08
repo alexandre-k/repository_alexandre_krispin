@@ -1,3 +1,27 @@
+"-------------------------------------------------------------------------
+"		Basic settings for LaTeXsuite
+"http://vim-latex.sourceforge.net/documentation/latex-suite/recommended-settings.html
+"-------------------------------------------------------------------------
+
+" IMPORTANT: win32 users will need to have 'shellslash' set so that latex
+" can be called correctly.
+"set shellslash
+
+" IMPORTANT: grep will sometimes skip displaying the file name if you
+" search in a singe file. This will confuse Latex-Suite. Set your grep
+" program to always generate a file-name.
+set grepprg=grep\ -nH\ $*
+
+" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
+" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
+" The following changes the default filetype back to 'tex':
+let g:tex_flavor='latex'
+
+"To jump from a section to another one
+map <silent> ]s :/\\\(sub\)\{,2}section\s*{<CR> :noh<CR>
+map <silent> [s :?\\\(sub\)\{,2}section\s*{<CR> :noh<CR>
+
+
 "--------------------------------------------------------------------------
 "			General settings
 "--------------------------------------------------------------------------
@@ -26,29 +50,6 @@ let g:Tex_ViewRule_pdf = 'evince'
 "---------------------
 "Dictionaries
 autocmd Filetype tex,latex :set dictionary=~/.vim/ftplugin/latex-suite/dictionaries/dictionary,/home/linux/.vim/spell
-
-"----------------------------------------------------------------------
-"			Abbreviations
-"----------------------------------------------------------------------
-iab ds dans
-iab bcp beaucoup
-iab qqn quelqu'un
-iab qqc quelque chose
-iab pol politique
-iab leurope l'Europe
-iab tv télévision
-iab ceca CECA
-iab ue Union Européenne
-iab CE Commission Européenne
-iab AL Amérique Latine
-iab letat l'État
-iab socio sociologie
-iab éco économie
-iab math mathématique
-iab xelatex \XeLaTeX
-iab latex \LaTeX
-iab ak Alexandre Krispin
-
 
 "---------------------------------------------------------------------------
 "				MAPPING
@@ -106,4 +107,26 @@ imap <buffer> [ []
 "you will just have to insert ,bf (therefore,
 "no need of the Alt Gr key)
 vmap <buffer> <silent> , `
+
+"----------------------------------------------------------------------
+"			Abbreviations
+"----------------------------------------------------------------------
+iab ds dans
+iab bcp beaucoup
+iab qqn quelqu'un
+iab qqc quelque chose
+iab pol politique
+iab leurope l'Europe
+iab tv télévision
+iab ceca CECA
+iab ue Union Européenne
+iab CE Commission Européenne
+iab AL Amérique Latine
+iab letat l'État
+iab socio sociologie
+iab éco économie
+iab math mathématique
+iab xelatex \XeLaTeX
+iab latex \LaTeX
+iab ak Alexandre Krispin
 
