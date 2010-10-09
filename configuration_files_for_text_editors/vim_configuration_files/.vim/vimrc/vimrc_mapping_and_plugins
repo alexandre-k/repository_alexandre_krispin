@@ -69,16 +69,6 @@ imap <F11> <ESC>;ll ;lv<CR>
 map <A-F11> ;ll<CR>
 imap <A-F11> ;ll<CR>
 
-"--------------------------
-"To enable spell checking for french :
-noremap  <F12>  :call <SID>spell_fr()<CR>
-inoremap <F12>  :call <SID>spell_fr()<CR>
-vnoremap <F12>  :call <SID>spell_fr()<CR>
-" and for english :
-noremap  <A-F12> :call <SID>spell_en()<CR>
-inoremap <A-F12> :call <SID>spell_en()<CR>
-vnoremap <A-F12> :call <SID>spell_en()<CR>
-
 "---------------------------------
 "Ctrl+Insert to copy into clipboard 
 "Shift+Insert to paste from clipboard
@@ -94,40 +84,21 @@ map <S-Delete> "+x
 "------------------------------
 "mapping to automatically add an
 "abbreviation
-"fun AddAbbr()
-    "normal byw
-    "let val = input("Par quoi abreger " . @@ . " ? ")
-    "exec "ia" @@ val
-    "silent call SaveAbbr(@@, val)
-"endfun
+fun AddAbbr()
+    normal byw
+    let StringChar = lh#visual#selection()
+    let val = input("Enter the abbreviation you wish to use for '" . StringChar . "' :")
+    exec "ia" StringChar val
+    silent call SaveAbbr(StringChar, val)
+endfun
 
-"fun SaveAbbr(abbr, val)
-    "redir >>~/.vim/abbr.vim
-    "echo "iab" a:abbr a:val "\n"
-    "redir END
-"endfun
+fun SaveAbbr(val, abbr)
+    redir >>~/.vim/ftplugin/tex.vim
+    echo "iab" a:abbr a:val
+    redir END
+endfun
 
-"imap <F5> <C-O>:call AddAbbr()<CR>
-"nmap <F5> :call AddAbbr()<CR>
-
-"fun AddAbbr()
-    "normal byw
-    "let abb = (getchar('\<LeftMouse>\''\<RightMouse>')
-    "let val = input("Par quoi abreger " abb " ? ")
-    "exec "ia" abb val
-    "silent call SaveAbbr(abb, val)
-"endfun
-
-"fun SaveAbbr(abbr, val)
-    "redir >>~/.vim/abbr.vim
-    "echo "iab" a:abbr a:val "\n"
-    "redir END
-"endfun
-
-"map <S-F8> <C-O>:call AddAbbr()<CR>
-"vmap <S-F8> <ESC>:call AddAbbr()<CR>
-
-"nmap <S-F8> :call AddAbbr()<CR>
+vmap <S-F8> <ESC>:call AddAbbr()<CR>
 
 "-------------------------
 "Mapping to escape without Esc key
@@ -186,15 +157,6 @@ nmap <PageDown> <nop>
 "--------------------------------
 "Change the mapleader from \ to ,
 let mapleader=";"
-
-"-------------------------------
-"Insert a character at the end of lines
-imap <silent><S-F1> <Esc>v`^me<Esc>gi<C-o>:call Ender()<CR>
-function Ender()
-  let endchar = nr2char(getchar())
-  execute "normal \<End>a".endchar
-  normal `e
-endfunction
 
 "--------------------------------
 "Will search the word in firefox where

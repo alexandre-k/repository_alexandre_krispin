@@ -1,3 +1,14 @@
+"    An attempt to make GVim behave like TeXWorks
+" save file whenever cursor moves
+function! Update_if_possible()
+    if filewritable(bufname("%"))
+        update
+    endif
+endfunction
+au CursorMoved * call Update_if_possible()
+au CursorMovedI * call Update_if_possible()
+
+
 "-------------------------------------------------------------------------
 "		Basic settings for LaTeXsuite
 "http://vim-latex.sourceforge.net/documentation/latex-suite/recommended-settings.html
@@ -129,4 +140,10 @@ iab math mathématique
 iab xelatex \XeLaTeX
 iab latex \LaTeX
 iab ak Alexandre Krispin
-
+"-----------------------------------------------------------------------
+"To enter other abbreviation without the need
+"to open this file, see .vim/vimrc/vimrc_mapping_and_plugins for more details.
+"Basically you have to select the word or the expression you wish to abbreviate
+"and then, to push Shift+F8. A dialogue will ask what will be the abbreviation
+"you wish to use, and will register it bellow.
+"----------------------------------------------------------------------

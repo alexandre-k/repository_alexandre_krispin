@@ -52,21 +52,12 @@ set rulerformat=%25(%n%m%r:\ %Y\ [%l,%v]\ %p%%%)
 " toujours afficher le mode courant
 set showcmd		 "show the command being typed
 
-"-----------------------------------------
-" change cursor colour depending upon mode
-if exists('&t_SI')
-    let &t_SI = "\<Esc>]12;lightgoldenrod\x7"
-    let &t_EI = "\<Esc>]12;grey80\x7"
-endif
-
-
 "--------------------------------
 " Backups
 "--------------------------------
 set nobackup
 set backupcopy=auto
 set backupskip=/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*,*test*,*temp*,*tmp*,*tst*,*~,*bak
-
 
 "-----------------------------------
 "nice colors and fonts
